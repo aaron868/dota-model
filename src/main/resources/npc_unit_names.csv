@@ -1,0 +1,204 @@
+key,localizedName
+dota_death_prophet_exorcism_spirit,Death Prophet Spirit
+dota_fountain,Fountain
+npc_dota_badguys_fillers,Dire Building
+npc_dota_badguys_fort,Dire's Ancient
+npc_dota_badguys_melee_rax_bot,Dire Bottom Melee Barracks
+npc_dota_badguys_melee_rax_mid,Dire Mid Melee Barracks
+npc_dota_badguys_melee_rax_top,Dire Top Melee Barracks
+npc_dota_badguys_range_rax_bot,Dire Bottom Ranged Barracks
+npc_dota_badguys_range_rax_mid,Dire Mid Ranged Barracks
+npc_dota_badguys_range_rax_top,Dire Top Ranged Barracks
+npc_dota_badguys_siege,Dire Siege Creep
+npc_dota_badguys_siege_upgraded,Dire Super Siege Creep
+npc_dota_badguys_siege_upgraded_mega,Dire Mega Siege Creep
+npc_dota_badguys_tower1_bot,Dire Bottom Tier 1 Tower
+npc_dota_badguys_tower1_mid,Dire Mid Tier 1 Tower
+npc_dota_badguys_tower1_top,Dire Top Tier 1 Tower
+npc_dota_badguys_tower2_bot,Dire Bottom Tier 2 Tower
+npc_dota_badguys_tower2_mid,Dire Mid Tier 2 Tower
+npc_dota_badguys_tower2_top,Dire Top Tier 2 Tower
+npc_dota_badguys_tower3_bot,Dire Bottom Tier 3 Tower
+npc_dota_badguys_tower3_mid,Dire Mid Tier 3 Tower
+npc_dota_badguys_tower3_top,Dire Top Tier 3 Tower
+npc_dota_badguys_tower4,Dire Tier 4 Tower
+npc_dota_beastmaster_axe,Beastmaster Axe
+npc_dota_beastmaster_boar,Boar
+npc_dota_beastmaster_boar_1,Boar Level 1
+npc_dota_beastmaster_boar_2,Boar Level 2
+npc_dota_beastmaster_boar_3,Boar Level 3
+npc_dota_beastmaster_boar_4,Boar Level 4
+npc_dota_beastmaster_greater_boar,Greater Boar
+npc_dota_beastmaster_hawk_1,Hawk Level 1
+npc_dota_beastmaster_hawk_2,Hawk Level 2
+npc_dota_beastmaster_hawk_3,Hawk Level 3
+npc_dota_beastmaster_hawk_4,Hawk Level 4
+npc_dota_brewmaster_earth_1,Brewmaster Earth Spirit Level 1
+npc_dota_brewmaster_earth_2,Brewmaster Earth Spirit Level 2
+npc_dota_brewmaster_earth_3,Brewmaster Earth Spirit Level 3
+npc_dota_brewmaster_fire_1,Brewmaster Fire Spirit Level 1
+npc_dota_brewmaster_fire_2,Brewmaster Fire Spirit Level 2
+npc_dota_brewmaster_fire_3,Brewmaster Fire Spirit Level 3
+npc_dota_brewmaster_storm_1,Brewmaster Strom Spirit Level 1
+npc_dota_brewmaster_storm_2,Brewmaster Strom Spirit Level 2
+npc_dota_brewmaster_storm_3,Brewmaster Strom Spirit Level 3
+npc_dota_broodmother_spiderite,Spiderite
+npc_dota_broodmother_spiderling,Spiderling
+npc_dota_broodmother_web,Web
+npc_dota_companion,Companion
+npc_dota_courier,Courier
+npc_dota_creep_badguys_melee,Dire Melee Creep
+npc_dota_creep_badguys_melee_upgraded,Dire Super Melee Creep
+npc_dota_creep_badguys_melee_upgraded_mega,Dire Mega Melee Creep
+npc_dota_creep_badguys_ranged,Dire Ranged Creep
+npc_dota_creep_badguys_ranged_upgraded,Dire Super Ranged Creep
+npc_dota_creep_badguys_ranged_upgraded_mega,Dire Mega Ranged Creep
+npc_dota_creep_goodguys_melee,Radiant Melee Creep
+npc_dota_creep_goodguys_melee_upgraded,Radiant Super Melee Creep
+npc_dota_creep_goodguys_melee_upgraded_mega,Radiant Mega Melee Creep
+npc_dota_creep_goodguys_ranged,Radiant Ranged Creep
+npc_dota_creep_goodguys_ranged_upgraded,Radiant Super Ranged Creep
+npc_dota_creep_goodguys_ranged_upgraded_mega,Radiant Mega Ranged Creep
+npc_dota_dark_troll_warlord_skeleton_warrior,Skeleton Warrior
+npc_dota_dire_eidolon,Dire Eidolon
+npc_dota_earth_spirit_stone,Stone Remnant
+npc_dota_eidolon,Eidolon
+npc_dota_elder_titan_ancestral_spirit,Astral Spirit
+npc_dota_ember_spirit_remnant,Ember Spirit Remnant
+npc_dota_enraged_wildkin_tornado,Tornado
+npc_dota_flying_courier,Flying Courier
+npc_dota_furion_treant,Treant
+npc_dota_furion_treant_large,Greater Treant
+npc_dota_goodguys_fillers,Radiant Building
+npc_dota_goodguys_fort,Radiant's Ancient
+npc_dota_goodguys_melee_rax_bot,Radiant Bottom Melee Barracks
+npc_dota_goodguys_melee_rax_mid,Radiant Mid Melee Barracks
+npc_dota_goodguys_melee_rax_top,Radiant Top Melee Barracks
+npc_dota_goodguys_range_rax_bot,Radiant Bottom Ranged Barracks
+npc_dota_goodguys_range_rax_mid,Radiant Mid Ranged Barracks
+npc_dota_goodguys_range_rax_top,Radiant Top Ranged Barracks
+npc_dota_goodguys_siege,Radiant Siege Creep
+npc_dota_goodguys_siege_upgraded,Radiant Super Siege Creep
+npc_dota_goodguys_siege_upgraded_mega,Radiant Mega Siege Creep
+npc_dota_goodguys_tower1_bot,Radiant Bottom Tier 1 Tower
+npc_dota_goodguys_tower1_mid,Radiant Mid Tier 1 Tower
+npc_dota_goodguys_tower1_top,Radiant Top Tier 1 Tower
+npc_dota_goodguys_tower2_bot,Radiant Bottom Tier 2 Tower
+npc_dota_goodguys_tower2_mid,Radiant Mid Tier 2 Tower
+npc_dota_goodguys_tower2_top,Radiant Top Tier 2 Tower
+npc_dota_goodguys_tower3_bot,Radiant Bottom Tier 3 Tower
+npc_dota_goodguys_tower3_mid,Radiant Mid Tier 3 Tower
+npc_dota_goodguys_tower3_top,Radiant Top Tier 3 Tower
+npc_dota_goodguys_tower4,Radiant Tier 4 Tower
+npc_dota_greater_eidolon,Greater Eidolon
+npc_dota_greater_hawk,Greater Hawk
+npc_dota_gyrocopter_homing_missile,Homing Missile
+npc_dota_invisible_vision_source,Invisible Vision Source
+npc_dota_invoker_forged_spirit,Forged Spirit
+npc_dota_juggernaut_healing_ward,Healing Ward
+npc_dota_lesser_eidolon,Lesser Eidolon
+npc_dota_lone_druid_bear1,Spirit Bear Level 1
+npc_dota_lone_druid_bear2,Spirit Bear Level 2
+npc_dota_lone_druid_bear3,Spirit Bear Level 3
+npc_dota_lone_druid_bear4,Spirit Bear Level 4
+npc_dota_lycan_wolf1,Lycan Wolf Level 1
+npc_dota_lycan_wolf2,Lycan Wolf Level 2
+npc_dota_lycan_wolf3,Lycan Wolf Level 3
+npc_dota_lycan_wolf4,Lycan Wolf Level 4
+npc_dota_necronomicon_archer_1,Necronomicon Archer Level 1
+npc_dota_necronomicon_archer_2,Necronomicon Archer Level 2
+npc_dota_necronomicon_archer_3,Necronomicon Archer Level 3
+npc_dota_necronomicon_warrior_1,Necronomicon Warrior Level 1
+npc_dota_necronomicon_warrior_2,Necronomicon Warrior Level 2
+npc_dota_necronomicon_warrior_3,Necronomicon Warrior Level 3
+npc_dota_neutral_alpha_wolf,Alpha Wolf
+npc_dota_neutral_big_thunder_lizard,Ancient Thunderhide
+npc_dota_neutral_black_dragon,Ancient Black Dragon
+npc_dota_neutral_black_drake,Ancient Black Drake
+npc_dota_neutral_blue_dragonspawn_overseer,Ancient Drakken Armorer
+npc_dota_neutral_blue_dragonspawn_sorcerer,Ancient Drakken Sentinel
+npc_dota_neutral_centaur_khan,Centaur Conqueror
+npc_dota_neutral_centaur_outrunner,Centaur Courser
+npc_dota_neutral_dark_troll,Hill Troll
+npc_dota_neutral_dark_troll_warlord,Dark Troll Summoner
+npc_dota_neutral_elder_jungle_stalker,Ancient Primal Stalker
+npc_dota_neutral_enraged_wildkin,Wildwing Ripper
+npc_dota_neutral_fel_beast,Fell Spirit
+npc_dota_neutral_forest_troll_berserker,Hill Troll Berserker
+npc_dota_neutral_forest_troll_high_priest,Hill Troll Priest
+npc_dota_neutral_ghost,Ghost
+npc_dota_neutral_giant_wolf,Giant Wolf
+npc_dota_neutral_gnoll_assassin,Vhoul Assassin
+npc_dota_neutral_granite_golem,Ancient Granite Golem
+npc_dota_neutral_harpy_scout,Harpy Scout
+npc_dota_neutral_harpy_storm,Harpy Stormcrafter
+npc_dota_neutral_jungle_stalker,Ancient Stalker
+npc_dota_neutral_kobold,Kobold
+npc_dota_neutral_kobold_taskmaster,Kobold Foreman
+npc_dota_neutral_kobold_tunneler,Kobold Soldier
+npc_dota_neutral_mud_golem,Mud Golem
+npc_dota_neutral_mud_golem_split,Shard Golem
+npc_dota_neutral_mud_golem_split_doom,Doom Shard
+npc_dota_neutral_ogre_magi,Ogre Frostmage
+npc_dota_neutral_ogre_mauler,Ogre Bruiser
+npc_dota_neutral_polar_furbolg_champion,Hellbear
+npc_dota_neutral_polar_furbolg_ursa_warrior,Hellbear Smasher
+npc_dota_neutral_rock_golem,Ancient Rock Golem
+npc_dota_neutral_satyr_hellcaller,Satyr Tormenter
+npc_dota_neutral_satyr_soulstealer,Satyr Mindstealer
+npc_dota_neutral_satyr_trickster,Satyr Banisher
+npc_dota_neutral_small_thunder_lizard,Ancient Rumblehide
+npc_dota_neutral_wildkin,Wildwing
+npc_dota_observer_wards,Observer Ward
+npc_dota_phoenix_sun,Phoenix Sun
+npc_dota_plasma_field,Plasma Field
+npc_dota_pugna_nether_ward_1,Nether Ward Level 1
+npc_dota_pugna_nether_ward_2,Nether Ward Level 2
+npc_dota_pugna_nether_ward_3,Nether Ward Level 3
+npc_dota_pugna_nether_ward_4,Nether Ward Level 4
+npc_dota_rattletrap_cog,Power Cog
+npc_dota_rattletrap_rocket,Clockwork Rocket
+npc_dota_roquelaire,Roquelaire
+npc_dota_roshan,Roshan
+npc_dota_scout_hawk,Scout Hawk
+npc_dota_sentry_wards,Sentry Ward
+npc_dota_shadow_shaman_ward_1,Serpent Ward Level 1
+npc_dota_shadow_shaman_ward_2,Serpent Ward Level 2
+npc_dota_shadow_shaman_ward_3,Serpent Ward Level 3
+npc_dota_slark_visual,Slark Visual
+npc_dota_stormspirit_remnant,Storm Spirit Remnant
+npc_dota_target_dummy,Target Dummy
+npc_dota_techies_land_mine,Land Mine
+npc_dota_techies_minefield_sign,Minefield Sign
+npc_dota_techies_remote_mine,Remote Mine
+npc_dota_techies_stasis_trap,Stasis Trap
+npc_dota_templar_assassin_psionic_trap,Psionic Trap
+npc_dota_thinker,Thinker
+npc_dota_treant_eyes,Treant Eyes
+npc_dota_troll_warlord_axe,Troll Warlord Axe
+npc_dota_tusk_frozen_sigil1,Frozen Sigil Level 1
+npc_dota_tusk_frozen_sigil2,Frozen Sigil Level 2
+npc_dota_tusk_frozen_sigil3,Frozen Sigil Level 3
+npc_dota_tusk_frozen_sigil4,Frozen Sigil Level 4
+npc_dota_unit_tombstone1,Tombstone Level 1
+npc_dota_unit_tombstone2,Tombstone Level 2
+npc_dota_unit_tombstone3,Tombstone Level 3
+npc_dota_unit_tombstone4,Tombstone Level 4
+npc_dota_unit_undying_zombie,Undying Zombie
+npc_dota_unit_undying_zombie_torso,Undying Zombie
+npc_dota_venomancer_plague_ward_1,Plague Ward Level 1
+npc_dota_venomancer_plague_ward_2,Plague Ward Level 2
+npc_dota_venomancer_plague_ward_3,Plague Ward Level 3
+npc_dota_venomancer_plague_ward_4,Plague Ward Level 4
+npc_dota_visage_familiar1,Familiar 1
+npc_dota_visage_familiar2,Familiar 2
+npc_dota_visage_familiar3,Familiar 3
+npc_dota_warlock_golem_1,Warlock Golem Level 1
+npc_dota_warlock_golem_2,Warlock Golem Level 2
+npc_dota_warlock_golem_3,Warlock Golem Level 3
+npc_dota_warlock_golem_scepter_1,Warlock Scepter Golem Level 1
+npc_dota_warlock_golem_scepter_2,Warlock Scepter Golem Level 2
+npc_dota_warlock_golem_scepter_3,Warlock Scepter Golem Level 3
+npc_dota_weaver_swarm,Beetle
+npc_dota_wisp_spirit,Io Spirit
+npc_dota_witch_doctor_death_ward,Death Ward

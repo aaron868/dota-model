@@ -1,0 +1,113 @@
+ID,key,localizedName,shortKey,active
+102,npc_dota_hero_abaddon,Abaddon,abaddon,true
+73,npc_dota_hero_alchemist,Alchemist,alchemist,true
+68,npc_dota_hero_ancient_apparition,Ancient Apparition,ancient_apparition,true
+1,npc_dota_hero_antimage,Anti-Mage,antimage,true
+2,npc_dota_hero_axe,Axe,axe,true
+3,npc_dota_hero_bane,Bane,bane,true
+65,npc_dota_hero_batrider,Batrider,batrider,true
+38,npc_dota_hero_beastmaster,Beastmaster,beastmaster,true
+4,npc_dota_hero_bloodseeker,Bloodseeker,bloodseeker,true
+62,npc_dota_hero_bounty_hunter,Bounty Hunter,bounty_hunter,true
+78,npc_dota_hero_brewmaster,Brewmaster,brewmaster,true
+99,npc_dota_hero_bristleback,Bristleback,bristleback,true
+61,npc_dota_hero_broodmother,Broodmother,broodmother,true
+96,npc_dota_hero_centaur,Centaur Warrunner,centaur,true
+81,npc_dota_hero_chaos_knight,Chaos Knight,chaos_knight,true
+66,npc_dota_hero_chen,Chen,chen,true
+56,npc_dota_hero_clinkz,Clinkz,clinkz,true
+5,npc_dota_hero_crystal_maiden,Crystal Maiden,crystal_maiden,true
+55,npc_dota_hero_dark_seer,Dark Seer,dark_seer,true
+50,npc_dota_hero_dazzle,Dazzle,dazzle,true
+43,npc_dota_hero_death_prophet,Death Prophet,death_prophet,true
+87,npc_dota_hero_disruptor,Disruptor,disruptor,true
+69,npc_dota_hero_doom_bringer,Doom,doom_bringer,true
+49,npc_dota_hero_dragon_knight,Dragon Knight,dragon_knight,true
+6,npc_dota_hero_drow_ranger,Drow Ranger,drow_ranger,true
+107,npc_dota_hero_earth_spirit,Earth Spirit,earth_spirit,true
+7,npc_dota_hero_earthshaker,Earthshaker,earthshaker,true
+103,npc_dota_hero_elder_titan,Elder Titan,elder_titan,true
+106,npc_dota_hero_ember_spirit,Ember Spirit,ember_spirit,true
+58,npc_dota_hero_enchantress,Enchantress,enchantress,true
+33,npc_dota_hero_enigma,Enigma,enigma,true
+41,npc_dota_hero_faceless_void,Faceless Void,faceless_void,true
+53,npc_dota_hero_furion,Nature's Prophet,furion,true
+72,npc_dota_hero_gyrocopter,Gyrocopter,gyrocopter,true
+59,npc_dota_hero_huskar,Huskar,huskar,true
+74,npc_dota_hero_invoker,Invoker,invoker,true
+64,npc_dota_hero_jakiro,Jakiro,jakiro,true
+8,npc_dota_hero_juggernaut,Juggernaut,juggernaut,true
+90,npc_dota_hero_keeper_of_the_light,Keeper of the Light,keeper_of_the_light,true
+23,npc_dota_hero_kunkka,Kunkka,kunkka,true
+104,npc_dota_hero_legion_commander,Legion Commander,legion_commander,true
+52,npc_dota_hero_leshrac,Leshrac,leshrac,true
+31,npc_dota_hero_lich,Lich,lich,true
+54,npc_dota_hero_life_stealer,Lifestealer,life_stealer,true
+25,npc_dota_hero_lina,Lina,lina,true
+26,npc_dota_hero_lion,Lion,lion,true
+80,npc_dota_hero_lone_druid,Lone Druid,lone_druid,true
+48,npc_dota_hero_luna,Luna,luna,true
+77,npc_dota_hero_lycan,Lycan,lycan,true
+97,npc_dota_hero_magnataur,Magnus,magnataur,true
+94,npc_dota_hero_medusa,Medusa,medusa,true
+82,npc_dota_hero_meepo,Meepo,meepo,true
+9,npc_dota_hero_mirana,Mirana,mirana,true
+10,npc_dota_hero_morphling,Morphling,morphling,true
+89,npc_dota_hero_naga_siren,Naga Siren,naga_siren,true
+36,npc_dota_hero_necrolyte,Necrophos,necrolyte,true
+11,npc_dota_hero_nevermore,Shadow Fiend,nevermore,true
+60,npc_dota_hero_night_stalker,Night Stalker,night_stalker,true
+88,npc_dota_hero_nyx_assassin,Nyx Assassin,nyx_assassin,true
+76,npc_dota_hero_obsidian_destroyer,Outworld Devourer,obsidian_destroyer,true
+84,npc_dota_hero_ogre_magi,Ogre Magi,ogre_magi,true
+57,npc_dota_hero_omniknight,Omniknight,omniknight,true
+111,npc_dota_hero_oracle,Oracle,oracle,true
+44,npc_dota_hero_phantom_assassin,Phantom Assassin,phantom_assassin,true
+12,npc_dota_hero_phantom_lancer,Phantom Lancer,phantom_lancer,true
+110,npc_dota_hero_phoenix,Phoenix,phoenix,true
+13,npc_dota_hero_puck,Puck,puck,true
+14,npc_dota_hero_pudge,Pudge,pudge,true
+45,npc_dota_hero_pugna,Pugna,pugna,true
+39,npc_dota_hero_queenofpain,Queen of Pain,queenofpain,true
+51,npc_dota_hero_rattletrap,Clockwerk,rattletrap,true
+15,npc_dota_hero_razor,Razor,razor,true
+32,npc_dota_hero_riki,Riki,riki,true
+86,npc_dota_hero_rubick,Rubick,rubick,true
+16,npc_dota_hero_sand_king,Sand King,sand_king,true
+79,npc_dota_hero_shadow_demon,Shadow Demon,shadow_demon,true
+27,npc_dota_hero_shadow_shaman,Shadow Shaman,shadow_shaman,true
+98,npc_dota_hero_shredder,Timbersaw,shredder,true
+75,npc_dota_hero_silencer,Silencer,silencer,true
+42,npc_dota_hero_skeleton_king,Wraith King,skeleton_king,true
+101,npc_dota_hero_skywrath_mage,Skywrath Mage,skywrath_mage,true
+28,npc_dota_hero_slardar,Slardar,slardar,true
+93,npc_dota_hero_slark,Slark,slark,true
+35,npc_dota_hero_sniper,Sniper,sniper,true
+67,npc_dota_hero_spectre,Spectre,spectre,true
+71,npc_dota_hero_spirit_breaker,Spirit Breaker,spirit_breaker,true
+17,npc_dota_hero_storm_spirit,Storm Spirit,storm_spirit,true
+18,npc_dota_hero_sven,Sven,sven,true
+105,npc_dota_hero_techies,Techies,techies,true
+46,npc_dota_hero_templar_assassin,Templar Assassin,templar_assassin,true
+109,npc_dota_hero_terrorblade,Terrorblade,terrorblade,true
+29,npc_dota_hero_tidehunter,Tidehunter,tidehunter,true
+34,npc_dota_hero_tinker,Tinker,tinker,true
+19,npc_dota_hero_tiny,Tiny,tiny,true
+83,npc_dota_hero_treant,Treant Protector,treant,true
+95,npc_dota_hero_troll_warlord,Troll Warlord,troll_warlord,true
+100,npc_dota_hero_tusk,Tusk,tusk,true
+85,npc_dota_hero_undying,Undying,undying,true
+70,npc_dota_hero_ursa,Ursa,ursa,true
+20,npc_dota_hero_vengefulspirit,Vengeful Spirit,vengefulspirit,true
+40,npc_dota_hero_venomancer,Venomancer,venomancer,true
+47,npc_dota_hero_viper,Viper,viper,true
+92,npc_dota_hero_visage,Visage,visage,true
+37,npc_dota_hero_warlock,Warlock,warlock,true
+63,npc_dota_hero_weaver,Weaver,weaver,true
+21,npc_dota_hero_windrunner,Windranger,windrunner,true
+112,npc_dota_hero_winter_wyvern,Winter Wyvern,winter_wyvern,true
+91,npc_dota_hero_wisp,Io,wisp,true
+30,npc_dota_hero_witch_doctor,Witch Doctor,witch_doctor,true
+22,npc_dota_hero_zuus,Zeus,zuus,true
+113,npc_dota_hero_arc_warden,Arc Warden,arc_warden,false
+108,npc_dota_hero_abyssal_underlord,Abyssal Underlord,abyssal_underlord,false
