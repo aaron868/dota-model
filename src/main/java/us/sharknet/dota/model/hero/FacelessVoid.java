@@ -63,7 +63,7 @@ public final class FacelessVoid extends Hero {
         ability3 = FacelessVoidTimeLock.instance();
         ability4 = FacelessVoidChronosphere.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 43;
@@ -81,7 +81,7 @@ public final class FacelessVoid extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 15;
+        healthBarOffset = 150;
         heroGlowColor = new int[]{217,160,255};
         heroID = 41;
         heroSelectSoundEffect = "Hero_FacelessVoid.Pick";
@@ -92,7 +92,7 @@ public final class FacelessVoid extends Hero {
         loadoutScale = .95;
         model = "models/heroes/faceless_void/faceless_void.vmdl";
         modelScale = .84;
-        movementSpeed = 3;
+        movementSpeed = 300;
         movementTurnRate = 1;
         nameAliases = "fv";
         pickSound = "faceless_void_face_spawn_01";

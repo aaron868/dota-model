@@ -28,7 +28,7 @@ public final class AbaddonDeathCoil extends Ability {
     private AbaddonDeathCoil() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.452,0.452,0.452,0.452};
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = 4.5;
         abilityManaCost = new int[]{50,60,70,80};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -41,7 +41,7 @@ public final class AbaddonDeathCoil extends Ability {
         heal_amount = new int[]{100,150,200,250};
         localizedName = "Mist Coil";
         owningHeroShortKey = "abaddon";
-        projectile_speed = 125;
+        projectile_speed = 1250;
         self_damage = new double[]{75.0,100.0,125.0,150.0};
         target_damage = new double[]{100.0,150.0,200.0,250.0};
     }

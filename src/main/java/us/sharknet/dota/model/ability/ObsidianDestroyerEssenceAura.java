@@ -29,7 +29,7 @@ public final class ObsidianDestroyerEssenceAura extends Ability {
         owningHeroShortKey = "obsidian_destroyer";
         radius = new int[]{1000,1000,1000,1000};
         restore_amount = new double[]{10.0,15.0,20.0,25.0};
-        restore_chance = 4;
+        restore_chance = 40;
     }
 
     public static ObsidianDestroyerEssenceAura instance() {

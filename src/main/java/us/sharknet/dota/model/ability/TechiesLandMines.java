@@ -27,7 +27,7 @@ public final class TechiesLandMines extends Ability {
     private TechiesLandMines() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 1;
+        abilityCastRange = 100;
         abilityCooldown = new int[]{9,8,7,5};
         abilityManaCost = new int[]{60,75,85,100};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
@@ -35,13 +35,13 @@ public final class TechiesLandMines extends Ability {
         key = "techies_land_mines";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         activation_time = .5;
-        big_radius = 5;
+        big_radius = 500;
         damage = new int[]{150,190,225,260};
         explode_delay = .3;
         fade_time = 2;
         localizedName = "Land Mines";
         owningHeroShortKey = "techies";
-        small_radius = 2;
+        small_radius = 200;
     }
 
     public static TechiesLandMines instance() {

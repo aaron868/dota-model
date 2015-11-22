@@ -29,9 +29,9 @@ public final class RikiBlinkStrike extends Ability {
     private RikiBlinkStrike() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .4;
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = 0;
-        abilityManaCost = 4;
+        abilityManaCost = 40;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
@@ -45,7 +45,7 @@ public final class RikiBlinkStrike extends Ability {
         localizedName = "Blink Strike";
         max_charges = new int[]{4,5,6};
         owningHeroShortKey = "riki";
-        tooltip_range = 8;
+        tooltip_range = 800;
     }
 
     public static RikiBlinkStrike instance() {

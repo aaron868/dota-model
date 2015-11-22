@@ -60,7 +60,7 @@ public final class Rattletrap extends Hero {
         ability3 = RattletrapRocketFlare.instance();
         ability4 = RattletrapHookshot.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .33;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 33;
@@ -78,7 +78,7 @@ public final class Rattletrap extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 13;
+        healthBarOffset = 130;
         heroGlowColor = new int[]{252,220,64};
         heroID = 51;
         heroSelectSoundEffect = "Hero_Rattletrap.Pick";

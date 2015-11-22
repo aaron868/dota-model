@@ -29,7 +29,7 @@ public final class SkywrathMageMysticFlare extends Ability {
     private SkywrathMageMysticFlare() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
-        abilityCastRange = 12;
+        abilityCastRange = 1200;
         abilityCooldown = new double[]{60.0,40.0,20.0};
         abilityManaCost = new int[]{350,575,800};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -44,7 +44,7 @@ public final class SkywrathMageMysticFlare extends Ability {
         duration = 2.4;
         localizedName = "Mystic Flare";
         owningHeroShortKey = "skywrath_mage";
-        radius = 17;
+        radius = 170;
         scepter_cooldown = new double[]{20.0,10.0,0.0};
     }
 

@@ -68,16 +68,16 @@ public final class Zuus extends Hero {
         ability3 = ZuusStaticField.instance();
         ability4 = ZuusThundergodsWrath.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .633;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 29;
         attackDamageMin = 21;
-        attackRange = 35;
+        attackRange = 350;
         attackRate = 1.7;
         attributeAgilityGain = 1.2;
         attributeBaseAgility = 11;
-        attributeBaseIntelligence = 2;
+        attributeBaseIntelligence = 20;
         attributeBaseStrength = 19;
         attributeIntelligenceGain = 2.7;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
@@ -87,7 +87,7 @@ public final class Zuus extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 13;
+        healthBarOffset = 130;
         heroGlowColor = new int[]{64,166,234};
         heroID = 22;
         heroPool1 = 1;
@@ -106,7 +106,7 @@ public final class Zuus extends Hero {
         pickSound = "zuus_zuus_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_zuus";
         projectileModel = "particles/units/heroes/hero_zuus/zuus_base_attack.vpcf";
-        projectileSpeed = 11;
+        projectileSpeed = 1100;
         role = "Nuker";
         rolelevels = 3;
         soundSet = "Hero_zuus";

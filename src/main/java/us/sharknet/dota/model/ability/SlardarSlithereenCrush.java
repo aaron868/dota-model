@@ -41,10 +41,10 @@ public final class SlardarSlithereenCrush extends Ability {
         iD = 5115;
         key = "slardar_slithereen_crush";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        crush_attack_slow_tooltip = -2;
-        crush_extra_slow = -2;
+        crush_attack_slow_tooltip = -20;
+        crush_extra_slow = -20;
         crush_extra_slow_duration = 2;
-        crush_radius = 35;
+        crush_radius = 350;
         localizedName = "Slithereen Crush";
         owningHeroShortKey = "slardar";
         stun_duration = new double[]{1.6,1.9,2.2,2.5};

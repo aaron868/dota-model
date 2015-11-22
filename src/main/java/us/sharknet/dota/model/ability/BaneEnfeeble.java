@@ -25,14 +25,14 @@ public final class BaneEnfeeble extends Ability {
     private BaneEnfeeble() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = 8;
         abilityDuration = new double[]{20.0,20.0,20.0,20.0};
         abilityManaCost = new int[]{95,105,115,125};
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        iD = 512;
+        iD = 5012;
         key = "bane_enfeeble";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         enfeeble_attack_reduction = new int[]{-30,-60,-90,-120};

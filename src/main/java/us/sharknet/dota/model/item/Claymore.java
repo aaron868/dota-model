@@ -20,7 +20,7 @@ public final class Claymore extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 5;
         itemAliases = "claymore";
-        itemCost = 14;
+        itemCost = 1400;
         itemQuality = "component";
         itemShopTags = "damage";
         key = "item_claymore";

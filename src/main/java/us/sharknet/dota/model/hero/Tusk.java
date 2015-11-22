@@ -67,7 +67,7 @@ public final class Tusk extends Hero {
         ability7 = AttributeBonus.instance();
         abilityLayout = 5;
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .36;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 31;
@@ -84,8 +84,8 @@ public final class Tusk extends Hero {
         banSound = "tusk_tusk_anger_03";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 19;
-        heroID = 1;
+        healthBarOffset = 190;
+        heroID = 100;
         heroSelectSoundEffect = "Hero_Tusk.Pick";
         idleExpression = "scenes/tusk/tusk_exp_idle_01.vcd";
         key = "npc_dota_hero_tusk";
@@ -93,7 +93,7 @@ public final class Tusk extends Hero {
         loadoutScale = 1;
         model = "models/heroes/tuskarr/tuskarr.vmdl";
         modelScale = .9;
-        movementSpeed = 35;
+        movementSpeed = 305;
         movementTurnRate = .5;
         nameAliases = "Tuskarr";
         pickSound = "tusk_tusk_spawn_01";

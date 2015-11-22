@@ -28,9 +28,9 @@ public final class LifeStealerAssimilate extends Ability {
     private LifeStealerAssimilate() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         abilityCastPoint = .2;
-        abilityCastRange = 15;
-        abilityCooldown = 5;
-        abilityManaCost = 5;
+        abilityCastRange = 150;
+        abilityCooldown = 50;
+        abilityManaCost = 50;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
@@ -39,7 +39,7 @@ public final class LifeStealerAssimilate extends Ability {
         isGrantedByScepter = 1;
         key = "life_stealer_assimilate";
         maxLevel = 1;
-        damage = 3;
+        damage = 300;
         localizedName = "Assimilate";
         order_lock_duration = 2;
         owningHeroShortKey = "life_stealer";

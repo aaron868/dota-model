@@ -20,7 +20,7 @@ public final class MithrilHammer extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 8;
         itemAliases = "mithril hammer";
-        itemCost = 16;
+        itemCost = 1600;
         itemQuality = "component";
         itemShopTags = "damage";
         key = "item_mithril_hammer";

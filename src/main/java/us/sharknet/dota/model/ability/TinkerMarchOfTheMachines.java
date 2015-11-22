@@ -30,7 +30,7 @@ public final class TinkerMarchOfTheMachines extends Ability {
     private TinkerMarchOfTheMachines() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.53,0.53,0.53,0.53};
-        abilityCastRange = 3;
+        abilityCastRange = 300;
         abilityCooldown = new double[]{35.0,35.0,35.0,35.0};
         abilityDamage = new int[]{16,24,32,40};
         abilityManaCost = new int[]{145,150,165,190};
@@ -39,13 +39,13 @@ public final class TinkerMarchOfTheMachines extends Ability {
         key = "tinker_march_of_the_machines";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         collision_radius = new int[]{50,50,50,50};
-        distance = 18;
-        distance_scepter = 18;
+        distance = 1800;
+        distance_scepter = 1800;
         duration = new double[]{6.0,6.0,6.0,6.0};
         localizedName = "March Of The Machines";
         machines_per_sec = 24;
         owningHeroShortKey = "tinker";
-        radius = 9;
+        radius = 900;
         speed = new int[]{400,400,400,400};
         splash_radius = new int[]{150,150,150,150};
     }

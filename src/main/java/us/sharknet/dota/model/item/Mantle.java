@@ -21,7 +21,7 @@ public final class Mantle extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 15;
         itemAliases = "mantle of intelligence";
-        itemCost = 15;
+        itemCost = 150;
         itemQuality = "component";
         itemShopTags = "int";
         key = "item_mantle";

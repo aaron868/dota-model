@@ -29,14 +29,14 @@ public final class KunkkaTorrent extends Ability {
     private KunkkaTorrent() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .4;
-        abilityCastRange = 15;
-        abilityCooldown = 1;
+        abilityCastRange = 1500;
+        abilityCooldown = 10;
         abilityDamage = new int[]{120,180,240,300};
         abilityManaCost = new int[]{120,120,120,120};
         abilityModifierSupportValue = .5;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 531;
+        iD = 5031;
         key = "kunkka_torrent";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         delay = new double[]{1.6,1.6,1.6,1.6};

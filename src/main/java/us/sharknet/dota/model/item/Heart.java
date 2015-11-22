@@ -27,13 +27,13 @@ public final class Heart extends Item {
         abilityCooldown = 7;
         iD = 114;
         itemAliases = new String[]{"hot","heart of tarrasque"};
-        itemCost = 55;
+        itemCost = 5500;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "epic";
         itemShopTags = new String[]{"str","regen_health","health_pool"};
         key = "item_heart";
-        bonus_health = 3;
-        bonus_strength = 4;
+        bonus_health = 300;
+        bonus_strength = 40;
         cooldown_melee = 5;
         cooldown_ranged_tooltip = 7;
         health_regen_rate = 4;

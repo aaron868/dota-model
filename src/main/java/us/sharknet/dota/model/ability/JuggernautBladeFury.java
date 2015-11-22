@@ -33,11 +33,11 @@ public final class JuggernautBladeFury extends Ability {
         abilityManaCost = new int[]{120,110,100,90};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 528;
+        iD = 5028;
         key = "juggernaut_blade_fury";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         blade_fury_damage_tick = .2;
-        blade_fury_radius = 25;
+        blade_fury_radius = 250;
         localizedName = "Blade Fury";
         owningHeroShortKey = "juggernaut";
     }

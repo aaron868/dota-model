@@ -16,7 +16,7 @@ public final class RecipeDagon5 extends Item {
     private final String localizedName;
 
     private RecipeDagon5() {
-        iD = 2;
+        iD = 200;
         itemCost = 0;
         itemRecipe = 1;
         itemRequirements = new Item[]{Dagon4.instance(),RecipeDagon.instance()};

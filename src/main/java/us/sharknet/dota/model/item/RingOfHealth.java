@@ -25,7 +25,7 @@ public final class RingOfHealth extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 56;
         itemAliases = new String[]{"roh","ring of health"};
-        itemCost = 85;
+        itemCost = 850;
         itemQuality = "component";
         itemShareability = "ITEM_PARTIALLY_SHAREABLE";
         itemShopTags = "regen_health";

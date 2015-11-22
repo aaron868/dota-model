@@ -21,7 +21,7 @@ public final class Hyperstone extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 55;
         itemAliases = "hyperstone";
-        itemCost = 2;
+        itemCost = 2000;
         itemQuality = "secret_shop";
         itemShopTags = "attack_speed";
         key = "item_hyperstone";

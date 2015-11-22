@@ -66,15 +66,15 @@ public final class Warlock extends Hero {
         ability3 = WarlockUpheaval.instance();
         ability4 = WarlockRainOfChaos.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 32;
         attackDamageMin = 22;
-        attackRange = 6;
+        attackRange = 600;
         attackRate = 1.7;
         attributeAgilityGain = 1;
-        attributeBaseAgility = 1;
+        attributeBaseAgility = 10;
         attributeBaseIntelligence = 24;
         attributeBaseStrength = 18;
         attributeIntelligenceGain = 2.7;
@@ -102,7 +102,7 @@ public final class Warlock extends Hero {
         pickSound = "warlock_warl_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_warlock";
         projectileModel = "particles/units/heroes/hero_warlock/warlock_base_attack.vpcf";
-        projectileSpeed = 12;
+        projectileSpeed = 1200;
         role = new String[]{"Support","Initiator","Disabler"};
         rolelevels = new int[]{1,2,1};
         soundSet = "Hero_Warlock";

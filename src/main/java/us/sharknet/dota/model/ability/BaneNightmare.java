@@ -34,7 +34,7 @@ public final class BaneNightmare extends Ability {
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
         abilityCastRange = new int[]{500,550,600,650};
         abilityCooldown = new int[]{16,15,14,13};
-        abilityDamage = 2;
+        abilityDamage = 20;
         abilityDuration = new double[]{4.0,5.0,6.0,7.0};
         abilityManaCost = new int[]{165,165,165,165};
         abilityModifierSupportValue = .5;
@@ -42,7 +42,7 @@ public final class BaneNightmare extends Ability {
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
-        iD = 514;
+        iD = 5014;
         key = "bane_nightmare";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_NO";
         animation_rate = new double[]{0.2,0.2,0.2,0.2};

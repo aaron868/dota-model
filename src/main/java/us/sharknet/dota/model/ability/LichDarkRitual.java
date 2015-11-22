@@ -23,7 +23,7 @@ public final class LichDarkRitual extends Ability {
     private LichDarkRitual() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 4;
+        abilityCastRange = 400;
         abilityCooldown = new int[]{44,36,28,20};
         abilityManaCost = new int[]{25,25,25,25};
         abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_NOT_SUMMONED","DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS","DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"};

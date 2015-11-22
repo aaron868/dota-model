@@ -35,16 +35,16 @@ public final class TravelBoots2 extends Item {
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_INVULNERABLE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP","DOTA_UNIT_TARGET_BUILDING"};
-        iD = 22;
+        iD = 220;
         itemAliases = new String[]{"bot","boots of travel"};
         itemBaseLevel = 2;
-        itemCost = 445;
+        itemCost = 4450;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "common";
         itemShopTags = new String[]{"teleport","move_speed"};
         key = "item_travel_boots_2";
         maxUpgradeLevel = 2;
-        bonus_movement_speed = 1;
+        bonus_movement_speed = 100;
         localizedName = "Boots of Travel 2";
     }
 

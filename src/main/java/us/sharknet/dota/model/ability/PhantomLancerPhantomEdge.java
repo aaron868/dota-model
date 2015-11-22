@@ -19,12 +19,12 @@ public final class PhantomLancerPhantomEdge extends Ability {
     private PhantomLancerPhantomEdge() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityCooldown = new int[]{16,12,8,4};
-        iD = 568;
+        iD = 5068;
         key = "phantom_lancer_phantom_edge";
-        bonus_speed = 8;
+        bonus_speed = 800;
         localizedName = "Phantom Edge";
         max_distance = new int[]{600,700,800,900};
-        min_distance = 3;
+        min_distance = 300;
         owningHeroShortKey = "phantom_lancer";
     }
 

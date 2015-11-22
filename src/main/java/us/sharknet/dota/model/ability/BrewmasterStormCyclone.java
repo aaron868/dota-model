@@ -29,7 +29,7 @@ public final class BrewmasterStormCyclone extends Ability {
         abilityManaCost = new int[]{150,150,150,150};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
-        iD = 549;
+        iD = 5409;
         key = "brewmaster_storm_cyclone";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration_hero = 6;

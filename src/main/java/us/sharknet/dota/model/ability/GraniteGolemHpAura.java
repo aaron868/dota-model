@@ -23,7 +23,7 @@ public final class GraniteGolemHpAura extends Ability {
         bonus_hp = 15;
         localizedName = "HP Aura";
         owningHeroShortKey = "granite_golem";
-        radius = 9;
+        radius = 900;
     }
 
     public static GraniteGolemHpAura instance() {

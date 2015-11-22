@@ -30,7 +30,7 @@ public final class StormSpiritElectricVortex extends Ability {
     private StormSpiritElectricVortex() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 3;
+        abilityCastRange = 300;
         abilityCooldown = new double[]{21.0,20.0,19.0,18.0};
         abilityDuration = new double[]{1.0,1.5,2.0,2.5};
         abilityManaCost = new int[]{100,110,120,130};
@@ -38,13 +38,13 @@ public final class StormSpiritElectricVortex extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 599;
+        iD = 5099;
         key = "storm_spirit_electric_vortex";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{1.0,1.5,2.0,2.5};
         electric_vortex_pull_tether_range = 12;
-        electric_vortex_pull_units_per_second = 1;
-        electric_vortex_self_slow = -5;
+        electric_vortex_pull_units_per_second = 100;
+        electric_vortex_self_slow = -50;
         electric_vortex_self_slow_duration = 3;
         localizedName = "Electric Vortex";
         owningHeroShortKey = "storm_spirit";

@@ -16,8 +16,8 @@ public final class RecipeGuardianGreaves extends Item {
     private final String localizedName;
 
     private RecipeGuardianGreaves() {
-        iD = 23;
-        itemCost = 165;
+        iD = 230;
+        itemCost = 1650;
         itemRecipe = 1;
         itemRequirements = new Item[]{Mekansm.instance(),ArcaneBoots.instance()};
         itemResult = GuardianGreaves.instance();

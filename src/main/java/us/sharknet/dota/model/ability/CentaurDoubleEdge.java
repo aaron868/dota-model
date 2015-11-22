@@ -39,7 +39,7 @@ public final class CentaurDoubleEdge extends Ability {
         edge_damage = new int[]{175,250,325,400};
         localizedName = "Double Edge";
         owningHeroShortKey = "centaur";
-        radius = 19;
+        radius = 190;
     }
 
     public static CentaurDoubleEdge instance() {

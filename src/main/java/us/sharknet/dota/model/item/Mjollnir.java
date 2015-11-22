@@ -42,35 +42,35 @@ public final class Mjollnir extends Item {
     private Mjollnir() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = 0;
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = 35;
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 158;
         itemAliases = "mjollnir";
-        itemCost = 57;
+        itemCost = 5700;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "artifact";
         itemShopTags = new String[]{"damage","attack_speed","unique"};
         key = "item_mjollnir";
-        bonus_attack_speed = 8;
+        bonus_attack_speed = 80;
         bonus_damage = 24;
         chain_chance = 25;
         chain_cooldown = 0.0;
-        chain_damage = 15;
+        chain_damage = 150;
         chain_delay = .25;
-        chain_radius = 9;
+        chain_radius = 900;
         chain_strikes = 12;
         localizedName = "Mjollnir";
-        static_chance = 2;
+        static_chance = 20;
         static_cooldown = 1;
-        static_damage = 2;
+        static_damage = 200;
         static_duration = 15;
-        static_primary_radius = 6;
-        static_radius = 9;
-        static_seconary_radius = 9;
+        static_primary_radius = 600;
+        static_radius = 900;
+        static_seconary_radius = 900;
         static_strikes = 4;
     }
 

@@ -27,7 +27,7 @@ public final class SpiritBreakerGreaterBash extends Ability {
     private SpiritBreakerGreaterBash() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityCooldown = new double[]{1.5,1.5,1.5,1.5};
-        abilityModifierSupportBonus = 4;
+        abilityModifierSupportBonus = 40;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5355;
         key = "spirit_breaker_greater_bash";

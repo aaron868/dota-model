@@ -53,7 +53,7 @@ public final class WarlockGolemScepter3 extends NpcUnit {
         ability1 = WarlockGolemFlamingFists.instance();
         ability2 = WarlockGolemPermanentImmolation.instance();
         armorPhysical = 12;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .26;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 94;
@@ -61,14 +61,14 @@ public final class WarlockGolemScepter3 extends NpcUnit {
         attackRange = 225;
         attackRate = 1.2;
         baseClass = "npc_dota_warlock_golem";
-        bountyGoldMax = 1;
-        bountyGoldMin = 1;
+        bountyGoldMax = 100;
+        bountyGoldMin = 100;
         bountyXP = 98;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_HERO";
         consideredHero = 1;
         hasInventory = 0;
-        healthBarOffset = 28;
+        healthBarOffset = 280;
         isAncient = 1;
         isSummoned = 1;
         key = "npc_dota_warlock_golem_scepter_3";
@@ -76,7 +76,7 @@ public final class WarlockGolemScepter3 extends NpcUnit {
         model = "models/heroes/warlock/warlock_demon.vmdl";
         modelScale = 1.1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 36;
+        movementSpeed = 360;
         projectileSpeed = 0;
         soundSet = "Hero_WarlockGolem";
         statusHealth = 1125;
@@ -86,8 +86,8 @@ public final class WarlockGolemScepter3 extends NpcUnit {
         teamName = "DOTA_TEAM_NEUTRALS";
         unitLabel = "golem";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 18;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 1800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_warlock_golem.vsndevts";
         localizedName = "Warlock Scepter Golem Level 3";
         wearable = 8362;

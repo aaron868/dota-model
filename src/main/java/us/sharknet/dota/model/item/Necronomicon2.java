@@ -44,13 +44,13 @@ public final class Necronomicon2 extends Item {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = 0;
         abilityCooldown = 95;
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilitySharedCooldown = "necronomicon";
         fightRecapLevel = 1;
         iD = 193;
         itemAliases = "necronomicon 2";
         itemBaseLevel = 2;
-        itemCost = 395;
+        itemCost = 3950;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "rare";
         itemShopTags = new String[]{"int","str","hard_to_tag","see_invis"};
@@ -59,8 +59,8 @@ public final class Necronomicon2 extends Item {
         upgradeRecipe = "item_recipe_necronomicon";
         upgradesItems = "item_necronomicon_2";
         archer_attack_speed = 7;
-        archer_attack_speed_radius = 4;
-        archer_aura_radius_tooltip = 9;
+        archer_attack_speed_radius = 400;
+        archer_aura_radius_tooltip = 900;
         archer_damage_tooltip = 90;
         archer_health_tooltip = 800;
         archer_mana_burn = 175;
@@ -68,12 +68,12 @@ public final class Necronomicon2 extends Item {
         bonus_strength = 12;
         explosion = 675;
         localizedName = "Necronomicon 2";
-        summon_duration = 4;
+        summon_duration = 40;
         warrior_damage_tooltip = 60;
         warrior_health_tooltip = 800;
         warrior_mana_break_tooltip = 50;
         warrior_mana_feedback = 50;
-        warrior_truesight = 1;
+        warrior_truesight = 1000;
     }
 
     public static Necronomicon2 instance() {

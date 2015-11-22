@@ -34,17 +34,17 @@ public final class TechiesRemoteMines extends Ability {
     private TechiesRemoteMines() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"};
         abilityCastPoint = new double[]{1.5,1.5,1.5};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new double[]{10.0,10.0,10.0};
         abilityManaCost = new int[]{200,240,300};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 562;
+        iD = 5602;
         key = "techies_remote_mines";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         activation_time = 2;
-        cast_range_scepter = 7;
-        cast_range_tooltip = 5;
+        cast_range_scepter = 700;
+        cast_range_tooltip = 500;
         damage = new int[]{300,450,600};
         damage_scepter = new int[]{450,600,750};
         duration = 6;
@@ -55,7 +55,7 @@ public final class TechiesRemoteMines extends Ability {
         radius = 425;
         radius_scepter = 425;
         vision_duration = 3;
-        vision_radius = 5;
+        vision_radius = 500;
     }
 
     public static TechiesRemoteMines instance() {

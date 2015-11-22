@@ -65,7 +65,7 @@ public final class Alchemist extends Hero {
         ability5 = AttributeBonus.instance();
         ability6 = AlchemistUnstableConcoctionThrow.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .35;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 33;
@@ -83,7 +83,7 @@ public final class Alchemist extends Hero {
         cMEnabled = 1;
         enabled = 1;
         hasAggressiveStance = 1;
-        healthBarOffset = 2;
+        healthBarOffset = 200;
         heroID = 73;
         heroSelectSoundEffect = "Hero_Alchemist.Pick";
         heroUnlockOrder = 1;
@@ -101,7 +101,7 @@ public final class Alchemist extends Hero {
         rolelevels = new int[]{2,1,2,1,1,1};
         soundSet = "Hero_Alchemist";
         team = "Good";
-        visionNighttimeRange = 8;
+        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_alchemist.vsndevts";
         active = true;
         localizedName = "Alchemist";

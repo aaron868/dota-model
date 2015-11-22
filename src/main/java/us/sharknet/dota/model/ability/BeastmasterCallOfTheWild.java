@@ -24,7 +24,7 @@ public final class BeastmasterCallOfTheWild extends Ability {
     private BeastmasterCallOfTheWild() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = .3;
-        abilityCooldown = 4;
+        abilityCooldown = 40;
         abilityManaCost = 15;
         iD = 5169;
         key = "beastmaster_call_of_the_wild";

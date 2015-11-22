@@ -27,17 +27,17 @@ public final class TemplarAssassinTrap extends Ability {
         abilityCastPoint = 0;
         abilityCooldown = .5;
         abilityManaCost = 0;
-        abilityModifierSupportBonus = 1;
+        abilityModifierSupportBonus = 100;
         iD = 5198;
         key = "templar_assassin_trap";
         maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Trap";
-        movement_speed_bonus = -3;
+        movement_speed_bonus = -30;
         movement_speed_bonus_stage = -5;
         owningHeroShortKey = "templar_assassin";
         trap_duration = 5;
-        trap_radius = 4;
+        trap_radius = 400;
     }
 
     public static TemplarAssassinTrap instance() {

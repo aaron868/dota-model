@@ -55,13 +55,13 @@ public final class CreepGoodguysRangedUpgraded extends NpcUnit {
 
     private CreepGoodguysRangedUpgraded() {
         armorPhysical = 1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 46;
         attackDamageMin = 41;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 5;
+        attackRange = 500;
         attackRate = 1;
         attributeAgilityGain = 0;
         attributeBaseAgility = 0;
@@ -87,17 +87,17 @@ public final class CreepGoodguysRangedUpgraded extends NpcUnit {
         movementSpeed = 325;
         movementTurnRate = .5;
         projectileModel = "particles/base_attacks/ranged_goodguy.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         ringRadius = 45;
         soundSet = "Creep_Good_Range";
         statusHealth = 475;
         statusHealthRegen = 2;
-        statusMana = 5;
+        statusMana = 500;
         statusManaRegen = .75;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 85;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 850;
+        visionNighttimeRange = 800;
         localizedName = "Radiant Super Ranged Creep";
     }
 

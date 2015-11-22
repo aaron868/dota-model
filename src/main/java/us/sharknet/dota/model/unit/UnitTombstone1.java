@@ -52,7 +52,7 @@ public final class UnitTombstone1 extends NpcUnit {
         bountyXP = 44;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
-        healthBarOffset = 25;
+        healthBarOffset = 250;
         isAncient = 1;
         isOther = 1;
         isSummoned = 1;
@@ -71,10 +71,10 @@ public final class UnitTombstone1 extends NpcUnit {
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_BADGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 18;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 1800;
         localizedName = "Tombstone Level 1";
-        wearable = 863;
+        wearable = 8630;
     }
 
     public static UnitTombstone1 instance() {

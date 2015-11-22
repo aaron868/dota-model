@@ -23,7 +23,7 @@ public final class ForestTrollHighPriestHeal extends Ability {
     private ForestTrollHighPriestHeal() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_AUTOCAST"};
         abilityCastPoint = .5;
-        abilityCastRange = 35;
+        abilityCastRange = 350;
         abilityCooldown = .5;
         abilityManaCost = 5;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";

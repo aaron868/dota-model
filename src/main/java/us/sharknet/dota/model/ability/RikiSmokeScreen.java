@@ -26,7 +26,7 @@ public final class RikiSmokeScreen extends Ability {
     private RikiSmokeScreen() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 55;
+        abilityCastRange = 550;
         abilityCooldown = 11;
         abilityDuration = 6;
         abilityManaCost = new int[]{75,80,85,90};
@@ -39,7 +39,7 @@ public final class RikiSmokeScreen extends Ability {
         movement_speed_reduction = new int[]{25,25,25,25};
         owningHeroShortKey = "riki";
         radius = new int[]{250,275,300,325};
-        turn_reduction = -3;
+        turn_reduction = -30;
     }
 
     public static RikiSmokeScreen instance() {

@@ -35,29 +35,29 @@ public final class Pipe extends Item {
     private Pipe() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCooldown = 6;
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         fightRecapLevel = 2;
-        iD = 9;
+        iD = 90;
         itemAlertable = 1;
         itemAliases = "pipe of insight";
-        itemCost = 35;
+        itemCost = 3500;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "rare";
         itemShopTags = new String[]{"regen_health","boost_magic_resist"};
         key = "item_pipe";
         aura_health_regen = 4;
-        aura_radius = 9;
-        barrier_block = 4;
-        barrier_block_creep = 4;
+        aura_radius = 900;
+        barrier_block = 400;
+        barrier_block_creep = 400;
         barrier_debuff_duration = 5;
         barrier_duration = 12;
-        barrier_radius = 9;
+        barrier_radius = 900;
         bonus_all_stats = 0;
         health_regen = 9;
         localizedName = "Pipe Of Insight";
-        magic_resistance = 3;
-        magic_resistance_aura = 1;
-        tooltip_resist = 3;
+        magic_resistance = 30;
+        magic_resistance_aura = 10;
+        tooltip_resist = 30;
     }
 
     public static Pipe instance() {

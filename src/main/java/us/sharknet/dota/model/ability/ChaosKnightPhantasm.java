@@ -35,17 +35,17 @@ public final class ChaosKnightPhantasm extends Ability {
         fightRecapLevel = 2;
         iD = 5429;
         key = "chaos_knight_phantasm";
-        extra_phantasm_chance_pct_tooltip = 5;
+        extra_phantasm_chance_pct_tooltip = 50;
         illusion_duration = 42;
         images_count = new int[]{1,2,3};
-        incoming_damage = 1;
-        incoming_damage_tooltip = 2;
+        incoming_damage = 100;
+        incoming_damage_tooltip = 200;
         invuln_duration = .5;
         localizedName = "Phantasm";
         outgoing_damage = new int[]{0,0,0};
         outgoing_damage_tooltip = new int[]{100,100,100};
         owningHeroShortKey = "chaos_knight";
-        vision_radius = 4;
+        vision_radius = 400;
     }
 
     public static ChaosKnightPhantasm instance() {

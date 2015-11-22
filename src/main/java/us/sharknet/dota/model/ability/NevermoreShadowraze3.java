@@ -31,15 +31,15 @@ public final class NevermoreShadowraze3 extends Ability {
         abilityManaCost = 75;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 561;
+        iD = 5061;
         key = "nevermore_shadowraze3";
         onLearnbar = 0;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Shadowraze 3";
         owningHeroShortKey = "nevermore";
         shadowraze_cooldown = 3;
-        shadowraze_radius = 25;
-        shadowraze_range = 7;
+        shadowraze_radius = 250;
+        shadowraze_range = 700;
     }
 
     public static NevermoreShadowraze3 instance() {

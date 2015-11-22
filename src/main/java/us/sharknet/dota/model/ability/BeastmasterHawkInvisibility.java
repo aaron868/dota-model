@@ -17,7 +17,7 @@ public final class BeastmasterHawkInvisibility extends Ability {
 
     private BeastmasterHawkInvisibility() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 517;
+        iD = 5170;
         key = "beastmaster_hawk_invisibility";
         fade_time = 1;
         fade_tooltip = new int[]{0,0,4,4};

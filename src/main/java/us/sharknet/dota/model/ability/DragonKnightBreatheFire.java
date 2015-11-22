@@ -32,7 +32,7 @@ public final class DragonKnightBreatheFire extends Ability {
     private DragonKnightBreatheFire() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new double[]{12.0,12.0,12.0,12.0};
         abilityDamage = new int[]{90,170,240,300};
         abilityManaCost = new int[]{100,110,120,130};
@@ -50,7 +50,7 @@ public final class DragonKnightBreatheFire extends Ability {
         owningHeroShortKey = "dragon_knight";
         range = new int[]{650,650,650,650};
         reduction = new int[]{-20,-25,-30,-35};
-        speed = 15;
+        speed = 1050;
         start_radius = new int[]{150,150,150,150};
     }
 

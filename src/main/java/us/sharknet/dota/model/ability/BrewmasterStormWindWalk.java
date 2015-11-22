@@ -22,7 +22,7 @@ public final class BrewmasterStormWindWalk extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCooldown = new double[]{7.0,7.0,7.0,7.0};
         abilityManaCost = new int[]{75,75,75,75};
-        iD = 541;
+        iD = 5410;
         key = "brewmaster_storm_wind_walk";
         bonus_damage = new int[]{100,100,100,100};
         bonus_movement_speeed = new int[]{50,50,50,50};

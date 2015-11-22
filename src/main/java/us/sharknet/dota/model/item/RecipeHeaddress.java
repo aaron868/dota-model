@@ -17,7 +17,7 @@ public final class RecipeHeaddress extends Item {
 
     private RecipeHeaddress() {
         iD = 93;
-        itemCost = 2;
+        itemCost = 200;
         itemRecipe = 1;
         itemRequirements = new Item[]{RingOfRegen.instance(),Branches.instance()};
         itemResult = Headdress.instance();

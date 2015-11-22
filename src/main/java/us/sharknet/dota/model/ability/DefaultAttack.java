@@ -12,7 +12,7 @@ public final class DefaultAttack extends Ability {
     private final String owningHeroShortKey;
 
     private DefaultAttack() {
-        iD = 51;
+        iD = 5001;
         key = "default_attack";
         localizedName = "Default Attack";
         owningHeroShortKey = "default";

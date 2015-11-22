@@ -18,10 +18,10 @@ public final class CourierReturnStashItems extends Ability {
     private CourierReturnStashItems() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
-        iD = 527;
+        iD = 5207;
         key = "courier_return_stash_items";
         maxLevel = 1;
-        handoff_distance = 4;
+        handoff_distance = 400;
         localizedName = "Return Stash Items";
         owningHeroShortKey = "courier";
     }

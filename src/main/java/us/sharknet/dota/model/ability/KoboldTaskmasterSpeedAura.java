@@ -23,7 +23,7 @@ public final class KoboldTaskmasterSpeedAura extends Ability {
         bonus_movement_speed = 12;
         localizedName = "Speed Aura";
         owningHeroShortKey = "kobold_taskmaster";
-        radius = 9;
+        radius = 900;
     }
 
     public static KoboldTaskmasterSpeedAura instance() {

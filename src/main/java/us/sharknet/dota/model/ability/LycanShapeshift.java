@@ -30,13 +30,13 @@ public final class LycanShapeshift extends Ability {
         fightRecapLevel = 2;
         iD = 5398;
         key = "lycan_shapeshift";
-        bonus_night_vision = 1;
+        bonus_night_vision = 1000;
         crit_chance = new int[]{30,35,40};
         crit_damage = new int[]{170,170,170};
         duration = new double[]{18.0,18.0,18.0};
         localizedName = "Shapeshift";
         owningHeroShortKey = "lycan";
-        speed = 65;
+        speed = 650;
         transformation_time = 1.5;
     }
 

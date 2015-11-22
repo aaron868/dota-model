@@ -71,7 +71,7 @@ public final class LifeStealer extends Hero {
         ability8 = LifeStealerConsume.instance();
         ability9 = AttributeBonus.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .39;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 42;
@@ -90,7 +90,7 @@ public final class LifeStealer extends Hero {
         cMEnabled = 1;
         enabled = 1;
         hasAggressiveStance = 1;
-        healthBarOffset = 13;
+        healthBarOffset = 130;
         heroGlowColor = new int[]{209,4,1};
         heroID = 54;
         heroSelectSoundEffect = "Hero_LifeStealer.Pick";

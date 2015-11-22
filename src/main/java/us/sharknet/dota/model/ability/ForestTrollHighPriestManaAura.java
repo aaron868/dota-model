@@ -23,7 +23,7 @@ public final class ForestTrollHighPriestManaAura extends Ability {
         localizedName = "Troll High Priest Mana Aura";
         mana_regen = 2;
         owningHeroShortKey = "forest_troll_high_priest";
-        radius = 9;
+        radius = 900;
     }
 
     public static ForestTrollHighPriestManaAura instance() {

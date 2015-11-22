@@ -36,7 +36,7 @@ public final class KeeperOfTheLightBlindingLight extends Ability {
         key = "keeper_of_the_light_blinding_light";
         maxLevel = 3;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        knockback_distance = 4;
+        knockback_distance = 400;
         knockback_duration = new double[]{0.4,0.4,0.4};
         knockback_height = new int[]{50,50,50};
         localizedName = "Blinding Light";

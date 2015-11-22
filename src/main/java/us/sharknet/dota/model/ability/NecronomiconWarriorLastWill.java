@@ -19,7 +19,7 @@ public final class NecronomiconWarriorLastWill extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 52;
+        iD = 5200;
         key = "necronomicon_warrior_last_will";
         explosion = new int[]{550,675,800};
         localizedName = "Last Will";

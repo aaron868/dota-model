@@ -17,7 +17,7 @@ public final class RecipeHeart extends Item {
 
     private RecipeHeart() {
         iD = 113;
-        itemCost = 14;
+        itemCost = 1400;
         itemRecipe = 1;
         itemRequirements = new Item[]{Reaver.instance(),VitalityBooster.instance()};
         itemResult = Heart.instance();

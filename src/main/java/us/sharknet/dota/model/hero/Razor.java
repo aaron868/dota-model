@@ -65,7 +65,7 @@ public final class Razor extends Hero {
         ability3 = RazorUnstableCurrent.instance();
         ability4 = RazorEyeOfTheStorm.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 25;
@@ -84,7 +84,7 @@ public final class Razor extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 23;
+        healthBarOffset = 230;
         heroGlowColor = new int[]{182,242,255};
         heroID = 15;
         heroPool1 = 1;
@@ -101,7 +101,7 @@ public final class Razor extends Hero {
         pickSound = "razor_raz_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_razor";
         projectileModel = "particles/units/heroes/hero_razor/razor_base_attack.vpcf";
-        projectileSpeed = 2;
+        projectileSpeed = 2000;
         role = new String[]{"Carry","Durable","Nuker","Pusher"};
         rolelevels = new int[]{2,2,1,1};
         soundSet = "Hero_Razor";

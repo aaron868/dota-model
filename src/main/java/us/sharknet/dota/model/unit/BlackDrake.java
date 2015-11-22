@@ -46,12 +46,12 @@ public final class BlackDrake extends NpcUnit {
 
     private BlackDrake() {
         armorPhysical = 0;
-        attackAcquisitionRange = 3;
+        attackAcquisitionRange = 300;
         attackAnimationPoint = .94;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 45;
         attackDamageMin = 34;
-        attackRange = 3;
+        attackRange = 300;
         attackRate = 1.8;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 45;
@@ -59,7 +59,7 @@ public final class BlackDrake extends NpcUnit {
         bountyXP = 62;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 3;
+        healthBarOffset = 300;
         isAncient = 1;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_black_drake";
@@ -67,19 +67,19 @@ public final class BlackDrake extends NpcUnit {
         model = "models/creeps/neutral_creeps/n_creep_black_drake/n_creep_black_drake.vmdl";
         modelScale = .6;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 35;
+        movementSpeed = 350;
         projectileModel = "particles/neutral_fx/black_drake_attack.vpcf";
-        projectileSpeed = 9;
-        ringRadius = 7;
+        projectileSpeed = 900;
+        ringRadius = 70;
         soundSet = "n_creep_Ranged";
-        statusHealth = 95;
+        statusHealth = 950;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Ancient Black Drake";
     }
 

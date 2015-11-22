@@ -32,7 +32,7 @@ public final class TidehunterAnchorSmash extends Ability {
         abilityManaCost = new int[]{30,40,50,60};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         fightRecapLevel = 1;
-        iD = 512;
+        iD = 5120;
         key = "tidehunter_anchor_smash";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         damage_reduction = new int[]{-45,-50,-55,-60};

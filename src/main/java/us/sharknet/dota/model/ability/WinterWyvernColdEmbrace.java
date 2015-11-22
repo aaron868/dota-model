@@ -26,7 +26,7 @@ public final class WinterWyvernColdEmbrace extends Ability {
     private WinterWyvernColdEmbrace() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = new int[]{17,16,15,14};
         abilityManaCost = new int[]{75,75,75,75};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
@@ -36,7 +36,7 @@ public final class WinterWyvernColdEmbrace extends Ability {
         key = "winter_wyvern_cold_embrace";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
         duration = 4;
-        heal_additive = 2;
+        heal_additive = 20;
         heal_percentage = new double[]{3.0,4.0,5.0,6.0};
         localizedName = "Cold Embrace";
         owningHeroShortKey = "winter_wyvern";

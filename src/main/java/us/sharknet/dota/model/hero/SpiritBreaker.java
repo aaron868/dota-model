@@ -63,7 +63,7 @@ public final class SpiritBreaker extends Hero {
         ability4 = SpiritBreakerNetherStrike.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = 3;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .6;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 41;
@@ -80,7 +80,7 @@ public final class SpiritBreaker extends Hero {
         banSound = "spirit_breaker_spir_anger_05";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 16;
+        healthBarOffset = 160;
         heroGlowColor = new int[]{53,74,107};
         heroID = 71;
         heroSelectSoundEffect = "Hero_SpiritBreaker.Pick";
@@ -90,7 +90,7 @@ public final class SpiritBreaker extends Hero {
         lastHitChallengeRival = "npc_dota_hero_earthshaker";
         model = "models/heroes/spirit_breaker/spirit_breaker.vmdl";
         modelScale = .74;
-        movementSpeed = 29;
+        movementSpeed = 290;
         movementTurnRate = .4;
         nameAliases = "sb";
         pickSound = "spirit_breaker_spir_spawn_01";

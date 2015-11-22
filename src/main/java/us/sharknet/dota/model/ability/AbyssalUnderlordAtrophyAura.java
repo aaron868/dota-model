@@ -21,17 +21,17 @@ public final class AbyssalUnderlordAtrophyAura extends Ability {
 
     private AbyssalUnderlordAtrophyAura() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_AURA"};
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         iD = 5615;
         key = "abyssal_underlord_atrophy_aura";
         bonus_damage_duration = new double[]{30.0,35.0,40.0,45.0};
         bonus_damage_from_creep = 5;
-        bonus_damage_from_hero = 3;
+        bonus_damage_from_hero = 30;
         damage_reduction_pct = new int[]{18,26,34,42};
         localizedName = "Atrophy Aura";
         owningHeroShortKey = "abyssal_underlord";
-        radius = 9;
+        radius = 900;
     }
 
     public static AbyssalUnderlordAtrophyAura instance() {

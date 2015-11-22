@@ -27,7 +27,7 @@ public final class MagnataurEmpower extends Ability {
     private MagnataurEmpower() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = 8;
         abilityManaCost = new int[]{30,40,50,60};
         abilityModifierSupportValue = .3;
@@ -38,7 +38,7 @@ public final class MagnataurEmpower extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
         bonus_damage_pct = new int[]{20,30,40,50};
         cleave_damage_pct = new int[]{20,30,40,50};
-        cleave_radius = 2;
+        cleave_radius = 200;
         empower_duration = new double[]{40.0,40.0,40.0,40.0};
         localizedName = "Empower";
         owningHeroShortKey = "magnataur";

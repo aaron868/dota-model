@@ -54,7 +54,7 @@ public final class GoodguysFillers extends NpcUnit {
 
     private GoodguysFillers() {
         ability1 = BackdoorProtectionInBase.instance();
-        armorPhysical = 1;
+        armorPhysical = 10;
         attackAcquisitionRange = 0;
         attackAnimationPoint = 0;
         attackCapabilities = "DOTA_UNIT_CAP_NO_ATTACK";
@@ -72,12 +72,12 @@ public final class GoodguysFillers extends NpcUnit {
         attributeStrengthGain = 0;
         baseClass = "npc_dota_building";
         boundsHullName = "DOTA_HULL_SIZE_FILLER";
-        bountyGoldMax = 12;
-        bountyGoldMin = 12;
+        bountyGoldMax = 120;
+        bountyGoldMin = 102;
         bountyXP = 25;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_SIEGE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE";
-        healthBarOffset = 26;
+        healthBarOffset = 260;
         key = "npc_dota_goodguys_fillers";
         magicalResistance = 0;
         minimapIcon = "minimap_miscbuilding";
@@ -86,16 +86,16 @@ public final class GoodguysFillers extends NpcUnit {
         movementSpeed = 0;
         movementTurnRate = 0;
         projectileSpeed = 0;
-        ringRadius = 1;
+        ringRadius = 100;
         soundSet = "Creep_Good_Melee";
-        statusHealth = 5;
+        statusHealth = 500;
         statusHealthRegen = 0;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING";
-        visionDaytimeRange = 9;
-        visionNighttimeRange = 6;
+        visionDaytimeRange = 900;
+        visionNighttimeRange = 600;
         localizedName = "Radiant Building";
     }
 

@@ -64,7 +64,7 @@ public final class Kunkka extends Hero {
         ability4 = KunkkaGhostship.instance();
         ability6 = KunkkaReturn.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 36;
@@ -83,7 +83,7 @@ public final class Kunkka extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 15;
+        healthBarOffset = 150;
         heroGlowColor = new int[]{50,150,165};
         heroID = 23;
         heroSelectSoundEffect = "Hero_Kunkka.Pick";
@@ -94,7 +94,7 @@ public final class Kunkka extends Hero {
         loadoutScale = .93;
         model = "models/heroes/kunkka/kunkka.vmdl";
         modelScale = .84;
-        movementSpeed = 3;
+        movementSpeed = 300;
         movementTurnRate = .6;
         pickSound = "kunkka_kunk_spawn_11";
         portrait = "vgui/hud/heroportraits/portrait_kunkka";

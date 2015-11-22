@@ -26,16 +26,16 @@ public final class Assault extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 112;
         itemAliases = new String[]{"ac","assault cuirass"};
-        itemCost = 525;
+        itemCost = 5250;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "epic";
         itemShopTags = new String[]{"attack_speed","armor","hard_to_tag"};
         key = "item_assault";
-        aura_attack_speed = 2;
+        aura_attack_speed = 20;
         aura_negative_armor = -5;
         aura_positive_armor = 5;
-        aura_radius = 9;
-        bonus_armor = 1;
+        aura_radius = 900;
+        bonus_armor = 10;
         bonus_attack_speed = 35;
         localizedName = "Assault Cuirass";
     }

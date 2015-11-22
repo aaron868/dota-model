@@ -21,7 +21,7 @@ public final class InvokerQuas extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCooldown = 0;
         abilityManaCost = 0;
-        iD = 537;
+        iD = 5370;
         key = "invoker_quas";
         maxLevel = 7;
         bonus_strength = new int[]{2,4,6,8,10,12,14};

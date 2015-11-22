@@ -21,7 +21,7 @@ public final class Robe extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 19;
         itemAliases = "robe of the magi";
-        itemCost = 45;
+        itemCost = 450;
         itemQuality = "component";
         itemShopTags = "int";
         key = "item_robe";

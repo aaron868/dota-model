@@ -23,7 +23,7 @@ public final class CentaurKhanEnduranceAura extends Ability {
         bonus_attack_speed = 15;
         localizedName = "Endurance Aura";
         owningHeroShortKey = "centaur_khan";
-        radius = 9;
+        radius = 900;
     }
 
     public static CentaurKhanEnduranceAura instance() {

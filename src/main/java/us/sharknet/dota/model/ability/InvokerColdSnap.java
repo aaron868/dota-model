@@ -32,9 +32,9 @@ public final class InvokerColdSnap extends Ability {
     private InvokerColdSnap() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = 0;
-        abilityCastRange = 1;
-        abilityCooldown = 2;
-        abilityManaCost = 1;
+        abilityCastRange = 1000;
+        abilityCooldown = 20;
+        abilityManaCost = 100;
         abilityModifierSupportValue = .15;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";

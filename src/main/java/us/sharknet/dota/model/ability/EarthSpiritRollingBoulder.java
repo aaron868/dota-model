@@ -30,24 +30,24 @@ public final class EarthSpiritRollingBoulder extends Ability {
     private EarthSpiritRollingBoulder() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .1;
-        abilityCastRange = 3;
+        abilityCastRange = 3000;
         abilityCooldown = new double[]{16.0,12.0,8.0,4.0};
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 569;
+        iD = 5609;
         key = "earth_spirit_rolling_boulder";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        damage = 1;
+        damage = 100;
         delay = .6;
         distance = 8;
         localizedName = "Rolling Boulder";
-        move_slow = 8;
+        move_slow = 80;
         owningHeroShortKey = "earth_spirit";
-        radius = 15;
+        radius = 150;
         rock_distance = 16;
-        rock_speed = 16;
+        rock_speed = 1600;
         slow_duration = 2;
-        speed = 8;
+        speed = 800;
     }
 
     public static EarthSpiritRollingBoulder instance() {

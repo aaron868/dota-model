@@ -31,7 +31,7 @@ public final class ShadowDemonDisruption extends Ability {
     private ShadowDemonDisruption() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{25.0,22.0,19.0,16.0};
         abilityDuration = new double[]{2.5,2.5,2.5,2.5};
         abilityManaCost = new int[]{120,120,120,120};

@@ -41,7 +41,7 @@ public final class SmokeOfDeceit extends Item {
         iD = 188;
         itemAlertable = 1;
         itemAliases = "smoke of deceit";
-        itemCost = 1;
+        itemCost = 100;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisplayCharges = 1;
         itemInitialCharges = 1;
@@ -55,11 +55,11 @@ public final class SmokeOfDeceit extends Item {
         itemSupport = 1;
         key = "item_smoke_of_deceit";
         model = "models/props_gameplay/smoke.vmdl";
-        application_radius = 12;
+        application_radius = 1200;
         bonus_movement_speed = 15;
         duration = 35;
         localizedName = "Smoke Of Deceit";
-        visibility_radius = 125;
+        visibility_radius = 1025;
     }
 
     public static SmokeOfDeceit instance() {

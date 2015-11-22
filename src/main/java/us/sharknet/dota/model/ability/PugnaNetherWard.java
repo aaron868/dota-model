@@ -28,7 +28,7 @@ public final class PugnaNetherWard extends Ability {
     private PugnaNetherWard() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
-        abilityCastRange = 15;
+        abilityCastRange = 150;
         abilityCooldown = new double[]{35.0,35.0,35.0,35.0};
         abilityDuration = 3;
         abilityManaCost = new int[]{80,80,80,80};
@@ -42,8 +42,8 @@ public final class PugnaNetherWard extends Ability {
         mana_multiplier = new double[]{1.0,1.25,1.5,1.75};
         mana_regen = new double[]{1.5,3.0,4.5,6.0};
         owningHeroShortKey = "pugna";
-        radius = 16;
-        ward_duration_tooltip = 3;
+        radius = 1600;
+        ward_duration_tooltip = 30;
     }
 
     public static PugnaNetherWard instance() {

@@ -31,7 +31,7 @@ public final class MiranaStarfall extends Ability {
         abilityManaCost = new int[]{100,120,140,160};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 551;
+        iD = 5051;
         key = "mirana_starfall";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Starfall";

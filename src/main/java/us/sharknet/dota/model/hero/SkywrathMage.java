@@ -66,12 +66,12 @@ public final class SkywrathMage extends Hero {
         ability3 = SkywrathMageAncientSeal.instance();
         ability4 = SkywrathMageMysticFlare.instance();
         armorPhysical = -2;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 22;
         attackDamageMin = 12;
-        attackRange = 6;
+        attackRange = 600;
         attackRate = 1.7;
         attributeAgilityGain = .8;
         attributeBaseAgility = 13;
@@ -86,9 +86,9 @@ public final class SkywrathMage extends Hero {
         cMEnabled = 1;
         enabled = 1;
         hasAggressiveStance = 1;
-        healthBarOffset = 3;
+        healthBarOffset = 300;
         heroGlowColor = new int[]{194,80,163};
-        heroID = 11;
+        heroID = 101;
         heroSelectSoundEffect = "Hero_SkywrathMage.Pick";
         heroUnlockOrder = 3;
         idleExpression = "scenes/skywrath_mage/skywrath_mage_exp_idle_01.vcd";
@@ -103,7 +103,7 @@ public final class SkywrathMage extends Hero {
         pickSound = "skywrath_mage_drag_spawn_02";
         portrait = "vgui/hud/heroportraits/portrait_skywrath_mage";
         projectileModel = "particles/units/heroes/hero_skywrath_mage/skywrath_mage_base_attack.vpcf";
-        projectileSpeed = 1;
+        projectileSpeed = 1000;
         role = new String[]{"Support","Nuker","Disabler"};
         rolelevels = new int[]{2,3,1};
         soundSet = "Hero_SkywrathMage";

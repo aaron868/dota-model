@@ -24,13 +24,13 @@ public final class StoutShield extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 182;
         itemAliases = "stout shield";
-        itemCost = 2;
+        itemCost = 200;
         itemQuality = "component";
         itemShopTags = "block";
         key = "item_stout_shield";
         model = "models/props_gameplay/stout_shield.vmdl";
         sideShop = 1;
-        block_chance = 5;
+        block_chance = 50;
         damage_block_melee = 16;
         damage_block_ranged = 8;
         localizedName = "Stout Shield";

@@ -21,8 +21,8 @@ public final class DarkTrollWarlordRaiseDead extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = .5;
         abilityCooldown = 25;
-        abilityManaCost = 5;
-        iD = 536;
+        abilityManaCost = 50;
+        iD = 5306;
         key = "dark_troll_warlord_raise_dead";
         maxLevel = 1;
         duration = 4;

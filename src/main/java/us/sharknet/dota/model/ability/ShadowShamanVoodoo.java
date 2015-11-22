@@ -25,18 +25,18 @@ public final class ShadowShamanVoodoo extends Ability {
     private ShadowShamanVoodoo() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new int[]{0,0,0,0};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = 13;
         abilityManaCost = new int[]{110,140,170,200};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 579;
+        iD = 5079;
         key = "shadow_shaman_voodoo";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{1.25,2.0,2.75,3.5};
         localizedName = "Voodoo";
-        movespeed = 1;
+        movespeed = 100;
         owningHeroShortKey = "shadow_shaman";
     }
 

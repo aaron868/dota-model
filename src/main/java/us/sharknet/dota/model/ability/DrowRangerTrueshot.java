@@ -22,10 +22,10 @@ public final class DrowRangerTrueshot extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new int[]{0,0,0,0};
         abilityCastRange = 0;
-        abilityCooldown = 1;
+        abilityCooldown = 100;
         abilityDuration = 3;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
-        iD = 521;
+        iD = 5021;
         key = "drow_ranger_trueshot";
         localizedName = "Trueshot";
         owningHeroShortKey = "drow_ranger";

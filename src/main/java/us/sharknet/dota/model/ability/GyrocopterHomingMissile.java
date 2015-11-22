@@ -36,7 +36,7 @@ public final class GyrocopterHomingMissile extends Ability {
     private GyrocopterHomingMissile() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 15;
+        abilityCastRange = 1050;
         abilityCooldown = new int[]{20,17,14,11};
         abilityDamage = new int[]{125,250,375,500};
         abilityManaCost = new int[]{120,130,140,150};
@@ -47,14 +47,14 @@ public final class GyrocopterHomingMissile extends Ability {
         iD = 5362;
         key = "gyrocopter_homing_missile";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        acceleration = 2;
+        acceleration = 20;
         attack_speed_bonus_pct = new int[]{400,400,400,400};
         enemy_vision_time = 4;
         hero_damage = new int[]{34,34,26,21};
         hits_to_kill_tooltip = new int[]{3,3,4,5};
         localizedName = "Homing Missile";
-        max_distance = 15;
-        min_damage = 5;
+        max_distance = 1500;
+        min_damage = 50;
         owningHeroShortKey = "gyrocopter";
         pre_flight_time = 3;
         speed = 34;

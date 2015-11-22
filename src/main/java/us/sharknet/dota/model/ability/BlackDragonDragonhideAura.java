@@ -23,7 +23,7 @@ public final class BlackDragonDragonhideAura extends Ability {
         bonus_armor = 2;
         localizedName = "Dragonhide Aura";
         owningHeroShortKey = "black_dragon";
-        radius = 9;
+        radius = 900;
     }
 
     public static BlackDragonDragonhideAura instance() {

@@ -17,7 +17,7 @@ public final class RecipePipe extends Item {
 
     private RecipePipe() {
         iD = 89;
-        itemCost = 8;
+        itemCost = 800;
         itemRecipe = 1;
         itemRequirements = new Item[]{HoodOfDefiance.instance(),Headdress.instance()};
         itemResult = Pipe.instance();

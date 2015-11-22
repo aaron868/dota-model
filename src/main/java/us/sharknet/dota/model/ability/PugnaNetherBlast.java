@@ -26,7 +26,7 @@ public final class PugnaNetherBlast extends Ability {
     private PugnaNetherBlast() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
-        abilityCastRange = 4;
+        abilityCastRange = 400;
         abilityCooldown = new double[]{5.5,5.5,5.5,5.5};
         abilityDamage = new int[]{100,175,250,325};
         abilityManaCost = new int[]{85,105,125,145};

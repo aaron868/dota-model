@@ -33,27 +33,27 @@ public final class RodOfAtos extends Item {
     private RodOfAtos() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = 0;
-        abilityCastRange = 12;
-        abilityCooldown = 1;
-        abilityManaCost = 5;
+        abilityCastRange = 1200;
+        abilityCooldown = 10;
+        abilityManaCost = 50;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 26;
+        iD = 206;
         itemAliases = "rod of atos";
-        itemCost = 31;
+        itemCost = 3100;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "rare";
         itemShopTags = new String[]{"int","regen_health"};
         key = "item_rod_of_atos";
         bonus_attack_speed = 0;
         bonus_damage = 0;
-        bonus_health = 35;
-        bonus_intellect = 3;
+        bonus_health = 350;
+        bonus_intellect = 30;
         bonus_movement_speed = 0;
         duration = 4;
         localizedName = "Rod Of Atos";
-        slow = 6;
+        slow = 60;
     }
 
     public static RodOfAtos instance() {

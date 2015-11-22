@@ -33,7 +33,7 @@ public final class EarthshakerEchoSlam extends Ability {
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 2;
-        iD = 526;
+        iD = 5026;
         key = "earthshaker_echo_slam";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         echo_slam_damage_range = 575;

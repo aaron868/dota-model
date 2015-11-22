@@ -36,7 +36,7 @@ public final class MedusaStoneGaze extends Ability {
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 2;
-        iD = 557;
+        iD = 5507;
         key = "medusa_stone_gaze";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         bonus_physical_damage = new int[]{30,40,50};
@@ -45,7 +45,7 @@ public final class MedusaStoneGaze extends Ability {
         localizedName = "Stone Gaze";
         owningHeroShortKey = "medusa";
         radius = new int[]{1000,1000,1000};
-        slow = 5;
+        slow = 50;
         stone_duration = new double[]{3.0,3.0,3.0};
         vision_cone = .8715;
     }

@@ -62,7 +62,7 @@ public final class PhantomLancer extends Hero {
         ability3 = PhantomLancerPhantomEdge.instance();
         ability4 = PhantomLancerJuxtapose.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 44;
@@ -81,7 +81,7 @@ public final class PhantomLancer extends Hero {
         cMEnabled = 1;
         enabled = 1;
         hasAggressiveStance = 1;
-        healthBarOffset = 19;
+        healthBarOffset = 190;
         heroID = 12;
         heroSelectSoundEffect = "Hero_PhantomLancer.Pick";
         heroUnlockOrder = 2;
@@ -90,7 +90,7 @@ public final class PhantomLancer extends Hero {
         loadoutScale = .97;
         model = "models/heroes/phantom_lancer/phantom_lancer.vmdl";
         modelScale = .84;
-        movementSpeed = 29;
+        movementSpeed = 290;
         movementTurnRate = .6;
         nameAliases = "pl";
         pickSound = "phantom_lancer_plance_spawn_01";

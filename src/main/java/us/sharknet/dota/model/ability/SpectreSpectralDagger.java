@@ -58,8 +58,8 @@ public final class SpectreSpectralDagger extends Ability {
         localizedName = "Spectral Dagger";
         owningHeroShortKey = "spectre";
         path_radius = new int[]{175,175,175,175};
-        speed = 8;
-        vision_radius = 2;
+        speed = 800;
+        vision_radius = 200;
     }
 
     public static SpectreSpectralDagger instance() {

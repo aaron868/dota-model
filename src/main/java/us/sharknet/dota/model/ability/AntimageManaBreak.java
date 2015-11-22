@@ -19,7 +19,7 @@ public final class AntimageManaBreak extends Ability {
     private AntimageManaBreak() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        iD = 53;
+        iD = 5003;
         key = "antimage_mana_break";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage_per_burn = .6;

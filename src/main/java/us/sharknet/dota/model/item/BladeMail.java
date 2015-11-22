@@ -28,14 +28,14 @@ public final class BladeMail extends Item {
         abilityManaCost = 25;
         iD = 127;
         itemAliases = "blade mail";
-        itemCost = 22;
+        itemCost = 2200;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "epic";
         itemShopTags = new String[]{"damage","armor","int","hard_to_tag"};
         key = "item_blade_mail";
         bonus_armor = 6;
         bonus_damage = 22;
-        bonus_intellect = 1;
+        bonus_intellect = 10;
         duration = 4.5;
         localizedName = "Blade Mail";
     }

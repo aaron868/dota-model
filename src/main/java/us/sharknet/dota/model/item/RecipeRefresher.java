@@ -18,8 +18,8 @@ public final class RecipeRefresher extends Item {
 
     private RecipeRefresher() {
         fightRecapLevel = 2;
-        iD = 19;
-        itemCost = 18;
+        iD = 109;
+        itemCost = 1800;
         itemRecipe = 1;
         itemRequirements = new Item[]{Pers.instance(),Pers.instance()};
         itemResult = Refresher.instance();

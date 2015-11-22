@@ -34,18 +34,18 @@ public final class InvisSword extends Item {
         fightRecapLevel = 1;
         iD = 152;
         itemAliases = new String[]{"sb","invis","shadow blade","silver edge"};
-        itemCost = 28;
+        itemCost = 2800;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "epic";
         itemShopTags = new String[]{"damage","attack_speed","movespeed","hard_to_tag"};
         key = "item_invis_sword";
-        bonus_attack_speed = 3;
+        bonus_attack_speed = 30;
         bonus_damage = 22;
         localizedName = "Shadow Blade";
         windwalk_bonus_damage = 175;
         windwalk_duration = 14;
         windwalk_fade_time = .3;
-        windwalk_movement_speed = 2;
+        windwalk_movement_speed = 20;
     }
 
     public static InvisSword instance() {

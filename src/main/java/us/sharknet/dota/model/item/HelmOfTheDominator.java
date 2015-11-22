@@ -32,7 +32,7 @@ public final class HelmOfTheDominator extends Item {
     private HelmOfTheDominator() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = 0;
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = 6;
         abilityManaCost = 75;
         abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS","DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
@@ -40,16 +40,16 @@ public final class HelmOfTheDominator extends Item {
         abilityUnitTargetType = "DOTA_UNIT_TARGET_CREEP";
         iD = 164;
         itemAliases = new String[]{"hotd","helm of the dominator"};
-        itemCost = 18;
+        itemCost = 1800;
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "artifact";
         itemShopTags = new String[]{"damage","armor","unique","hard_to_tag"};
         key = "item_helm_of_the_dominator";
         bonus_armor = 5;
-        bonus_damage = 2;
+        bonus_damage = 20;
         bonus_regen = 3;
         dominate_duration = 12;
-        health_min = 14;
+        health_min = 1400;
         lifesteal_percent = 15;
         localizedName = "Helm Of The Dominator";
     }

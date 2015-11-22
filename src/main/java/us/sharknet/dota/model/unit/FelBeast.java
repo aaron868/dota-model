@@ -44,16 +44,16 @@ public final class FelBeast extends NpcUnit {
 
     private FelBeast() {
         armorPhysical = 1;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 15;
         attackDamageMin = 14;
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1.5;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 23;
-        bountyGoldMin = 2;
+        bountyGoldMin = 20;
         bountyXP = 41;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
@@ -64,18 +64,18 @@ public final class FelBeast extends NpcUnit {
         model = "models/creeps/neutral_creeps/n_creep_ghost_b/n_creep_ghost_b.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 35;
+        movementSpeed = 350;
         projectileSpeed = 0;
         ringRadius = 35;
         soundSet = "n_creep_Melee";
-        statusHealth = 4;
+        statusHealth = 400;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Fell Spirit";
     }
 

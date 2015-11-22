@@ -29,7 +29,7 @@ public final class OgreMagiIgnite extends Ability {
     private OgreMagiIgnite() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .45;
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = 15;
         abilityManaCost = new int[]{95,105,115,125};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -44,7 +44,7 @@ public final class OgreMagiIgnite extends Ability {
         localizedName = "Ignite";
         multicast_delay = .4;
         owningHeroShortKey = "ogre_magi";
-        projectile_speed = 1;
+        projectile_speed = 1000;
         slow_movement_speed_pct = new int[]{-20,-22,-24,-26};
     }
 

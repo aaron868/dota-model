@@ -33,14 +33,14 @@ public final class InvokerDeafeningBlast extends Ability {
     private InvokerDeafeningBlast() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = 0;
-        abilityCastRange = 1;
-        abilityCooldown = 4;
-        abilityManaCost = 2;
+        abilityCastRange = 1000;
+        abilityCooldown = 40;
+        abilityManaCost = 200;
         abilityModifierSupportValue = .5;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
         hotKeyOverride = "B";
-        iD = 539;
+        iD = 5390;
         key = "invoker_deafening_blast";
         maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -52,8 +52,8 @@ public final class InvokerDeafeningBlast extends Ability {
         owningHeroShortKey = "invoker";
         radius_end = 225;
         radius_start = 175;
-        travel_distance = 1;
-        travel_speed = 11;
+        travel_distance = 1000;
+        travel_speed = 1100;
     }
 
     public static InvokerDeafeningBlast instance() {

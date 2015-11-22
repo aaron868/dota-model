@@ -22,11 +22,11 @@ public final class AntimageBlink extends Ability {
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
         abilityCooldown = new double[]{12.0,9.0,7.0,5.0};
         abilityManaCost = new int[]{60,60,60,60};
-        iD = 54;
+        iD = 5004;
         key = "antimage_blink";
         blink_range = new int[]{925,1000,1075,1150};
         localizedName = "Blink";
-        min_blink_range = 2;
+        min_blink_range = 200;
         owningHeroShortKey = "antimage";
     }
 

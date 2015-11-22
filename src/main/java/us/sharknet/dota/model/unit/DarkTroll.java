@@ -45,12 +45,12 @@ public final class DarkTroll extends NpcUnit {
 
     private DarkTroll() {
         armorPhysical = 0;
-        attackAcquisitionRange = 3;
+        attackAcquisitionRange = 300;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 27;
         attackDamageMin = 24;
-        attackRange = 5;
+        attackRange = 500;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 33;
@@ -58,26 +58,26 @@ public final class DarkTroll extends NpcUnit {
         bountyXP = 62;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 19;
+        healthBarOffset = 190;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_dark_troll";
         level = 3;
         model = "models/creeps/neutral_creeps/n_creep_troll_dark_a/n_creep_troll_dark_a.vmdl";
         modelScale = .7;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 27;
+        movementSpeed = 270;
         projectileModel = "particles/base_attacks/ranged_badguy.vpcf";
-        projectileSpeed = 12;
-        ringRadius = 6;
+        projectileSpeed = 1200;
+        ringRadius = 60;
         soundSet = "n_creep_Ranged";
-        statusHealth = 5;
+        statusHealth = 500;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Hill Troll";
     }
 

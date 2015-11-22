@@ -23,15 +23,15 @@ public final class HoodOfDefiance extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 131;
         itemAliases = "hood of defiance";
-        itemCost = 21;
+        itemCost = 2100;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "epic";
         itemShopTags = new String[]{"regen_health","magic_resist"};
         key = "item_hood_of_defiance";
         bonus_health_regen = 9;
-        bonus_spell_resist = 3;
+        bonus_spell_resist = 30;
         localizedName = "Hood Of Defiance";
-        tooltip_resist = 3;
+        tooltip_resist = 30;
     }
 
     public static HoodOfDefiance instance() {

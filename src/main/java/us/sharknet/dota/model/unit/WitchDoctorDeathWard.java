@@ -47,13 +47,13 @@ public final class WitchDoctorDeathWard extends NpcUnit {
 
     private WitchDoctorDeathWard() {
         armorPhysical = 0;
-        attackAcquisitionRange = 7;
+        attackAcquisitionRange = 700;
         attackAnimationPoint = 0;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 0;
         attackDamageMin = 0;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 7;
+        attackRange = 700;
         attackRate = .22;
         baseClass = "npc_dota_witch_doctor_death_ward";
         boundsHullName = "DOTA_HULL_SIZE_SIEGE";
@@ -71,7 +71,7 @@ public final class WitchDoctorDeathWard extends NpcUnit {
         movementSpeed = 0;
         movementTurnRate = .5;
         projectileModel = "particles/units/heroes/hero_witchdoctor/witchdoctor_ward_attack.vpcf";
-        projectileSpeed = 1;
+        projectileSpeed = 1000;
         soundSet = "Hero_WitchDoctor_Ward";
         statusHealth = 135;
         statusHealthRegen = .25;
@@ -79,10 +79,10 @@ public final class WitchDoctorDeathWard extends NpcUnit {
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 12;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1200;
+        visionNighttimeRange = 800;
         localizedName = "Death Ward";
-        wearable = 62;
+        wearable = 602;
     }
 
     public static WitchDoctorDeathWard instance() {

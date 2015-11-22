@@ -64,12 +64,12 @@ public final class Furion extends Hero {
         ability3 = FurionForceOfNature.instance();
         ability4 = FurionWrathOfNature.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 38;
         attackDamageMin = 24;
-        attackRange = 6;
+        attackRange = 600;
         attackRate = 1.7;
         attributeAgilityGain = 1.9;
         attributeBaseAgility = 18;
@@ -82,7 +82,7 @@ public final class Furion extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 18;
+        healthBarOffset = 180;
         heroGlowColor = new int[]{216,255,100};
         heroID = 53;
         heroSelectSoundEffect = "Hero_Furion.Pick";

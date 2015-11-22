@@ -27,13 +27,13 @@ public final class BrewmasterStormDispelMagic extends Ability {
         abilityCooldown = 6;
         abilityManaCost = new int[]{75,75,75,75};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
-        iD = 548;
+        iD = 5408;
         key = "brewmaster_storm_dispel_magic";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = new int[]{200,200,200,200};
         localizedName = "Dispel Magic";
         owningHeroShortKey = "brewmaster_storm";
-        radius = 6;
+        radius = 600;
     }
 
     public static BrewmasterStormDispelMagic instance() {

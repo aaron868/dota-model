@@ -34,7 +34,7 @@ public final class JakiroMacropyre extends Ability {
     private JakiroMacropyre() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.65,0.65,0.65,0.65};
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityCooldown = new int[]{60,60,60};
         abilityManaCost = new int[]{220,330,440};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -42,20 +42,20 @@ public final class JakiroMacropyre extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 2;
-        iD = 53;
+        iD = 5300;
         key = "jakiro_macropyre";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         burn_interval = new double[]{0.5,0.5,0.5};
-        cast_range = 9;
-        cast_range_scepter = 18;
+        cast_range = 900;
+        cast_range_scepter = 1800;
         damage = new int[]{100,140,180};
         damage_scepter = new int[]{125,175,225};
-        duration = 1;
-        duration_scepter = 2;
+        duration = 10;
+        duration_scepter = 20;
         localizedName = "Macropyre";
         owningHeroShortKey = "jakiro";
-        path_radius = 24;
-        tooltip_duration = 1;
+        path_radius = 240;
+        tooltip_duration = 10;
     }
 
     public static JakiroMacropyre instance() {

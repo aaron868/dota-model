@@ -21,7 +21,7 @@ public final class Chainmail extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 4;
         itemAliases = "chainmail";
-        itemCost = 55;
+        itemCost = 550;
         itemQuality = "component";
         itemShopTags = "armor";
         key = "item_chainmail";

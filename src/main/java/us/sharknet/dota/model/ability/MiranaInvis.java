@@ -23,12 +23,12 @@ public final class MiranaInvis extends Ability {
     private MiranaInvis() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{140.0,120.0,100.0};
         abilityManaCost = 75;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         fightRecapLevel = 2;
-        iD = 549;
+        iD = 5049;
         key = "mirana_invis";
         duration = 15;
         fade_delay = new double[]{2.5,2.0,1.5};

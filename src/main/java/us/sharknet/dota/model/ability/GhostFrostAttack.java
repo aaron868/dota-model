@@ -20,13 +20,13 @@ public final class GhostFrostAttack extends Ability {
     private GhostFrostAttack() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
-        iD = 531;
+        iD = 5301;
         key = "ghost_frost_attack";
         maxLevel = 1;
-        attackspeed_slow = -2;
+        attackspeed_slow = -20;
         duration = 1.5;
         localizedName = "Frost Attack";
-        movespeed_slow = -2;
+        movespeed_slow = -20;
         owningHeroShortKey = "ghost";
     }
 

@@ -26,7 +26,7 @@ public final class BaneBrainSap extends Ability {
     private BaneBrainSap() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{14.0,14.0,14.0,14.0};
         abilityDamage = new int[]{90,160,230,300};
         abilityManaCost = new int[]{70,100,130,160};
@@ -34,7 +34,7 @@ public final class BaneBrainSap extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 511;
+        iD = 5011;
         key = "bane_brain_sap";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Brain Sap";

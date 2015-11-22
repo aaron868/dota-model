@@ -23,12 +23,12 @@ public final class EarthshakerAftershock extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityDamage = new int[]{50,75,100,125};
         abilityDuration = new double[]{0.6,0.9,1.2,1.5};
-        abilityModifierSupportBonus = 1;
+        abilityModifierSupportBonus = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 525;
+        iD = 5025;
         key = "earthshaker_aftershock";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        aftershock_range = 3;
+        aftershock_range = 300;
         localizedName = "Aftershock";
         owningHeroShortKey = "earthshaker";
         tooltip_duration = new double[]{0.6,0.9,1.2,1.5};

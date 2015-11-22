@@ -24,8 +24,8 @@ public final class InvisibleVisionSource extends NpcUnit {
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
         soundSet = 0;
-        visionDaytimeRange = 2;
-        visionNighttimeRange = 2;
+        visionDaytimeRange = 200;
+        visionNighttimeRange = 200;
         localizedName = "Invisible Vision Source";
     }
 

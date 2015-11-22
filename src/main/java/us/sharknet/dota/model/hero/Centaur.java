@@ -66,7 +66,7 @@ public final class Centaur extends Hero {
         ability4 = CentaurStampede.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 34;
@@ -84,7 +84,7 @@ public final class Centaur extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 22;
+        healthBarOffset = 220;
         heroID = 96;
         heroPool2 = 1;
         heroSelectSoundEffect = "Hero_Centaur.Pick";
@@ -95,7 +95,7 @@ public final class Centaur extends Hero {
         loadoutScale = .63;
         model = "models/heroes/centaur/centaur.vmdl";
         modelScale = .74;
-        movementSpeed = 3;
+        movementSpeed = 300;
         movementTurnRate = .5;
         nameAliases = "centaur";
         pickSound = "centaur_cent_spawn_03";
@@ -104,8 +104,8 @@ public final class Centaur extends Hero {
         rolelevels = new int[]{3,3,1,1,1};
         soundSet = "Hero_Centaur";
         team = "Good";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_centaur.vsndevts";
         active = true;
         localizedName = "Centaur Warrunner";

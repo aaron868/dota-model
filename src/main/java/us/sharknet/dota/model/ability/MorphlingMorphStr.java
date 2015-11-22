@@ -20,7 +20,7 @@ public final class MorphlingMorphStr extends Ability {
     private MorphlingMorphStr() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"};
         abilityCooldown = 0;
-        iD = 556;
+        iD = 5056;
         key = "morphling_morph_str";
         bonus_attributes = new int[]{3,4,5,6};
         localizedName = "Morph Str";

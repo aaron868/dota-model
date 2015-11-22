@@ -26,13 +26,13 @@ public final class UndyingTombstoneZombieDeathstrike extends Ability {
         iD = 5446;
         key = "undying_tombstone_zombie_deathstrike";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        bonus_speed = 5;
+        bonus_speed = 50;
         duration = 2.5;
         health_threshold = new int[]{100,200,300,400};
         health_threshold_pct = new double[]{20.0,25.0,30.0,35.0};
         localizedName = "Tombstone Zombie Deathstrike";
         owningHeroShortKey = "undying";
-        radius = 12;
+        radius = 1200;
         slow = -7;
     }
 

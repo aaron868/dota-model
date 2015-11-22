@@ -27,8 +27,8 @@ public final class InvokerEmp extends Ability {
     private InvokerEmp() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = 0;
-        abilityCastRange = 95;
-        abilityCooldown = 3;
+        abilityCastRange = 950;
+        abilityCooldown = 30;
         abilityManaCost = 125;
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
         hotKeyOverride = "C";
@@ -37,7 +37,7 @@ public final class InvokerEmp extends Ability {
         maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         area_of_effect = 675;
-        damage_per_mana_pct = 5;
+        damage_per_mana_pct = 50;
         delay = 2.9;
         localizedName = "Emp";
         mana_burned = new int[]{100,175,250,325,400,475,550,625};

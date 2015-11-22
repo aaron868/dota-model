@@ -19,7 +19,7 @@ public final class NevermoreNecromastery extends Ability {
 
     private NevermoreNecromastery() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 562;
+        iD = 5062;
         key = "nevermore_necromastery";
         onCastbar = 0;
         localizedName = "Necromastery";

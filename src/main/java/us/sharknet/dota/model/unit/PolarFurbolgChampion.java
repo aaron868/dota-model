@@ -44,12 +44,12 @@ public final class PolarFurbolgChampion extends NpcUnit {
 
     private PolarFurbolgChampion() {
         armorPhysical = 3;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 44;
         attackDamageMin = 39;
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1.5;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 55;
@@ -57,25 +57,25 @@ public final class PolarFurbolgChampion extends NpcUnit {
         bountyXP = 88;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 18;
+        healthBarOffset = 180;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_polar_furbolg_champion";
         level = 4;
         model = "models/creeps/neutral_creeps/n_creep_beast/n_creep_beast.vmdl";
         modelScale = .8;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 32;
+        movementSpeed = 320;
         projectileSpeed = 0;
-        ringRadius = 5;
+        ringRadius = 50;
         soundSet = "n_creep_Melee";
-        statusHealth = 7;
+        statusHealth = 700;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Hellbear";
     }
 

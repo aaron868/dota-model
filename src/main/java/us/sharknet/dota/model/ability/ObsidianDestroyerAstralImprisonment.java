@@ -28,7 +28,7 @@ public final class ObsidianDestroyerAstralImprisonment extends Ability {
     private ObsidianDestroyerAstralImprisonment() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.25,0.25,0.25,0.25};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new double[]{18.0,16.0,14.0,12.0};
         abilityDuration = new double[]{1.0,2.0,3.0,4.0};
         abilityManaCost = new int[]{120,140,160,180};

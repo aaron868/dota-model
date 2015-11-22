@@ -27,19 +27,19 @@ public final class OgreMagiFrostArmor extends Ability {
     private OgreMagiFrostArmor() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = .56;
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = 5;
-        abilityManaCost = 4;
+        abilityManaCost = 40;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        iD = 534;
+        iD = 5304;
         key = "ogre_magi_frost_armor";
         maxLevel = 1;
         armor_bonus = 8;
-        attackspeed_slow = -2;
+        attackspeed_slow = -20;
         duration = 45;
         localizedName = "Frost Armor";
-        movespeed_slow = -3;
+        movespeed_slow = -30;
         owningHeroShortKey = "ogre_magi";
         slow_duration = 5;
     }

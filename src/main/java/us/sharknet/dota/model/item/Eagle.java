@@ -21,7 +21,7 @@ public final class Eagle extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 52;
         itemAliases = "eaglesong";
-        itemCost = 32;
+        itemCost = 3200;
         itemQuality = "secret_shop";
         itemShopTags = "agi";
         key = "item_eagle";

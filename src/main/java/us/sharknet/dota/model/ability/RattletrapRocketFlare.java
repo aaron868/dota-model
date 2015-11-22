@@ -40,8 +40,8 @@ public final class RattletrapRocketFlare extends Ability {
         localizedName = "Rocket Flare";
         owningHeroShortKey = "rattletrap";
         radius = new int[]{575,575,575,575};
-        speed = 175;
-        vision_radius = 6;
+        speed = 1750;
+        vision_radius = 600;
     }
 
     public static RattletrapRocketFlare instance() {

@@ -29,7 +29,7 @@ public final class LeshracSplitEarth extends Ability {
     private LeshracSplitEarth() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.7,0.7,0.7,0.7};
-        abilityCastRange = 75;
+        abilityCastRange = 750;
         abilityCooldown = new int[]{9,9,9,9};
         abilityDamage = new int[]{120,180,240,300};
         abilityDuration = new int[]{2,2,2,2};

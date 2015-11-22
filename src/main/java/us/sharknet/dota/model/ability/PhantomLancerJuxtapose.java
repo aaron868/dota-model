@@ -25,9 +25,9 @@ public final class PhantomLancerJuxtapose extends Ability {
     private PhantomLancerJuxtapose() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        iD = 567;
+        iD = 5067;
         key = "phantom_lancer_juxtapose";
-        illusion_damage_in_pct = 4;
+        illusion_damage_in_pct = 400;
         illusion_damage_out_pct = -84;
         illusion_duration = 8;
         illusion_from_illusion_duration = 4;
@@ -37,7 +37,7 @@ public final class PhantomLancerJuxtapose extends Ability {
         owningHeroShortKey = "phantom_lancer";
         proc_chance_pct = new int[]{40,45,50};
         tooltip_illusion_damage = 16;
-        tooltip_total_illusion_damage_in_pct = 5;
+        tooltip_total_illusion_damage_in_pct = 500;
     }
 
     public static PhantomLancerJuxtapose instance() {

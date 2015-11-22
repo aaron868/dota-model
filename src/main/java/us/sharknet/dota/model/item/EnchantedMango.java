@@ -30,7 +30,7 @@ public final class EnchantedMango extends Item {
     private EnchantedMango() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = 0;
-        abilityCastRange = 4;
+        abilityCastRange = 400;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         iD = 216;
@@ -47,7 +47,7 @@ public final class EnchantedMango extends Item {
         sideShop = 0;
         hp_regen = 1;
         localizedName = "Enchanted Mango";
-        replenish_amount = 15;
+        replenish_amount = 150;
     }
 
     public static EnchantedMango instance() {

@@ -32,8 +32,8 @@ public final class BloodseekerRupture extends Ability {
     private BloodseekerRupture() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .6;
-        abilityCastRange = 1;
-        abilityCooldown = 6;
+        abilityCastRange = 1000;
+        abilityCooldown = 60;
         abilityManaCost = new int[]{150,200,250};
         abilityModifierSupportValue = 0;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -42,11 +42,11 @@ public final class BloodseekerRupture extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 2;
-        iD = 518;
+        iD = 5018;
         key = "bloodseeker_rupture";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        cast_range_tooltip = 1;
-        damage_cap_amount = 2;
+        cast_range_tooltip = 1000;
+        damage_cap_amount = 200;
         damage_cap_interval = .25;
         duration = 12;
         localizedName = "Rupture";

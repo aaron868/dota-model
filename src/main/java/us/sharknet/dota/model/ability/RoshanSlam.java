@@ -29,11 +29,11 @@ public final class RoshanSlam extends Ability {
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5215;
         key = "roshan_slam";
-        damage = 7;
+        damage = 70;
         localizedName = "Slam";
         owningHeroShortKey = "roshan";
-        radius = 35;
-        slow_amount = 5;
+        radius = 350;
+        slow_amount = 50;
         slow_duration_hero = 2;
         slow_duration_unit = 4;
     }

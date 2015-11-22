@@ -67,7 +67,7 @@ public final class BountyHunter extends Hero {
         ability3 = BountyHunterWindWalk.instance();
         ability4 = BountyHunterTrack.instance();
         armorPhysical = 3;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .59;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 38;
@@ -86,7 +86,7 @@ public final class BountyHunter extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 12;
+        healthBarOffset = 120;
         heroGlowColor = new int[]{221,201,63};
         heroID = 62;
         heroPool1 = 1;
@@ -108,8 +108,8 @@ public final class BountyHunter extends Hero {
         soundSet = "Hero_BountyHunter";
         statusHealthRegen = .75;
         team = "Good";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 1;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 1000;
         voiceFile = "soundevents/voscripts/game_sounds_vo_bounty_hunter.vsndevts";
         active = true;
         localizedName = "Bounty Hunter";

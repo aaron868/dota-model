@@ -51,13 +51,13 @@ public final class DireEidolon extends NpcUnit {
 
     private DireEidolon() {
         armorPhysical = 5;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 51;
         attackDamageMin = 43;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 45;
+        attackRange = 450;
         attackRate = 1.5;
         baseClass = "npc_dota_creep";
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
@@ -70,25 +70,25 @@ public final class DireEidolon extends NpcUnit {
         isSummoned = 1;
         key = "npc_dota_dire_eidolon";
         level = 1;
-        magicalResistance = 5;
+        magicalResistance = 50;
         model = "models/heroes/enigma/eidelon.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 26;
+        movementSpeed = 260;
         movementTurnRate = .5;
         projectileModel = "particles/units/heroes/hero_enigma/enigma_base_attack_eidolon.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         selectionGroup = "Eidolons";
         soundSet = "Creep_Good_Range";
-        statusHealth = 24;
+        statusHealth = 240;
         statusHealthRegen = .25;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitLabel = "eidolons";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 12;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1200;
+        visionNighttimeRange = 800;
         localizedName = "Dire Eidolon";
         wearable = 8638;
     }

@@ -22,13 +22,13 @@ public final class CourierBurst extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCooldown = 9;
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
-        iD = 521;
+        iD = 5210;
         key = "courier_burst";
         maxLevel = 1;
         damage_absorb = 25;
         duration = 4;
         localizedName = "Burst";
-        movement_speed = 8;
+        movement_speed = 800;
         owningHeroShortKey = "courier";
     }
 

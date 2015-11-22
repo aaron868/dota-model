@@ -24,16 +24,16 @@ public final class JuggernautHealingWard extends Ability {
     private JuggernautHealingWard() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 35;
+        abilityCastRange = 350;
         abilityCooldown = new double[]{60.0,60.0,60.0,60.0};
         abilityDuration = new double[]{25.0,25.0,25.0,25.0};
         abilityManaCost = new int[]{120,125,130,135};
-        iD = 529;
+        iD = 5029;
         key = "juggernaut_healing_ward";
-        healing_ward_aura_radius = 5;
+        healing_ward_aura_radius = 500;
         healing_ward_duration_tooltip = 25;
         healing_ward_heal_amount = new int[]{2,3,4,5};
-        healing_ward_movespeed_tooltip = 42;
+        healing_ward_movespeed_tooltip = 420;
         localizedName = "Healing Ward";
         owningHeroShortKey = "juggernaut";
     }

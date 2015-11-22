@@ -24,7 +24,7 @@ public final class ChenHolyPersuasion extends Ability {
         abilityCastRange = new int[]{900,900,900,900};
         abilityCooldown = new double[]{30.0,26.0,22.0,18.0};
         abilityManaCost = new int[]{100,100,100,100};
-        iD = 533;
+        iD = 5330;
         key = "chen_holy_persuasion";
         health_min = new int[]{700,800,900,1000};
         localizedName = "Holy Persuasion";

@@ -38,16 +38,16 @@ public final class EtherealBlade extends Item {
     private EtherealBlade() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = 0;
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = 2;
-        abilityManaCost = 15;
+        abilityManaCost = 150;
         abilitySharedCooldown = "ethereal";
         abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY","DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
         fightRecapLevel = 1;
         iD = 176;
         itemAliases = new String[]{"eb","ethereal blade"};
-        itemCost = 47;
+        itemCost = 4700;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "epic";
@@ -55,15 +55,15 @@ public final class EtherealBlade extends Item {
         key = "item_ethereal_blade";
         blast_agility_multiplier = 2;
         blast_damage_base = 75;
-        blast_movement_slow = -8;
-        bonus_agility = 4;
-        bonus_intellect = 1;
-        bonus_strength = 1;
+        blast_movement_slow = -80;
+        bonus_agility = 40;
+        bonus_intellect = 10;
+        bonus_strength = 10;
         duration = 3;
         duration_ally = 4;
-        ethereal_damage_bonus = -4;
+        ethereal_damage_bonus = -40;
         localizedName = "Ethereal Blade";
-        projectile_speed = 12;
+        projectile_speed = 1200;
     }
 
     public static EtherealBlade instance() {

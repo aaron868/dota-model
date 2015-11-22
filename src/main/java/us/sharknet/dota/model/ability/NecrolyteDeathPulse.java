@@ -39,7 +39,7 @@ public final class NecrolyteDeathPulse extends Ability {
         heal = new int[]{70,90,110,130};
         localizedName = "Death Pulse";
         owningHeroShortKey = "necrolyte";
-        projectile_speed = 4;
+        projectile_speed = 400;
     }
 
     public static NecrolyteDeathPulse instance() {

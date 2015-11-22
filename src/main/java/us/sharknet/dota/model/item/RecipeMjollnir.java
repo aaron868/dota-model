@@ -17,7 +17,7 @@ public final class RecipeMjollnir extends Item {
 
     private RecipeMjollnir() {
         iD = 157;
-        itemCost = 9;
+        itemCost = 900;
         itemRecipe = 1;
         itemRequirements = new Item[]{Maelstrom.instance(),Hyperstone.instance()};
         itemResult = Mjollnir.instance();

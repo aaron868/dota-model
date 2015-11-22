@@ -36,7 +36,7 @@ public final class MorphlingAdaptiveStrike extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .25;
         abilityCastRange = new int[]{600,700,800,900};
-        abilityCooldown = 1;
+        abilityCooldown = 10;
         abilityManaCost = new int[]{100,100,100,100};
         abilityModifierSupportValue = .3;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -44,14 +44,14 @@ public final class MorphlingAdaptiveStrike extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 553;
+        iD = 5053;
         key = "morphling_adaptive_strike";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage_base = new double[]{50.0,60.0,70.0,80.0};
         damage_max = new double[]{0.5,1.0,1.5,2.0};
         damage_min = new double[]{0.25,0.25,0.25,0.25};
-        knockback_max = 3;
-        knockback_min = 1;
+        knockback_max = 300;
+        knockback_min = 100;
         localizedName = "Adaptive Strike";
         owningHeroShortKey = "morphling";
         projectile_speed = 115;

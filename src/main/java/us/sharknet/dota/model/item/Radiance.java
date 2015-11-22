@@ -24,13 +24,13 @@ public final class Radiance extends Item {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE"};
         iD = 137;
         itemAliases = "radiance";
-        itemCost = 515;
+        itemCost = 5150;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "epic";
         itemShopTags = "damage";
         key = "item_radiance";
-        aura_damage = 5;
-        aura_radius = 7;
+        aura_damage = 50;
+        aura_radius = 700;
         blind_pct = 17;
         bonus_damage = 65;
         localizedName = "Radiance";

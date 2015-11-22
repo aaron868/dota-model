@@ -49,7 +49,7 @@ public final class EnragedWildkinTornado extends NpcUnit {
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 14;
+        healthBarOffset = 140;
         isSummoned = 1;
         key = "npc_dota_enraged_wildkin_tornado";
         level = 4;
@@ -60,14 +60,14 @@ public final class EnragedWildkinTornado extends NpcUnit {
         movementSpeed = 125;
         movementTurnRate = .5;
         soundSet = "Creep_Good_Melee";
-        statusHealth = 5;
+        statusHealth = 500;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 3;
-        visionNighttimeRange = 3;
+        visionDaytimeRange = 300;
+        visionNighttimeRange = 300;
         localizedName = "Tornado";
     }
 

@@ -19,7 +19,7 @@ public final class RecipeManta extends Item {
     private RecipeManta() {
         fightRecapLevel = 1;
         iD = 146;
-        itemCost = 8;
+        itemCost = 800;
         itemRecipe = 1;
         itemRequirements = new Item[]{Yasha.instance(),UltimateOrb.instance()};
         itemResult = Manta.instance();

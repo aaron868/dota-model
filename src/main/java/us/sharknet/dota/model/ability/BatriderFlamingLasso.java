@@ -31,7 +31,7 @@ public final class BatriderFlamingLasso extends Ability {
     private BatriderFlamingLasso() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
-        abilityCastRange = 1;
+        abilityCastRange = 100;
         abilityCooldown = new double[]{90.0,75.0,60.0};
         abilityManaCost = 225;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -45,8 +45,8 @@ public final class BatriderFlamingLasso extends Ability {
         break_distance = 425;
         drag_distance = new int[]{300,300,300};
         duration = new double[]{3.0,3.5,4.0};
-        grab_radius = 4;
-        grab_radius_scepter = 4;
+        grab_radius = 400;
+        grab_radius_scepter = 400;
         localizedName = "Flaming Lasso";
         owningHeroShortKey = "batrider";
         scepter_damage = 1;

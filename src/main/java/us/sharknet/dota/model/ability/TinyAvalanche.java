@@ -29,14 +29,14 @@ public final class TinyAvalanche extends Ability {
     private TinyAvalanche() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{17.0,17.0,17.0,17.0};
         abilityDamage = new int[]{100,180,260,300};
         abilityDuration = new double[]{2.0,2.0,2.0,2.0};
         abilityManaCost = new int[]{120,120,120,120};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 516;
+        iD = 5106;
         key = "tiny_avalanche";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Avalanche";

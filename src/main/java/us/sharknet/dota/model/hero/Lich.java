@@ -65,12 +65,12 @@ public final class Lich extends Hero {
         ability3 = LichDarkRitual.instance();
         ability4 = LichChainFrost.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .46;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 33;
         attackDamageMin = 24;
-        attackRange = 55;
+        attackRange = 550;
         attackRate = 1.7;
         attributeAgilityGain = 2;
         attributeBaseAgility = 15;
@@ -100,7 +100,7 @@ public final class Lich extends Hero {
         pickSound = "lich_lich_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_lich";
         projectileModel = "particles/units/heroes/hero_lich/lich_base_attack.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Support","Nuker"};
         rolelevels = new int[]{3,2};
         soundSet = "Hero_Lich";

@@ -40,12 +40,12 @@ public final class RubickSpellSteal extends Ability {
         iD = 5452;
         key = "rubick_spell_steal";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        cast_range_scepter = 14;
+        cast_range_scepter = 1400;
         cooldown_scepter = 2;
         duration = new double[]{180.0,240.0,300.0};
         localizedName = "Spell Steal";
         owningHeroShortKey = "rubick";
-        projectile_speed = 9;
+        projectile_speed = 900;
     }
 
     public static RubickSpellSteal instance() {

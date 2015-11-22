@@ -46,7 +46,7 @@ public final class Manta extends Item {
         abilityManaCost = 125;
         iD = 147;
         itemAliases = "manta style";
-        itemCost = 495;
+        itemCost = 4950;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "epic";
@@ -54,24 +54,24 @@ public final class Manta extends Item {
         key = "item_manta";
         bonus_agility = 26;
         bonus_attack_speed = 15;
-        bonus_intellect = 1;
-        bonus_movement_speed = 1;
-        bonus_strength = 1;
-        cooldown_melee = 3;
+        bonus_intellect = 10;
+        bonus_movement_speed = 10;
+        bonus_strength = 10;
+        cooldown_melee = 30;
         cooldown_ranged_tooltip = 45;
         images_count = 2;
         images_do_damage_percent_melee = -67;
         images_do_damage_percent_ranged = -72;
-        images_take_damage_percent_melee = 25;
-        images_take_damage_percent_ranged = 3;
+        images_take_damage_percent_melee = 250;
+        images_take_damage_percent_ranged = 300;
         invuln_duration = .1;
         localizedName = "Manta Style";
-        tooltip_damage_incoming_melee_total_pct = 35;
-        tooltip_damage_incoming_ranged_total_pct = 4;
+        tooltip_damage_incoming_melee_total_pct = 350;
+        tooltip_damage_incoming_ranged_total_pct = 400;
         tooltip_damage_outgoing_melee = 33;
         tooltip_damage_outgoing_ranged = 28;
-        tooltip_illusion_duration = 2;
-        vision_radius = 1;
+        tooltip_illusion_duration = 20;
+        vision_radius = 1000;
     }
 
     public static Manta instance() {

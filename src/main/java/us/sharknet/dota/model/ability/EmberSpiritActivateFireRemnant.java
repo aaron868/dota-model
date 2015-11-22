@@ -32,11 +32,11 @@ public final class EmberSpiritActivateFireRemnant extends Ability {
         abilityCastPoint = 0;
         abilityCastRange = 99999;
         abilityCooldown = 0;
-        abilityManaCost = 15;
+        abilityManaCost = 150;
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 567;
+        iD = 5607;
         key = "ember_spirit_activate_fire_remnant";
         maxLevel = 3;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -45,9 +45,9 @@ public final class EmberSpiritActivateFireRemnant extends Ability {
         localizedName = "Activate Fire Remnant";
         max_charges = 3;
         owningHeroShortKey = "ember_spirit";
-        radius = 45;
-        speed = 13;
-        speed_multiplier = 25;
+        radius = 450;
+        speed = 1300;
+        speed_multiplier = 250;
     }
 
     public static EmberSpiritActivateFireRemnant instance() {

@@ -34,7 +34,7 @@ public final class LunaEclipse extends Ability {
     private LunaEclipse() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = new double[]{0.6,0.6,0.6};
-        abilityCastRange = 25;
+        abilityCastRange = 2500;
         abilityCooldown = 14;
         abilityManaCost = new int[]{150,200,250};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -48,7 +48,7 @@ public final class LunaEclipse extends Ability {
         beam_interval = new double[]{0.6,0.6,0.6};
         beams = new int[]{5,8,11};
         beams_scepter = new int[]{6,12,18};
-        cast_range_tooltip_scepter = 25;
+        cast_range_tooltip_scepter = 2500;
         duration_tooltip = new double[]{2.4,4.2,6.0};
         duration_tooltip_scepter = new double[]{3.6,7.2,10.8};
         hit_count = 5;

@@ -29,14 +29,14 @@ public final class ShadowShamanEtherShock extends Ability {
     private ShadowShamanEtherShock() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{8.0,8.0,8.0,8.0};
         abilityManaCost = new int[]{95,105,135,160};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 578;
+        iD = 5078;
         key = "shadow_shaman_ether_shock";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = new int[]{140,200,260,320};

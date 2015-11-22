@@ -21,7 +21,7 @@ public final class TalismanOfEvasion extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 32;
         itemAliases = "talisman of evasion";
-        itemCost = 18;
+        itemCost = 1800;
         itemQuality = "secret_shop";
         itemShopTags = "evasion";
         key = "item_talisman_of_evasion";

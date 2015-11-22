@@ -21,7 +21,7 @@ public final class MysticStaff extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 58;
         itemAliases = "mystic staff";
-        itemCost = 27;
+        itemCost = 2700;
         itemQuality = "secret_shop";
         itemShopTags = "int";
         key = "item_mystic_staff";

@@ -23,7 +23,7 @@ public final class SilencerGlaivesOfWisdom extends Ability {
 
     private SilencerGlaivesOfWisdom() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityDuration = new double[]{0.0,0.0,0.0,0.0};
         abilityManaCost = new int[]{15,15,15,15};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";

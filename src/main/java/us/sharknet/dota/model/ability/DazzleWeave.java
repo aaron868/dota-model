@@ -29,7 +29,7 @@ public final class DazzleWeave extends Ability {
     private DazzleWeave() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 2;
+        abilityCastRange = 2000;
         abilityCooldown = new int[]{40,40,40};
         abilityManaCost = new int[]{100,100,100};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -45,7 +45,7 @@ public final class DazzleWeave extends Ability {
         owningHeroShortKey = "dazzle";
         radius = new int[]{575,575,575};
         radius_scepter = new int[]{775,775,775};
-        vision = 8;
+        vision = 800;
     }
 
     public static DazzleWeave instance() {

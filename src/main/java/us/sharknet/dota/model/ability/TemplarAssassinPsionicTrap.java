@@ -26,7 +26,7 @@ public final class TemplarAssassinPsionicTrap extends Ability {
     private TemplarAssassinPsionicTrap() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 2;
+        abilityCastRange = 2000;
         abilityCooldown = new double[]{11.0,8.0,5.0};
         abilityManaCost = new int[]{15,15,15};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -35,8 +35,8 @@ public final class TemplarAssassinPsionicTrap extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Psionic Trap";
         max_traps = new int[]{5,8,11};
-        movement_speed_max_tooltip = 5;
-        movement_speed_min_tooltip = 3;
+        movement_speed_max_tooltip = 50;
+        movement_speed_min_tooltip = 30;
         owningHeroShortKey = "templar_assassin";
         trap_duration_tooltip = 5;
         trap_fade_time = new double[]{2.0,2.0,2.0};

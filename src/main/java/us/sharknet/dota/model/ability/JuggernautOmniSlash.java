@@ -33,7 +33,7 @@ public final class JuggernautOmniSlash extends Ability {
     private JuggernautOmniSlash() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 35;
+        abilityCastRange = 350;
         abilityCooldown = new double[]{130.0,120.0,110.0};
         abilityManaCost = new int[]{200,275,350};
         abilityModifierSupportValue = 0;
@@ -43,7 +43,7 @@ public final class JuggernautOmniSlash extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 2;
-        iD = 53;
+        iD = 5030;
         key = "juggernaut_omni_slash";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         localizedName = "Omnislash";

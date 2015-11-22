@@ -28,10 +28,10 @@ public final class UrsaEnrage extends Ability {
         abilityManaCost = new int[]{0,0,0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         fightRecapLevel = 1;
-        iD = 536;
+        iD = 5360;
         key = "ursa_enrage";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        damage_reduction = 8;
+        damage_reduction = 80;
         duration = 4;
         enrage_multiplier = new double[]{1.5,1.75,2.0};
         localizedName = "Enrage";

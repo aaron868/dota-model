@@ -63,7 +63,7 @@ public final class ArcWarden extends Hero {
         ability3 = ArcWardenSparkWraith.instance();
         ability4 = ArcWardenTempestDouble.instance();
         armorPhysical = -2;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 35;
@@ -82,7 +82,7 @@ public final class ArcWarden extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 14;
+        healthBarOffset = 140;
         heroGlowColor = new int[]{120,64,148};
         heroID = 113;
         heroSelectSoundEffect = "Hero_ArcWarden.Pick";
@@ -97,7 +97,7 @@ public final class ArcWarden extends Hero {
         pickSound = "arc_warden_arcwar_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_arc_warden";
         projectileModel = "particles/units/heroes/hero_arc_warden/arc_warden_base_attack.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Carry","Escape","Nuker"};
         rolelevels = new int[]{3,3,1};
         soundSet = "Hero_ArcWarden";

@@ -52,12 +52,12 @@ public final class BigThunderLizard extends NpcUnit {
         ability2 = BigThunderLizardFrenzy.instance();
         ability3 = BigThunderLizardWardrumsAura.instance();
         armorPhysical = 2;
-        attackAcquisitionRange = 3;
+        attackAcquisitionRange = 300;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 78;
         attackDamageMin = 71;
-        attackRange = 3;
+        attackRange = 300;
         attackRate = 1.8;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 97;
@@ -65,7 +65,7 @@ public final class BigThunderLizard extends NpcUnit {
         bountyXP = 155;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 24;
+        healthBarOffset = 240;
         isAncient = 1;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_big_thunder_lizard";
@@ -73,19 +73,19 @@ public final class BigThunderLizard extends NpcUnit {
         model = "models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_big.vmdl";
         modelScale = .8;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 27;
+        movementSpeed = 270;
         projectileModel = "particles/neutral_fx/thunderlizard_base_attack.vpcf";
-        projectileSpeed = 15;
-        ringRadius = 9;
+        projectileSpeed = 1500;
+        ringRadius = 90;
         soundSet = "n_creep_Ranged";
-        statusHealth = 14;
+        statusHealth = 1400;
         statusHealthRegen = .5;
-        statusMana = 4;
+        statusMana = 400;
         statusManaRegen = 1;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 14;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1400;
+        visionNighttimeRange = 800;
         localizedName = "Ancient Thunderhide";
     }
 

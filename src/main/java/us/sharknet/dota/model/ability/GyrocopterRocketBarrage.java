@@ -38,8 +38,8 @@ public final class GyrocopterRocketBarrage extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Rocket Barrage";
         owningHeroShortKey = "gyrocopter";
-        radius = 4;
-        rockets_per_second = 1;
+        radius = 400;
+        rockets_per_second = 10;
     }
 
     public static GyrocopterRocketBarrage instance() {

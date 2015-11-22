@@ -33,9 +33,9 @@ public final class Butterfly extends Item {
         itemQuality = "epic";
         itemShopTags = new String[]{"agi","damage","evasion","attack_speed"};
         key = "item_butterfly";
-        bonus_agility = 3;
-        bonus_attack_speed = 3;
-        bonus_damage = 3;
+        bonus_agility = 30;
+        bonus_attack_speed = 30;
+        bonus_damage = 30;
         bonus_evasion = 35;
         bonus_move_speed = 25;
         duration = 6;

@@ -63,7 +63,7 @@ public final class Broodmother extends Hero {
         ability3 = BroodmotherIncapacitatingBite.instance();
         ability4 = BroodmotherInsatiableHunger.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 32;
@@ -81,7 +81,7 @@ public final class Broodmother extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 12;
+        healthBarOffset = 120;
         heroGlowColor = new int[]{74,76,217};
         heroID = 61;
         heroSelectSoundEffect = "Hero_Broodmother.Pick";
@@ -100,8 +100,8 @@ public final class Broodmother extends Hero {
         rolelevels = new int[]{1,3,3,1};
         soundSet = "Hero_Broodmother";
         team = "Bad";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_broodmother.vsndevts";
         active = true;
         localizedName = "Broodmother";

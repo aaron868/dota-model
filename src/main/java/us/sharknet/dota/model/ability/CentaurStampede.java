@@ -30,7 +30,7 @@ public final class CentaurStampede extends Ability {
     private CentaurStampede() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCooldown = new double[]{90.0,75.0,60.0};
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityModifierSupportValue = .2;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         fightRecapLevel = 2;
@@ -39,14 +39,14 @@ public final class CentaurStampede extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         base_damage = 0;
         cooldown_scepter = new int[]{90,75,60};
-        damage_reduction = 6;
-        damage_reduction_tooltip_scepter = 6;
+        damage_reduction = 60;
+        damage_reduction_tooltip_scepter = 60;
         duration = 3.75;
         localizedName = "Stampede";
         owningHeroShortKey = "centaur";
-        radius = 15;
+        radius = 105;
         slow_duration = 1.5;
-        slow_movement_speed = 1;
+        slow_movement_speed = 100;
         strength_damage = new double[]{1.0,2.0,3.0};
     }
 

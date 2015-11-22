@@ -66,12 +66,12 @@ public final class Visage extends Hero {
         ability4 = VisageSummonFamiliars.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = -2;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .46;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 34;
         attackDamageMin = 24;
-        attackRange = 6;
+        attackRange = 600;
         attackRate = 1.7;
         attributeAgilityGain = 1.3;
         attributeBaseAgility = 11;
@@ -83,7 +83,7 @@ public final class Visage extends Hero {
         banSound = "visage_visa_anger_10";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 18;
+        healthBarOffset = 180;
         heroID = 92;
         heroSelectSoundEffect = "Hero_Visage.Pick";
         idleExpression = "scenes/visage/visage_exp_idle_01.vcd";
@@ -91,7 +91,7 @@ public final class Visage extends Hero {
         key = "npc_dota_hero_visage";
         lastHitChallengeRival = "npc_dota_hero_lion";
         loadoutScale = .75;
-        magicalResistance = 1;
+        magicalResistance = 10;
         model = "models/heroes/visage/visage.vmdl";
         modelScale = .67;
         movementSpeed = 285;
@@ -101,7 +101,7 @@ public final class Visage extends Hero {
         pickSound = "visage_visa_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_visage";
         projectileModel = "particles/units/heroes/hero_visage/visage_base_attack.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Support","Nuker","Durable","Disabler","Pusher"};
         rolelevels = new int[]{1,2,1,1,1};
         soundSet = "Hero_Visage";

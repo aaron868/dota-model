@@ -21,7 +21,7 @@ public final class KunkkaReturn extends Ability {
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
         abilityCooldown = 1;
         abilityManaCost = 0;
-        iD = 534;
+        iD = 5034;
         key = "kunkka_return";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Return";

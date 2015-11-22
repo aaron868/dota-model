@@ -15,7 +15,7 @@ public final class KeeperOfTheLightEmpty2 extends Ability {
 
     private KeeperOfTheLightEmpty2() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"};
-        iD = 552;
+        iD = 5502;
         key = "keeper_of_the_light_empty2";
         maxLevel = 0;
         localizedName = "Empty 2";

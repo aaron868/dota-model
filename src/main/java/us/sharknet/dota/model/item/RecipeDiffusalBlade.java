@@ -17,7 +17,7 @@ public final class RecipeDiffusalBlade extends Item {
 
     private RecipeDiffusalBlade() {
         iD = 173;
-        itemCost = 7;
+        itemCost = 700;
         itemRecipe = 1;
         itemRequirements = new Item[]{BladeOfAlacrity.instance(),BladeOfAlacrity.instance(),Robe.instance()};
         itemResult = DiffusalBlade.instance();

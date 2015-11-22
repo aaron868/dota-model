@@ -25,17 +25,17 @@ public final class Sange extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 162;
         itemAliases = "sange";
-        itemCost = 25;
+        itemCost = 2050;
         itemQuality = "artifact";
         itemShopTags = new String[]{"damage","str","unique"};
         key = "item_sange";
-        bonus_damage = 1;
+        bonus_damage = 10;
         bonus_strength = 16;
         localizedName = "Sange";
-        maim_attack_speed = -2;
+        maim_attack_speed = -20;
         maim_chance = 15;
         maim_duration = 4;
-        maim_movement_speed = -2;
+        maim_movement_speed = -20;
     }
 
     public static Sange instance() {

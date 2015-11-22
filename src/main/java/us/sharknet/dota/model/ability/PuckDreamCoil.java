@@ -34,14 +34,14 @@ public final class PuckDreamCoil extends Ability {
     private PuckDreamCoil() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.1,0.1,0.1};
-        abilityCastRange = 75;
+        abilityCastRange = 750;
         abilityCooldown = 75;
         abilityManaCost = new int[]{100,150,200};
         abilityModifierSupportValue = .5;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 2;
-        iD = 573;
+        iD = 5073;
         key = "puck_dream_coil";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         coil_break_damage = new int[]{100,150,200};

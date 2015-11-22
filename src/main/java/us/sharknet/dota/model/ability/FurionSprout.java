@@ -39,7 +39,7 @@ public final class FurionSprout extends Ability {
         duration = new double[]{3.0,4.0,5.0,6.0};
         localizedName = "Sprout";
         owningHeroShortKey = "furion";
-        vision_range = 1;
+        vision_range = 1000;
     }
 
     public static FurionSprout instance() {

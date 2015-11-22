@@ -23,12 +23,12 @@ public final class Desolator extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 168;
         itemAliases = "desolator";
-        itemCost = 35;
+        itemCost = 3500;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "artifact";
         itemShopTags = new String[]{"damage","unique"};
         key = "item_desolator";
-        bonus_damage = 5;
+        bonus_damage = 50;
         corruption_armor = -7;
         corruption_duration = 15;
         localizedName = "Desolator";

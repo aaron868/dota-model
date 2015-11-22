@@ -63,7 +63,7 @@ public final class Bristleback extends Hero {
         ability4 = BristlebackWarpath.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 36;
@@ -82,7 +82,7 @@ public final class Bristleback extends Hero {
         cMEnabled = 1;
         enabled = 1;
         hasAggressiveStance = 1;
-        healthBarOffset = 2;
+        healthBarOffset = 200;
         heroID = 99;
         heroSelectSoundEffect = "Hero_Bristleback.Pick";
         idleSoundLoop = "Hero_Bristleback.IdleLoop";
@@ -91,7 +91,7 @@ public final class Bristleback extends Hero {
         loadoutScale = .9;
         model = "models/heroes/bristleback/bristleback.vmdl";
         modelScale = .8;
-        movementSpeed = 29;
+        movementSpeed = 290;
         movementTurnRate = 1;
         nameAliases = new String[]{"Rigwarl","bb"};
         pickSound = "bristleback_bristle_spawn_01";

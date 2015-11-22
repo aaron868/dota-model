@@ -27,9 +27,9 @@ public final class LegionCommanderPressTheAttack extends Ability {
     private LegionCommanderPressTheAttack() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .2;
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = new double[]{16.0,15.0,14.0,13.0};
-        abilityManaCost = 11;
+        abilityManaCost = 110;
         abilityModifierSupportValue = 3;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";

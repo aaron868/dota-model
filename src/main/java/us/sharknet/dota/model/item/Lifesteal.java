@@ -21,7 +21,7 @@ public final class Lifesteal extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 26;
         itemAliases = "morbid mask";
-        itemCost = 9;
+        itemCost = 900;
         itemQuality = "component";
         itemShopTags = "unique";
         key = "item_lifesteal";

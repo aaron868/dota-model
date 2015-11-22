@@ -64,7 +64,7 @@ public final class NightStalker extends Hero {
         ability3 = NightStalkerHunterInTheNight.instance();
         ability4 = NightStalkerDarkness.instance();
         armorPhysical = 3;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .55;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 42;
@@ -84,7 +84,7 @@ public final class NightStalker extends Hero {
         enabled = 1;
         healthBarOffset = 165;
         heroGlowColor = new int[]{70,105,255};
-        heroID = 6;
+        heroID = 60;
         heroSelectSoundEffect = "Hero_NightStalker.Pick";
         heroUnlockOrder = 2;
         key = "npc_dota_hero_night_stalker";
@@ -102,8 +102,8 @@ public final class NightStalker extends Hero {
         soundSet = "Hero_NightStalker";
         statusHealthRegen = 2;
         team = "Bad";
-        visionDaytimeRange = 12;
-        visionNighttimeRange = 18;
+        visionDaytimeRange = 1200;
+        visionNighttimeRange = 1800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_night_stalker.vsndevts";
         active = true;
         localizedName = "Night Stalker";

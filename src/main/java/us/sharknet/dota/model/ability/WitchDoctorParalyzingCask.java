@@ -34,7 +34,7 @@ public final class WitchDoctorParalyzingCask extends Ability {
     private WitchDoctorParalyzingCask() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.35,0.35,0.35,0.35};
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = new double[]{20.0,18.0,16.0,14.0};
         abilityDamage = new int[]{75,100,125,150};
         abilityManaCost = new int[]{110,120,130,140};
@@ -55,7 +55,7 @@ public final class WitchDoctorParalyzingCask extends Ability {
         hero_duration = new double[]{1.0,1.0,1.0,1.0};
         localizedName = "Paralyzing Cask";
         owningHeroShortKey = "witch_doctor";
-        speed = 1;
+        speed = 1000;
     }
 
     public static WitchDoctorParalyzingCask instance() {

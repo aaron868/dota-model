@@ -17,7 +17,7 @@ public final class RecipeBasher extends Item {
 
     private RecipeBasher() {
         iD = 142;
-        itemCost = 1;
+        itemCost = 1000;
         itemRecipe = 1;
         itemRequirements = new Item[]{BeltOfStrength.instance(),Javelin.instance()};
         itemResult = Basher.instance();

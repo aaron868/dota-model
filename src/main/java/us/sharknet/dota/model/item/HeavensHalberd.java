@@ -37,15 +37,15 @@ public final class HeavensHalberd extends Item {
     private HeavensHalberd() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = 0;
-        abilityCastRange = 6;
-        abilityCooldown = 3;
-        abilityManaCost = 1;
+        abilityCastRange = 600;
+        abilityCooldown = 30;
+        abilityManaCost = 100;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 21;
+        iD = 210;
         itemAliases = "heaven's halberd";
-        itemCost = 385;
+        itemCost = 3850;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "artifact";
@@ -53,15 +53,15 @@ public final class HeavensHalberd extends Item {
         key = "item_heavens_halberd";
         bonus_damage = 25;
         bonus_evasion = 25;
-        bonus_strength = 2;
-        disarm_cast_range_tooltip = 6;
+        bonus_strength = 20;
+        disarm_cast_range_tooltip = 600;
         disarm_melee = 3;
         disarm_range = 4.5;
         localizedName = "Heaven's Halberd";
-        maim_attack_speed = -2;
+        maim_attack_speed = -20;
         maim_chance = 15;
         maim_duration = 4;
-        maim_movement_speed = -2;
+        maim_movement_speed = -20;
     }
 
     public static HeavensHalberd instance() {

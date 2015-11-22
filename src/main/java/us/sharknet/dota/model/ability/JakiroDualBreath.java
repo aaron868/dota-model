@@ -37,7 +37,7 @@ public final class JakiroDualBreath extends Ability {
     private JakiroDualBreath() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.65,0.65,0.65,0.65};
-        abilityCastRange = 55;
+        abilityCastRange = 550;
         abilityCooldown = new double[]{10.0,10.0,10.0,10.0};
         abilityDamage = 0;
         abilityDuration = 5;
@@ -58,8 +58,8 @@ public final class JakiroDualBreath extends Ability {
         range = new int[]{750,750,750,750};
         slow_attack_speed_pct = new int[]{-28,-32,-36,-40};
         slow_movement_speed_pct = new int[]{-28,-32,-36,-40};
-        speed = 15;
-        speed_fire = 15;
+        speed = 1050;
+        speed_fire = 1050;
         start_radius = new int[]{200,200,200,200};
         tooltip_duration = 5;
     }

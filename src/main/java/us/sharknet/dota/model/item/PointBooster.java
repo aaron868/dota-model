@@ -20,15 +20,15 @@ public final class PointBooster extends Item {
 
     private PointBooster() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 6;
+        iD = 60;
         itemAliases = "point booster";
-        itemCost = 12;
+        itemCost = 1200;
         itemQuality = "secret_shop";
         itemShopTags = new String[]{"mana_pool","health_pool"};
         key = "item_point_booster";
         secretShop = 1;
-        bonus_health = 2;
-        bonus_mana = 15;
+        bonus_health = 200;
+        bonus_mana = 150;
         localizedName = "Point Booster";
     }
 

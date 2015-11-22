@@ -22,13 +22,13 @@ public final class Boots extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 29;
         itemAliases = "boots of speed";
-        itemCost = 45;
+        itemCost = 450;
         itemQuality = "component";
         itemShopTags = "move_speed";
         key = "item_boots";
         model = "models/props_gameplay/boots_of_speed.vmdl";
         sideShop = 1;
-        bonus_movement_speed = 5;
+        bonus_movement_speed = 50;
         localizedName = "Boots Of Speed";
     }
 

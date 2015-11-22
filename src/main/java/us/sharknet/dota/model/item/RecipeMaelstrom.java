@@ -17,7 +17,7 @@ public final class RecipeMaelstrom extends Item {
 
     private RecipeMaelstrom() {
         iD = 165;
-        itemCost = 7;
+        itemCost = 700;
         itemRecipe = 1;
         itemRequirements = new Item[]{MithrilHammer.instance(),Gloves.instance()};
         itemResult = Maelstrom.instance();

@@ -29,7 +29,7 @@ public final class MagnataurShockwave extends Ability {
     private MagnataurShockwave() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 115;
+        abilityCastRange = 1150;
         abilityCooldown = new double[]{10.0,9.0,8.0,7.0};
         abilityDuration = new double[]{0.6875,0.6875,0.6875,0.6875};
         abilityManaCost = new int[]{90,90,90,90};
@@ -43,9 +43,9 @@ public final class MagnataurShockwave extends Ability {
         localizedName = "Shockwave";
         owningHeroShortKey = "magnataur";
         shock_damage = new int[]{75,150,225,300};
-        shock_distance = 115;
-        shock_speed = 15;
-        shock_width = 15;
+        shock_distance = 1150;
+        shock_speed = 1050;
+        shock_width = 150;
     }
 
     public static MagnataurShockwave instance() {

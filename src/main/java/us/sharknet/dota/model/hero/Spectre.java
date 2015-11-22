@@ -66,7 +66,7 @@ public final class Spectre extends Hero {
         ability6 = AttributeBonus.instance();
         abilityLayout = 5;
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 27;
@@ -83,7 +83,7 @@ public final class Spectre extends Hero {
         banSound = "spectre_spec_anger_02";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 18;
+        healthBarOffset = 180;
         heroGlowColor = new int[]{107,74,53};
         heroID = 67;
         heroSelectSoundEffect = "Hero_Spectre.Pick";
@@ -94,7 +94,7 @@ public final class Spectre extends Hero {
         loadoutScale = .75;
         model = "models/heroes/spectre/spectre.vmdl";
         modelScale = .67;
-        movementSpeed = 29;
+        movementSpeed = 290;
         movementTurnRate = .4;
         pickSound = "spectre_spec_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_spectre";

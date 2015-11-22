@@ -30,12 +30,12 @@ public final class VeilOfDiscord extends Item {
     private VeilOfDiscord() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT"};
         abilityCastPoint = 0;
-        abilityCastRange = 1;
-        abilityCooldown = 2;
-        abilityManaCost = 5;
-        iD = 19;
+        abilityCastRange = 1000;
+        abilityCooldown = 20;
+        abilityManaCost = 50;
+        iD = 190;
         itemAliases = new String[]{"vod","veil of discord"};
-        itemCost = 227;
+        itemCost = 2270;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "rare";
         itemShopTags = new String[]{"int","armor","regen_health","hard_to_tag"};
@@ -44,7 +44,7 @@ public final class VeilOfDiscord extends Item {
         bonus_damage = 6;
         bonus_health_regen = 6;
         bonus_stats = 6;
-        debuff_radius = 6;
+        debuff_radius = 600;
         localizedName = "Veil Of Discord";
         resist_debuff = -25;
         resist_debuff_duration = 16;

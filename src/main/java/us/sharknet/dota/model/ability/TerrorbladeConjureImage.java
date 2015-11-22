@@ -24,8 +24,8 @@ public final class TerrorbladeConjureImage extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = .15;
         abilityCooldown = 16;
-        abilityManaCost = 8;
-        iD = 562;
+        abilityManaCost = 80;
+        iD = 5620;
         key = "terrorblade_conjure_image";
         illusion_duration = 32;
         illusion_incoming_damage = 325;

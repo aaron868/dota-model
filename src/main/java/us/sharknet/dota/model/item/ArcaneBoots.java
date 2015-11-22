@@ -28,20 +28,20 @@ public final class ArcaneBoots extends Item {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCooldown = 55;
         abilityManaCost = 0;
-        iD = 18;
+        iD = 180;
         itemAlertable = 1;
         itemAliases = new String[]{"mana","mb","arcane boots"};
-        itemCost = 135;
+        itemCost = 1350;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "rare";
         itemShopTags = new String[]{"move_speed","boost_mana","mana_pool"};
         key = "item_arcane_boots";
-        bonus_mana = 25;
+        bonus_mana = 250;
         bonus_movement = 55;
         localizedName = "Arcane Boots";
         replenish_amount = 135;
-        replenish_radius = 9;
+        replenish_radius = 900;
     }
 
     public static ArcaneBoots instance() {

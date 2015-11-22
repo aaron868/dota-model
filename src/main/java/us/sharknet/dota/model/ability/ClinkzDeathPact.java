@@ -26,7 +26,7 @@ public final class ClinkzDeathPact extends Ability {
     private ClinkzDeathPact() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCastRange = 4;
+        abilityCastRange = 400;
         abilityCooldown = new double[]{45.0,35.0,25.0};
         abilityManaCost = new int[]{100,100,100};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";

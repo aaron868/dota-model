@@ -31,14 +31,14 @@ public final class RazorPlasmaField extends Ability {
         abilityManaCost = new int[]{125,125,125,125};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 582;
+        iD = 5082;
         key = "razor_plasma_field";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage_max = new int[]{160,230,300,370};
         damage_min = new int[]{30,50,70,90};
         localizedName = "Plasma Field";
         owningHeroShortKey = "razor";
-        radius = 7;
+        radius = 700;
         speed = 636;
     }
 

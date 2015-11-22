@@ -20,7 +20,7 @@ public final class MorphlingMorphAgi extends Ability {
     private MorphlingMorphAgi() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"};
         abilityCooldown = 0;
-        iD = 555;
+        iD = 5055;
         key = "morphling_morph_agi";
         bonus_attributes = new int[]{3,4,5,6};
         localizedName = "Morph Agi";

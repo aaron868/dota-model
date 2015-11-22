@@ -27,13 +27,13 @@ public final class TechiesStasisTrap extends Ability {
     private TechiesStasisTrap() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = 1;
-        abilityCastRange = 15;
+        abilityCastRange = 150;
         abilityCooldown = new double[]{20.0,16.0,13.0,10.0};
         abilityManaCost = new int[]{80,110,140,160};
-        iD = 56;
+        iD = 5600;
         key = "techies_stasis_trap";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        activation_radius = 45;
+        activation_radius = 450;
         activation_time = 1.5;
         duration = 36;
         explode_delay = 1.5;
@@ -41,7 +41,7 @@ public final class TechiesStasisTrap extends Ability {
         localizedName = "Stasis Trap";
         owningHeroShortKey = "techies";
         stun_duration = new double[]{2.5,3.0,3.5,4.0};
-        stun_radius = 45;
+        stun_radius = 450;
     }
 
     public static TechiesStasisTrap instance() {

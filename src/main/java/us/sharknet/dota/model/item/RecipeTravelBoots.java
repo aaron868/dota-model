@@ -17,7 +17,7 @@ public final class RecipeTravelBoots extends Item {
 
     private RecipeTravelBoots() {
         iD = 47;
-        itemCost = 2;
+        itemCost = 2000;
         itemRecipe = 1;
         itemRequirements = new Item[0];
         itemResult = TravelBoots.instance();

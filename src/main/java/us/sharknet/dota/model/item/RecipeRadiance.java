@@ -17,7 +17,7 @@ public final class RecipeRadiance extends Item {
 
     private RecipeRadiance() {
         iD = 136;
-        itemCost = 135;
+        itemCost = 1350;
         itemRecipe = 1;
         itemRequirements = new Item[0];
         itemResult = Radiance.instance();

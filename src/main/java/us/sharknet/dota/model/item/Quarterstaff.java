@@ -20,15 +20,15 @@ public final class Quarterstaff extends Item {
 
     private Quarterstaff() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 1;
+        iD = 10;
         itemAliases = "quarterstaff";
         itemCost = 875;
         itemQuality = "component";
         itemShopTags = new String[]{"damage","attack_speed"};
         key = "item_quarterstaff";
         sideShop = 1;
-        bonus_damage = 1;
-        bonus_speed = 1;
+        bonus_damage = 10;
+        bonus_speed = 10;
         localizedName = "Quarterstaff";
     }
 

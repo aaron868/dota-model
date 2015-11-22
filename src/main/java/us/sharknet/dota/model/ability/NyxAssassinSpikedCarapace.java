@@ -37,7 +37,7 @@ public final class NyxAssassinSpikedCarapace extends Ability {
         bonus_armor = 0;
         bonus_damage = 0;
         bonus_intellect = 0;
-        burrow_aoe = 3;
+        burrow_aoe = 300;
         localizedName = "Spiked Carapace";
         owningHeroShortKey = "nyx_assassin";
         reflect_duration = 2.25;

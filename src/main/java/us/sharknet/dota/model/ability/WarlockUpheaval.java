@@ -26,7 +26,7 @@ public final class WarlockUpheaval extends Ability {
     private WarlockUpheaval() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_CHANNELLED","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 12;
+        abilityCastRange = 1200;
         abilityChannelTime = 16;
         abilityCooldown = new int[]{50,46,42,38};
         abilityDamage = new int[]{0,0,0,0};

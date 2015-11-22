@@ -42,10 +42,10 @@ public final class ZuusThundergodsWrath extends Ability {
         localizedName = "Thundergods Wrath";
         owningHeroShortKey = "zuus";
         sight_duration = new double[]{3.0,3.0,3.0,3.0};
-        sight_radius_day = 5;
-        sight_radius_night = 5;
+        sight_radius_day = 500;
+        sight_radius_night = 500;
         true_sight_radius = new int[]{900,900,900};
-        true_sight_radius_tooltip = 5;
+        true_sight_radius_tooltip = 500;
     }
 
     public static ZuusThundergodsWrath instance() {

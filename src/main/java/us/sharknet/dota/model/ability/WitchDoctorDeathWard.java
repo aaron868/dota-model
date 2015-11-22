@@ -29,7 +29,7 @@ public final class WitchDoctorDeathWard extends Ability {
     private WitchDoctorDeathWard() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
         abilityCastPoint = new double[]{0.35,0.35,0.35};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityChannelTime = new double[]{8.0,8.0,8.0};
         abilityCooldown = 8;
         abilityManaCost = new int[]{200,200,200};

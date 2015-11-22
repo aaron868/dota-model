@@ -30,7 +30,7 @@ public final class LegionCommanderOverwhelmingOdds extends Ability {
     private LegionCommanderOverwhelmingOdds() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = 15;
         abilityManaCost = new int[]{100,100,100,100};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -47,7 +47,7 @@ public final class LegionCommanderOverwhelmingOdds extends Ability {
         illusion_dmg_pct = 25;
         localizedName = "Overwhelming Odds";
         owningHeroShortKey = "legion_commander";
-        radius = 33;
+        radius = 330;
     }
 
     public static LegionCommanderOverwhelmingOdds instance() {

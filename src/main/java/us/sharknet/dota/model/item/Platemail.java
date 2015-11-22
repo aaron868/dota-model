@@ -21,12 +21,12 @@ public final class Platemail extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 9;
         itemAliases = "platemail";
-        itemCost = 14;
+        itemCost = 1400;
         itemQuality = "secret_shop";
         itemShopTags = "armor";
         key = "item_platemail";
         secretShop = 1;
-        bonus_armor = 1;
+        bonus_armor = 10;
         localizedName = "Platemail";
     }
 

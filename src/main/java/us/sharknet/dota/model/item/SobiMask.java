@@ -28,7 +28,7 @@ public final class SobiMask extends Item {
         itemShopTags = "regen_mana";
         key = "item_sobi_mask";
         sideShop = 1;
-        bonus_mana_regen = 5;
+        bonus_mana_regen = 50;
         localizedName = "Sage's Mask";
     }
 

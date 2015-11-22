@@ -28,7 +28,7 @@ public final class Maelstrom extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 166;
         itemAliases = "maelstrom";
-        itemCost = 28;
+        itemCost = 2800;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "artifact";
         itemShopTags = new String[]{"damage","attack_speed","unique"};
@@ -37,9 +37,9 @@ public final class Maelstrom extends Item {
         bonus_damage = 24;
         chain_chance = 25;
         chain_cooldown = 0.0;
-        chain_damage = 12;
+        chain_damage = 120;
         chain_delay = .25;
-        chain_radius = 9;
+        chain_radius = 900;
         chain_strikes = 4;
         localizedName = "Maelstrom";
     }

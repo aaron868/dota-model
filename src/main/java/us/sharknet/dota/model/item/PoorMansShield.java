@@ -24,15 +24,15 @@ public final class PoorMansShield extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 71;
         itemAliases = new String[]{"pms","poor man's shield"};
-        itemCost = 5;
+        itemCost = 500;
         itemQuality = "common";
         itemShopTags = new String[]{"agi","block"};
         key = "item_poor_mans_shield";
         block_chance = 53;
-        block_chance_hero = 1;
+        block_chance_hero = 100;
         bonus_agility = 6;
-        damage_block_melee = 2;
-        damage_block_ranged = 1;
+        damage_block_melee = 20;
+        damage_block_ranged = 10;
         localizedName = "Poor Man's Shield";
     }
 

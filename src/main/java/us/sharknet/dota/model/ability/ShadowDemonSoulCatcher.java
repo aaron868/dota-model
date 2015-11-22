@@ -26,7 +26,7 @@ public final class ShadowDemonSoulCatcher extends Ability {
     private ShadowDemonSoulCatcher() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{13.0,13.0,13.0,13.0};
         abilityDuration = new double[]{12.0,12.0,12.0,12.0};
         abilityManaCost = new int[]{50,60,70,80};

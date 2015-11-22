@@ -75,12 +75,12 @@ public final class LoneDruid extends Hero {
         abilityDraftDisabled = 1;
         abilityLayout = 5;
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .33;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 26;
         attackDamageMin = 22;
-        attackRange = 55;
+        attackRange = 550;
         attackRate = 1.7;
         attributeAgilityGain = 2.7;
         attributeBaseAgility = 24;
@@ -93,7 +93,7 @@ public final class LoneDruid extends Hero {
         cMEnabled = 1;
         enabled = 1;
         healthBarOffset = 145;
-        heroID = 8;
+        heroID = 80;
         heroSelectSoundEffect = "Hero_LoneDruid.Pick";
         heroUnlockOrder = 3;
         idleExpression = "scenes/lone_druid/lone_druid_exp_idle_01.vcd";
@@ -108,7 +108,7 @@ public final class LoneDruid extends Hero {
         pickSound = "lone_druid_lone_druid_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_lone_druid";
         projectileModel = "particles/units/heroes/hero_lone_druid/lone_druid_base_attack.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Carry","Pusher","Jungler","Durable"};
         rolelevels = new int[]{2,3,1,1};
         soundSet = "Hero_LoneDruid";

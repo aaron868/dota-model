@@ -23,7 +23,7 @@ public final class SatyrHellcallerUnholyAura extends Ability {
         health_regen = 4;
         localizedName = "Unholy Aura";
         owningHeroShortKey = "satyr_hellcaller";
-        radius = 9;
+        radius = 900;
     }
 
     public static SatyrHellcallerUnholyAura instance() {

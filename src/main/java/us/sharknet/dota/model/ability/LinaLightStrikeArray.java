@@ -34,7 +34,7 @@ public final class LinaLightStrikeArray extends Ability {
         abilityManaCost = new int[]{100,110,120,130};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 541;
+        iD = 5041;
         key = "lina_light_strike_array";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         light_strike_array_aoe = 225;

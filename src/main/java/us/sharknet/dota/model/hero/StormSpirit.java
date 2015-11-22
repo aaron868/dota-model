@@ -63,12 +63,12 @@ public final class StormSpirit extends Hero {
         ability3 = StormSpiritOverload.instance();
         ability4 = StormSpiritBallLightning.instance();
         armorPhysical = 2;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 32;
         attackDamageMin = 22;
-        attackRange = 48;
+        attackRange = 480;
         attackRate = 1.7;
         attributeAgilityGain = 1.8;
         attributeBaseAgility = 22;
@@ -81,7 +81,7 @@ public final class StormSpirit extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         heroGlowColor = new int[]{0,250,227};
         heroID = 17;
         heroSelectSoundEffect = "Hero_StormSpirit.Pick";
@@ -97,7 +97,7 @@ public final class StormSpirit extends Hero {
         pickSound = "stormspirit_ss_spawn_09";
         portrait = "vgui/hud/heroportraits/portrait_stormspirit";
         projectileModel = "particles/units/heroes/hero_stormspirit/stormspirit_base_attack.vpcf";
-        projectileSpeed = 11;
+        projectileSpeed = 1100;
         role = new String[]{"Carry","Escape","Nuker","Initiator","Disabler"};
         rolelevels = new int[]{2,3,2,1,1};
         soundSet = "Hero_StormSpirit";

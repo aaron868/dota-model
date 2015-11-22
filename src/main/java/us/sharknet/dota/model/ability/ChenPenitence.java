@@ -26,7 +26,7 @@ public final class ChenPenitence extends Ability {
     private ChenPenitence() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = new double[]{14.0,13.0,12.0,11.0};
         abilityManaCost = new int[]{100,100,100,100};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";

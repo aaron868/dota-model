@@ -56,7 +56,7 @@ public final class TemplarAssassinPsionicTrap extends NpcUnit {
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
-        healthBarOffset = 14;
+        healthBarOffset = 140;
         key = "npc_dota_templar_assassin_psionic_trap";
         level = 1;
         model = "models/heroes/lanaya/lanaya_trap_crystal_invis.vmdl";
@@ -66,12 +66,12 @@ public final class TemplarAssassinPsionicTrap extends NpcUnit {
         projectileSpeed = 0;
         selectionGroup = "Templar_Traps";
         soundSet = 0;
-        statusHealth = 1;
+        statusHealth = 100;
         statusHealthRegen = .5;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 4;
-        visionNighttimeRange = 4;
+        visionDaytimeRange = 400;
+        visionNighttimeRange = 400;
         localizedName = "Psionic Trap";
     }
 

@@ -30,7 +30,7 @@ public final class EnigmaMalefice extends Ability {
     private EnigmaMalefice() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{15.0,15.0,15.0,15.0};
         abilityManaCost = new int[]{110,130,150,160};
         abilityModifierSupportValue = .33;

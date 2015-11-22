@@ -27,7 +27,7 @@ public final class ShredderWhirlingDeath extends Ability {
     private ShredderWhirlingDeath() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 3;
+        abilityCastRange = 300;
         abilityCooldown = 6;
         abilityManaCost = new int[]{70,80,90,100};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -40,7 +40,7 @@ public final class ShredderWhirlingDeath extends Ability {
         owningHeroShortKey = "shredder";
         stat_loss_pct = 15;
         whirling_damage = new int[]{100,150,200,250};
-        whirling_radius = 3;
+        whirling_radius = 300;
         whirling_tick = .3;
     }
 

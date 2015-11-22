@@ -25,20 +25,20 @@ public final class UltimateScepter extends Item {
 
     private UltimateScepter() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        iD = 18;
+        iD = 108;
         itemAliases = new String[]{"ultimate","aghanim's scepter"};
-        itemCost = 42;
+        itemCost = 4200;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "rare";
         itemShopTags = new String[]{"int","str","agi","mana_pool","health_pool","hard_to_tag"};
         key = "item_ultimate_scepter";
-        bonus_all_stats = 1;
-        bonus_health = 2;
-        bonus_mana = 15;
+        bonus_all_stats = 10;
+        bonus_health = 200;
+        bonus_mana = 150;
         localizedName = "Aghanim's Scepter";
     }
 

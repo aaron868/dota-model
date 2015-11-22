@@ -20,10 +20,10 @@ public final class NecronomiconWarriorManaBurn extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        iD = 522;
+        iD = 5202;
         key = "necronomicon_warrior_mana_burn";
         burn_amount = new int[]{25,50,75};
-        burn_damage_conversion = 6;
+        burn_damage_conversion = 60;
         localizedName = "Mana Burn";
         owningHeroShortKey = "necronomicon_warrior";
     }

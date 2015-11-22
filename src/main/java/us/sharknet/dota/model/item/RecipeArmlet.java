@@ -16,8 +16,8 @@ public final class RecipeArmlet extends Item {
     private final String localizedName;
 
     private RecipeArmlet() {
-        iD = 15;
-        itemCost = 5;
+        iD = 150;
+        itemCost = 500;
         itemRecipe = 1;
         itemRequirements = new Item[]{HelmOfIronWill.instance(),Gloves.instance(),BladesOfAttack.instance()};
         itemResult = Armlet.instance();

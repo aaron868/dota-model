@@ -21,7 +21,7 @@ public final class Reaver extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 53;
         itemAliases = "reaver";
-        itemCost = 3;
+        itemCost = 3000;
         itemQuality = "secret_shop";
         itemShopTags = "str";
         key = "item_reaver";

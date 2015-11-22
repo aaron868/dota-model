@@ -27,15 +27,15 @@ public final class MeepoEarthbind extends Ability {
         abilityCastPoint = .3;
         abilityCastRange = new int[]{500,750,1000,1250};
         abilityCooldown = new int[]{20,16,12,8};
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         fightRecapLevel = 1;
-        iD = 543;
+        iD = 5430;
         key = "meepo_earthbind";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = 2;
         localizedName = "Earthbind";
         owningHeroShortKey = "meepo";
-        radius = 22;
+        radius = 220;
         speed = 857;
         tooltip_range = new int[]{500,750,1000,1250};
     }

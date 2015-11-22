@@ -33,7 +33,7 @@ public final class TuskFrozenSigil extends Ability {
         move_slow = new int[]{10,15,20,25};
         owningHeroShortKey = "tusk";
         sigil_duration = 3;
-        sigil_radius = 6;
+        sigil_radius = 600;
     }
 
     public static TuskFrozenSigil instance() {

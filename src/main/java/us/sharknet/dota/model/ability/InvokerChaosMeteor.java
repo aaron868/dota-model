@@ -35,9 +35,9 @@ public final class InvokerChaosMeteor extends Ability {
     private InvokerChaosMeteor() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = 0;
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = 55;
-        abilityManaCost = 2;
+        abilityManaCost = 200;
         abilityModifierSupportValue = 0;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
@@ -56,8 +56,8 @@ public final class InvokerChaosMeteor extends Ability {
         main_damage = new double[]{57.5,75.0,92.5,110.0,127.5,145.0,162.5,180.0};
         owningHeroShortKey = "invoker";
         travel_distance = new int[]{465,615,780,930,1095,1245,1410,1575};
-        travel_speed = 3;
-        vision_distance = 5;
+        travel_speed = 300;
+        vision_distance = 500;
     }
 
     public static InvokerChaosMeteor instance() {

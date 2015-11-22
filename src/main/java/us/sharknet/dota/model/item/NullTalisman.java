@@ -23,7 +23,7 @@ public final class NullTalisman extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 77;
         itemAliases = "null talisman";
-        itemCost = 47;
+        itemCost = 470;
         itemQuality = "common";
         itemShopTags = new String[]{"damage","int","agi","str"};
         key = "item_null_talisman";

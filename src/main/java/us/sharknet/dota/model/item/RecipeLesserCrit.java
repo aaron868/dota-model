@@ -17,7 +17,7 @@ public final class RecipeLesserCrit extends Item {
 
     private RecipeLesserCrit() {
         iD = 148;
-        itemCost = 5;
+        itemCost = 500;
         itemRecipe = 1;
         itemRequirements = new Item[]{Broadsword.instance(),BladesOfAttack.instance()};
         itemResult = LesserCrit.instance();

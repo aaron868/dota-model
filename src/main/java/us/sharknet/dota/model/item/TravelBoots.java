@@ -40,7 +40,7 @@ public final class TravelBoots extends Item {
         iD = 48;
         itemAliases = new String[]{"bot","boots of travel"};
         itemBaseLevel = 1;
-        itemCost = 245;
+        itemCost = 2450;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "common";
         itemShopTags = new String[]{"teleport","move_speed"};
@@ -48,7 +48,7 @@ public final class TravelBoots extends Item {
         maxUpgradeLevel = 2;
         upgradeRecipe = "item_recipe_travel_boots";
         upgradesItems = "item_travel_boots";
-        bonus_movement_speed = 1;
+        bonus_movement_speed = 100;
         localizedName = "Boots Of Travel";
     }
 

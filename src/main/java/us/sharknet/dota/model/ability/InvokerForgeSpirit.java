@@ -25,7 +25,7 @@ public final class InvokerForgeSpirit extends Ability {
 
     private InvokerForgeSpirit() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCooldown = 3;
+        abilityCooldown = 30;
         abilityManaCost = 75;
         hotKeyOverride = "F";
         iD = 5387;

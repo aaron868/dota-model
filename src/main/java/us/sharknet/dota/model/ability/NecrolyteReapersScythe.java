@@ -34,7 +34,7 @@ public final class NecrolyteReapersScythe extends Ability {
     private NecrolyteReapersScythe() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new int[]{100,85,70};
         abilityManaCost = new int[]{175,340,500};
         abilityModifierSupportValue = .1;
@@ -54,7 +54,7 @@ public final class NecrolyteReapersScythe extends Ability {
         mana_cost_scepter = new int[]{150,340,500};
         owningHeroShortKey = "necrolyte";
         respawn = 0.0;
-        respawn_constant = 3;
+        respawn_constant = 30;
         stun_duration = new double[]{1.5,1.5,1.5};
     }
 

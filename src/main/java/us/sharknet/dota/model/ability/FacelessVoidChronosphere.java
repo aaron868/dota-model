@@ -28,10 +28,10 @@ public final class FacelessVoidChronosphere extends Ability {
     private FacelessVoidChronosphere() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.35,0.35,0.35};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{130.0,115.0,100.0};
         abilityManaCost = new int[]{150,225,300};
-        abilityModifierSupportBonus = 5;
+        abilityModifierSupportBonus = 50;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         fightRecapLevel = 2;
         iD = 5185;

@@ -28,8 +28,8 @@ public final class BountyHunterShurikenToss extends Ability {
     private BountyHunterShurikenToss() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 4;
-        abilityCooldown = 1;
+        abilityCastRange = 400;
+        abilityCooldown = 10;
         abilityManaCost = new int[]{120,130,140,150};
         abilityModifierSupportValue = .1;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -40,7 +40,7 @@ public final class BountyHunterShurikenToss extends Ability {
         key = "bounty_hunter_shuriken_toss";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         bonus_damage = new int[]{150,225,300,375};
-        bounce_aoe = 12;
+        bounce_aoe = 1200;
         localizedName = "Shuriken Toss";
         owningHeroShortKey = "bounty_hunter";
         speed = new int[]{1000,1000,1000,1000};

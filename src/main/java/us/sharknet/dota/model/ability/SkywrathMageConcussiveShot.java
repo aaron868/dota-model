@@ -30,7 +30,7 @@ public final class SkywrathMageConcussiveShot extends Ability {
     private SkywrathMageConcussiveShot() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 16;
+        abilityCastRange = 1600;
         abilityCooldown = new double[]{18.0,16.0,14.0,12.0};
         abilityManaCost = new int[]{110,110,110,110};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -39,13 +39,13 @@ public final class SkywrathMageConcussiveShot extends Ability {
         key = "skywrath_mage_concussive_shot";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = new int[]{60,120,180,240};
-        launch_radius = 16;
+        launch_radius = 1600;
         localizedName = "Concussive Shot";
         movement_speed_pct = new int[]{30,35,40,45};
         owningHeroShortKey = "skywrath_mage";
-        shot_vision = 4;
+        shot_vision = 400;
         slow_duration = 4;
-        slow_radius = 2;
+        slow_radius = 200;
         speed = new int[]{800,800,800,800};
         vision_duration = 3.34;
     }

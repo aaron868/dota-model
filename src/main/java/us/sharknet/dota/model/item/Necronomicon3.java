@@ -42,21 +42,21 @@ public final class Necronomicon3 extends Item {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = 0;
         abilityCooldown = 95;
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilitySharedCooldown = "necronomicon";
         fightRecapLevel = 1;
         iD = 194;
         itemAliases = "necronomicon 3";
         itemBaseLevel = 3;
-        itemCost = 52;
+        itemCost = 5200;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "rare";
         itemShopTags = new String[]{"int","str","hard_to_tag","see_invis"};
         key = "item_necronomicon_3";
         maxUpgradeLevel = 3;
         archer_attack_speed = 9;
-        archer_attack_speed_radius = 4;
-        archer_aura_radius_tooltip = 9;
+        archer_attack_speed_radius = 400;
+        archer_aura_radius_tooltip = 900;
         archer_damage_tooltip = 120;
         archer_health_tooltip = 900;
         archer_mana_burn = 225;
@@ -64,12 +64,12 @@ public final class Necronomicon3 extends Item {
         bonus_strength = 16;
         explosion = 800;
         localizedName = "Necronomicon 3";
-        summon_duration = 4;
+        summon_duration = 40;
         warrior_damage_tooltip = 75;
         warrior_health_tooltip = 900;
         warrior_mana_break_tooltip = 75;
         warrior_mana_feedback = 75;
-        warrior_truesight = 1;
+        warrior_truesight = 1000;
     }
 
     public static Necronomicon3 instance() {

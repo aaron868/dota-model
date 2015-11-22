@@ -20,11 +20,11 @@ public final class BladeOfAlacrity extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 22;
         itemAliases = "blade of alacrity";
-        itemCost = 1;
+        itemCost = 1000;
         itemQuality = "component";
         itemShopTags = "agi";
         key = "item_blade_of_alacrity";
-        bonus_agility = 1;
+        bonus_agility = 10;
         localizedName = "Blade Of Alacrity";
     }
 

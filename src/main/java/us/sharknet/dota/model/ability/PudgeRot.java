@@ -26,12 +26,12 @@ public final class PudgeRot extends Ability {
         abilityDamage = new int[]{30,60,90,120};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 576;
+        iD = 5076;
         key = "pudge_rot";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Rot";
         owningHeroShortKey = "pudge";
-        rot_radius = 25;
+        rot_radius = 250;
         rot_slow = -27;
         rot_tick = .2;
     }

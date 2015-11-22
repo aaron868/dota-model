@@ -45,7 +45,7 @@ public final class MagnataurReversePolarity extends Ability {
         owningHeroShortKey = "magnataur";
         polarity_damage = new int[]{50,125,200};
         pull_duration = new double[]{0.0,0.0,0.0};
-        pull_radius = 41;
+        pull_radius = 410;
     }
 
     public static MagnataurReversePolarity instance() {

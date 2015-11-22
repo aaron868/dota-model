@@ -28,21 +28,21 @@ public final class PhantomLancerDoppelwalk extends Ability {
     private PhantomLancerDoppelwalk() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = .1;
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new int[]{25,20,15,10};
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         fightRecapLevel = 1;
-        iD = 566;
+        iD = 5066;
         key = "phantom_lancer_doppelwalk";
         delay = 1;
         illusion_1_damage_in_pct = 0;
-        illusion_1_damage_out_pct = -1;
-        illusion_2_damage_in_pct = 5;
-        illusion_2_damage_out_pct = -8;
+        illusion_1_damage_out_pct = -100;
+        illusion_2_damage_in_pct = 500;
+        illusion_2_damage_out_pct = -80;
         illusion_duration = 8;
         localizedName = "Phantom Doppelganger";
         owningHeroShortKey = "phantom_lancer";
-        search_radius = 9;
+        search_radius = 900;
         target_aoe = 325;
     }
 

@@ -38,7 +38,7 @@ public final class WardObserver extends Item {
     private WardObserver() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET"};
         abilityCastPoint = 0;
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = 1;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
@@ -60,10 +60,10 @@ public final class WardObserver extends Item {
         key = "item_ward_observer";
         model = "models/props_gameplay/observer_ward_bundle.vmdl";
         duration_minutes_tooltip = 7;
-        health = 2;
-        lifetime = 42;
+        health = 200;
+        lifetime = 420;
         localizedName = "Observer Ward";
-        vision_range = 16;
+        vision_range = 1600;
     }
 
     public static WardObserver instance() {

@@ -17,7 +17,7 @@ public final class AttributeBonus extends Ability {
     private AttributeBonus() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityType = "DOTA_ABILITY_TYPE_ATTRIBUTES";
-        iD = 52;
+        iD = 5002;
         key = "attribute_bonus";
         attribute_bonus_per_level = 2;
         localizedName = "Stats";

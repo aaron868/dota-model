@@ -61,13 +61,13 @@ public final class NecronomiconWarrior3 extends NpcUnit {
         ability2 = NecronomiconWarriorLastWill.instance();
         ability3 = NecronomiconWarriorSight.instance();
         armorPhysical = 4;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .56;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 75;
         attackDamageMin = 75;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 1;
+        attackRange = 100;
         attackRate = .75;
         attributeAgilityGain = 0;
         attributeBaseAgility = 0;
@@ -78,9 +78,9 @@ public final class NecronomiconWarrior3 extends NpcUnit {
         attributeStrengthGain = 0;
         baseClass = "npc_dota_creep";
         boundsHullName = "DOTA_HULL_SIZE_REGULAR";
-        bountyGoldMax = 2;
-        bountyGoldMin = 2;
-        bountyXP = 2;
+        bountyGoldMax = 200;
+        bountyGoldMin = 200;
+        bountyXP = 200;
         canBeDominated = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_HERO";
@@ -88,22 +88,22 @@ public final class NecronomiconWarrior3 extends NpcUnit {
         isSummoned = 1;
         key = "npc_dota_necronomicon_warrior_3";
         level = 5;
-        magicalResistance = 4;
+        magicalResistance = 40;
         model = "models/creeps/item_creeps/i_creep_necro_warrior/necro_warrior.vmdl";
         modelScale = .6;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 35;
+        movementSpeed = 350;
         movementTurnRate = .5;
         soundSet = "Creep_Good_Melee";
-        statusHealth = 9;
+        statusHealth = 900;
         statusHealthRegen = 5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitLabel = "necrowarrior";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 15;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1500;
+        visionNighttimeRange = 800;
         localizedName = "Necronomicon Warrior Level 3";
     }
 

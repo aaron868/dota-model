@@ -45,12 +45,12 @@ public final class EnigmaBlackHole extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         duration = new double[]{4.0,4.0,4.0};
         far_damage = new int[]{55,110,165};
-        far_radius = 42;
+        far_radius = 420;
         localizedName = "Black Hole";
         near_damage = new int[]{55,110,165};
-        near_radius = 2;
+        near_radius = 200;
         owningHeroShortKey = "enigma";
-        pull_radius = 42;
+        pull_radius = 420;
         pull_speed = new int[]{40,40,40};
         tick_rate = new double[]{0.1,0.1,0.1};
         vision_radius = new int[]{800,800,800};

@@ -64,12 +64,12 @@ public final class Silencer extends Hero {
         ability4 = SilencerGlobalSilence.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
-        attackDamageMax = 3;
+        attackDamageMax = 30;
         attackDamageMin = 16;
-        attackRange = 6;
+        attackRange = 600;
         attackRate = 1.7;
         attributeAgilityGain = 3;
         attributeBaseAgility = 16;
@@ -81,7 +81,7 @@ public final class Silencer extends Hero {
         banSound = "silencer_silen_anger_07";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 13;
+        healthBarOffset = 130;
         heroID = 75;
         heroSelectSoundEffect = "Hero_Silencer.Pick";
         heroUnlockOrder = 3;
@@ -97,7 +97,7 @@ public final class Silencer extends Hero {
         pickSound = "silencer_silen_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_silencer";
         projectileModel = "particles/units/heroes/hero_silencer/silencer_base_attack.vpcf";
-        projectileSpeed = 1;
+        projectileSpeed = 1000;
         role = new String[]{"Carry","Support","Disabler","Initiator","Nuker"};
         rolelevels = new int[]{1,1,2,2,1};
         soundSet = "Hero_Silencer";

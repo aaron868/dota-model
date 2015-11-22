@@ -32,7 +32,7 @@ public final class SoulRing extends Item {
         abilityManaCost = 0;
         iD = 178;
         itemAliases = "soul ring";
-        itemCost = 8;
+        itemCost = 800;
         itemDeclarations = "DECLARE_PURCHASES_TO_SPECTATORS";
         itemQuality = "common";
         itemShopTags = new String[]{"regen_health","boost_mana"};
@@ -40,12 +40,12 @@ public final class SoulRing extends Item {
         uIDropSound = "Item.DropRingShop";
         uIPickupSound = "Item.PickUpRingShop";
         worldDropSound = "Item.DropRingWorld";
-        duration = 1;
+        duration = 10;
         health_regen = 3;
-        health_sacrifice = 15;
+        health_sacrifice = 150;
         localizedName = "Soul Ring";
-        mana_gain = 15;
-        mana_regen = 5;
+        mana_gain = 150;
+        mana_regen = 50;
     }
 
     public static SoulRing instance() {

@@ -25,15 +25,15 @@ public final class Vanguard extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 125;
         itemAliases = "vanguard";
-        itemCost = 215;
+        itemCost = 2150;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "epic";
         itemShopTags = new String[]{"regen_health","block","health_pool"};
         key = "item_vanguard";
         block_chance = 75;
-        block_damage_melee = 4;
-        block_damage_ranged = 2;
-        bonus_health = 25;
+        block_damage_melee = 40;
+        block_damage_ranged = 20;
+        bonus_health = 250;
         bonus_health_regen = 6;
         localizedName = "Vanguard";
     }

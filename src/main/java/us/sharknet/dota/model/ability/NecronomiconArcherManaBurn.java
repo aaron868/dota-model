@@ -25,17 +25,17 @@ public final class NecronomiconArcherManaBurn extends Ability {
     private NecronomiconArcherManaBurn() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCastRange = 6;
-        abilityCooldown = 2;
+        abilityCastRange = 600;
+        abilityCooldown = 20;
         abilityManaCost = new int[]{0,0,0};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        iD = 523;
+        iD = 5203;
         key = "necronomicon_archer_mana_burn";
         burn_amount = new int[]{125,175,225};
-        burn_as_damage_tooltip = 1;
-        cast_range_tooltip = 6;
+        burn_as_damage_tooltip = 100;
+        cast_range_tooltip = 600;
         localizedName = "Mana Burn";
         owningHeroShortKey = "necronomicon_archer";
     }

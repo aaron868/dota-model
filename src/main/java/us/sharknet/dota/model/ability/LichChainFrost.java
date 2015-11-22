@@ -37,7 +37,7 @@ public final class LichChainFrost extends Ability {
     private LichChainFrost() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 75;
+        abilityCastRange = 750;
         abilityCooldown = new double[]{120.0,90.0,60.0};
         abilityManaCost = new int[]{200,325,500};
         abilityModifierSupportValue = 0;
@@ -57,10 +57,10 @@ public final class LichChainFrost extends Ability {
         jumps = new int[]{10,10,10};
         localizedName = "Chain Frost";
         owningHeroShortKey = "lich";
-        projectile_speed = 85;
-        slow_attack_speed = -3;
+        projectile_speed = 850;
+        slow_attack_speed = -30;
         slow_duration = new double[]{4.0,4.0,4.0};
-        slow_movement_speed = -3;
+        slow_movement_speed = -30;
         vision_radius = new int[]{1000,1000,1000};
     }
 

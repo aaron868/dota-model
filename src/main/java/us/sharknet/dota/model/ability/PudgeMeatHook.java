@@ -34,12 +34,12 @@ public final class PudgeMeatHook extends Ability {
         abilityManaCost = new int[]{110,120,130,140};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
         fightRecapLevel = 1;
-        iD = 575;
+        iD = 5075;
         key = "pudge_meat_hook";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         hook_distance = new int[]{1000,1100,1200,1300};
         hook_speed = 16;
-        hook_width = 1;
+        hook_width = 100;
         localizedName = "Meat Hook";
         owningHeroShortKey = "pudge";
         vision_duration = new double[]{4.0,4.0,4.0,4.0};

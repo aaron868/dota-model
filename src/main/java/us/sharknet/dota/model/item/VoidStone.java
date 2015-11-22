@@ -22,13 +22,13 @@ public final class VoidStone extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 57;
         itemAliases = "void stone";
-        itemCost = 85;
+        itemCost = 850;
         itemQuality = "component";
         itemShareability = "ITEM_PARTIALLY_SHAREABLE";
         itemShopTags = "regen_mana";
         key = "item_void_stone";
         sideShop = 1;
-        bonus_mana_regen = 1;
+        bonus_mana_regen = 100;
         localizedName = "Void Stone";
     }
 

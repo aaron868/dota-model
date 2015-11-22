@@ -46,13 +46,13 @@ public final class DarkTrollWarlordSkeletonWarrior extends NpcUnit {
 
     private DarkTrollWarlordSkeletonWarrior() {
         armorPhysical = 1;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .56;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 25;
         attackDamageMin = 24;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 9;
+        attackRange = 90;
         attackRate = 1;
         baseClass = "npc_dota_creep_neutral";
         boundsHullName = "DOTA_HULL_SIZE_REGULAR";
@@ -61,7 +61,7 @@ public final class DarkTrollWarlordSkeletonWarrior extends NpcUnit {
         bountyXP = 12;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 14;
+        healthBarOffset = 140;
         isSummoned = 1;
         key = "npc_dota_dark_troll_warlord_skeleton_warrior";
         level = 1;
@@ -69,17 +69,17 @@ public final class DarkTrollWarlordSkeletonWarrior extends NpcUnit {
         model = "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl";
         modelScale = 1.1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 27;
+        movementSpeed = 270;
         movementTurnRate = .5;
         soundSet = "Creep_Good_Melee";
-        statusHealth = 25;
+        statusHealth = 250;
         statusHealthRegen = 0;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 6;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 600;
         localizedName = "Skeleton Warrior";
     }
 

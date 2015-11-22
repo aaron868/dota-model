@@ -21,12 +21,12 @@ public final class VitalityBooster extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 61;
         itemAliases = "vitality booster";
-        itemCost = 11;
+        itemCost = 1100;
         itemQuality = "secret_shop";
         itemShopTags = "health_pool";
         key = "item_vitality_booster";
         secretShop = 1;
-        bonus_health = 25;
+        bonus_health = 250;
         localizedName = "Vitality Booster";
     }
 

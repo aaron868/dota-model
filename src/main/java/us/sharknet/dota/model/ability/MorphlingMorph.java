@@ -15,7 +15,7 @@ public final class MorphlingMorph extends Ability {
 
     private MorphlingMorph() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_HIDDEN";
-        iD = 554;
+        iD = 5054;
         key = "morphling_morph";
         bonus_attributes = new int[]{3,4,5,6};
         localizedName = "Morph";

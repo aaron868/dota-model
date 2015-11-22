@@ -46,12 +46,12 @@ public final class SatyrSoulstealer extends NpcUnit {
     private SatyrSoulstealer() {
         ability1 = SatyrSoulstealerManaBurn.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 27;
         attackDamageMin = 24;
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 33;
@@ -59,25 +59,25 @@ public final class SatyrSoulstealer extends NpcUnit {
         bountyXP = 62;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 19;
+        healthBarOffset = 190;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_satyr_soulstealer";
         level = 4;
         model = "models/creeps/neutral_creeps/n_creep_satyr_c/n_creep_satyr_c.vmdl";
         modelScale = .8;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 27;
+        movementSpeed = 270;
         projectileSpeed = 0;
-        ringRadius = 5;
+        ringRadius = 50;
         soundSet = "n_creep_Melee";
-        statusHealth = 6;
+        statusHealth = 600;
         statusHealthRegen = .5;
-        statusMana = 6;
+        statusMana = 600;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Satyr Mindstealer";
     }
 

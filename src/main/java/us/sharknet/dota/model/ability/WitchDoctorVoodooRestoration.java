@@ -29,7 +29,7 @@ public final class WitchDoctorVoodooRestoration extends Ability {
         localizedName = "Voodoo Restoration";
         mana_per_second = new int[]{8,12,16,20};
         owningHeroShortKey = "witch_doctor";
-        radius = 5;
+        radius = 500;
     }
 
     public static WitchDoctorVoodooRestoration instance() {

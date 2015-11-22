@@ -19,7 +19,7 @@ public final class BrewmasterEarthPulverize extends Ability {
 
     private BrewmasterEarthPulverize() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 546;
+        iD = 5406;
         key = "brewmaster_earth_pulverize";
         chance = new int[]{20,20,20,20};
         damage_inner = new int[]{40,40,40,40};

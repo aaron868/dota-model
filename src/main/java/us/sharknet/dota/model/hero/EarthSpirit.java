@@ -71,7 +71,7 @@ public final class EarthSpirit extends Hero {
         abilityDraftDisabled = 1;
         abilityLayout = 5;
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .35;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 35;
@@ -89,14 +89,14 @@ public final class EarthSpirit extends Hero {
         cMEnabled = 0;
         enabled = 1;
         hasAggressiveStance = 1;
-        healthBarOffset = 2;
-        heroID = 17;
+        healthBarOffset = 200;
+        heroID = 107;
         heroSelectSoundEffect = "Hero_EarthSpirit.Pick";
         idleExpression = "scenes/earth_spirit/earth_spirit_exp_idle_01.vcd";
         key = "npc_dota_hero_earth_spirit";
         model = "models/heroes/earth_spirit/earth_spirit.vmdl";
         modelScale = .95;
-        movementSpeed = 35;
+        movementSpeed = 305;
         movementTurnRate = .6;
         nameAliases = new String[]{"Kaolin","Earth"};
         noCombine = 0;
@@ -106,8 +106,8 @@ public final class EarthSpirit extends Hero {
         rolelevels = new int[]{2,2,1,1,1};
         soundSet = "Hero_EarthSpirit";
         team = "Good";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_earth_spirit.vsndevts";
         active = true;
         localizedName = "Earth Spirit";

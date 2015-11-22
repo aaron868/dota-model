@@ -21,7 +21,7 @@ public final class BloodseekerThirst extends Ability {
 
     private BloodseekerThirst() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 517;
+        iD = 5017;
         key = "bloodseeker_thirst";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         bonus_damage = new int[]{10,20,30,40};

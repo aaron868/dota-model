@@ -28,14 +28,14 @@ public final class AxeBerserkersCall extends Ability {
         abilityDamage = new int[]{0,0,0,0};
         abilityManaCost = new int[]{80,90,100,110};
         fightRecapLevel = 1;
-        iD = 57;
+        iD = 5007;
         key = "axe_berserkers_call";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        bonus_armor = 4;
+        bonus_armor = 40;
         duration = new double[]{2.0,2.4,2.8,3.2};
         localizedName = "Berserkers Call";
         owningHeroShortKey = "axe";
-        radius = 3;
+        radius = 300;
     }
 
     public static AxeBerserkersCall instance() {

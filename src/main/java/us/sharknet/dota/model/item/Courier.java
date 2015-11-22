@@ -24,7 +24,7 @@ public final class Courier extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         iD = 45;
         itemAliases = new String[]{"donkey","chicken","animal courier"};
-        itemCost = 12;
+        itemCost = 120;
         itemDeclarations = "DECLARE_PURCHASES_TO_TEAMMATES";
         itemQuality = "consumable";
         itemShareability = "ITEM_FULLY_SHAREABLE";

@@ -77,7 +77,7 @@ public final class Wisp extends Hero {
         abilityDraftDisabled = 1;
         abilityLayout = 6;
         armorPhysical = -2;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .15;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 35;
@@ -94,7 +94,7 @@ public final class Wisp extends Hero {
         banSound = "wisp_shitty_crummy_wizard";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 16;
+        healthBarOffset = 160;
         heroID = 91;
         heroSelectSoundEffect = "Hero_Wisp.Pick";
         idleSoundLoop = "Hero_Wisp.IdleLoop";
@@ -109,7 +109,7 @@ public final class Wisp extends Hero {
         pickSound = "wisp_move03";
         portrait = "vgui/hud/heroportraits/portrait_wisp";
         projectileModel = "particles/units/heroes/hero_wisp/wisp_base_attack.vpcf";
-        projectileSpeed = 12;
+        projectileSpeed = 1200;
         role = new String[]{"Support","Escape","Nuker"};
         rolelevels = new int[]{3,2,1};
         soundSet = "Hero_Wisp";

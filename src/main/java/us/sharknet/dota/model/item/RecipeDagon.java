@@ -16,8 +16,8 @@ public final class RecipeDagon extends Item {
     private final String localizedName;
 
     private RecipeDagon() {
-        iD = 13;
-        itemCost = 125;
+        iD = 103;
+        itemCost = 1250;
         itemRecipe = 1;
         itemRequirements = new Item[]{StaffOfWizardry.instance(),NullTalisman.instance()};
         itemResult = Dagon.instance();

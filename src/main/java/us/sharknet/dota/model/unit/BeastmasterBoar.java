@@ -46,12 +46,12 @@ public final class BeastmasterBoar extends NpcUnit {
     private BeastmasterBoar() {
         ability1 = BeastmasterBoarPoison.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .633;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 29;
         attackDamageMin = 23;
-        attackRange = 55;
+        attackRange = 550;
         attackRate = 1.5;
         baseClass = "npc_dota_beastmaster_boar";
         bountyGoldMax = 38;
@@ -66,18 +66,18 @@ public final class BeastmasterBoar extends NpcUnit {
         model = "models/heroes/beastmaster/beastmaster_beast.vmdl";
         modelScale = .65;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 35;
+        movementSpeed = 350;
         movementTurnRate = .6;
         projectileModel = "particles/units/heroes/hero_beastmaster/beastmaster_boar_attack.vpcf";
-        projectileSpeed = 15;
+        projectileSpeed = 1500;
         soundSet = "Beastmaster_Boar";
-        statusHealth = 4;
+        statusHealth = 400;
         statusHealthRegen = 1.5;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitLabel = "boar";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 14;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1400;
+        visionNighttimeRange = 800;
         localizedName = "Boar";
     }
 

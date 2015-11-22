@@ -17,11 +17,11 @@ public final class GiantWolfCriticalStrike extends Ability {
 
     private GiantWolfCriticalStrike() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 537;
+        iD = 5307;
         key = "giant_wolf_critical_strike";
         maxLevel = 1;
-        crit_chance = 2;
-        crit_mult = 2;
+        crit_chance = 20;
+        crit_mult = 200;
         localizedName = "Critical Strike";
         owningHeroShortKey = "giant_wolf";
     }

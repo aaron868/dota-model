@@ -22,7 +22,7 @@ public final class RoshanBash extends Ability {
         iD = 5214;
         key = "roshan_bash";
         bash_chance = 15;
-        bonus_damage = 5;
+        bonus_damage = 50;
         localizedName = "Bash";
         owningHeroShortKey = "roshan";
         stun_duration = 1.65;

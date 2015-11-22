@@ -37,11 +37,11 @@ public final class BlackKingBar extends Item {
         itemShopTags = new String[]{"str","damage","hard_to_tag"};
         key = "item_black_king_bar";
         bonus_damage = 24;
-        bonus_strength = 1;
+        bonus_strength = 10;
         duration = new double[]{10.0,9.0,8.0,7.0,6.0,5.0};
         localizedName = "Black King Bar";
         max_level = 6;
-        model_scale = 3;
+        model_scale = 30;
     }
 
     public static BlackKingBar instance() {

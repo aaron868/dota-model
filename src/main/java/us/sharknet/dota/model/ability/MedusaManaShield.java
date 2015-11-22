@@ -18,7 +18,7 @@ public final class MedusaManaShield extends Ability {
     private MedusaManaShield() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        iD = 556;
+        iD = 5506;
         key = "medusa_mana_shield";
         absorption_tooltip = 6;
         damage_per_mana = new double[]{1.6,1.9,2.2,2.5};

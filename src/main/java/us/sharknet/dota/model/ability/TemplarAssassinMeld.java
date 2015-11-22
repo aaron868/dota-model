@@ -31,7 +31,7 @@ public final class TemplarAssassinMeld extends Ability {
         iD = 5195;
         key = "templar_assassin_meld";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        armor_reduction_duration_tooltip = 1;
+        armor_reduction_duration_tooltip = 10;
         bonus_armor = new int[]{-2,-4,-6,-8};
         bonus_damage = new int[]{50,100,150,200};
         localizedName = "Meld";

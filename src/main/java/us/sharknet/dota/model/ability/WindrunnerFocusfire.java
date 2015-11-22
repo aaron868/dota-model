@@ -30,7 +30,7 @@ public final class WindrunnerFocusfire extends Ability {
     private WindrunnerFocusfire() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = 0;
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{60.0,60.0,60.0};
         abilityDuration = new double[]{20.0,20.0,20.0};
         abilityManaCost = new int[]{75,100,125};
@@ -41,11 +41,11 @@ public final class WindrunnerFocusfire extends Ability {
         iD = 5133;
         key = "windrunner_focusfire";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        bonus_attack_speed = 5;
+        bonus_attack_speed = 500;
         cooldown_scepter = new double[]{15.0,15.0,15.0};
         focusfire_damage_reduction = new int[]{-50,-40,-30};
         focusfire_damage_reduction_scepter = new int[]{-30,-15,0};
-        focusfire_duration_tooltip = 2;
+        focusfire_duration_tooltip = 20;
         localizedName = "Focusfire";
         owningHeroShortKey = "windrunner";
     }

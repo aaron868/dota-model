@@ -31,16 +31,16 @@ public final class MaskOfMadness extends Item {
         fightRecapLevel = 1;
         iD = 172;
         itemAliases = new String[]{"mom","mask of madness"};
-        itemCost = 18;
+        itemCost = 1800;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "artifact";
         itemShopTags = new String[]{"unique","hard_to_tag"};
         key = "item_mask_of_madness";
-        berserk_bonus_attack_speed = 1;
+        berserk_bonus_attack_speed = 100;
         berserk_bonus_movement_speed = 17;
         berserk_duration = 12;
-        berserk_extra_damage = 3;
-        lifesteal_percent = 2;
+        berserk_extra_damage = 30;
+        lifesteal_percent = 20;
         localizedName = "Mask Of Madness";
     }
 

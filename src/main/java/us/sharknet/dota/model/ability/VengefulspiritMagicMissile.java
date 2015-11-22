@@ -27,7 +27,7 @@ public final class VengefulspiritMagicMissile extends Ability {
     private VengefulspiritMagicMissile() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new int[]{13,12,11,10};
         abilityDamage = new int[]{100,175,250,325};
         abilityManaCost = new int[]{110,120,130,140};
@@ -39,7 +39,7 @@ public final class VengefulspiritMagicMissile extends Ability {
         key = "vengefulspirit_magic_missile";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Magic Missile";
-        magic_missile_speed = 125;
+        magic_missile_speed = 1250;
         magic_missile_stun = new double[]{1.45,1.55,1.65,1.75};
         owningHeroShortKey = "vengefulspirit";
     }

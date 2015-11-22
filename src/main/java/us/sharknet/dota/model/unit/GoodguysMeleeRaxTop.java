@@ -77,7 +77,7 @@ public final class GoodguysMeleeRaxTop extends NpcUnit {
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_SIEGE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE";
-        healthBarOffset = 25;
+        healthBarOffset = 250;
         key = "npc_dota_goodguys_melee_rax_top";
         magicalResistance = 0;
         minimapIcon = "minimap_racks90";
@@ -86,16 +86,16 @@ public final class GoodguysMeleeRaxTop extends NpcUnit {
         movementSpeed = 0;
         movementTurnRate = 0;
         projectileSpeed = 0;
-        ringRadius = 22;
+        ringRadius = 220;
         soundSet = "Creep_Good_Melee";
-        statusHealth = 15;
+        statusHealth = 1500;
         statusHealthRegen = 5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BARRACKS";
-        visionDaytimeRange = 9;
-        visionNighttimeRange = 6;
+        visionDaytimeRange = 900;
+        visionNighttimeRange = 600;
         localizedName = "Radiant Top Melee Barracks";
     }
 

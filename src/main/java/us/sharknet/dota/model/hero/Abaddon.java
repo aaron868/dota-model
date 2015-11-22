@@ -62,7 +62,7 @@ public final class Abaddon extends Hero {
         ability4 = AbaddonBorrowedTime.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .56;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 42;
@@ -81,14 +81,14 @@ public final class Abaddon extends Hero {
         enabled = 1;
         hasAggressiveStance = 1;
         healthBarOffset = 175;
-        heroID = 12;
+        heroID = 102;
         heroSelectSoundEffect = "Hero_Abaddon.Pick";
         key = "npc_dota_hero_abaddon";
         lastHitChallengeRival = "npc_dota_hero_chaos_knight";
         loadoutScale = .73;
         model = "models/heroes/abaddon/abaddon.vmdl";
         modelScale = .78;
-        movementSpeed = 31;
+        movementSpeed = 310;
         movementTurnRate = .5;
         nameAliases = "Abaddon";
         noCombine = 1;

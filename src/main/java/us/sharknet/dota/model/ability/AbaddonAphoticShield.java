@@ -27,7 +27,7 @@ public final class AbaddonAphoticShield extends Ability {
     private AbaddonAphoticShield() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.452,0.452,0.452,0.452};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new double[]{12.0,10.0,8.0,6.0};
         abilityManaCost = new int[]{100,105,110,115};
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES";

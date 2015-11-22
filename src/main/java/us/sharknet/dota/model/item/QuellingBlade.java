@@ -30,7 +30,7 @@ public final class QuellingBlade extends Item {
     private QuellingBlade() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = 0;
-        abilityCastRange = 35;
+        abilityCastRange = 350;
         abilityCooldown = 4;
         abilityManaCost = 0;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
@@ -43,11 +43,11 @@ public final class QuellingBlade extends Item {
         key = "item_quelling_blade";
         model = "models/props_gameplay/quelling_blade.vmdl";
         sideShop = 1;
-        cast_range_ward = 45;
-        damage_bonus = 14;
+        cast_range_ward = 450;
+        damage_bonus = 140;
         damage_bonus_ranged = 115;
         localizedName = "Quelling Blade";
-        quelling_range_tooltip = 35;
+        quelling_range_tooltip = 350;
     }
 
     public static QuellingBlade instance() {

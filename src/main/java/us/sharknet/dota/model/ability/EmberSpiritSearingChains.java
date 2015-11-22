@@ -28,19 +28,19 @@ public final class EmberSpiritSearingChains extends Ability {
     private EmberSpiritSearingChains() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = 0;
-        abilityCastRange = 4;
+        abilityCastRange = 400;
         abilityCooldown = new double[]{14.0,12.0,10.0,8.0};
-        abilityManaCost = 11;
+        abilityManaCost = 110;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 563;
+        iD = 5603;
         key = "ember_spirit_searing_chains";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         chains_damage = new int[]{80,60,120,100};
         duration = new double[]{1.0,2.0,2.0,3.0};
         localizedName = "Searing Chains";
         owningHeroShortKey = "ember_spirit";
-        radius = 4;
+        radius = 400;
         tick_interval = 1;
         total_damage_tooltip = new int[]{80,120,240,300};
         unit_count = 2;

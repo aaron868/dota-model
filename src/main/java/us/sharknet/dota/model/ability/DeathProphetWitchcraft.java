@@ -22,7 +22,7 @@ public final class DeathProphetWitchcraft extends Ability {
 
     private DeathProphetWitchcraft() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 592;
+        iD = 5092;
         key = "death_prophet_witchcraft";
         bonus_movement_speed = new int[]{5,10,15,20};
         carrion_swarm_cooldown_adjust = new double[]{1.0,2.0,3.0,4.0};

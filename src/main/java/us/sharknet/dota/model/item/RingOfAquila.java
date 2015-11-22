@@ -30,7 +30,7 @@ public final class RingOfAquila extends Item {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE"};
         iD = 212;
         itemAliases = new String[]{"roa","ring of aquila"};
-        itemCost = 11;
+        itemCost = 1010;
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "rare";
         key = "item_ring_of_aquila";
@@ -39,7 +39,7 @@ public final class RingOfAquila extends Item {
         worldDropSound = "Item.DropRingWorld";
         aura_bonus_armor = 2;
         aura_mana_regen = .65;
-        aura_radius = 9;
+        aura_radius = 900;
         bonus_agility = 9;
         bonus_armor = 1;
         bonus_damage = 9;

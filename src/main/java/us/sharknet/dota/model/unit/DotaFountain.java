@@ -54,13 +54,13 @@ public final class DotaFountain extends NpcUnit {
 
     private DotaFountain() {
         armorPhysical = 0;
-        attackAcquisitionRange = 12;
+        attackAcquisitionRange = 1200;
         attackAnimationPoint = 0;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 199;
-        attackDamageMin = 19;
+        attackDamageMin = 190;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 12;
+        attackRange = 1200;
         attackRate = .15;
         attributeAgilityGain = 0;
         attributeBaseAgility = 0;
@@ -85,17 +85,17 @@ public final class DotaFountain extends NpcUnit {
         movementSpeed = 0;
         movementTurnRate = 0;
         projectileModel = "particles/base_attacks/fountain_attack.vpcf";
-        projectileSpeed = 14;
-        ringRadius = 22;
+        projectileSpeed = 1400;
+        ringRadius = 220;
         soundSet = "dota_fountain";
-        statusHealth = 5;
+        statusHealth = 500;
         statusHealthRegen = 0;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_BADGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 18;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 1800;
         localizedName = "Fountain";
     }
 

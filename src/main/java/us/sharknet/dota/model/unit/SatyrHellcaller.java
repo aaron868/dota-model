@@ -48,12 +48,12 @@ public final class SatyrHellcaller extends NpcUnit {
         ability1 = SatyrHellcallerShockwave.instance();
         ability2 = SatyrHellcallerUnholyAura.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 55;
         attackDamageMin = 49;
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 91;
@@ -61,25 +61,25 @@ public final class SatyrHellcaller extends NpcUnit {
         bountyXP = 119;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 21;
+        healthBarOffset = 210;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_satyr_hellcaller";
         level = 6;
         model = "models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.vmdl";
         modelScale = .95;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 29;
+        movementSpeed = 290;
         projectileSpeed = 0;
-        ringRadius = 6;
+        ringRadius = 60;
         soundSet = "n_creep_Melee";
-        statusHealth = 11;
+        statusHealth = 1100;
         statusHealthRegen = 1;
-        statusMana = 6;
+        statusMana = 600;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Satyr Tormenter";
     }
 

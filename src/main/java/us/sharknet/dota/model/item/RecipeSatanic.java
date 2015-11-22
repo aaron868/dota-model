@@ -17,7 +17,7 @@ public final class RecipeSatanic extends Item {
 
     private RecipeSatanic() {
         iD = 155;
-        itemCost = 11;
+        itemCost = 1100;
         itemRecipe = 1;
         itemRequirements = new Item[]{Reaver.instance(),HelmOfTheDominator.instance()};
         itemResult = Satanic.instance();

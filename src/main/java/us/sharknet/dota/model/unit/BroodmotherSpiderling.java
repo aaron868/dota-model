@@ -53,13 +53,13 @@ public final class BroodmotherSpiderling extends NpcUnit {
         ability1 = BroodmotherPoisonSting.instance();
         ability2 = BroodmotherSpawnSpiderite.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 19;
         attackDamageMin = 18;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1.35;
         baseClass = "npc_dota_broodmother_spiderling";
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
@@ -68,7 +68,7 @@ public final class BroodmotherSpiderling extends NpcUnit {
         bountyXP = 31;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 14;
+        healthBarOffset = 140;
         isSummoned = 1;
         key = "npc_dota_broodmother_spiderling";
         level = 3;
@@ -76,20 +76,20 @@ public final class BroodmotherSpiderling extends NpcUnit {
         model = "models/heroes/broodmother/spiderling.vmdl";
         modelScale = .3;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 35;
+        movementSpeed = 350;
         movementTurnRate = .5;
         pathfindingSearchDepthScale = .1;
         selectionGroup = "Spiders";
         soundSet = 0;
-        statusHealth = 45;
+        statusHealth = 450;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitLabel = "Spiders";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 11;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1100;
+        visionNighttimeRange = 800;
         localizedName = "Spiderling";
     }
 

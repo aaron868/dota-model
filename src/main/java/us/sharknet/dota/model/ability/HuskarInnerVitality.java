@@ -29,7 +29,7 @@ public final class HuskarInnerVitality extends Ability {
     private HuskarInnerVitality() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = new int[]{22,18,14,10};
         abilityDuration = new int[]{16,16,16,16};
         abilityManaCost = new int[]{170,170,170,170};
@@ -39,7 +39,7 @@ public final class HuskarInnerVitality extends Ability {
         iD = 5271;
         key = "huskar_inner_vitality";
         attrib_bonus = new double[]{0.05,0.1,0.15,0.2};
-        heal = 1;
+        heal = 10;
         hurt_attrib_bonus = new double[]{0.2,0.4,0.6,0.8};
         hurt_percent = .4;
         localizedName = "Inner Vitality";

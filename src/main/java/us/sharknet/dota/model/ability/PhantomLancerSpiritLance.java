@@ -34,7 +34,7 @@ public final class PhantomLancerSpiritLance extends Ability {
     private PhantomLancerSpiritLance() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 75;
+        abilityCastRange = 750;
         abilityCooldown = new double[]{7.0,7.0,7.0,7.0};
         abilityDamage = new int[]{100,150,200,250};
         abilityManaCost = new int[]{125,130,135,140};
@@ -42,7 +42,7 @@ public final class PhantomLancerSpiritLance extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 565;
+        iD = 5065;
         key = "phantom_lancer_spirit_lance";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = 3.25;

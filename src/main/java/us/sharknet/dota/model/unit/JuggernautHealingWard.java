@@ -55,14 +55,14 @@ public final class JuggernautHealingWard extends NpcUnit {
 
     private JuggernautHealingWard() {
         armorPhysical = 0;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_NO_ATTACK";
         attackDamageMax = 0;
         attackDamageMin = 0;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
         attackDesire = 1.5;
-        attackRange = 5;
+        attackRange = 500;
         attackRate = 1;
         attributeAgilityGain = 0;
         attributeBaseAgility = 0;
@@ -78,15 +78,15 @@ public final class JuggernautHealingWard extends NpcUnit {
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
-        followRange = 25;
+        followRange = 250;
         key = "npc_dota_juggernaut_healing_ward";
         level = 0;
         magicalResistance = 0;
         model = "models/heroes/juggernaut/jugg_healing_ward.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 42;
+        movementSpeed = 420;
         movementTurnRate = .5;
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         soundSet = "Creep_Good_Range";
         statusHealth = 1;
         statusHealthRegen = 0;
@@ -95,8 +95,8 @@ public final class JuggernautHealingWard extends NpcUnit {
         teamName = "DOTA_TEAM_GOODGUYS";
         unitLabel = "healing_ward";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 6;
-        visionNighttimeRange = 6;
+        visionDaytimeRange = 600;
+        visionNighttimeRange = 600;
         localizedName = "Healing Ward";
         wearable = 8365;
     }

@@ -29,7 +29,7 @@ public final class LionImpale extends Ability {
     private LionImpale() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new double[]{12.0,12.0,12.0,12.0};
         abilityDamage = new int[]{80,140,200,260};
         abilityManaCost = new int[]{100,120,145,170};
@@ -37,7 +37,7 @@ public final class LionImpale extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 544;
+        iD = 5044;
         key = "lion_impale";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{1.02,1.52,2.02,2.52};

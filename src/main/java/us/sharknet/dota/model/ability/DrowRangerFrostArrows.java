@@ -34,7 +34,7 @@ public final class DrowRangerFrostArrows extends Ability {
         abilityManaCost = new int[]{12,12,12,12};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        iD = 519;
+        iD = 5019;
         key = "drow_ranger_frost_arrows";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         frost_arrows_creep_duration = 7;

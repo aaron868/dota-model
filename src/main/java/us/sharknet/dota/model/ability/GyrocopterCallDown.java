@@ -32,7 +32,7 @@ public final class GyrocopterCallDown extends Ability {
     private GyrocopterCallDown() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = new int[]{55,50,45};
         abilityManaCost = new int[]{125,125,125};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -46,7 +46,7 @@ public final class GyrocopterCallDown extends Ability {
         damage_second_scepter = new int[]{175,225,275};
         localizedName = "Call Down";
         owningHeroShortKey = "gyrocopter";
-        radius = 6;
+        radius = 600;
         range_scepter = 0;
         slow_duration_first = 2;
         slow_duration_second = 4;

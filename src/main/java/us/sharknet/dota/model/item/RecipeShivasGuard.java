@@ -17,7 +17,7 @@ public final class RecipeShivasGuard extends Item {
 
     private RecipeShivasGuard() {
         iD = 118;
-        itemCost = 6;
+        itemCost = 600;
         itemRecipe = 1;
         itemRequirements = new Item[]{Platemail.instance(),MysticStaff.instance()};
         itemResult = ShivasGuard.instance();

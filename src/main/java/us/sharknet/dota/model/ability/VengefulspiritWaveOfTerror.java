@@ -29,8 +29,8 @@ public final class VengefulspiritWaveOfTerror extends Ability {
     private VengefulspiritWaveOfTerror() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 14;
-        abilityCooldown = 2;
+        abilityCastRange = 1400;
+        abilityCooldown = 20;
         abilityDamage = new int[]{30,50,70,90};
         abilityDuration = 15;
         abilityManaCost = new int[]{40,40,40,40};
@@ -45,7 +45,7 @@ public final class VengefulspiritWaveOfTerror extends Ability {
         vision_aoe = new double[]{500.0,500.0,500.0,500.0};
         vision_duration = new double[]{3.0,3.0,3.0,3.0};
         wave_speed = 2;
-        wave_width = 3;
+        wave_width = 300;
     }
 
     public static VengefulspiritWaveOfTerror instance() {

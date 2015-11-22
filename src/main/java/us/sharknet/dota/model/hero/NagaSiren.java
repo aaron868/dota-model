@@ -66,7 +66,7 @@ public final class NagaSiren extends Hero {
         ability5 = NagaSirenSongOfTheSirenCancel.instance();
         ability6 = AttributeBonus.instance();
         armorPhysical = 3;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 25;
@@ -84,7 +84,7 @@ public final class NagaSiren extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 18;
+        healthBarOffset = 180;
         heroGlowColor = new int[]{154,97,133};
         heroID = 89;
         heroSelectSoundEffect = "Hero_NagaSiren.Pick";
@@ -94,7 +94,7 @@ public final class NagaSiren extends Hero {
         lastHitChallengeRival = "npc_dota_hero_kunkka";
         model = "models/heroes/siren/siren.vmdl";
         modelScale = .77;
-        movementSpeed = 32;
+        movementSpeed = 320;
         movementTurnRate = .5;
         nameAliases = "naga";
         pickSound = "naga_siren_naga_spawn_02";

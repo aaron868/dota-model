@@ -26,11 +26,11 @@ public final class BloodseekerBloodBath extends Ability {
     private BloodseekerBloodBath() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = .4;
-        abilityCastRange = 15;
+        abilityCastRange = 1500;
         abilityCooldown = new int[]{29,26,23,20};
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        iD = 516;
+        iD = 5016;
         key = "bloodseeker_blood_bath";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = new int[]{120,160,200,240};
@@ -38,7 +38,7 @@ public final class BloodseekerBloodBath extends Ability {
         delay_plus_castpoint_tooltip = 3;
         localizedName = "Blood Bath";
         owningHeroShortKey = "bloodseeker";
-        radius = 6;
+        radius = 600;
         silence_duration = new double[]{3.0,4.0,5.0,6.0};
     }
 

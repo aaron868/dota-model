@@ -34,7 +34,7 @@ public final class KeeperOfTheLightIlluminate extends Ability {
     private KeeperOfTheLightIlluminate() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 18;
+        abilityCastRange = 1800;
         abilityChannelTime = new double[]{2.0,3.0,4.0,5.0};
         abilityCooldown = new double[]{10.0,10.0,10.0,10.0};
         abilityManaCost = new int[]{150,160,170,180};
@@ -45,14 +45,14 @@ public final class KeeperOfTheLightIlluminate extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         channel_vision_duration = 1.34;
         channel_vision_interval = .5;
-        channel_vision_radius = 35;
-        channel_vision_step = 15;
+        channel_vision_radius = 350;
+        channel_vision_step = 150;
         damage_per_second = new double[]{100.0,100.0,100.0,100.0};
         localizedName = "Illuminate";
         max_channel_time = new double[]{2.0,3.0,4.0,5.0};
         owningHeroShortKey = "keeper_of_the_light";
         radius = new int[]{350,350,350,350};
-        range = 155;
+        range = 1550;
         speed = 15;
         vision_duration = new double[]{3.34,3.34,3.34,3.34};
         vision_radius = new int[]{800,800,800,800};

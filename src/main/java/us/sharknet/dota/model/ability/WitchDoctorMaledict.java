@@ -38,15 +38,15 @@ public final class WitchDoctorMaledict extends Ability {
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         fightRecapLevel = 1;
-        iD = 514;
+        iD = 5140;
         key = "witch_doctor_maledict";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         bonus_damage = new int[]{16,24,32,40};
-        bonus_damage_threshold = 1;
+        bonus_damage_threshold = 100;
         duration_tooltip = 12;
         localizedName = "Maledict";
         owningHeroShortKey = "witch_doctor";
-        radius = 18;
+        radius = 180;
         ticks = 3;
     }
 

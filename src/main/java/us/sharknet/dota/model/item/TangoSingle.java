@@ -40,7 +40,7 @@ public final class TangoSingle extends Item {
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_TREE","DOTA_UNIT_TARGET_CUSTOM"};
         effect = "particles/generic_gameplay/dropped_tango.vpcf";
         iD = 241;
-        itemCost = 3;
+        itemCost = 30;
         itemInitialCharges = 1;
         itemPermanent = 0;
         itemPurchasable = 0;
@@ -52,10 +52,10 @@ public final class TangoSingle extends Item {
         key = "item_tango_single";
         model = "models/props_gameplay/tango.vmdl";
         buff_duration = 16;
-        cast_range_ward = 45;
+        cast_range_ward = 450;
         localizedName = "Shared Tango";
         total_heal = 115;
-        total_heal_ward_tooltip = 23;
+        total_heal_ward_tooltip = 230;
     }
 
     public static TangoSingle instance() {

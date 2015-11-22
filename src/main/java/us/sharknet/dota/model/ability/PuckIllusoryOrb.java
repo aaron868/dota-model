@@ -28,18 +28,18 @@ public final class PuckIllusoryOrb extends Ability {
     private PuckIllusoryOrb() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
-        abilityCastRange = 3;
+        abilityCastRange = 3000;
         abilityCooldown = 11;
         abilityDamage = new int[]{70,140,210,280};
         abilityManaCost = new int[]{150,150,150,150};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 569;
+        iD = 5069;
         key = "puck_illusory_orb";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Illusory Orb";
-        max_distance = 195;
-        orb_speed = 65;
+        max_distance = 1950;
+        orb_speed = 650;
         orb_vision = new int[]{800,800,800,800};
         owningHeroShortKey = "puck";
         radius = 225;

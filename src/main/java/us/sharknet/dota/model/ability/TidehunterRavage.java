@@ -40,7 +40,7 @@ public final class TidehunterRavage extends Ability {
         duration = new double[]{2.02,2.32,2.77};
         localizedName = "Ravage";
         owningHeroShortKey = "tidehunter";
-        radius = 125;
+        radius = 1025;
         speed = 775;
     }
 

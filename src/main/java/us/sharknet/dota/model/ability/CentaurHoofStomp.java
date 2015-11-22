@@ -25,7 +25,7 @@ public final class CentaurHoofStomp extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
         abilityCooldown = new double[]{13.0,13.0,13.0,13.0};
-        abilityManaCost = 13;
+        abilityManaCost = 130;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
         iD = 5514;

@@ -40,7 +40,7 @@ public final class SlarkShadowDance extends Ability {
         localizedName = "Shadow Dance";
         neutral_disable = new double[]{2.0,2.0,2.0};
         owningHeroShortKey = "slark";
-        scepter_aoe = 35;
+        scepter_aoe = 350;
         scepter_cooldown = 35;
     }
 

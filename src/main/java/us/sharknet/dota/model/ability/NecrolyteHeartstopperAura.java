@@ -19,13 +19,13 @@ public final class NecrolyteHeartstopperAura extends Ability {
 
     private NecrolyteHeartstopperAura() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_AURA"};
-        abilityCastRange = 12;
+        abilityCastRange = 1200;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         iD = 5159;
         key = "necrolyte_heartstopper_aura";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         aura_damage = new double[]{0.6,0.9,1.2,1.5};
-        aura_radius = 12;
+        aura_radius = 1200;
         localizedName = "Heartstopper Aura";
         owningHeroShortKey = "necrolyte";
     }

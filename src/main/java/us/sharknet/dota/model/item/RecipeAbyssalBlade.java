@@ -15,7 +15,7 @@ public final class RecipeAbyssalBlade extends Item {
     private final String localizedName;
 
     private RecipeAbyssalBlade() {
-        iD = 27;
+        iD = 207;
         itemCost = 0;
         itemRecipe = 1;
         itemRequirements = new Item[]{Basher.instance(),Relic.instance()};

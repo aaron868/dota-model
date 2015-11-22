@@ -17,11 +17,11 @@ public final class AlphaWolfCriticalStrike extends Ability {
 
     private AlphaWolfCriticalStrike() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 538;
+        iD = 5308;
         key = "alpha_wolf_critical_strike";
         maxLevel = 1;
-        crit_chance = 2;
-        crit_mult = 2;
+        crit_chance = 20;
+        crit_mult = 200;
         localizedName = "Critical Strike";
         owningHeroShortKey = "alpha_wolf";
     }

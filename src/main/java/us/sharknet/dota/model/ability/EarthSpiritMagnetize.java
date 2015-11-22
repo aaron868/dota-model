@@ -32,7 +32,7 @@ public final class EarthSpiritMagnetize extends Ability {
     private EarthSpiritMagnetize() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .1;
-        abilityCastRange = 3;
+        abilityCastRange = 300;
         abilityCooldown = 8;
         abilityManaCost = 1;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -41,15 +41,15 @@ public final class EarthSpiritMagnetize extends Ability {
         iD = 5612;
         key = "earth_spirit_magnetize";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        cast_radius = 3;
+        cast_radius = 300;
         damage_duration = 6;
         damage_interval = 1;
         damage_per_second = new int[]{50,75,100};
         localizedName = "Magnetize";
         owningHeroShortKey = "earth_spirit";
         rock_explosion_delay = 8;
-        rock_explosion_radius = 6;
-        rock_search_radius = 4;
+        rock_explosion_radius = 600;
+        rock_search_radius = 400;
         silence_duration = 5;
         slow_duration = 2;
     }

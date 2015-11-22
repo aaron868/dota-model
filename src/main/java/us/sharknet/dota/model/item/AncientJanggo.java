@@ -35,7 +35,7 @@ public final class AncientJanggo extends Item {
         fightRecapLevel = 1;
         iD = 185;
         itemAliases = "drum of endurance";
-        itemCost = 185;
+        itemCost = 1850;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisplayCharges = 1;
         itemInitialCharges = 6;
@@ -47,11 +47,11 @@ public final class AncientJanggo extends Item {
         bonus_aura_attack_speed_pct = 5;
         bonus_aura_movement_speed_pct = 5;
         bonus_damage = 3;
-        bonus_movement_speed_pct = 1;
+        bonus_movement_speed_pct = 10;
         bonus_stats = 9;
         duration = 6;
         localizedName = "Drum Of Endurance";
-        radius = 9;
+        radius = 900;
     }
 
     public static AncientJanggo instance() {

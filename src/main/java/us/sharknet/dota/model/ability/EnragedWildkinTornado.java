@@ -23,10 +23,10 @@ public final class EnragedWildkinTornado extends Ability {
     private EnragedWildkinTornado() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
         abilityCastPoint = .75;
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityChannelTime = 4;
         abilityCooldown = 7;
-        abilityManaCost = 2;
+        abilityManaCost = 200;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5312;
         key = "enraged_wildkin_tornado";

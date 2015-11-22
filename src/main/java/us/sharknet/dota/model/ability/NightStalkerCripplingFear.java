@@ -27,9 +27,9 @@ public final class NightStalkerCripplingFear extends Ability {
     private NightStalkerCripplingFear() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new int[]{12,12,12,12};
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
@@ -40,7 +40,7 @@ public final class NightStalkerCripplingFear extends Ability {
         duration_night = new double[]{5.0,6.0,7.0,8.0};
         localizedName = "Crippling Fear";
         miss_rate_day = new int[]{10,10,10,10};
-        miss_rate_night = 5;
+        miss_rate_night = 50;
         owningHeroShortKey = "night_stalker";
     }
 

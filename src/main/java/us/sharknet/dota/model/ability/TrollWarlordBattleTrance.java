@@ -23,7 +23,7 @@ public final class TrollWarlordBattleTrance extends Ability {
     private TrollWarlordBattleTrance() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.0,0.0,0.0};
-        abilityCooldown = 3;
+        abilityCooldown = 30;
         abilityManaCost = new int[]{75,75,75};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         fightRecapLevel = 2;

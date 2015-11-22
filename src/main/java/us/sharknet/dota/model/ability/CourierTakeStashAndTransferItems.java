@@ -22,10 +22,10 @@ public final class CourierTakeStashAndTransferItems extends Ability {
         iD = 5676;
         key = "courier_take_stash_and_transfer_items";
         maxLevel = 1;
-        handoff_distance = 4;
+        handoff_distance = 400;
         localizedName = "Take Stash and Transfer Items";
         owningHeroShortKey = "courier";
-        stash_pickup_distance = 25;
+        stash_pickup_distance = 250;
     }
 
     public static CourierTakeStashAndTransferItems instance() {

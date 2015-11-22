@@ -20,7 +20,7 @@ public final class GraniteGolemBash extends Ability {
     private GraniteGolemBash() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 568;
+        iD = 5680;
         key = "granite_golem_bash";
         maxLevel = 1;
         bash_chance = 7;

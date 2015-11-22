@@ -26,7 +26,7 @@ public final class DoomBringerDevour extends Ability {
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCastRange = new int[]{300,300,300,300};
         abilityCooldown = new double[]{70.0,60.0,50.0,40.0};
-        abilityManaCost = 6;
+        abilityManaCost = 60;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";

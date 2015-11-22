@@ -18,14 +18,14 @@ public final class BackdoorProtection extends Ability {
 
     private BackdoorProtection() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 535;
+        iD = 5350;
         key = "backdoor_protection";
         maxLevel = 1;
         activation_time = 15;
         localizedName = "Backdoor Protection";
         owningHeroShortKey = "backdoor";
-        radius = 9;
-        regen_rate = 9;
+        radius = 900;
+        regen_rate = 90;
     }
 
     public static BackdoorProtection instance() {

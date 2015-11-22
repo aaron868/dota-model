@@ -28,13 +28,13 @@ public final class Ghost extends Item {
         fightRecapLevel = 1;
         iD = 37;
         itemAliases = "ghost scepter";
-        itemCost = 15;
+        itemCost = 1500;
         itemQuality = "component";
         itemShopTags = new String[]{"int","agi","str","hard_to_tag"};
         key = "item_ghost";
         bonus_all_stats = 5;
         duration = 4;
-        extra_spell_damage_percent = -4;
+        extra_spell_damage_percent = -40;
         localizedName = "Ghost Scepter";
     }
 

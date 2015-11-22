@@ -46,12 +46,12 @@ public final class GiantWolf extends NpcUnit {
     private GiantWolf() {
         ability1 = GiantWolfCriticalStrike.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .33;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 24;
         attackDamageMin = 21;
-        attackRange = 9;
+        attackRange = 90;
         attackRate = 1.45;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 26;
@@ -59,25 +59,25 @@ public final class GiantWolf extends NpcUnit {
         bountyXP = 62;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 13;
+        healthBarOffset = 130;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_giant_wolf";
         level = 3;
         model = "models/creeps/neutral_creeps/n_creep_worg_small/n_creep_worg_small.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 35;
+        movementSpeed = 350;
         projectileSpeed = 0;
         ringRadius = 45;
         soundSet = "n_creep_Melee";
-        statusHealth = 5;
+        statusHealth = 500;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Giant Wolf";
     }
 

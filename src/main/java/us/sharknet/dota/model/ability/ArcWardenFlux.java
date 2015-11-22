@@ -42,7 +42,7 @@ public final class ArcWardenFlux extends Ability {
         damage_per_second = new int[]{15,30,45,60};
         duration = 6;
         localizedName = "Flux";
-        move_speed_slow_pct = 5;
+        move_speed_slow_pct = 50;
         owningHeroShortKey = "arc_warden";
         search_radius = 225;
         think_interval = 1;

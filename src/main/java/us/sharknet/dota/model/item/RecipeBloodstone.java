@@ -16,8 +16,8 @@ public final class RecipeBloodstone extends Item {
     private final String localizedName;
 
     private RecipeBloodstone() {
-        iD = 12;
-        itemCost = 9;
+        iD = 120;
+        itemCost = 900;
         itemRecipe = 1;
         itemRequirements = new Item[]{SoulRing.instance(),SoulBooster.instance()};
         itemResult = Bloodstone.instance();

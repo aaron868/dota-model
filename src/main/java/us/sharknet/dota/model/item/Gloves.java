@@ -21,12 +21,12 @@ public final class Gloves extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 25;
         itemAliases = "gloves of haste";
-        itemCost = 5;
+        itemCost = 500;
         itemQuality = "component";
         itemShopTags = "attack_speed";
         key = "item_gloves";
         sideShop = 1;
-        bonus_attack_speed = 2;
+        bonus_attack_speed = 20;
         localizedName = "Gloves Of Haste";
     }
 

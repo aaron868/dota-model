@@ -20,11 +20,11 @@ public final class StaffOfWizardry extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 23;
         itemAliases = "staff of wizardry";
-        itemCost = 1;
+        itemCost = 1000;
         itemQuality = "component";
         itemShopTags = "int";
         key = "item_staff_of_wizardry";
-        bonus_intellect = 1;
+        bonus_intellect = 10;
         localizedName = "Staff Of Wizardry";
     }
 

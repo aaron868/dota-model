@@ -17,7 +17,7 @@ public final class RecipeAssault extends Item {
 
     private RecipeAssault() {
         iD = 111;
-        itemCost = 13;
+        itemCost = 1300;
         itemRecipe = 1;
         itemRequirements = new Item[]{Platemail.instance(),Hyperstone.instance(),Chainmail.instance()};
         itemResult = Assault.instance();

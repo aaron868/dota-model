@@ -68,7 +68,7 @@ public final class Meepo extends Hero {
         ability5 = AttributeBonus.instance();
         abilityDraftDisabled = 1;
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .38;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 22;
@@ -77,7 +77,7 @@ public final class Meepo extends Hero {
         attackRate = 1.7;
         attributeAgilityGain = 1.9;
         attributeBaseAgility = 23;
-        attributeBaseIntelligence = 2;
+        attributeBaseIntelligence = 20;
         attributeBaseStrength = 23;
         attributeIntelligenceGain = 1.6;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
@@ -104,8 +104,8 @@ public final class Meepo extends Hero {
         rolelevels = new int[]{2,2,2,1,1,1};
         soundSet = "Hero_Meepo";
         team = "Bad";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_meepo.vsndevts";
         active = true;
         localizedName = "Meepo";

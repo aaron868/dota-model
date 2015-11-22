@@ -41,14 +41,14 @@ public final class WispTether extends Ability {
         iD = 5485;
         key = "wisp_tether";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        attackslow_tooltip = -1;
+        attackslow_tooltip = -100;
         latch_distance = new int[]{700,700,700,700};
         latch_speed = new int[]{1000,1000,1000,1000};
         localizedName = "Tether";
         movespeed = new int[]{14,15,16,17};
         owningHeroShortKey = "wisp";
         radius = new int[]{900,900,900,900};
-        slow = -1;
+        slow = -100;
         stun_duration = new double[]{0.75,1.25,1.75,2.25};
         tether_duration = new double[]{12.0,12.0,12.0,12.0};
         tether_heal_amp = 1.5;

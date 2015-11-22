@@ -34,14 +34,14 @@ public final class Bottle extends Item {
     private Bottle() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET"};
         abilityCastPoint = 0;
-        abilityCastRange = 35;
+        abilityCastRange = 350;
         abilityCooldown = .5;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         fightRecapLevel = 1;
         iD = 41;
         itemAliases = "bottle";
-        itemCost = 7;
+        itemCost = 700;
         itemDisplayCharges = 1;
         itemInitialCharges = 3;
         itemPermanent = 1;
@@ -51,10 +51,10 @@ public final class Bottle extends Item {
         itemStackable = 0;
         key = "item_bottle";
         model = "models/props_gameplay/bottle_blue.vmdl";
-        health_restore = 11;
+        health_restore = 110;
         localizedName = "Bottle";
-        mana_restore = 7;
-        movement_speed_percent_bonus = -3;
+        mana_restore = 70;
+        movement_speed_percent_bonus = -30;
         restore_time = 3;
     }
 

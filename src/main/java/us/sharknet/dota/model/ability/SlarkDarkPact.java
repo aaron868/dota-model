@@ -43,7 +43,7 @@ public final class SlarkDarkPact extends Ability {
         pulse_interval = .1;
         radius = 325;
         total_damage = new int[]{75,150,225,300};
-        total_pulses = 1;
+        total_pulses = 10;
     }
 
     public static SlarkDarkPact instance() {

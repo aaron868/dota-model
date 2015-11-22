@@ -77,12 +77,12 @@ public final class KeeperOfTheLight extends Hero {
         abilityDraftDisabled = 1;
         abilityLayout = 6;
         armorPhysical = -1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 32;
         attackDamageMin = 18;
-        attackRange = 6;
+        attackRange = 600;
         attackRate = 1.7;
         attributeAgilityGain = 1.6;
         attributeBaseAgility = 15;
@@ -94,8 +94,8 @@ public final class KeeperOfTheLight extends Hero {
         banSound = "keeper_of_the_light_keep_anger_05";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 23;
-        heroID = 9;
+        healthBarOffset = 230;
+        heroID = 90;
         heroSelectSoundEffect = "Hero_KeeperOfTheLight.Pick";
         idleExpression = "scenes/keeper_of_the_light/keeper_of_the_light_exp_idle_01.vcd";
         key = "npc_dota_hero_keeper_of_the_light";
@@ -109,7 +109,7 @@ public final class KeeperOfTheLight extends Hero {
         pickSound = "keeper_of_the_light_keep_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_keeper_of_the_light";
         projectileModel = "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_base_attack.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Support","Nuker","Disabler","Jungler"};
         rolelevels = new int[]{3,2,1,1};
         soundSet = "Hero_KeeperOfTheLight";

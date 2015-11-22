@@ -51,7 +51,7 @@ public final class UnitUndyingZombie extends NpcUnit {
         ability1 = UndyingTombstoneZombieDeathstrike.instance();
         ability2 = NeutralSpellImmunity.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 39;
@@ -66,7 +66,7 @@ public final class UnitUndyingZombie extends NpcUnit {
         canBeDominated = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
-        healthBarOffset = 16;
+        healthBarOffset = 160;
         key = "npc_dota_unit_undying_zombie";
         level = 1;
         magicalResistance = 33;
@@ -75,7 +75,7 @@ public final class UnitUndyingZombie extends NpcUnit {
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 375;
         movementTurnRate = .5;
-        ringRadius = 7;
+        ringRadius = 70;
         soundSet = "Undying_Zombie";
         statusHealth = 2;
         statusHealthRegen = 0;
@@ -83,10 +83,10 @@ public final class UnitUndyingZombie extends NpcUnit {
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_BADGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 14;
-        visionNighttimeRange = 14;
+        visionDaytimeRange = 1400;
+        visionNighttimeRange = 1400;
         localizedName = "Undying Zombie";
-        wearable = 863;
+        wearable = 8630;
     }
 
     public static UnitUndyingZombie instance() {

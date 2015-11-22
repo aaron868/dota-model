@@ -47,12 +47,12 @@ public final class HarpyStorm extends NpcUnit {
     private HarpyStorm() {
         ability1 = HarpyStormChainLightning.instance();
         armorPhysical = 2;
-        attackAcquisitionRange = 3;
+        attackAcquisitionRange = 300;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 37;
-        attackDamageMin = 3;
-        attackRange = 45;
+        attackDamageMin = 30;
+        attackRange = 450;
         attackRate = 1.6;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 37;
@@ -60,26 +60,26 @@ public final class HarpyStorm extends NpcUnit {
         bountyXP = 62;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
-        healthBarOffset = 19;
+        healthBarOffset = 190;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_harpy_storm";
         level = 3;
         model = "models/creeps/neutral_creeps/n_creep_harpy_b/n_creep_harpy_b.vmdl";
         modelScale = .925;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 31;
+        movementSpeed = 310;
         projectileModel = "particles/base_attacks/ranged_badguy.vpcf";
-        projectileSpeed = 12;
-        ringRadius = 5;
+        projectileSpeed = 1200;
+        ringRadius = 50;
         soundSet = "n_creep_Ranged";
-        statusHealth = 55;
+        statusHealth = 550;
         statusHealthRegen = .5;
-        statusMana = 54;
+        statusMana = 540;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 18;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 1800;
         localizedName = "Harpy Stormcrafter";
     }
 

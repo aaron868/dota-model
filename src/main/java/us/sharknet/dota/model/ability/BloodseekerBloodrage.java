@@ -30,7 +30,7 @@ public final class BloodseekerBloodrage extends Ability {
     private BloodseekerBloodrage() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .2;
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = new int[]{12,10,8,6};
         abilityManaCost = 0;
         abilityModifierSupportValue = .1;
@@ -39,7 +39,7 @@ public final class BloodseekerBloodrage extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
         fightRecapLevel = 1;
-        iD = 515;
+        iD = 5015;
         key = "bloodseeker_bloodrage";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         damage_increase_pct = new int[]{25,30,35,40};

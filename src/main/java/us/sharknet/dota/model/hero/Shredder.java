@@ -69,10 +69,10 @@ public final class Shredder extends Hero {
         ability8 = AttributeBonus.instance();
         abilityLayout = 4;
         armorPhysical = -2;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .36;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
-        attackDamageMax = 3;
+        attackDamageMax = 30;
         attackDamageMin = 26;
         attackRange = 128;
         attackRate = 1.7;
@@ -86,7 +86,7 @@ public final class Shredder extends Hero {
         banSound = "shredder_timb_anger_02";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 25;
+        healthBarOffset = 250;
         heroID = 98;
         heroSelectSoundEffect = "Hero_Shredder.Pick";
         idleExpression = "scenes/shredder/shredder_exp_idle_01.vcd";
@@ -95,7 +95,7 @@ public final class Shredder extends Hero {
         lastHitChallengeRival = "npc_dota_hero_tiny";
         model = "models/heroes/shredder/shredder.vmdl";
         modelScale = .825;
-        movementSpeed = 29;
+        movementSpeed = 290;
         movementTurnRate = .6;
         nameAliases = new String[]{"Rizzrack"," Shredder"," Timbersaw"};
         pickSound = "shredder_timb_spawn_01";

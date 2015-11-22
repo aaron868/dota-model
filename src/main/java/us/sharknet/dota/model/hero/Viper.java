@@ -66,7 +66,7 @@ public final class Viper extends Hero {
         ability3 = ViperCorrosiveSkin.instance();
         ability4 = ViperViperStrike.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .33;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 25;
@@ -76,7 +76,7 @@ public final class Viper extends Hero {
         attributeAgilityGain = 2.9;
         attributeBaseAgility = 21;
         attributeBaseIntelligence = 15;
-        attributeBaseStrength = 2;
+        attributeBaseStrength = 20;
         attributeIntelligenceGain = 1.8;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.9;
@@ -85,7 +85,7 @@ public final class Viper extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 21;
+        healthBarOffset = 210;
         heroGlowColor = new int[]{160,229,81};
         heroID = 47;
         heroPool1 = 1;
@@ -102,7 +102,7 @@ public final class Viper extends Hero {
         pickSound = "viper_vipe_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_viper";
         projectileModel = "particles/units/heroes/hero_viper/viper_base_attack.vpcf";
-        projectileSpeed = 12;
+        projectileSpeed = 1200;
         role = new String[]{"Carry","Durable","Initiator","Disabler"};
         rolelevels = new int[]{1,2,1,1};
         soundSet = "Hero_Viper";

@@ -18,11 +18,11 @@ public final class VengefulspiritCommandAura extends Ability {
 
     private VengefulspiritCommandAura() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_AURA"};
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         iD = 5123;
         key = "vengefulspirit_command_aura";
-        aura_radius = 9;
+        aura_radius = 900;
         bonus_damage_pct = new int[]{12,20,28,36};
         localizedName = "Command Aura";
         owningHeroShortKey = "vengefulspirit";

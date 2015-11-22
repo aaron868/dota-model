@@ -20,7 +20,7 @@ public final class OmniknightDegenAura extends Ability {
 
     private OmniknightDegenAura() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_AURA"};
-        abilityCastRange = 35;
+        abilityCastRange = 350;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         iD = 5265;
         key = "omniknight_degen_aura";
@@ -28,7 +28,7 @@ public final class OmniknightDegenAura extends Ability {
         attack_bonus_tooltip = new int[]{-10,-18,-26,-34};
         localizedName = "Degen Aura";
         owningHeroShortKey = "omniknight";
-        radius = 35;
+        radius = 350;
         speed_bonus = new int[]{-10,-18,-26,-34};
     }
 

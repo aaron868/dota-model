@@ -28,7 +28,7 @@ public final class DisruptorKineticField extends Ability {
         abilityCooldown = new int[]{13,12,11,10};
         abilityManaCost = new int[]{70,70,70,70};
         fightRecapLevel = 1;
-        iD = 546;
+        iD = 5460;
         key = "disruptor_kinetic_field";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{2.6,3.2,3.8,4.4};

@@ -41,7 +41,7 @@ public final class SandkingEpicenter extends Ability {
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 2;
-        iD = 515;
+        iD = 5105;
         key = "sandking_epicenter";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         epicenter_cooldown_scepter = new double[]{120.0,100.0,80.0};
@@ -50,7 +50,7 @@ public final class SandkingEpicenter extends Ability {
         epicenter_pulses_scepter = new int[]{8,10,12};
         epicenter_radius = new int[]{275,325,375,425,475,525,575,650,675,700,775,825};
         epicenter_slow = new int[]{-30,-30,-30};
-        epicenter_slow_as = -3;
+        epicenter_slow_as = -30;
         epicenter_slow_duration_tooltip = 3;
         localizedName = "Epicenter";
         owningHeroShortKey = "sand_king";

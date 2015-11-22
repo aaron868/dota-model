@@ -31,14 +31,14 @@ public final class KunkkaGhostship extends Ability {
     private KunkkaGhostship() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .3;
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = new double[]{60.0,50.0,40.0};
         abilityDamage = new int[]{400,500,600};
         abilityManaCost = new int[]{150,200,250};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 2;
-        iD = 535;
+        iD = 5035;
         key = "kunkka_ghostship";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         buff_duration = 1;

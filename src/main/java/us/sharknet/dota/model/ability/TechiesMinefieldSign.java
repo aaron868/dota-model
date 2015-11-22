@@ -23,7 +23,7 @@ public final class TechiesMinefieldSign extends Ability {
     private TechiesMinefieldSign() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 1;
+        abilityCastRange = 10;
         abilityCooldown = 36;
         abilityManaCost = 0;
         abilityUnitDamageType = "DAMAGE_TYPE_NONE";
@@ -31,7 +31,7 @@ public final class TechiesMinefieldSign extends Ability {
         key = "techies_minefield_sign";
         maxLevel = 1;
         aura_radius = 125;
-        lifetime = 18;
+        lifetime = 180;
         localizedName = "Minefield Sign";
         owningHeroShortKey = "techies";
     }

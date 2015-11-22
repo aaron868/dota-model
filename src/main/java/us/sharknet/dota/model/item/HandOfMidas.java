@@ -30,7 +30,7 @@ public final class HandOfMidas extends Item {
     private HandOfMidas() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = 0;
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = 1;
         abilityManaCost = 0;
         abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS","DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
@@ -38,15 +38,15 @@ public final class HandOfMidas extends Item {
         abilityUnitTargetType = "DOTA_UNIT_TARGET_CREEP";
         iD = 65;
         itemAliases = "hand of midas";
-        itemCost = 25;
+        itemCost = 2050;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "common";
         itemShopTags = new String[]{"attack_speed","hard_to_tag"};
         key = "item_hand_of_midas";
-        bonus_attack_speed = 3;
-        bonus_gold = 19;
+        bonus_attack_speed = 30;
+        bonus_gold = 190;
         localizedName = "Hand Of Midas";
-        transmute_cast_range_tooltip = 6;
+        transmute_cast_range_tooltip = 600;
         xp_multiplier = 2.5;
     }
 

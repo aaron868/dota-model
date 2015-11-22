@@ -63,7 +63,7 @@ public final class Omniknight extends Hero {
         ability3 = OmniknightDegenAura.instance();
         ability4 = OmniknightGuardianAngel.instance();
         armorPhysical = 3;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .433;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 41;
@@ -73,7 +73,7 @@ public final class Omniknight extends Hero {
         attributeAgilityGain = 1.75;
         attributeBaseAgility = 15;
         attributeBaseIntelligence = 17;
-        attributeBaseStrength = 2;
+        attributeBaseStrength = 20;
         attributeIntelligenceGain = 1.8;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.65;
@@ -94,7 +94,7 @@ public final class Omniknight extends Hero {
         loadoutScale = .81;
         model = "models/heroes/omniknight/omniknight.vmdl";
         modelScale = .74;
-        movementSpeed = 35;
+        movementSpeed = 305;
         movementTurnRate = .6;
         pickSound = "omniknight_omni_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_omniknight";

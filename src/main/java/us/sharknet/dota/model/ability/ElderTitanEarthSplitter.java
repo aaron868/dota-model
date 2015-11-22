@@ -38,7 +38,7 @@ public final class ElderTitanEarthSplitter extends Ability {
     private ElderTitanEarthSplitter() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
         abilityCastPoint = new double[]{0.4,0.4,0.4};
-        abilityCastRange = 24;
+        abilityCastRange = 2400;
         abilityCooldown = new double[]{100.0,100.0,100.0};
         abilityManaCost = new int[]{175,175,175};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -49,21 +49,21 @@ public final class ElderTitanEarthSplitter extends Ability {
         iD = 5594;
         key = "elder_titan_earth_splitter";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        crack_distance = 24;
+        crack_distance = 2400;
         crack_time = 3.14;
-        crack_width = 3;
+        crack_width = 300;
         damage_pct = 35;
         localizedName = "Earth Splitter";
         owningHeroShortKey = "elder_titan";
         slow_duration = new double[]{3.0,4.0,5.0};
         slow_duration_scepter = new double[]{4.0,5.0,6.0};
         slow_pct = new int[]{30,40,50};
-        speed = 91;
+        speed = 910;
         total_steps = 12;
         vision_duration = 4;
         vision_interval = .22;
-        vision_step = 2;
-        vision_width = 5;
+        vision_step = 200;
+        vision_width = 500;
     }
 
     public static ElderTitanEarthSplitter instance() {

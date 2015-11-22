@@ -31,7 +31,7 @@ public final class Cheese extends Item {
         fightRecapLevel = 2;
         iD = 33;
         itemContributesToNetWorthWhenDropped = 0;
-        itemCost = 1;
+        itemCost = 1000;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemInitialCharges = 1;
         itemPermanent = 0;
@@ -41,9 +41,9 @@ public final class Cheese extends Item {
         itemStackable = 1;
         key = "item_cheese";
         model = "models/props_gameplay/cheese.vmdl";
-        health_restore = 25;
+        health_restore = 2500;
         localizedName = "Cheese";
-        mana_restore = 1;
+        mana_restore = 1000;
     }
 
     public static Cheese instance() {

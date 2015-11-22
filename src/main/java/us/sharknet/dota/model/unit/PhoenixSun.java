@@ -51,12 +51,12 @@ public final class PhoenixSun extends NpcUnit {
         attackRate = 1;
         baseClass = "npc_dota_base_additive";
         boundsHullName = "DOTA_HULL_SIZE_HERO";
-        bountyGoldMax = 2;
-        bountyGoldMin = 2;
+        bountyGoldMax = 20;
+        bountyGoldMin = 20;
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
-        healthBarOffset = 45;
+        healthBarOffset = 450;
         key = "npc_dota_phoenix_sun";
         level = 0;
         model = "models/heroes/phoenix/phoenix_egg.vmdl";
@@ -66,12 +66,12 @@ public final class PhoenixSun extends NpcUnit {
         projectileSpeed = 0;
         ringRadius = 85;
         soundSet = "Phoenix_Sun";
-        statusHealth = 1;
+        statusHealth = 100;
         statusHealthRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 800;
         localizedName = "Phoenix Sun";
     }
 

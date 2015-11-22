@@ -29,7 +29,7 @@ public final class TidehunterGush extends Ability {
     private TidehunterGush() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = new double[]{12.0,12.0,12.0,12.0};
         abilityDamage = new int[]{110,160,210,260};
         abilityDuration = new double[]{4.0,4.0,4.0,4.0};

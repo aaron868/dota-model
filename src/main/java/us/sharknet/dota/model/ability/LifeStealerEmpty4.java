@@ -15,7 +15,7 @@ public final class LifeStealerEmpty4 extends Ability {
 
     private LifeStealerEmpty4() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"};
-        iD = 566;
+        iD = 5660;
         key = "life_stealer_empty_4";
         maxLevel = 0;
         localizedName = "Empty 4";

@@ -27,13 +27,13 @@ public final class MudGolemHurlBoulder extends Ability {
     private MudGolemHurlBoulder() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .3;
-        abilityCastRange = 8;
-        abilityCooldown = 3;
+        abilityCastRange = 800;
+        abilityCooldown = 30;
         abilityManaCost = 0;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
-        iD = 567;
+        iD = 5670;
         key = "mud_golem_hurl_boulder";
         maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -41,7 +41,7 @@ public final class MudGolemHurlBoulder extends Ability {
         duration = .6;
         localizedName = "Hurl Boulder";
         owningHeroShortKey = "mud_golem";
-        speed = 8;
+        speed = 800;
     }
 
     public static MudGolemHurlBoulder instance() {

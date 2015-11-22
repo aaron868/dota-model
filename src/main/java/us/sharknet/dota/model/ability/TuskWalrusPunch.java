@@ -44,11 +44,11 @@ public final class TuskWalrusPunch extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         air_time = 1;
         cooldown_scepter = new double[]{20.0,16.0,12.0};
-        crit_multiplier = 35;
+        crit_multiplier = 350;
         localizedName = "Walrus Punch";
-        move_slow = 4;
+        move_slow = 40;
         owningHeroShortKey = "tusk";
-        push_length = 1;
+        push_length = 1000;
         slow_duration = new double[]{2.0,3.0,4.0};
     }
 

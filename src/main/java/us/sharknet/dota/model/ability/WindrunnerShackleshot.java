@@ -29,14 +29,14 @@ public final class WindrunnerShackleshot extends Ability {
     private WindrunnerShackleshot() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .15;
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = new double[]{12.0,12.0,12.0,12.0};
         abilityDamage = new int[]{0,0,0,0};
         abilityManaCost = new int[]{90,100,110,120};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 513;
+        iD = 5130;
         key = "windrunner_shackleshot";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         arrow_speed = 1515;

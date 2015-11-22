@@ -44,12 +44,12 @@ public final class OgreMauler extends NpcUnit {
 
     private OgreMauler() {
         armorPhysical = 1;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 27;
         attackDamageMin = 24;
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 47;
@@ -57,25 +57,25 @@ public final class OgreMauler extends NpcUnit {
         bountyXP = 41;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 19;
+        healthBarOffset = 190;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_ogre_mauler";
         level = 2;
         model = "models/creeps/neutral_creeps/n_creep_ogre_med/n_creep_ogre_med.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 27;
+        movementSpeed = 270;
         projectileSpeed = 0;
-        ringRadius = 6;
+        ringRadius = 60;
         soundSet = "n_creep_Melee";
-        statusHealth = 85;
+        statusHealth = 850;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Ogre Bruiser";
     }
 

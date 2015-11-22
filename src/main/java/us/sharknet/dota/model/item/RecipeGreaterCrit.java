@@ -16,8 +16,8 @@ public final class RecipeGreaterCrit extends Item {
     private final String localizedName;
 
     private RecipeGreaterCrit() {
-        iD = 14;
-        itemCost = 1;
+        iD = 140;
+        itemCost = 1000;
         itemRecipe = 1;
         itemRequirements = new Item[]{LesserCrit.instance(),DemonEdge.instance()};
         itemResult = GreaterCrit.instance();

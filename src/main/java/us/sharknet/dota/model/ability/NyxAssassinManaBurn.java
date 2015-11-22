@@ -27,7 +27,7 @@ public final class NyxAssassinManaBurn extends Ability {
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
         abilityCastRange = new int[]{600,600,600,600};
         abilityCooldown = new double[]{28.0,20.0,12.0,4.0};
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";

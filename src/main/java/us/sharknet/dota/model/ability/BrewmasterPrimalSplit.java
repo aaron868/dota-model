@@ -26,7 +26,7 @@ public final class BrewmasterPrimalSplit extends Ability {
         abilityManaCost = new int[]{125,150,175};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         fightRecapLevel = 2;
-        iD = 543;
+        iD = 5403;
         key = "brewmaster_primal_split";
         duration = new double[]{15.0,17.0,19.0};
         localizedName = "Primal Split";

@@ -78,12 +78,12 @@ public final class Rubick extends Hero {
         abilityDraftDisabled = 1;
         abilityLayout = 6;
         armorPhysical = -1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 27;
         attackDamageMin = 17;
-        attackRange = 6;
+        attackRange = 600;
         attackRate = 1.7;
         attributeAgilityGain = 1.6;
         attributeBaseAgility = 14;
@@ -95,7 +95,7 @@ public final class Rubick extends Hero {
         banSound = "rubick_rubick_anger_06";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         heroID = 86;
         heroSelectSoundEffect = "Hero_Rubick.Pick";
         key = "npc_dota_hero_rubick";
@@ -103,7 +103,7 @@ public final class Rubick extends Hero {
         loadoutScale = .65;
         model = "models/heroes/rubick/rubick.vmdl";
         modelScale = .7;
-        movementSpeed = 29;
+        movementSpeed = 290;
         movementTurnRate = .5;
         nameAliases = "rubick";
         pickSound = "rubick_rubick_spawn_04";

@@ -53,13 +53,13 @@ public final class CreepGoodguysMeleeUpgradedMega extends NpcUnit {
 
     private CreepGoodguysMeleeUpgradedMega() {
         armorPhysical = 3;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .467;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 44;
         attackDamageMin = 36;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1;
         attributeAgilityGain = 0;
         attributeBaseAgility = 0;
@@ -75,7 +75,7 @@ public final class CreepGoodguysMeleeUpgradedMega extends NpcUnit {
         bountyXP = 25;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
-        healthBarOffset = 13;
+        healthBarOffset = 130;
         key = "npc_dota_creep_goodguys_melee_upgraded_mega";
         level = 1;
         magicalResistance = 0;
@@ -86,14 +86,14 @@ public final class CreepGoodguysMeleeUpgradedMega extends NpcUnit {
         movementTurnRate = .5;
         ringRadius = 45;
         soundSet = "Creep_Good_Melee_Mega";
-        statusHealth = 7;
+        statusHealth = 700;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 85;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 850;
+        visionNighttimeRange = 800;
         localizedName = "Radiant Mega Melee Creep";
     }
 

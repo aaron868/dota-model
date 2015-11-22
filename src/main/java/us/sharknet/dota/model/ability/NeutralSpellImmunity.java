@@ -15,7 +15,7 @@ public final class NeutralSpellImmunity extends Ability {
 
     private NeutralSpellImmunity() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 533;
+        iD = 5303;
         key = "neutral_spell_immunity";
         maxLevel = 1;
         localizedName = "Spell Immunity";

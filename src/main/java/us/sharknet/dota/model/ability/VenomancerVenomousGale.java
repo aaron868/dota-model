@@ -29,7 +29,7 @@ public final class VenomancerVenomousGale extends Ability {
     private VenomancerVenomousGale() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = new double[]{22.0,22.0,22.0,22.0};
         abilityManaCost = 125;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";

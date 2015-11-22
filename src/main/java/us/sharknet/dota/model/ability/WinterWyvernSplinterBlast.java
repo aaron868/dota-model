@@ -32,7 +32,7 @@ public final class WinterWyvernSplinterBlast extends Ability {
     private WinterWyvernSplinterBlast() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 12;
+        abilityCastRange = 1200;
         abilityCooldown = 7;
         abilityDamage = new int[]{100,180,260,340};
         abilityManaCost = new int[]{120,130,140,150};
@@ -49,9 +49,9 @@ public final class WinterWyvernSplinterBlast extends Ability {
         movespeed_slow_tooltip = 25;
         owningHeroShortKey = "winter_wyvern";
         projectile_max_time = 1;
-        projectile_speed = 65;
-        secondary_projectile_speed = 65;
-        split_radius = 5;
+        projectile_speed = 650;
+        secondary_projectile_speed = 650;
+        split_radius = 500;
     }
 
     public static WinterWyvernSplinterBlast instance() {

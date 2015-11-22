@@ -26,7 +26,7 @@ public final class TerrorbladeSunder extends Ability {
     private TerrorbladeSunder() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = .35;
-        abilityCastRange = 55;
+        abilityCastRange = 550;
         abilityCooldown = new double[]{120.0,80.0,40.0};
         abilityManaCost = new int[]{200,100,0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";

@@ -17,11 +17,11 @@ public final class SvenGreatCleave extends Ability {
 
     private SvenGreatCleave() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 595;
+        iD = 5095;
         key = "sven_great_cleave";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         great_cleave_damage = new int[]{30,42,54,66};
-        great_cleave_radius = 3;
+        great_cleave_radius = 300;
         localizedName = "Great Cleave";
         owningHeroShortKey = "sven";
     }

@@ -28,7 +28,7 @@ public final class MeepoPoof extends Ability {
         abilityChannelTime = 0;
         abilityCooldown = new int[]{12,10,8,6};
         abilityDamage = new int[]{80,100,120,140};
-        abilityManaCost = 8;
+        abilityManaCost = 80;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         fightRecapLevel = 1;

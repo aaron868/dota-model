@@ -29,7 +29,7 @@ public final class CrystalMaidenCrystalNova extends Ability {
     private CrystalMaidenCrystalNova() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = 13;
         abilityDamage = new int[]{100,150,200,250};
         abilityManaCost = new int[]{100,120,140,160};
@@ -44,7 +44,7 @@ public final class CrystalMaidenCrystalNova extends Ability {
         localizedName = "Crystal Nova";
         movespeed_slow = new int[]{-20,-30,-40,-50};
         owningHeroShortKey = "crystal_maiden";
-        radius = 4;
+        radius = 400;
         vision_duration = 6;
     }
 

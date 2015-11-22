@@ -26,10 +26,10 @@ public final class Buckler extends Item {
     private Buckler() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCooldown = 25;
-        abilityManaCost = 1;
+        abilityManaCost = 10;
         iD = 86;
         itemAliases = "buckler";
-        itemCost = 8;
+        itemCost = 800;
         itemQuality = "rare";
         itemShopTags = new String[]{"armor","boost_armor"};
         key = "item_buckler";
@@ -37,7 +37,7 @@ public final class Buckler extends Item {
         bonus_aoe_armor = 2;
         bonus_aoe_duration = 3;
         bonus_aoe_duration_hero = 25;
-        bonus_aoe_radius = 9;
+        bonus_aoe_radius = 900;
         bonus_armor = 5;
         localizedName = "Buckler";
     }

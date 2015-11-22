@@ -43,14 +43,14 @@ public final class VisageSoulAssumption extends Ability {
         iD = 5481;
         key = "visage_soul_assumption";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        bolt_speed = 1;
-        damage_limit = 11;
+        bolt_speed = 1000;
+        damage_limit = 110;
         damage_max = 3;
         damage_min = 2;
         localizedName = "Soul Assumption";
         owningHeroShortKey = "visage";
         radius = 1375;
-        soul_base_damage = 2;
+        soul_base_damage = 20;
         soul_charge_damage = 65;
         stack_duration = 6;
         stack_limit = new int[]{3,4,5,6};

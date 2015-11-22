@@ -18,10 +18,10 @@ public final class BrewmasterDrunkenBrawler extends Ability {
 
     private BrewmasterDrunkenBrawler() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 542;
+        iD = 5402;
         key = "brewmaster_drunken_brawler";
         crit_chance = new int[]{10,15,20,25};
-        crit_multiplier = 2;
+        crit_multiplier = 200;
         dodge_chance = new int[]{10,15,20,25};
         last_proc = new double[]{16.0,14.0,12.0,10.0};
         localizedName = "Drunken Brawler";

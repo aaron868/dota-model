@@ -29,7 +29,7 @@ public final class SilencerCurseOfTheSilent extends Ability {
     private SilencerCurseOfTheSilent() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = new double[]{20.0,16.0,12.0,8.0};
         abilityDuration = 6;
         abilityManaCost = new int[]{75,95,115,135};

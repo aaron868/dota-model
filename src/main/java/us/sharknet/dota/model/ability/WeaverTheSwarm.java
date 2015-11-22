@@ -31,7 +31,7 @@ public final class WeaverTheSwarm extends Ability {
     private WeaverTheSwarm() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 3;
+        abilityCastRange = 3000;
         abilityCooldown = new int[]{35,30,25,20};
         abilityManaCost = new int[]{70,80,90,100};
         abilityModifierSupportValue = .2;
@@ -42,7 +42,7 @@ public final class WeaverTheSwarm extends Ability {
         armor_reduction = new int[]{1,1,1,1};
         attack_rate = new double[]{1.4,1.25,1.1,0.95};
         count = new int[]{12,12,12,12};
-        damage = 2;
+        damage = 20;
         destroy_attacks = new int[]{8,8,8,8};
         duration = 16;
         localizedName = "The Swarm";

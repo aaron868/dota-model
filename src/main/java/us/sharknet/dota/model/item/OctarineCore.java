@@ -30,7 +30,7 @@ public final class OctarineCore extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 235;
         itemAliases = new String[]{"mana","mb","octarine core"};
-        itemCost = 59;
+        itemCost = 5900;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "rare";
@@ -38,11 +38,11 @@ public final class OctarineCore extends Item {
         key = "item_octarine_core";
         active_duration = 7;
         bonus_cooldown = 25;
-        bonus_health = 45;
+        bonus_health = 450;
         bonus_health_regen = 4;
         bonus_intelligence = 25;
-        bonus_mana = 4;
-        bonus_mana_regen = 1;
+        bonus_mana = 400;
+        bonus_mana_regen = 100;
         creep_lifesteal = 5;
         hero_lifesteal = 25;
         localizedName = "Octarine Core";

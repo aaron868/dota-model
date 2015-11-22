@@ -27,7 +27,7 @@ public final class LunaLucentBeam extends Ability {
     private LunaLucentBeam() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.6,0.6,0.6,0.6};
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = new double[]{6.0,6.0,6.0,6.0};
         abilityDamage = new int[]{75,150,225,300};
         abilityManaCost = new int[]{90,100,110,120};

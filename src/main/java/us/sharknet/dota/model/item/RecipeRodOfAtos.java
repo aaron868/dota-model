@@ -15,7 +15,7 @@ public final class RecipeRodOfAtos extends Item {
     private final String localizedName;
 
     private RecipeRodOfAtos() {
-        iD = 25;
+        iD = 205;
         itemCost = 0;
         itemRecipe = 1;
         itemRequirements = new Item[]{VitalityBooster.instance(),StaffOfWizardry.instance(),StaffOfWizardry.instance()};

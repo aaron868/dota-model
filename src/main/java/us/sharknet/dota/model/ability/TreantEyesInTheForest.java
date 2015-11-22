@@ -26,9 +26,9 @@ public final class TreantEyesInTheForest extends Ability {
     private TreantEyesInTheForest() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         abilityCastPoint = .2;
-        abilityCastRange = 16;
+        abilityCastRange = 160;
         abilityCooldown = 25;
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitTargetType = "DOTA_UNIT_TARGET_TREE";
         fightRecapLevel = 1;
         iD = 5649;
@@ -37,7 +37,7 @@ public final class TreantEyesInTheForest extends Ability {
         maxLevel = 1;
         damage = 175;
         localizedName = "Eyes in the Forest";
-        overgrowth_aoe = 7;
+        overgrowth_aoe = 700;
         owningHeroShortKey = "treant";
         vision_aoe = 7;
     }

@@ -32,10 +32,10 @@ public final class SniperShrapnel extends Ability {
     private SniperShrapnel() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 18;
+        abilityCastRange = 1800;
         abilityCooldown = 0;
         abilityDamage = new int[]{12,24,36,48};
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityModifierSupportValue = .25;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
@@ -49,7 +49,7 @@ public final class SniperShrapnel extends Ability {
         localizedName = "Shrapnel";
         max_charges = 3;
         owningHeroShortKey = "sniper";
-        radius = 45;
+        radius = 450;
         slow_duration = new double[]{2.0,2.0,2.0,2.0};
         slow_movement_speed = new int[]{-15,-20,-25,-30};
     }

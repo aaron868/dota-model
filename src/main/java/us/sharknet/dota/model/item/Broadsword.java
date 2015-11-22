@@ -21,7 +21,7 @@ public final class Broadsword extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 3;
         itemAliases = "broadsword";
-        itemCost = 12;
+        itemCost = 1200;
         itemQuality = "component";
         itemShopTags = "damage";
         key = "item_broadsword";

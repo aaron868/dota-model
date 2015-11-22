@@ -15,7 +15,7 @@ public final class RecipeUltimateScepter extends Item {
     private final String localizedName;
 
     private RecipeUltimateScepter() {
-        iD = 17;
+        iD = 107;
         itemCost = 0;
         itemRecipe = 1;
         itemRequirements = new Item[]{PointBooster.instance(),StaffOfWizardry.instance(),OgreAxe.instance(),BladeOfAlacrity.instance()};

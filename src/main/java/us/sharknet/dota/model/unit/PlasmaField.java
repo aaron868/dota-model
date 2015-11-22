@@ -26,8 +26,8 @@ public final class PlasmaField extends NpcUnit {
         model = "models/development/invisiblebox.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
         soundSet = 0;
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Plasma Field";
     }
 

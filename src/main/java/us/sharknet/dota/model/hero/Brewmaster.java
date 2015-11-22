@@ -65,7 +65,7 @@ public final class Brewmaster extends Hero {
         ability4 = BrewmasterPrimalSplit.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .35;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 36;
@@ -83,7 +83,7 @@ public final class Brewmaster extends Hero {
         cMEnabled = 1;
         enabled = 1;
         hasAggressiveStance = 1;
-        healthBarOffset = 14;
+        healthBarOffset = 140;
         heroGlowColor = new int[]{139,1,1};
         heroID = 78;
         heroSelectSoundEffect = "Hero_Brewmaster.Pick";
@@ -94,7 +94,7 @@ public final class Brewmaster extends Hero {
         loadoutScale = .85;
         model = "models/heroes/brewmaster/brewmaster.vmdl";
         modelScale = .79;
-        movementSpeed = 3;
+        movementSpeed = 300;
         movementTurnRate = .6;
         nameAliases = "bm";
         pickSound = "brewmaster_brew_spawn_01";

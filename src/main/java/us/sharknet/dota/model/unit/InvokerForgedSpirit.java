@@ -52,7 +52,7 @@ public final class InvokerForgedSpirit extends NpcUnit {
     private InvokerForgedSpirit() {
         ability1 = ForgedSpiritMeltingStrike.instance();
         armorPhysical = 2;
-        attackAcquisitionRange = 9;
+        attackAcquisitionRange = 900;
         attackAnimationPoint = .2;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 0;
@@ -67,7 +67,7 @@ public final class InvokerForgedSpirit extends NpcUnit {
         bountyXP = 31;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 27;
+        healthBarOffset = 270;
         isSummoned = 1;
         key = "npc_dota_invoker_forged_spirit";
         level = 3;
@@ -75,10 +75,10 @@ public final class InvokerForgedSpirit extends NpcUnit {
         model = "models/heroes/invoker/forge_spirit.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 32;
+        movementSpeed = 320;
         movementTurnRate = .5;
         projectileModel = "particles/units/heroes/hero_invoker/invoker_forged_spirit_projectile.vpcf";
-        projectileSpeed = 1;
+        projectileSpeed = 1000;
         selectionGroup = "Invoker_Forged_Spirits";
         soundSet = "Creep_Good_Range";
         statusHealth = 5;
@@ -87,8 +87,8 @@ public final class InvokerForgedSpirit extends NpcUnit {
         statusManaRegen = 4;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 12;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1200;
+        visionNighttimeRange = 800;
         localizedName = "Forged Spirit";
         wearable = 8625;
     }

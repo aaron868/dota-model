@@ -25,13 +25,13 @@ public final class MonkeyKingBar extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 135;
         itemAliases = new String[]{"mkb","monkey king bar"};
-        itemCost = 54;
+        itemCost = 5400;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "epic";
         itemShopTags = new String[]{"damage","attack_speed","hard_to_tag"};
         key = "item_monkey_king_bar";
         bash_chance = 35;
-        bash_damage = 1;
+        bash_damage = 100;
         bash_stun = .1;
         bonus_attack_speed = 15;
         bonus_damage = 88;

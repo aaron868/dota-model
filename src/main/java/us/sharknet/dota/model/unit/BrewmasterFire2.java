@@ -48,10 +48,10 @@ public final class BrewmasterFire2 extends NpcUnit {
         ability1 = BrewmasterFirePermanentImmolation.instance();
         ability2 = BrewmasterDrunkenBrawler.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
-        attackDamageMax = 13;
+        attackDamageMax = 130;
         attackDamageMin = 115;
         attackRange = 128;
         attackRate = 1.35;
@@ -73,13 +73,13 @@ public final class BrewmasterFire2 extends NpcUnit {
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 522;
         soundSet = "Brewmaster_Fire";
-        statusHealth = 12;
+        statusHealth = 1200;
         statusHealthRegen = 4;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitLabel = "brewmaster_fire";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 800;
         localizedName = "Brewmaster Fire Spirit Level 2";
     }
 

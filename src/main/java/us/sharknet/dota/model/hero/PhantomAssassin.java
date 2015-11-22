@@ -64,7 +64,7 @@ public final class PhantomAssassin extends Hero {
         ability3 = PhantomAssassinBlur.instance();
         ability4 = PhantomAssassinCoupDeGrace.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 25;
@@ -74,7 +74,7 @@ public final class PhantomAssassin extends Hero {
         attributeAgilityGain = 3.15;
         attributeBaseAgility = 23;
         attributeBaseIntelligence = 13;
-        attributeBaseStrength = 2;
+        attributeBaseStrength = 20;
         attributeIntelligenceGain = 1;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.85;
@@ -84,7 +84,7 @@ public final class PhantomAssassin extends Hero {
         cMEnabled = 1;
         enabled = 1;
         hasAggressiveStance = 1;
-        healthBarOffset = 18;
+        healthBarOffset = 180;
         heroGlowColor = new int[]{154,97,133};
         heroID = 44;
         heroSelectSoundEffect = "Hero_PhantomAssassin.Pick";
@@ -95,7 +95,7 @@ public final class PhantomAssassin extends Hero {
         loadoutScale = .93;
         model = "models/heroes/phantom_assassin/phantom_assassin.vmdl";
         modelScale = .86;
-        movementSpeed = 31;
+        movementSpeed = 310;
         movementTurnRate = .4;
         nameAliases = "pa";
         pickSound = "phantom_assassin_phass_spawn_01";

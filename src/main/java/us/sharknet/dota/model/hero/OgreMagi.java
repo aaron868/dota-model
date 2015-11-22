@@ -66,7 +66,7 @@ public final class OgreMagi extends Hero {
         ability6 = AttributeBonus.instance();
         abilityDraftDisabled = 1;
         armorPhysical = 6;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 47;
@@ -83,7 +83,7 @@ public final class OgreMagi extends Hero {
         banSound = "ogre_magi_ogmag_anger_04";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 18;
+        healthBarOffset = 180;
         heroID = 84;
         heroSelectSoundEffect = "Hero_OgreMagi.Pick";
         idleExpression = "scenes/ogre_magi/ogre_magi_exp_idle_01.vcd";

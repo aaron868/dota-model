@@ -20,7 +20,7 @@ public final class ForgedSpiritMeltingStrike extends Ability {
 
     private ForgedSpiritMeltingStrike() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"};
-        abilityManaCost = 4;
+        abilityManaCost = 40;
         iD = 5388;
         key = "forged_spirit_melting_strike";
         maxLevel = 1;
@@ -28,7 +28,7 @@ public final class ForgedSpiritMeltingStrike extends Ability {
         armor_removed = 1;
         duration = 5;
         localizedName = "Melting Strike";
-        max_armor_removed = 1;
+        max_armor_removed = 10;
         owningHeroShortKey = "forged_spirit";
     }
 

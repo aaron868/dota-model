@@ -31,7 +31,7 @@ public final class LichFrostNova extends Ability {
     private LichFrostNova() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = 8;
         abilityDamage = new int[]{50,100,150,200};
         abilityDuration = new double[]{4.0,4.0,4.0,4.0};

@@ -17,7 +17,7 @@ public final class RecipeCrimsonGuard extends Item {
 
     private RecipeCrimsonGuard() {
         iD = 243;
-        itemCost = 6;
+        itemCost = 600;
         itemRecipe = 1;
         itemRequirements = new Item[]{Vanguard.instance(),Buckler.instance()};
         itemResult = CrimsonGuard.instance();

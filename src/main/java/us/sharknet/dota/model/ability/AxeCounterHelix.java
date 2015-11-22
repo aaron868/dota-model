@@ -24,14 +24,14 @@ public final class AxeCounterHelix extends Ability {
         abilityCooldown = new double[]{0.45,0.4,0.35,0.3};
         abilityDamage = new int[]{100,135,170,205};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        iD = 59;
+        iD = 5009;
         key = "axe_counter_helix";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         cooldown = new double[]{0.45,0.4,0.35,0.3};
         localizedName = "Counter Helix";
         owningHeroShortKey = "axe";
         radius = 275;
-        trigger_chance = 2;
+        trigger_chance = 20;
     }
 
     public static AxeCounterHelix instance() {

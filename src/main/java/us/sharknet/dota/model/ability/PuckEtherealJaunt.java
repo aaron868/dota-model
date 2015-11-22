@@ -16,7 +16,7 @@ public final class PuckEtherealJaunt extends Ability {
     private PuckEtherealJaunt() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        iD = 57;
+        iD = 5070;
         key = "puck_ethereal_jaunt";
         localizedName = "Ethereal Jaunt";
         owningHeroShortKey = "puck";

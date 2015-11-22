@@ -65,7 +65,7 @@ public final class DragonKnight extends Hero {
         ability3 = DragonKnightDragonBlood.instance();
         ability4 = DragonKnightElderDragonForm.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 33;
@@ -84,7 +84,7 @@ public final class DragonKnight extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         heroGlowColor = new int[]{209,143,71};
         heroID = 49;
         heroPool1 = 1;
@@ -95,12 +95,12 @@ public final class DragonKnight extends Hero {
         lastHitChallengeRival = "npc_dota_hero_sven";
         model = "models/heroes/dragon_knight/dragon_knight.vmdl";
         modelScale = .84;
-        movementSpeed = 29;
+        movementSpeed = 290;
         movementTurnRate = .6;
         nameAliases = "dk";
         pickSound = "dragon_knight_drag_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_dragon_knight";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Carry","Pusher","Durable","Disabler","Initiator","Nuker"};
         rolelevels = new int[]{2,3,2,2,1,1};
         soundSet = "Hero_DragonKnight";

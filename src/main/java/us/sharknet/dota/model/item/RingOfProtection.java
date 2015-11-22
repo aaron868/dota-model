@@ -24,7 +24,7 @@ public final class RingOfProtection extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 12;
         itemAliases = new String[]{"rop","ring of protection"};
-        itemCost = 2;
+        itemCost = 200;
         itemQuality = "component";
         itemShopTags = "armor";
         key = "item_ring_of_protection";

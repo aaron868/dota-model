@@ -37,7 +37,7 @@ public final class NagaSirenRipTide extends Ability {
         duration = new double[]{8.0,8.0,8.0,8.0};
         localizedName = "Rip Tide";
         owningHeroShortKey = "naga_siren";
-        radius = 32;
+        radius = 320;
     }
 
     public static NagaSirenRipTide instance() {

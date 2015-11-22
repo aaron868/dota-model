@@ -29,21 +29,21 @@ public final class ElderTitanEchoStompSpirit extends Ability {
     private ElderTitanEchoStompSpirit() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
         abilityCastPoint = 0;
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityChannelTime = 1.2;
         abilityCooldown = new int[]{14,13,12,11};
         abilityManaCost = new int[]{0,0,0,0};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
         fightRecapLevel = 1;
-        iD = 559;
+        iD = 5590;
         key = "elder_titan_echo_stomp_spirit";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         animation_rate = 0.0;
         cast_time = 1.6;
         localizedName = "Echo Stomp Sprit";
         owningHeroShortKey = "elder_titan";
-        radius = 5;
+        radius = 500;
         sleep_duration = new double[]{2.0,3.0,4.0,5.0};
         stomp_damage = new int[]{80,90,100,110};
     }

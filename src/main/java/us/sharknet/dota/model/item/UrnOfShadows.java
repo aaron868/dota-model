@@ -40,7 +40,7 @@ public final class UrnOfShadows extends Item {
     private UrnOfShadows() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = 0;
-        abilityCastRange = 95;
+        abilityCastRange = 950;
         abilityCooldown = 7;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
@@ -58,16 +58,16 @@ public final class UrnOfShadows extends Item {
         key = "item_urn_of_shadows";
         bonus_strength = 6;
         localizedName = "Urn Of Shadows";
-        mana_regen = 5;
+        mana_regen = 50;
         soul_additional_charges = 1;
-        soul_damage_amount = 15;
+        soul_damage_amount = 150;
         soul_damage_duration = 8;
-        soul_heal_amount = 4;
+        soul_heal_amount = 400;
         soul_heal_duration = 8;
         soul_heal_interval = .25;
         soul_initial_charge = 2;
-        soul_radius = 14;
-        soul_release_range_tooltip = 95;
+        soul_radius = 1400;
+        soul_release_range_tooltip = 950;
     }
 
     public static UrnOfShadows instance() {

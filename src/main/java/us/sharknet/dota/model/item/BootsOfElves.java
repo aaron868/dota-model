@@ -21,7 +21,7 @@ public final class BootsOfElves extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 18;
         itemAliases = "band of elvenskin";
-        itemCost = 45;
+        itemCost = 450;
         itemQuality = "component";
         itemShopTags = "agi";
         key = "item_boots_of_elves";

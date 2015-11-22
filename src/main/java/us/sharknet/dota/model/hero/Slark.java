@@ -67,7 +67,7 @@ public final class Slark extends Hero {
         ability4 = SlarkShadowDance.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 41;
@@ -85,7 +85,7 @@ public final class Slark extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 14;
+        healthBarOffset = 140;
         heroID = 93;
         heroSelectSoundEffect = "Hero_Slark.Pick";
         heroUnlockOrder = 0;
@@ -96,7 +96,7 @@ public final class Slark extends Hero {
         loadoutScale = 1;
         model = "models/heroes/slark/slark.vmdl";
         modelScale = .9;
-        movementSpeed = 35;
+        movementSpeed = 305;
         movementTurnRate = .5;
         nameAliases = "slark";
         pickSound = "slark_slark_spawn_01";
@@ -106,8 +106,8 @@ public final class Slark extends Hero {
         rolelevels = new int[]{2,3,1,1};
         soundSet = "Hero_Slark";
         team = "Bad";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 18;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 1800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_slark.vsndevts";
         active = true;
         localizedName = "Slark";

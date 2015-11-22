@@ -45,9 +45,9 @@ public final class InvokerIceWall extends Ability {
         owningHeroShortKey = "invoker";
         slow = new int[]{-20,-40,-60,-80,-100,-120,-140,-160};
         slow_duration = 2;
-        wall_element_radius = 15;
-        wall_element_spacing = 8;
-        wall_place_distance = 2;
+        wall_element_radius = 105;
+        wall_element_spacing = 80;
+        wall_place_distance = 200;
     }
 
     public static InvokerIceWall instance() {

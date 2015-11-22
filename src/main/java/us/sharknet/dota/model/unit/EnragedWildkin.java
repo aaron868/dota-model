@@ -48,11 +48,11 @@ public final class EnragedWildkin extends NpcUnit {
         ability1 = EnragedWildkinTornado.instance();
         ability2 = EnragedWildkinToughnessAura.instance();
         armorPhysical = 4;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 56;
-        attackDamageMin = 5;
+        attackDamageMin = 50;
         attackRange = 128;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
@@ -61,25 +61,25 @@ public final class EnragedWildkin extends NpcUnit {
         bountyXP = 119;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 22;
+        healthBarOffset = 220;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_enraged_wildkin";
         level = 5;
         model = "models/creeps/neutral_creeps/n_creep_vulture_a/n_creep_vulture_a.vmdl";
         modelScale = 1.1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 32;
+        movementSpeed = 320;
         projectileSpeed = 0;
-        ringRadius = 5;
+        ringRadius = 50;
         soundSet = "n_creep_Melee";
-        statusHealth = 95;
+        statusHealth = 950;
         statusHealthRegen = .5;
-        statusMana = 4;
+        statusMana = 400;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Wildwing Ripper";
     }
 

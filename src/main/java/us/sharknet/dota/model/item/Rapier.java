@@ -27,7 +27,7 @@ public final class Rapier extends Item {
         iD = 133;
         itemAliases = "divine rapier";
         itemContributesToNetWorthWhenDropped = 0;
-        itemCost = 62;
+        itemCost = 6200;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS","DECLARE_PURCHASES_IN_SPEECH"};
         itemKillable = 0;
         itemQuality = "epic";
@@ -36,7 +36,7 @@ public final class Rapier extends Item {
         itemShopTags = "damage";
         key = "item_rapier";
         model = "models/props_gameplay/divine_rapier.vmdl";
-        bonus_damage = 33;
+        bonus_damage = 330;
         localizedName = "Divine Rapier";
     }
 

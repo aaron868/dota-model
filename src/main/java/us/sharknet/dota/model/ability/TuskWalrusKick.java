@@ -35,7 +35,7 @@ public final class TuskWalrusKick extends Ability {
         abilityCastPoint = .2;
         abilityCastRange = 128;
         abilityCooldown = 12;
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
@@ -48,11 +48,11 @@ public final class TuskWalrusKick extends Ability {
         air_time = 1;
         cooldown_scepter = 12;
         crit_multiplier = 0;
-        damage = 2;
+        damage = 200;
         localizedName = "Walrus Kick";
-        move_slow = 4;
+        move_slow = 40;
         owningHeroShortKey = "tusk";
-        push_length = 9;
+        push_length = 900;
         slow_duration = 4;
     }
 

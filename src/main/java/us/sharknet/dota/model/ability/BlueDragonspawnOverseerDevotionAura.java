@@ -23,7 +23,7 @@ public final class BlueDragonspawnOverseerDevotionAura extends Ability {
         bonus_armor = 3;
         localizedName = "Devotion Aura";
         owningHeroShortKey = "blue_dragonspawn";
-        radius = 9;
+        radius = 900;
     }
 
     public static BlueDragonspawnOverseerDevotionAura instance() {

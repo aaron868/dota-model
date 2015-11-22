@@ -49,12 +49,12 @@ public final class BlueDragonspawnOverseer extends NpcUnit {
         ability1 = BlueDragonspawnOverseerEvasion.instance();
         ability2 = BlueDragonspawnOverseerDevotionAura.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .83;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 65;
         attackDamageMin = 59;
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 98;
@@ -62,7 +62,7 @@ public final class BlueDragonspawnOverseer extends NpcUnit {
         bountyXP = 119;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 22;
+        healthBarOffset = 220;
         isAncient = 1;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_blue_dragonspawn_overseer";
@@ -70,18 +70,18 @@ public final class BlueDragonspawnOverseer extends NpcUnit {
         model = "models/creeps/neutral_creeps/n_creep_dragonspawn_b/n_creep_dragonspawn_b.vmdl";
         modelScale = .85;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 3;
+        movementSpeed = 300;
         projectileSpeed = 0;
-        ringRadius = 8;
+        ringRadius = 80;
         soundSet = "n_creep_Melee";
-        statusHealth = 12;
+        statusHealth = 1200;
         statusHealthRegen = .5;
-        statusMana = 4;
+        statusMana = 400;
         statusManaRegen = 1;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Ancient Drakken Armorer";
     }
 

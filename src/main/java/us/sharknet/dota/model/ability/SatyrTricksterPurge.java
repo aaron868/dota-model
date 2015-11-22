@@ -26,9 +26,9 @@ public final class SatyrTricksterPurge extends Ability {
     private SatyrTricksterPurge() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .2;
-        abilityCastRange = 35;
+        abilityCastRange = 350;
         abilityCooldown = 5;
-        abilityManaCost = 12;
+        abilityManaCost = 120;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
@@ -39,7 +39,7 @@ public final class SatyrTricksterPurge extends Ability {
         localizedName = "Purge";
         owningHeroShortKey = "satyr_trickster";
         purge_rate = 5;
-        summon_damage = 4;
+        summon_damage = 400;
     }
 
     public static SatyrTricksterPurge instance() {

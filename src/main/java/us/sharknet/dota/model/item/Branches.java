@@ -21,7 +21,7 @@ public final class Branches extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 16;
         itemAliases = new String[]{"gg branch","iron branch"};
-        itemCost = 5;
+        itemCost = 50;
         itemQuality = "component";
         itemShopTags = new String[]{"agi","int","str"};
         key = "item_branches";

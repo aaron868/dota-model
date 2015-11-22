@@ -19,7 +19,7 @@ public final class ZuusStaticField extends Ability {
 
     private ZuusStaticField() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityCastRange = 12;
+        abilityCastRange = 1200;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5112;
         key = "zuus_static_field";
@@ -27,7 +27,7 @@ public final class ZuusStaticField extends Ability {
         damage_health_pct = new int[]{5,7,9,11};
         localizedName = "Static Field";
         owningHeroShortKey = "zuus";
-        radius = 12;
+        radius = 1200;
     }
 
     public static ZuusStaticField instance() {

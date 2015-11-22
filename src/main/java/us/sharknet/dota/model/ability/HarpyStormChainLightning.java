@@ -28,9 +28,9 @@ public final class HarpyStormChainLightning extends Ability {
     private HarpyStormChainLightning() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .5;
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityCooldown = 4;
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
@@ -38,9 +38,9 @@ public final class HarpyStormChainLightning extends Ability {
         key = "harpy_storm_chain_lightning";
         maxLevel = 1;
         damage_percent_loss = 25;
-        initial_damage = 14;
+        initial_damage = 140;
         jump_delay = .25;
-        jump_range = 5;
+        jump_range = 500;
         localizedName = "Chain Lightning";
         max_targets = 4;
         owningHeroShortKey = "harpy_storm";

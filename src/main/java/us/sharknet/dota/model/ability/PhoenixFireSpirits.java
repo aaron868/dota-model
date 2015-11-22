@@ -31,7 +31,7 @@ public final class PhoenixFireSpirits extends Ability {
     private PhoenixFireSpirits() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.01,0.01,0.01,0.01};
-        abilityCastRange = 14;
+        abilityCastRange = 1400;
         abilityCooldown = new int[]{45,40,35,30};
         abilityManaCost = new int[]{80,90,100,110};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -42,7 +42,7 @@ public final class PhoenixFireSpirits extends Ability {
         attackspeed_slow = new int[]{-80,-100,-120,-140};
         dps = new int[]{10,30,50,70};
         duration = 4;
-        hp_cost_perc = 2;
+        hp_cost_perc = 20;
         localizedName = "Fire Spirits";
         owningHeroShortKey = "phoenix";
         radius = new int[]{175,175,175,175};

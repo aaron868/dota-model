@@ -17,7 +17,7 @@ public final class RecipeLotusOrb extends Item {
 
     private RecipeLotusOrb() {
         iD = 221;
-        itemCost = 9;
+        itemCost = 900;
         itemRecipe = 1;
         itemRequirements = new Item[]{Pers.instance(),Platemail.instance()};
         itemResult = LotusOrb.instance();

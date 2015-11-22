@@ -28,12 +28,12 @@ public final class Flask extends Item {
     private Flask() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = 0;
-        abilityCastRange = 25;
+        abilityCastRange = 250;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         iD = 39;
         itemAliases = "healing salve";
-        itemCost = 11;
+        itemCost = 110;
         itemInitialCharges = 1;
         itemPermanent = 0;
         itemQuality = "consumable";
@@ -43,7 +43,7 @@ public final class Flask extends Item {
         model = "models/props_gameplay/salve.vmdl";
         buff_duration = 8;
         localizedName = "Healing Salve";
-        total_health = 4;
+        total_health = 400;
     }
 
     public static Flask instance() {

@@ -38,13 +38,13 @@ public final class SandkingBurrowstrike extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 512;
+        iD = 5102;
         key = "sandking_burrowstrike";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         burrow_anim_time = .52;
         burrow_duration = 2.17;
-        burrow_speed = 2;
-        burrow_width = 15;
+        burrow_speed = 2000;
+        burrow_width = 150;
         localizedName = "Burrowstrike";
         owningHeroShortKey = "sand_king";
         tooltip_range = new int[]{350,450,550,650};

@@ -62,7 +62,7 @@ public final class DarkSeer extends Hero {
         ability3 = DarkSeerSurge.instance();
         ability4 = DarkSeerWallOfReplica.instance();
         armorPhysical = 5;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .59;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 37;
@@ -80,7 +80,7 @@ public final class DarkSeer extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 13;
+        healthBarOffset = 130;
         heroGlowColor = new int[]{203,86,255};
         heroID = 55;
         heroSelectSoundEffect = "Hero_DarkSeer.Pick";
@@ -91,7 +91,7 @@ public final class DarkSeer extends Hero {
         loadoutScale = .85;
         model = "models/heroes/dark_seer/dark_seer.vmdl";
         modelScale = .74;
-        movementSpeed = 3;
+        movementSpeed = 300;
         movementTurnRate = .6;
         nameAliases = "ds";
         pickSound = "dark_seer_dkseer_spawn_01";

@@ -29,7 +29,7 @@ public final class DarkSeerIonShell extends Ability {
     private DarkSeerIonShell() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = 9;
         abilityManaCost = new int[]{70,90,110,130};
         abilityModifierSupportValue = 0;
@@ -45,7 +45,7 @@ public final class DarkSeerIonShell extends Ability {
         duration = 25;
         localizedName = "Ion Shell";
         owningHeroShortKey = "dark_seer";
-        radius = 25;
+        radius = 250;
     }
 
     public static DarkSeerIonShell instance() {

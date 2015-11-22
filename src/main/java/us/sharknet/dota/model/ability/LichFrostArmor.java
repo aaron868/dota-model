@@ -28,7 +28,7 @@ public final class LichFrostArmor extends Ability {
     private LichFrostArmor() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = new double[]{5.0,5.0,5.0,5.0};
         abilityDuration = new double[]{40.0,40.0,40.0,40.0};
         abilityManaCost = new int[]{50,50,50,50};

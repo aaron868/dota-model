@@ -16,7 +16,7 @@ public final class RecipeWraithBand extends Item {
 
     private RecipeWraithBand() {
         iD = 74;
-        itemCost = 17;
+        itemCost = 170;
         itemRecipe = 1;
         itemRequirements = new Item[]{Circlet.instance(),Slippers.instance()};
         itemResult = WraithBand.instance();

@@ -18,11 +18,11 @@ public final class NecronomiconArcherAoe extends Ability {
     private NecronomiconArcherAoe() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
-        iD = 524;
+        iD = 5204;
         key = "necronomicon_archer_aoe";
         localizedName = "AoE";
         owningHeroShortKey = "necronomicon_archer";
-        radius = 9;
+        radius = 900;
         speed_bonus = new int[]{5,7,9};
     }
 

@@ -30,7 +30,7 @@ public final class MiranaLeap extends Ability {
         abilityCooldown = new double[]{30.0,26.0,22.0,18.0};
         abilityDuration = 1;
         abilityManaCost = new int[]{40,35,30,20};
-        iD = 55;
+        iD = 5050;
         key = "mirana_leap";
         leap_acceleration = 7;
         leap_distance = new int[]{600,700,800,900};

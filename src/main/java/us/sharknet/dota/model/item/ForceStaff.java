@@ -29,23 +29,23 @@ public final class ForceStaff extends Item {
     private ForceStaff() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = 0;
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = 2;
         abilityManaCost = 25;
         abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_BOTH","DOTA_UNIT_TARGET_TEAM_CUSTOM"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC","DOTA_UNIT_TARGET_CUSTOM"};
         fightRecapLevel = 1;
-        iD = 12;
+        iD = 102;
         itemAliases = new String[]{"fs","force staff"};
-        itemCost = 225;
+        itemCost = 2250;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "rare";
         itemShopTags = new String[]{"int","damage","attack_speed","hard_to_tag"};
         key = "item_force_staff";
         bonus_health_regen = 4;
-        bonus_intellect = 1;
+        bonus_intellect = 10;
         localizedName = "Force Staff";
-        push_length = 6;
+        push_length = 600;
     }
 
     public static ForceStaff instance() {

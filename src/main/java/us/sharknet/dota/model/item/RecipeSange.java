@@ -17,7 +17,7 @@ public final class RecipeSange extends Item {
 
     private RecipeSange() {
         iD = 161;
-        itemCost = 6;
+        itemCost = 600;
         itemRecipe = 1;
         itemRequirements = new Item[]{OgreAxe.instance(),BeltOfStrength.instance()};
         itemResult = Sange.instance();

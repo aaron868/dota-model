@@ -30,24 +30,24 @@ public final class TechiesSuicide extends Ability {
     private TechiesSuicide() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 1;
+        abilityCastRange = 100;
         abilityCooldown = new int[]{160,140,120,100};
         abilityManaCost = new int[]{100,125,150,175};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 561;
+        iD = 5601;
         key = "techies_suicide";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        big_radius = 5;
+        big_radius = 500;
         damage = new int[]{500,650,850,1150};
         localizedName = "Suicide Squad, Attack!";
         owningHeroShortKey = "techies";
         partial_damage = new int[]{260,300,340,380};
         respawn_time_percentage = .5;
-        respawn_time_percentage_tooltip = 5;
-        small_radius = 2;
+        respawn_time_percentage_tooltip = 50;
+        small_radius = 200;
     }
 
     public static TechiesSuicide instance() {

@@ -17,7 +17,7 @@ public final class RecipeVeilOfDiscord extends Item {
 
     private RecipeVeilOfDiscord() {
         iD = 189;
-        itemCost = 9;
+        itemCost = 900;
         itemRecipe = 1;
         itemRequirements = new Item[]{HelmOfIronWill.instance(),NullTalisman.instance()};
         itemResult = VeilOfDiscord.instance();

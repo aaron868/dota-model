@@ -25,15 +25,15 @@ public final class TinyGrow extends Ability {
     private TinyGrow() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        iD = 519;
+        iD = 5109;
         key = "tiny_grow";
         bonus_attack_speed = new int[]{-20,-35,-50};
         bonus_building_damage_scepter = 75;
-        bonus_cleave_damage_scepter = 5;
-        bonus_cleave_radius_scepter = 4;
+        bonus_cleave_damage_scepter = 50;
+        bonus_cleave_radius_scepter = 400;
         bonus_damage = new int[]{50,100,150};
         bonus_movement_speed = new int[]{40,50,60};
-        bonus_range_scepter = 17;
+        bonus_range_scepter = 107;
         grow_bonus_damage_pct = new int[]{35,50,65};
         grow_bonus_damage_pct_scepter = new int[]{50,65,80};
         localizedName = "Grow";

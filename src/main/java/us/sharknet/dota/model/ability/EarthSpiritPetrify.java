@@ -29,9 +29,9 @@ public final class EarthSpiritPetrify extends Ability {
     private EarthSpiritPetrify() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         abilityCastPoint = .2;
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = 45;
-        abilityManaCost = 15;
+        abilityManaCost = 150;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";

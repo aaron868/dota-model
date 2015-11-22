@@ -32,9 +32,9 @@ public final class BountyHunterTrack extends Ability {
     private BountyHunterTrack() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 12;
+        abilityCastRange = 1200;
         abilityCooldown = 4;
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES","DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
@@ -47,7 +47,7 @@ public final class BountyHunterTrack extends Ability {
         bonus_gold_radius = new int[]{925,925,925};
         bonus_gold_self = new int[]{200,275,350};
         bonus_move_speed_pct = new int[]{20,20,20};
-        cast_range_tooltip = 12;
+        cast_range_tooltip = 1200;
         duration = new double[]{30.0,30.0,30.0};
         gold_steal = new double[]{0.3,0.4,0.5};
         localizedName = "Track";

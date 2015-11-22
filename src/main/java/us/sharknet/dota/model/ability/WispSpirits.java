@@ -40,7 +40,7 @@ public final class WispSpirits extends Ability {
         key = "wisp_spirits";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         creep_damage = new int[]{8,14,20,26};
-        default_radius = 15;
+        default_radius = 150;
         explode_radius = new int[]{300,300,300,300};
         hero_damage = new int[]{25,50,75,100};
         hero_hit_radius = new int[]{70,70,70,70};

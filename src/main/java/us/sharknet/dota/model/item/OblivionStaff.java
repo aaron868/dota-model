@@ -23,11 +23,11 @@ public final class OblivionStaff extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 67;
         itemAliases = "oblivion staff";
-        itemCost = 165;
+        itemCost = 1650;
         itemQuality = "common";
         itemShopTags = new String[]{"damage","int","attack_speed","regen_mana"};
         key = "item_oblivion_staff";
-        bonus_attack_speed = 1;
+        bonus_attack_speed = 10;
         bonus_damage = 15;
         bonus_intellect = 6;
         bonus_mana_regen = 75;

@@ -56,7 +56,7 @@ public final class TechiesMinefieldSign extends NpcUnit {
         bountyGoldMin = 0;
         bountyXP = 0;
         hasInventory = 0;
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         key = "npc_dota_techies_minefield_sign";
         level = 1;
         magicalResistance = 0;

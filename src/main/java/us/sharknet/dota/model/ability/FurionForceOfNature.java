@@ -25,7 +25,7 @@ public final class FurionForceOfNature extends Ability {
     private FurionForceOfNature() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 75;
+        abilityCastRange = 750;
         abilityCooldown = new int[]{37,37,37,37};
         abilityManaCost = new int[]{160,160,160,160};
         iD = 5247;
@@ -35,8 +35,8 @@ public final class FurionForceOfNature extends Ability {
         localizedName = "Force Of Nature";
         max_treants = new int[]{2,3,4,5};
         owningHeroShortKey = "furion";
-        treant_health_tooltip = 55;
-        treant_max_dmg_tooltip = 3;
+        treant_health_tooltip = 550;
+        treant_max_dmg_tooltip = 30;
         treant_min_dmg_tooltip = 26;
     }
 

@@ -27,7 +27,7 @@ public final class TechiesFocusedDetonate extends Ability {
         maxLevel = 1;
         localizedName = "Focused Detonate";
         owningHeroShortKey = "techies";
-        radius = 7;
+        radius = 700;
     }
 
     public static TechiesFocusedDetonate instance() {

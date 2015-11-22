@@ -36,8 +36,8 @@ public final class GyrocopterFlakCannon extends Ability {
         localizedName = "Flak Cannon";
         max_attacks = new int[]{3,4,5,6};
         owningHeroShortKey = "gyrocopter";
-        projectile_speed = 8;
-        radius = 1;
+        projectile_speed = 800;
+        radius = 1000;
     }
 
     public static GyrocopterFlakCannon instance() {

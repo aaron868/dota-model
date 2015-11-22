@@ -26,7 +26,7 @@ public final class WeaverTimeLapse extends Ability {
     private WeaverTimeLapse() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = new int[]{60,50,40};
         abilityManaCost = new int[]{150,75,0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -36,8 +36,8 @@ public final class WeaverTimeLapse extends Ability {
         fightRecapLevel = 2;
         iD = 5292;
         key = "weaver_time_lapse";
-        cast_range_tooltip_scepter = 1;
-        cooldown_scepter = 2;
+        cast_range_tooltip_scepter = 1000;
+        cooldown_scepter = 20;
         localizedName = "Time Lapse";
         owningHeroShortKey = "weaver";
     }

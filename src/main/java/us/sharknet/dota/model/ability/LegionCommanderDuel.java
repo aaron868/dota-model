@@ -28,7 +28,7 @@ public final class LegionCommanderDuel extends Ability {
     private LegionCommanderDuel() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 15;
+        abilityCastRange = 150;
         abilityCooldown = new double[]{50.0,50.0,50.0};
         abilityManaCost = new int[]{75,75,75};
         abilityModifierSupportValue = 3;

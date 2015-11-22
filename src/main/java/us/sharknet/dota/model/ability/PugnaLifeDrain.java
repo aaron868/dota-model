@@ -49,7 +49,7 @@ public final class PugnaLifeDrain extends Ability {
         key = "pugna_life_drain";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         cast_range_tooltip = new int[]{900,1050,1200};
-        duration_tooltip = 1;
+        duration_tooltip = 10;
         health_drain = new int[]{150,200,250};
         health_drain_scepter = new int[]{180,240,300};
         localizedName = "Life Drain";

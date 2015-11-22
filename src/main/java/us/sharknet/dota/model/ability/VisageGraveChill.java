@@ -28,11 +28,11 @@ public final class VisageGraveChill extends Ability {
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
         abilityCastRange = new int[]{600,600,600,600};
         abilityCooldown = new double[]{16.0,14.0,12.0,10.0};
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 548;
+        iD = 5480;
         key = "visage_grave_chill";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         attackspeed_bonus = new int[]{64,64,64,64};

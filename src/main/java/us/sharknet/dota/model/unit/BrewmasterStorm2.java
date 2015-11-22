@@ -56,12 +56,12 @@ public final class BrewmasterStorm2 extends NpcUnit {
         ability3 = BrewmasterStormWindWalk.instance();
         ability4 = BrewmasterDrunkenHaze.instance();
         armorPhysical = 2;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 84;
         attackDamageMin = 75;
-        attackRange = 6;
+        attackRange = 600;
         attackRate = 1.5;
         baseClass = "npc_dota_brewmaster_storm";
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
@@ -79,19 +79,19 @@ public final class BrewmasterStorm2 extends NpcUnit {
         model = "models/heroes/brewmaster/brewmaster_windspirit.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 35;
+        movementSpeed = 350;
         projectileModel = "particles/units/heroes/hero_brewmaster/brewmaster_storm_attack.vpcf";
-        projectileSpeed = 12;
+        projectileSpeed = 1200;
         soundSet = "Brewmaster_Storm";
-        statusHealth = 15;
+        statusHealth = 1500;
         statusHealthRegen = 2;
-        statusMana = 75;
+        statusMana = 750;
         statusManaRegen = 1.5;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitLabel = "brewmaster_storm";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 800;
         localizedName = "Brewmaster Strom Spirit Level 2";
     }
 

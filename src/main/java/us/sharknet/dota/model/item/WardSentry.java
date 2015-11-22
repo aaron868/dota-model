@@ -36,14 +36,14 @@ public final class WardSentry extends Item {
     private WardSentry() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET"};
         abilityCastPoint = 0;
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = 1;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         iD = 43;
         itemAliases = "sentry ward";
-        itemCost = 2;
+        itemCost = 200;
         itemDeclarations = "DECLARE_PURCHASES_TO_TEAMMATES";
         itemInitialCharges = 2;
         itemPermanent = 0;
@@ -55,10 +55,10 @@ public final class WardSentry extends Item {
         key = "item_ward_sentry";
         model = "models/props_gameplay/sentry_ward_bundle.vmdl";
         duration_minutes_tooltip = 4;
-        health = 2;
-        lifetime = 24;
+        health = 200;
+        lifetime = 240;
         localizedName = "Sentry Ward";
-        true_sight_range = 85;
+        true_sight_range = 850;
         vision_range = 0;
     }
 

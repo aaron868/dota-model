@@ -33,7 +33,7 @@ public final class NagaSirenSongOfTheSiren extends Ability {
         abilityManaCost = new int[]{100,100,100};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         fightRecapLevel = 2;
-        iD = 547;
+        iD = 5470;
         key = "naga_siren_song_of_the_siren";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         animation_rate = new double[]{0.55,0.55,0.55};

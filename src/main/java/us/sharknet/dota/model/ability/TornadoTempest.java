@@ -24,16 +24,16 @@ public final class TornadoTempest extends Ability {
     private TornadoTempest() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 531;
+        iD = 5310;
         key = "tornado_tempest";
         maxLevel = 1;
         attackspeed_slow = -15;
         far_damage = 15;
-        far_radius = 6;
+        far_radius = 600;
         localizedName = "Tornado Tempest";
         movespeed_slow = -15;
         near_damage = 45;
-        near_radius = 15;
+        near_radius = 150;
         owningHeroShortKey = "tornado";
         tick_rate = .25;
     }

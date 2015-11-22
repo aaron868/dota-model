@@ -29,15 +29,15 @@ public final class ShadowShamanShackles extends Ability {
     private ShadowShamanShackles() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 4;
+        abilityCastRange = 400;
         abilityChannelTime = new double[]{2.75,3.5,4.25,5.0};
-        abilityCooldown = 1;
+        abilityCooldown = 10;
         abilityManaCost = new int[]{140,150,160,170};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 58;
+        iD = 5080;
         key = "shadow_shaman_shackles";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         channel_time = new double[]{2.75,3.5,4.25,5.0};

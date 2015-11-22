@@ -27,7 +27,7 @@ public final class WarlockGolemPermanentImmolation extends Ability {
         maxLevel = 3;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         aura_damage = new int[]{30,40,50};
-        aura_radius = 3;
+        aura_radius = 300;
         localizedName = "Permanent Immolation";
         owningHeroShortKey = "warlock";
     }

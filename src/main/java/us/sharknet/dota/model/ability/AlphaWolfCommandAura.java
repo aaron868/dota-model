@@ -17,13 +17,13 @@ public final class AlphaWolfCommandAura extends Ability {
 
     private AlphaWolfCommandAura() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 539;
+        iD = 5309;
         key = "alpha_wolf_command_aura";
         maxLevel = 1;
-        bonus_damage_pct = 3;
+        bonus_damage_pct = 30;
         localizedName = "Command Aura";
         owningHeroShortKey = "alpha_wolf";
-        radius = 9;
+        radius = 900;
     }
 
     public static AlphaWolfCommandAura instance() {

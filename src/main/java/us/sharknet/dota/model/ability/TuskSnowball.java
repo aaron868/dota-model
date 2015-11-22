@@ -34,7 +34,7 @@ public final class TuskSnowball extends Ability {
     private TuskSnowball() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
-        abilityCastRange = 125;
+        abilityCastRange = 1250;
         abilityCooldown = new int[]{21,20,19,18};
         abilityManaCost = new int[]{75,75,75,75};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -49,12 +49,12 @@ public final class TuskSnowball extends Ability {
         snowball_damage = new int[]{80,120,160,200};
         snowball_damage_bonus = new int[]{20,30,40,50};
         snowball_duration = 3;
-        snowball_grab_radius_tooltip = 4;
-        snowball_grow_rate = 4;
-        snowball_radius = 2;
+        snowball_grab_radius_tooltip = 400;
+        snowball_grow_rate = 40;
+        snowball_radius = 200;
         snowball_speed = 675;
         snowball_windup = 3;
-        snowball_windup_radius = 1;
+        snowball_windup_radius = 100;
         stun_duration = new double[]{0.5,0.75,1.0,1.25};
     }
 

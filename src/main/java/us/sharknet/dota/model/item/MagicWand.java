@@ -38,7 +38,7 @@ public final class MagicWand extends Item {
         key = "item_magic_wand";
         model = "models/props_gameplay/magic_wand.vmdl";
         bonus_all_stats = 4;
-        charge_radius = 12;
+        charge_radius = 1200;
         localizedName = "Magic Wand";
         max_charges = 17;
         restore_per_charge = 15;

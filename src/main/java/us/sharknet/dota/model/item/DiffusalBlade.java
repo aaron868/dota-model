@@ -47,7 +47,7 @@ public final class DiffusalBlade extends Item {
     private DiffusalBlade() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = 0;
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = 0;
         abilityManaCost = 0;
         abilitySharedCooldown = "diffusal";
@@ -58,7 +58,7 @@ public final class DiffusalBlade extends Item {
         iD = 174;
         itemAliases = "diffusal blade 1";
         itemBaseLevel = 1;
-        itemCost = 315;
+        itemCost = 3150;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisplayCharges = 1;
         itemInitialCharges = 8;
@@ -72,7 +72,7 @@ public final class DiffusalBlade extends Item {
         upgradesItems = "item_diffusal_blade";
         bonus_agility = 20;
         bonus_intellect = 6;
-        cast_range_tooltip = 6;
+        cast_range_tooltip = 600;
         damage_per_burn = 1;
         feedback_mana_burn = 25;
         feedback_mana_burn_ranged = 25;

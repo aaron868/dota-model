@@ -41,7 +41,7 @@ public final class DoomBringerLvlDeath extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = new int[]{125,175,225,275};
         localizedName = "Lvl Death";
-        lvl_bonus_damage = 2;
+        lvl_bonus_damage = 20;
         lvl_bonus_multiple = new int[]{6,5,4,3};
         owningHeroShortKey = "doom_bringer";
     }

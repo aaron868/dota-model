@@ -47,22 +47,22 @@ public final class FurionTreantLarge extends NpcUnit {
 
     private FurionTreantLarge() {
         armorPhysical = 0;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .467;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
-        attackDamageMax = 9;
+        attackDamageMax = 90;
         attackDamageMin = 78;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1;
         baseClass = "npc_dota_creep";
         boundsHullName = "DOTA_HULL_SIZE_REGULAR";
-        bountyGoldMax = 2;
+        bountyGoldMax = 20;
         bountyGoldMin = 14;
-        bountyXP = 3;
+        bountyXP = 30;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         isSummoned = 1;
         key = "npc_dota_furion_treant_large";
         level = 2;
@@ -74,14 +74,14 @@ public final class FurionTreantLarge extends NpcUnit {
         movementTurnRate = .5;
         selectionGroup = "Furion_Treants";
         soundSet = "Furion_Treant";
-        statusHealth = 165;
+        statusHealth = 1650;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 1;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1000;
+        visionNighttimeRange = 800;
         localizedName = "Greater Treant";
     }
 

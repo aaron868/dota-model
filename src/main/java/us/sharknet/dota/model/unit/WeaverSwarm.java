@@ -53,10 +53,10 @@ public final class WeaverSwarm extends NpcUnit {
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
         bountyGoldMax = 34;
         bountyGoldMin = 32;
-        bountyXP = 2;
+        bountyXP = 20;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
-        healthBarOffset = 9;
+        healthBarOffset = 90;
         key = "npc_dota_weaver_swarm";
         level = 2;
         model = "models/heroes/weaver/weaver_bug.vmdl";
@@ -64,9 +64,9 @@ public final class WeaverSwarm extends NpcUnit {
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 0;
         projectileSpeed = 0;
-        ringRadius = 6;
+        ringRadius = 60;
         soundSet = 0;
-        statusHealth = 1;
+        statusHealth = 100;
         statusHealthRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";

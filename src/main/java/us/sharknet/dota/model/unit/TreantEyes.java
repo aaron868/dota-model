@@ -56,12 +56,12 @@ public final class TreantEyes extends NpcUnit {
         bountyGoldMin = 0;
         bountyXP = 0;
         hasInventory = 0;
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         key = "npc_dota_treant_eyes";
         level = 1;
         magicalResistance = 0;
         minimapIcon = "minimap_treant_ult";
-        minimapIconSize = 32;
+        minimapIconSize = 320;
         model = "models/development/invisiblebox.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
@@ -72,8 +72,8 @@ public final class TreantEyes extends NpcUnit {
         statusHealthRegen = .25;
         statusMana = 0;
         statusManaRegen = 0;
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Treant Eyes";
     }
 

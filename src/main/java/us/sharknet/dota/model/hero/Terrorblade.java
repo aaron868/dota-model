@@ -61,7 +61,7 @@ public final class Terrorblade extends Hero {
         ability3 = TerrorbladeMetamorphosis.instance();
         ability4 = TerrorbladeSunder.instance();
         armorPhysical = 4;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 32;
@@ -79,8 +79,8 @@ public final class Terrorblade extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 0;
         enabled = 1;
-        healthBarOffset = 28;
-        heroID = 19;
+        healthBarOffset = 280;
+        heroID = 109;
         heroSelectSoundEffect = "Hero_Terrorblade.Pick";
         heroUnlockOrder = 1;
         key = "npc_dota_hero_terrorblade";
@@ -92,7 +92,7 @@ public final class Terrorblade extends Hero {
         nameAliases = "tb";
         pickSound = "terrorblade_terr_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_terrorblade";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Carry","Pusher","Nuker"};
         rolelevels = new int[]{3,2,1};
         soundSet = "Hero_Terrorblade";

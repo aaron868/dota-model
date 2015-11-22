@@ -31,11 +31,11 @@ public final class TemplarAssassinSelfTrap extends Ability {
         maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Self Trap";
-        movement_speed_bonus = -3;
+        movement_speed_bonus = -30;
         movement_speed_bonus_stage = -5;
         owningHeroShortKey = "templar_assassin";
         trap_duration = 5;
-        trap_radius = 4;
+        trap_radius = 400;
     }
 
     public static TemplarAssassinSelfTrap instance() {

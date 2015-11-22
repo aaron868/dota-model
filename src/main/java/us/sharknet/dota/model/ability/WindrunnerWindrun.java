@@ -35,7 +35,7 @@ public final class WindrunnerWindrun extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{3.0,4.0,5.0,6.0};
         enemy_movespeed_bonus_pct = new int[]{-8,-16,-24,-30};
-        evasion_pct_tooltip = 1;
+        evasion_pct_tooltip = 100;
         localizedName = "Windrun";
         movespeed_bonus_pct = new int[]{50,50,50,50};
         owningHeroShortKey = "windrunner";

@@ -50,33 +50,33 @@ public final class LycanWolf2 extends NpcUnit {
     private LycanWolf2() {
         ability1 = LycanSummonWolvesCriticalStrike.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .33;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
-        attackDamageMax = 3;
+        attackDamageMax = 30;
         attackDamageMin = 27;
-        attackRange = 9;
+        attackRange = 90;
         attackRate = 1.2;
         baseClass = "npc_dota_creep_neutral";
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
         bountyGoldMax = 26;
         bountyGoldMin = 26;
-        bountyXP = 2;
+        bountyXP = 20;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 16;
+        healthBarOffset = 160;
         isSummoned = 1;
         key = "npc_dota_lycan_wolf2";
         level = 2;
-        magicalResistance = 8;
+        magicalResistance = 80;
         model = "models/heroes/lycan/summon_wolves.vmdl";
         modelScale = .95;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 42;
+        movementSpeed = 420;
         projectileSpeed = 0;
-        ringRadius = 7;
+        ringRadius = 70;
         soundSet = "Lycan_Wolf";
-        statusHealth = 24;
+        statusHealth = 240;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
@@ -84,8 +84,8 @@ public final class LycanWolf2 extends NpcUnit {
         unitLabel = "lycan_wolf";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
         useNeutralCreepBehavior = 0;
-        visionDaytimeRange = 12;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1200;
+        visionNighttimeRange = 800;
         localizedName = "Lycan Wolf Level 2";
     }
 

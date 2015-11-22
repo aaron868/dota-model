@@ -43,27 +43,27 @@ public final class SilverEdge extends Item {
         fightRecapLevel = 1;
         iD = 249;
         itemAliases = new String[]{"sb","invis","shadow blade"};
-        itemCost = 545;
+        itemCost = 5450;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "epic";
         itemShopTags = new String[]{"damage","attack_speed","movespeed","hard_to_tag"};
         key = "item_silver_edge";
         backstab_duration = 5;
         backstab_duration_range = 5;
-        backstab_reduction = -4;
+        backstab_reduction = -40;
         backstab_slow = 0;
-        bonus_attack_speed = 3;
+        bonus_attack_speed = 30;
         bonus_damage = 32;
         bonus_strength = 16;
         localizedName = "Silver Edge";
-        maim_attack_speed = -2;
+        maim_attack_speed = -20;
         maim_chance = 15;
         maim_duration = 4;
-        maim_movement_speed = -2;
+        maim_movement_speed = -20;
         windwalk_bonus_damage = 225;
         windwalk_duration = 14;
         windwalk_fade_time = .3;
-        windwalk_movement_speed = 2;
+        windwalk_movement_speed = 20;
     }
 
     public static SilverEdge instance() {

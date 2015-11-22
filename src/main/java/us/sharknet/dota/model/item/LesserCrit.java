@@ -22,12 +22,12 @@ public final class LesserCrit extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 149;
         itemAliases = "crystalys";
-        itemCost = 212;
+        itemCost = 2120;
         itemQuality = "epic";
         itemShopTags = new String[]{"damage","crit"};
         key = "item_lesser_crit";
-        bonus_damage = 3;
-        crit_chance = 2;
+        bonus_damage = 30;
+        crit_chance = 20;
         crit_multiplier = 175;
         localizedName = "Crystalys";
     }

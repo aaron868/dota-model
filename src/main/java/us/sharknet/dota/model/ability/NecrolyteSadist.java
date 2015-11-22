@@ -18,10 +18,10 @@ public final class NecrolyteSadist extends Ability {
 
     private NecrolyteSadist() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 516;
+        iD = 5160;
         key = "necrolyte_sadist";
         health_regen = new int[]{1,2,3,6};
-        hero_multiplier = 1;
+        hero_multiplier = 10;
         localizedName = "Sadist";
         mana_regen = new int[]{2,4,6,12};
         owningHeroShortKey = "necrolyte";

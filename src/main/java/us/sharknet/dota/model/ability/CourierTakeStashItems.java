@@ -18,12 +18,12 @@ public final class CourierTakeStashItems extends Ability {
     private CourierTakeStashItems() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
-        iD = 528;
+        iD = 5208;
         key = "courier_take_stash_items";
         maxLevel = 1;
         localizedName = "Take Stash Items";
         owningHeroShortKey = "courier";
-        stash_pickup_distance = 25;
+        stash_pickup_distance = 250;
     }
 
     public static CourierTakeStashItems instance() {

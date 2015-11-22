@@ -64,7 +64,7 @@ public final class BroodmotherWeb extends NpcUnit {
         movementSpeed = 0;
         projectileSpeed = 0;
         soundSet = 0;
-        statusHealth = 1;
+        statusHealth = 100;
         statusHealthRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";

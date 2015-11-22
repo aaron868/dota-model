@@ -47,9 +47,9 @@ public final class GyrocopterHomingMissile extends NpcUnit {
         attackRange = 0;
         attackRate = 1;
         baseClass = "npc_dota_base_additive";
-        bountyGoldMax = 3;
-        bountyGoldMin = 2;
-        bountyXP = 2;
+        bountyGoldMax = 30;
+        bountyGoldMin = 20;
+        bountyXP = 20;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         key = "npc_dota_gyrocopter_homing_missile";
@@ -60,12 +60,12 @@ public final class GyrocopterHomingMissile extends NpcUnit {
         movementSpeed = 0;
         projectileSpeed = 0;
         soundSet = 0;
-        statusHealth = 1;
+        statusHealth = 100;
         statusHealthRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 4;
-        visionNighttimeRange = 4;
+        visionDaytimeRange = 400;
+        visionNighttimeRange = 400;
         localizedName = "Homing Missile";
     }
 

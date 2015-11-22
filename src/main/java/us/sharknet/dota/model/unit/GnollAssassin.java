@@ -47,12 +47,12 @@ public final class GnollAssassin extends NpcUnit {
     private GnollAssassin() {
         ability1 = GnollAssassinEnvenomedWeapon.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 36;
-        attackDamageMin = 3;
-        attackRange = 5;
+        attackDamageMin = 30;
+        attackRange = 500;
         attackRate = 1.6;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 29;
@@ -60,26 +60,26 @@ public final class GnollAssassin extends NpcUnit {
         bountyXP = 41;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_gnoll_assassin";
         level = 2;
         model = "models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 27;
+        movementSpeed = 270;
         projectileModel = "particles/neutral_fx/gnoll_base_attack.vpcf";
-        projectileSpeed = 15;
-        ringRadius = 4;
+        projectileSpeed = 1500;
+        ringRadius = 40;
         soundSet = "n_creep_Ranged";
-        statusHealth = 37;
+        statusHealth = 370;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 4;
-        visionNighttimeRange = 4;
+        visionDaytimeRange = 400;
+        visionNighttimeRange = 400;
         localizedName = "Vhoul Assassin";
     }
 

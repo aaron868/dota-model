@@ -29,7 +29,7 @@ public final class SkywrathMageArcaneBolt extends Ability {
     private SkywrathMageArcaneBolt() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = new double[]{5.0,4.0,3.0,2.0};
         abilityManaCost = new int[]{70,70,70,70};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -40,7 +40,7 @@ public final class SkywrathMageArcaneBolt extends Ability {
         key = "skywrath_mage_arcane_bolt";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         bolt_damage = new double[]{60.0,80.0,100.0,120.0};
-        bolt_speed = 5;
+        bolt_speed = 500;
         bolt_vision = 325;
         int_multiplier = 1.6;
         localizedName = "Arcane Bolt";

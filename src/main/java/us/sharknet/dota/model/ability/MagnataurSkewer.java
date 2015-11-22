@@ -32,7 +32,7 @@ public final class MagnataurSkewer extends Ability {
         abilityManaCost = new int[]{80,80,80,80};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 552;
+        iD = 5520;
         key = "magnataur_skewer";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Skewer";
@@ -40,10 +40,10 @@ public final class MagnataurSkewer extends Ability {
         range = new int[]{750,900,1050,1200};
         skewer_damage = new int[]{70,140,210,280};
         skewer_radius = 125;
-        skewer_speed = 95;
+        skewer_speed = 950;
         slow_duration = 2.5;
         slow_pct = new int[]{40,40,40,40};
-        tree_radius = 2;
+        tree_radius = 200;
     }
 
     public static MagnataurSkewer instance() {

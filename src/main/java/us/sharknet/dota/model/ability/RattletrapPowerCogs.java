@@ -39,7 +39,7 @@ public final class RattletrapPowerCogs extends Ability {
         localizedName = "Power Cogs";
         owningHeroShortKey = "rattletrap";
         push_length = 252;
-        push_speed = 3;
+        push_speed = 300;
         radius = 225;
         spacing = new int[]{160,160,160,160};
     }

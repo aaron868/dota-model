@@ -22,7 +22,7 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
 
     private ObsidianDestroyerArcaneOrb() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
-        abilityCastRange = 45;
+        abilityCastRange = 450;
         abilityManaCost = new int[]{100,100,100,100};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";

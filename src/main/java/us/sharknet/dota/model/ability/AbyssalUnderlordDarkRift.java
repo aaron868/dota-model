@@ -36,7 +36,7 @@ public final class AbyssalUnderlordDarkRift extends Ability {
         key = "abyssal_underlord_dark_rift";
         localizedName = "Dark Rift";
         owningHeroShortKey = "abyssal_underlord";
-        radius = 45;
+        radius = 450;
         teleport_delay = new double[]{5.0,4.0,3.0};
     }
 

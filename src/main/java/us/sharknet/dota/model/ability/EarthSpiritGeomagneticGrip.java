@@ -33,15 +33,15 @@ public final class EarthSpiritGeomagneticGrip extends Ability {
     private EarthSpiritGeomagneticGrip() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .1;
-        abilityCastRange = 11;
+        abilityCastRange = 1100;
         abilityCooldown = 13;
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_INVULNERABLE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
         fightRecapLevel = 1;
-        iD = 561;
+        iD = 5610;
         key = "earth_spirit_geomagnetic_grip";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Geomagnetic Grip";
@@ -50,9 +50,9 @@ public final class EarthSpiritGeomagneticGrip extends Ability {
         owningHeroShortKey = "earth_spirit";
         pull_units_per_second = 1;
         pull_units_per_second_heroes = 6;
-        radius = 18;
+        radius = 180;
         rock_damage = new int[]{50,100,150,200};
-        speed = 8;
+        speed = 800;
         total_pull_distance = 14;
     }
 

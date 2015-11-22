@@ -31,26 +31,26 @@ public final class ShivasGuard extends Item {
 
     private ShivasGuard() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"};
-        abilityCooldown = 3;
-        abilityManaCost = 1;
+        abilityCooldown = 30;
+        abilityManaCost = 100;
         fightRecapLevel = 1;
         iD = 119;
         itemAliases = "shiva's guard";
-        itemCost = 47;
+        itemCost = 4700;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "epic";
         itemShopTags = new String[]{"int","armor","hard_to_tag"};
         key = "item_shivas_guard";
         aura_attack_speed = -45;
-        aura_radius = 9;
-        blast_damage = 2;
+        aura_radius = 900;
+        blast_damage = 200;
         blast_debuff_duration = 4;
-        blast_movement_speed = -4;
-        blast_radius = 9;
-        blast_speed = 35;
+        blast_movement_speed = -40;
+        blast_radius = 900;
+        blast_speed = 350;
         bonus_armor = 15;
-        bonus_intellect = 3;
+        bonus_intellect = 30;
         localizedName = "Shiva's Guard";
     }
 

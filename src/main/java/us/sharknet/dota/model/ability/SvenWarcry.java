@@ -26,14 +26,14 @@ public final class SvenWarcry extends Ability {
         abilityCooldown = new double[]{32.0,26.0,20.0,14.0};
         abilityDuration = 8;
         abilityManaCost = new int[]{25,25,25,25};
-        iD = 596;
+        iD = 5096;
         key = "sven_warcry";
         duration_tooltip = 8;
         localizedName = "Warcry";
         owningHeroShortKey = "sven";
         warcry_armor = new int[]{5,10,15,20};
         warcry_movespeed = 12;
-        warcry_radius = 9;
+        warcry_radius = 900;
     }
 
     public static SvenWarcry instance() {

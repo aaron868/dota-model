@@ -23,7 +23,7 @@ public final class BeastmasterInnerBeast extends Ability {
         bonus_attack_speed = new int[]{15,25,35,45};
         localizedName = "Inner Beast";
         owningHeroShortKey = "beastmaster";
-        radius = 9;
+        radius = 900;
     }
 
     public static BeastmasterInnerBeast instance() {

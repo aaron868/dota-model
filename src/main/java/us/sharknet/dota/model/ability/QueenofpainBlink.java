@@ -26,9 +26,9 @@ public final class QueenofpainBlink extends Ability {
         abilityManaCost = new int[]{60,60,60,60};
         iD = 5174;
         key = "queenofpain_blink";
-        blink_range = 13;
+        blink_range = 1300;
         localizedName = "Blink";
-        min_blink_range = 2;
+        min_blink_range = 200;
         owningHeroShortKey = "queenofpain";
     }
 

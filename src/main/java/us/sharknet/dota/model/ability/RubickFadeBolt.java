@@ -40,7 +40,7 @@ public final class RubickFadeBolt extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 545;
+        iD = 5450;
         key = "rubick_fade_bolt";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         creep_attack_damage_reduction = new int[]{7,10,13,16};
@@ -51,7 +51,7 @@ public final class RubickFadeBolt extends Ability {
         jump_delay = new double[]{0.25,0.25,0.25,0.25};
         localizedName = "Fade Bolt";
         owningHeroShortKey = "rubick";
-        radius = 44;
+        radius = 440;
     }
 
     public static RubickFadeBolt instance() {

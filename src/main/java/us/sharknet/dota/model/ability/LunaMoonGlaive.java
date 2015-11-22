@@ -25,7 +25,7 @@ public final class LunaMoonGlaive extends Ability {
         damage_reduction_percent = 35;
         localizedName = "Moon Glaive";
         owningHeroShortKey = "luna";
-        range = 5;
+        range = 500;
     }
 
     public static LunaMoonGlaive instance() {

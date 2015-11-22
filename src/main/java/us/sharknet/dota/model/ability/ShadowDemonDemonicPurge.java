@@ -34,7 +34,7 @@ public final class ShadowDemonDemonicPurge extends Ability {
     private ShadowDemonDemonicPurge() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = new double[]{50.0,50.0,50.0};
         abilityDamage = new int[]{200,300,400};
         abilityDuration = new double[]{5.0,5.0,5.0};
@@ -48,8 +48,8 @@ public final class ShadowDemonDemonicPurge extends Ability {
         iD = 5425;
         key = "shadow_demon_demonic_purge";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        charge_restore_time = 4;
-        charge_restore_time_tooltip_scepter = 4;
+        charge_restore_time = 40;
+        charge_restore_time_tooltip_scepter = 40;
         creep_root_duration = new double[]{3.0,3.0,3.0};
         localizedName = "Demonic Purge";
         max_charges = 3;

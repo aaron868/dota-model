@@ -28,10 +28,10 @@ public final class MudGolemRockDestroy extends Ability {
         localizedName = "Rock Destroy";
         movespeed = -25;
         owningHeroShortKey = "mud_golem";
-        radius = 25;
+        radius = 250;
         shard_damage_tooltip = 9;
-        shard_duration_tooltip = 6;
-        shard_health_tooltip = 24;
+        shard_duration_tooltip = 60;
+        shard_health_tooltip = 240;
     }
 
     public static MudGolemRockDestroy instance() {

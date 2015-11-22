@@ -25,7 +25,7 @@ public final class TemplarAssassinRefraction extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
         abilityCooldown = new double[]{17.0,17.0,17.0,17.0};
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         iD = 5194;
         key = "templar_assassin_refraction";

@@ -22,12 +22,12 @@ public final class Javelin extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 7;
         itemAliases = "javelin";
-        itemCost = 15;
+        itemCost = 1500;
         itemQuality = "component";
         itemShopTags = "damage";
         key = "item_javelin";
-        bonus_chance = 2;
-        bonus_chance_damage = 4;
+        bonus_chance = 20;
+        bonus_chance_damage = 40;
         bonus_damage = 21;
         localizedName = "Javelin";
     }

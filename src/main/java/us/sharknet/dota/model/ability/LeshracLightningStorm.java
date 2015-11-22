@@ -30,7 +30,7 @@ public final class LeshracLightningStorm extends Ability {
     private LeshracLightningStorm() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .6;
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = 4;
         abilityDamage = new int[]{50,100,150,200};
         abilityManaCost = new int[]{90,100,110,120};

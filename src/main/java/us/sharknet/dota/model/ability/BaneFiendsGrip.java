@@ -44,7 +44,7 @@ public final class BaneFiendsGrip extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 2;
-        iD = 513;
+        iD = 5013;
         key = "bane_fiends_grip";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         fiend_grip_damage = new int[]{100,155,215};
@@ -52,7 +52,7 @@ public final class BaneFiendsGrip extends Ability {
         fiend_grip_duration = new double[]{5.0,5.0,5.0};
         fiend_grip_duration_scepter = 7;
         fiend_grip_mana_drain = 5;
-        fiend_grip_mana_drain_scepter = 1;
+        fiend_grip_mana_drain_scepter = 10;
         fiend_grip_tick_interval = 1;
         localizedName = "Fiends Grip";
         owningHeroShortKey = "bane";

@@ -35,10 +35,10 @@ public final class PhoenixSunRay extends Ability {
     private PhoenixSunRay() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
         abilityCastPoint = .1;
-        abilityCastRange = 13;
-        abilityCooldown = 2;
+        abilityCastRange = 1300;
+        abilityCooldown = 20;
         abilityDuration = 6;
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
         fightRecapLevel = 1;
         iD = 5626;
@@ -46,14 +46,14 @@ public final class PhoenixSunRay extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         base_dmg = new int[]{15,20,25,30};
         base_heal = new int[]{7,10,13,16};
-        beam_range = 13;
+        beam_range = 1300;
         forward_move_speed = 25;
         hp_cost_perc_per_second = 6;
         hp_perc_dmg = new double[]{1.25,2.5,3.75,5.0};
         hp_perc_heal = new double[]{0.625,1.25,1.875,2.5};
         localizedName = "Sun Ray";
         owningHeroShortKey = "phoenix";
-        radius = 13;
+        radius = 130;
         tick_interval = .2;
         tooltip_duration = 6;
         turn_rate = 2;

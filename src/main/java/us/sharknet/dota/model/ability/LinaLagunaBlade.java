@@ -30,7 +30,7 @@ public final class LinaLagunaBlade extends Ability {
     private LinaLagunaBlade() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.45,0.45,0.45};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new int[]{70,60,50};
         abilityManaCost = new int[]{280,420,680};
         abilityModifierSupportValue = 0;
@@ -40,10 +40,10 @@ public final class LinaLagunaBlade extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 2;
-        iD = 543;
+        iD = 5043;
         key = "lina_laguna_blade";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        cast_range_scepter = 6;
+        cast_range_scepter = 600;
         damage = new int[]{450,650,850};
         damage_delay = .25;
         localizedName = "Laguna Blade";

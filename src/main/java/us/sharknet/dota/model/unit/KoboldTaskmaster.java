@@ -46,12 +46,12 @@ public final class KoboldTaskmaster extends NpcUnit {
     private KoboldTaskmaster() {
         ability1 = KoboldTaskmasterSpeedAura.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .38;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 15;
         attackDamageMin = 14;
-        attackRange = 11;
+        attackRange = 110;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 29;
@@ -59,25 +59,25 @@ public final class KoboldTaskmaster extends NpcUnit {
         bountyXP = 41;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 18;
+        healthBarOffset = 180;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_kobold_taskmaster";
         level = 2;
         model = "models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 33;
+        movementSpeed = 330;
         projectileSpeed = 0;
-        ringRadius = 5;
+        ringRadius = 50;
         soundSet = "n_creep_Melee";
-        statusHealth = 4;
+        statusHealth = 400;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Kobold Foreman";
     }
 

@@ -65,7 +65,7 @@ public final class Pudge extends Hero {
         ability3 = PudgeFleshHeap.instance();
         ability4 = PudgeDismember.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 33;
@@ -84,7 +84,7 @@ public final class Pudge extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 18;
+        healthBarOffset = 180;
         heroGlowColor = new int[]{178,128,114};
         heroID = 14;
         heroSelectSoundEffect = "Hero_Pudge.Pick";

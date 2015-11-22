@@ -16,7 +16,7 @@ public final class AbilityDeward extends Ability {
 
     private AbilityDeward() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         iD = 5669;
         key = "ability_deward";

@@ -32,22 +32,22 @@ public final class MedusaMysticSnake extends Ability {
     private MedusaMysticSnake() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = new double[]{11.0,11.0,11.0,11.0};
         abilityManaCost = new int[]{140,150,160,170};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 555;
+        iD = 5505;
         key = "medusa_mystic_snake";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        initial_speed = 8;
+        initial_speed = 800;
         jump_delay = new double[]{0.25,0.25,0.25,0.25};
         localizedName = "Mystic Snake";
         owningHeroShortKey = "medusa";
         radius = new int[]{475,475,475,475};
-        return_speed = 8;
+        return_speed = 800;
         snake_damage = new int[]{80,120,160,200};
         snake_jumps = new int[]{3,4,5,6};
         snake_mana_steal = new int[]{20,35,50,65};

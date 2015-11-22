@@ -23,13 +23,13 @@ public final class OracleFalsePromise extends Ability {
     private OracleFalsePromise() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .3;
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = new int[]{80,60,40};
-        abilityManaCost = 2;
+        abilityManaCost = 200;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        iD = 564;
+        iD = 5640;
         key = "oracle_false_promise";
         duration = new double[]{6.0,7.0,8.0};
         localizedName = "False Promise";

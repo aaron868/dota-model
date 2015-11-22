@@ -29,22 +29,22 @@ public final class PhantomAssassinStiflingDagger extends Ability {
     private PhantomAssassinStiflingDagger() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 12;
+        abilityCastRange = 1200;
         abilityCooldown = 6;
         abilityDuration = new double[]{1.0,2.0,3.0,4.0};
         abilityManaCost = new int[]{30,25,20,15};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        iD = 519;
+        iD = 5190;
         key = "phantom_assassin_stifling_dagger";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         creep_damage = new int[]{60,100,140,180};
-        dagger_speed = 12;
+        dagger_speed = 1200;
         duration = new int[]{1,2,3,4};
         hero_damage = new int[]{30,50,70,90};
         localizedName = "Stifling Dagger";
-        move_slow = -5;
+        move_slow = -50;
         owningHeroShortKey = "phantom_assassin";
     }
 

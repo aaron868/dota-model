@@ -28,7 +28,7 @@ public final class DisruptorGlimpse extends Ability {
         abilityCastPoint = new double[]{0.05,0.05,0.05,0.05};
         abilityCastRange = new int[]{600,1000,1400,1800};
         abilityCooldown = new double[]{60.0,46.0,32.0,18.0};
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";

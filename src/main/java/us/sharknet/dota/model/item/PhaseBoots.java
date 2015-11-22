@@ -26,20 +26,20 @@ public final class PhaseBoots extends Item {
     private PhaseBoots() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"};
         abilityCooldown = 8;
-        iD = 5;
+        iD = 50;
         itemAliases = "phase boots";
-        itemCost = 129;
+        itemCost = 1290;
         itemDeclarations = "DECLARE_PURCHASES_TO_SPECTATORS";
         itemQuality = "common";
         itemShopTags = new String[]{"damage","move_speed","hard_to_tag"};
         key = "item_phase_boots";
         bonus_attack_speed = 0;
         bonus_damage = 24;
-        bonus_movement_speed = 5;
+        bonus_movement_speed = 50;
         localizedName = "Phase Boots";
         phase_duration = 2.5;
         phase_movement_speed = 24;
-        phase_movement_speed_range = 2;
+        phase_movement_speed_range = 20;
     }
 
     public static PhaseBoots instance() {

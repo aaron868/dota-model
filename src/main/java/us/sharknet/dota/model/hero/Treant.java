@@ -63,7 +63,7 @@ public final class Treant extends Hero {
         ability5 = TreantOvergrowth.instance();
         ability6 = AttributeBonus.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .6;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 64;
@@ -80,7 +80,7 @@ public final class Treant extends Hero {
         banSound = "treant_treant_anger_11";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 26;
+        healthBarOffset = 260;
         heroID = 83;
         heroSelectSoundEffect = "Hero_Treant.Pick";
         key = "npc_dota_hero_treant";
@@ -88,7 +88,7 @@ public final class Treant extends Hero {
         loadoutScale = .75;
         model = "models/heroes/treant_protector/treant_protector.vmdl";
         modelScale = .84;
-        movementSpeed = 3;
+        movementSpeed = 300;
         movementTurnRate = .5;
         pickSound = "treant_treant_spawn_02";
         portrait = "vgui/hud/heroportraits/portrait_treant";
@@ -96,8 +96,8 @@ public final class Treant extends Hero {
         rolelevels = new int[]{3,2,1,1,1};
         soundSet = "Hero_Treant";
         team = "Good";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_treant.vsndevts";
         active = true;
         localizedName = "Treant Protector";

@@ -25,7 +25,7 @@ public final class TreantOvergrowth extends Ability {
     private TreantOvergrowth() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCooldown = 7;
+        abilityCooldown = 70;
         abilityManaCost = new int[]{150,175,200};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -34,7 +34,7 @@ public final class TreantOvergrowth extends Ability {
         key = "treant_overgrowth";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         duration = new double[]{3.0,3.75,4.5};
-        eyes_radius = 8;
+        eyes_radius = 800;
         localizedName = "Overgrowth";
         owningHeroShortKey = "treant";
         radius = 675;

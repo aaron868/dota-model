@@ -21,12 +21,12 @@ public final class Relic extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 54;
         itemAliases = "sacred relic";
-        itemCost = 38;
+        itemCost = 3800;
         itemQuality = "secret_shop";
         itemShopTags = "damage";
         key = "item_relic";
         secretShop = 1;
-        bonus_damage = 6;
+        bonus_damage = 60;
         localizedName = "Sacred Relic";
     }
 

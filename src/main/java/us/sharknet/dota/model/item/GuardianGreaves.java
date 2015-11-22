@@ -35,31 +35,31 @@ public final class GuardianGreaves extends Item {
 
     private GuardianGreaves() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
-        abilityCooldown = 4;
+        abilityCooldown = 40;
         abilityManaCost = 0;
         fightRecapLevel = 1;
         iD = 231;
         itemAlertable = 1;
         itemAliases = "guardian greaves";
-        itemCost = 53;
+        itemCost = 5300;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "rare";
         itemShopTags = new String[]{"int","armor","regen_health","hard_to_tag"};
         key = "item_guardian_greaves";
         aura_armor = 2;
         aura_armor_bonus = 15;
-        aura_bonus_threshold = 2;
+        aura_bonus_threshold = 20;
         aura_health_regen = 4;
         aura_health_regen_bonus = 15;
-        aura_radius = 9;
+        aura_radius = 900;
         bonus_all_stats = 5;
         bonus_armor = 5;
-        bonus_mana = 25;
+        bonus_mana = 250;
         bonus_movement = 55;
         localizedName = "Guardian Greaves";
-        replenish_health = 25;
-        replenish_mana = 16;
-        replenish_radius = 9;
+        replenish_health = 250;
+        replenish_mana = 160;
+        replenish_radius = 900;
     }
 
     public static GuardianGreaves instance() {

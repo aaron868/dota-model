@@ -31,25 +31,25 @@ public final class SkeletonKingReincarnation extends Ability {
     private SkeletonKingReincarnation() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityCooldown = new int[]{260,160,60};
-        abilityManaCost = 16;
+        abilityManaCost = 160;
         abilityModifierSupportValue = .2;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         fightRecapLevel = 2;
-        iD = 589;
+        iD = 5089;
         key = "skeleton_king_reincarnation";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         attackslow_tooltip = -75;
-        aura_radius = 12;
-        aura_radius_tooltip_scepter = 12;
+        aura_radius = 1200;
+        aura_radius_tooltip_scepter = 1200;
         localizedName = "Reincarnation";
         movespeed = -75;
         owningHeroShortKey = "skeleton_king";
         reincarnate_time = new double[]{3.0,3.0,3.0};
         scepter_duration = 7;
         slow_duration = 5;
-        slow_radius = 9;
+        slow_radius = 900;
     }
 
     public static SkeletonKingReincarnation instance() {

@@ -47,12 +47,12 @@ public final class RockGolem extends NpcUnit {
     private RockGolem() {
         ability1 = NeutralSpellImmunity.instance();
         armorPhysical = 4;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 33;
         attackDamageMin = 29;
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 62;
@@ -60,7 +60,7 @@ public final class RockGolem extends NpcUnit {
         bountyXP = 119;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 22;
+        healthBarOffset = 220;
         isAncient = 1;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_rock_golem";
@@ -68,18 +68,18 @@ public final class RockGolem extends NpcUnit {
         model = "models/creeps/neutral_creeps/n_creep_golem_a/neutral_creep_golem_a.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 27;
+        movementSpeed = 270;
         projectileSpeed = 0;
-        ringRadius = 6;
+        ringRadius = 60;
         soundSet = "n_creep_Melee";
-        statusHealth = 8;
+        statusHealth = 800;
         statusHealthRegen = .5;
-        statusMana = 4;
+        statusMana = 400;
         statusManaRegen = 1;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Ancient Rock Golem";
     }
 

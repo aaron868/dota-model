@@ -31,9 +31,9 @@ public final class MorphlingHybrid extends Ability {
     private MorphlingHybrid() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         abilityCastPoint = .25;
-        abilityCastRange = 6;
-        abilityCooldown = 14;
-        abilityManaCost = 2;
+        abilityCastRange = 600;
+        abilityCooldown = 140;
+        abilityManaCost = 200;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
         fightRecapLevel = 1;
@@ -48,7 +48,7 @@ public final class MorphlingHybrid extends Ability {
         illusion_incoming_dmg_pct_tooltip = new int[]{100,100,100};
         localizedName = "Hybrid";
         owningHeroShortKey = "morphling";
-        tooltip_cast_range = 6;
+        tooltip_cast_range = 600;
         tooltip_illusion_damage_out_pct = new double[]{50.0,50.0,50.0};
     }
 

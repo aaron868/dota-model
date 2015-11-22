@@ -17,7 +17,7 @@ public final class RecipeMekansm extends Item {
 
     private RecipeMekansm() {
         iD = 78;
-        itemCost = 9;
+        itemCost = 900;
         itemRecipe = 1;
         itemRequirements = new Item[]{Headdress.instance(),Buckler.instance()};
         itemResult = Mekansm.instance();

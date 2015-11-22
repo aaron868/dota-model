@@ -28,7 +28,7 @@ public final class VisageSummonFamiliarsStoneForm extends Ability {
     private VisageSummonFamiliarsStoneForm() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = 0;
-        abilityCastRange = 16;
+        abilityCastRange = 160;
         abilityCooldown = 26;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5484;
@@ -43,7 +43,7 @@ public final class VisageSummonFamiliarsStoneForm extends Ability {
         stun_damage = new int[]{60,100,140};
         stun_delay = 1;
         stun_duration = new double[]{1.0,1.25,1.5};
-        stun_radius = 34;
+        stun_radius = 340;
     }
 
     public static VisageSummonFamiliarsStoneForm instance() {

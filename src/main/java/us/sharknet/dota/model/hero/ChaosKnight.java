@@ -61,7 +61,7 @@ public final class ChaosKnight extends Hero {
         ability4 = ChaosKnightPhantasm.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = 2;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 59;
@@ -71,7 +71,7 @@ public final class ChaosKnight extends Hero {
         attributeAgilityGain = 2.1;
         attributeBaseAgility = 14;
         attributeBaseIntelligence = 16;
-        attributeBaseStrength = 2;
+        attributeBaseStrength = 20;
         attributeIntelligenceGain = 1.2;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.9;
@@ -79,7 +79,7 @@ public final class ChaosKnight extends Hero {
         botImplemented = 1;
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 22;
+        healthBarOffset = 220;
         heroID = 81;
         heroSelectSoundEffect = "Hero_ChaosKnight.Pick";
         heroUnlockOrder = 3;

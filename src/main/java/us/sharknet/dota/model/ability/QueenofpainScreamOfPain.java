@@ -35,7 +35,7 @@ public final class QueenofpainScreamOfPain extends Ability {
         area_of_effect = 475;
         localizedName = "Scream Of Pain";
         owningHeroShortKey = "queenofpain";
-        projectile_speed = 9;
+        projectile_speed = 900;
     }
 
     public static QueenofpainScreamOfPain instance() {

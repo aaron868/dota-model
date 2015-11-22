@@ -25,7 +25,7 @@ public final class EnigmaMidnightPulse extends Ability {
     private EnigmaMidnightPulse() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .1;
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = 35;
         abilityManaCost = new int[]{95,110,125,140};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
@@ -37,7 +37,7 @@ public final class EnigmaMidnightPulse extends Ability {
         duration = 11;
         localizedName = "Midnight Pulse";
         owningHeroShortKey = "enigma";
-        radius = 55;
+        radius = 550;
     }
 
     public static EnigmaMidnightPulse instance() {

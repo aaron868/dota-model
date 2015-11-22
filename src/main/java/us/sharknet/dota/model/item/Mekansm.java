@@ -36,19 +36,19 @@ public final class Mekansm extends Item {
         iD = 79;
         itemAlertable = 1;
         itemAliases = new String[]{"mechanism","mekansm"};
-        itemCost = 23;
+        itemCost = 2300;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "rare";
         itemShopTags = new String[]{"agi","int","str","armor","boost_health"};
         key = "item_mekansm";
         aura_health_regen = 4;
-        aura_radius = 9;
+        aura_radius = 900;
         bonus_all_stats = 5;
         bonus_armor = 5;
-        heal_amount = 25;
+        heal_amount = 250;
         heal_armor_duration = 25;
         heal_bonus_armor = 2;
-        heal_radius = 9;
+        heal_radius = 900;
         localizedName = "Mekansm";
     }
 

@@ -77,12 +77,12 @@ public final class Morphling extends Hero {
         abilityDraftDisabled = 1;
         abilityLayout = 5;
         armorPhysical = -2;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 22;
         attackDamageMin = 13;
-        attackRange = 35;
+        attackRange = 350;
         attackRate = 1.6;
         attributeAgilityGain = 3.4;
         attributeBaseAgility = 24;
@@ -94,9 +94,9 @@ public final class Morphling extends Hero {
         banSound = "morphling_mrph_anger_07";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 14;
+        healthBarOffset = 140;
         heroGlowColor = new int[]{33,255,255};
-        heroID = 1;
+        heroID = 10;
         heroSelectSoundEffect = "Hero_Morphling.Pick";
         heroUnlockOrder = 3;
         idleSoundLoop = "Hero_Morphling.IdleLoop";
@@ -111,7 +111,7 @@ public final class Morphling extends Hero {
         pickSound = "morphling_mrph_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_morphling";
         projectileModel = "particles/units/heroes/hero_morphling/morphling_base_attack.vpcf";
-        projectileSpeed = 13;
+        projectileSpeed = 1300;
         role = new String[]{"Carry","Escape","Durable","Nuker","Disabler"};
         rolelevels = new int[]{3,3,2,1,1};
         soundSet = "Hero_Morphling";

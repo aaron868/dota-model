@@ -34,7 +34,7 @@ public final class QueenofpainShadowStrike extends Ability {
         abilityCastRange = new int[]{450,475,500,525};
         abilityCooldown = new double[]{16.0,12.0,8.0,4.0};
         abilityDuration = new double[]{15.0,15.0,15.0,15.0};
-        abilityManaCost = 11;
+        abilityManaCost = 110;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
@@ -48,7 +48,7 @@ public final class QueenofpainShadowStrike extends Ability {
         localizedName = "Shadow Strike";
         movement_slow = new int[]{-20,-30,-40,-50};
         owningHeroShortKey = "queenofpain";
-        projectile_speed = 9;
+        projectile_speed = 900;
         strike_damage = new int[]{50,75,100,125};
     }
 

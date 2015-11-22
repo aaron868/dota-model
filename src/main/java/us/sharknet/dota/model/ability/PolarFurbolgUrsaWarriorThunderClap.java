@@ -26,10 +26,10 @@ public final class PolarFurbolgUrsaWarriorThunderClap extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = .5;
         abilityCooldown = 12;
-        abilityDamage = 15;
-        abilityManaCost = 1;
+        abilityDamage = 150;
+        abilityManaCost = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 532;
+        iD = 5302;
         key = "polar_furbolg_ursa_warrior_thunder_clap";
         maxLevel = 1;
         attackspeed_slow = -25;
@@ -37,7 +37,7 @@ public final class PolarFurbolgUrsaWarriorThunderClap extends Ability {
         localizedName = "Thunder Clap";
         movespeed_slow = -25;
         owningHeroShortKey = "polar_furbolg_ursa_warrior";
-        radius = 3;
+        radius = 300;
     }
 
     public static PolarFurbolgUrsaWarriorThunderClap instance() {

@@ -31,19 +31,19 @@ public final class Satanic extends Item {
         fightRecapLevel = 2;
         iD = 156;
         itemAliases = "satanic";
-        itemCost = 59;
+        itemCost = 5900;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "artifact";
         itemShopTags = new String[]{"damage","str","armor","unique","hard_to_tag"};
         key = "item_satanic";
         bonus_armor = 5;
-        bonus_damage = 2;
+        bonus_damage = 20;
         bonus_strength = 25;
         lifesteal_percent = 25;
         localizedName = "Satanic";
         unholy_duration = 4;
         unholy_lifesteal_percent = 175;
-        unholy_lifesteal_total_tooltip = 2;
+        unholy_lifesteal_total_tooltip = 200;
     }
 
     public static Satanic instance() {

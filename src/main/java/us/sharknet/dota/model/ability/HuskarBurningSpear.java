@@ -26,7 +26,7 @@ public final class HuskarBurningSpear extends Ability {
     private HuskarBurningSpear() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 45;
+        abilityCastRange = 450;
         abilityCooldown = new double[]{0.0,0.0,0.0,0.0};
         abilityDamage = new int[]{5,10,15,20};
         abilityDuration = 8;

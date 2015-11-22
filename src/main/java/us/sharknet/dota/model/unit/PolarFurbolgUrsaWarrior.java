@@ -48,12 +48,12 @@ public final class PolarFurbolgUrsaWarrior extends NpcUnit {
         ability1 = PolarFurbolgUrsaWarriorThunderClap.instance();
         ability2 = CentaurKhanEnduranceAura.instance();
         armorPhysical = 4;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 55;
         attackDamageMin = 49;
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1.55;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 88;
@@ -68,18 +68,18 @@ public final class PolarFurbolgUrsaWarrior extends NpcUnit {
         model = "models/creeps/neutral_creeps/n_creep_furbolg/n_creep_furbolg_disrupter.vmdl";
         modelScale = .95;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 32;
+        movementSpeed = 320;
         projectileSpeed = 0;
-        ringRadius = 7;
+        ringRadius = 70;
         soundSet = "n_creep_Melee";
-        statusHealth = 95;
+        statusHealth = 950;
         statusHealthRegen = 1;
-        statusMana = 3;
+        statusMana = 300;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Hellbear Smasher";
     }
 

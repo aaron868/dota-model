@@ -20,16 +20,16 @@ public final class Yasha extends Item {
 
     private Yasha() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 17;
+        iD = 170;
         itemAliases = "yasha";
-        itemCost = 25;
+        itemCost = 2050;
         itemQuality = "artifact";
         itemShopTags = new String[]{"agi","attack_speed","move_speed"};
         key = "item_yasha";
         bonus_agility = 16;
         bonus_attack_speed = 15;
         localizedName = "Yasha";
-        movement_speed_percent_bonus = 1;
+        movement_speed_percent_bonus = 10;
     }
 
     public static Yasha instance() {

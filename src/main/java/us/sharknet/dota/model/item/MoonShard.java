@@ -27,14 +27,14 @@ public final class MoonShard extends Item {
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CUSTOM"};
         iD = 247;
         itemAliases = "moon shard";
-        itemCost = 4;
+        itemCost = 4000;
         itemQuality = "common";
         itemShopTags = "attack_speed";
         key = "item_moon_shard";
         sideShop = 0;
-        bonus_attack_speed = 12;
-        bonus_night_vision = 25;
-        consumed_bonus = 6;
+        bonus_attack_speed = 120;
+        bonus_night_vision = 250;
+        consumed_bonus = 60;
         localizedName = "Moon Shard";
     }
 

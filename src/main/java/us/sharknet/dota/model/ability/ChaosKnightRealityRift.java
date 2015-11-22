@@ -28,7 +28,7 @@ public final class ChaosKnightRealityRift extends Ability {
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
         abilityCastRange = new int[]{550,600,650,700};
         abilityCooldown = new int[]{24,18,12,6};
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;

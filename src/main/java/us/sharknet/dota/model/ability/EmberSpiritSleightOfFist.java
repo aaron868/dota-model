@@ -26,17 +26,17 @@ public final class EmberSpiritSleightOfFist extends Ability {
     private EmberSpiritSleightOfFist() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = 0;
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = new double[]{30.0,22.0,14.0,6.0};
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         fightRecapLevel = 1;
-        iD = 564;
+        iD = 5604;
         key = "ember_spirit_sleight_of_fist";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         attack_interval = .2;
         bonus_hero_damage = new int[]{20,40,60,80};
-        creep_damage_penalty = -5;
+        creep_damage_penalty = -50;
         localizedName = "Sleight Of Fist";
         owningHeroShortKey = "ember_spirit";
         radius = new int[]{250,350,450,550};

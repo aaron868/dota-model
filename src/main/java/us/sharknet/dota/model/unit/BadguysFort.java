@@ -78,26 +78,26 @@ public final class BadguysFort extends NpcUnit {
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_SIEGE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE";
-        healthBarOffset = 4;
+        healthBarOffset = 400;
         key = "npc_dota_badguys_fort";
         magicalResistance = 0;
         minimapIcon = "minimap_ancient";
-        minimapIconSize = 4;
+        minimapIconSize = 400;
         model = "models/buildings/building_racks_melee_reference.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
         movementTurnRate = 0;
         projectileSpeed = 0;
-        ringRadius = 35;
+        ringRadius = 350;
         soundSet = "Creep_Good_Melee";
-        statusHealth = 425;
+        statusHealth = 4250;
         statusHealthRegen = 3;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_BADGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING";
-        visionDaytimeRange = 19;
-        visionNighttimeRange = 12;
+        visionDaytimeRange = 1900;
+        visionNighttimeRange = 1200;
         localizedName = "Dire's Ancient";
     }
 

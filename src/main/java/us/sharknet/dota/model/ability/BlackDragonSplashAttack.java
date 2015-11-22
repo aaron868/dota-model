@@ -29,9 +29,9 @@ public final class BlackDragonSplashAttack extends Ability {
         damage_percent_mid = 5;
         localizedName = "Splash Attack";
         owningHeroShortKey = "black_dragon";
-        range_close = 5;
-        range_far = 25;
-        range_mid = 15;
+        range_close = 50;
+        range_far = 250;
+        range_mid = 150;
     }
 
     public static BlackDragonSplashAttack instance() {

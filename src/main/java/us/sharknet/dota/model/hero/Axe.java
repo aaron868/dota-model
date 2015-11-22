@@ -63,7 +63,7 @@ public final class Axe extends Hero {
         ability3 = AxeCounterHelix.instance();
         ability4 = AxeCullingBlade.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 28;
@@ -71,7 +71,7 @@ public final class Axe extends Hero {
         attackRange = 128;
         attackRate = 1.7;
         attributeAgilityGain = 2.2;
-        attributeBaseAgility = 2;
+        attributeBaseAgility = 20;
         attributeBaseIntelligence = 18;
         attributeBaseStrength = 25;
         attributeIntelligenceGain = 1.6;
@@ -82,7 +82,7 @@ public final class Axe extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 16;
+        healthBarOffset = 160;
         heroGlowColor = new int[]{222,60,36};
         heroID = 2;
         heroSelectSoundEffect = "Hero_Axe.Pick";
@@ -92,7 +92,7 @@ public final class Axe extends Hero {
         loadoutScale = .95;
         model = "models/heroes/axe/axe.vmdl";
         modelScale = 1;
-        movementSpeed = 29;
+        movementSpeed = 290;
         movementTurnRate = .6;
         pickSound = "axe_axe_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_axe";

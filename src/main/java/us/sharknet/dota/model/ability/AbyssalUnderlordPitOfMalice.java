@@ -26,7 +26,7 @@ public final class AbyssalUnderlordPitOfMalice extends Ability {
     private AbyssalUnderlordPitOfMalice() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = .6;
-        abilityCastRange = 75;
+        abilityCastRange = 750;
         abilityCooldown = new double[]{24.0,21.0,18.0,15.0};
         abilityManaCost = new int[]{100,115,130,145};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -36,7 +36,7 @@ public final class AbyssalUnderlordPitOfMalice extends Ability {
         ensnare_duration = new double[]{1.0,1.5,2.0,2.5};
         localizedName = "Pit Of Malice";
         owningHeroShortKey = "abyssal_underlord";
-        pit_damage = 1;
+        pit_damage = 100;
         pit_duration = 7;
         pit_interval = .5;
         radius = 275;

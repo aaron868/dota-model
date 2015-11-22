@@ -30,7 +30,7 @@ public final class BristlebackViscousNasalGoo extends Ability {
     private BristlebackViscousNasalGoo() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .3;
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{1.5,1.5,1.5,1.5};
         abilityManaCost = new int[]{30,30,30,30};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
@@ -40,10 +40,10 @@ public final class BristlebackViscousNasalGoo extends Ability {
         key = "bristleback_viscous_nasal_goo";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         armor_per_stack = new double[]{1.0,1.4,1.8,2.2};
-        base_move_slow = 2;
+        base_move_slow = 20;
         goo_duration = 5;
         goo_duration_creep = 1;
-        goo_speed = 1;
+        goo_speed = 1000;
         localizedName = "Viscous Nasal Goo";
         move_slow_per_stack = new int[]{3,6,9,12};
         owningHeroShortKey = "bristleback";

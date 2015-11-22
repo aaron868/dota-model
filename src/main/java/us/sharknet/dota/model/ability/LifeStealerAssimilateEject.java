@@ -24,7 +24,7 @@ public final class LifeStealerAssimilateEject extends Ability {
         iD = 5675;
         key = "life_stealer_assimilate_eject";
         maxLevel = 1;
-        damage_tooltip = 3;
+        damage_tooltip = 300;
         localizedName = "Eject";
         owningHeroShortKey = "life_stealer";
         radius_tooltip = new int[]{700,700,700};

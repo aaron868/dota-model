@@ -42,7 +42,7 @@ public final class RubickTelekinesis extends Ability {
         lift_duration = new double[]{1.5,1.75,2.0,2.25};
         localizedName = "Telekinesis";
         max_land_distance = new int[]{375,375,375,375};
-        max_land_distance_allied = 95;
+        max_land_distance_allied = 950;
         owningHeroShortKey = "rubick";
         radius = new int[]{325,325,325,325};
         stun_duration = new double[]{1.0,1.25,1.5,1.75};

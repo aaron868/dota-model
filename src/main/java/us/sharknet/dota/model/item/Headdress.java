@@ -22,12 +22,12 @@ public final class Headdress extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 94;
         itemAliases = "headdress";
-        itemCost = 6;
+        itemCost = 600;
         itemQuality = "rare";
         itemShopTags = new String[]{"str","int","agi","regen_health"};
         key = "item_headdress";
         aura_health_regen = 3;
-        aura_radius = 9;
+        aura_radius = 900;
         bonus_all_stats = 2;
         localizedName = "Headdress";
     }

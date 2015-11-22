@@ -23,14 +23,14 @@ public final class GreaterCrit extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 141;
         itemAliases = "daedalus";
-        itemCost = 552;
+        itemCost = 5520;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "epic";
         itemShopTags = new String[]{"damage","crit"};
         key = "item_greater_crit";
         bonus_damage = 81;
         crit_chance = 25;
-        crit_multiplier = 24;
+        crit_multiplier = 240;
         localizedName = "Daedalus";
     }
 

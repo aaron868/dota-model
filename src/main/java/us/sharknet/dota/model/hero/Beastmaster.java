@@ -70,7 +70,7 @@ public final class Beastmaster extends Hero {
         abilityDraftDisabled = 1;
         abilityLayout = 5;
         armorPhysical = 2;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 45;
@@ -88,7 +88,7 @@ public final class Beastmaster extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 18;
+        healthBarOffset = 180;
         heroGlowColor = new int[]{215,174,81};
         heroID = 38;
         heroSelectSoundEffect = "Hero_Beastmaster.Pick";
@@ -98,7 +98,7 @@ public final class Beastmaster extends Hero {
         lastHitChallengeRival = "npc_dota_hero_skeleton_king";
         model = "models/heroes/beastmaster/beastmaster.vmdl";
         modelScale = .77;
-        movementSpeed = 31;
+        movementSpeed = 310;
         movementTurnRate = .4;
         nameAliases = "bm";
         pickSound = "beastmaster_beas_spawn_01";

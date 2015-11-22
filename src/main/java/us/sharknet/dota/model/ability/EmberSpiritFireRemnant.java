@@ -28,12 +28,12 @@ public final class EmberSpiritFireRemnant extends Ability {
     private EmberSpiritFireRemnant() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
         abilityCastPoint = 0;
-        abilityCastRange = 15;
+        abilityCastRange = 1500;
         abilityCooldown = 0;
         abilityManaCost = 0;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 566;
+        iD = 5606;
         key = "ember_spirit_fire_remnant";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         charge_restore_time = 35;
@@ -42,8 +42,8 @@ public final class EmberSpiritFireRemnant extends Ability {
         localizedName = "Fire Remnant";
         max_charges = 3;
         owningHeroShortKey = "ember_spirit";
-        radius = 45;
-        speed_multiplier = 25;
+        radius = 450;
+        speed_multiplier = 250;
     }
 
     public static EmberSpiritFireRemnant instance() {

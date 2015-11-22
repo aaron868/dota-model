@@ -20,8 +20,8 @@ public final class LycanSummonWolvesCriticalStrike extends Ability {
         iD = 5399;
         key = "lycan_summon_wolves_critical_strike";
         maxLevel = 1;
-        crit_chance = 3;
-        crit_damage = 17;
+        crit_chance = 30;
+        crit_damage = 170;
         localizedName = "Summon Wolves Critical Strike";
         owningHeroShortKey = "lycan";
     }

@@ -25,16 +25,16 @@ public final class ArcWardenMagneticField extends Ability {
     private ArcWardenMagneticField() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .3;
-        abilityCastRange = 9;
-        abilityCooldown = 5;
-        abilityManaCost = 11;
+        abilityCastRange = 900;
+        abilityCooldown = 50;
+        abilityManaCost = 110;
         fightRecapLevel = 1;
         iD = 5678;
         key = "arc_warden_magnetic_field";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         attack_speed_bonus = new int[]{50,60,70,80};
         duration = new double[]{3.5,4.0,4.5,5.0};
-        evasion_chance = 1;
+        evasion_chance = 100;
         localizedName = "Magnetic Field";
         owningHeroShortKey = "arc_warden";
         radius = 275;

@@ -36,7 +36,7 @@ public final class WarlockRainOfChaos extends Ability {
     private WarlockRainOfChaos() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCastRange = 12;
+        abilityCastRange = 1200;
         abilityCooldown = new int[]{165,165,165};
         abilityManaCost = new int[]{200,300,400};
         abilityModifierSupportValue = .5;
@@ -46,8 +46,8 @@ public final class WarlockRainOfChaos extends Ability {
         iD = 5165;
         key = "warlock_rain_of_chaos";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        aoe = 6;
-        bounty_reduction_scepter = 5;
+        aoe = 600;
+        bounty_reduction_scepter = 50;
         golem_armor_tooltip = new int[]{6,9,12};
         golem_dmg_tooltip = new int[]{75,100,125};
         golem_dmg_tooltip_scepter = new int[]{56,75,94};

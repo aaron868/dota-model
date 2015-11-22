@@ -49,7 +49,7 @@ public final class GraniteGolem extends NpcUnit {
         ability1 = GraniteGolemHpAura.instance();
         ability2 = NeutralSpellImmunity.instance();
         armorPhysical = 8;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 87;
@@ -58,11 +58,11 @@ public final class GraniteGolem extends NpcUnit {
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 121;
-        bountyGoldMin = 17;
+        bountyGoldMin = 107;
         bountyXP = 155;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 22;
+        healthBarOffset = 220;
         isAncient = 1;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_granite_golem";
@@ -70,18 +70,18 @@ public final class GraniteGolem extends NpcUnit {
         model = "models/creeps/neutral_creeps/n_creep_golem_a/neutral_creep_golem_a.vmdl";
         modelScale = 1.15;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 27;
+        movementSpeed = 270;
         projectileSpeed = 0;
-        ringRadius = 6;
+        ringRadius = 60;
         soundSet = "n_creep_Melee";
-        statusHealth = 17;
+        statusHealth = 1700;
         statusHealthRegen = 1.5;
-        statusMana = 6;
+        statusMana = 600;
         statusManaRegen = 1.5;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Ancient Granite Golem";
     }
 

@@ -27,7 +27,7 @@ public final class DragonKnightDragonTail extends Ability {
     private DragonKnightDragonTail() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 15;
+        abilityCastRange = 150;
         abilityCooldown = new int[]{12,11,10,9};
         abilityDamage = new int[]{25,50,75,100};
         abilityManaCost = new int[]{100,100,100,100};
@@ -38,7 +38,7 @@ public final class DragonKnightDragonTail extends Ability {
         iD = 5227;
         key = "dragon_knight_dragon_tail";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        dragon_cast_range = 4;
+        dragon_cast_range = 400;
         localizedName = "Dragon Tail";
         owningHeroShortKey = "dragon_knight";
         stun_duration = new double[]{2.5,2.75,3.0,3.25};

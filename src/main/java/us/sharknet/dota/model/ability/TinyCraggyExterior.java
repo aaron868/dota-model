@@ -24,7 +24,7 @@ public final class TinyCraggyExterior extends Ability {
         abilityDamage = new int[]{25,35,45,55};
         abilityModifierSupportBonus = 35;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 518;
+        iD = 5108;
         key = "tiny_craggy_exterior";
         bonus_armor = new int[]{2,3,4,5};
         localizedName = "Craggy Exterior";

@@ -30,7 +30,7 @@ public final class AntimageManaVoid extends Ability {
     private AntimageManaVoid() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{70.0,70.0,70.0};
         abilityManaCost = new int[]{125,200,275};
         abilityModifierSupportValue = 0;
@@ -40,11 +40,11 @@ public final class AntimageManaVoid extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 2;
-        iD = 56;
+        iD = 5006;
         key = "antimage_mana_void";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         localizedName = "Mana Void";
-        mana_void_aoe_radius = 5;
+        mana_void_aoe_radius = 500;
         mana_void_damage_per_mana = new double[]{0.6,0.85,1.1};
         mana_void_ministun = .15;
         owningHeroShortKey = "antimage";

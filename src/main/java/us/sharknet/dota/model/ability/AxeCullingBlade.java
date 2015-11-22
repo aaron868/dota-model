@@ -35,7 +35,7 @@ public final class AxeCullingBlade extends Ability {
     private AxeCullingBlade() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .3;
-        abilityCastRange = 15;
+        abilityCastRange = 150;
         abilityCooldown = new double[]{75.0,65.0,55.0};
         abilityManaCost = new int[]{60,120,180};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -44,18 +44,18 @@ public final class AxeCullingBlade extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 2;
-        iD = 51;
+        iD = 5010;
         key = "axe_culling_blade";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        atk_speed_bonus_tooltip = 3;
+        atk_speed_bonus_tooltip = 30;
         cooldown_scepter = new double[]{6.0,6.0,6.0};
         damage = new int[]{150,250,300};
         kill_threshold = new int[]{250,325,400};
         kill_threshold_scepter = new int[]{300,425,550};
         localizedName = "Culling Blade";
         owningHeroShortKey = "axe";
-        speed_aoe = 9;
-        speed_bonus = 3;
+        speed_aoe = 900;
+        speed_bonus = 30;
         speed_duration = 6;
         speed_duration_scepter = 1;
     }

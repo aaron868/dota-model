@@ -64,12 +64,12 @@ public final class ShadowShaman extends Hero {
         ability3 = ShadowShamanShackles.instance();
         ability4 = ShadowShamanMassSerpentWard.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 33;
         attackDamageMin = 26;
-        attackRange = 5;
+        attackRange = 500;
         attackRate = 1.7;
         attributeAgilityGain = 1.6;
         attributeBaseAgility = 16;
@@ -82,7 +82,7 @@ public final class ShadowShaman extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 13;
+        healthBarOffset = 130;
         heroGlowColor = new int[]{255,167,38};
         heroID = 27;
         heroPool2 = 1;
@@ -99,7 +99,7 @@ public final class ShadowShaman extends Hero {
         pickSound = "shadowshaman_shad_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_shadow_shaman";
         projectileModel = "particles/units/heroes/hero_shadowshaman/shadowshaman_base_attack.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Support","Pusher","Disabler","Nuker","Initiator"};
         rolelevels = new int[]{2,3,3,2,1};
         soundSet = "Hero_ShadowShaman";

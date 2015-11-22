@@ -28,9 +28,9 @@ public final class WinterWyvernWintersCurse extends Ability {
     private WinterWyvernWintersCurse() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = new int[]{110,100,90};
-        abilityManaCost = 25;
+        abilityManaCost = 250;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
@@ -39,11 +39,11 @@ public final class WinterWyvernWintersCurse extends Ability {
         iD = 5654;
         key = "winter_wyvern_winters_curse";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        damage_reduction = 7;
+        damage_reduction = 70;
         duration = new double[]{2.5,3.0,3.5};
         localizedName = "Winters Curse";
         owningHeroShortKey = "winter_wyvern";
-        radius = 4;
+        radius = 400;
     }
 
     public static WinterWyvernWintersCurse instance() {

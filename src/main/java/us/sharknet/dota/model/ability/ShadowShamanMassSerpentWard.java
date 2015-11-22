@@ -32,13 +32,13 @@ public final class ShadowShamanMassSerpentWard extends Ability {
     private ShadowShamanMassSerpentWard() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
         abilityCastPoint = .3;
-        abilityCastRange = 55;
-        abilityCooldown = 12;
+        abilityCastRange = 550;
+        abilityCooldown = 120;
         abilityManaCost = new int[]{200,350,600};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         fightRecapLevel = 2;
-        iD = 581;
+        iD = 5081;
         key = "shadow_shaman_mass_serpent_ward";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         damage_max = new int[]{45,60,75};
@@ -51,7 +51,7 @@ public final class ShadowShamanMassSerpentWard extends Ability {
         mid_splash_radius = new int[]{75,100,110};
         min_splash_radius = new int[]{150,200,220};
         owningHeroShortKey = "shadow_shaman";
-        ward_count = 1;
+        ward_count = 10;
     }
 
     public static ShadowShamanMassSerpentWard instance() {

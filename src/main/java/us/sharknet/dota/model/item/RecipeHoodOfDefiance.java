@@ -15,7 +15,7 @@ public final class RecipeHoodOfDefiance extends Item {
     private final String localizedName;
 
     private RecipeHoodOfDefiance() {
-        iD = 13;
+        iD = 130;
         itemCost = 0;
         itemRecipe = 1;
         itemRequirements = new Item[]{RingOfHealth.instance(),Cloak.instance(),RingOfRegen.instance(),RingOfRegen.instance()};

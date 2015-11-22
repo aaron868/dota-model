@@ -26,7 +26,7 @@ public final class CentaurKhanWarStomp extends Ability {
         abilityCastPoint = .5;
         abilityCooldown = 2;
         abilityDamage = 25;
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5295;
         key = "centaur_khan_war_stomp";
@@ -35,7 +35,7 @@ public final class CentaurKhanWarStomp extends Ability {
         localizedName = "War Stomp";
         non_hero_stun_duration = 3;
         owningHeroShortKey = "centaur_khan";
-        radius = 25;
+        radius = 250;
     }
 
     public static CentaurKhanWarStomp instance() {

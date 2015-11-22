@@ -39,8 +39,8 @@ public final class BeastmasterHawk1 extends NpcUnit {
         armorPhysical = 5;
         attackCapabilities = "DOTA_UNIT_CAP_NO_ATTACK";
         baseClass = "npc_dota_beastmaster_hawk";
-        bountyGoldMax = 3;
-        bountyGoldMin = 3;
+        bountyGoldMax = 30;
+        bountyGoldMin = 30;
         bountyXP = 77;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_WEAK";
@@ -51,16 +51,16 @@ public final class BeastmasterHawk1 extends NpcUnit {
         model = "models/heroes/beastmaster/beastmaster_bird.vmdl";
         modelScale = 1.2;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
-        movementSpeed = 25;
+        movementSpeed = 250;
         movementTurnRate = .6;
         soundSet = 0;
-        statusHealth = 4;
+        statusHealth = 40;
         statusHealthRegen = 1.5;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitLabel = "hawk";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 7;
-        visionNighttimeRange = 7;
+        visionDaytimeRange = 700;
+        visionNighttimeRange = 700;
         wakesNeutrals = 0;
         localizedName = "Hawk Level 1";
     }

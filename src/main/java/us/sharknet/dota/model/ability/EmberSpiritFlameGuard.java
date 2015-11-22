@@ -26,11 +26,11 @@ public final class EmberSpiritFlameGuard extends Ability {
     private EmberSpiritFlameGuard() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = 0;
-        abilityCastRange = 4;
+        abilityCastRange = 400;
         abilityCooldown = 35;
         abilityManaCost = new int[]{80,90,100,110};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 565;
+        iD = 5605;
         key = "ember_spirit_flame_guard";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         absorb_amount = new int[]{50,200,350,500};
@@ -38,7 +38,7 @@ public final class EmberSpiritFlameGuard extends Ability {
         duration = new double[]{8.0,12.0,16.0,20.0};
         localizedName = "Flame Guard";
         owningHeroShortKey = "ember_spirit";
-        radius = 4;
+        radius = 400;
         tick_interval = .2;
     }
 

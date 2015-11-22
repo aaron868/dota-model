@@ -53,16 +53,16 @@ public final class GreaterHawk extends NpcUnit {
         model = "models/heroes/beastmaster/beastmaster_bird.vmdl";
         modelScale = 1.2;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
-        movementSpeed = 4;
+        movementSpeed = 400;
         movementTurnRate = .6;
         soundSet = 0;
-        statusHealth = 1;
+        statusHealth = 100;
         statusHealthRegen = 1.5;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitLabel = "hawk";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 16;
-        visionNighttimeRange = 12;
+        visionDaytimeRange = 1600;
+        visionNighttimeRange = 1200;
         wakesNeutrals = 0;
         localizedName = "Greater Hawk";
     }

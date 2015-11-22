@@ -16,7 +16,7 @@ public final class LifeStealerFeast extends Ability {
 
     private LifeStealerFeast() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 525;
+        iD = 5250;
         key = "life_stealer_feast";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         hp_leech_percent = new double[]{4.0,5.0,6.0,7.0};

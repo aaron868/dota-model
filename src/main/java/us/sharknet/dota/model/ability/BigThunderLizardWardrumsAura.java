@@ -24,7 +24,7 @@ public final class BigThunderLizardWardrumsAura extends Ability {
         damage_bonus = 15;
         localizedName = "Wardrums Aura";
         owningHeroShortKey = "big_thunder_lizard";
-        radius = 9;
+        radius = 900;
         speed_bonus = 15;
     }
 

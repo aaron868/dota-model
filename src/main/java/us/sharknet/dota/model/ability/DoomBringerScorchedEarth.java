@@ -31,7 +31,7 @@ public final class DoomBringerScorchedEarth extends Ability {
         abilityManaCost = new int[]{60,65,70,75};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 534;
+        iD = 5340;
         key = "doom_bringer_scorched_earth";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         bonus_movement_speed_pct = new int[]{16,16,16,16};

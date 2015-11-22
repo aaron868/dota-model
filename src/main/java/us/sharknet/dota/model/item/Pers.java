@@ -24,13 +24,13 @@ public final class Pers extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 69;
         itemAliases = "perseverance";
-        itemCost = 17;
+        itemCost = 1700;
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "common";
         itemShareability = "ITEM_PARTIALLY_SHAREABLE";
         itemShopTags = new String[]{"regen_health","regen_mana"};
         key = "item_pers";
-        bonus_damage = 1;
+        bonus_damage = 10;
         bonus_health_regen = 5;
         bonus_mana_regen = 125;
         localizedName = "Perseverance";

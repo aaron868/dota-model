@@ -45,7 +45,7 @@ public final class JungleStalker extends NpcUnit {
 
     private JungleStalker() {
         armorPhysical = 2;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 64;
@@ -53,12 +53,12 @@ public final class JungleStalker extends NpcUnit {
         attackRange = 128;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
-        bountyGoldMax = 7;
+        bountyGoldMax = 70;
         bountyGoldMin = 52;
         bountyXP = 119;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 22;
+        healthBarOffset = 220;
         isAncient = 1;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_jungle_stalker";
@@ -66,18 +66,18 @@ public final class JungleStalker extends NpcUnit {
         model = "models/creeps/neutral_creeps/n_creep_gargoyle/n_creep_gargoyle.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 32;
+        movementSpeed = 320;
         projectileSpeed = 0;
-        ringRadius = 5;
+        ringRadius = 50;
         soundSet = "n_creep_Melee";
-        statusHealth = 16;
+        statusHealth = 1600;
         statusHealthRegen = .5;
-        statusMana = 4;
+        statusMana = 400;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Ancient Stalker";
     }
 

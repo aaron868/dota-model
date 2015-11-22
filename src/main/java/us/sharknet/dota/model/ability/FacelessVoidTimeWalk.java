@@ -28,7 +28,7 @@ public final class FacelessVoidTimeWalk extends Ability {
         abilityCastPoint = new double[]{0.35,0.35,0.35,0.35};
         abilityCastRange = new int[]{700,900,1100,1300};
         abilityCooldown = new double[]{19.0,17.0,15.0,13.0};
-        abilityManaCost = 9;
+        abilityManaCost = 90;
         abilityModifierSupportValue = .25;
         iD = 5182;
         key = "faceless_void_time_walk";
@@ -37,8 +37,8 @@ public final class FacelessVoidTimeWalk extends Ability {
         localizedName = "Time Walk";
         movement_speed_pct = new int[]{-20,-30,-40,-50};
         owningHeroShortKey = "faceless_void";
-        radius = 3;
-        speed = 3;
+        radius = 300;
+        speed = 3000;
         tooltip_range = new int[]{700,900,1100,1300};
     }
 

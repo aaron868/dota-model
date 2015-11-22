@@ -24,14 +24,14 @@ public final class PowerTreads extends Item {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         iD = 63;
         itemAliases = "power treads";
-        itemCost = 14;
+        itemCost = 1400;
         itemDeclarations = "DECLARE_PURCHASES_TO_SPECTATORS";
         itemQuality = "common";
         itemShopTags = new String[]{"attack_speed","move_speed","int","agi","str"};
         key = "item_power_treads";
         bonus_attack_speed = 25;
         bonus_damage = 0;
-        bonus_movement_speed = 5;
+        bonus_movement_speed = 50;
         bonus_stat = 9;
         localizedName = "Power Treads";
     }

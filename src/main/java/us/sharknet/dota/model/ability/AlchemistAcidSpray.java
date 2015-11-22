@@ -26,7 +26,7 @@ public final class AlchemistAcidSpray extends Ability {
     private AlchemistAcidSpray() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = .2;
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityCooldown = 22;
         abilityManaCost = new int[]{130,140,150,160};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";

@@ -26,12 +26,12 @@ public final class OgreMagiBloodlust extends Ability {
     private OgreMagiBloodlust() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = .45;
-        abilityCastRange = 6;
-        abilityCooldown = 2;
+        abilityCastRange = 600;
+        abilityCooldown = 20;
         abilityManaCost = 75;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC","DOTA_UNIT_TARGET_BUILDING"};
-        iD = 544;
+        iD = 5440;
         key = "ogre_magi_bloodlust";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
         bonus_attack_speed = new int[]{30,40,50,60};

@@ -47,8 +47,8 @@ public final class VenomancerPoisonNova extends Ability {
         duration_scepter = 16;
         localizedName = "Poison Nova";
         owningHeroShortKey = "venomancer";
-        radius = 83;
-        speed = 5;
+        radius = 830;
+        speed = 500;
         start_radius = new int[]{255,255,255};
     }
 

@@ -29,13 +29,13 @@ public final class SvenGodsStrength extends Ability {
         abilityManaCost = new int[]{100,150,200};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         fightRecapLevel = 1;
-        iD = 597;
+        iD = 5097;
         key = "sven_gods_strength";
         gods_strength_damage = new int[]{100,150,200};
         gods_strength_damage_scepter = new int[]{50,75,100};
         localizedName = "Gods Strength";
         owningHeroShortKey = "sven";
-        scepter_aoe = 9;
+        scepter_aoe = 900;
     }
 
     public static SvenGodsStrength instance() {

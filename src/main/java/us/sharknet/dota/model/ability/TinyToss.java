@@ -32,7 +32,7 @@ public final class TinyToss extends Ability {
     private TinyToss() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_RUNE_TARGET"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 13;
+        abilityCastRange = 1300;
         abilityCooldown = 9;
         abilityManaCost = new int[]{120,120,120,120};
         abilityModifierSupportValue = .25;
@@ -40,7 +40,7 @@ public final class TinyToss extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
         fightRecapLevel = 1;
-        iD = 517;
+        iD = 5107;
         key = "tiny_toss";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         bonus_damage_pct = new int[]{20,20,20,20};
@@ -50,7 +50,7 @@ public final class TinyToss extends Ability {
         localizedName = "Toss";
         owningHeroShortKey = "tiny";
         radius = new int[]{275,275,275,275};
-        tooltip_range = 13;
+        tooltip_range = 1300;
         toss_damage = new int[]{75,150,225,300};
     }
 

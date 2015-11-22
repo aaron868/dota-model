@@ -63,12 +63,12 @@ public final class Venomancer extends Hero {
         ability3 = VenomancerPlagueWard.instance();
         ability4 = VenomancerPoisonNova.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 21;
         attackDamageMin = 19;
-        attackRange = 45;
+        attackRange = 450;
         attackRate = 1.7;
         attributeAgilityGain = 2.6;
         attributeBaseAgility = 22;
@@ -80,9 +80,9 @@ public final class Venomancer extends Hero {
         banSound = "venomancer_venm_anger_01";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 15;
+        healthBarOffset = 150;
         heroGlowColor = new int[]{252,172,18};
-        heroID = 4;
+        heroID = 40;
         heroSelectSoundEffect = "Hero_Venomancer.Pick";
         heroUnlockOrder = 0;
         idleExpression = "scenes/venomancer/venomancer_exp_idle_01.vcd";
@@ -96,7 +96,7 @@ public final class Venomancer extends Hero {
         pickSound = "venomancer_venm_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_venomancer";
         projectileModel = "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Support","Nuker","Initiator","Pusher","Disabler"};
         rolelevels = new int[]{2,1,1,1,1};
         soundSet = "Hero_Venomancer";

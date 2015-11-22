@@ -23,7 +23,7 @@ public final class EnragedWildkinToughnessAura extends Ability {
         bonus_armor = 3;
         localizedName = "Toughness Aura";
         owningHeroShortKey = "enraged_wildkin";
-        radius = 9;
+        radius = 900;
     }
 
     public static EnragedWildkinToughnessAura instance() {

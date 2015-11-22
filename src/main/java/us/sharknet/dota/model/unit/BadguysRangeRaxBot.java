@@ -54,7 +54,7 @@ public final class BadguysRangeRaxBot extends NpcUnit {
 
     private BadguysRangeRaxBot() {
         ability1 = BackdoorProtectionInBase.instance();
-        armorPhysical = 1;
+        armorPhysical = 10;
         attackAcquisitionRange = 0;
         attackAnimationPoint = 0;
         attackCapabilities = "DOTA_UNIT_CAP_NO_ATTACK";
@@ -77,7 +77,7 @@ public final class BadguysRangeRaxBot extends NpcUnit {
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_SIEGE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE";
-        healthBarOffset = 25;
+        healthBarOffset = 250;
         key = "npc_dota_badguys_range_rax_bot";
         magicalResistance = 0;
         minimapIcon = "minimap_racks90";
@@ -86,16 +86,16 @@ public final class BadguysRangeRaxBot extends NpcUnit {
         movementSpeed = 0;
         movementTurnRate = 0;
         projectileSpeed = 0;
-        ringRadius = 22;
+        ringRadius = 220;
         soundSet = "Creep_Good_Melee";
-        statusHealth = 12;
+        statusHealth = 1200;
         statusHealthRegen = 0;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_BADGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BARRACKS";
-        visionDaytimeRange = 9;
-        visionNighttimeRange = 6;
+        visionDaytimeRange = 900;
+        visionNighttimeRange = 600;
         localizedName = "Dire Bottom Ranged Barracks";
     }
 

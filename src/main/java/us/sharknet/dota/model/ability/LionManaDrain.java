@@ -29,7 +29,7 @@ public final class LionManaDrain extends Ability {
     private LionManaDrain() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_CHANNELLED","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 85;
+        abilityCastRange = 850;
         abilityChannelTime = 5.1;
         abilityCooldown = new double[]{20.0,15.0,10.0,5.0};
         abilityManaCost = new int[]{10,10,10,10};
@@ -37,10 +37,10 @@ public final class LionManaDrain extends Ability {
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        iD = 546;
+        iD = 5046;
         key = "lion_mana_drain";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        break_distance = 12;
+        break_distance = 1200;
         duration = 5;
         localizedName = "Mana Drain";
         mana_per_second = new int[]{20,40,60,120};

@@ -63,7 +63,7 @@ public final class Lycan extends Hero {
         ability5 = AttributeBonus.instance();
         alternateLoadoutScale = .6;
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .55;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 41;
@@ -81,7 +81,7 @@ public final class Lycan extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 22;
+        healthBarOffset = 220;
         heroGlowColor = new int[]{139,1,1};
         heroID = 77;
         heroSelectSoundEffect = "Hero_Lycan.Pick";
@@ -90,7 +90,7 @@ public final class Lycan extends Hero {
         lastHitChallengeRival = "npc_dota_hero_skeleton_king";
         model = "models/heroes/lycan/lycan.vmdl";
         modelScale = .85;
-        movementSpeed = 35;
+        movementSpeed = 305;
         movementTurnRate = .5;
         pickSound = "lycan_lycan_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_lycan";

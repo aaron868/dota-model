@@ -34,14 +34,14 @@ public final class Vladmir extends Item {
         itemShopTags = new String[]{"lifesteal","damage","armor","regen_mana"};
         key = "item_vladmir";
         armor_aura = 5;
-        aura_radius = 9;
+        aura_radius = 900;
         bonus_all_stats = 2;
         damage_aura = 15;
         hp_regen = 3;
         localizedName = "Vladmir's Offering";
         mana_regen_aura = .8;
         vampiric_aura = 15;
-        vampiric_aura_ranged = 1;
+        vampiric_aura_ranged = 10;
     }
 
     public static Vladmir instance() {

@@ -33,9 +33,9 @@ public final class MeepoDividedWeStand extends Ability {
         owningHeroShortKey = "meepo";
         respawn = 0.0;
         tooltip_clones = new int[]{1,2,3};
-        tooltip_respawn = 2;
-        tooltip_share_percentage = 2;
-        tooltip_share_percentage_scepter = 1;
+        tooltip_respawn = 20;
+        tooltip_share_percentage = 20;
+        tooltip_share_percentage_scepter = 100;
     }
 
     public static MeepoDividedWeStand instance() {

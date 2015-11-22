@@ -44,12 +44,12 @@ public final class WinterWyvernArcticBurn extends Ability {
         duration = 6;
         localizedName = "Arctic Burn";
         max_attacks = 5;
-        night_vision_bonus = 4;
+        night_vision_bonus = 400;
         owningHeroShortKey = "winter_wyvern";
         percent_damage = 8;
-        projectile_speed_bonus = 5;
+        projectile_speed_bonus = 500;
         tick_rate = 1;
-        tree_destruction_radius = 25;
+        tree_destruction_radius = 250;
     }
 
     public static WinterWyvernArcticBurn instance() {

@@ -30,7 +30,7 @@ public final class BroodmotherSpawnSpiderlings extends Ability {
     private BroodmotherSpawnSpiderlings() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = new double[]{10.0,10.0,10.0,10.0};
         abilityManaCost = new int[]{120,120,120,120};
         abilityModifierSupportValue = 0;
@@ -46,7 +46,7 @@ public final class BroodmotherSpawnSpiderlings extends Ability {
         damage = new int[]{75,150,225,300};
         localizedName = "Spawn Spiderlings";
         owningHeroShortKey = "broodmother";
-        projectile_speed = 12;
+        projectile_speed = 1200;
         spiderling_duration = new double[]{60.0,60.0,60.0,60.0};
     }
 

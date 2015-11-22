@@ -24,11 +24,11 @@ public final class VenomancerPlagueWard extends Ability {
     private VenomancerPlagueWard() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 85;
+        abilityCastRange = 850;
         abilityCooldown = 5;
         abilityManaCost = new int[]{20,20,20,20};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        iD = 518;
+        iD = 5180;
         key = "venomancer_plague_ward";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         duration = 4;

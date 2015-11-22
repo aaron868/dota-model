@@ -29,12 +29,12 @@ public final class Clarity extends Item {
     private Clarity() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = 0;
-        abilityCastRange = 25;
+        abilityCastRange = 250;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         iD = 38;
         itemAliases = "clarity";
-        itemCost = 5;
+        itemCost = 50;
         itemInitialCharges = 1;
         itemPermanent = 0;
         itemQuality = "consumable";
@@ -45,7 +45,7 @@ public final class Clarity extends Item {
         sideShop = 0;
         buff_duration = 45;
         localizedName = "Clarity";
-        total_mana = 17;
+        total_mana = 170;
     }
 
     public static Clarity instance() {

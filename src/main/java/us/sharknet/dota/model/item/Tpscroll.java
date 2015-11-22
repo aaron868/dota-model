@@ -58,8 +58,8 @@ public final class Tpscroll extends Item {
         sideShop = 1;
         localizedName = "Town Portal Scroll";
         maximum_distance = 575;
-        minimun_distance = 7;
-        vision_radius = 2;
+        minimun_distance = 70;
+        vision_radius = 200;
     }
 
     public static Tpscroll instance() {

@@ -22,7 +22,7 @@ public final class BigThunderLizardFrenzy extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = 0;
         abilityCooldown = 8;
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         iD = 5333;
         key = "big_thunder_lizard_frenzy";
         maxLevel = 1;

@@ -21,7 +21,7 @@ public final class Slippers extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 14;
         itemAliases = "slippers of agility";
-        itemCost = 15;
+        itemCost = 150;
         itemQuality = "component";
         itemShopTags = "agi";
         key = "item_slippers";

@@ -70,12 +70,12 @@ public final class Bane extends Hero {
         ability5 = AttributeBonus.instance();
         ability6 = BaneNightmareEnd.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 39;
         attackDamageMin = 33;
-        attackRange = 4;
+        attackRange = 400;
         attackRate = 1.7;
         attributeAgilityGain = 2.1;
         attributeBaseAgility = 22;
@@ -107,7 +107,7 @@ public final class Bane extends Hero {
         pickSound = "bane_bane_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_bane";
         projectileModel = "particles/units/heroes/hero_bane/bane_projectile.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Support","Disabler","Nuker","Durable"};
         rolelevels = new int[]{2,3,1,1};
         soundSet = "Hero_Bane";

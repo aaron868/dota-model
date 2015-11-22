@@ -32,16 +32,16 @@ public final class InvokerTornado extends Ability {
     private InvokerTornado() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = 0;
-        abilityCastRange = 2;
-        abilityCooldown = 3;
-        abilityManaCost = 15;
+        abilityCastRange = 2000;
+        abilityCooldown = 30;
+        abilityManaCost = 150;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         hotKeyOverride = "X";
         iD = 5382;
         key = "invoker_tornado";
         maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        area_of_effect = 2;
+        area_of_effect = 200;
         base_damage = 7;
         end_vision_duration = 1.75;
         lift_duration = new double[]{0.8,1.1,1.4,1.7,2.0,2.3,2.6,2.9};
@@ -49,8 +49,8 @@ public final class InvokerTornado extends Ability {
         owningHeroShortKey = "invoker";
         quas_damage = new double[]{0.0,0.0,0.0,0.0,0.0,0.0,0.0};
         travel_distance = new int[]{800,1200,1600,2000,2400,2800,3200,3600};
-        travel_speed = 1;
-        vision_distance = 6;
+        travel_speed = 1000;
+        vision_distance = 600;
         wex_damage = new double[]{45.0,90.0,135.0,180.0,225.0,270.0,315.0,360.0};
     }
 

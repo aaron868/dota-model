@@ -24,7 +24,7 @@ public final class RazorUnstableCurrent extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityDamage = new int[]{40,70,100,130};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 584;
+        iD = 5084;
         key = "razor_unstable_current";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Unstable Current";

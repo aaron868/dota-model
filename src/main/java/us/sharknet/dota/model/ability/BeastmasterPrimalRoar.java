@@ -38,7 +38,7 @@ public final class BeastmasterPrimalRoar extends Ability {
     private BeastmasterPrimalRoar() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{80.0,75.0,70.0};
         abilityManaCost = new int[]{150,175,200};
         abilityModifierSupportValue = .6;
@@ -54,11 +54,11 @@ public final class BeastmasterPrimalRoar extends Ability {
         cast_range_scepter = new int[]{950,950,950};
         cooldown_scepter = new double[]{45.0,45.0,45.0};
         damage = new int[]{200,250,300};
-        damage_radius = 3;
+        damage_radius = 300;
         duration = new double[]{3.0,3.5,4.0};
         localizedName = "Primal Roar";
         owningHeroShortKey = "beastmaster";
-        push_distance = 3;
+        push_distance = 300;
         push_duration = .6;
         side_damage = new int[]{200,250,300};
         slow_attack_speed_pct = new int[]{-50,-50,-50};

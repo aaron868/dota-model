@@ -18,12 +18,12 @@ public final class DrowRangerMarksmanship extends Ability {
     private DrowRangerMarksmanship() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        iD = 522;
+        iD = 5022;
         key = "drow_ranger_marksmanship";
         localizedName = "Marksmanship";
         marksmanship_agility_bonus = new int[]{40,60,80};
         owningHeroShortKey = "drow_ranger";
-        radius = 4;
+        radius = 400;
     }
 
     public static DrowRangerMarksmanship instance() {

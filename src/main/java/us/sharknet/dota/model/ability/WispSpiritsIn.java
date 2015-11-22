@@ -17,7 +17,7 @@ public final class WispSpiritsIn extends Ability {
     private WispSpiritsIn() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         abilityCastPoint = new int[]{0,0,0,0};
-        iD = 549;
+        iD = 5490;
         key = "wisp_spirits_in";
         maxLevel = 1;
         localizedName = "Spirits In";

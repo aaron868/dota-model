@@ -35,11 +35,11 @@ public final class DazzlePoisonTouch extends Ability {
     private DazzlePoisonTouch() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new int[]{15,13,11,7};
         abilityDamage = new int[]{14,20,26,36};
-        abilityDuration = 1;
-        abilityManaCost = 1;
+        abilityDuration = 10;
+        abilityManaCost = 100;
         abilityModifierSupportValue = .35;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
@@ -51,7 +51,7 @@ public final class DazzlePoisonTouch extends Ability {
         duration_tooltip = 1;
         localizedName = "Poison Touch";
         owningHeroShortKey = "dazzle";
-        projectile_speed = 13;
+        projectile_speed = 1300;
         set_time = 3;
         should_stun = new int[]{0,0,0,1};
         slow_1 = new int[]{-33,-33,-33,-33};

@@ -32,10 +32,10 @@ public final class Gem extends Item {
     private Gem() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         effect = "particles/generic_gameplay/dropped_gem.vpcf";
-        iD = 3;
+        iD = 30;
         itemAliases = "gem of true sight";
         itemContributesToNetWorthWhenDropped = 0;
-        itemCost = 9;
+        itemCost = 900;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemKillable = 0;
         itemQuality = "component";
@@ -51,7 +51,7 @@ public final class Gem extends Item {
         uIPickupSound = "Item.PickUpGemShop";
         worldDropSound = "Item.DropGemWorld";
         localizedName = "Gem Of True Sight";
-        radius = 11;
+        radius = 1100;
     }
 
     public static Gem instance() {

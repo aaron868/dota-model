@@ -32,7 +32,7 @@ public final class CrystalMaidenFrostbite extends Ability {
     private CrystalMaidenFrostbite() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new int[]{9,8,7,6};
         abilityManaCost = new int[]{115,125,140,150};
         abilityModifierSupportValue = .5;
@@ -44,10 +44,10 @@ public final class CrystalMaidenFrostbite extends Ability {
         iD = 5127;
         key = "crystal_maiden_frostbite";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        creep_damage_tooltip = 1;
+        creep_damage_tooltip = 1000;
         creep_duration = new double[]{10.0,10.0,10.0,10.0};
         damage = 1;
-        damage_per_second_tooltip = 5;
+        damage_per_second_tooltip = 50;
         duration = new double[]{1.5,2.0,2.5,3.0};
         hero_damage_tooltip = new int[]{150,200,250,300};
         localizedName = "Frostbite";

@@ -28,10 +28,10 @@ public final class BroodmotherSpinWeb extends Ability {
     private BroodmotherSpinWeb() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = .4;
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = 0;
-        abilityManaCost = 5;
-        iD = 528;
+        abilityManaCost = 50;
+        iD = 5280;
         key = "broodmother_spin_web";
         bonus_movespeed = new int[]{20,25,30,35};
         charge_restore_time = 4;
@@ -43,7 +43,7 @@ public final class BroodmotherSpinWeb extends Ability {
         localizedName = "Spin Web";
         max_charges = new int[]{1,2,3,4};
         owningHeroShortKey = "broodmother";
-        radius = 9;
+        radius = 900;
     }
 
     public static BroodmotherSpinWeb instance() {

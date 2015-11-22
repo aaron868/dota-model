@@ -65,7 +65,7 @@ public final class Sven extends Hero {
         ability3 = SvenWarcry.instance();
         ability4 = SvenGodsStrength.instance();
         armorPhysical = 2;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 39;
@@ -84,7 +84,7 @@ public final class Sven extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 15;
+        healthBarOffset = 150;
         heroGlowColor = new int[]{0,50,247};
         heroID = 18;
         heroPool1 = 1;

@@ -19,7 +19,7 @@ public final class RecipeHandOfMidas extends Item {
     private RecipeHandOfMidas() {
         iD = 64;
         itemAliases = "hom";
-        itemCost = 155;
+        itemCost = 1550;
         itemRecipe = 1;
         itemRequirements = new Item[0];
         itemResult = HandOfMidas.instance();

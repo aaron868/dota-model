@@ -23,11 +23,11 @@ public final class DeathProphetSilence extends Ability {
     private DeathProphetSilence() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityCooldown = 15;
         abilityDuration = new double[]{3.0,4.0,5.0,6.0};
         abilityManaCost = new int[]{80,80,80,80};
-        iD = 591;
+        iD = 5091;
         key = "death_prophet_silence";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{3.0,4.0,5.0,6.0};

@@ -67,7 +67,7 @@ public final class SkeletonKing extends Hero {
         ability3 = SkeletonKingMortalStrike.instance();
         ability4 = SkeletonKingReincarnation.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .56;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 41;
@@ -86,7 +86,7 @@ public final class SkeletonKing extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 19;
+        healthBarOffset = 190;
         heroGlowColor = new int[]{226,224,36};
         heroID = 42;
         heroPool1 = 1;
@@ -99,7 +99,7 @@ public final class SkeletonKing extends Hero {
         loadoutScale = .92;
         model = "models/heroes/wraith_king/wraith_king.vmdl";
         modelScale = .94;
-        movementSpeed = 3;
+        movementSpeed = 300;
         movementTurnRate = .4;
         nameAliases = new String[]{"sk","snk","wk"};
         pickSound = "skeleton_king_wraith_spawn_01";

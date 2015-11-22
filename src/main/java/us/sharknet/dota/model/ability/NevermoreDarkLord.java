@@ -20,16 +20,16 @@ public final class NevermoreDarkLord extends Ability {
 
     private NevermoreDarkLord() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_AURA"};
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
-        iD = 563;
+        iD = 5063;
         key = "nevermore_dark_lord";
         onCastbar = 0;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         localizedName = "Presence of the Dark Lord";
         owningHeroShortKey = "nevermore";
         presence_armor_reduction = new int[]{-3,-4,-5,-6};
-        presence_radius = 9;
+        presence_radius = 900;
     }
 
     public static NevermoreDarkLord instance() {

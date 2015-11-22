@@ -35,7 +35,7 @@ public final class WardDispenser extends Item {
 
     private WardDispenser() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET"};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = 0;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
@@ -49,17 +49,17 @@ public final class WardDispenser extends Item {
         itemQuality = "common";
         itemShareability = "ITEM_FULLY_SHAREABLE_STACKING";
         key = "item_ward_dispenser";
-        bonus_health = 1;
+        bonus_health = 100;
         creation_delay = 0.0;
-        lifetime_observer = 42;
-        lifetime_sentry = 24;
+        lifetime_observer = 420;
+        lifetime_sentry = 240;
         localizedName = "Ward Slot";
         observer_cost = 75;
         observer_duration_minutes_tooltip = 7;
-        observer_vision_range_tooltip = 16;
-        sentry_cost = 1;
+        observer_vision_range_tooltip = 1600;
+        sentry_cost = 100;
         sentry_duration_minutes_tooltip = 4;
-        true_sight_range = 85;
+        true_sight_range = 850;
     }
 
     public static WardDispenser instance() {

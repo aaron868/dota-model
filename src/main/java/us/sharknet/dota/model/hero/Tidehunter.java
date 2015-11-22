@@ -65,7 +65,7 @@ public final class Tidehunter extends Hero {
         ability3 = TidehunterAnchorSmash.instance();
         ability4 = TidehunterRavage.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .6;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 31;
@@ -84,7 +84,7 @@ public final class Tidehunter extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 19;
+        healthBarOffset = 190;
         heroGlowColor = new int[]{54,181,81};
         heroID = 29;
         heroPool1 = 1;
@@ -97,7 +97,7 @@ public final class Tidehunter extends Hero {
         loadoutScale = .78;
         model = "models/heroes/tidehunter/tidehunter.vmdl";
         modelScale = .84;
-        movementSpeed = 35;
+        movementSpeed = 305;
         movementTurnRate = .4;
         pickSound = "tidehunter_tide_spawn_09";
         portrait = "vgui/hud/heroportraits/portrait_tidehunter";

@@ -25,7 +25,7 @@ public final class RingOfRegen extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 27;
         itemAliases = "ror";
-        itemCost = 35;
+        itemCost = 350;
         itemQuality = "component";
         itemShareability = "ITEM_PARTIALLY_SHAREABLE";
         itemShopTags = "regen_health";

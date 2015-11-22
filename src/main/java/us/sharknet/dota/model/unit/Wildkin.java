@@ -44,38 +44,38 @@ public final class Wildkin extends NpcUnit {
 
     private Wildkin() {
         armorPhysical = 2;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 25;
-        attackDamageMin = 2;
+        attackDamageMin = 20;
         attackRange = 128;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
-        bountyGoldMax = 2;
+        bountyGoldMax = 20;
         bountyGoldMin = 15;
         bountyXP = 25;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_wildkin";
         level = 1;
         model = "models/creeps/neutral_creeps/n_creep_vulture_b/n_creep_vulture_b.vmdl";
         modelScale = .8;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 3;
+        movementSpeed = 300;
         projectileSpeed = 0;
-        ringRadius = 5;
+        ringRadius = 50;
         soundSet = "n_creep_Melee";
-        statusHealth = 35;
+        statusHealth = 350;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Wildwing";
     }
 

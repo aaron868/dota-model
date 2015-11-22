@@ -30,7 +30,7 @@ public final class NyxAssassinImpale extends Ability {
     private NyxAssassinImpale() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .4;
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = 13;
         abilityDamage = new int[]{80,140,200,260};
         abilityManaCost = new int[]{95,115,135,155};
@@ -43,7 +43,7 @@ public final class NyxAssassinImpale extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         cooldown_upgrade = 7;
         duration = new double[]{1.27,1.77,2.27,2.77};
-        length = 7;
+        length = 700;
         localizedName = "Impale";
         owningHeroShortKey = "nyx_assassin";
         speed = new int[]{1600,1600,1600,1600};

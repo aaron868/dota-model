@@ -41,9 +41,9 @@ public final class PhoenixIcarusDive extends Ability {
         burn_duration = 4;
         burn_tick_interval = 1;
         damage_per_second = new int[]{10,30,50,70};
-        dash_length = 14;
-        dash_width = 5;
-        hit_radius = 2;
+        dash_length = 1400;
+        dash_width = 500;
+        hit_radius = 200;
         hp_cost_perc = 15;
         localizedName = "Icarus Dive";
         owningHeroShortKey = "phoenix";

@@ -21,7 +21,7 @@ public final class DemonEdge extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 51;
         itemAliases = "demon edge";
-        itemCost = 24;
+        itemCost = 2400;
         itemQuality = "secret_shop";
         itemShopTags = "damage";
         key = "item_demon_edge";

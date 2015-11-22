@@ -29,7 +29,7 @@ public final class AlchemistUnstableConcoction extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = 0;
         abilityCooldown = 16;
-        abilityManaCost = 12;
+        abilityManaCost = 120;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         fightRecapLevel = 1;
         iD = 5366;

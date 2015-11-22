@@ -17,7 +17,7 @@ public final class RecipeMaskOfMadness extends Item {
 
     private RecipeMaskOfMadness() {
         iD = 171;
-        itemCost = 9;
+        itemCost = 900;
         itemRecipe = 1;
         itemRequirements = new Item[0];
         itemResult = MaskOfMadness.instance();

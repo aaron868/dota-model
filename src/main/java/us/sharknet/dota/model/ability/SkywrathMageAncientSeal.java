@@ -24,7 +24,7 @@ public final class SkywrathMageAncientSeal extends Ability {
     private SkywrathMageAncientSeal() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = 14;
         abilityManaCost = new int[]{80,90,100,110};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";

@@ -22,7 +22,7 @@ public final class HelmOfIronWill extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 6;
         itemAliases = "helm of iron will";
-        itemCost = 9;
+        itemCost = 900;
         itemQuality = "component";
         itemShopTags = new String[]{"armor","regen_health"};
         key = "item_helm_of_iron_will";

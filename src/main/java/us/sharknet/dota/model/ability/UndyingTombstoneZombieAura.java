@@ -24,7 +24,7 @@ public final class UndyingTombstoneZombieAura extends Ability {
         iD = 5445;
         key = "undying_tombstone_zombie_aura";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        bonus_speed = 5;
+        bonus_speed = 50;
         health_threshold = new int[]{100,200,300,400};
         localizedName = "Tombstone Zombie Aura";
         owningHeroShortKey = "undying";

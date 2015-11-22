@@ -16,7 +16,7 @@ public final class RecipeYasha extends Item {
 
     private RecipeYasha() {
         iD = 169;
-        itemCost = 6;
+        itemCost = 600;
         itemRecipe = 1;
         itemRequirements = new Item[]{BladeOfAlacrity.instance(),BootsOfElves.instance()};
         itemResult = Yasha.instance();

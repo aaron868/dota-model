@@ -44,38 +44,38 @@ public final class CentaurOutrunner extends NpcUnit {
 
     private CentaurOutrunner() {
         armorPhysical = 2;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 21;
         attackDamageMin = 18;
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1.3;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 24;
-        bountyGoldMin = 2;
+        bountyGoldMin = 20;
         bountyXP = 41;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_centaur_outrunner";
         level = 2;
         model = "models/creeps/neutral_creeps/n_creep_centaur_med/n_creep_centaur_med.vmdl";
         modelScale = .8;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 35;
+        movementSpeed = 350;
         projectileSpeed = 0;
-        ringRadius = 6;
+        ringRadius = 60;
         soundSet = "n_creep_Melee";
-        statusHealth = 55;
+        statusHealth = 550;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Centaur Courser";
     }
 

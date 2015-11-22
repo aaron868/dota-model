@@ -31,7 +31,7 @@ public final class WindrunnerPowershot extends Ability {
     private WindrunnerPowershot() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
         abilityCastPoint = 0;
-        abilityCastRange = 26;
+        abilityCastRange = 2600;
         abilityChannelTime = new double[]{1.0,1.0,1.0,1.0};
         abilityCooldown = new double[]{9.0,9.0,9.0,9.0};
         abilityDamage = new int[]{120,200,280,360};
@@ -41,7 +41,7 @@ public final class WindrunnerPowershot extends Ability {
         iD = 5131;
         key = "windrunner_powershot";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        arrow_range = 26;
+        arrow_range = 2600;
         arrow_speed = new double[]{3000.0,3000.0,3000.0,3000.0};
         arrow_width = new int[]{125,125,125,125};
         damage_reduction = new double[]{0.1,0.1,0.1,0.1};
@@ -49,7 +49,7 @@ public final class WindrunnerPowershot extends Ability {
         owningHeroShortKey = "windrunner";
         tree_width = new double[]{75.0,75.0,75.0,75.0};
         vision_duration = new double[]{3.34,3.34,3.34,3.34};
-        vision_radius = 4;
+        vision_radius = 400;
     }
 
     public static WindrunnerPowershot instance() {

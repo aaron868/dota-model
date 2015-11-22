@@ -53,12 +53,12 @@ public final class TechiesRemoteMine extends NpcUnit {
         attackRange = 0;
         attackRate = 1;
         baseClass = "npc_dota_techies_mines";
-        bountyGoldMax = 1;
-        bountyGoldMin = 1;
+        bountyGoldMax = 10;
+        bountyGoldMin = 10;
         bountyXP = 6;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
-        healthBarOffset = 14;
+        healthBarOffset = 140;
         key = "npc_dota_techies_remote_mine";
         level = 1;
         model = "models/heroes/techies/fx_techies_remotebomb.vmdl";
@@ -69,12 +69,12 @@ public final class TechiesRemoteMine extends NpcUnit {
         projectileSpeed = 0;
         selectionGroup = "Techies_RemoteMines";
         soundSet = 0;
-        statusHealth = 2;
+        statusHealth = 200;
         statusHealthRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 7;
-        visionNighttimeRange = 7;
+        visionDaytimeRange = 700;
+        visionNighttimeRange = 700;
         localizedName = "Remote Mine";
         wearable = 8645;
     }

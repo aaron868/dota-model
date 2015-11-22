@@ -58,24 +58,24 @@ public final class VisageFamiliar3 extends NpcUnit {
         ability1 = VisageSummonFamiliarsStoneForm.instance();
         ability2 = NeutralSpellImmunity.instance();
         armorPhysical = 2;
-        attackAcquisitionRange = 25;
+        attackAcquisitionRange = 250;
         attackAnimationPoint = .33;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
-        attackDamageMax = 1;
-        attackDamageMin = 1;
+        attackDamageMax = 10;
+        attackDamageMin = 10;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 16;
+        attackRange = 160;
         attackRate = .4;
         autoAttacksByDefault = 0;
         baseClass = "npc_dota_visage_familiar";
         boundsHullName = "DOTA_HULL_SIZE_REGULAR";
-        bountyGoldMax = 1;
-        bountyGoldMin = 1;
+        bountyGoldMax = 100;
+        bountyGoldMin = 100;
         bountyXP = 41;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_HERO";
         consideredHero = 1;
-        healthBarOffset = 13;
+        healthBarOffset = 130;
         isAncient = 0;
         isSummoned = 0;
         key = "npc_dota_visage_familiar3";
@@ -84,10 +84,10 @@ public final class VisageFamiliar3 extends NpcUnit {
         model = "models/heroes/visage/visage_familiar.vmdl";
         modelScale = .66;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 4;
+        movementSpeed = 400;
         movementTurnRate = .5;
         projectileModel = "particles/units/heroes/hero_visage/visage_familiar_base_attack.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         selectOnSpawn = 1;
         soundSet = "Visage_Familiar";
         statusHealth = 12;
@@ -97,10 +97,10 @@ public final class VisageFamiliar3 extends NpcUnit {
         teamName = "DOTA_TEAM_NEUTRALS";
         unitLabel = "visage_familiars";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 39;
-        visionNighttimeRange = 39;
+        visionDaytimeRange = 390;
+        visionNighttimeRange = 390;
         localizedName = "Familiar 3";
-        wearable = 6;
+        wearable = 600;
     }
 
     public static VisageFamiliar3 instance() {

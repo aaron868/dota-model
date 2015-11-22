@@ -27,7 +27,7 @@ public final class BeastmasterCallOfTheWildBoar extends Ability {
         abilityCastPoint = .3;
         abilityCooldown = new double[]{40.0,40.0,40.0,40.0};
         abilityManaCost = 15;
-        iD = 558;
+        iD = 5580;
         key = "beastmaster_call_of_the_wild_boar";
         boar_attackslow_tooltip = new int[]{10,20,30,40};
         boar_damage_tooltip = new int[]{15,30,45,60};

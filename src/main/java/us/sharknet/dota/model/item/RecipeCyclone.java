@@ -17,7 +17,7 @@ public final class RecipeCyclone extends Item {
 
     private RecipeCyclone() {
         iD = 99;
-        itemCost = 65;
+        itemCost = 650;
         itemRecipe = 1;
         itemRequirements = new Item[]{SobiMask.instance(),StaffOfWizardry.instance(),VoidStone.instance()};
         itemResult = Cyclone.instance();

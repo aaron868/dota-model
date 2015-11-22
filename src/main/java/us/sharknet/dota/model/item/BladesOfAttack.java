@@ -21,7 +21,7 @@ public final class BladesOfAttack extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 2;
         itemAliases = "blades of attack";
-        itemCost = 42;
+        itemCost = 420;
         itemQuality = "component";
         itemShopTags = new String[]{"damage","tutorial"};
         key = "item_blades_of_attack";

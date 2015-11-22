@@ -60,13 +60,13 @@ public final class Courier extends NpcUnit {
         attackDesire = 1.5;
         baseClass = "npc_dota_courier";
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
-        bountyGoldMax = 15;
-        bountyGoldMin = 15;
+        bountyGoldMax = 150;
+        bountyGoldMin = 150;
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         hasInventory = 1;
-        healthBarOffset = 12;
+        healthBarOffset = 120;
         idleExpression = "scenes/default_idle.vcd";
         isAncient = 1;
         key = "npc_dota_courier";
@@ -74,7 +74,7 @@ public final class Courier extends NpcUnit {
         model = "models/props_gameplay/donkey.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 35;
+        movementSpeed = 350;
         movementTurnRate = .5;
         statusHealth = 75;
         statusHealthRegen = .5;
@@ -83,8 +83,8 @@ public final class Courier extends NpcUnit {
         teamName = "DOTA_TEAM_GOODGUYS";
         unitLabel = "courier";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_COURIER";
-        visionDaytimeRange = 35;
-        visionNighttimeRange = 35;
+        visionDaytimeRange = 350;
+        visionNighttimeRange = 350;
         wakesNeutrals = 0;
         localizedName = "Courier";
     }

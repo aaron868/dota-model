@@ -44,12 +44,12 @@ public final class Kobold extends NpcUnit {
 
     private Kobold() {
         armorPhysical = 0;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .38;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 11;
-        attackDamageMin = 1;
-        attackRange = 1;
+        attackDamageMin = 10;
+        attackRange = 100;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 9;
@@ -57,25 +57,25 @@ public final class Kobold extends NpcUnit {
         bountyXP = 25;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 13;
+        healthBarOffset = 130;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_kobold";
         level = 1;
         model = "models/creeps/neutral_creeps/n_creep_kobold/kobold_c/n_creep_kobold_c.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 27;
+        movementSpeed = 270;
         projectileSpeed = 0;
-        ringRadius = 4;
+        ringRadius = 40;
         soundSet = "n_creep_Melee";
-        statusHealth = 24;
+        statusHealth = 240;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 14;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1400;
+        visionNighttimeRange = 800;
         localizedName = "Kobold";
     }
 

@@ -29,7 +29,7 @@ public final class DazzleShadowWave extends Ability {
     private DazzleShadowWave() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityCooldown = new int[]{12,10,8,6};
         abilityDamage = new int[]{80,100,120,140};
         abilityManaCost = new int[]{80,90,100,110};

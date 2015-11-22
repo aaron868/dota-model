@@ -53,7 +53,7 @@ public final class BrewmasterEarth1 extends NpcUnit {
         ability3 = BrewmasterEarthPulverize.instance();
         ability4 = BrewmasterThunderClap.instance();
         armorPhysical = 5;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 43;
@@ -65,7 +65,7 @@ public final class BrewmasterEarth1 extends NpcUnit {
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         consideredHero = 1;
-        healthBarOffset = 16;
+        healthBarOffset = 160;
         idleExpression = "scenes/brewmaster/brewmaster_spirits_exp_idle_01.vcd";
         ignoreAddSummonedToSelection = 1;
         isAncient = 1;
@@ -77,15 +77,15 @@ public final class BrewmasterEarth1 extends NpcUnit {
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 325;
         soundSet = "Brewmaster_Earth";
-        statusHealth = 15;
+        statusHealth = 1500;
         statusHealthRegen = 1;
-        statusMana = 4;
+        statusMana = 400;
         statusManaRegen = 2;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitLabel = "brewmaster_earth";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 800;
         localizedName = "Brewmaster Earth Spirit Level 1";
     }
 

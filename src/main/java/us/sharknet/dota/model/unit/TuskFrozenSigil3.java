@@ -55,14 +55,14 @@ public final class TuskFrozenSigil3 extends NpcUnit {
 
     private TuskFrozenSigil3() {
         armorPhysical = 0;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_NO_ATTACK";
         attackDamageMax = 0;
         attackDamageMin = 0;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
         attackDesire = 1.5;
-        attackRange = 5;
+        attackRange = 500;
         attackRate = 1;
         attributeAgilityGain = 0;
         attributeBaseAgility = 0;
@@ -73,20 +73,20 @@ public final class TuskFrozenSigil3 extends NpcUnit {
         attributeStrengthGain = 0;
         baseClass = "npc_dota_tusk_frozen_sigil";
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
-        bountyGoldMax = 11;
-        bountyGoldMin = 11;
+        bountyGoldMax = 110;
+        bountyGoldMin = 110;
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
-        followRange = 25;
+        followRange = 250;
         key = "npc_dota_tusk_frozen_sigil3";
         level = 0;
         magicalResistance = 0;
         model = "models/heroes/tuskarr/tuskarr_sigil.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
-        movementSpeed = 31;
+        movementSpeed = 310;
         movementTurnRate = .5;
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         soundSet = "Creep_Good_Range";
         statusHealth = 16;
         statusHealthRegen = 0;
@@ -95,10 +95,10 @@ public final class TuskFrozenSigil3 extends NpcUnit {
         teamName = "DOTA_TEAM_GOODGUYS";
         unitLabel = "frozen_sigil";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 4;
-        visionNighttimeRange = 4;
+        visionDaytimeRange = 400;
+        visionNighttimeRange = 400;
         localizedName = "Frozen Sigil Level 3";
-        wearable = 864;
+        wearable = 8640;
     }
 
     public static TuskFrozenSigil3 instance() {

@@ -35,7 +35,7 @@ public final class TranquilBoots extends Item {
         abilityManaCost = 0;
         iD = 214;
         itemAliases = "tranquil boots";
-        itemCost = 1;
+        itemCost = 1000;
         itemDeclarations = "DECLARE_PURCHASES_TO_SPECTATORS";
         itemHideCharges = 1;
         itemQuality = "rare";
@@ -43,12 +43,12 @@ public final class TranquilBoots extends Item {
         key = "item_tranquil_boots";
         bonus_armor = 4;
         bonus_health_regen = 12;
-        bonus_movement_speed = 9;
+        bonus_movement_speed = 90;
         break_count = 1;
-        break_threshold = 2;
+        break_threshold = 20;
         break_time = 13;
-        broken_movement_speed = 6;
-        heal_amount = 25;
+        broken_movement_speed = 60;
+        heal_amount = 250;
         heal_duration = 2;
         heal_interval = .334;
         localizedName = "Tranquil Boots";

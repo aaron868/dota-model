@@ -63,7 +63,7 @@ public final class Riki extends Hero {
         ability3 = RikiBackstab.instance();
         ability4 = RikiBlinkStrike.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 8;
@@ -93,7 +93,7 @@ public final class Riki extends Hero {
         loadoutScale = 1.1;
         model = "models/heroes/rikimaru/rikimaru.vmdl";
         modelScale = .87;
-        movementSpeed = 29;
+        movementSpeed = 290;
         movementTurnRate = .6;
         pickSound = "riki_riki_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_riki";

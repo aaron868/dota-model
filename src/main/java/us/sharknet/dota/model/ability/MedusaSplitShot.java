@@ -23,16 +23,16 @@ public final class MedusaSplitShot extends Ability {
     private MedusaSplitShot() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        iD = 554;
+        iD = 5504;
         key = "medusa_split_shot";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         arrow_count = new int[]{1,2,3,4};
-        damage_modifier = -2;
-        damage_modifier_tooltip = 8;
+        damage_modifier = -20;
+        damage_modifier_tooltip = 80;
         localizedName = "Split Shot";
         owningHeroShortKey = "medusa";
-        projectile_speed = 12;
-        range = 7;
+        projectile_speed = 1200;
+        range = 700;
         total_arrow_count = new int[]{2,3,4,5};
     }
 

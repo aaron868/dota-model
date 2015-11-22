@@ -65,11 +65,11 @@ public final class NyxAssassin extends Hero {
         ability6 = NyxAssassinVendetta.instance();
         ability7 = AttributeBonus.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .46;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 34;
-        attackDamageMin = 3;
+        attackDamageMin = 30;
         attackRange = 128;
         attackRate = 1.7;
         attributeAgilityGain = 2.2;
@@ -82,7 +82,7 @@ public final class NyxAssassin extends Hero {
         banSound = "nyx_assassin_nyx_anger_07";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 2;
+        healthBarOffset = 200;
         heroID = 88;
         heroSelectSoundEffect = "Hero_Nyx.Pick";
         idleExpression = "scenes/nyx_assassin/nyx_assassin_exp_idle_01.vcd";
@@ -90,7 +90,7 @@ public final class NyxAssassin extends Hero {
         lastHitChallengeRival = "npc_dota_hero_bounty_hunter";
         model = "models/heroes/nerubian_assassin/nerubian_assassin.vmdl";
         modelScale = .98;
-        movementSpeed = 3;
+        movementSpeed = 300;
         movementTurnRate = .5;
         nameAliases = new String[]{"nerubian","na"};
         pickSound = "nyx_assassin_nyx_spawn_01";

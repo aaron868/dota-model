@@ -18,10 +18,10 @@ public final class CourierTransferItems extends Ability {
     private CourierTransferItems() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
-        iD = 526;
+        iD = 5206;
         key = "courier_transfer_items";
         maxLevel = 1;
-        handoff_distance = 4;
+        handoff_distance = 400;
         localizedName = "Transfer Items";
         owningHeroShortKey = "courier";
     }

@@ -32,7 +32,7 @@ public final class TuskIceShards extends Ability {
     private TuskIceShards() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
-        abilityCastRange = 18;
+        abilityCastRange = 1800;
         abilityCooldown = new double[]{19.0,16.0,13.0,10.0};
         abilityManaCost = new int[]{100,105,110,115};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -42,16 +42,16 @@ public final class TuskIceShards extends Ability {
         iD = 5565;
         key = "tusk_ice_shards";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        cast_range_tooltip = 18;
+        cast_range_tooltip = 1800;
         localizedName = "Ice Shards";
         owningHeroShortKey = "tusk";
         shard_angle_step = 4;
         shard_count = 7;
         shard_damage = new int[]{70,140,210,280};
-        shard_distance = 2;
+        shard_distance = 200;
         shard_duration = 7;
         shard_speed = 11;
-        shard_width = 2;
+        shard_width = 200;
     }
 
     public static TuskIceShards instance() {

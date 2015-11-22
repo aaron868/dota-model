@@ -25,9 +25,9 @@ public final class SatyrSoulstealerManaBurn extends Ability {
     private SatyrSoulstealerManaBurn() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .5;
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = 18;
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
@@ -35,7 +35,7 @@ public final class SatyrSoulstealerManaBurn extends Ability {
         key = "satyr_soulstealer_mana_burn";
         maxLevel = 1;
         modelscale = .85;
-        burn_amount = 1;
+        burn_amount = 100;
         localizedName = "Mana Burn";
         owningHeroShortKey = "satyr_soulstealer";
     }

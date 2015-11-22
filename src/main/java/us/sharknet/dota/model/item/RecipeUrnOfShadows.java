@@ -17,7 +17,7 @@ public final class RecipeUrnOfShadows extends Item {
 
     private RecipeUrnOfShadows() {
         iD = 91;
-        itemCost = 25;
+        itemCost = 250;
         itemRecipe = 1;
         itemRequirements = new Item[]{SobiMask.instance(),Gauntlets.instance(),Gauntlets.instance()};
         itemResult = UrnOfShadows.instance();

@@ -27,7 +27,7 @@ public final class TerrorbladeReflection extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = .3;
         abilityCooldown = new int[]{22,20,18,16};
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         fightRecapLevel = 1;
         iD = 5619;
         key = "terrorblade_reflection";
@@ -39,7 +39,7 @@ public final class TerrorbladeReflection extends Ability {
         localizedName = "Reflection";
         move_slow = 25;
         owningHeroShortKey = "terrorblade";
-        range = 9;
+        range = 900;
     }
 
     public static TerrorbladeReflection instance() {

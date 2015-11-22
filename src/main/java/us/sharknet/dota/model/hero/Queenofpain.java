@@ -63,12 +63,12 @@ public final class Queenofpain extends Hero {
         ability3 = QueenofpainScreamOfPain.instance();
         ability4 = QueenofpainSonicWave.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .56;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 33;
         attackDamageMin = 25;
-        attackRange = 55;
+        attackRange = 550;
         attackRate = 1.6;
         attributeAgilityGain = 2;
         attributeBaseAgility = 18;
@@ -97,7 +97,7 @@ public final class Queenofpain extends Hero {
         pickSound = "queenofpain_pain_spawn_04";
         portrait = "vgui/hud/heroportraits/portrait_queenofpain";
         projectileModel = "particles/units/heroes/hero_queenofpain/queen_base_attack.vpcf";
-        projectileSpeed = 15;
+        projectileSpeed = 1500;
         role = new String[]{"Carry","Nuker","Escape"};
         rolelevels = new int[]{1,3,3};
         soundSet = "Hero_QueenOfPain";

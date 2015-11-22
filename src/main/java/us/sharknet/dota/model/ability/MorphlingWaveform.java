@@ -25,19 +25,19 @@ public final class MorphlingWaveform extends Ability {
     private MorphlingWaveform() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .25;
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = new double[]{11.0,11.0,11.0,11.0};
         abilityDamage = new int[]{100,175,250,325};
         abilityManaCost = new int[]{140,155,160,165};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 552;
+        iD = 5052;
         key = "morphling_waveform";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Waveform";
         owningHeroShortKey = "morphling";
-        speed = 125;
-        width = 2;
+        speed = 1250;
+        width = 200;
     }
 
     public static MorphlingWaveform instance() {

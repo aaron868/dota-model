@@ -22,13 +22,13 @@ public final class EnergyBooster extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 59;
         itemAliases = "energy booster";
-        itemCost = 9;
+        itemCost = 900;
         itemQuality = "secret_shop";
         itemShopTags = "mana_pool";
         key = "item_energy_booster";
         secretShop = 1;
         sideShop = 1;
-        bonus_mana = 25;
+        bonus_mana = 250;
         localizedName = "Energy Booster";
     }
 

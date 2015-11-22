@@ -31,7 +31,7 @@ public final class LotusOrb extends Item {
 
     private LotusOrb() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityCooldown = 15;
         abilityManaCost = 75;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
@@ -39,15 +39,15 @@ public final class LotusOrb extends Item {
         fightRecapLevel = 1;
         iD = 226;
         itemAliases = new String[]{"ls","lotus orb"};
-        itemCost = 4;
+        itemCost = 4000;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "epic";
         itemShopTags = new String[]{"regen_health","regen_mana","str","agi","int","hard_to_tag"};
         key = "item_lotus_orb";
         active_duration = 6;
-        bonus_armor = 1;
-        bonus_damage = 1;
+        bonus_armor = 10;
+        bonus_damage = 10;
         bonus_health_regen = 5;
         bonus_mana_regen = 125;
         cast_range_tooltip = 9;

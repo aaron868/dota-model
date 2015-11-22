@@ -30,7 +30,7 @@ public final class EarthshakerEnchantTotem extends Ability {
         abilityDuration = new double[]{14.0,14.0,14.0,14.0};
         abilityManaCost = new int[]{20,30,40,50};
         fightRecapLevel = 1;
-        iD = 524;
+        iD = 5024;
         key = "earthshaker_enchant_totem";
         localizedName = "Enchant Totem";
         owningHeroShortKey = "earthshaker";

@@ -61,11 +61,11 @@ public final class Slardar extends Hero {
         ability3 = SlardarBash.instance();
         ability4 = SlardarAmplifyDamage.instance();
         armorPhysical = 3;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .36;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 38;
-        attackDamageMin = 3;
+        attackDamageMin = 30;
         attackRange = 128;
         attackRate = 1.7;
         attributeAgilityGain = 2.4;
@@ -79,7 +79,7 @@ public final class Slardar extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 14;
+        healthBarOffset = 140;
         heroGlowColor = new int[]{78,127,208};
         heroID = 28;
         heroSelectSoundEffect = "Hero_Slardar.Pick";
@@ -89,7 +89,7 @@ public final class Slardar extends Hero {
         lastHitChallengeRival = "npc_dota_hero_tidehunter";
         model = "models/heroes/slardar/slardar.vmdl";
         modelScale = .88;
-        movementSpeed = 3;
+        movementSpeed = 300;
         movementTurnRate = .5;
         pickSound = "slardar_slar_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_slardar";

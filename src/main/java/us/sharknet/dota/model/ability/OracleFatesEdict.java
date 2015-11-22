@@ -25,9 +25,9 @@ public final class OracleFatesEdict extends Ability {
     private OracleFatesEdict() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .3;
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = 12;
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES";
         abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY","DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
@@ -36,7 +36,7 @@ public final class OracleFatesEdict extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_NO";
         duration = new double[]{3.0,4.0,5.0,6.0};
         localizedName = "Fates Edict";
-        magic_damage_resistance_pct_tooltip = 1;
+        magic_damage_resistance_pct_tooltip = 100;
         owningHeroShortKey = "oracle";
     }
 

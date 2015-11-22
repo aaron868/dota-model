@@ -33,7 +33,7 @@ public final class PhoenixSupernova extends Ability {
     private PhoenixSupernova() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = .1;
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new double[]{110.0,110.0,110.0};
         abilityDuration = 6;
         abilityManaCost = new int[]{200,200,200};
@@ -43,11 +43,11 @@ public final class PhoenixSupernova extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         fightRecapLevel = 2;
-        iD = 563;
+        iD = 5630;
         key = "phoenix_supernova";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         aura_radius = new int[]{1000,1000,1000};
-        cast_range_tooltip_scepter = 5;
+        cast_range_tooltip_scepter = 500;
         damage_per_sec = new int[]{60,80,100};
         localizedName = "Supernova";
         max_hero_attacks = new int[]{5,8,11};

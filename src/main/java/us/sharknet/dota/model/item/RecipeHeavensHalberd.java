@@ -15,7 +15,7 @@ public final class RecipeHeavensHalberd extends Item {
     private final String localizedName;
 
     private RecipeHeavensHalberd() {
-        iD = 29;
+        iD = 209;
         itemCost = 0;
         itemRecipe = 1;
         itemRequirements = new Item[]{Sange.instance(),TalismanOfEvasion.instance()};

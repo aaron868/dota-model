@@ -17,10 +17,10 @@ public final class PudgeFleshHeap extends Ability {
 
     private PudgeFleshHeap() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 574;
+        iD = 5074;
         key = "pudge_flesh_heap";
         flesh_heap_magic_resist = new int[]{6,8,10,12};
-        flesh_heap_range = 45;
+        flesh_heap_range = 450;
         flesh_heap_strength_buff_amount = new double[]{1.0,1.5,2.0,2.5};
         localizedName = "Flesh Heap";
         owningHeroShortKey = "pudge";

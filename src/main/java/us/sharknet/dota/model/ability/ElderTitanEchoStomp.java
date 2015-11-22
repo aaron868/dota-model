@@ -29,10 +29,10 @@ public final class ElderTitanEchoStomp extends Ability {
     private ElderTitanEchoStomp() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityChannelTime = 1.2;
         abilityCooldown = new int[]{14,13,12,11};
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         fightRecapLevel = 1;
         iD = 5589;
@@ -43,7 +43,7 @@ public final class ElderTitanEchoStomp extends Ability {
         initial_stun_duration = .65;
         localizedName = "Echo Stomp";
         owningHeroShortKey = "elder_titan";
-        radius = 5;
+        radius = 500;
         sleep_duration = new double[]{2.0,3.0,4.0,5.0};
         stomp_damage = new int[]{80,90,100,110};
     }

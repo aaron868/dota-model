@@ -25,15 +25,15 @@ public final class SandkingCausticFinale extends Ability {
     private SandkingCausticFinale() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 514;
+        iD = 5104;
         key = "sandking_caustic_finale";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         caustic_finale_damage = new int[]{90,130,170,220};
         caustic_finale_damage_expire_tooltip = new int[]{45,65,85,110};
         caustic_finale_damage_reduced = 5;
         caustic_finale_duration = 6;
-        caustic_finale_expire_dmg_pct_tooltip = 5;
-        caustic_finale_radius = 4;
+        caustic_finale_expire_dmg_pct_tooltip = 50;
+        caustic_finale_radius = 400;
         caustic_finale_slow = -25;
         caustic_finale_slow_duration = 3;
         localizedName = "Caustic Finale";

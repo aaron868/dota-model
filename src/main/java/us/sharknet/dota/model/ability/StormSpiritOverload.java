@@ -25,15 +25,15 @@ public final class StormSpiritOverload extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityDamage = new int[]{30,50,70,90};
         abilityDuration = new double[]{0.6,0.6,0.6,0.6};
-        abilityModifierSupportBonus = 4;
+        abilityModifierSupportBonus = 40;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 51;
+        iD = 5100;
         key = "storm_spirit_overload";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Overload";
         overload_aoe = 275;
-        overload_attack_slow = -5;
-        overload_move_slow = -8;
+        overload_attack_slow = -50;
+        overload_move_slow = -80;
         owningHeroShortKey = "storm_spirit";
         tooltip_duration = new double[]{0.6,0.6,0.6,0.6};
     }

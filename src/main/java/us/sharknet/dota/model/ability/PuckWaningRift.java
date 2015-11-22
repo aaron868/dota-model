@@ -29,7 +29,7 @@ public final class PuckWaningRift extends Ability {
         abilityManaCost = new int[]{100,110,120,130};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 571;
+        iD = 5071;
         key = "puck_waning_rift";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Waning Rift";

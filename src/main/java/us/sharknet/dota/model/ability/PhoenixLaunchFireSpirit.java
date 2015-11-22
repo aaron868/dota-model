@@ -31,7 +31,7 @@ public final class PhoenixLaunchFireSpirit extends Ability {
     private PhoenixLaunchFireSpirit() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         abilityCastPoint = new double[]{0.01,0.01,0.01,0.01};
-        abilityCastRange = 14;
+        abilityCastRange = 1400;
         abilityCooldown = new int[]{0,0,0,0};
         abilityManaCost = new int[]{0,0,0,0};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
@@ -42,7 +42,7 @@ public final class PhoenixLaunchFireSpirit extends Ability {
         attackspeed_slow = new int[]{-80,-100,-120,-140};
         dps = new int[]{10,30,50,70};
         duration = 4;
-        hp_cost_perc = 2;
+        hp_cost_perc = 20;
         localizedName = "Launch Fire Spirits";
         owningHeroShortKey = "phoenix";
         radius = new int[]{175,175,175,175};

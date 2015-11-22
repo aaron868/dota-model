@@ -25,18 +25,18 @@ public final class LionVoodoo extends Ability {
     private LionVoodoo() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new int[]{0,0,0,0};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new double[]{30.0,24.0,18.0,12.0};
         abilityManaCost = new int[]{125,150,175,200};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 545;
+        iD = 5045;
         key = "lion_voodoo";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{2.5,3.0,3.5,4.0};
         localizedName = "Voodoo";
-        movespeed = 14;
+        movespeed = 140;
         owningHeroShortKey = "lion";
     }
 

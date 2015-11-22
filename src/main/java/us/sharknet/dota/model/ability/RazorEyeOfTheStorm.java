@@ -35,7 +35,7 @@ public final class RazorEyeOfTheStorm extends Ability {
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         fightRecapLevel = 1;
-        iD = 585;
+        iD = 5085;
         key = "razor_eye_of_the_storm";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         armor_reduction = new int[]{1,1,1};

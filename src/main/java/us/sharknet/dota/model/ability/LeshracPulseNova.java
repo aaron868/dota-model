@@ -43,7 +43,7 @@ public final class LeshracPulseNova extends Ability {
         localizedName = "Pulse Nova";
         mana_cost_per_second = new int[]{20,40,60};
         owningHeroShortKey = "leshrac";
-        radius = 45;
+        radius = 450;
     }
 
     public static LeshracPulseNova instance() {

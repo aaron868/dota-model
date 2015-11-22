@@ -25,7 +25,7 @@ public final class Skadi extends Item {
 
     private Skadi() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 16;
+        iD = 160;
         itemAliases = new String[]{"eos","eye of skadi"};
         itemCost = 5675;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
@@ -33,8 +33,8 @@ public final class Skadi extends Item {
         itemShopTags = new String[]{"agi","str","int","hard_to_tag","mana_pool","health_pool","unique"};
         key = "item_skadi";
         bonus_all_stats = 25;
-        bonus_health = 25;
-        bonus_mana = 25;
+        bonus_health = 250;
+        bonus_mana = 250;
         cold_attack_speed = -45;
         cold_duration_melee = 5;
         cold_duration_ranged = 2.5;

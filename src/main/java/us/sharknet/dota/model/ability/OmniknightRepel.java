@@ -25,7 +25,7 @@ public final class OmniknightRepel extends Ability {
     private OmniknightRepel() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new double[]{14.0,14.0,14.0,14.0};
         abilityManaCost = new int[]{50,50,50,50};
         abilityModifierSupportValue = 3;

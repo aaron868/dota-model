@@ -35,7 +35,7 @@ public final class SandkingSandStorm extends Ability {
         abilityManaCost = new int[]{60,50,40,30};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 513;
+        iD = 5103;
         key = "sandking_sand_storm";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Sand Storm";

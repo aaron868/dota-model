@@ -27,7 +27,7 @@ public final class OmniknightPurification extends Ability {
     private OmniknightPurification() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .25;
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = 1;
         abilityManaCost = new int[]{100,120,140,160};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
@@ -41,7 +41,7 @@ public final class OmniknightPurification extends Ability {
         heal = new int[]{90,180,270,360};
         localizedName = "Purification";
         owningHeroShortKey = "omniknight";
-        radius = 26;
+        radius = 260;
     }
 
     public static OmniknightPurification instance() {

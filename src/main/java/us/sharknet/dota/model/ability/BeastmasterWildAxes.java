@@ -28,10 +28,10 @@ public final class BeastmasterWildAxes extends Ability {
     private BeastmasterWildAxes() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = .4;
-        abilityCastRange = 13;
+        abilityCastRange = 1300;
         abilityCooldown = new double[]{13.0,13.0,13.0,13.0};
         abilityDamage = new int[]{70,100,130,160};
-        abilityManaCost = 12;
+        abilityManaCost = 120;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
@@ -41,7 +41,7 @@ public final class BeastmasterWildAxes extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         localizedName = "Wild Axes";
         owningHeroShortKey = "beastmaster";
-        radius = 14;
+        radius = 140;
         range = new int[]{1300,1300,1300,1300};
         spread = new int[]{353,353,353,353};
     }

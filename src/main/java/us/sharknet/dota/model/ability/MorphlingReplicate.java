@@ -36,7 +36,7 @@ public final class MorphlingReplicate extends Ability {
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
-        iD = 557;
+        iD = 5057;
         key = "morphling_replicate";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         duration = new double[]{30.0,45.0,60.0};

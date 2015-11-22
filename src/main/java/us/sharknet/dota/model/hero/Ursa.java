@@ -62,7 +62,7 @@ public final class Ursa extends Hero {
         ability5 = AttributeBonus.instance();
         ability6 = UrsaEnrage.instance();
         armorPhysical = 3;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 31;
@@ -79,9 +79,9 @@ public final class Ursa extends Hero {
         banSound = "ursa_ursa_anger_04";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 15;
+        healthBarOffset = 150;
         heroGlowColor = new int[]{107,74,53};
-        heroID = 7;
+        heroID = 70;
         heroSelectSoundEffect = "Hero_Ursa.Pick";
         heroUnlockOrder = 1;
         idleExpression = "scenes/ursa/ursa_exp_idle_01.vcd";
@@ -90,7 +90,7 @@ public final class Ursa extends Hero {
         loadoutScale = .85;
         model = "models/heroes/ursa/ursa.vmdl";
         modelScale = .74;
-        movementSpeed = 31;
+        movementSpeed = 310;
         movementTurnRate = .5;
         pickSound = "ursa_ursa_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_ursa";

@@ -32,10 +32,10 @@ public final class BrewmasterEarthHurlBoulder extends Ability {
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
-        iD = 544;
+        iD = 5404;
         key = "brewmaster_earth_hurl_boulder";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        damage = 5;
+        damage = 50;
         duration = new double[]{2.0,2.0,2.0,2.0};
         localizedName = "Hurl Boulder";
         owningHeroShortKey = "brewmaster_earth";

@@ -20,7 +20,7 @@ public final class Gauntlets extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 13;
         itemAliases = "gauntlets of strength";
-        itemCost = 15;
+        itemCost = 150;
         itemQuality = "component";
         itemShopTags = "str";
         key = "item_gauntlets";

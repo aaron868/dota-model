@@ -62,12 +62,12 @@ public final class StormspiritRemnant extends NpcUnit {
         movementSpeed = 0;
         projectileSpeed = 0;
         soundSet = 0;
-        statusHealth = 1;
+        statusHealth = 100;
         statusHealthRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 6;
-        visionNighttimeRange = 6;
+        visionDaytimeRange = 600;
+        visionNighttimeRange = 600;
         localizedName = "Storm Spirit Remnant";
     }
 

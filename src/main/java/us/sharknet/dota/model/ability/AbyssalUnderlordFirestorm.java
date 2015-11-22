@@ -30,7 +30,7 @@ public final class AbyssalUnderlordFirestorm extends Ability {
     private AbyssalUnderlordFirestorm() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = .6;
-        abilityCastRange = 75;
+        abilityCastRange = 750;
         abilityCooldown = 14;
         abilityManaCost = new int[]{100,110,120,130};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -43,7 +43,7 @@ public final class AbyssalUnderlordFirestorm extends Ability {
         first_wave_delay = .9;
         localizedName = "Firestorm";
         owningHeroShortKey = "abyssal_underlord";
-        radius = 4;
+        radius = 400;
         wave_count = 6;
         wave_damage = new int[]{25,40,55,70};
         wave_duration = 7;

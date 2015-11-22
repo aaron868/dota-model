@@ -22,12 +22,12 @@ public final class SkeletonKingMortalStrike extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        iD = 588;
+        iD = 5088;
         key = "skeleton_king_mortal_strike";
         crit_chance = 15;
         crit_mult = new int[]{150,200,250,300};
         drain_duration = 7;
-        hp_drain = 2;
+        hp_drain = 20;
         localizedName = "Mortal Strike";
         owningHeroShortKey = "skeleton_king";
     }

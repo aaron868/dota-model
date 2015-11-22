@@ -33,9 +33,9 @@ public final class BatriderFlamebreak extends Ability {
     private BatriderFlamebreak() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
-        abilityCastRange = 15;
+        abilityCastRange = 1500;
         abilityCooldown = 14;
-        abilityManaCost = 14;
+        abilityManaCost = 140;
         abilityModifierSupportValue = 1;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;

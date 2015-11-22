@@ -25,14 +25,14 @@ public final class ClinkzSearingArrows extends Ability {
     private ClinkzSearingArrows() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 63;
+        abilityCastRange = 630;
         abilityCooldown = new double[]{0.0,0.0,0.0,0.0};
-        abilityManaCost = 1;
+        abilityManaCost = 10;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC","DOTA_UNIT_TARGET_BUILDING"};
-        iD = 526;
+        iD = 5260;
         key = "clinkz_searing_arrows";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         damage_bonus = new int[]{30,40,50,60};

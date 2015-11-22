@@ -27,8 +27,8 @@ public final class SniperHeadshot extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Headshot";
         owningHeroShortKey = "sniper";
-        proc_chance = 4;
-        slow = -1;
+        proc_chance = 40;
+        slow = -100;
         slow_duration = .5;
     }
 

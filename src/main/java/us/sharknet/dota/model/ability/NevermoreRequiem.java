@@ -45,7 +45,7 @@ public final class NevermoreRequiem extends Ability {
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 2;
-        iD = 564;
+        iD = 5064;
         key = "nevermore_requiem";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         cast_time_tooltip = 1.67;
@@ -55,10 +55,10 @@ public final class NevermoreRequiem extends Ability {
         requiem_line_width_end = new int[]{400,425,450};
         requiem_line_width_start = new int[]{75,100,125};
         requiem_radius = new int[]{975,1000,1025};
-        requiem_reduction_damage = -5;
+        requiem_reduction_damage = -50;
         requiem_reduction_ms = -25;
         requiem_reduction_radius = new int[]{700,700,700};
-        requiem_reduction_tooltip = -5;
+        requiem_reduction_tooltip = -50;
         requiem_slow_duration = 5;
         requiem_soul_conversion = new int[]{2,2,2};
         soul_death_release = .5;

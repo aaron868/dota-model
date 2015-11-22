@@ -51,12 +51,12 @@ public final class RattletrapCog extends NpcUnit {
         attackRate = 1;
         baseClass = "npc_dota_rattletrap_cog";
         boundsHullName = "DOTA_HULL_SIZE_HUGE";
-        bountyGoldMax = 2;
+        bountyGoldMax = 20;
         bountyGoldMin = 16;
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
-        healthBarOffset = 12;
+        healthBarOffset = 120;
         key = "npc_dota_rattletrap_cog";
         level = 0;
         model = "models/heroes/rattletrap/rattletrap_cog.vmdl";
@@ -65,12 +65,12 @@ public final class RattletrapCog extends NpcUnit {
         movementSpeed = 0;
         projectileSpeed = 0;
         soundSet = 0;
-        statusHealth = 1;
+        statusHealth = 100;
         statusHealthRegen = .5;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 16;
-        visionNighttimeRange = 6;
+        visionDaytimeRange = 1600;
+        visionNighttimeRange = 600;
         localizedName = "Power Cog";
         wearable = 8636;
     }

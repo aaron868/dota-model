@@ -59,13 +59,13 @@ public final class BadguysTower2Top extends NpcUnit {
     private BadguysTower2Top() {
         ability1 = BackdoorProtection.instance();
         armorPhysical = 22;
-        attackAcquisitionRange = 7;
+        attackAcquisitionRange = 700;
         attackAnimationPoint = .6;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
-        attackDamageMax = 14;
-        attackDamageMin = 12;
+        attackDamageMax = 140;
+        attackDamageMin = 120;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 7;
+        attackRange = 700;
         attackRate = .95;
         attributeAgilityGain = 0;
         attributeBaseAgility = 0;
@@ -81,29 +81,29 @@ public final class BadguysTower2Top extends NpcUnit {
         bountyXP = 25;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_SIEGE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE";
-        healthBarOffset = 28;
+        healthBarOffset = 280;
         key = "npc_dota_badguys_tower2_top";
         level = 2;
         magicalResistance = 0;
         minimapIcon = "minimap_tower90";
-        minimapIconSize = 32;
+        minimapIconSize = 320;
         model = "models/props_structures/tower001.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
         movementTurnRate = 1;
-        projectileCollisionSize = 5;
+        projectileCollisionSize = 50;
         projectileModel = "particles/base_attacks/ranged_tower_bad.vpcf";
-        projectileSpeed = 75;
-        ringRadius = 12;
+        projectileSpeed = 750;
+        ringRadius = 120;
         soundSet = "Tower.Fire";
-        statusHealth = 16;
+        statusHealth = 1600;
         statusHealthRegen = 0;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_BADGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING";
-        visionDaytimeRange = 19;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1900;
+        visionNighttimeRange = 800;
         localizedName = "Dire Top Tier 2 Tower";
     }
 

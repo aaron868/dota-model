@@ -15,7 +15,7 @@ public final class AntimageSpellShield extends Ability {
 
     private AntimageSpellShield() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 55;
+        iD = 5005;
         key = "antimage_spell_shield";
         localizedName = "Spell Shield";
         owningHeroShortKey = "antimage";

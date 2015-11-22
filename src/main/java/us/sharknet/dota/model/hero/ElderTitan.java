@@ -64,7 +64,7 @@ public final class ElderTitan extends Hero {
         ability5 = ElderTitanEarthSplitter.instance();
         ability6 = AttributeBonus.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .35;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 33;
@@ -81,8 +81,8 @@ public final class ElderTitan extends Hero {
         banSound = "elder_titan_elder_anger_03";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 2;
-        heroID = 13;
+        healthBarOffset = 200;
+        heroID = 103;
         heroSelectSoundEffect = "Hero_ElderTitan.Pick";
         idleExpression = "scenes/elder_titan/elder_titan_exp_idle_01.vcd";
         key = "npc_dota_hero_elder_titan";

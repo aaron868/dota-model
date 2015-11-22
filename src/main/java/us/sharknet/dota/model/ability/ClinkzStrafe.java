@@ -26,7 +26,7 @@ public final class ClinkzStrafe extends Ability {
         fightRecapLevel = 1;
         iD = 5259;
         key = "clinkz_strafe";
-        attack_speed_bonus_pct = 13;
+        attack_speed_bonus_pct = 130;
         duration = new double[]{4.0,6.0,8.0,10.0};
         localizedName = "Strafe";
         owningHeroShortKey = "clinkz";

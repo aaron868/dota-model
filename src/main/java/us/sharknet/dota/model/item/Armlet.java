@@ -32,7 +32,7 @@ public final class Armlet extends Item {
         abilityCooldown = 0;
         iD = 151;
         itemAliases = "armlet of mordiggian";
-        itemCost = 232;
+        itemCost = 2320;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "epic";
         itemShopTags = new String[]{"damage","attack_speed","armor","regen_health","hard_to_tag"};
@@ -46,7 +46,7 @@ public final class Armlet extends Item {
         unholy_bonus_attack_speed = 0;
         unholy_bonus_damage = 31;
         unholy_bonus_strength = 25;
-        unholy_health_drain_per_second_tooltip = 4;
+        unholy_health_drain_per_second_tooltip = 40;
         unholy_health_drain_per_tick = 4;
     }
 

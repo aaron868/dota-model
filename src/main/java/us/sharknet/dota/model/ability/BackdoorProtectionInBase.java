@@ -23,7 +23,7 @@ public final class BackdoorProtectionInBase extends Ability {
         activation_time = 15;
         localizedName = "Backdoor Protection In Base";
         owningHeroShortKey = "backdoor";
-        regen_rate = 9;
+        regen_rate = 90;
     }
 
     public static BackdoorProtectionInBase instance() {

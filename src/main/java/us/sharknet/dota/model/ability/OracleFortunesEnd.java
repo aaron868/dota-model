@@ -32,10 +32,10 @@ public final class OracleFortunesEnd extends Ability {
     private OracleFortunesEnd() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_CHANNELLED","DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL"};
         abilityCastPoint = 0;
-        abilityCastRange = 85;
+        abilityCastRange = 850;
         abilityChannelTime = 2.5;
         abilityCooldown = new int[]{15,12,9,6};
-        abilityManaCost = 13;
+        abilityManaCost = 130;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_INVULNERABLE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
@@ -44,14 +44,14 @@ public final class OracleFortunesEnd extends Ability {
         iD = 5637;
         key = "oracle_fortunes_end";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        bolt_speed = 12;
+        bolt_speed = 1200;
         damage = new int[]{90,120,150,180};
         localizedName = "Fortunes End";
         max_channel_time_tooltip = 2.5;
         maximum_purge_duration = 2.5;
         minimum_purge_duration = .5;
         owningHeroShortKey = "oracle";
-        radius = 3;
+        radius = 300;
     }
 
     public static OracleFortunesEnd instance() {

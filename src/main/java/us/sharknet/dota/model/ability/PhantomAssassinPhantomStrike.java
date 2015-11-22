@@ -35,7 +35,7 @@ public final class PhantomAssassinPhantomStrike extends Ability {
         iD = 5191;
         key = "phantom_assassin_phantom_strike";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        bonus_attack_speed = 13;
+        bonus_attack_speed = 130;
         bonus_max_attack_count = 4;
         localizedName = "Phantom Strike";
         owningHeroShortKey = "phantom_assassin";

@@ -38,14 +38,14 @@ public final class UndyingFleshGolem extends Ability {
         death_heal = 6;
         death_heal_creep = 2;
         duration = 3;
-        full_power_radius = 2;
+        full_power_radius = 200;
         localizedName = "Flesh Golem";
         max_damage_amp = new int[]{20,25,30};
-        max_speed_slow = 2;
+        max_speed_slow = 20;
         min_damage_amp = 1;
         min_speed_slow = 1;
         owningHeroShortKey = "undying";
-        radius = 75;
+        radius = 750;
     }
 
     public static UndyingFleshGolem instance() {

@@ -39,7 +39,7 @@ public final class DeathProphetExorcism extends Ability {
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         fightRecapLevel = 2;
-        iD = 593;
+        iD = 5093;
         key = "death_prophet_exorcism";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         average_damage = new int[]{55,55,55};

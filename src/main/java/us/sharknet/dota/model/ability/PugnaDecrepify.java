@@ -31,7 +31,7 @@ public final class PugnaDecrepify extends Ability {
         abilityCastRange = new int[]{700,700,700,700};
         abilityCooldown = new double[]{15.0,12.0,9.0,6.0};
         abilityDuration = 3.5;
-        abilityManaCost = 6;
+        abilityManaCost = 60;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
         iD = 5187;

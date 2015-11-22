@@ -30,7 +30,7 @@ public final class SilencerLastWord extends Ability {
     private SilencerLastWord() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .3;
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityCooldown = new double[]{30.0,24.0,18.0,12.0};
         abilityManaCost = 115;
         abilityModifierSupportValue = .3;

@@ -22,13 +22,13 @@ public final class LoneDruidSpiritBearEntangle extends Ability {
     private LoneDruidSpiritBearEntangle() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityCooldown = 5;
-        abilityDamage = 6;
+        abilityDamage = 60;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         iD = 5419;
         key = "lone_druid_spirit_bear_entangle";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         creep_duration = 9;
-        entangle_chance = 2;
+        entangle_chance = 20;
         hero_duration = 3;
         localizedName = "Spirit Bear Entangle";
         owningHeroShortKey = "lone_druid_spirit_bear";

@@ -53,7 +53,7 @@ public final class LoneDruidBear4 extends NpcUnit {
         ability2 = LoneDruidSpiritBearEntangle.instance();
         ability3 = LoneDruidSpiritBearDemolish.instance();
         armorPhysical = 6;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .43;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 38;
@@ -61,9 +61,9 @@ public final class LoneDruidBear4 extends NpcUnit {
         attackRange = 128;
         attackRate = 1.45;
         baseClass = "npc_dota_lone_druid_bear";
-        bountyGoldMax = 3;
-        bountyGoldMin = 3;
-        bountyXP = 3;
+        bountyGoldMax = 300;
+        bountyGoldMin = 300;
+        bountyXP = 300;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         consideredHero = 1;
@@ -74,20 +74,20 @@ public final class LoneDruidBear4 extends NpcUnit {
         model = "models/heroes/lone_druid/spirit_bear.vmdl";
         modelScale = .85;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 34;
+        movementSpeed = 340;
         movementTurnRate = .6;
         projectileSpeed = 0;
-        ringRadius = 7;
+        ringRadius = 70;
         soundSet = "LoneDruid_SpiritBear";
-        statusHealth = 27;
+        statusHealth = 2700;
         statusHealthRegen = 5;
-        statusMana = 3;
+        statusMana = 300;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitLabel = "spirit_bear";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 14;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1400;
+        visionNighttimeRange = 800;
         localizedName = "Spirit Bear Level 4";
     }
 

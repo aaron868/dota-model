@@ -25,13 +25,13 @@ public final class DarkTrollWarlordEnsnare extends Ability {
     private DarkTrollWarlordEnsnare() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .5;
-        abilityCastRange = 55;
+        abilityCastRange = 550;
         abilityCooldown = 2;
-        abilityManaCost = 15;
+        abilityManaCost = 150;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        iD = 535;
+        iD = 5305;
         key = "dark_troll_warlord_ensnare";
         maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";

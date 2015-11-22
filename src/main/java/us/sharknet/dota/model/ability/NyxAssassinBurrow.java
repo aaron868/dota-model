@@ -34,14 +34,14 @@ public final class NyxAssassinBurrow extends Ability {
         key = "nyx_assassin_burrow";
         maxLevel = 1;
         burrow_delay = 1;
-        carapace_burrow_range_tooltip = 3;
-        damage_reduction = 4;
+        carapace_burrow_range_tooltip = 300;
+        damage_reduction = 40;
         health_regen_rate = 1.5;
         impale_burn_range_increase_pct_tooltip = 75;
         impale_burrow_cooldown_tooltip = 7;
         impale_burrow_range_tooltip = 1225;
         localizedName = "Burrow";
-        mana_burn_burrow_range_tooltip = 15;
+        mana_burn_burrow_range_tooltip = 1050;
         mana_regen_rate = 1.5;
         owningHeroShortKey = "nyx_assassin";
     }

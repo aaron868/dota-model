@@ -16,10 +16,10 @@ public final class JuggernautBladeDance extends Ability {
 
     private JuggernautBladeDance() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 527;
+        iD = 5027;
         key = "juggernaut_blade_dance";
         blade_dance_crit_chance = new int[]{20,25,30,35};
-        blade_dance_crit_mult = 2;
+        blade_dance_crit_mult = 200;
         localizedName = "Blade Dance";
         owningHeroShortKey = "juggernaut";
     }

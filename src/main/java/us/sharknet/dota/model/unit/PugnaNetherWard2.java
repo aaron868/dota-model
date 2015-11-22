@@ -51,8 +51,8 @@ public final class PugnaNetherWard2 extends NpcUnit {
         attackRate = 1;
         baseClass = "npc_dota_base_additive";
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
-        bountyGoldMax = 4;
-        bountyGoldMin = 4;
+        bountyGoldMax = 40;
+        bountyGoldMin = 40;
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
@@ -69,8 +69,8 @@ public final class PugnaNetherWard2 extends NpcUnit {
         statusHealthRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 6;
-        visionNighttimeRange = 6;
+        visionDaytimeRange = 600;
+        visionNighttimeRange = 600;
         localizedName = "Nether Ward Level 2";
         wearable = 8627;
     }

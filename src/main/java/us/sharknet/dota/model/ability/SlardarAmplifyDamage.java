@@ -28,7 +28,7 @@ public final class SlardarAmplifyDamage extends Ability {
     private SlardarAmplifyDamage() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.35,0.35,0.35};
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = 5;
         abilityManaCost = new int[]{25,25,25};
         abilityModifierSupportValue = 6;

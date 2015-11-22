@@ -27,7 +27,7 @@ public final class TerrorbladeMetamorphosis extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = 0;
         abilityCooldown = 14;
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         iD = 5621;
         key = "terrorblade_metamorphosis";
         base_attack_time = 1.6;
@@ -35,10 +35,10 @@ public final class TerrorbladeMetamorphosis extends Ability {
         bonus_range = 422;
         duration = new double[]{40.0,44.0,48.0,52.0};
         localizedName = "Metamorphosis";
-        metamorph_aura_tooltip = 9;
+        metamorph_aura_tooltip = 900;
         owningHeroShortKey = "terrorblade";
         speed_loss = 25;
-        tooltip_attack_range = 55;
+        tooltip_attack_range = 550;
         transformation_time = .35;
     }
 

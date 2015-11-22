@@ -17,7 +17,7 @@ public final class RecipeBuckler extends Item {
 
     private RecipeBuckler() {
         iD = 85;
-        itemCost = 2;
+        itemCost = 200;
         itemRecipe = 1;
         itemRequirements = new Item[]{Chainmail.instance(),Branches.instance()};
         itemResult = Buckler.instance();

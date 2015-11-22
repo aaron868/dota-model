@@ -36,27 +36,27 @@ public final class ObserverWards extends NpcUnit {
     private ObserverWards() {
         baseClass = "npc_dota_ward_base";
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
-        bountyGoldMax = 5;
-        bountyGoldMin = 5;
-        bountyXP = 5;
+        bountyGoldMax = 50;
+        bountyGoldMin = 50;
+        bountyXP = 50;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
-        healthBarOffset = 14;
+        healthBarOffset = 140;
         key = "npc_dota_observer_wards";
         level = 0;
         minimapIcon = "minimap_ward_obs";
-        minimapIconSize = 3;
+        minimapIconSize = 300;
         model = "models/props_gameplay/default_ward.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        statusHealth = 2;
+        statusHealth = 200;
         statusHealthRegen = 0;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 16;
-        visionNighttimeRange = 16;
+        visionDaytimeRange = 1600;
+        visionNighttimeRange = 1600;
         localizedName = "Observer Ward";
         wearable = 7555;
     }

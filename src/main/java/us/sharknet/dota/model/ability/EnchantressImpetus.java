@@ -30,7 +30,7 @@ public final class EnchantressImpetus extends Ability {
     private EnchantressImpetus() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
         abilityCastPoint = new double[]{0.0,0.0,0.0};
-        abilityCastRange = 55;
+        abilityCastRange = 550;
         abilityCooldown = new double[]{0.0,0.0,0.0};
         abilityDuration = new double[]{1.5,1.5,1.5};
         abilityManaCost = new int[]{55,60,65};
@@ -40,7 +40,7 @@ public final class EnchantressImpetus extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 527;
+        iD = 5270;
         key = "enchantress_impetus";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         bonus_attack_range_scepter = new int[]{190,190,190};

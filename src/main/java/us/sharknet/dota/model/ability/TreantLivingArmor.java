@@ -29,7 +29,7 @@ public final class TreantLivingArmor extends Ability {
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
         abilityCastRange = 0;
         abilityCooldown = new double[]{32.0,26.0,20.0,14.0};
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC","DOTA_UNIT_TARGET_BUILDING"};
         fightRecapLevel = 1;

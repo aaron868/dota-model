@@ -37,11 +37,11 @@ public final class SpectreHaunt extends Ability {
         attack_delay = new double[]{1.0,1.0,1.0};
         duration = new double[]{5.0,6.0,7.0};
         illusion_damage_incoming = new int[]{100,100,100};
-        illusion_damage_outgoing = -7;
+        illusion_damage_outgoing = -70;
         localizedName = "Haunt";
         owningHeroShortKey = "spectre";
         tooltip_illusion_total_damage_incoming = new int[]{200,200,200};
-        tooltip_outgoing = 3;
+        tooltip_outgoing = 30;
     }
 
     public static SpectreHaunt instance() {

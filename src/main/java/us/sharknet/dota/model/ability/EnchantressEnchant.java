@@ -26,7 +26,7 @@ public final class EnchantressEnchant extends Ability {
     private EnchantressEnchant() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = new double[]{30.0,25.0,20.0,15.0};
         abilityDuration = new double[]{5.5,5.5,5.5,5.5};
         abilityManaCost = new int[]{65,65,65,65};

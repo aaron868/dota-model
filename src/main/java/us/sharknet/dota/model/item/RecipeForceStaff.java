@@ -16,8 +16,8 @@ public final class RecipeForceStaff extends Item {
     private final String localizedName;
 
     private RecipeForceStaff() {
-        iD = 11;
-        itemCost = 9;
+        iD = 101;
+        itemCost = 900;
         itemRecipe = 1;
         itemRequirements = new Item[]{StaffOfWizardry.instance(),RingOfRegen.instance()};
         itemResult = ForceStaff.instance();

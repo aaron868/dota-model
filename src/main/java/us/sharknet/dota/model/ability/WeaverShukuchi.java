@@ -27,7 +27,7 @@ public final class WeaverShukuchi extends Ability {
         abilityCooldown = new double[]{12.0,10.0,8.0,6.0};
         abilityManaCost = new int[]{60,60,60,60};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 529;
+        iD = 5290;
         key = "weaver_shukuchi";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = new int[]{75,100,125,150};

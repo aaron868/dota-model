@@ -16,9 +16,9 @@ public final class LoneDruidSpiritBearDemolish extends Ability {
 
     private LoneDruidSpiritBearDemolish() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 542;
+        iD = 5420;
         key = "lone_druid_spirit_bear_demolish";
-        bonus_building_damage = 4;
+        bonus_building_damage = 40;
         localizedName = "Spirit Bear Demolish";
         owningHeroShortKey = "lone_druid_spirit_bear";
         spell_resistance = 33;

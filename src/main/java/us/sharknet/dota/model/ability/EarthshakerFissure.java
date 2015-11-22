@@ -30,7 +30,7 @@ public final class EarthshakerFissure extends Ability {
     private EarthshakerFissure() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.69,0.69,0.69,0.69};
-        abilityCastRange = 14;
+        abilityCastRange = 1400;
         abilityCooldown = new double[]{15.0,15.0,15.0,15.0};
         abilityDamage = new int[]{110,160,210,260};
         abilityDuration = new double[]{1.0,1.25,1.5,1.75};
@@ -39,12 +39,12 @@ public final class EarthshakerFissure extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 523;
+        iD = 5023;
         key = "earthshaker_fissure";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         fissure_duration = 8;
         fissure_radius = 225;
-        fissure_range = 14;
+        fissure_range = 1400;
         localizedName = "Fissure";
         owningHeroShortKey = "earthshaker";
         stun_duration = new double[]{1.0,1.25,1.5,1.75};

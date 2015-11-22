@@ -50,15 +50,15 @@ public final class Roquelaire extends NpcUnit {
         model = "models/props_gameplay/roquelaire/roquelaire.vmdl";
         modelScale = 1.1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
-        movementSpeed = 5;
+        movementSpeed = 500;
         soundSet = 0;
-        statusHealth = 5;
+        statusHealth = 50;
         statusHealthRegen = .5;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitLabel = "roquelaire";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 3;
-        visionNighttimeRange = 3;
+        visionDaytimeRange = 300;
+        visionNighttimeRange = 300;
         wakesNeutrals = 0;
         localizedName = "Roquelaire";
     }

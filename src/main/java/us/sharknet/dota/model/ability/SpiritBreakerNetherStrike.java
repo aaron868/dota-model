@@ -33,8 +33,8 @@ public final class SpiritBreakerNetherStrike extends Ability {
     private SpiritBreakerNetherStrike() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = 1.2;
-        abilityCastRange = 7;
-        abilityCastRangeBuffer = 5;
+        abilityCastRange = 700;
+        abilityCastRangeBuffer = 500;
         abilityCooldown = new int[]{80,70,60};
         abilityManaCost = new int[]{125,150,175};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -47,13 +47,13 @@ public final class SpiritBreakerNetherStrike extends Ability {
         key = "spirit_breaker_nether_strike";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         bash_radius_scepter = new int[]{250,250,250};
-        cast_range_scepter = 85;
+        cast_range_scepter = 850;
         cooldown_scepter = new double[]{20.0,20.0,20.0};
         damage = new int[]{150,250,350};
         fade_time = new double[]{1.0,1.0,1.0};
         localizedName = "Nether Strike";
         owningHeroShortKey = "spirit_breaker";
-        tooltip_range = 7;
+        tooltip_range = 700;
     }
 
     public static SpiritBreakerNetherStrike instance() {

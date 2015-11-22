@@ -31,7 +31,7 @@ public final class ZuusLightningBolt extends Ability {
     private ZuusLightningBolt() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = new double[]{6.0,6.0,6.0,6.0};
         abilityDamage = new int[]{100,175,275,350};
         abilityManaCost = new int[]{75,95,115,135};
@@ -46,10 +46,10 @@ public final class ZuusLightningBolt extends Ability {
         localizedName = "Lightning Bolt";
         owningHeroShortKey = "zuus";
         sight_duration = 4.5;
-        sight_radius_day = 75;
-        sight_radius_night = 75;
+        sight_radius_day = 750;
+        sight_radius_night = 750;
         spread_aoe = 325;
-        true_sight_radius = 75;
+        true_sight_radius = 750;
     }
 
     public static ZuusLightningBolt instance() {

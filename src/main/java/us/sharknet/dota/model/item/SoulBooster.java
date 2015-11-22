@@ -23,14 +23,14 @@ public final class SoulBooster extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 129;
         itemAliases = "soul booster";
-        itemCost = 32;
+        itemCost = 3200;
         itemQuality = "epic";
         itemShopTags = new String[]{"regen_health","regen_mana","health_pool","mana_pool"};
         key = "item_soul_booster";
-        bonus_health = 45;
+        bonus_health = 450;
         bonus_health_regen = 4;
-        bonus_mana = 4;
-        bonus_mana_regen = 1;
+        bonus_mana = 400;
+        bonus_mana_regen = 100;
         localizedName = "Soul Booster";
     }
 

@@ -49,13 +49,13 @@ public final class VenomancerPlagueWard2 extends NpcUnit {
 
     private VenomancerPlagueWard2() {
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 21;
         attackDamageMin = 17;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 6;
+        attackRange = 600;
         attackRate = 1.5;
         baseClass = "npc_dota_venomancer_plagueward";
         boundsHullName = "DOTA_HULL_SIZE_REGULAR";
@@ -65,7 +65,7 @@ public final class VenomancerPlagueWard2 extends NpcUnit {
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         hasInventory = 0;
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         key = "npc_dota_venomancer_plague_ward_2";
         level = 1;
         magicalResistance = 0;
@@ -75,17 +75,17 @@ public final class VenomancerPlagueWard2 extends NpcUnit {
         movementSpeed = 0;
         movementTurnRate = .5;
         projectileModel = "particles/units/heroes/hero_venomancer/venomancer_plague_ward_projectile.vpcf";
-        projectileSpeed = 19;
+        projectileSpeed = 1900;
         selectionGroup = "Venomancer_Wards";
         soundSet = "Hero_VenomancerWard";
-        statusHealth = 2;
+        statusHealth = 200;
         statusHealthRegen = .25;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 12;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1200;
+        visionNighttimeRange = 800;
         localizedName = "Plague Ward Level 2";
     }
 

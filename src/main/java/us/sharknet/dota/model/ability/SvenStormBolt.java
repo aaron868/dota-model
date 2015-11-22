@@ -29,19 +29,19 @@ public final class SvenStormBolt extends Ability {
     private SvenStormBolt() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = 13;
         abilityDamage = new int[]{100,175,250,325};
-        abilityManaCost = 14;
+        abilityManaCost = 140;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 594;
+        iD = 5094;
         key = "sven_storm_bolt";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         bolt_aoe = 255;
-        bolt_speed = 1;
+        bolt_speed = 1000;
         bolt_stun_duration = 2;
         localizedName = "Storm Bolt";
         owningHeroShortKey = "sven";

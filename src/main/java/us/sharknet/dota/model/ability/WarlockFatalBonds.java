@@ -29,7 +29,7 @@ public final class WarlockFatalBonds extends Ability {
     private WarlockFatalBonds() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .2;
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = new double[]{25.0,25.0,25.0,25.0};
         abilityDamage = new int[]{0,0,0,0};
         abilityManaCost = new int[]{120,120,120,120};

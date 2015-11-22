@@ -72,12 +72,12 @@ public final class ShadowDemon extends Hero {
         abilityDraftDisabled = 1;
         abilityLayout = 5;
         armorPhysical = 0;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .35;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 31;
         attackDamageMin = 27;
-        attackRange = 5;
+        attackRange = 500;
         attackRate = 1.7;
         attributeAgilityGain = 2.2;
         attributeBaseAgility = 18;
@@ -107,7 +107,7 @@ public final class ShadowDemon extends Hero {
         pickSound = "shadow_demon_shadow_demon_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_shadow_demon";
         projectileModel = "particles/units/heroes/hero_shadow_demon/shadow_demon_base_attack.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Support","Disabler","Initiator","Nuker"};
         rolelevels = new int[]{2,2,1,1};
         soundSet = "Hero_ShadowDemon";

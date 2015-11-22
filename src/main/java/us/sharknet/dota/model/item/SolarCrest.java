@@ -35,7 +35,7 @@ public final class SolarCrest extends Item {
 
     private SolarCrest() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = 7;
         abilitySharedCooldown = "medallion";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
@@ -43,23 +43,23 @@ public final class SolarCrest extends Item {
         fightRecapLevel = 1;
         iD = 229;
         itemAliases = "solar crest";
-        itemCost = 3;
+        itemCost = 3000;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "rare";
         itemShopTags = new String[]{"armor","regen_mana","hard_to_tag"};
         key = "item_solar_crest";
-        allied_armor = 1;
+        allied_armor = 10;
         allied_evasion = 25;
-        armor_reduction = -1;
-        bonus_armor = 1;
+        armor_reduction = -10;
+        bonus_armor = 10;
         bonus_evasion = 25;
         bonus_mana_regen_pct = 75;
         duration = 7;
-        enemy_armor_reduction_tooltip = 1;
+        enemy_armor_reduction_tooltip = 10;
         localizedName = "Solar Crest";
         miss_chance = 25;
-        valor_cast_range_tooltip = 1;
+        valor_cast_range_tooltip = 1000;
     }
 
     public static SolarCrest instance() {

@@ -67,7 +67,7 @@ public final class Juggernaut extends Hero {
         ability3 = JuggernautBladeDance.instance();
         ability4 = JuggernautOmniSlash.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .33;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 28;
@@ -77,7 +77,7 @@ public final class Juggernaut extends Hero {
         attributeAgilityGain = 2.4;
         attributeBaseAgility = 26;
         attributeBaseIntelligence = 14;
-        attributeBaseStrength = 2;
+        attributeBaseStrength = 20;
         attributeIntelligenceGain = 1.4;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.9;
@@ -87,7 +87,7 @@ public final class Juggernaut extends Hero {
         cMEnabled = 1;
         enabled = 1;
         hasAggressiveStance = 1;
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         heroGlowColor = new int[]{222,120,36};
         heroID = 8;
         heroPool1 = 1;
@@ -98,7 +98,7 @@ public final class Juggernaut extends Hero {
         loadoutScale = 1;
         model = "models/heroes/juggernaut/juggernaut.vmdl";
         modelScale = .85;
-        movementSpeed = 35;
+        movementSpeed = 305;
         movementTurnRate = .6;
         pickSound = "juggernaut_jug_spawn_03";
         portrait = "vgui/hud/heroportraits/portrait_juggernaut";

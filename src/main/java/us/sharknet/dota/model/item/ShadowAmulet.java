@@ -23,7 +23,7 @@ public final class ShadowAmulet extends Item {
 
     private ShadowAmulet() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = 1;
         abilityManaCost = 0;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
@@ -31,9 +31,9 @@ public final class ShadowAmulet extends Item {
         fightRecapLevel = 1;
         iD = 215;
         itemAliases = "shadow amulet";
-        itemCost = 14;
+        itemCost = 1400;
         key = "item_shadow_amulet";
-        bonus_attack_speed = 2;
+        bonus_attack_speed = 20;
         fade_time = 1.5;
         localizedName = "Shadow Amulet";
     }

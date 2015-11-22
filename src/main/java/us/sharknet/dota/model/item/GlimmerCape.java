@@ -28,21 +28,21 @@ public final class GlimmerCape extends Item {
 
     private GlimmerCape() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"};
-        abilityCastRange = 8;
+        abilityCastRange = 800;
         abilityCooldown = 16;
-        abilityManaCost = 11;
+        abilityManaCost = 110;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         fightRecapLevel = 1;
         iD = 254;
         itemAliases = "glimmer cape";
-        itemCost = 195;
+        itemCost = 1950;
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "rare";
         key = "item_glimmer_cape";
         active_magical_armor = 45;
-        bonus_attack_speed = 2;
-        bonus_magical_armor = 2;
+        bonus_attack_speed = 20;
+        bonus_magical_armor = 20;
         duration = 5;
         fade_delay = .6;
         localizedName = "Glimmer Cape";

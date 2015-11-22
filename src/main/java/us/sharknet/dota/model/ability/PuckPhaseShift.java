@@ -23,7 +23,7 @@ public final class PuckPhaseShift extends Ability {
         abilityChannelTime = new double[]{0.75,1.50,2.25,3.25};
         abilityCooldown = new double[]{6.0,6.0,6.0,6.0};
         abilityManaCost = new int[]{0,0,0,0};
-        iD = 572;
+        iD = 5072;
         key = "puck_phase_shift";
         duration = new double[]{0.75,1.5,2.25,3.25};
         localizedName = "Phase Shift";

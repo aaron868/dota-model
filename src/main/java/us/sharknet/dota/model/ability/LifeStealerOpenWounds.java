@@ -40,11 +40,11 @@ public final class LifeStealerOpenWounds extends Ability {
         key = "life_stealer_open_wounds";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = 8;
-        heal_percent = 5;
+        heal_percent = 50;
         localizedName = "Open Wounds";
         owningHeroShortKey = "life_stealer";
         slow_steps = new int[]{-70,-70,-60,-50,-30,-10,-10,-10};
-        slow_tooltip = 7;
+        slow_tooltip = 70;
         tooltip_range = new int[]{200,300,400,500};
     }
 

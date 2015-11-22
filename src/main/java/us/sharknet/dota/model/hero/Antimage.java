@@ -62,7 +62,7 @@ public final class Antimage extends Hero {
         ability3 = AntimageSpellShield.instance();
         ability4 = AntimageManaVoid.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 31;
@@ -80,7 +80,7 @@ public final class Antimage extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 14;
+        healthBarOffset = 140;
         heroGlowColor = new int[]{120,64,148};
         heroID = 1;
         heroSelectSoundEffect = "Hero_Antimage.Pick";

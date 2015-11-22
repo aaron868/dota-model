@@ -58,13 +58,13 @@ public final class BadguysSiege extends NpcUnit {
 
     private BadguysSiege() {
         armorPhysical = 0;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .7;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 46;
         attackDamageMin = 35;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 69;
+        attackRange = 690;
         attackRate = 2.7;
         attributeAgilityGain = 0;
         attributeBaseAgility = 0;
@@ -75,35 +75,35 @@ public final class BadguysSiege extends NpcUnit {
         attributeStrengthGain = 0;
         baseClass = "npc_dota_creep_siege";
         boundsHullName = "DOTA_HULL_SIZE_SIEGE";
-        bountyGoldMax = 8;
+        bountyGoldMax = 80;
         bountyGoldMin = 66;
         bountyXP = 88;
         canBeDominated = 1;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_SIEGE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE";
-        healthBarOffset = 16;
+        healthBarOffset = 160;
         key = "npc_dota_badguys_siege";
         level = 4;
-        magicalResistance = 8;
+        magicalResistance = 80;
         minimapIcon = "minimap_siege";
-        minimapIconSize = 25;
+        minimapIconSize = 250;
         model = "models/creeps/lane_creeps/creep_bad_siege/creep_bad_siege.vmdl";
         modelScale = .8;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 325;
         movementTurnRate = .5;
         projectileModel = "particles/base_attacks/ranged_siege_bad.vpcf";
-        projectileSpeed = 11;
-        ringRadius = 8;
+        projectileSpeed = 1100;
+        ringRadius = 80;
         soundSet = "Creep_Bad_Engine";
-        statusHealth = 55;
+        statusHealth = 550;
         statusHealthRegen = 0;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_BADGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_SIEGE";
-        visionDaytimeRange = 85;
-        visionNighttimeRange = 85;
+        visionDaytimeRange = 850;
+        visionNighttimeRange = 850;
         localizedName = "Dire Siege Creep";
     }
 

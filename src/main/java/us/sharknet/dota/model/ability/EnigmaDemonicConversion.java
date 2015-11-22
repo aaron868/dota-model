@@ -29,7 +29,7 @@ public final class EnigmaDemonicConversion extends Ability {
     private EnigmaDemonicConversion() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = new double[]{35.0,35.0,35.0,35.0};
         abilityDuration = new double[]{35.0,35.0,35.0,35.0};
         abilityManaCost = new int[]{170,170,170,170};

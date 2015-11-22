@@ -22,10 +22,10 @@ public final class KunkkaTidebringer extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityCooldown = new double[]{13.0,10.0,7.0,4.0};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        iD = 532;
+        iD = 5032;
         key = "kunkka_tidebringer";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        cleave_damage = 1;
+        cleave_damage = 100;
         damage_bonus = new int[]{20,35,50,65};
         localizedName = "Tidebringer";
         owningHeroShortKey = "kunkka";

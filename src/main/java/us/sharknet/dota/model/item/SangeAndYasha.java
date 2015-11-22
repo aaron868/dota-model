@@ -30,7 +30,7 @@ public final class SangeAndYasha extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 154;
         itemAliases = new String[]{"sny","s&y","sy","sange and yasha"};
-        itemCost = 41;
+        itemCost = 4100;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "artifact";

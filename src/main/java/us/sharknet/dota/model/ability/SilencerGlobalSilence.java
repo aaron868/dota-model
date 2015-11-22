@@ -31,7 +31,7 @@ public final class SilencerGlobalSilence extends Ability {
         abilityModifierSupportValue = .5;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         fightRecapLevel = 2;
-        iD = 538;
+        iD = 5380;
         key = "silencer_global_silence";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         duration_scepter = new double[]{4.0,5.0,6.0};

@@ -27,11 +27,11 @@ public final class BatriderStickyNapalm extends Ability {
     private BatriderStickyNapalm() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = new double[]{3.0,3.0,3.0,3.0};
         abilityManaCost = new int[]{20,20,20,20};
         abilityModifierSupportValue = .5;
-        iD = 532;
+        iD = 5320;
         key = "batrider_sticky_napalm";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = new int[]{10,15,20,25};

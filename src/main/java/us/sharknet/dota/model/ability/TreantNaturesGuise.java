@@ -29,9 +29,9 @@ public final class TreantNaturesGuise extends Ability {
     private TreantNaturesGuise() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = .3;
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{10.0,8.0,6.0,4.0};
-        abilityManaCost = 6;
+        abilityManaCost = 60;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;

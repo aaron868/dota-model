@@ -29,7 +29,7 @@ public final class DeathProphetCarrionSwarm extends Ability {
     private DeathProphetCarrionSwarm() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{8.0,8.0,8.0,8.0};
         abilityDamage = new int[]{75,150,225,300};
         abilityManaCost = new int[]{105,120,140,165};
@@ -37,7 +37,7 @@ public final class DeathProphetCarrionSwarm extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 59;
+        iD = 5090;
         key = "death_prophet_carrion_swarm";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         end_radius = new int[]{300,300,300,300};

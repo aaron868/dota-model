@@ -62,7 +62,7 @@ public final class SandKing extends Hero {
         ability3 = SandkingCausticFinale.instance();
         ability4 = SandkingEpicenter.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .53;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 41;
@@ -81,7 +81,7 @@ public final class SandKing extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 13;
+        healthBarOffset = 130;
         heroGlowColor = new int[]{216,174,46};
         heroID = 16;
         heroPool1 = 1;
@@ -91,7 +91,7 @@ public final class SandKing extends Hero {
         lastHitChallengeRival = "npc_dota_hero_skeleton_king";
         model = "models/heroes/sand_king/sand_king.vmdl";
         modelScale = .84;
-        movementSpeed = 3;
+        movementSpeed = 300;
         movementTurnRate = .5;
         nameAliases = "sk";
         pickSound = "sandking_skg_spawn_02";

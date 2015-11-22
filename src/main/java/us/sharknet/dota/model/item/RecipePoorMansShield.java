@@ -16,7 +16,7 @@ public final class RecipePoorMansShield extends Item {
     private final String localizedName;
 
     private RecipePoorMansShield() {
-        iD = 7;
+        iD = 70;
         itemCost = 0;
         itemRecipe = 1;
         itemRequirements = new Item[]{Slippers.instance(),Slippers.instance(),StoutShield.instance()};

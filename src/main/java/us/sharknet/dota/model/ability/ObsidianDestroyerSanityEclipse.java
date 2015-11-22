@@ -28,8 +28,8 @@ public final class ObsidianDestroyerSanityEclipse extends Ability {
     private ObsidianDestroyerSanityEclipse() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.25,0.25,0.25};
-        abilityCastRange = 7;
-        abilityCooldown = 16;
+        abilityCastRange = 700;
+        abilityCooldown = 160;
         abilityManaCost = new int[]{175,250,325};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -37,11 +37,11 @@ public final class ObsidianDestroyerSanityEclipse extends Ability {
         iD = 5394;
         key = "obsidian_destroyer_sanity_eclipse";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        cast_range = 7;
+        cast_range = 700;
         damage_multiplier = new int[]{8,9,10};
         damage_multiplier_scepter = new int[]{8,9,10};
         localizedName = "Sanity Eclipse";
-        mana_drain = 4;
+        mana_drain = 40;
         owningHeroShortKey = "obsidian_destroyer";
         radius = new int[]{375,475,575};
     }

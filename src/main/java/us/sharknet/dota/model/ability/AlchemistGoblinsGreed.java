@@ -25,7 +25,7 @@ public final class AlchemistGoblinsGreed extends Ability {
         bonus_gold = new int[]{6,8,10,12};
         bonus_gold_cap = new int[]{12,20,28,36};
         bounty_multiplier_tooltip = 5;
-        duration = 3;
+        duration = 30;
         localizedName = "Goblins Greed";
         owningHeroShortKey = "alchemist";
     }

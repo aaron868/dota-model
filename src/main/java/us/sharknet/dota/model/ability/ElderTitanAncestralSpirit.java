@@ -31,7 +31,7 @@ public final class ElderTitanAncestralSpirit extends Ability {
     private ElderTitanAncestralSpirit() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 12;
+        abilityCastRange = 1200;
         abilityCooldown = 16;
         abilityManaCost = new int[]{80,90,100,110};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -42,13 +42,13 @@ public final class ElderTitanAncestralSpirit extends Ability {
         damage_creeps = new int[]{6,9,12,15};
         damage_heroes = new int[]{10,20,30,40};
         localizedName = "Ancestral Spirit";
-        move_pct_cap = 3;
+        move_pct_cap = 30;
         move_pct_creeps = 1;
         move_pct_heroes = 5;
         owningHeroShortKey = "elder_titan";
         pass_damage = new int[]{60,90,120,150};
         radius = 275;
-        speed = 6;
+        speed = 600;
         spirit_duration = 8;
     }
 

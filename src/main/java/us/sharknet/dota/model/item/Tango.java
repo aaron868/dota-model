@@ -48,10 +48,10 @@ public final class Tango extends Item {
         model = "models/props_gameplay/tango.vmdl";
         sideShop = 0;
         buff_duration = 16;
-        cast_range_ward = 45;
+        cast_range_ward = 450;
         localizedName = "Tango";
         total_heal = 115;
-        total_heal_ward_tooltip = 23;
+        total_heal_ward_tooltip = 230;
     }
 
     public static Tango instance() {

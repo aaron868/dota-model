@@ -32,11 +32,11 @@ public final class AbaddonBorrowedTime extends Ability {
         key = "abaddon_borrowed_time";
         duration = new double[]{4.0,5.0,6.0};
         duration_scepter = new double[]{5.0,6.0,7.0};
-        hp_threshold = 4;
+        hp_threshold = 400;
         localizedName = "Borrowed Time";
         owningHeroShortKey = "abaddon";
         redirect = .5;
-        redirect_pct_tooltip_scepter = 5;
+        redirect_pct_tooltip_scepter = 50;
         redirect_range_tooltip_scepter = 9;
     }
 

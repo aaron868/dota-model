@@ -19,14 +19,14 @@ public final class BristlebackBristleback extends Ability {
 
     private BristlebackBristleback() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 555;
+        iD = 5550;
         key = "bristleback_bristleback";
-        back_angle = 7;
+        back_angle = 70;
         back_damage_reduction = new int[]{16,24,32,40};
         localizedName = "Bristleback";
         owningHeroShortKey = "bristleback";
-        quill_release_threshold = 23;
-        side_angle = 11;
+        quill_release_threshold = 230;
+        side_angle = 110;
         side_damage_reduction = new int[]{8,12,16,20};
     }
 

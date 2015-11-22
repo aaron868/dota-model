@@ -27,7 +27,7 @@ public final class WarlockGolemFlamingFists extends Ability {
         key = "warlock_golem_flaming_fists";
         maxLevel = 3;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        chance = 4;
+        chance = 40;
         damage = new int[]{80,115,150};
         localizedName = "Flaming Fists";
         owningHeroShortKey = "warlock";

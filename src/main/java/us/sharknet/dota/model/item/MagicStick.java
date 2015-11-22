@@ -30,7 +30,7 @@ public final class MagicStick extends Item {
         abilitySharedCooldown = "magicwand";
         iD = 34;
         itemAliases = "magic stick";
-        itemCost = 2;
+        itemCost = 200;
         itemDisplayCharges = 1;
         itemQuality = "component";
         itemRequiresCharges = 1;
@@ -38,9 +38,9 @@ public final class MagicStick extends Item {
         key = "item_magic_stick";
         model = "models/props_gameplay/magic_wand.vmdl";
         sideShop = 1;
-        charge_radius = 12;
+        charge_radius = 1200;
         localizedName = "Magic Stick";
-        max_charges = 1;
+        max_charges = 10;
         restore_per_charge = 15;
     }
 

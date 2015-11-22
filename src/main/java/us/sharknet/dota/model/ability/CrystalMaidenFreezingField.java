@@ -38,8 +38,8 @@ public final class CrystalMaidenFreezingField extends Ability {
     private CrystalMaidenFreezingField() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_CHANNELLED","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityChannelTime = 1;
-        abilityCooldown = 9;
+        abilityChannelTime = 10;
+        abilityCooldown = 90;
         abilityDuration = 1;
         abilityManaCost = new int[]{200,400,600};
         abilityModifierSupportValue = .35;
@@ -49,18 +49,18 @@ public final class CrystalMaidenFreezingField extends Ability {
         iD = 5129;
         key = "crystal_maiden_freezing_field";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        attack_slow = -3;
-        attack_slow_scepter = -5;
+        attack_slow = -30;
+        attack_slow_scepter = -50;
         damage = new int[]{105,170,250};
         damage_scepter = new int[]{170,250,310};
-        duration_tooltip = 1;
+        duration_tooltip = 10;
         explosion_interval = .1;
         explosion_max_dist = 785;
         explosion_min_dist = 195;
-        explosion_radius = 3;
+        explosion_radius = 300;
         localizedName = "Freezing Field";
-        movespeed_slow = -3;
-        movespeed_slow_scepter = -5;
+        movespeed_slow = -30;
+        movespeed_slow_scepter = -50;
         owningHeroShortKey = "crystal_maiden";
         radius = 835;
         slow_duration = 1;

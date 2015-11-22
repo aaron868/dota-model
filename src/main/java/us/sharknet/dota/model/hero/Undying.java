@@ -62,7 +62,7 @@ public final class Undying extends Hero {
         ability4 = UndyingFleshGolem.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = 2;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 43;
@@ -70,7 +70,7 @@ public final class Undying extends Hero {
         attackRange = 128;
         attackRate = 1.7;
         attributeAgilityGain = .8;
-        attributeBaseAgility = 1;
+        attributeBaseAgility = 10;
         attributeBaseIntelligence = 27;
         attributeBaseStrength = 22;
         attributeIntelligenceGain = 2.5;
@@ -79,7 +79,7 @@ public final class Undying extends Hero {
         banSound = "undying_undying_anger_02";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 25;
+        healthBarOffset = 250;
         heroID = 85;
         heroSelectSoundEffect = "Hero_Undying.Pick";
         idleExpression = "scenes/undying/undying_exp_idle_01.vcd";
@@ -89,7 +89,7 @@ public final class Undying extends Hero {
         loadoutScale = .87;
         model = "models/heroes/undying/undying.vmdl";
         modelScale = .93;
-        movementSpeed = 31;
+        movementSpeed = 310;
         movementTurnRate = .6;
         nameAliases = "dirge";
         pickSound = "undying_undying_spawn_01";

@@ -61,7 +61,7 @@ public final class Weaver extends Hero {
         ability3 = WeaverGeminateAttack.instance();
         ability4 = WeaverTimeLapse.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .64;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 46;
@@ -78,7 +78,7 @@ public final class Weaver extends Hero {
         banSound = "weaver_weav_anger_01";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 11;
+        healthBarOffset = 110;
         heroID = 63;
         heroSelectSoundEffect = "Hero_Weaver.Pick";
         heroUnlockOrder = 3;
@@ -87,13 +87,13 @@ public final class Weaver extends Hero {
         loadoutScale = .9;
         model = "models/heroes/weaver/weaver.vmdl";
         modelScale = .74;
-        movementSpeed = 29;
+        movementSpeed = 290;
         movementTurnRate = .5;
         newHero = 1;
         pickSound = "weaver_weav_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_weaver";
         projectileModel = "particles/units/heroes/hero_weaver/weaver_base_attack.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Carry","Escape"};
         rolelevels = new int[]{2,3};
         soundSet = "Hero_Weaver";

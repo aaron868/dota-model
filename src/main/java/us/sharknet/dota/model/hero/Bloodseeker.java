@@ -63,7 +63,7 @@ public final class Bloodseeker extends Hero {
         ability3 = BloodseekerThirst.instance();
         ability4 = BloodseekerRupture.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .43;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 35;
@@ -82,7 +82,7 @@ public final class Bloodseeker extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 13;
+        healthBarOffset = 130;
         heroGlowColor = new int[]{247,60,12};
         heroID = 4;
         heroSelectSoundEffect = "Hero_Bloodseeker.Pick";
@@ -93,7 +93,7 @@ public final class Bloodseeker extends Hero {
         loadoutScale = 1.1;
         model = "models/heroes/blood_seeker/blood_seeker.vmdl";
         modelScale = .88;
-        movementSpeed = 29;
+        movementSpeed = 290;
         movementTurnRate = .5;
         nameAliases = "bs";
         pickSound = "bloodseeker_blod_spawn_01";

@@ -29,7 +29,7 @@ public final class BrewmasterThunderClap extends Ability {
         abilityCooldown = 13;
         abilityManaCost = new int[]{90,105,130,150};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 54;
+        iD = 5400;
         key = "brewmaster_thunder_clap";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         attack_speed_slow = new int[]{25,35,45,55};

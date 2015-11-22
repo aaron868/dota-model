@@ -30,7 +30,7 @@ public final class AxeBattleHunger extends Ability {
     private AxeBattleHunger() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 75;
+        abilityCastRange = 750;
         abilityCooldown = new double[]{20.0,15.0,10.0,5.0};
         abilityDamage = new int[]{16,24,32,40};
         abilityManaCost = 75;
@@ -40,7 +40,7 @@ public final class AxeBattleHunger extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 58;
+        iD = 5008;
         key = "axe_battle_hunger";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = 1;

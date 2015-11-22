@@ -29,7 +29,7 @@ public final class ChaosKnightChaosBolt extends Ability {
     private ChaosKnightChaosBolt() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new double[]{10.0,10.0,10.0,10.0};
         abilityManaCost = new int[]{140,140,140,140};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -39,7 +39,7 @@ public final class ChaosKnightChaosBolt extends Ability {
         iD = 5426;
         key = "chaos_knight_chaos_bolt";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        chaos_bolt_speed = 1;
+        chaos_bolt_speed = 1000;
         damage_max = new int[]{200,225,250,275};
         damage_min = new int[]{75,100,125,150};
         localizedName = "Chaos Bolt";

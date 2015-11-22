@@ -14,7 +14,7 @@ public final class BrewmasterEarthSpellImmunity extends Ability {
 
     private BrewmasterEarthSpellImmunity() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 545;
+        iD = 5405;
         key = "brewmaster_earth_spell_immunity";
         localizedName = "Spell Immunity";
         owningHeroShortKey = "brewmaster_earth";

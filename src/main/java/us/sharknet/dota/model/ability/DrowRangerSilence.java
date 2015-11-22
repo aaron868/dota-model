@@ -25,19 +25,19 @@ public final class DrowRangerSilence extends Ability {
     private DrowRangerSilence() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityCooldown = new double[]{13.0,13.0,13.0,13.0};
         abilityDamage = new int[]{0,0,0,0};
         abilityDuration = new double[]{3.0,4.0,5.0,6.0};
         abilityManaCost = new int[]{90,90,90,90};
         fightRecapLevel = 1;
-        iD = 52;
+        iD = 5020;
         key = "drow_ranger_silence";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{3.0,4.0,5.0,6.0};
         localizedName = "Silence";
         owningHeroShortKey = "drow_ranger";
-        silence_radius = 3;
+        silence_radius = 300;
     }
 
     public static DrowRangerSilence instance() {

@@ -58,13 +58,13 @@ public final class GoodguysSiegeUpgraded extends NpcUnit {
 
     private GoodguysSiegeUpgraded() {
         armorPhysical = 0;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .7;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 62;
         attackDamageMin = 51;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 69;
+        attackRange = 690;
         attackRate = 2.7;
         attributeAgilityGain = 0;
         attributeBaseAgility = 0;
@@ -75,35 +75,35 @@ public final class GoodguysSiegeUpgraded extends NpcUnit {
         attributeStrengthGain = 0;
         baseClass = "npc_dota_creep_siege";
         boundsHullName = "DOTA_HULL_SIZE_SIEGE";
-        bountyGoldMax = 8;
+        bountyGoldMax = 80;
         bountyGoldMin = 66;
         bountyXP = 88;
         canBeDominated = 1;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_SIEGE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE";
-        healthBarOffset = 16;
+        healthBarOffset = 160;
         key = "npc_dota_goodguys_siege_upgraded";
         level = 4;
-        magicalResistance = 8;
+        magicalResistance = 80;
         minimapIcon = "minimap_siege";
-        minimapIconSize = 35;
+        minimapIconSize = 350;
         model = "models/creeps/lane_creeps/creep_good_siege/creep_good_siege.vmdl";
         modelScale = .65;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 325;
         movementTurnRate = .5;
         projectileModel = "particles/base_attacks/ranged_siege_good.vpcf";
-        projectileSpeed = 11;
-        ringRadius = 8;
+        projectileSpeed = 1100;
+        ringRadius = 80;
         soundSet = "Creep_Good_Engine";
-        statusHealth = 55;
+        statusHealth = 550;
         statusHealthRegen = 0;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_SIEGE";
-        visionDaytimeRange = 85;
-        visionNighttimeRange = 85;
+        visionDaytimeRange = 850;
+        visionNighttimeRange = 850;
         localizedName = "Radiant Super Siege Creep";
     }
 

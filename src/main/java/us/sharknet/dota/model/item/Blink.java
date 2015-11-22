@@ -32,15 +32,15 @@ public final class Blink extends Item {
         abilityManaCost = 0;
         iD = 1;
         itemAliases = "blink dagger";
-        itemCost = 225;
+        itemCost = 2250;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "component";
         itemShopTags = "teleport";
         key = "item_blink";
         sideShop = 1;
         blink_damage_cooldown = 3;
-        blink_range = 12;
-        blink_range_clamp = 96;
+        blink_range = 1200;
+        blink_range_clamp = 960;
         localizedName = "Blink Dagger";
     }
 

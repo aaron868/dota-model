@@ -33,7 +33,7 @@ public final class SniperAssassinate extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"};
         abilityCastPoint = new double[]{2.0,2.0,2.0};
         abilityCastRange = new int[]{2000,2500,3000};
-        abilityCastRangeBuffer = 6;
+        abilityCastRangeBuffer = 600;
         abilityCooldown = new double[]{20.0,15.0,10.0};
         abilityDamage = new int[]{320,485,650};
         abilityManaCost = new int[]{175,275,375};

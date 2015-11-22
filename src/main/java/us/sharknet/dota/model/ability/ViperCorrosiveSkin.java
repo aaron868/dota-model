@@ -23,9 +23,9 @@ public final class ViperCorrosiveSkin extends Ability {
 
     private ViperCorrosiveSkin() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityModifierSupportBonus = 1;
+        abilityModifierSupportBonus = 10;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        iD = 522;
+        iD = 5220;
         key = "viper_corrosive_skin";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         bonus_attack_speed = new int[]{-10,-15,-20,-25};
@@ -34,7 +34,7 @@ public final class ViperCorrosiveSkin extends Ability {
         damage = new int[]{10,15,20,25};
         duration = 4;
         localizedName = "Corrosive Skin";
-        max_range_tooltip = 14;
+        max_range_tooltip = 1400;
         owningHeroShortKey = "viper";
     }
 

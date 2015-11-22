@@ -24,7 +24,7 @@ public final class EarthSpiritStoneCaller extends Ability {
     private EarthSpiritStoneCaller() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = 0;
-        abilityCastRange = 11;
+        abilityCastRange = 1100;
         abilityCooldown = 0;
         abilityManaCost = 0;
         abilityType = "DOTA_ABILITY_TYPE_BASIC";

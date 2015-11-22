@@ -64,10 +64,10 @@ public final class Magnataur extends Hero {
         ability4 = MagnataurReversePolarity.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = 2;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
-        attackDamageMax = 4;
+        attackDamageMax = 40;
         attackDamageMin = 28;
         attackRange = 128;
         attackRate = 1.7;
@@ -82,7 +82,7 @@ public final class Magnataur extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 22;
+        healthBarOffset = 220;
         heroID = 97;
         heroSelectSoundEffect = "Hero_Magnataur.Pick";
         heroUnlockOrder = 0;
@@ -100,8 +100,8 @@ public final class Magnataur extends Hero {
         rolelevels = new int[]{3,2,1,1};
         soundSet = "Hero_Magnataur";
         team = "Bad";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_magnataur.vsndevts";
         active = true;
         localizedName = "Magnus";

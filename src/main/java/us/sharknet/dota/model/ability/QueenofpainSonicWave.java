@@ -30,7 +30,7 @@ public final class QueenofpainSonicWave extends Ability {
     private QueenofpainSonicWave() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.452,0.452,0.452};
-        abilityCastRange = 7;
+        abilityCastRange = 700;
         abilityCooldown = new int[]{135,135,135};
         abilityManaCost = new int[]{250,360,500};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -42,12 +42,12 @@ public final class QueenofpainSonicWave extends Ability {
         cooldown_scepter = 4;
         damage = new int[]{290,380,470};
         damage_scepter = new int[]{325,440,555};
-        distance = 9;
-        final_aoe = 45;
+        distance = 900;
+        final_aoe = 450;
         localizedName = "Sonic Wave";
         owningHeroShortKey = "queenofpain";
-        speed = 11;
-        starting_aoe = 1;
+        speed = 1100;
+        starting_aoe = 100;
     }
 
     public static QueenofpainSonicWave instance() {

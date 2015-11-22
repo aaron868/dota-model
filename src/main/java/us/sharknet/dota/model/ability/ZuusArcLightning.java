@@ -27,14 +27,14 @@ public final class ZuusArcLightning extends Ability {
     private ZuusArcLightning() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .2;
-        abilityCastRange = 85;
+        abilityCastRange = 850;
         abilityCooldown = new double[]{1.75,1.75,1.75,1.75};
         abilityDamage = new int[]{85,100,115,145};
         abilityManaCost = new int[]{65,70,75,80};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        iD = 511;
+        iD = 5110;
         key = "zuus_arc_lightning";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         jump_count = new int[]{5,7,9,15};

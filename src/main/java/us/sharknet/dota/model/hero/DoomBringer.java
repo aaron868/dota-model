@@ -71,12 +71,12 @@ public final class DoomBringer extends Hero {
         abilityDraftDisabled = 1;
         abilityLayout = 6;
         armorPhysical = -1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 43;
         attackDamageMin = 27;
-        attackRange = 15;
+        attackRange = 150;
         attackRate = 1.7;
         attributeAgilityGain = .9;
         attributeBaseAgility = 11;
@@ -88,7 +88,7 @@ public final class DoomBringer extends Hero {
         banSound = "doom_bringer_doom_anger_02";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 24;
+        healthBarOffset = 240;
         heroGlowColor = new int[]{107,74,53};
         heroID = 69;
         heroSelectSoundEffect = "Hero_DoomBringer.Pick";
@@ -99,7 +99,7 @@ public final class DoomBringer extends Hero {
         loadoutScale = .7;
         model = "models/heroes/doom/doom.vmdl";
         modelScale = .86;
-        movementSpeed = 29;
+        movementSpeed = 290;
         movementTurnRate = .5;
         nameAliases = "db";
         pickSound = "doom_bringer_doom_spawn_01";

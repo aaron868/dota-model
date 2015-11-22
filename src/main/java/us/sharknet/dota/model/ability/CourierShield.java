@@ -20,7 +20,7 @@ public final class CourierShield extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCooldown = 2;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        iD = 529;
+        iD = 5209;
         key = "courier_shield";
         maxLevel = 1;
         duration = 7;

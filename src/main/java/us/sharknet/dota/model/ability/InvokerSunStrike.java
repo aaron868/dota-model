@@ -44,7 +44,7 @@ public final class InvokerSunStrike extends Ability {
         delay = 1.7;
         localizedName = "Sun Strike";
         owningHeroShortKey = "invoker";
-        vision_distance = 4;
+        vision_distance = 400;
         vision_duration = 4;
     }
 

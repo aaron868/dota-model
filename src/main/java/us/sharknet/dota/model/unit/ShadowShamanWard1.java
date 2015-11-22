@@ -50,13 +50,13 @@ public final class ShadowShamanWard1 extends NpcUnit {
 
     private ShadowShamanWard1() {
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 0;
         attackDamageMin = 0;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 6;
+        attackRange = 600;
         attackRate = 1.5;
         baseClass = "npc_dota_shadowshaman_serpentward";
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
@@ -66,7 +66,7 @@ public final class ShadowShamanWard1 extends NpcUnit {
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         hasInventory = 0;
-        healthBarOffset = 2;
+        healthBarOffset = 200;
         key = "npc_dota_shadow_shaman_ward_1";
         level = 3;
         magicalResistance = 0;
@@ -76,7 +76,7 @@ public final class ShadowShamanWard1 extends NpcUnit {
         movementSpeed = 0;
         movementTurnRate = .5;
         projectileModel = "particles/units/heroes/hero_shadowshaman/shadow_shaman_ward_base_attack.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         selectionGroup = "Shaman_Wards";
         soundSet = "ShadowShaman_Ward";
         statusHealth = 135;
@@ -85,8 +85,8 @@ public final class ShadowShamanWard1 extends NpcUnit {
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD";
-        visionDaytimeRange = 12;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1200;
+        visionNighttimeRange = 800;
         localizedName = "Serpent Ward Level 1";
         wearable = 8371;
     }

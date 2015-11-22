@@ -80,12 +80,12 @@ public final class Phoenix extends Hero {
         abilityDraftDisabled = 1;
         abilityLayout = 5;
         armorPhysical = -2;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .35;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 36;
         attackDamageMin = 26;
-        attackRange = 5;
+        attackRange = 500;
         attackRate = 1.7;
         attributeAgilityGain = 1.3;
         attributeBaseAgility = 12;
@@ -99,8 +99,8 @@ public final class Phoenix extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 0;
         enabled = 1;
-        healthBarOffset = 24;
-        heroID = 11;
+        healthBarOffset = 240;
+        heroID = 110;
         heroSelectSoundEffect = "Hero_Phoenix.Pick";
         heroUnlockOrder = 1;
         idleExpression = "scenes/phoenix/phoenix/exp_idle_01.vcd";
@@ -115,7 +115,7 @@ public final class Phoenix extends Hero {
         pickSound = "phoenix_phoenix_bird_respawn";
         portrait = "vgui/hud/heroportraits/portrait_phoenix";
         projectileModel = "particles/units/heroes/hero_phoenix/phoenix_base_attack.vpcf";
-        projectileSpeed = 11;
+        projectileSpeed = 1100;
         role = new String[]{"Support","Nuker","Initiator","Escape","Disabler"};
         rolelevels = new int[]{1,3,2,2,1};
         soundSet = "Hero_Phoenix";

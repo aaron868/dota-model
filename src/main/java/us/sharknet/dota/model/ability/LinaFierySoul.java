@@ -19,10 +19,10 @@ public final class LinaFierySoul extends Ability {
 
     private LinaFierySoul() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityDuration = 1;
-        iD = 542;
+        abilityDuration = 10;
+        iD = 5042;
         key = "lina_fiery_soul";
-        duration_tooltip = 1;
+        duration_tooltip = 10;
         fiery_soul_attack_speed_bonus = new int[]{40,55,70,85};
         fiery_soul_max_stacks = 3;
         fiery_soul_move_speed_bonus = new int[]{5,6,7,8};

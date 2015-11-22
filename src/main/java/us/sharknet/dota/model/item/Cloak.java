@@ -22,14 +22,14 @@ public final class Cloak extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 31;
         itemAliases = "cloak";
-        itemCost = 55;
+        itemCost = 550;
         itemQuality = "component";
         itemShopTags = "magic_resist";
         key = "item_cloak";
         sideShop = 1;
-        bonus_magical_armor = 2;
+        bonus_magical_armor = 20;
         localizedName = "Cloak";
-        tooltip_resist = 2;
+        tooltip_resist = 20;
     }
 
     public static Cloak instance() {

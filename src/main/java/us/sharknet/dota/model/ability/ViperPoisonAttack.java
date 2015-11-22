@@ -28,7 +28,7 @@ public final class ViperPoisonAttack extends Ability {
     private ViperPoisonAttack() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = 0;
         abilityDamage = new int[]{0,0,0,0};
         abilityManaCost = new int[]{20,20,20,20};

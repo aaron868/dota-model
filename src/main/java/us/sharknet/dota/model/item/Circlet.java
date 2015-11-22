@@ -18,7 +18,7 @@ public final class Circlet extends Item {
 
     private Circlet() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 2;
+        iD = 20;
         itemAliases = "circlet";
         itemCost = 165;
         itemQuality = "component";

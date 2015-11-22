@@ -47,7 +47,7 @@ public final class UndyingDecay extends Ability {
         radius = 325;
         str_scale_up = 2;
         str_steal = 4;
-        str_steal_scepter = 1;
+        str_steal_scepter = 10;
     }
 
     public static UndyingDecay instance() {

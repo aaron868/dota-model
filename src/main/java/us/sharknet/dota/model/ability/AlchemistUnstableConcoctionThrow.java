@@ -32,7 +32,7 @@ public final class AlchemistUnstableConcoctionThrow extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         abilityCastPoint = .2;
         abilityCastRange = 775;
-        abilityModifierSupportBonus = 12;
+        abilityModifierSupportBonus = 120;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
@@ -47,9 +47,9 @@ public final class AlchemistUnstableConcoctionThrow extends Ability {
         midair_explosion_radius = 175;
         min_damage = 0;
         min_stun = .25;
-        movement_speed = 9;
+        movement_speed = 900;
         owningHeroShortKey = "alchemist";
-        vision_range = 4;
+        vision_range = 400;
     }
 
     public static AlchemistUnstableConcoctionThrow instance() {

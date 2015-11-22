@@ -29,7 +29,7 @@ public final class UndyingSoulRip extends Ability {
     private UndyingSoulRip() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.45,0.45,0.45,0.45};
-        abilityCastRange = 75;
+        abilityCastRange = 750;
         abilityCooldown = new double[]{24.0,18.0,12.0,6.0};
         abilityManaCost = new int[]{100,110,120,130};
         abilityModifierSupportValue = 0;
@@ -44,7 +44,7 @@ public final class UndyingSoulRip extends Ability {
         localizedName = "Soul Rip";
         max_units = new int[]{10,12,14,16};
         owningHeroShortKey = "undying";
-        radius = 13;
+        radius = 1300;
         tombstone_heal = new int[]{2,4,6,8};
     }
 

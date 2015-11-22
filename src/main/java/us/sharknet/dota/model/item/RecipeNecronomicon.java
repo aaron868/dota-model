@@ -16,8 +16,8 @@ public final class RecipeNecronomicon extends Item {
     private final String localizedName;
 
     private RecipeNecronomicon() {
-        iD = 15;
-        itemCost = 125;
+        iD = 105;
+        itemCost = 1250;
         itemRecipe = 1;
         itemRequirements = new Item[]{StaffOfWizardry.instance(),BeltOfStrength.instance()};
         itemResult = Necronomicon.instance();

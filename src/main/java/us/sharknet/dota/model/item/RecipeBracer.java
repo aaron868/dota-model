@@ -16,7 +16,7 @@ public final class RecipeBracer extends Item {
 
     private RecipeBracer() {
         iD = 72;
-        itemCost = 21;
+        itemCost = 210;
         itemRecipe = 1;
         itemRequirements = new Item[]{Circlet.instance(),Gauntlets.instance()};
         itemResult = Bracer.instance();

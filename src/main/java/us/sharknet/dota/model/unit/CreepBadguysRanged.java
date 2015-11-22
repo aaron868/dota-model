@@ -55,13 +55,13 @@ public final class CreepBadguysRanged extends NpcUnit {
 
     private CreepBadguysRanged() {
         armorPhysical = 0;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 26;
         attackDamageMin = 21;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 5;
+        attackRange = 500;
         attackRate = 1;
         attributeAgilityGain = 0;
         attributeBaseAgility = 0;
@@ -77,7 +77,7 @@ public final class CreepBadguysRanged extends NpcUnit {
         bountyXP = 41;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
-        healthBarOffset = 15;
+        healthBarOffset = 150;
         key = "npc_dota_creep_badguys_ranged";
         level = 2;
         magicalResistance = 0;
@@ -87,17 +87,17 @@ public final class CreepBadguysRanged extends NpcUnit {
         movementSpeed = 325;
         movementTurnRate = .5;
         projectileModel = "particles/base_attacks/ranged_badguy.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         ringRadius = 45;
         soundSet = "Creep_Bad_Range";
-        statusHealth = 3;
+        statusHealth = 300;
         statusHealthRegen = 2;
-        statusMana = 5;
+        statusMana = 500;
         statusManaRegen = .75;
         teamName = "DOTA_TEAM_BADGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 85;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 850;
+        visionNighttimeRange = 800;
         localizedName = "Dire Ranged Creep";
     }
 

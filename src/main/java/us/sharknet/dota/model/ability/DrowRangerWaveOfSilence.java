@@ -28,9 +28,9 @@ public final class DrowRangerWaveOfSilence extends Ability {
     private DrowRangerWaveOfSilence() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
         abilityCastPoint = .4;
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityCooldown = 13;
-        abilityManaCost = 9;
+        abilityManaCost = 90;
         fightRecapLevel = 1;
         iD = 5632;
         key = "drow_ranger_wave_of_silence";
@@ -41,9 +41,9 @@ public final class DrowRangerWaveOfSilence extends Ability {
         localizedName = "Wave Of Silence";
         owningHeroShortKey = "drow_ranger";
         silence_duration = new double[]{3.0,4.0,5.0,6.0};
-        wave_range_tooltip = 9;
+        wave_range_tooltip = 900;
         wave_speed = 2;
-        wave_width = 25;
+        wave_width = 250;
     }
 
     public static DrowRangerWaveOfSilence instance() {

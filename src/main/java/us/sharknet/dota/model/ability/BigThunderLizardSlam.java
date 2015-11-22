@@ -27,8 +27,8 @@ public final class BigThunderLizardSlam extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = 0;
         abilityCooldown = 6;
-        abilityDamage = 7;
-        abilityManaCost = 9;
+        abilityDamage = 70;
+        abilityManaCost = 90;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5332;
         key = "big_thunder_lizard_slam";
@@ -39,7 +39,7 @@ public final class BigThunderLizardSlam extends Ability {
         movespeed_slow = -25;
         non_hero_duration = 4;
         owningHeroShortKey = "big_thunder_lizard";
-        radius = 25;
+        radius = 250;
     }
 
     public static BigThunderLizardSlam instance() {

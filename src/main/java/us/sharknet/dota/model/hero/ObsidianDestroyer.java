@@ -64,12 +64,12 @@ public final class ObsidianDestroyer extends Hero {
         ability4 = ObsidianDestroyerSanityEclipse.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = 2;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .46;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 35;
-        attackDamageMin = 2;
-        attackRange = 45;
+        attackDamageMin = 20;
+        attackRange = 450;
         attackRate = 1.7;
         attributeAgilityGain = 2;
         attributeBaseAgility = 24;
@@ -81,7 +81,7 @@ public final class ObsidianDestroyer extends Hero {
         banSound = "outworld_destroyer_odest_anger_02";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 35;
+        healthBarOffset = 350;
         heroID = 76;
         heroSelectSoundEffect = "Hero_OD.Pick";
         heroUnlockOrder = 2;
@@ -97,7 +97,7 @@ public final class ObsidianDestroyer extends Hero {
         pickSound = "outworld_destroyer_odest_spawn_02";
         portrait = "vgui/hud/heroportraits/portrait_obsidian_destroyer";
         projectileModel = "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_base_attack.vpcf";
-        projectileSpeed = 9;
+        projectileSpeed = 900;
         role = new String[]{"Carry","Nuker","Disabler"};
         rolelevels = new int[]{2,2,1};
         soundSet = "Hero_ObsidianDestroyer";

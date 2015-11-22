@@ -28,7 +28,7 @@ public final class ArcWardenSparkWraith extends Ability {
     private ArcWardenSparkWraith() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = .3;
-        abilityCastRange = 2;
+        abilityCastRange = 2000;
         abilityCooldown = new double[]{4.0,4.0,4.0,4.0};
         abilityManaCost = new int[]{100,110,120,130};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -43,7 +43,7 @@ public final class ArcWardenSparkWraith extends Ability {
         radius = 375;
         spark_damage = new int[]{150,200,250,300};
         think_interval = .2;
-        wraith_speed = 4;
+        wraith_speed = 400;
     }
 
     public static ArcWardenSparkWraith instance() {

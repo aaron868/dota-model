@@ -20,7 +20,7 @@ public final class MorphlingMorphReplicate extends Ability {
         abilityCastPoint = .25;
         abilityManaCost = new int[]{150,150,150};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        iD = 558;
+        iD = 5058;
         key = "morphling_morph_replicate";
         localizedName = "Morph Replicate";
         owningHeroShortKey = "morphling";

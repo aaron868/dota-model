@@ -38,7 +38,7 @@ public final class RingOfBasilius extends Item {
         worldDropSound = "Item.DropRingWorld";
         aura_bonus_armor = 2;
         aura_mana_regen = .65;
-        aura_radius = 9;
+        aura_radius = 900;
         bonus_armor = 1;
         bonus_damage = 6;
         localizedName = "Ring Of Basilius";

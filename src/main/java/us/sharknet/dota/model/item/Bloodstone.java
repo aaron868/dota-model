@@ -37,12 +37,12 @@ public final class Bloodstone extends Item {
     private Bloodstone() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
         abilityCastPoint = 0;
-        abilityCastRange = 15;
+        abilityCastRange = 150;
         abilityCooldown = 3;
         fightRecapLevel = 2;
         iD = 121;
         itemAliases = new String[]{"bs","bloodstone"};
-        itemCost = 49;
+        itemCost = 4900;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisplayCharges = 1;
         itemInitialCharges = 8;
@@ -50,14 +50,14 @@ public final class Bloodstone extends Item {
         itemShopTags = new String[]{"regen_health","regen_mana","mana_pool","health_pool"};
         key = "item_bloodstone";
         bonus_damage = 0;
-        bonus_health = 5;
+        bonus_health = 500;
         bonus_health_regen = 9;
-        bonus_mana = 4;
-        bonus_mana_regen = 2;
-        charge_range = 16;
+        bonus_mana = 400;
+        bonus_mana_regen = 200;
+        charge_range = 1600;
         death_gold_reduction = 0;
-        heal_on_death_base = 5;
-        heal_on_death_per_charge = 3;
+        heal_on_death_base = 500;
+        heal_on_death_per_charge = 30;
         heal_on_death_range = 1675;
         localizedName = "Bloodstone";
         on_death_removal = .67;

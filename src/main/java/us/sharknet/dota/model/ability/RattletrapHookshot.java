@@ -36,7 +36,7 @@ public final class RattletrapHookshot extends Ability {
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 2;
-        iD = 524;
+        iD = 5240;
         key = "rattletrap_hookshot";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         cooldown_scepter = new double[]{12.0,12.0,12.0};

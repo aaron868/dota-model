@@ -63,7 +63,7 @@ public final class Gyrocopter extends Hero {
         ability5 = AttributeBonus.instance();
         ability6 = GyrocopterCallDown.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .2;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 27;
@@ -81,7 +81,7 @@ public final class Gyrocopter extends Hero {
         cMEnabled = 1;
         enabled = 1;
         hasAggressiveStance = 1;
-        healthBarOffset = 24;
+        healthBarOffset = 240;
         heroID = 72;
         heroSelectSoundEffect = "Hero_Gyrocopter.Pick";
         heroUnlockOrder = 2;
@@ -95,7 +95,7 @@ public final class Gyrocopter extends Hero {
         pickSound = "gyrocopter_gyro_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_gyrocopter";
         projectileModel = "particles/units/heroes/hero_gyrocopter/gyro_base_attack.vpcf";
-        projectileSpeed = 3;
+        projectileSpeed = 3000;
         role = new String[]{"Carry","Nuker","Disabler"};
         rolelevels = new int[]{3,1,1};
         soundSet = "Hero_Gyrocopter";

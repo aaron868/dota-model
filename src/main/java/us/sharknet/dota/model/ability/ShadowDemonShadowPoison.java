@@ -30,11 +30,11 @@ public final class ShadowDemonShadowPoison extends Ability {
     private ShadowDemonShadowPoison() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 15;
+        abilityCastRange = 1500;
         abilityCooldown = 2.5;
         abilityDamage = new int[]{50,50,50,50};
         abilityDuration = new double[]{10.0,10.0,10.0,10.0};
-        abilityManaCost = 4;
+        abilityManaCost = 40;
         abilityModifierSupportValue = 0;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5423;
@@ -44,7 +44,7 @@ public final class ShadowDemonShadowPoison extends Ability {
         localizedName = "Shadow Poison";
         max_multiply_stacks = 5;
         owningHeroShortKey = "shadow_demon";
-        radius = 19;
+        radius = 190;
         speed = new int[]{1000,1000,1000,1000};
         stack_damage = new double[]{20.0,35.0,50.0,65.0};
         tooltip_duration = new double[]{10.0,10.0,10.0,10.0};

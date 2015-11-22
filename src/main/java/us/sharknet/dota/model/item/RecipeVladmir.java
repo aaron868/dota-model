@@ -16,8 +16,8 @@ public final class RecipeVladmir extends Item {
     private final String localizedName;
 
     private RecipeVladmir() {
-        iD = 8;
-        itemCost = 3;
+        iD = 80;
+        itemCost = 300;
         itemRecipe = 1;
         itemRequirements = new Item[]{Headdress.instance(),RingOfBasilius.instance(),Lifesteal.instance()};
         itemResult = Vladmir.instance();

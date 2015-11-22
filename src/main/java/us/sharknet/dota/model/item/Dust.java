@@ -33,9 +33,9 @@ public final class Dust extends Item {
         abilityCooldown = 3;
         abilityManaCost = 5;
         effect = "particles/generic_gameplay/dropped_dust.vpcf";
-        iD = 4;
+        iD = 40;
         itemAliases = "dust of appearance";
-        itemCost = 18;
+        itemCost = 180;
         itemDeclarations = "DECLARE_PURCHASES_TO_TEAMMATES";
         itemInitialCharges = 2;
         itemPermanent = 0;
@@ -48,8 +48,8 @@ public final class Dust extends Item {
         model = "models/props_gameplay/dust.vmdl";
         duration = 12;
         localizedName = "Dust Of Appearance";
-        movespeed = -2;
-        radius = 15;
+        movespeed = -20;
+        radius = 1050;
     }
 
     public static Dust instance() {

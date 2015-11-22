@@ -39,7 +39,7 @@ public final class SlarkPounce extends Ability {
         owningHeroShortKey = "slark";
         pounce_acceleration = 7;
         pounce_damage = new int[]{50,100,150,200};
-        pounce_distance = 7;
+        pounce_distance = 700;
         pounce_radius = 95;
         pounce_speed = 933.33;
     }

@@ -32,8 +32,8 @@ public final class LifeStealerInfest extends Ability {
     private LifeStealerInfest() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = .2;
-        abilityCastRange = 15;
-        abilityCooldown = 1;
+        abilityCastRange = 150;
+        abilityCooldown = 100;
         abilityManaCost = new int[]{50,50,50};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -44,7 +44,7 @@ public final class LifeStealerInfest extends Ability {
         iD = 5252;
         key = "life_stealer_infest";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
-        cast_range_scepter = 5;
+        cast_range_scepter = 500;
         cooldown_scepter = 25;
         damage = new int[]{150,275,400};
         damage_increase_pct = 5;

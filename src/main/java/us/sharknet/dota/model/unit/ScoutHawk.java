@@ -39,9 +39,9 @@ public final class ScoutHawk extends NpcUnit {
         armorPhysical = 0;
         attackCapabilities = "DOTA_UNIT_CAP_NO_ATTACK";
         baseClass = "npc_dota_beastmaster_hawk";
-        bountyGoldMax = 3;
-        bountyGoldMin = 3;
-        bountyXP = 2;
+        bountyGoldMax = 30;
+        bountyGoldMin = 30;
+        bountyXP = 20;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_WEAK";
         healthBarOffset = 165;
@@ -51,16 +51,16 @@ public final class ScoutHawk extends NpcUnit {
         model = "models/heroes/beastmaster/beastmaster_bird.vmdl";
         modelScale = 1.1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
-        movementSpeed = 27;
+        movementSpeed = 270;
         movementTurnRate = .6;
         soundSet = 0;
-        statusHealth = 5;
+        statusHealth = 50;
         statusHealthRegen = .5;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitLabel = "hawk";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 5;
-        visionNighttimeRange = 5;
+        visionDaytimeRange = 500;
+        visionNighttimeRange = 500;
         wakesNeutrals = 0;
         localizedName = "Scout Hawk";
     }

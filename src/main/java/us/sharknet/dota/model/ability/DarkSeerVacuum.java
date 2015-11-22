@@ -26,7 +26,7 @@ public final class DarkSeerVacuum extends Ability {
     private DarkSeerVacuum() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = 28;
         abilityManaCost = new int[]{100,130,160,190};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";

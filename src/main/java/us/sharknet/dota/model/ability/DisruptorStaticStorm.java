@@ -43,9 +43,9 @@ public final class DisruptorStaticStorm extends Ability {
         duration_scepter = 7;
         localizedName = "Static Storm";
         owningHeroShortKey = "disruptor";
-        pulses = 2;
+        pulses = 20;
         pulses_scepter = 28;
-        radius = 45;
+        radius = 450;
     }
 
     public static DisruptorStaticStorm instance() {

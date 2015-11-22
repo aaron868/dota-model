@@ -24,7 +24,7 @@ public final class LycanHowl extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCooldown = new int[]{50,45,40,35};
-        abilityDuration = 1;
+        abilityDuration = 10;
         abilityManaCost = new int[]{15,20,25,30};
         abilityModifierSupportBonus = 5;
         iD = 5396;

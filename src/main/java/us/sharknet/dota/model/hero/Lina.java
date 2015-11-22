@@ -66,12 +66,12 @@ public final class Lina extends Hero {
         ability3 = LinaFierySoul.instance();
         ability4 = LinaLagunaBlade.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .75;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 31;
         attackDamageMin = 13;
-        attackRange = 67;
+        attackRange = 670;
         attackRate = 1.7;
         attributeAgilityGain = 1.5;
         attributeBaseAgility = 16;
@@ -86,7 +86,7 @@ public final class Lina extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         heroGlowColor = new int[]{254,90,5};
         heroID = 25;
         heroPool1 = 1;
@@ -103,7 +103,7 @@ public final class Lina extends Hero {
         pickSound = "lina_lina_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_lina";
         projectileModel = "particles/units/heroes/hero_lina/lina_base_attack.vpcf";
-        projectileSpeed = 1;
+        projectileSpeed = 1000;
         role = new String[]{"Support","Carry","Nuker","Disabler"};
         rolelevels = new int[]{1,1,3,1};
         soundSet = "Hero_Lina";

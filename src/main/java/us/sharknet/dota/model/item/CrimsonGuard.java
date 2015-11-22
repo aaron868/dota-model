@@ -35,24 +35,24 @@ public final class CrimsonGuard extends Item {
         abilityCooldown = 7;
         iD = 242;
         itemAlertable = 1;
-        itemCost = 355;
+        itemCost = 3550;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "epic";
         itemShopTags = new String[]{"armor","boost_armor","regen_health","block","health_pool"};
         key = "item_crimson_guard";
         block_chance = 75;
-        block_chance_active = 1;
-        block_damage_melee = 4;
+        block_chance_active = 100;
+        block_damage_melee = 40;
         block_damage_melee_active = 55;
-        block_damage_ranged = 2;
+        block_damage_ranged = 20;
         block_damage_ranged_active = 55;
         bonus_all_stats = 2;
         bonus_aoe_armor = 2;
-        bonus_aoe_radius = 9;
+        bonus_aoe_radius = 900;
         bonus_armor = 5;
-        bonus_health = 25;
+        bonus_health = 250;
         bonus_health_regen = 6;
-        duration = 1;
+        duration = 10;
         localizedName = "Crimson Guard";
     }
 

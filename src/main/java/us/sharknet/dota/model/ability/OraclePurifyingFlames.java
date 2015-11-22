@@ -30,7 +30,7 @@ public final class OraclePurifyingFlames extends Ability {
     private OraclePurifyingFlames() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .3;
-        abilityCastRange = 75;
+        abilityCastRange = 750;
         abilityCooldown = 2.25;
         abilityManaCost = new int[]{50,60,70,80};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";

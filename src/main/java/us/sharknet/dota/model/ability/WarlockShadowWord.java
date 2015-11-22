@@ -28,7 +28,7 @@ public final class WarlockShadowWord extends Ability {
     private WarlockShadowWord() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = 16;
         abilityDamage = new int[]{15,25,35,45};
         abilityManaCost = new int[]{90,110,130,150};

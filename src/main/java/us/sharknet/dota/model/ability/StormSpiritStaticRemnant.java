@@ -28,16 +28,16 @@ public final class StormSpiritStaticRemnant extends Ability {
         abilityCastPoint = new int[]{0,0,0,0};
         abilityCooldown = 3.5;
         abilityDuration = new double[]{12.0,12.0,12.0,12.0};
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
-        iD = 598;
+        iD = 5098;
         key = "storm_spirit_static_remnant";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Static Remnant";
         owningHeroShortKey = "storm_spirit";
         static_remnant_damage = new int[]{140,180,220,260};
-        static_remnant_damage_radius = 26;
+        static_remnant_damage_radius = 260;
         static_remnant_delay = 1;
         static_remnant_radius = 235;
     }

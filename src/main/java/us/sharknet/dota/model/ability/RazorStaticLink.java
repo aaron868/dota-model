@@ -31,13 +31,13 @@ public final class RazorStaticLink extends Ability {
     private RazorStaticLink() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new int[]{32,30,28,26};
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        iD = 583;
+        iD = 5083;
         key = "razor_static_link";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         drain_duration = new double[]{18.0,18.0,18.0,18.0};

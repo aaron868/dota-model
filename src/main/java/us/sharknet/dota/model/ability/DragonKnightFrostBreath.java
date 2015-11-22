@@ -21,8 +21,8 @@ public final class DragonKnightFrostBreath extends Ability {
         iD = 5232;
         key = "dragon_knight_frost_breath";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        bonus_attack_speed = -2;
-        bonus_movement_speed = -3;
+        bonus_attack_speed = -20;
+        bonus_movement_speed = -30;
         duration = 3;
         localizedName = "Frost Breath";
         owningHeroShortKey = "dragon_knight";

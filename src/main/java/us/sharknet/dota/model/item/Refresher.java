@@ -27,16 +27,16 @@ public final class Refresher extends Item {
         abilityCastPoint = 0;
         abilityCooldown = 195;
         abilityManaCost = 375;
-        iD = 11;
+        iD = 110;
         itemAliases = "refresher orb";
-        itemCost = 52;
+        itemCost = 5200;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "rare";
         itemShopTags = new String[]{"regen_health","regen_mana","hard_to_tag"};
         key = "item_refresher";
-        bonus_damage = 2;
-        bonus_health_regen = 1;
-        bonus_mana_regen = 25;
+        bonus_damage = 20;
+        bonus_health_regen = 10;
+        bonus_mana_regen = 250;
         localizedName = "Refresher Orb";
     }
 

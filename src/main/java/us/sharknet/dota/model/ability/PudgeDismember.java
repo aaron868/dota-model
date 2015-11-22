@@ -29,7 +29,7 @@ public final class PudgeDismember extends Ability {
     private PudgeDismember() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_CHANNELLED","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 16;
+        abilityCastRange = 160;
         abilityChannelTime = new double[]{2.95,2.95,2.95};
         abilityCooldown = new double[]{30.0,30.0,30.0};
         abilityManaCost = new int[]{100,130,170};
@@ -39,7 +39,7 @@ public final class PudgeDismember extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 2;
-        iD = 577;
+        iD = 5077;
         key = "pudge_dismember";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         dismember_damage = new int[]{75,125,175};

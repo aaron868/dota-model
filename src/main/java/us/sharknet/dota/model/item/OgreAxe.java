@@ -20,11 +20,11 @@ public final class OgreAxe extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 21;
         itemAliases = "ogre club";
-        itemCost = 1;
+        itemCost = 1000;
         itemQuality = "component";
         itemShopTags = "str";
         key = "item_ogre_axe";
-        bonus_strength = 1;
+        bonus_strength = 10;
         localizedName = "Ogre Club";
     }
 

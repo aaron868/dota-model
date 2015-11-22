@@ -60,7 +60,7 @@ public final class LegionCommander extends Hero {
         ability4 = LegionCommanderDuel.instance();
         ability5 = AttributeBonus.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .46;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 39;
@@ -69,7 +69,7 @@ public final class LegionCommander extends Hero {
         attackRate = 1.7;
         attributeAgilityGain = 1.7;
         attributeBaseAgility = 18;
-        attributeBaseIntelligence = 2;
+        attributeBaseIntelligence = 20;
         attributeBaseStrength = 26;
         attributeIntelligenceGain = 2.2;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
@@ -77,15 +77,15 @@ public final class LegionCommander extends Hero {
         banSound = "legion_commander_legcom_anger_07";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 2;
-        heroID = 14;
+        healthBarOffset = 200;
+        heroID = 104;
         heroSelectSoundEffect = "Hero_LegionCommander.Pick";
         idleExpression = "scenes/legion_commander/legion_commander_exp_idle_01.vcd";
         key = "npc_dota_hero_legion_commander";
         lastHitChallengeRival = "npc_dota_hero_kunkka";
         model = "models/heroes/legion_commander/legion_commander.vmdl";
         modelScale = 1.25;
-        movementSpeed = 32;
+        movementSpeed = 320;
         movementTurnRate = .5;
         nameAliases = new String[]{"Tresdin","Legion"};
         pickSound = "legion_commander_legcom_spawn_01";

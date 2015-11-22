@@ -16,7 +16,7 @@ public final class RecipeSilverEdge extends Item {
 
     private RecipeSilverEdge() {
         iD = 248;
-        itemCost = 6;
+        itemCost = 600;
         itemRecipe = 1;
         itemRequirements = new Item[]{InvisSword.instance(),Sange.instance()};
         itemResult = SilverEdge.instance();

@@ -64,7 +64,7 @@ public final class Earthshaker extends Hero {
         ability3 = EarthshakerAftershock.instance();
         ability4 = EarthshakerEchoSlam.instance();
         armorPhysical = 1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .467;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 34;
@@ -93,7 +93,7 @@ public final class Earthshaker extends Hero {
         lastHitChallengeRival = "npc_dota_hero_tiny";
         model = "models/heroes/earthshaker/earthshaker.vmdl";
         modelScale = .93;
-        movementSpeed = 31;
+        movementSpeed = 310;
         movementTurnRate = .9;
         noCombine = 0;
         pickSound = "earthshaker_erth_spawn_01";

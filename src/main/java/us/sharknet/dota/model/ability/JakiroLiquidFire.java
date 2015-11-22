@@ -29,7 +29,7 @@ public final class JakiroLiquidFire extends Ability {
     private JakiroLiquidFire() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new int[]{20,15,10,4};
         abilityDuration = new double[]{5.0,5.0,5.0,5.0};
         abilityModifierSupportBonus = 35;

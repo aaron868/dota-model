@@ -24,7 +24,7 @@ public final class DarkSeerSurge extends Ability {
     private DarkSeerSurge() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 6;
+        abilityCastRange = 600;
         abilityCooldown = new double[]{12.0,11.0,10.0,9.0};
         abilityManaCost = new int[]{20,30,40,50};
         abilityModifierSupportValue = 2.5;

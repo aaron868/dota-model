@@ -62,7 +62,7 @@ public final class Tiny extends Hero {
         ability3 = TinyCraggyExterior.instance();
         ability4 = TinyGrow.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 6;
+        attackAcquisitionRange = 600;
         attackAnimationPoint = .49;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 43;

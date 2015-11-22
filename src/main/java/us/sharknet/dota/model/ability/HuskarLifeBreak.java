@@ -37,7 +37,7 @@ public final class HuskarLifeBreak extends Ability {
     private HuskarLifeBreak() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 55;
+        abilityCastRange = 550;
         abilityCooldown = 12;
         abilityDuration = new int[]{4,5,6};
         abilityManaCost = new int[]{0,0,0};
@@ -50,7 +50,7 @@ public final class HuskarLifeBreak extends Ability {
         iD = 5274;
         key = "huskar_life_break";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        charge_speed = 1;
+        charge_speed = 1000;
         cooldown_scepter = 4;
         health_cost_percent = .35;
         health_damage = .35;

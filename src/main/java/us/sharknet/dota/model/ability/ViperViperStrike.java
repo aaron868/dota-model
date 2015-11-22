@@ -36,7 +36,7 @@ public final class ViperViperStrike extends Ability {
     private ViperViperStrike() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 5;
+        abilityCastRange = 500;
         abilityCooldown = new double[]{70.0,50.0,30.0};
         abilityManaCost = new int[]{125,175,250};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -50,7 +50,7 @@ public final class ViperViperStrike extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         bonus_attack_speed = new int[]{-40,-60,-80};
         bonus_movement_speed = new int[]{-40,-60,-80};
-        cast_range_scepter = 9;
+        cast_range_scepter = 900;
         charge_restore_time = 3;
         cooldown_scepter = 12;
         damage = new int[]{60,100,145};
@@ -59,7 +59,7 @@ public final class ViperViperStrike extends Ability {
         mana_cost_scepter = new int[]{125,125,125};
         max_charges = 2;
         owningHeroShortKey = "viper";
-        projectile_speed = 12;
+        projectile_speed = 1200;
     }
 
     public static ViperViperStrike instance() {

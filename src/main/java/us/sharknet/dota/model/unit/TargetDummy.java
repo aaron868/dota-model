@@ -38,7 +38,7 @@ public final class TargetDummy extends NpcUnit {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
-        healthBarOffset = 12;
+        healthBarOffset = 120;
         isNeutralUnitType = 1;
         key = "npc_dota_target_dummy";
         level = 0;
@@ -46,9 +46,9 @@ public final class TargetDummy extends NpcUnit {
         model = "models/props_gameplay/donkey.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 35;
+        movementSpeed = 350;
         movementTurnRate = .5;
-        statusHealth = 5;
+        statusHealth = 5000;
         statusHealthRegen = 0;
         statusMana = 0;
         statusManaRegen = 0;

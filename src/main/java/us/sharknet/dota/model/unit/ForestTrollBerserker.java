@@ -45,12 +45,12 @@ public final class ForestTrollBerserker extends NpcUnit {
 
     private ForestTrollBerserker() {
         armorPhysical = 1;
-        attackAcquisitionRange = 3;
+        attackAcquisitionRange = 300;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 37;
         attackDamageMin = 28;
-        attackRange = 5;
+        attackRange = 500;
         attackRate = 1.6;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 26;
@@ -58,26 +58,26 @@ public final class ForestTrollBerserker extends NpcUnit {
         bountyXP = 41;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
-        healthBarOffset = 16;
+        healthBarOffset = 160;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_forest_troll_berserker";
         level = 2;
         model = "models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_berserker.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 27;
+        movementSpeed = 270;
         projectileModel = "particles/base_attacks/ranged_badguy.vpcf";
-        projectileSpeed = 12;
-        ringRadius = 5;
+        projectileSpeed = 1200;
+        ringRadius = 50;
         soundSet = "n_creep_Ranged";
-        statusHealth = 5;
+        statusHealth = 500;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Hill Troll Berserker";
     }
 

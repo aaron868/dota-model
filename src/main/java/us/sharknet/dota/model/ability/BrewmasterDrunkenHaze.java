@@ -30,11 +30,11 @@ public final class BrewmasterDrunkenHaze extends Ability {
         abilityCastPoint = new double[]{0.4,0.4,0.4};
         abilityCastRange = new int[]{850,850,850,850};
         abilityCooldown = 8;
-        abilityManaCost = 5;
+        abilityManaCost = 50;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
         fightRecapLevel = 1;
-        iD = 541;
+        iD = 5401;
         key = "brewmaster_drunken_haze";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{8.0,8.0,8.0,8.0};
@@ -43,7 +43,7 @@ public final class BrewmasterDrunkenHaze extends Ability {
         miss_chance = new int[]{45,55,65,75};
         movement_slow = new int[]{14,18,22,26};
         owningHeroShortKey = "brewmaster";
-        radius = 2;
+        radius = 200;
     }
 
     public static BrewmasterDrunkenHaze instance() {

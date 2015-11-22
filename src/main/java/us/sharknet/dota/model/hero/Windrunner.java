@@ -66,12 +66,12 @@ public final class Windrunner extends Hero {
         ability3 = WindrunnerWindrun.instance();
         ability4 = WindrunnerFocusfire.instance();
         armorPhysical = -1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 34;
         attackDamageMin = 22;
-        attackRange = 6;
+        attackRange = 600;
         attackRate = 1.5;
         attributeAgilityGain = 1.4;
         attributeBaseAgility = 17;
@@ -85,7 +85,7 @@ public final class Windrunner extends Hero {
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 16;
+        healthBarOffset = 160;
         heroGlowColor = new int[]{185,220,20};
         heroID = 21;
         heroPool1 = 1;
@@ -103,7 +103,7 @@ public final class Windrunner extends Hero {
         pickSound = "windrunner_wind_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_windrunner";
         projectileModel = "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf";
-        projectileSpeed = 125;
+        projectileSpeed = 1250;
         role = new String[]{"Carry","Support","Disabler","Escape","Nuker"};
         rolelevels = new int[]{1,1,1,1,1};
         soundSet = "Hero_Windrunner";

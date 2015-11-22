@@ -17,11 +17,11 @@ public final class NecronomiconWarriorSight extends Ability {
     private NecronomiconWarriorSight() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
-        iD = 521;
+        iD = 5201;
         key = "necronomicon_warrior_sight";
         localizedName = "Sight";
         owningHeroShortKey = "necronomicon_warrior";
-        radius = 1;
+        radius = 1000;
     }
 
     public static NecronomiconWarriorSight instance() {

@@ -53,13 +53,13 @@ public final class CreepGoodguysMelee extends NpcUnit {
 
     private CreepGoodguysMelee() {
         armorPhysical = 2;
-        attackAcquisitionRange = 5;
+        attackAcquisitionRange = 500;
         attackAnimationPoint = .467;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 23;
         attackDamageMin = 19;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 1;
+        attackRange = 100;
         attackRate = 1;
         attributeAgilityGain = 0;
         attributeBaseAgility = 0;
@@ -75,7 +75,7 @@ public final class CreepGoodguysMelee extends NpcUnit {
         bountyXP = 62;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
-        healthBarOffset = 15;
+        healthBarOffset = 150;
         key = "npc_dota_creep_goodguys_melee";
         level = 3;
         magicalResistance = 0;
@@ -86,14 +86,14 @@ public final class CreepGoodguysMelee extends NpcUnit {
         movementTurnRate = .5;
         ringRadius = 45;
         soundSet = "Creep_Good_Melee";
-        statusHealth = 55;
+        statusHealth = 550;
         statusHealthRegen = .5;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 85;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 850;
+        visionNighttimeRange = 800;
         localizedName = "Radiant Melee Creep";
     }
 

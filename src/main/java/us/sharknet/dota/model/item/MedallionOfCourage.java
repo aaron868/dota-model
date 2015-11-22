@@ -29,7 +29,7 @@ public final class MedallionOfCourage extends Item {
 
     private MedallionOfCourage() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastRange = 1;
+        abilityCastRange = 1000;
         abilityCooldown = 7;
         abilitySharedCooldown = "medallion";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
@@ -37,17 +37,17 @@ public final class MedallionOfCourage extends Item {
         fightRecapLevel = 1;
         iD = 187;
         itemAliases = "medallion of courage";
-        itemCost = 12;
+        itemCost = 1200;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "rare";
         itemShopTags = new String[]{"armor","regen_mana","hard_to_tag"};
         key = "item_medallion_of_courage";
         armor_reduction = -7;
         bonus_armor = 7;
-        bonus_mana_regen_pct = 5;
+        bonus_mana_regen_pct = 50;
         duration = 7;
         localizedName = "Medallion Of Courage";
-        valor_cast_range_tooltip = 1;
+        valor_cast_range_tooltip = 1000;
     }
 
     public static MedallionOfCourage instance() {

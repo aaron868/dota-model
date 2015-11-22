@@ -16,7 +16,7 @@ public final class LycanSummonWolvesInvisibility extends Ability {
 
     private LycanSummonWolvesInvisibility() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        iD = 55;
+        iD = 5500;
         key = "lycan_summon_wolves_invisibility";
         fade_delay = 1.7;
         fade_time = new double[]{0.0,0.0,0.0};

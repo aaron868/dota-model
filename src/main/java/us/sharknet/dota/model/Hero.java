@@ -43,13 +43,13 @@ public abstract class Hero {
     public Hero(){
         abilityLayout = 4;
         armorPhysical = -1;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .75;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 1;
         attackDamageMin = 1;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 6;
+        attackRange = 600;
         attackRate = 1.7;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         baseClass = "npc_dota_hero";
@@ -65,18 +65,18 @@ public abstract class Hero {
         magicalResistance = 25;
         model = "models/error.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 3;
+        movementSpeed = 300;
         movementTurnRate = .5;
         projectileModel = "particles/base_attacks/ranged_hero.vpcf";
-        projectileSpeed = 9;
-        ringRadius = 7;
-        statusHealth = 15;
+        projectileSpeed = 900;
+        ringRadius = 70;
+        statusHealth = 150;
         statusHealthRegen = .25;
         statusManaRegen = .1;
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_HERO";
-        visionDaytimeRange = 18;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1800;
+        visionNighttimeRange = 800;
     }
 
     public abstract String getLocalizedName();

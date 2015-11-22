@@ -48,20 +48,20 @@ public final class SmallThunderLizard extends NpcUnit {
     private SmallThunderLizard() {
         ability1 = NeutralSpellImmunity.instance();
         armorPhysical = 2;
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 48;
         attackDamageMin = 41;
-        attackRange = 3;
+        attackRange = 300;
         attackRate = 1.8;
         baseClass = "npc_dota_creep_neutral";
-        bountyGoldMax = 7;
-        bountyGoldMin = 6;
+        bountyGoldMax = 70;
+        bountyGoldMin = 60;
         bountyXP = 119;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 22;
+        healthBarOffset = 220;
         isAncient = 1;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_small_thunder_lizard";
@@ -69,19 +69,19 @@ public final class SmallThunderLizard extends NpcUnit {
         model = "models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_small.vmdl";
         modelScale = .65;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 27;
+        movementSpeed = 270;
         projectileModel = "particles/neutral_fx/thunderlizard_base_attack.vpcf";
-        projectileSpeed = 15;
-        ringRadius = 7;
+        projectileSpeed = 1500;
+        ringRadius = 70;
         soundSet = "n_creep_Ranged";
-        statusHealth = 8;
+        statusHealth = 800;
         statusHealthRegen = .5;
-        statusMana = 4;
+        statusMana = 400;
         statusManaRegen = 1;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 14;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 1400;
+        visionNighttimeRange = 800;
         localizedName = "Ancient Rumblehide";
     }
 

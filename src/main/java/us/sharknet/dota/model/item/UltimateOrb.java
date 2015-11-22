@@ -22,13 +22,13 @@ public final class UltimateOrb extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 24;
         itemAliases = "ultimate orb";
-        itemCost = 21;
+        itemCost = 2100;
         itemQuality = "secret_shop";
         itemShopTags = new String[]{"agi","int","str"};
         key = "item_ultimate_orb";
         secretShop = 1;
         sideShop = 1;
-        bonus_all_stats = 1;
+        bonus_all_stats = 10;
         localizedName = "Ultimate Orb";
     }
 

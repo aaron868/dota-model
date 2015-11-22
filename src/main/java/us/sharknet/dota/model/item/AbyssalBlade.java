@@ -36,28 +36,28 @@ public final class AbyssalBlade extends Item {
     private AbyssalBlade() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = 0;
-        abilityCastRange = 14;
-        abilityCooldown = 6;
-        abilityManaCost = 15;
+        abilityCastRange = 140;
+        abilityCooldown = 60;
+        abilityManaCost = 150;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
-        iD = 28;
+        iD = 208;
         itemAliases = "abyssal blade";
-        itemCost = 675;
+        itemCost = 6750;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "epic";
         itemShopTags = new String[]{"damage","str","hard_to_tag"};
         key = "item_abyssal_blade";
         bash_chance_melee = 25;
-        bash_chance_ranged = 1;
+        bash_chance_ranged = 10;
         bash_cooldown = 2.3;
         bash_duration = 1.4;
-        bonus_chance_damage = 6;
+        bonus_chance_damage = 60;
         bonus_damage = 85;
-        bonus_strength = 1;
+        bonus_strength = 10;
         localizedName = "Abyssal Blade";
         stun_duration = 2;
     }

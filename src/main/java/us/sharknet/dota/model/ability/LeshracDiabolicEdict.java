@@ -31,7 +31,7 @@ public final class LeshracDiabolicEdict extends Ability {
         abilityCastPoint = .5;
         abilityCooldown = new int[]{22,22,22,22};
         abilityDamage = new int[]{9,18,27,36};
-        abilityDuration = 1;
+        abilityDuration = 10;
         abilityManaCost = new int[]{95,120,135,155};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
@@ -40,12 +40,12 @@ public final class LeshracDiabolicEdict extends Ability {
         iD = 5242;
         key = "leshrac_diabolic_edict";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        duration_tooltip = 1;
+        duration_tooltip = 10;
         localizedName = "Diabolic Edict";
-        num_explosions = 4;
+        num_explosions = 40;
         owningHeroShortKey = "leshrac";
-        radius = 5;
-        tower_bonus = 4;
+        radius = 500;
+        tower_bonus = 40;
     }
 
     public static LeshracDiabolicEdict instance() {

@@ -21,7 +21,7 @@ public final class BeltOfStrength extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 17;
         itemAliases = "belt of strength";
-        itemCost = 45;
+        itemCost = 450;
         itemQuality = "component";
         itemShopTags = "str";
         key = "item_belt_of_strength";

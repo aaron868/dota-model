@@ -33,7 +33,7 @@ public final class OgreMagiUnrefinedFireblast extends Ability {
         abilityCastRange = 475;
         abilityCooldown = 6;
         abilityDamage = 275;
-        abilityManaCost = 4;
+        abilityManaCost = 400;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};

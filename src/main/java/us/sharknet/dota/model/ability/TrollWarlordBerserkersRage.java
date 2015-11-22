@@ -25,15 +25,15 @@ public final class TrollWarlordBerserkersRage extends Ability {
     private TrollWarlordBerserkersRage() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
-        iD = 558;
+        iD = 5508;
         key = "troll_warlord_berserkers_rage";
         base_attack_time = 1.55;
-        bash_chance = 1;
+        bash_chance = 10;
         bash_damage = new int[]{20,30,40,50};
         bash_duration = new double[]{0.8,1.2,1.6,2.0};
         bonus_armor = 3;
         bonus_damage = 0;
-        bonus_hp = 1;
+        bonus_hp = 100;
         bonus_move_speed = new int[]{10,20,30,40};
         bonus_range = 372;
         localizedName = "Berserkers Rage";

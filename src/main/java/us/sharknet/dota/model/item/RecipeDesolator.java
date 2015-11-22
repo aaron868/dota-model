@@ -17,7 +17,7 @@ public final class RecipeDesolator extends Item {
 
     private RecipeDesolator() {
         iD = 167;
-        itemCost = 3;
+        itemCost = 300;
         itemRecipe = 1;
         itemRequirements = new Item[]{MithrilHammer.instance(),MithrilHammer.instance()};
         itemResult = Desolator.instance();

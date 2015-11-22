@@ -33,25 +33,25 @@ public final class EarthSpiritBoulderSmash extends Ability {
     private EarthSpiritBoulderSmash() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = .1;
-        abilityCastRange = 15;
+        abilityCastRange = 150;
         abilityCooldown = new double[]{22.0,18.0,14.0,10.0};
-        abilityManaCost = 1;
+        abilityManaCost = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetFlag = "DOTA_UNIT_TARGET_FLAG_INVULNERABLE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
         fightRecapLevel = 1;
-        iD = 568;
+        iD = 5608;
         key = "earth_spirit_boulder_smash";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Boulder Smash";
         owningHeroShortKey = "earth_spirit";
-        radius = 2;
-        remnant_smash_radius_tooltip = 2;
+        radius = 200;
+        remnant_smash_radius_tooltip = 200;
         rock_damage = new int[]{50,100,150,200};
         rock_distance = 2;
-        rock_search_aoe = 2;
-        speed = 12;
+        rock_search_aoe = 200;
+        speed = 1200;
         stun_duration = new double[]{0.75,1.25,1.75,2.25};
         unit_distance = new double[]{500.0,600.0,700.0,800.0};
     }

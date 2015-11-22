@@ -47,12 +47,12 @@ public final class SatyrTrickster extends NpcUnit {
     private SatyrTrickster() {
         ability1 = SatyrTricksterPurge.instance();
         armorPhysical = 0;
-        attackAcquisitionRange = 3;
+        attackAcquisitionRange = 300;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
-        attackDamageMax = 1;
+        attackDamageMax = 10;
         attackDamageMin = 7;
-        attackRange = 3;
+        attackRange = 300;
         attackRate = 1.7;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 17;
@@ -60,26 +60,26 @@ public final class SatyrTrickster extends NpcUnit {
         bountyXP = 41;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
-        healthBarOffset = 17;
+        healthBarOffset = 170;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_satyr_trickster";
         level = 2;
         model = "models/creeps/neutral_creeps/n_creep_satyr_b/n_creep_satyr_b.vmdl";
         modelScale = .7;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 33;
+        movementSpeed = 330;
         projectileModel = "particles/neutral_fx/satyr_trickster_projectile.vpcf";
-        projectileSpeed = 15;
-        ringRadius = 5;
+        projectileSpeed = 1500;
+        ringRadius = 50;
         soundSet = "n_creep_Ranged";
-        statusHealth = 3;
+        statusHealth = 300;
         statusHealthRegen = .5;
-        statusMana = 5;
+        statusMana = 500;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
-        visionDaytimeRange = 8;
-        visionNighttimeRange = 8;
+        visionDaytimeRange = 800;
+        visionNighttimeRange = 800;
         localizedName = "Satyr Banisher";
     }
 

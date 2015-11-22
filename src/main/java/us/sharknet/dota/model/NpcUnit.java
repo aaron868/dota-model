@@ -38,15 +38,15 @@ public abstract class NpcUnit {
     private final int wakesNeutrals;
 
     public NpcUnit(){
-        attackAcquisitionRange = 8;
+        attackAcquisitionRange = 800;
         attackAnimationPoint = .75;
         attackCapabilities = "DOTA_UNIT_CAP_NO_ATTACK";
         attackDamageMax = 1;
         attackDamageMin = 1;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
         attackDesire = 1;
-        attackRange = 6;
-        attackRangeBuffer = 25;
+        attackRange = 600;
+        attackRangeBuffer = 250;
         attackRate = 1.7;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         autoAttacksByDefault = 1;
@@ -55,16 +55,16 @@ public abstract class NpcUnit {
         canBeDominated = 1;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_HERO";
-        followRange = 1;
+        followRange = 100;
         healthBarOffset = -1;
         level = 1;
         model = "models/development/invisiblebox.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
-        movementSpeed = 3;
+        movementSpeed = 300;
         movementTurnRate = .5;
-        projectileSpeed = 9;
-        ringRadius = 5;
-        statusHealth = 15;
+        projectileSpeed = 900;
+        ringRadius = 50;
+        statusHealth = 150;
         statusStartingMana = -1;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";

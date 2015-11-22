@@ -32,7 +32,7 @@ public final class LionFingerOfDeath extends Ability {
     private LionFingerOfDeath() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 9;
+        abilityCastRange = 900;
         abilityCooldown = new double[]{160.0,100.0,40.0};
         abilityManaCost = new int[]{200,420,650};
         abilityModifierSupportValue = 0;
@@ -41,7 +41,7 @@ public final class LionFingerOfDeath extends Ability {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 2;
-        iD = 547;
+        iD = 5047;
         key = "lion_finger_of_death";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         cooldown_scepter = new double[]{100.0,60.0,20.0};

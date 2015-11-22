@@ -33,7 +33,7 @@ public final class Bfury extends Item {
     private Bfury() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = 0;
-        abilityCastRange = 35;
+        abilityCastRange = 350;
         abilityCooldown = 4;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_TREE","DOTA_UNIT_TARGET_CUSTOM"};
@@ -46,13 +46,13 @@ public final class Bfury extends Item {
         key = "item_bfury";
         bonus_damage = 55;
         bonus_health_regen = 6;
-        bonus_mana_regen = 15;
-        cast_range_tooltip = 35;
-        cast_range_ward = 45;
+        bonus_mana_regen = 150;
+        cast_range_tooltip = 350;
+        cast_range_ward = 450;
         cleave_damage_percent = 35;
-        cleave_radius = 28;
+        cleave_radius = 280;
         localizedName = "Battle Fury";
-        quelling_bonus = 16;
+        quelling_bonus = 160;
         quelling_bonus_ranged = 125;
     }
 

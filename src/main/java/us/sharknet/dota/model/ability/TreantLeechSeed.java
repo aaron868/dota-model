@@ -30,7 +30,7 @@ public final class TreantLeechSeed extends Ability {
     private TreantLeechSeed() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 35;
+        abilityCastRange = 350;
         abilityCooldown = new double[]{16.0,14.0,12.0,10.0};
         abilityManaCost = new int[]{100,110,120,130};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -46,8 +46,8 @@ public final class TreantLeechSeed extends Ability {
         localizedName = "Leech Seed";
         movement_slow = -28;
         owningHeroShortKey = "treant";
-        projectile_speed = 4;
-        radius = 5;
+        projectile_speed = 400;
+        radius = 500;
     }
 
     public static TreantLeechSeed instance() {

@@ -17,7 +17,7 @@ public final class CourierReturnToBase extends Ability {
     private CourierReturnToBase() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
-        iD = 525;
+        iD = 5205;
         key = "courier_return_to_base";
         maxLevel = 1;
         localizedName = "Return To Base";
