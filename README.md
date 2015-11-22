@@ -17,7 +17,7 @@ The Library class allows you to find the object by using its key.For example to 
 import us.sharknet.dota.model;
 
 Library library = new Library();
-Antimage antimage = library.getHero("npc_dota_hero_antimage");
+Antimage antimage = (Antimage) library.getHero("npc_dota_hero_antimage");
 System.out.println( antimage.getAttackRange() );
 ```  
 
@@ -43,6 +43,12 @@ These are challenging to model in Java because they do not follow a standard cla
 All the Dota objects are modeled as immutable, singletons. There is only one instance of every object. Every object is a JavaBean as well so you can use them with other libraries that recognize the JavaBean standard.
 
 ## Status
-This is alpha level code and is guranteed to have bugs and probably to change somewhat as I refine it. All the Java code is generated from a custom parser so its deeply ugly.  
+This is alpha level code and is guaranteed to have bugs and probably to change somewhat as I refine it. All the Java code is generated from a custom parser so its deeply ugly.  
 
 I've also provided CSV files with the English name to Dota key mappings in case that is useful for you as well.
+
+## Planned
+I have several things planned for the near term:
+* Decent JavaDoc
+* More unit tests
+* A set of examples.

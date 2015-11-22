@@ -2,6 +2,7 @@ package us.sharknet.dota.model;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import us.sharknet.dota.model.item.Yasha;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,7 +17,8 @@ public class LibraryTest {
 
     @Test
     public void testGetItem() throws Exception {
-
+        Yasha yasha = (Yasha) library.getItem("item_yasha");
+        assertEquals("item_yasha", yasha.getKey());
     }
 
     @Test
