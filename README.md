@@ -36,11 +36,15 @@ System.out.println( yasha.getBonusAgility() );
 
 You will have to browse through the classes under model.item, model.hero, etc. to see what is available.
 
+See the classes under ```us.sharknet.dota.model.example``` for more usage examples.
+
 ## Design
  
 These are challenging to model in Java because they do not follow a standard class hierarchy. Instead, each "object" can have different properties. For this reason I have modeled them as distinct classes. Every hero, item, unit, and ability is its own class. There is, however, a parent, abstract class for each that has a few common properties.
  
 All the Dota objects are modeled as immutable, singletons. There is only one instance of every object. Every object is a JavaBean as well so you can use them with other libraries that recognize the JavaBean standard.
+
+I did not include the special mode objects such as the Diretide creeps or the Greevil stuff. I only included the main game objects.
 
 ## Status
 This is alpha level code and is guaranteed to have bugs and probably to change somewhat as I refine it. All the Java code is generated from a custom parser so its deeply ugly.  
