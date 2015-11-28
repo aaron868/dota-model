@@ -19,7 +19,7 @@ public class Simple {
 
     public static void main(String[] args) {
         Simple simple = new Simple();
-        simple.heroLookupByKey("npc_dota_hero_abaddon");
+        simple.heroLookupByKey("npc_dota_hero_ogre_magi");
         simple.abilityDirectCreation();
         simple.printItemsWithNoCost();
         simple.printNeutralCreeps();

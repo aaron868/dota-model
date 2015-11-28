@@ -217,6 +217,9 @@ public abstract class NpcUnit {
         return getKey().startsWith("npc_dota_neutral");
     }
 
+    public boolean isLaneCreep() {
+        return getBaseClass().equals("npc_dota_creep_lane");
+    }
 
     @Override
     public int hashCode() {

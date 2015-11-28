@@ -17,6 +17,7 @@ public class AgilityItemPredicate implements Predicate{
 
         //This checks if the item has the property bonusAgility ("bonus_agility" in the Item file)
         //It also check for items that provide a general stats bonus ("bonus_all_stats" or "bonus_stats" as Valve is not consistent)
+        //This uses the JavaBean reflection API to test for certain properties.
         if(     PropertyUtils.isReadable(o,"bonusAgility") ||
                 PropertyUtils.isReadable(o,"bonusStats") ||
                 PropertyUtils.isReadable(o,"bonusAllStats")
