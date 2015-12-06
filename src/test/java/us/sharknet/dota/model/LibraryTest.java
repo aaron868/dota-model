@@ -2,6 +2,9 @@ package us.sharknet.dota.model;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import us.sharknet.dota.model.hero.Abaddon;
+import us.sharknet.dota.model.hero.Lich;
+import us.sharknet.dota.model.hero.WitchDoctor;
 import us.sharknet.dota.model.item.Yasha;
 
 import static org.junit.Assert.assertEquals;
@@ -94,5 +97,12 @@ public class LibraryTest {
     @Test
     public void testGetUnits() throws Exception {
 
+    }
+
+    @Test
+    public void testGetHeroByID() throws Exception {
+        assertEquals(Abaddon.instance(), library.getHeroByID(102));
+        assertEquals(Lich.instance(), library.getHeroByID(31));
+        assertEquals(WitchDoctor.instance(), library.getHeroByID(30));
     }
 }

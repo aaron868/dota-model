@@ -36,6 +36,7 @@ public final class Bloodseeker extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -87,6 +88,7 @@ public final class Bloodseeker extends Hero {
         heroID = 4;
         heroSelectSoundEffect = "Hero_Bloodseeker.Pick";
         heroUnlockOrder = 3;
+        iD = 4;
         idleExpression = "scenes/bloodseeker/bloodseeker_exp_idle_01.vcd";
         key = "npc_dota_hero_bloodseeker";
         lastHitChallengeRival = "npc_dota_hero_juggernaut";
@@ -230,6 +232,10 @@ public final class Bloodseeker extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

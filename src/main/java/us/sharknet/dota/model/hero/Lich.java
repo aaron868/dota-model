@@ -37,6 +37,7 @@ public final class Lich extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleSoundLoop;
     private final String key;
     private final String lastHitChallengeRival;
@@ -90,6 +91,7 @@ public final class Lich extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_Lich.Pick";
         heroUnlockOrder = 0;
+        iD = 31;
         idleSoundLoop = "Hero_Lich.IdleLoop";
         key = "npc_dota_hero_lich";
         lastHitChallengeRival = "npc_dota_hero_crystal_maiden";
@@ -238,6 +240,10 @@ public final class Lich extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleSoundLoop() {

@@ -43,6 +43,7 @@ public final class WinterWyvern extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -110,6 +111,7 @@ public final class WinterWyvern extends Hero {
         heroPool1 = 0;
         heroSelectSoundEffect = "Hero_Winter_Wyvern.Pick";
         heroUnlockOrder = 1;
+        iD = 112;
         idleExpression = "scenes/winter_wyvern/winter_wyvern_exp_idle_01.vcd";
         idleSoundLoop = "Hero_Winter_Wyvern.IdleLoop";
         key = "npc_dota_hero_winter_wyvern";
@@ -290,6 +292,10 @@ public final class WinterWyvern extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

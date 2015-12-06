@@ -35,6 +35,7 @@ public final class PhantomLancer extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -85,6 +86,7 @@ public final class PhantomLancer extends Hero {
         heroID = 12;
         heroSelectSoundEffect = "Hero_PhantomLancer.Pick";
         heroUnlockOrder = 2;
+        iD = 12;
         key = "npc_dota_hero_phantom_lancer";
         lastHitChallengeRival = "npc_dota_hero_juggernaut";
         loadoutScale = .97;
@@ -224,6 +226,10 @@ public final class PhantomLancer extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getKey() {

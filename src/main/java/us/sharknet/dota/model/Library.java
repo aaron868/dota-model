@@ -14,6 +14,7 @@ public final class Library {
     private final HashMap<String, Hero> heroes;
     private final HashMap<String, Ability> abilities;
     private final HashMap<String, NpcUnit> units;
+    private final HashMap<Integer, Hero> heroesByID;
 
     public Library() {
         items = new HashMap<>();
@@ -254,6 +255,7 @@ public final class Library {
         items.put("item_recipe_crimson_guard", us.sharknet.dota.model.item.RecipeCrimsonGuard.instance());
 
         heroes = new HashMap<>();
+
         heroes.put("npc_dota_hero_warlock", us.sharknet.dota.model.hero.Warlock.instance());
         heroes.put("npc_dota_hero_clinkz", us.sharknet.dota.model.hero.Clinkz.instance());
         heroes.put("npc_dota_hero_phoenix", us.sharknet.dota.model.hero.Phoenix.instance());
@@ -366,6 +368,120 @@ public final class Library {
         heroes.put("npc_dota_hero_shadow_shaman", us.sharknet.dota.model.hero.ShadowShaman.instance());
         heroes.put("npc_dota_hero_sven", us.sharknet.dota.model.hero.Sven.instance());
         heroes.put("npc_dota_hero_dragon_knight", us.sharknet.dota.model.hero.DragonKnight.instance());
+
+        heroesByID = new HashMap<>();
+        heroesByID.put(88, us.sharknet.dota.model.hero.NyxAssassin.instance());
+        heroesByID.put(89, us.sharknet.dota.model.hero.NagaSiren.instance());
+        heroesByID.put(110, us.sharknet.dota.model.hero.Phoenix.instance());
+        heroesByID.put(111, us.sharknet.dota.model.hero.Oracle.instance());
+        heroesByID.put(112, us.sharknet.dota.model.hero.WinterWyvern.instance());
+        heroesByID.put(113, us.sharknet.dota.model.hero.ArcWarden.instance());
+        heroesByID.put(90, us.sharknet.dota.model.hero.KeeperOfTheLight.instance());
+        heroesByID.put(91, us.sharknet.dota.model.hero.Wisp.instance());
+        heroesByID.put(92, us.sharknet.dota.model.hero.Visage.instance());
+        heroesByID.put(93, us.sharknet.dota.model.hero.Slark.instance());
+        heroesByID.put(94, us.sharknet.dota.model.hero.Medusa.instance());
+        heroesByID.put(95, us.sharknet.dota.model.hero.TrollWarlord.instance());
+        heroesByID.put(96, us.sharknet.dota.model.hero.Centaur.instance());
+        heroesByID.put(97, us.sharknet.dota.model.hero.Magnataur.instance());
+        heroesByID.put(10, us.sharknet.dota.model.hero.Morphling.instance());
+        heroesByID.put(98, us.sharknet.dota.model.hero.Shredder.instance());
+        heroesByID.put(99, us.sharknet.dota.model.hero.Bristleback.instance());
+        heroesByID.put(11, us.sharknet.dota.model.hero.Nevermore.instance());
+        heroesByID.put(12, us.sharknet.dota.model.hero.PhantomLancer.instance());
+        heroesByID.put(13, us.sharknet.dota.model.hero.Puck.instance());
+        heroesByID.put(14, us.sharknet.dota.model.hero.Pudge.instance());
+        heroesByID.put(15, us.sharknet.dota.model.hero.Razor.instance());
+        heroesByID.put(16, us.sharknet.dota.model.hero.SandKing.instance());
+        heroesByID.put(17, us.sharknet.dota.model.hero.StormSpirit.instance());
+        heroesByID.put(18, us.sharknet.dota.model.hero.Sven.instance());
+        heroesByID.put(19, us.sharknet.dota.model.hero.Tiny.instance());
+        heroesByID.put(1, us.sharknet.dota.model.hero.Antimage.instance());
+        heroesByID.put(2, us.sharknet.dota.model.hero.Axe.instance());
+        heroesByID.put(3, us.sharknet.dota.model.hero.Bane.instance());
+        heroesByID.put(4, us.sharknet.dota.model.hero.Bloodseeker.instance());
+        heroesByID.put(5, us.sharknet.dota.model.hero.CrystalMaiden.instance());
+        heroesByID.put(6, us.sharknet.dota.model.hero.DrowRanger.instance());
+        heroesByID.put(7, us.sharknet.dota.model.hero.Earthshaker.instance());
+        heroesByID.put(8, us.sharknet.dota.model.hero.Juggernaut.instance());
+        heroesByID.put(9, us.sharknet.dota.model.hero.Mirana.instance());
+        heroesByID.put(20, us.sharknet.dota.model.hero.Vengefulspirit.instance());
+        heroesByID.put(21, us.sharknet.dota.model.hero.Windrunner.instance());
+        heroesByID.put(22, us.sharknet.dota.model.hero.Zuus.instance());
+        heroesByID.put(23, us.sharknet.dota.model.hero.Kunkka.instance());
+        heroesByID.put(25, us.sharknet.dota.model.hero.Lina.instance());
+        heroesByID.put(26, us.sharknet.dota.model.hero.Lion.instance());
+        heroesByID.put(27, us.sharknet.dota.model.hero.ShadowShaman.instance());
+        heroesByID.put(28, us.sharknet.dota.model.hero.Slardar.instance());
+        heroesByID.put(29, us.sharknet.dota.model.hero.Tidehunter.instance());
+        heroesByID.put(30, us.sharknet.dota.model.hero.WitchDoctor.instance());
+        heroesByID.put(31, us.sharknet.dota.model.hero.Lich.instance());
+        heroesByID.put(32, us.sharknet.dota.model.hero.Riki.instance());
+        heroesByID.put(33, us.sharknet.dota.model.hero.Enigma.instance());
+        heroesByID.put(34, us.sharknet.dota.model.hero.Tinker.instance());
+        heroesByID.put(35, us.sharknet.dota.model.hero.Sniper.instance());
+        heroesByID.put(36, us.sharknet.dota.model.hero.Necrolyte.instance());
+        heroesByID.put(37, us.sharknet.dota.model.hero.Warlock.instance());
+        heroesByID.put(38, us.sharknet.dota.model.hero.Beastmaster.instance());
+        heroesByID.put(39, us.sharknet.dota.model.hero.Queenofpain.instance());
+        heroesByID.put(40, us.sharknet.dota.model.hero.Venomancer.instance());
+        heroesByID.put(41, us.sharknet.dota.model.hero.FacelessVoid.instance());
+        heroesByID.put(42, us.sharknet.dota.model.hero.SkeletonKing.instance());
+        heroesByID.put(43, us.sharknet.dota.model.hero.DeathProphet.instance());
+        heroesByID.put(44, us.sharknet.dota.model.hero.PhantomAssassin.instance());
+        heroesByID.put(45, us.sharknet.dota.model.hero.Pugna.instance());
+        heroesByID.put(46, us.sharknet.dota.model.hero.TemplarAssassin.instance());
+        heroesByID.put(47, us.sharknet.dota.model.hero.Viper.instance());
+        heroesByID.put(48, us.sharknet.dota.model.hero.Luna.instance());
+        heroesByID.put(49, us.sharknet.dota.model.hero.DragonKnight.instance());
+        heroesByID.put(50, us.sharknet.dota.model.hero.Dazzle.instance());
+        heroesByID.put(51, us.sharknet.dota.model.hero.Rattletrap.instance());
+        heroesByID.put(52, us.sharknet.dota.model.hero.Leshrac.instance());
+        heroesByID.put(53, us.sharknet.dota.model.hero.Furion.instance());
+        heroesByID.put(54, us.sharknet.dota.model.hero.LifeStealer.instance());
+        heroesByID.put(55, us.sharknet.dota.model.hero.DarkSeer.instance());
+        heroesByID.put(56, us.sharknet.dota.model.hero.Clinkz.instance());
+        heroesByID.put(57, us.sharknet.dota.model.hero.Omniknight.instance());
+        heroesByID.put(58, us.sharknet.dota.model.hero.Enchantress.instance());
+        heroesByID.put(59, us.sharknet.dota.model.hero.Huskar.instance());
+        heroesByID.put(60, us.sharknet.dota.model.hero.NightStalker.instance());
+        heroesByID.put(61, us.sharknet.dota.model.hero.Broodmother.instance());
+        heroesByID.put(62, us.sharknet.dota.model.hero.BountyHunter.instance());
+        heroesByID.put(63, us.sharknet.dota.model.hero.Weaver.instance());
+        heroesByID.put(64, us.sharknet.dota.model.hero.Jakiro.instance());
+        heroesByID.put(65, us.sharknet.dota.model.hero.Batrider.instance());
+        heroesByID.put(66, us.sharknet.dota.model.hero.Chen.instance());
+        heroesByID.put(67, us.sharknet.dota.model.hero.Spectre.instance());
+        heroesByID.put(68, us.sharknet.dota.model.hero.AncientApparition.instance());
+        heroesByID.put(69, us.sharknet.dota.model.hero.DoomBringer.instance());
+        heroesByID.put(70, us.sharknet.dota.model.hero.Ursa.instance());
+        heroesByID.put(71, us.sharknet.dota.model.hero.SpiritBreaker.instance());
+        heroesByID.put(72, us.sharknet.dota.model.hero.Gyrocopter.instance());
+        heroesByID.put(73, us.sharknet.dota.model.hero.Alchemist.instance());
+        heroesByID.put(74, us.sharknet.dota.model.hero.Invoker.instance());
+        heroesByID.put(75, us.sharknet.dota.model.hero.Silencer.instance());
+        heroesByID.put(76, us.sharknet.dota.model.hero.ObsidianDestroyer.instance());
+        heroesByID.put(77, us.sharknet.dota.model.hero.Lycan.instance());
+        heroesByID.put(78, us.sharknet.dota.model.hero.Brewmaster.instance());
+        heroesByID.put(79, us.sharknet.dota.model.hero.ShadowDemon.instance());
+        heroesByID.put(100, us.sharknet.dota.model.hero.Tusk.instance());
+        heroesByID.put(101, us.sharknet.dota.model.hero.SkywrathMage.instance());
+        heroesByID.put(102, us.sharknet.dota.model.hero.Abaddon.instance());
+        heroesByID.put(103, us.sharknet.dota.model.hero.ElderTitan.instance());
+        heroesByID.put(104, us.sharknet.dota.model.hero.LegionCommander.instance());
+        heroesByID.put(105, us.sharknet.dota.model.hero.Techies.instance());
+        heroesByID.put(106, us.sharknet.dota.model.hero.EmberSpirit.instance());
+        heroesByID.put(107, us.sharknet.dota.model.hero.EarthSpirit.instance());
+        heroesByID.put(80, us.sharknet.dota.model.hero.LoneDruid.instance());
+        heroesByID.put(108, us.sharknet.dota.model.hero.AbyssalUnderlord.instance());
+        heroesByID.put(81, us.sharknet.dota.model.hero.ChaosKnight.instance());
+        heroesByID.put(82, us.sharknet.dota.model.hero.Meepo.instance());
+        heroesByID.put(109, us.sharknet.dota.model.hero.Terrorblade.instance());
+        heroesByID.put(83, us.sharknet.dota.model.hero.Treant.instance());
+        heroesByID.put(84, us.sharknet.dota.model.hero.OgreMagi.instance());
+        heroesByID.put(85, us.sharknet.dota.model.hero.Undying.instance());
+        heroesByID.put(86, us.sharknet.dota.model.hero.Rubick.instance());
+        heroesByID.put(87, us.sharknet.dota.model.hero.Disruptor.instance());
 
         abilities = new HashMap<>();
         abilities.put("bloodseeker_rupture", us.sharknet.dota.model.ability.BloodseekerRupture.instance());
@@ -1236,6 +1352,18 @@ public final class Library {
             throw new IllegalArgumentException("Hero key " + heroKey + " not found.");
         }
         return heroes.get(heroKey);
+    }
+
+    /**
+     * @param heroID The hero ID for example 61 for Broodmother.
+     * @return The hero instance bean. The is is an immutable, singleton object.
+     * @throws IllegalArgumentException If the hero key is not found.
+     */
+    public Hero getHeroByID( int heroID ) throws IllegalArgumentException {
+        if( !heroesByID.containsKey(heroID)) {
+            throw new IllegalArgumentException("Hero ID " + heroID + " not found.");
+        }
+        return heroesByID.get(heroID);
     }
 
     /**

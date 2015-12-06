@@ -37,6 +37,7 @@ public final class Spectre extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleSoundLoop;
     private final String key;
     private final String lastHitChallengeRival;
@@ -88,6 +89,7 @@ public final class Spectre extends Hero {
         heroID = 67;
         heroSelectSoundEffect = "Hero_Spectre.Pick";
         heroUnlockOrder = 2;
+        iD = 67;
         idleSoundLoop = "Hero_Spectre.IdleLoop";
         key = "npc_dota_hero_spectre";
         lastHitChallengeRival = "npc_dota_hero_bounty_hunter";
@@ -234,6 +236,10 @@ public final class Spectre extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleSoundLoop() {

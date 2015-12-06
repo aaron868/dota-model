@@ -34,6 +34,7 @@ public final class Batrider extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -86,6 +87,7 @@ public final class Batrider extends Hero {
         heroID = 65;
         heroSelectSoundEffect = "Hero_Batrider.Pick";
         heroUnlockOrder = 3;
+        iD = 65;
         idleExpression = "scenes/batrider/batrider_exp_idle_01.vcd";
         key = "npc_dota_hero_batrider";
         lastHitChallengeRival = "npc_dota_hero_lina";
@@ -224,6 +226,10 @@ public final class Batrider extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

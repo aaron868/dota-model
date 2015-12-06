@@ -34,6 +34,7 @@ public final class Abaddon extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
+    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -83,6 +84,7 @@ public final class Abaddon extends Hero {
         healthBarOffset = 175;
         heroID = 102;
         heroSelectSoundEffect = "Hero_Abaddon.Pick";
+        iD = 102;
         key = "npc_dota_hero_abaddon";
         lastHitChallengeRival = "npc_dota_hero_chaos_knight";
         loadoutScale = .73;
@@ -218,6 +220,10 @@ public final class Abaddon extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getKey() {

@@ -36,6 +36,7 @@ public final class ArcWarden extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String model;
@@ -87,6 +88,7 @@ public final class ArcWarden extends Hero {
         heroID = 113;
         heroSelectSoundEffect = "Hero_ArcWarden.Pick";
         heroUnlockOrder = 1;
+        iD = 113;
         idleExpression = "scenes/arc_warden/arc_warden_exp_idle_01.vcd";
         key = "npc_dota_hero_arc_warden";
         model = "models/heroes/arc_warden/arc_warden.vmdl";
@@ -230,6 +232,10 @@ public final class ArcWarden extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

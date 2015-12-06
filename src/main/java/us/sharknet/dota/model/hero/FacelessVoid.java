@@ -35,6 +35,7 @@ public final class FacelessVoid extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -86,6 +87,7 @@ public final class FacelessVoid extends Hero {
         heroID = 41;
         heroSelectSoundEffect = "Hero_FacelessVoid.Pick";
         heroUnlockOrder = 0;
+        iD = 41;
         idleExpression = "scenes/faceless_void/faceless_void_exp_idle_01.vcd";
         key = "npc_dota_hero_faceless_void";
         lastHitChallengeRival = "npc_dota_hero_bounty_hunter";
@@ -226,6 +228,10 @@ public final class FacelessVoid extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

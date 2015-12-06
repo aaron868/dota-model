@@ -36,6 +36,7 @@ public final class AncientApparition extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleSoundLoop;
     private final String key;
     private final String lastHitChallengeRival;
@@ -91,6 +92,7 @@ public final class AncientApparition extends Hero {
         heroID = 68;
         heroSelectSoundEffect = "Hero_Ancient_Apparition.Pick";
         heroUnlockOrder = 2;
+        iD = 68;
         idleSoundLoop = "Hero_Ancient_Apparition.IdleLoop";
         key = "npc_dota_hero_ancient_apparition";
         lastHitChallengeRival = "npc_dota_hero_lich";
@@ -238,6 +240,10 @@ public final class AncientApparition extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleSoundLoop() {

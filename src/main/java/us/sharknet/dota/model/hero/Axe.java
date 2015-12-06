@@ -36,6 +36,7 @@ public final class Axe extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -87,6 +88,7 @@ public final class Axe extends Hero {
         heroID = 2;
         heroSelectSoundEffect = "Hero_Axe.Pick";
         heroUnlockOrder = 2;
+        iD = 2;
         key = "npc_dota_hero_axe";
         lastHitChallengeRival = "npc_dota_hero_juggernaut";
         loadoutScale = .95;
@@ -230,6 +232,10 @@ public final class Axe extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getKey() {

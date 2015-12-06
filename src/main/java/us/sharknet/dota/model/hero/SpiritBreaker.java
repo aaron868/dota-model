@@ -35,6 +35,7 @@ public final class SpiritBreaker extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -85,6 +86,7 @@ public final class SpiritBreaker extends Hero {
         heroID = 71;
         heroSelectSoundEffect = "Hero_SpiritBreaker.Pick";
         heroUnlockOrder = 2;
+        iD = 71;
         idleExpression = "scenes/spirit_breaker/spirit_breaker_exp_idle_01.vcd";
         key = "npc_dota_hero_spirit_breaker";
         lastHitChallengeRival = "npc_dota_hero_earthshaker";
@@ -224,6 +226,10 @@ public final class SpiritBreaker extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

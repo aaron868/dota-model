@@ -34,6 +34,7 @@ public final class ObsidianDestroyer extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -85,6 +86,7 @@ public final class ObsidianDestroyer extends Hero {
         heroID = 76;
         heroSelectSoundEffect = "Hero_OD.Pick";
         heroUnlockOrder = 2;
+        iD = 76;
         idleExpression = "scenes/outworld_destroyer/outworld_destroyer_exp_idle_01.vcd";
         idleSoundLoop = "Hero_ObsidianDestroyer.IdleLoop";
         key = "npc_dota_hero_obsidian_destroyer";
@@ -222,6 +224,10 @@ public final class ObsidianDestroyer extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

@@ -38,6 +38,7 @@ public final class CrystalMaiden extends Hero {
     private final int heroPool2;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -93,6 +94,7 @@ public final class CrystalMaiden extends Hero {
         heroPool2 = 1;
         heroSelectSoundEffect = "Hero_CrystalMaiden.Pick";
         heroUnlockOrder = 0;
+        iD = 5;
         idleExpression = "scenes/crystalmaiden/crystalmaiden_exp_idle_05.vcd";
         key = "npc_dota_hero_crystal_maiden";
         lastHitChallengeRival = "npc_dota_hero_lina";
@@ -246,6 +248,10 @@ public final class CrystalMaiden extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

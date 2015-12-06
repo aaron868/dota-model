@@ -35,6 +35,7 @@ public final class Rattletrap extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -83,6 +84,7 @@ public final class Rattletrap extends Hero {
         heroID = 51;
         heroSelectSoundEffect = "Hero_Rattletrap.Pick";
         heroUnlockOrder = 3;
+        iD = 51;
         key = "npc_dota_hero_rattletrap";
         lastHitChallengeRival = "npc_dota_hero_sand_king";
         loadoutScale = 1.1;
@@ -220,6 +222,10 @@ public final class Rattletrap extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getKey() {

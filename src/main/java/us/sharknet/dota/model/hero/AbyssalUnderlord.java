@@ -31,6 +31,7 @@ public final class AbyssalUnderlord extends Hero {
     private final int enabled;
     private final int healthBarOffset;
     private final int heroID;
+    private final int iD;
     private final String key;
     private final String model;
     private final int modelScale;
@@ -73,6 +74,7 @@ public final class AbyssalUnderlord extends Hero {
         enabled = 0;
         healthBarOffset = 200;
         heroID = 108;
+        iD = 108;
         key = "npc_dota_hero_abyssal_underlord";
         model = "models/heroes/abyssal_underlord/abyssal_underlord.vmdl";
         modelScale = 1;
@@ -192,6 +194,10 @@ public final class AbyssalUnderlord extends Hero {
 
     public int getHeroID() {
         return heroID;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getKey() {

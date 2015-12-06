@@ -35,6 +35,7 @@ public final class NightStalker extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -87,6 +88,7 @@ public final class NightStalker extends Hero {
         heroID = 60;
         heroSelectSoundEffect = "Hero_NightStalker.Pick";
         heroUnlockOrder = 2;
+        iD = 60;
         key = "npc_dota_hero_night_stalker";
         lastHitChallengeRival = "npc_dota_hero_juggernaut";
         loadoutScale = .84;
@@ -228,6 +230,10 @@ public final class NightStalker extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getKey() {

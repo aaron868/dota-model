@@ -37,6 +37,7 @@ public final class Razor extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -90,6 +91,7 @@ public final class Razor extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_Razor.Pick";
         heroUnlockOrder = 1;
+        iD = 15;
         idleExpression = "scenes/razor/razor_exp_idle_01.vcd";
         idleSoundLoop = "Hero_Razor.IdleLoop";
         key = "npc_dota_hero_razor";
@@ -238,6 +240,10 @@ public final class Razor extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

@@ -48,6 +48,7 @@ public final class Invoker extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -113,6 +114,7 @@ public final class Invoker extends Hero {
         heroID = 74;
         heroSelectSoundEffect = "Hero_Invoker.Pick";
         heroUnlockOrder = 3;
+        iD = 74;
         idleExpression = "scenes/invoker/invoker_exp_idle_01.vcd";
         idleSoundLoop = "Hero_Invoker.IdleLoop";
         key = "npc_dota_hero_invoker";
@@ -306,6 +308,10 @@ public final class Invoker extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

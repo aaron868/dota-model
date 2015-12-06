@@ -36,6 +36,7 @@ public final class Necrolyte extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -89,6 +90,7 @@ public final class Necrolyte extends Hero {
         heroID = 36;
         heroSelectSoundEffect = "Hero_Necrolyte.Pick";
         heroUnlockOrder = 0;
+        iD = 36;
         idleExpression = "scenes/necrolyte/necrolyte_exp_idle_01.vcd";
         idleSoundLoop = "Hero_Necrolyte.IdleLoop";
         key = "npc_dota_hero_necrolyte";
@@ -234,6 +236,10 @@ public final class Necrolyte extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

@@ -35,6 +35,7 @@ public final class Leshrac extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -86,6 +87,7 @@ public final class Leshrac extends Hero {
         heroID = 52;
         heroSelectSoundEffect = "Hero_Leshrac.Pick";
         heroUnlockOrder = 1;
+        iD = 52;
         key = "npc_dota_hero_leshrac";
         lastHitChallengeRival = "npc_dota_hero_lion";
         loadoutScale = .75;
@@ -226,6 +228,10 @@ public final class Leshrac extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getKey() {

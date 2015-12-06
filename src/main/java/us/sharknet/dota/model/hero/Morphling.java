@@ -41,6 +41,7 @@ public final class Morphling extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleSoundLoop;
     private final String key;
     private final String lastHitChallengeRival;
@@ -99,6 +100,7 @@ public final class Morphling extends Hero {
         heroID = 10;
         heroSelectSoundEffect = "Hero_Morphling.Pick";
         heroUnlockOrder = 3;
+        iD = 10;
         idleSoundLoop = "Hero_Morphling.IdleLoop";
         key = "npc_dota_hero_morphling";
         lastHitChallengeRival = "npc_dota_hero_necrolyte";
@@ -264,6 +266,10 @@ public final class Morphling extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleSoundLoop() {

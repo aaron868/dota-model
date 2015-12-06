@@ -37,6 +37,7 @@ public final class Viper extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -91,6 +92,7 @@ public final class Viper extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_Viper.Pick";
         heroUnlockOrder = 1;
+        iD = 47;
         idleExpression = "scenes/viper/viper_exp_idle_01.vcd";
         key = "npc_dota_hero_viper";
         lastHitChallengeRival = "npc_dota_hero_jakiro";
@@ -240,6 +242,10 @@ public final class Viper extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

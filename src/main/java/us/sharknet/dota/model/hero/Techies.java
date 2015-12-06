@@ -46,6 +46,7 @@ public final class Techies extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -117,6 +118,7 @@ public final class Techies extends Hero {
         heroPool1 = 0;
         heroSelectSoundEffect = "Hero_Techies.Pick";
         heroUnlockOrder = 1;
+        iD = 105;
         idleExpression = "scenes/techies/techies_exp_idle_01.vcd";
         idleSoundLoop = "Hero_Techies.IdleLoop";
         key = "npc_dota_hero_techies";
@@ -310,6 +312,10 @@ public final class Techies extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

@@ -36,6 +36,7 @@ public final class Centaur extends Hero {
     private final int heroPool2;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -89,6 +90,7 @@ public final class Centaur extends Hero {
         heroPool2 = 1;
         heroSelectSoundEffect = "Hero_Centaur.Pick";
         heroUnlockOrder = 0;
+        iD = 96;
         idleExpression = "scenes/centaur/centaur_exp_idle_01.vcd";
         key = "npc_dota_hero_centaur";
         lastHitChallengeRival = "npc_dota_hero_chaos_knight";
@@ -234,6 +236,10 @@ public final class Centaur extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

@@ -36,6 +36,7 @@ public final class Tiny extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final int loadoutScale;
@@ -86,6 +87,7 @@ public final class Tiny extends Hero {
         heroID = 19;
         heroSelectSoundEffect = "Hero_Tiny.Pick";
         heroUnlockOrder = 1;
+        iD = 19;
         key = "npc_dota_hero_tiny";
         lastHitChallengeRival = "npc_dota_hero_earthshaker";
         loadoutScale = 1;
@@ -228,6 +230,10 @@ public final class Tiny extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getKey() {

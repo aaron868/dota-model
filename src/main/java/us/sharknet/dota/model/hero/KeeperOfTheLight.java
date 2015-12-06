@@ -40,6 +40,7 @@ public final class KeeperOfTheLight extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -97,6 +98,7 @@ public final class KeeperOfTheLight extends Hero {
         healthBarOffset = 230;
         heroID = 90;
         heroSelectSoundEffect = "Hero_KeeperOfTheLight.Pick";
+        iD = 90;
         idleExpression = "scenes/keeper_of_the_light/keeper_of_the_light_exp_idle_01.vcd";
         key = "npc_dota_hero_keeper_of_the_light";
         lastHitChallengeRival = "npc_dota_hero_chaos_knight";
@@ -258,6 +260,10 @@ public final class KeeperOfTheLight extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

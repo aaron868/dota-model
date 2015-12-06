@@ -37,6 +37,7 @@ public final class WitchDoctor extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -91,6 +92,7 @@ public final class WitchDoctor extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_Witchdoctor.Pick";
         heroUnlockOrder = 2;
+        iD = 30;
         idleExpression = "scenes/witchdoctor/witchdoctor_exp_idle_01.vcd";
         key = "npc_dota_hero_witch_doctor";
         lastHitChallengeRival = "npc_dota_hero_necrolyte";
@@ -240,6 +242,10 @@ public final class WitchDoctor extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

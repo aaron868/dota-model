@@ -38,6 +38,7 @@ public final class DragonKnight extends Hero {
     private final int heroPool2;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final String model;
@@ -91,6 +92,7 @@ public final class DragonKnight extends Hero {
         heroPool2 = 1;
         heroSelectSoundEffect = "Hero_DragonKnight.Pick";
         heroUnlockOrder = 0;
+        iD = 49;
         key = "npc_dota_hero_dragon_knight";
         lastHitChallengeRival = "npc_dota_hero_sven";
         model = "models/heroes/dragon_knight/dragon_knight.vmdl";
@@ -242,6 +244,10 @@ public final class DragonKnight extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getKey() {

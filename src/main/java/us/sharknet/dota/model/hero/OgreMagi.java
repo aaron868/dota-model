@@ -35,6 +35,7 @@ public final class OgreMagi extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -86,6 +87,7 @@ public final class OgreMagi extends Hero {
         healthBarOffset = 180;
         heroID = 84;
         heroSelectSoundEffect = "Hero_OgreMagi.Pick";
+        iD = 84;
         idleExpression = "scenes/ogre_magi/ogre_magi_exp_idle_01.vcd";
         key = "npc_dota_hero_ogre_magi";
         lastHitChallengeRival = "npc_dota_hero_dragon_knight";
@@ -226,6 +228,10 @@ public final class OgreMagi extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

@@ -36,6 +36,7 @@ public final class Meepo extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -89,6 +90,7 @@ public final class Meepo extends Hero {
         heroID = 82;
         heroSelectSoundEffect = "Hero_Meepo.Pick";
         heroUnlockOrder = 3;
+        iD = 82;
         idleExpression = "scenes/meepo/meepo_exp_idle_01.vcd";
         key = "npc_dota_hero_meepo";
         lastHitChallengeRival = "npc_dota_hero_sand_king";
@@ -234,6 +236,10 @@ public final class Meepo extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

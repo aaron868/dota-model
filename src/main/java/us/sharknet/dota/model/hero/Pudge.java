@@ -36,6 +36,7 @@ public final class Pudge extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -89,6 +90,7 @@ public final class Pudge extends Hero {
         heroID = 14;
         heroSelectSoundEffect = "Hero_Pudge.Pick";
         heroUnlockOrder = 3;
+        iD = 14;
         idleExpression = "scenes/pudge/pudge_exp_idle_01.vcd";
         idleSoundLoop = "Hero_Pudge.IdleLoop";
         key = "npc_dota_hero_pudge";
@@ -234,6 +236,10 @@ public final class Pudge extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

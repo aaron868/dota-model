@@ -34,6 +34,7 @@ public final class Venomancer extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
+    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -85,6 +86,7 @@ public final class Venomancer extends Hero {
         heroID = 40;
         heroSelectSoundEffect = "Hero_Venomancer.Pick";
         heroUnlockOrder = 0;
+        iD = 40;
         idleExpression = "scenes/venomancer/venomancer_exp_idle_01.vcd";
         idleSoundLoop = "Hero_Venomancer.IdleLoop";
         key = "npc_dota_hero_venomancer";
@@ -222,6 +224,10 @@ public final class Venomancer extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

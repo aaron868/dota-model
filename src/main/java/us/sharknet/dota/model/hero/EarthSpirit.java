@@ -38,6 +38,7 @@ public final class EarthSpirit extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
+    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String model;
@@ -92,6 +93,7 @@ public final class EarthSpirit extends Hero {
         healthBarOffset = 200;
         heroID = 107;
         heroSelectSoundEffect = "Hero_EarthSpirit.Pick";
+        iD = 107;
         idleExpression = "scenes/earth_spirit/earth_spirit_exp_idle_01.vcd";
         key = "npc_dota_hero_earth_spirit";
         model = "models/heroes/earth_spirit/earth_spirit.vmdl";
@@ -244,6 +246,10 @@ public final class EarthSpirit extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleExpression() {

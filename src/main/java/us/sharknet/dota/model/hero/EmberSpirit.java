@@ -37,6 +37,7 @@ public final class EmberSpirit extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
+    private final int iD;
     private final String idleSoundLoop;
     private final String key;
     private final double loadoutScale;
@@ -91,6 +92,7 @@ public final class EmberSpirit extends Hero {
         healthBarOffset = 200;
         heroID = 106;
         heroSelectSoundEffect = "Hero_EmberSpirit.Pick";
+        iD = 106;
         idleSoundLoop = "Hero_EmberSpirit.IdleLoop";
         key = "npc_dota_hero_ember_spirit";
         loadoutScale = 1.1;
@@ -240,6 +242,10 @@ public final class EmberSpirit extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
+    }
+
+    public int getID() {
+        return iD;
     }
 
     public String getIdleSoundLoop() {
