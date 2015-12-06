@@ -39,7 +39,6 @@ public final class LoneDruid extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -97,7 +96,6 @@ public final class LoneDruid extends Hero {
         heroID = 80;
         heroSelectSoundEffect = "Hero_LoneDruid.Pick";
         heroUnlockOrder = 3;
-        iD = 80;
         idleExpression = "scenes/lone_druid/lone_druid_exp_idle_01.vcd";
         key = "npc_dota_hero_lone_druid";
         lastHitChallengeRival = "npc_dota_hero_dragon_knight";
@@ -256,10 +254,6 @@ public final class LoneDruid extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

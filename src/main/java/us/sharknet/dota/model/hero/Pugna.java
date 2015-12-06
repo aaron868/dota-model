@@ -35,7 +35,6 @@ public final class Pugna extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -87,7 +86,6 @@ public final class Pugna extends Hero {
         heroID = 45;
         heroSelectSoundEffect = "Hero_Pugna.Pick";
         heroUnlockOrder = 3;
-        iD = 45;
         idleExpression = "scenes/pugna/pugna_exp_idle_01.vcd";
         key = "npc_dota_hero_pugna";
         lastHitChallengeRival = "npc_dota_hero_viper";
@@ -228,10 +226,6 @@ public final class Pugna extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

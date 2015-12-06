@@ -35,7 +35,6 @@ public final class DarkSeer extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -86,7 +85,6 @@ public final class DarkSeer extends Hero {
         heroID = 55;
         heroSelectSoundEffect = "Hero_DarkSeer.Pick";
         heroUnlockOrder = 3;
-        iD = 55;
         idleExpression = "scenes/dark_seer/dark_seer_exp_idle_01.vcd";
         key = "npc_dota_hero_dark_seer";
         lastHitChallengeRival = "npc_dota_hero_earthshaker";
@@ -226,10 +224,6 @@ public final class DarkSeer extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

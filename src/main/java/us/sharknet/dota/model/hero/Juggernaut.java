@@ -38,7 +38,6 @@ public final class Juggernaut extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final int loadoutScale;
@@ -94,7 +93,6 @@ public final class Juggernaut extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_Juggernaut.Pick";
         heroUnlockOrder = 3;
-        iD = 8;
         key = "npc_dota_hero_juggernaut";
         lastHitChallengeRival = "npc_dota_hero_skeleton_king";
         loadoutScale = 1;
@@ -248,10 +246,6 @@ public final class Juggernaut extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getKey() {

@@ -37,7 +37,6 @@ public final class Shredder extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
-    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -90,7 +89,6 @@ public final class Shredder extends Hero {
         healthBarOffset = 250;
         heroID = 98;
         heroSelectSoundEffect = "Hero_Shredder.Pick";
-        iD = 98;
         idleExpression = "scenes/shredder/shredder_exp_idle_01.vcd";
         idleSoundLoop = "Hero_Shredder.IdleLoop";
         key = "npc_dota_hero_shredder";
@@ -238,10 +236,6 @@ public final class Shredder extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

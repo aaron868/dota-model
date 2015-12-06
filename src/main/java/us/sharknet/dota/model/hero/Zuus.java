@@ -38,7 +38,6 @@ public final class Zuus extends Hero {
     private final int heroPool2;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -95,7 +94,6 @@ public final class Zuus extends Hero {
         heroPool2 = 1;
         heroSelectSoundEffect = "Hero_Zuus.Pick";
         heroUnlockOrder = 0;
-        iD = 22;
         idleExpression = "scenes/zuus/zuus_exp_idle_01.vcd";
         key = "npc_dota_hero_zuus";
         lastHitChallengeRival = "npc_dota_hero_razor";
@@ -250,10 +248,6 @@ public final class Zuus extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

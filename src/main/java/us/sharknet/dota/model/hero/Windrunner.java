@@ -37,7 +37,6 @@ public final class Windrunner extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -92,7 +91,6 @@ public final class Windrunner extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_Windrunner.Pick";
         heroUnlockOrder = 2;
-        iD = 21;
         idleExpression = "scenes/windrunner/windrunner_exp_idle_01.vcd";
         key = "npc_dota_hero_windrunner";
         lastHitChallengeRival = "npc_dota_hero_drow_ranger";
@@ -242,10 +240,6 @@ public final class Windrunner extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

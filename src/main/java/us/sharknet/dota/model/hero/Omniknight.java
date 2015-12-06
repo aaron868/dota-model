@@ -37,7 +37,6 @@ public final class Omniknight extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -89,7 +88,6 @@ public final class Omniknight extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_Omniknight.Pick";
         heroUnlockOrder = 3;
-        iD = 57;
         idleExpression = "scenes/omniknight/omniknight_exp_idle_01.vcd";
         key = "npc_dota_hero_omniknight";
         lastHitChallengeRival = "npc_dota_hero_dragon_knight";
@@ -236,10 +234,6 @@ public final class Omniknight extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

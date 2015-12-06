@@ -38,7 +38,6 @@ public final class Sniper extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -95,7 +94,6 @@ public final class Sniper extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_Sniper.Pick";
         heroUnlockOrder = 0;
-        iD = 35;
         idleExpression = "scenes/sniper/sniper_exp_idle_01.vcd";
         key = "npc_dota_hero_sniper";
         lastHitChallengeRival = "npc_dota_hero_drow_ranger";
@@ -250,10 +248,6 @@ public final class Sniper extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

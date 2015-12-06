@@ -37,7 +37,6 @@ public final class SkywrathMage extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -92,7 +91,6 @@ public final class SkywrathMage extends Hero {
         heroID = 101;
         heroSelectSoundEffect = "Hero_SkywrathMage.Pick";
         heroUnlockOrder = 3;
-        iD = 101;
         idleExpression = "scenes/skywrath_mage/skywrath_mage_exp_idle_01.vcd";
         key = "npc_dota_hero_skywrath_mage";
         lastHitChallengeRival = "npc_dota_hero_vengefulspirit";
@@ -242,10 +240,6 @@ public final class SkywrathMage extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

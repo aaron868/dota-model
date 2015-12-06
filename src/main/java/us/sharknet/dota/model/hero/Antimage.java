@@ -35,7 +35,6 @@ public final class Antimage extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -86,7 +85,6 @@ public final class Antimage extends Hero {
         heroID = 1;
         heroSelectSoundEffect = "Hero_Antimage.Pick";
         heroUnlockOrder = 1;
-        iD = 1;
         idleExpression = "scenes/antimage/antimage_exp_idle_01.vcd";
         key = "npc_dota_hero_antimage";
         lastHitChallengeRival = "npc_dota_hero_bounty_hunter";
@@ -226,10 +224,6 @@ public final class Antimage extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

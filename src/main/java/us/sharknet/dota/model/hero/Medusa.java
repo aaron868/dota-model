@@ -36,7 +36,6 @@ public final class Medusa extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -92,7 +91,6 @@ public final class Medusa extends Hero {
         heroID = 94;
         heroSelectSoundEffect = "Hero_Medusa.Pick";
         heroUnlockOrder = 0;
-        iD = 94;
         idleExpression = "scenes/medusa/medusa_exp_idle_01.vcd";
         key = "npc_dota_hero_medusa";
         lastHitChallengeRival = "npc_dota_hero_zuus";
@@ -240,10 +238,6 @@ public final class Medusa extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

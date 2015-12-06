@@ -35,7 +35,6 @@ public final class Enchantress extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -88,7 +87,6 @@ public final class Enchantress extends Hero {
         heroID = 58;
         heroSelectSoundEffect = "Hero_Enchantress.Pick";
         heroUnlockOrder = 2;
-        iD = 58;
         idleExpression = "scenes/enchantress/enchantress_exp_idle_01.vcd";
         key = "npc_dota_hero_enchantress";
         lastHitChallengeRival = "npc_dota_hero_drow_ranger";
@@ -230,10 +228,6 @@ public final class Enchantress extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

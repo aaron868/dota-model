@@ -40,7 +40,6 @@ public final class Wisp extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
-    private final int iD;
     private final String idleSoundLoop;
     private final String key;
     private final String lastHitChallengeRival;
@@ -98,7 +97,6 @@ public final class Wisp extends Hero {
         healthBarOffset = 160;
         heroID = 91;
         heroSelectSoundEffect = "Hero_Wisp.Pick";
-        iD = 91;
         idleSoundLoop = "Hero_Wisp.IdleLoop";
         key = "npc_dota_hero_wisp";
         lastHitChallengeRival = "npc_dota_hero_zuus";
@@ -260,10 +258,6 @@ public final class Wisp extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleSoundLoop() {

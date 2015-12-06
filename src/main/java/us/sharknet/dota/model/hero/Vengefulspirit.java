@@ -37,7 +37,6 @@ public final class Vengefulspirit extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -93,7 +92,6 @@ public final class Vengefulspirit extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_VengefulSpirit.Pick";
         heroUnlockOrder = 1;
-        iD = 20;
         idleExpression = "scenes/vengefulspirit/vengefulspirit_exp_idle_01.vcd";
         key = "npc_dota_hero_vengefulspirit";
         lastHitChallengeRival = "npc_dota_hero_death_prophet";
@@ -244,10 +242,6 @@ public final class Vengefulspirit extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

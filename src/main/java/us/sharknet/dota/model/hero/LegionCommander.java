@@ -33,7 +33,6 @@ public final class LegionCommander extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -81,7 +80,6 @@ public final class LegionCommander extends Hero {
         healthBarOffset = 200;
         heroID = 104;
         heroSelectSoundEffect = "Hero_LegionCommander.Pick";
-        iD = 104;
         idleExpression = "scenes/legion_commander/legion_commander_exp_idle_01.vcd";
         key = "npc_dota_hero_legion_commander";
         lastHitChallengeRival = "npc_dota_hero_kunkka";
@@ -212,10 +210,6 @@ public final class LegionCommander extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

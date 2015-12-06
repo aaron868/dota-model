@@ -35,7 +35,6 @@ public final class Mirana extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -87,7 +86,6 @@ public final class Mirana extends Hero {
         heroID = 9;
         heroSelectSoundEffect = "Hero_Mirana.Pick";
         heroUnlockOrder = 1;
-        iD = 9;
         idleExpression = "scenes/mirana/mirana_exp_idle_01.vcd";
         key = "npc_dota_hero_mirana";
         lastHitChallengeRival = "npc_dota_hero_luna";
@@ -228,10 +226,6 @@ public final class Mirana extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

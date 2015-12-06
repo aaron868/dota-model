@@ -34,7 +34,6 @@ public final class Treant extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
-    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -84,7 +83,6 @@ public final class Treant extends Hero {
         healthBarOffset = 260;
         heroID = 83;
         heroSelectSoundEffect = "Hero_Treant.Pick";
-        iD = 83;
         key = "npc_dota_hero_treant";
         lastHitChallengeRival = "npc_dota_hero_tiny";
         loadoutScale = .75;
@@ -220,10 +218,6 @@ public final class Treant extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getKey() {

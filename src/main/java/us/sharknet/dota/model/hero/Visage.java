@@ -33,7 +33,6 @@ public final class Visage extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
-    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -87,7 +86,6 @@ public final class Visage extends Hero {
         healthBarOffset = 180;
         heroID = 92;
         heroSelectSoundEffect = "Hero_Visage.Pick";
-        iD = 92;
         idleExpression = "scenes/visage/visage_exp_idle_01.vcd";
         idleSoundLoop = "Hero_Visage.IdleLoop";
         key = "npc_dota_hero_visage";
@@ -224,10 +222,6 @@ public final class Visage extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

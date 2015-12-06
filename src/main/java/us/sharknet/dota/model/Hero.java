@@ -79,6 +79,7 @@ public abstract class Hero {
         visionNighttimeRange = 800;
     }
 
+    public abstract int getHeroID();
     public abstract String getLocalizedName();
     public abstract String getKey();
 

@@ -35,7 +35,6 @@ public final class Jakiro extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -88,7 +87,6 @@ public final class Jakiro extends Hero {
         heroID = 64;
         heroSelectSoundEffect = "Hero_Jakiro.Pick";
         heroUnlockOrder = 1;
-        iD = 64;
         idleExpression = "scenes/jakiro/jakiro_exp_idle_01.vcd";
         key = "npc_dota_hero_jakiro";
         lastHitChallengeRival = "npc_dota_hero_crystal_maiden";
@@ -230,10 +228,6 @@ public final class Jakiro extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

@@ -34,7 +34,6 @@ public final class Terrorblade extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String key;
     private final double loadoutScale;
     private final String model;
@@ -84,7 +83,6 @@ public final class Terrorblade extends Hero {
         heroID = 109;
         heroSelectSoundEffect = "Hero_Terrorblade.Pick";
         heroUnlockOrder = 1;
-        iD = 109;
         key = "npc_dota_hero_terrorblade";
         loadoutScale = .9;
         model = "models/heroes/terrorblade/terrorblade.vmdl";
@@ -220,10 +218,6 @@ public final class Terrorblade extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getKey() {

@@ -37,7 +37,6 @@ public final class DeathProphet extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleSoundLoop;
     private final String key;
     private final String lastHitChallengeRival;
@@ -93,7 +92,6 @@ public final class DeathProphet extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_DeathProphet.Pick";
         heroUnlockOrder = 1;
-        iD = 43;
         idleSoundLoop = "Hero_DeathProphet.IdleLoop";
         key = "npc_dota_hero_death_prophet";
         lastHitChallengeRival = "npc_dota_hero_dazzle";
@@ -244,10 +242,6 @@ public final class DeathProphet extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleSoundLoop() {

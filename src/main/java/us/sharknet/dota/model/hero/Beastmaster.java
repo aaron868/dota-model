@@ -39,7 +39,6 @@ public final class Beastmaster extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -94,7 +93,6 @@ public final class Beastmaster extends Hero {
         heroID = 38;
         heroSelectSoundEffect = "Hero_Beastmaster.Pick";
         heroUnlockOrder = 1;
-        iD = 38;
         idleExpression = "scenes/beastmaster/beastmaster_exp_idle_01.vcd";
         key = "npc_dota_hero_beastmaster";
         lastHitChallengeRival = "npc_dota_hero_skeleton_king";
@@ -250,10 +248,6 @@ public final class Beastmaster extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

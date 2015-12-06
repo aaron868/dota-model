@@ -39,7 +39,6 @@ public final class TemplarAssassin extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -95,7 +94,6 @@ public final class TemplarAssassin extends Hero {
         heroID = 46;
         heroSelectSoundEffect = "Hero_TemplarAssassin.Pick";
         heroUnlockOrder = 3;
-        iD = 46;
         idleExpression = "scenes/templar_assassin/templar_assassin_exp_idle_01.vcd";
         key = "npc_dota_hero_templar_assassin";
         lastHitChallengeRival = "npc_dota_hero_omniknight";
@@ -252,10 +250,6 @@ public final class TemplarAssassin extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

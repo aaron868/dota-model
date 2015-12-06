@@ -37,7 +37,6 @@ public final class SandKing extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final String model;
@@ -88,7 +87,6 @@ public final class SandKing extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_Sandking.Pick";
         heroUnlockOrder = 1;
-        iD = 16;
         key = "npc_dota_hero_sand_king";
         lastHitChallengeRival = "npc_dota_hero_skeleton_king";
         model = "models/heroes/sand_king/sand_king.vmdl";
@@ -234,10 +232,6 @@ public final class SandKing extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getKey() {

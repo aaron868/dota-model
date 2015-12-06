@@ -38,7 +38,6 @@ public final class Chen extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -92,7 +91,6 @@ public final class Chen extends Hero {
         heroID = 66;
         heroSelectSoundEffect = "Hero_Chen.Pick";
         heroUnlockOrder = 3;
-        iD = 66;
         key = "npc_dota_hero_chen";
         lastHitChallengeRival = "npc_dota_hero_sven";
         loadoutScale = .82;
@@ -244,10 +242,6 @@ public final class Chen extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getKey() {

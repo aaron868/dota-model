@@ -36,7 +36,6 @@ public final class Luna extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -89,7 +88,6 @@ public final class Luna extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_Luna.Pick";
         heroUnlockOrder = 0;
-        iD = 48;
         idleExpression = "scenes/luna/luna_exp_idle_01.vcd";
         key = "npc_dota_hero_luna";
         lastHitChallengeRival = "npc_dota_hero_lina";
@@ -234,10 +232,6 @@ public final class Luna extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

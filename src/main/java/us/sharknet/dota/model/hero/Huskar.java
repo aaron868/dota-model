@@ -36,7 +36,6 @@ public final class Huskar extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -88,7 +87,6 @@ public final class Huskar extends Hero {
         heroID = 59;
         heroSelectSoundEffect = "Hero_Huskar.Pick";
         heroUnlockOrder = 1;
-        iD = 59;
         idleExpression = "scenes/huskar/huskar_exp_idle_01.vcd";
         key = "npc_dota_hero_huskar";
         lastHitChallengeRival = "npc_dota_hero_dazzle";
@@ -232,10 +230,6 @@ public final class Huskar extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

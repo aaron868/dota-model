@@ -36,7 +36,6 @@ public final class Earthshaker extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -89,7 +88,6 @@ public final class Earthshaker extends Hero {
         heroID = 7;
         heroSelectSoundEffect = "Hero_Earthshaker.Pick";
         heroUnlockOrder = 1;
-        iD = 7;
         idleExpression = "scenes/earthshaker/earthshaker_exp_idle_01.vcd";
         key = "npc_dota_hero_earthshaker";
         lastHitChallengeRival = "npc_dota_hero_tiny";
@@ -234,10 +232,6 @@ public final class Earthshaker extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

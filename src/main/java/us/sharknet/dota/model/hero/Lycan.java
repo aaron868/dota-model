@@ -37,7 +37,6 @@ public final class Lycan extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final String model;
@@ -87,7 +86,6 @@ public final class Lycan extends Hero {
         heroID = 77;
         heroSelectSoundEffect = "Hero_Lycan.Pick";
         heroUnlockOrder = 0;
-        iD = 77;
         key = "npc_dota_hero_lycan";
         lastHitChallengeRival = "npc_dota_hero_skeleton_king";
         model = "models/heroes/lycan/lycan.vmdl";
@@ -232,10 +230,6 @@ public final class Lycan extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getKey() {

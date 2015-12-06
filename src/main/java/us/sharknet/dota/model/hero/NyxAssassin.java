@@ -35,7 +35,6 @@ public final class NyxAssassin extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -86,7 +85,6 @@ public final class NyxAssassin extends Hero {
         healthBarOffset = 200;
         heroID = 88;
         heroSelectSoundEffect = "Hero_Nyx.Pick";
-        iD = 88;
         idleExpression = "scenes/nyx_assassin/nyx_assassin_exp_idle_01.vcd";
         key = "npc_dota_hero_nyx_assassin";
         lastHitChallengeRival = "npc_dota_hero_bounty_hunter";
@@ -226,10 +224,6 @@ public final class NyxAssassin extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

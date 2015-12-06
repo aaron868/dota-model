@@ -38,7 +38,6 @@ public final class Sven extends Hero {
     private final int heroPool2;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -92,7 +91,6 @@ public final class Sven extends Hero {
         heroPool2 = 1;
         heroSelectSoundEffect = "Hero_Sven.Pick";
         heroUnlockOrder = 0;
-        iD = 18;
         key = "npc_dota_hero_sven";
         lastHitChallengeRival = "npc_dota_hero_omniknight";
         loadoutScale = .9;
@@ -244,10 +242,6 @@ public final class Sven extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getKey() {

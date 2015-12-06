@@ -37,7 +37,6 @@ public final class Kunkka extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -89,7 +88,6 @@ public final class Kunkka extends Hero {
         heroID = 23;
         heroSelectSoundEffect = "Hero_Kunkka.Pick";
         heroUnlockOrder = 3;
-        iD = 23;
         idleExpression = "scenes/kunkka/kunkka_exp_idle_01.vcd";
         key = "npc_dota_hero_kunkka";
         lastHitChallengeRival = "npc_dota_hero_tidehunter";
@@ -236,10 +234,6 @@ public final class Kunkka extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

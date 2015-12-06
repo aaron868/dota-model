@@ -35,7 +35,6 @@ public final class Bristleback extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
-    private final int iD;
     private final String idleSoundLoop;
     private final String key;
     private final String lastHitChallengeRival;
@@ -86,7 +85,6 @@ public final class Bristleback extends Hero {
         healthBarOffset = 200;
         heroID = 99;
         heroSelectSoundEffect = "Hero_Bristleback.Pick";
-        iD = 99;
         idleSoundLoop = "Hero_Bristleback.IdleLoop";
         key = "npc_dota_hero_bristleback";
         lastHitChallengeRival = "npc_dota_hero_dragon_knight";
@@ -226,10 +224,6 @@ public final class Bristleback extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleSoundLoop() {

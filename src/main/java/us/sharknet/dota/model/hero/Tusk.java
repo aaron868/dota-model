@@ -36,7 +36,6 @@ public final class Tusk extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -88,7 +87,6 @@ public final class Tusk extends Hero {
         healthBarOffset = 190;
         heroID = 100;
         heroSelectSoundEffect = "Hero_Tusk.Pick";
-        iD = 100;
         idleExpression = "scenes/tusk/tusk_exp_idle_01.vcd";
         key = "npc_dota_hero_tusk";
         lastHitChallengeRival = "npc_dota_hero_earthshaker";
@@ -232,10 +230,6 @@ public final class Tusk extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

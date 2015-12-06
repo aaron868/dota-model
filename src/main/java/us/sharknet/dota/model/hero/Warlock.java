@@ -38,7 +38,6 @@ public final class Warlock extends Hero {
     private final int heroPool1;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -93,7 +92,6 @@ public final class Warlock extends Hero {
         heroPool1 = 1;
         heroSelectSoundEffect = "Hero_Warlock.Pick";
         heroUnlockOrder = 2;
-        iD = 37;
         key = "npc_dota_hero_warlock";
         lastHitChallengeRival = "npc_dota_hero_lion";
         loadoutScale = .87;
@@ -246,10 +244,6 @@ public final class Warlock extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getKey() {

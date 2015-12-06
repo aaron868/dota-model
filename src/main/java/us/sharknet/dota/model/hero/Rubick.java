@@ -41,7 +41,6 @@ public final class Rubick extends Hero {
     private final int healthBarOffset;
     private final int heroID;
     private final String heroSelectSoundEffect;
-    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -99,7 +98,6 @@ public final class Rubick extends Hero {
         healthBarOffset = 170;
         heroID = 86;
         heroSelectSoundEffect = "Hero_Rubick.Pick";
-        iD = 86;
         key = "npc_dota_hero_rubick";
         lastHitChallengeRival = "npc_dota_hero_warlock";
         loadoutScale = .65;
@@ -264,10 +262,6 @@ public final class Rubick extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getKey() {

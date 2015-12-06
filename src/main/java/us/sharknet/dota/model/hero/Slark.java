@@ -35,7 +35,6 @@ public final class Slark extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -90,7 +89,6 @@ public final class Slark extends Hero {
         heroID = 93;
         heroSelectSoundEffect = "Hero_Slark.Pick";
         heroUnlockOrder = 0;
-        iD = 93;
         idleExpression = "scenes/slark/slark_exp_idle_01.vcd";
         idleSoundLoop = "Hero_Slark.IdleLoop";
         key = "npc_dota_hero_slark";
@@ -234,10 +232,6 @@ public final class Slark extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

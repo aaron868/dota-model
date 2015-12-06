@@ -43,7 +43,6 @@ public final class Phoenix extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -104,7 +103,6 @@ public final class Phoenix extends Hero {
         heroID = 110;
         heroSelectSoundEffect = "Hero_Phoenix.Pick";
         heroUnlockOrder = 1;
-        iD = 110;
         idleExpression = "scenes/phoenix/phoenix/exp_idle_01.vcd";
         idleSoundLoop = "Hero_Phoenix.IdleLoop";
         key = "npc_dota_hero_phoenix";
@@ -278,10 +276,6 @@ public final class Phoenix extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

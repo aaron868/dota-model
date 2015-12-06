@@ -41,7 +41,6 @@ public final class Nevermore extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -102,7 +101,6 @@ public final class Nevermore extends Hero {
         heroID = 11;
         heroSelectSoundEffect = "Hero_Nevermore.Pick";
         heroUnlockOrder = 1;
-        iD = 11;
         idleExpression = "scenes/nevermore/nevermore_exp_idle_01.vcd";
         idleSoundLoop = "Hero_Nevermore.IdleLoop";
         key = "npc_dota_hero_nevermore";
@@ -270,10 +268,6 @@ public final class Nevermore extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

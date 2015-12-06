@@ -35,7 +35,6 @@ public final class Broodmother extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -87,7 +86,6 @@ public final class Broodmother extends Hero {
         heroID = 61;
         heroSelectSoundEffect = "Hero_Broodmother.Pick";
         heroUnlockOrder = 2;
-        iD = 61;
         idleExpression = "scenes/broodmother/broodmother_exp_idle_01.vcd";
         key = "npc_dota_hero_broodmother";
         lastHitChallengeRival = "npc_dota_hero_earthshaker";
@@ -228,10 +226,6 @@ public final class Broodmother extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

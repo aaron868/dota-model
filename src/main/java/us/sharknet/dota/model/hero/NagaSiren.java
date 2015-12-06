@@ -36,7 +36,6 @@ public final class NagaSiren extends Hero {
     private final int[] heroGlowColor;
     private final int heroID;
     private final String heroSelectSoundEffect;
-    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -89,7 +88,6 @@ public final class NagaSiren extends Hero {
         heroGlowColor = new int[]{154,97,133};
         heroID = 89;
         heroSelectSoundEffect = "Hero_NagaSiren.Pick";
-        iD = 89;
         idleExpression = "scenes/naga_siren/naga_siren_exp_idle_01.vcd";
         idleSoundLoop = "Hero_NagaSiren.IdleLoop";
         key = "npc_dota_hero_naga_siren";
@@ -234,10 +232,6 @@ public final class NagaSiren extends Hero {
 
     public String getHeroSelectSoundEffect() {
         return heroSelectSoundEffect;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

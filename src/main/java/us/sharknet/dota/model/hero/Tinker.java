@@ -35,7 +35,6 @@ public final class Tinker extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final String model;
@@ -85,7 +84,6 @@ public final class Tinker extends Hero {
         heroID = 34;
         heroSelectSoundEffect = "Hero_Tinker.Pick";
         heroUnlockOrder = 1;
-        iD = 34;
         key = "npc_dota_hero_tinker";
         lastHitChallengeRival = "npc_dota_hero_lina";
         model = "models/heroes/tinker/tinker.vmdl";
@@ -224,10 +222,6 @@ public final class Tinker extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getKey() {

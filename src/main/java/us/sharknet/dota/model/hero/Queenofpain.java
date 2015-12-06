@@ -35,7 +35,6 @@ public final class Queenofpain extends Hero {
     private final int heroPool2;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -87,7 +86,6 @@ public final class Queenofpain extends Hero {
         heroPool2 = 1;
         heroSelectSoundEffect = "Hero_QueenOfPain.Pick";
         heroUnlockOrder = 1;
-        iD = 39;
         key = "npc_dota_hero_queenofpain";
         lastHitChallengeRival = "npc_dota_hero_vengefulspirit";
         loadoutScale = .92;
@@ -228,10 +226,6 @@ public final class Queenofpain extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getKey() {

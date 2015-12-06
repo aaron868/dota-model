@@ -38,7 +38,6 @@ public final class SkeletonKing extends Hero {
     private final int heroPool2;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -94,7 +93,6 @@ public final class SkeletonKing extends Hero {
         heroPool2 = 1;
         heroSelectSoundEffect = "Hero_SkeletonKing.Pick";
         heroUnlockOrder = 0;
-        iD = 42;
         idleExpression = "scenes/skeleton_king/skeleton_king_exp_idle_01.vcd";
         key = "npc_dota_hero_skeleton_king";
         lastHitChallengeRival = "npc_dota_hero_sand_king";
@@ -248,10 +246,6 @@ public final class SkeletonKing extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

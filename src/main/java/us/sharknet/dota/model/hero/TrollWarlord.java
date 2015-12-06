@@ -37,7 +37,6 @@ public final class TrollWarlord extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String key;
     private final String lastHitChallengeRival;
@@ -94,7 +93,6 @@ public final class TrollWarlord extends Hero {
         heroID = 95;
         heroSelectSoundEffect = "Hero_TrollWarlord.Pick";
         heroUnlockOrder = 0;
-        iD = 95;
         idleExpression = "scenes/troll_warlord/troll_warlord_exp_idle_01.vcd";
         key = "npc_dota_hero_troll_warlord";
         lastHitChallengeRival = "npc_dota_hero_windrunner";
@@ -246,10 +244,6 @@ public final class TrollWarlord extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {

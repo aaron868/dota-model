@@ -33,7 +33,6 @@ public final class Weaver extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String key;
     private final String lastHitChallengeRival;
     private final double loadoutScale;
@@ -83,7 +82,6 @@ public final class Weaver extends Hero {
         heroID = 63;
         heroSelectSoundEffect = "Hero_Weaver.Pick";
         heroUnlockOrder = 3;
-        iD = 63;
         key = "npc_dota_hero_weaver";
         lastHitChallengeRival = "npc_dota_hero_viper";
         loadoutScale = .9;
@@ -216,10 +214,6 @@ public final class Weaver extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getKey() {

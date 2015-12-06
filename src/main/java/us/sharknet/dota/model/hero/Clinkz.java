@@ -35,7 +35,6 @@ public final class Clinkz extends Hero {
     private final int heroID;
     private final String heroSelectSoundEffect;
     private final int heroUnlockOrder;
-    private final int iD;
     private final String idleExpression;
     private final String idleSoundLoop;
     private final String key;
@@ -89,7 +88,6 @@ public final class Clinkz extends Hero {
         heroID = 56;
         heroSelectSoundEffect = "Hero_Clinkz.Pick";
         heroUnlockOrder = 2;
-        iD = 56;
         idleExpression = "scenes/clinkz/clinkz_exp_idle_01.vcd";
         idleSoundLoop = "Hero_Clinkz.IdleLoop";
         key = "npc_dota_hero_clinkz";
@@ -232,10 +230,6 @@ public final class Clinkz extends Hero {
 
     public int getHeroUnlockOrder() {
         return heroUnlockOrder;
-    }
-
-    public int getID() {
-        return iD;
     }
 
     public String getIdleExpression() {
