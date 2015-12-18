@@ -55,7 +55,7 @@ public final class PugnaNetherWard3 extends NpcUnit {
         bountyGoldMin = 60;
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
-        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
+        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 145;
         key = "npc_dota_pugna_nether_ward_3";
         level = 0;

@@ -15,7 +15,6 @@ public final class TrollWarlordBerserkersRage extends Ability {
     private final int[] bash_damage;
     private final double[] bash_duration;
     private final int bonus_armor;
-    private final int bonus_damage;
     private final int bonus_hp;
     private final int[] bonus_move_speed;
     private final int bonus_range;
@@ -32,7 +31,6 @@ public final class TrollWarlordBerserkersRage extends Ability {
         bash_damage = new int[]{20,30,40,50};
         bash_duration = new double[]{0.8,1.2,1.6,2.0};
         bonus_armor = 3;
-        bonus_damage = 0;
         bonus_hp = 100;
         bonus_move_speed = new int[]{10,20,30,40};
         bonus_range = 372;
@@ -81,10 +79,6 @@ public final class TrollWarlordBerserkersRage extends Ability {
 
     public int getBonusArmor() {
         return bonus_armor;
-    }
-
-    public int getBonusDamage() {
-        return bonus_damage;
     }
 
     public int getBonusHp() {

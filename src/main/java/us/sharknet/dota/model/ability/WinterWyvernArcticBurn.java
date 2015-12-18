@@ -39,7 +39,7 @@ public final class WinterWyvernArcticBurn extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         attack_point = .1;
         attack_range_bonus = new int[]{275,375,475,575};
-        bonus_movespeed = new int[]{-25,-30,-35,-40};
+        bonus_movespeed = new int[]{-19,-26,-33,-40};
         damage_duration = 5;
         duration = 6;
         localizedName = "Arctic Burn";

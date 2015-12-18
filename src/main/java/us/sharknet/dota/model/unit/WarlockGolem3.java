@@ -65,7 +65,7 @@ public final class WarlockGolem3 extends NpcUnit {
         bountyGoldMax = 200;
         bountyGoldMin = 200;
         bountyXP = 98;
-        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
+        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_HERO";
         consideredHero = 1;
         hasInventory = 0;

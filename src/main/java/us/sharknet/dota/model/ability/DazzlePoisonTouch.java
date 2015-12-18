@@ -39,7 +39,7 @@ public final class DazzlePoisonTouch extends Ability {
         abilityCooldown = new int[]{15,13,11,7};
         abilityDamage = new int[]{14,20,26,36};
         abilityDuration = 10;
-        abilityManaCost = 100;
+        abilityManaCost = 70;
         abilityModifierSupportValue = .35;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";

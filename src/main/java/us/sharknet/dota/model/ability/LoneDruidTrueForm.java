@@ -31,7 +31,7 @@ public final class LoneDruidTrueForm extends Ability {
         key = "lone_druid_true_form";
         base_attack_time = new double[]{1.5,1.5,1.5};
         bonus_armor = new int[]{4,6,8};
-        bonus_hp = new int[]{250,400,600};
+        bonus_hp = new int[]{300,600,900};
         localizedName = "True Form";
         owningHeroShortKey = "lone_druid";
         speed_loss = 45;

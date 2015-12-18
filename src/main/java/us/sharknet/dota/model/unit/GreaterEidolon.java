@@ -74,7 +74,7 @@ public final class GreaterEidolon extends NpcUnit {
         model = "models/heroes/enigma/eidelon.vmdl";
         modelScale = .85;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 260;
+        movementSpeed = 300;
         movementTurnRate = .5;
         projectileModel = "particles/units/heroes/hero_enigma/enigma_base_attack_eidolon.vpcf";
         projectileSpeed = 900;

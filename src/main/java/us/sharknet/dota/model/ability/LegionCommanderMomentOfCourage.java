@@ -18,7 +18,7 @@ public final class LegionCommanderMomentOfCourage extends Ability {
 
     private LegionCommanderMomentOfCourage() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityCooldown = new double[]{2.7,2.1,1.5,0.9};
+        abilityCooldown = new double[]{2.6,2.0,1.4,0.8};
         iD = 5597;
         key = "legion_commander_moment_of_courage";
         buff_duration = 1;

@@ -67,7 +67,7 @@ public final class DiffusalBlade2 extends Item {
         key = "item_diffusal_blade_2";
         maxUpgradeLevel = 2;
         bonus_agility = 35;
-        bonus_intellect = 10;
+        bonus_intellect = 15;
         cast_range_tooltip = 600;
         damage_per_burn = 1;
         feedback_mana_burn = 25;

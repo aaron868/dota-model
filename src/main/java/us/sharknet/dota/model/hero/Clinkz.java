@@ -19,7 +19,7 @@ public final class Clinkz extends Hero {
     private final int attackDamageMin;
     private final int attackRange;
     private final double attackRate;
-    private final int attributeAgilityGain;
+    private final double attributeAgilityGain;
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
@@ -72,7 +72,7 @@ public final class Clinkz extends Hero {
         attackDamageMin = 15;
         attackRange = 630;
         attackRate = 1.7;
-        attributeAgilityGain = 3;
+        attributeAgilityGain = 3.3;
         attributeBaseAgility = 22;
         attributeBaseIntelligence = 16;
         attributeBaseStrength = 15;
@@ -168,7 +168,7 @@ public final class Clinkz extends Hero {
         return attackRate;
     }
 
-    public int getAttributeAgilityGain() {
+    public double getAttributeAgilityGain() {
         return attributeAgilityGain;
     }
 

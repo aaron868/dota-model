@@ -23,7 +23,7 @@ public final class PhantomAssassin extends Hero {
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
-    private final int attributeIntelligenceGain;
+    private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
     private final String banSound;
@@ -73,9 +73,9 @@ public final class PhantomAssassin extends Hero {
         attackRate = 1.7;
         attributeAgilityGain = 3.15;
         attributeBaseAgility = 23;
-        attributeBaseIntelligence = 13;
+        attributeBaseIntelligence = 15;
         attributeBaseStrength = 20;
-        attributeIntelligenceGain = 1;
+        attributeIntelligenceGain = 1.4;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.85;
         banSound = "phantom_assassin_phass_anger_08";
@@ -182,7 +182,7 @@ public final class PhantomAssassin extends Hero {
         return attributeBaseStrength;
     }
 
-    public int getAttributeIntelligenceGain() {
+    public double getAttributeIntelligenceGain() {
         return attributeIntelligenceGain;
     }
 

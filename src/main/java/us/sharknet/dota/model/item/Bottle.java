@@ -25,11 +25,12 @@ public final class Bottle extends Item {
     private final int itemStackable;
     private final String key;
     private final String model;
+    private final int sideShop;
     private final int health_restore;
     private final String localizedName;
     private final int mana_restore;
     private final int movement_speed_percent_bonus;
-    private final int restore_time;
+    private final double restore_time;
 
     private Bottle() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET"};
@@ -41,7 +42,7 @@ public final class Bottle extends Item {
         fightRecapLevel = 1;
         iD = 41;
         itemAliases = "bottle";
-        itemCost = 700;
+        itemCost = 660;
         itemDisplayCharges = 1;
         itemInitialCharges = 3;
         itemPermanent = 1;
@@ -51,11 +52,12 @@ public final class Bottle extends Item {
         itemStackable = 0;
         key = "item_bottle";
         model = "models/props_gameplay/bottle_blue.vmdl";
-        health_restore = 110;
+        sideShop = 1;
+        health_restore = 90;
         localizedName = "Bottle";
-        mana_restore = 70;
+        mana_restore = 60;
         movement_speed_percent_bonus = -30;
-        restore_time = 3;
+        restore_time = 2.5;
     }
 
     public static Bottle instance() {
@@ -141,6 +143,10 @@ public final class Bottle extends Item {
         return model;
     }
 
+    public int getSideShop() {
+        return sideShop;
+    }
+
     public int getHealthRestore() {
         return health_restore;
     }
@@ -157,7 +163,7 @@ public final class Bottle extends Item {
         return movement_speed_percent_bonus;
     }
 
-    public int getRestoreTime() {
+    public double getRestoreTime() {
         return restore_time;
     }
 

@@ -45,7 +45,7 @@ public final class GreaterHawk extends NpcUnit {
         bountyGoldMin = 65;
         bountyXP = 77;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
-        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_WEAK";
+        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         healthBarOffset = 165;
         isSummoned = 1;
         key = "npc_dota_greater_hawk";

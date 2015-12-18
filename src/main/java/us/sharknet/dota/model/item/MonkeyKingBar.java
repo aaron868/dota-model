@@ -31,10 +31,10 @@ public final class MonkeyKingBar extends Item {
         itemShopTags = new String[]{"damage","attack_speed","hard_to_tag"};
         key = "item_monkey_king_bar";
         bash_chance = 35;
-        bash_damage = 100;
+        bash_damage = 160;
         bash_stun = .1;
         bonus_attack_speed = 15;
-        bonus_damage = 88;
+        bonus_damage = 66;
         localizedName = "Monkey King Bar";
     }
 

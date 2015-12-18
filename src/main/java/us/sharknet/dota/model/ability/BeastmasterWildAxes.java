@@ -6,7 +6,7 @@ public final class BeastmasterWildAxes extends Ability {
 
     private static BeastmasterWildAxes instance;
 
-    private final String[] abilityBehavior;
+    private final String abilityBehavior;
     private final double abilityCastPoint;
     private final int abilityCastRange;
     private final double[] abilityCooldown;
@@ -26,7 +26,7 @@ public final class BeastmasterWildAxes extends Ability {
     private final int[] spread;
 
     private BeastmasterWildAxes() {
-        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
         abilityCastPoint = .4;
         abilityCastRange = 1300;
         abilityCooldown = new double[]{13.0,13.0,13.0,13.0};
@@ -53,7 +53,7 @@ public final class BeastmasterWildAxes extends Ability {
         return instance;
     }
 
-    public String[] getAbilityBehavior() {
+    public String getAbilityBehavior() {
         return abilityBehavior;
     }
 

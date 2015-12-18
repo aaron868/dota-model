@@ -19,7 +19,7 @@ public final class DragonKnightDragonBlood extends Ability {
         iD = 5228;
         key = "dragon_knight_dragon_blood";
         bonus_armor = new int[]{3,6,9,12};
-        bonus_health_regen = new int[]{2,3,4,5};
+        bonus_health_regen = new int[]{3,6,9,12};
         localizedName = "Dragon Blood";
         owningHeroShortKey = "dragon_knight";
     }

@@ -23,6 +23,7 @@ public final class RattletrapCog extends NpcUnit {
     private final String combatClassAttack;
     private final String combatClassDefend;
     private final int healthBarOffset;
+    private final int ignoreAddSummonedToSelection;
     private final String key;
     private final int level;
     private final String model;
@@ -57,6 +58,7 @@ public final class RattletrapCog extends NpcUnit {
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         healthBarOffset = 120;
+        ignoreAddSummonedToSelection = 1;
         key = "npc_dota_rattletrap_cog";
         level = 0;
         model = "models/heroes/rattletrap/rattletrap_cog.vmdl";
@@ -144,6 +146,10 @@ public final class RattletrapCog extends NpcUnit {
 
     public int getHealthBarOffset() {
         return healthBarOffset;
+    }
+
+    public int getIgnoreAddSummonedToSelection() {
+        return ignoreAddSummonedToSelection;
     }
 
     public String getKey() {

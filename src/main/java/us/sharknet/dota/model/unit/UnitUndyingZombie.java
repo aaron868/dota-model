@@ -54,8 +54,8 @@ public final class UnitUndyingZombie extends NpcUnit {
         attackAcquisitionRange = 800;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
-        attackDamageMax = 39;
-        attackDamageMin = 31;
+        attackDamageMax = 36;
+        attackDamageMin = 30;
         attackRange = 128;
         attackRate = 1.6;
         baseClass = "npc_dota_unit_undying_zombie";

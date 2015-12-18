@@ -59,7 +59,7 @@ public final class EnragedWildkin extends NpcUnit {
         bountyGoldMax = 87;
         bountyGoldMin = 67;
         bountyXP = 119;
-        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
+        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 220;
         isNeutralUnitType = 1;

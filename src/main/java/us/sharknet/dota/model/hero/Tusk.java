@@ -93,7 +93,7 @@ public final class Tusk extends Hero {
         loadoutScale = 1;
         model = "models/heroes/tuskarr/tuskarr.vmdl";
         modelScale = .9;
-        movementSpeed = 305;
+        movementSpeed = 300;
         movementTurnRate = .5;
         nameAliases = "Tuskarr";
         pickSound = "tusk_tusk_spawn_01";

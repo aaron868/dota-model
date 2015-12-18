@@ -22,8 +22,8 @@ public final class BountyHunterJinada extends Ability {
         abilityCooldown = new double[]{12.0,10.0,8.0,6.0};
         iD = 5286;
         key = "bounty_hunter_jinada";
-        bonus_attackspeed = new int[]{-25,-25,-25,-25};
-        bonus_movespeed = new int[]{-25,-25,-25,-25};
+        bonus_attackspeed = new int[]{-25,-27,-29,-31};
+        bonus_movespeed = new int[]{-25,-27,-29,-31};
         crit_multiplier = new int[]{150,175,200,225};
         duration = new double[]{3.0,3.0,3.0,3.0};
         localizedName = "Jinada";

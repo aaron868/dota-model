@@ -10,7 +10,7 @@ public final class ShredderWhirlingDeath extends Ability {
     private final double[] abilityCastPoint;
     private final int abilityCastRange;
     private final int abilityCooldown;
-    private final int[] abilityManaCost;
+    private final int abilityManaCost;
     private final String abilityUnitDamageType;
     private final int fightRecapLevel;
     private final int iD;
@@ -29,13 +29,13 @@ public final class ShredderWhirlingDeath extends Ability {
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
         abilityCastRange = 300;
         abilityCooldown = 6;
-        abilityManaCost = new int[]{70,80,90,100};
+        abilityManaCost = 70;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
         iD = 5524;
         key = "shredder_whirling_death";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        duration = 7;
+        duration = 11;
         localizedName = "Whirling Death";
         owningHeroShortKey = "shredder";
         stat_loss_pct = 15;
@@ -67,7 +67,7 @@ public final class ShredderWhirlingDeath extends Ability {
         return abilityCooldown;
     }
 
-    public int[] getAbilityManaCost() {
+    public int getAbilityManaCost() {
         return abilityManaCost;
     }
 

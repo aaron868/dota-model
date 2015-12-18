@@ -22,6 +22,8 @@ public final class NevermoreRequiem extends Ability {
     private final double cast_time_tooltip;
     private final String localizedName;
     private final String owningHeroShortKey;
+    private final int requiem_damage_scepter_pct;
+    private final int requiem_heal_scepter_pct;
     private final int[] requiem_line_speed;
     private final int[] requiem_line_width_end;
     private final int[] requiem_line_width_start;
@@ -51,6 +53,8 @@ public final class NevermoreRequiem extends Ability {
         cast_time_tooltip = 1.67;
         localizedName = "Requiem of Souls";
         owningHeroShortKey = "nevermore";
+        requiem_damage_scepter_pct = 4;
+        requiem_heal_scepter_pct = 1;
         requiem_line_speed = new int[]{700,700,700};
         requiem_line_width_end = new int[]{400,425,450};
         requiem_line_width_start = new int[]{75,100,125};
@@ -133,6 +137,14 @@ public final class NevermoreRequiem extends Ability {
 
     public String getOwningHeroShortKey() {
         return owningHeroShortKey;
+    }
+
+    public int getRequiemDamageScepterPct() {
+        return requiem_damage_scepter_pct;
+    }
+
+    public int getRequiemHealScepterPct() {
+        return requiem_heal_scepter_pct;
     }
 
     public int[] getRequiemLineSpeed() {

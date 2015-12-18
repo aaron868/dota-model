@@ -58,7 +58,7 @@ public final class BeastmasterBoar2 extends NpcUnit {
         bountyGoldMin = 26;
         bountyXP = 59;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
-        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
+        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 125;
         isSummoned = 1;
         key = "npc_dota_beastmaster_boar_2";

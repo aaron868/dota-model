@@ -24,7 +24,7 @@ public final class DoomBringerDoom extends Ability {
     private final int[] damage_scepter;
     private final int[] deniable_pct;
     private final int duration;
-    private final double[] duration_scepter;
+    private final int duration_scepter;
     private final String localizedName;
     private final String owningHeroShortKey;
 
@@ -32,7 +32,7 @@ public final class DoomBringerDoom extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .5;
         abilityCastRange = new int[]{550,550,550};
-        abilityCooldown = 1;
+        abilityCooldown = 125;
         abilityManaCost = new int[]{150,200,250};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
@@ -47,7 +47,7 @@ public final class DoomBringerDoom extends Ability {
         damage_scepter = new int[]{20,35,50};
         deniable_pct = new int[]{25,25,25};
         duration = 15;
-        duration_scepter = new double[]{16.0,16.0,16.0};
+        duration_scepter = 16;
         localizedName = "Doom";
         owningHeroShortKey = "doom_bringer";
     }
@@ -131,7 +131,7 @@ public final class DoomBringerDoom extends Ability {
         return duration;
     }
 
-    public double[] getDurationScepter() {
+    public int getDurationScepter() {
         return duration_scepter;
     }
 

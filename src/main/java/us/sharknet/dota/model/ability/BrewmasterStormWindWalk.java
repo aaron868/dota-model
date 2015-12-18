@@ -7,7 +7,7 @@ public final class BrewmasterStormWindWalk extends Ability {
     private static BrewmasterStormWindWalk instance;
 
     private final String[] abilityBehavior;
-    private final double[] abilityCooldown;
+    private final int abilityCooldown;
     private final int[] abilityManaCost;
     private final int iD;
     private final String key;
@@ -20,7 +20,7 @@ public final class BrewmasterStormWindWalk extends Ability {
 
     private BrewmasterStormWindWalk() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCooldown = new double[]{7.0,7.0,7.0,7.0};
+        abilityCooldown = 5;
         abilityManaCost = new int[]{75,75,75,75};
         iD = 5410;
         key = "brewmaster_storm_wind_walk";
@@ -43,7 +43,7 @@ public final class BrewmasterStormWindWalk extends Ability {
         return abilityBehavior;
     }
 
-    public double[] getAbilityCooldown() {
+    public int getAbilityCooldown() {
         return abilityCooldown;
     }
 

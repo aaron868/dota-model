@@ -25,7 +25,7 @@ public final class CentaurReturn extends Ability {
         localizedName = "Return";
         owningHeroShortKey = "centaur";
         return_damage = new int[]{16,18,20,22};
-        strength_pct = new int[]{30,42,54,66};
+        strength_pct = new int[]{30,45,60,75};
     }
 
     public static CentaurReturn instance() {

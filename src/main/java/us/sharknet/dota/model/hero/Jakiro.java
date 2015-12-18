@@ -67,8 +67,8 @@ public final class Jakiro extends Hero {
         attackAcquisitionRange = 800;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
-        attackDamageMax = 26;
-        attackDamageMin = 18;
+        attackDamageMax = 33;
+        attackDamageMin = 25;
         attackRange = 400;
         attackRate = 1.7;
         attributeAgilityGain = 1.2;

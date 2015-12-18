@@ -14,7 +14,6 @@ public final class UltimateOrb extends Item {
     private final String[] itemShopTags;
     private final String key;
     private final int secretShop;
-    private final int sideShop;
     private final int bonus_all_stats;
     private final String localizedName;
 
@@ -27,7 +26,6 @@ public final class UltimateOrb extends Item {
         itemShopTags = new String[]{"agi","int","str"};
         key = "item_ultimate_orb";
         secretShop = 1;
-        sideShop = 1;
         bonus_all_stats = 10;
         localizedName = "Ultimate Orb";
     }
@@ -69,10 +67,6 @@ public final class UltimateOrb extends Item {
 
     public int getSecretShop() {
         return secretShop;
-    }
-
-    public int getSideShop() {
-        return sideShop;
     }
 
     public int getBonusAllStats() {

@@ -29,7 +29,7 @@ public final class Yasha extends Item {
         bonus_agility = 16;
         bonus_attack_speed = 15;
         localizedName = "Yasha";
-        movement_speed_percent_bonus = 10;
+        movement_speed_percent_bonus = 8;
     }
 
     public static Yasha instance() {

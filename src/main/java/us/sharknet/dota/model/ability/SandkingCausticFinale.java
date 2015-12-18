@@ -34,7 +34,7 @@ public final class SandkingCausticFinale extends Ability {
         caustic_finale_duration = 6;
         caustic_finale_expire_dmg_pct_tooltip = 50;
         caustic_finale_radius = 400;
-        caustic_finale_slow = -25;
+        caustic_finale_slow = -30;
         caustic_finale_slow_duration = 3;
         localizedName = "Caustic Finale";
         owningHeroShortKey = "sand_king";

@@ -47,7 +47,7 @@ public final class TuskIceShards extends Ability {
         owningHeroShortKey = "tusk";
         shard_angle_step = 4;
         shard_count = 7;
-        shard_damage = new int[]{70,140,210,280};
+        shard_damage = new int[]{60,120,180,240};
         shard_distance = 200;
         shard_duration = 7;
         shard_speed = 11;

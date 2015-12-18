@@ -43,10 +43,10 @@ public final class RubickFadeBolt extends Ability {
         iD = 5450;
         key = "rubick_fade_bolt";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        creep_attack_damage_reduction = new int[]{7,10,13,16};
+        creep_attack_damage_reduction = new int[]{10,13,15,17};
         damage = new int[]{70,140,210,280};
         duration = new double[]{10.0,10.0,10.0,10.0};
-        hero_attack_damage_reduction = new int[]{14,20,26,32};
+        hero_attack_damage_reduction = new int[]{20,25,30,35};
         jump_damage_reduction_pct = new int[]{4,4,4,4};
         jump_delay = new double[]{0.25,0.25,0.25,0.25};
         localizedName = "Fade Bolt";

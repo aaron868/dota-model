@@ -15,7 +15,6 @@ public final class CrimsonGuard extends Item {
     private final String itemQuality;
     private final String[] itemShopTags;
     private final String key;
-    private final int block_chance;
     private final int block_chance_active;
     private final int block_damage_melee;
     private final int block_damage_melee_active;
@@ -32,7 +31,7 @@ public final class CrimsonGuard extends Item {
 
     private CrimsonGuard() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
-        abilityCooldown = 7;
+        abilityCooldown = 6;
         iD = 242;
         itemAlertable = 1;
         itemCost = 3550;
@@ -40,11 +39,10 @@ public final class CrimsonGuard extends Item {
         itemQuality = "epic";
         itemShopTags = new String[]{"armor","boost_armor","regen_health","block","health_pool"};
         key = "item_crimson_guard";
-        block_chance = 75;
         block_chance_active = 100;
-        block_damage_melee = 40;
+        block_damage_melee = 32;
         block_damage_melee_active = 55;
-        block_damage_ranged = 20;
+        block_damage_ranged = 16;
         block_damage_ranged_active = 55;
         bonus_all_stats = 2;
         bonus_aoe_armor = 2;
@@ -97,10 +95,6 @@ public final class CrimsonGuard extends Item {
 
     public String getKey() {
         return key;
-    }
-
-    public int getBlockChance() {
-        return block_chance;
     }
 
     public int getBlockChanceActive() {

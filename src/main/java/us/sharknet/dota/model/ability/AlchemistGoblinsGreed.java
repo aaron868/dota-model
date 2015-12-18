@@ -12,7 +12,7 @@ public final class AlchemistGoblinsGreed extends Ability {
     private final int bonus_bonus_gold;
     private final int[] bonus_gold;
     private final int[] bonus_gold_cap;
-    private final int bounty_multiplier_tooltip;
+    private final int[] bounty_multiplier_tooltip;
     private final int duration;
     private final String localizedName;
     private final String owningHeroShortKey;
@@ -24,7 +24,7 @@ public final class AlchemistGoblinsGreed extends Ability {
         bonus_bonus_gold = 3;
         bonus_gold = new int[]{6,8,10,12};
         bonus_gold_cap = new int[]{12,20,28,36};
-        bounty_multiplier_tooltip = 5;
+        bounty_multiplier_tooltip = new int[]{3,4,5,6};
         duration = 30;
         localizedName = "Goblins Greed";
         owningHeroShortKey = "alchemist";
@@ -61,7 +61,7 @@ public final class AlchemistGoblinsGreed extends Ability {
         return bonus_gold_cap;
     }
 
-    public int getBountyMultiplierTooltip() {
+    public int[] getBountyMultiplierTooltip() {
         return bounty_multiplier_tooltip;
     }
 

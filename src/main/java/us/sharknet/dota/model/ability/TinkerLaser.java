@@ -7,7 +7,7 @@ public final class TinkerLaser extends Ability {
     private static TinkerLaser instance;
 
     private final String abilityBehavior;
-    private final double[] abilityCastPoint;
+    private final double abilityCastPoint;
     private final int abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
@@ -30,8 +30,8 @@ public final class TinkerLaser extends Ability {
 
     private TinkerLaser() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = new double[]{0.53,0.53,0.53,0.53};
-        abilityCastRange = 550;
+        abilityCastPoint = .4;
+        abilityCastRange = 650;
         abilityCooldown = new double[]{14.0,14.0,14.0,14.0};
         abilityDamage = new int[]{80,160,240,320};
         abilityManaCost = new int[]{95,120,145,170};
@@ -43,8 +43,8 @@ public final class TinkerLaser extends Ability {
         iD = 5150;
         key = "tinker_laser";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        cast_range_scepter = 550;
-        cast_range_tooltip = 550;
+        cast_range_scepter = 650;
+        cast_range_tooltip = 650;
         duration_creep = new double[]{6.0,6.0,6.0,6.0};
         duration_hero = new double[]{3.0,3.5,4.0,4.5};
         localizedName = "Laser";
@@ -63,7 +63,7 @@ public final class TinkerLaser extends Ability {
         return abilityBehavior;
     }
 
-    public double[] getAbilityCastPoint() {
+    public double getAbilityCastPoint() {
         return abilityCastPoint;
     }
 

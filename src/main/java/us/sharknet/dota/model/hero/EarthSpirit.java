@@ -53,7 +53,6 @@ public final class EarthSpirit extends Hero {
     private final String soundSet;
     private final String team;
     private final int visionDaytimeRange;
-    private final int visionNighttimeRange;
     private final String voiceFile;
     private final boolean active;
     private final String localizedName;
@@ -82,11 +81,11 @@ public final class EarthSpirit extends Hero {
         attributeBaseAgility = 17;
         attributeBaseIntelligence = 18;
         attributeBaseStrength = 21;
-        attributeIntelligenceGain = 2.4;
+        attributeIntelligenceGain = 2.1;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.9;
         banSound = "earth_spirit_earthspi_anger_08";
-        cMEnabled = 0;
+        cMEnabled = 1;
         enabled = 1;
         hasAggressiveStance = 1;
         healthBarOffset = 200;
@@ -107,7 +106,6 @@ public final class EarthSpirit extends Hero {
         soundSet = "Hero_EarthSpirit";
         team = "Good";
         visionDaytimeRange = 1800;
-        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_earth_spirit.vsndevts";
         active = true;
         localizedName = "Earth Spirit";
@@ -304,10 +302,6 @@ public final class EarthSpirit extends Hero {
 
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public int getVisionNighttimeRange() {
-        return visionNighttimeRange;
     }
 
     public String getVoiceFile() {

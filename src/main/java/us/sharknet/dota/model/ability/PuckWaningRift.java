@@ -8,7 +8,7 @@ public final class PuckWaningRift extends Ability {
 
     private final String abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCooldown;
+    private final int[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
@@ -24,7 +24,7 @@ public final class PuckWaningRift extends Ability {
     private PuckWaningRift() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
-        abilityCooldown = 16;
+        abilityCooldown = new int[]{16,15,14,13};
         abilityDamage = new int[]{100,160,220,280};
         abilityManaCost = new int[]{100,110,120,130};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -53,7 +53,7 @@ public final class PuckWaningRift extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 

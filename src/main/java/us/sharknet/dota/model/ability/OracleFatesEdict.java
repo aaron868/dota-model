@@ -8,8 +8,8 @@ public final class OracleFatesEdict extends Ability {
 
     private final String abilityBehavior;
     private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final int[] abilityCooldown;
     private final int abilityManaCost;
     private final String abilityUnitTargetFlags;
     private final String[] abilityUnitTargetTeam;
@@ -25,8 +25,8 @@ public final class OracleFatesEdict extends Ability {
     private OracleFatesEdict() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .3;
-        abilityCastRange = 700;
-        abilityCooldown = 12;
+        abilityCastRange = new int[]{500,600,700,800};
+        abilityCooldown = new int[]{16,13,10,7};
         abilityManaCost = 50;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES";
         abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY","DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
@@ -34,7 +34,7 @@ public final class OracleFatesEdict extends Ability {
         iD = 5638;
         key = "oracle_fates_edict";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_NO";
-        duration = new double[]{3.0,4.0,5.0,6.0};
+        duration = new double[]{3.0,3.5,4.0,4.5};
         localizedName = "Fates Edict";
         magic_damage_resistance_pct_tooltip = 100;
         owningHeroShortKey = "oracle";
@@ -55,11 +55,11 @@ public final class OracleFatesEdict extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 

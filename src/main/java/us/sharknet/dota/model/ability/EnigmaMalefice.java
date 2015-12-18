@@ -41,7 +41,7 @@ public final class EnigmaMalefice extends Ability {
         iD = 5146;
         key = "enigma_malefice";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        damage = new int[]{25,40,55,70};
+        damage = new int[]{30,50,70,90};
         duration = new double[]{4.0,4.0,4.0,4.0};
         localizedName = "Malefice";
         owningHeroShortKey = "enigma";

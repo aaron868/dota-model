@@ -35,8 +35,8 @@ public final class KeeperOfTheLightChakraMagic extends Ability {
         iD = 5473;
         key = "keeper_of_the_light_chakra_magic";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
-        cooldown_reduction = new double[]{2.0,3.0,4.0,5.0};
-        duration = 12;
+        cooldown_reduction = new double[]{3.0,4.0,5.0,6.0};
+        duration = 15;
         localizedName = "Chakra Magic";
         mana_restore = new int[]{75,150,225,300};
         owningHeroShortKey = "keeper_of_the_light";

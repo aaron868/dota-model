@@ -52,9 +52,9 @@ public final class DarkTrollWarlord extends NpcUnit {
         attackAcquisitionRange = 300;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
-        attackDamageMax = 54;
-        attackDamageMin = 49;
-        attackRange = 500;
+        attackDamageMax = 60;
+        attackDamageMin = 55;
+        attackRange = 350;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 62;

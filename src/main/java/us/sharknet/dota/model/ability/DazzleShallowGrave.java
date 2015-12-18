@@ -7,11 +7,11 @@ public final class DazzleShallowGrave extends Ability {
     private static DazzleShallowGrave instance;
 
     private final String[] abilityBehavior;
-    private final double[] abilityCastPoint;
+    private final double abilityCastPoint;
     private final int[] abilityCastRange;
     private final int[] abilityCooldown;
     private final int[] abilityDuration;
-    private final int[] abilityManaCost;
+    private final int abilityManaCost;
     private final String abilityUnitTargetTeam;
     private final String abilityUnitTargetType;
     private final int fightRecapLevel;
@@ -25,11 +25,11 @@ public final class DazzleShallowGrave extends Ability {
 
     private DazzleShallowGrave() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
+        abilityCastPoint = .35;
         abilityCastRange = new int[]{550,700,850,1000};
         abilityCooldown = new int[]{60,45,30,15};
         abilityDuration = new int[]{5,5,5,5};
-        abilityManaCost = new int[]{140,130,120,110};
+        abilityManaCost = 150;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         fightRecapLevel = 1;
@@ -53,7 +53,7 @@ public final class DazzleShallowGrave extends Ability {
         return abilityBehavior;
     }
 
-    public double[] getAbilityCastPoint() {
+    public double getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -69,7 +69,7 @@ public final class DazzleShallowGrave extends Ability {
         return abilityDuration;
     }
 
-    public int[] getAbilityManaCost() {
+    public int getAbilityManaCost() {
         return abilityManaCost;
     }
 

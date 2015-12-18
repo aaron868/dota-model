@@ -21,6 +21,7 @@ public final class LegionCommanderDuel extends Ability {
     private final String key;
     private final String spellImmunityType;
     private final double[] duration;
+    private final double[] duration_scepter;
     private final String localizedName;
     private final String owningHeroShortKey;
     private final int[] reward_damage;
@@ -41,6 +42,7 @@ public final class LegionCommanderDuel extends Ability {
         key = "legion_commander_duel";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         duration = new double[]{4.0,4.75,5.5};
+        duration_scepter = new double[]{4.75,5.5,6.25};
         localizedName = "Duel";
         owningHeroShortKey = "legion_commander";
         reward_damage = new int[]{10,14,18};
@@ -111,6 +113,10 @@ public final class LegionCommanderDuel extends Ability {
 
     public double[] getDuration() {
         return duration;
+    }
+
+    public double[] getDurationScepter() {
+        return duration_scepter;
     }
 
     public String getLocalizedName() {

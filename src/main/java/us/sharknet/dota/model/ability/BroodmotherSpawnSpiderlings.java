@@ -43,7 +43,7 @@ public final class BroodmotherSpawnSpiderlings extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         buff_duration = new double[]{2.0,2.0,2.0,2.0};
         count = new int[]{1,2,3,4};
-        damage = new int[]{75,150,225,300};
+        damage = new int[]{70,140,210,280};
         localizedName = "Spawn Spiderlings";
         owningHeroShortKey = "broodmother";
         projectile_speed = 1200;

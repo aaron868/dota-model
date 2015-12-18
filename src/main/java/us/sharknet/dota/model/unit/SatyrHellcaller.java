@@ -59,7 +59,7 @@ public final class SatyrHellcaller extends NpcUnit {
         bountyGoldMax = 91;
         bountyGoldMin = 77;
         bountyXP = 119;
-        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
+        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 210;
         isNeutralUnitType = 1;

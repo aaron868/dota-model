@@ -23,7 +23,7 @@ public final class TuskSnowball extends Ability {
     private final int[] snowball_damage;
     private final int[] snowball_damage_bonus;
     private final int snowball_duration;
-    private final int snowball_grab_radius_tooltip;
+    private final int snowball_grab_radius;
     private final int snowball_grow_rate;
     private final int snowball_radius;
     private final int snowball_speed;
@@ -49,7 +49,7 @@ public final class TuskSnowball extends Ability {
         snowball_damage = new int[]{80,120,160,200};
         snowball_damage_bonus = new int[]{20,30,40,50};
         snowball_duration = 3;
-        snowball_grab_radius_tooltip = 400;
+        snowball_grab_radius = 350;
         snowball_grow_rate = 40;
         snowball_radius = 200;
         snowball_speed = 675;
@@ -133,8 +133,8 @@ public final class TuskSnowball extends Ability {
         return snowball_duration;
     }
 
-    public int getSnowballGrabRadiusTooltip() {
-        return snowball_grab_radius_tooltip;
+    public int getSnowballGrabRadius() {
+        return snowball_grab_radius;
     }
 
     public int getSnowballGrowRate() {

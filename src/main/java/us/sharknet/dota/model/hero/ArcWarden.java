@@ -80,9 +80,9 @@ public final class ArcWarden extends Hero {
         attributeStrengthGain = 1.9;
         banSound = "arc_warden_arcwar_anger_10";
         boundsHullName = "DOTA_HULL_SIZE_HERO";
-        cMEnabled = 1;
+        cMEnabled = 0;
         enabled = 1;
-        healthBarOffset = 140;
+        healthBarOffset = 160;
         heroGlowColor = new int[]{120,64,148};
         heroID = 113;
         heroSelectSoundEffect = "Hero_ArcWarden.Pick";
@@ -101,12 +101,12 @@ public final class ArcWarden extends Hero {
         role = new String[]{"Carry","Escape","Nuker"};
         rolelevels = new int[]{3,3,1};
         soundSet = "Hero_ArcWarden";
-        team = "Good";
+        team = "Bad";
         voiceFile = "soundevents/voscripts/game_sounds_vo_arc_warden.vsndevts";
-        active = false;
+        active = true;
         localizedName = "Arc Warden";
         shortKey = "arc_warden";
-        url = "Arc Warden";
+        url = "Arc_Warden";
     }
 
     public static ArcWarden instance() {

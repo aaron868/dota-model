@@ -28,7 +28,7 @@ public final class LifeStealerRage extends Ability {
         abilityManaCost = new int[]{75,75,75,75};
         iD = 5249;
         key = "life_stealer_rage";
-        attack_speed_bonus = new int[]{30,45,60,80};
+        attack_speed_bonus = new int[]{50,60,70,80};
         duration = new double[]{3.0,4.0,5.0,6.0};
         localizedName = "Rage";
         owningHeroShortKey = "life_stealer";

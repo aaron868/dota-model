@@ -71,7 +71,7 @@ public final class DarkSeer extends Hero {
         attackRate = 1.7;
         attributeAgilityGain = 1.2;
         attributeBaseAgility = 12;
-        attributeBaseIntelligence = 27;
+        attributeBaseIntelligence = 25;
         attributeBaseStrength = 22;
         attributeIntelligenceGain = 2.7;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";

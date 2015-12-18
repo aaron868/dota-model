@@ -40,7 +40,7 @@ public final class WeaverTheSwarm extends Ability {
         key = "weaver_the_swarm";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         armor_reduction = new int[]{1,1,1,1};
-        attack_rate = new double[]{1.4,1.25,1.1,0.95};
+        attack_rate = new double[]{1.25,1.1,0.95,0.8};
         count = new int[]{12,12,12,12};
         damage = 20;
         destroy_attacks = new int[]{8,8,8,8};

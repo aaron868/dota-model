@@ -54,7 +54,6 @@ public final class AncientApparition extends Hero {
     private final int[] rolelevels;
     private final String soundSet;
     private final String team;
-    private final int visionNighttimeRange;
     private final String voiceFile;
     private final boolean active;
     private final String localizedName;
@@ -109,7 +108,6 @@ public final class AncientApparition extends Hero {
         rolelevels = new int[]{2,1,1};
         soundSet = "Hero_ancient_apparition";
         team = "Bad";
-        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_ancient_apparition.vsndevts";
         active = true;
         localizedName = "Ancient Apparition";
@@ -310,10 +308,6 @@ public final class AncientApparition extends Hero {
 
     public String getTeam() {
         return team;
-    }
-
-    public int getVisionNighttimeRange() {
-        return visionNighttimeRange;
     }
 
     public String getVoiceFile() {

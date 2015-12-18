@@ -47,11 +47,11 @@ public final class UnitTombstone4 extends NpcUnit {
         attackCapabilities = "DOTA_UNIT_CAP_NO_ATTACK";
         baseClass = "npc_dota_unit_undying_tombstone";
         boundsHullName = "DOTA_HULL_SIZE_REGULAR";
-        bountyGoldMax = 150;
-        bountyGoldMin = 150;
-        bountyXP = 44;
+        bountyGoldMax = 200;
+        bountyGoldMin = 200;
+        bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
-        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
+        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 250;
         isAncient = 1;
         isOther = 1;

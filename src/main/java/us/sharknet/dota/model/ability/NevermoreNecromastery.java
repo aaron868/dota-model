@@ -13,6 +13,7 @@ public final class NevermoreNecromastery extends Ability {
     private final String localizedName;
     private final int necromastery_damage_per_soul;
     private final int[] necromastery_max_souls;
+    private final int[] necromastery_max_souls_scepter;
     private final double necromastery_soul_release;
     private final int necromastery_souls_hero_bonus;
     private final String owningHeroShortKey;
@@ -25,6 +26,7 @@ public final class NevermoreNecromastery extends Ability {
         localizedName = "Necromastery";
         necromastery_damage_per_soul = 2;
         necromastery_max_souls = new int[]{15,22,29,36};
+        necromastery_max_souls_scepter = new int[]{15,22,29,36};
         necromastery_soul_release = .5;
         necromastery_souls_hero_bonus = 11;
         owningHeroShortKey = "nevermore";
@@ -63,6 +65,10 @@ public final class NevermoreNecromastery extends Ability {
 
     public int[] getNecromasteryMaxSouls() {
         return necromastery_max_souls;
+    }
+
+    public int[] getNecromasteryMaxSoulsScepter() {
+        return necromastery_max_souls_scepter;
     }
 
     public double getNecromasterySoulRelease() {

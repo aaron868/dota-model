@@ -22,7 +22,7 @@ public final class ElderTitanEarthSplitter extends Ability {
     private final int crack_distance;
     private final double crack_time;
     private final int crack_width;
-    private final int damage_pct;
+    private final int[] damage_pct;
     private final String localizedName;
     private final String owningHeroShortKey;
     private final double[] slow_duration;
@@ -40,7 +40,7 @@ public final class ElderTitanEarthSplitter extends Ability {
         abilityCastPoint = new double[]{0.4,0.4,0.4};
         abilityCastRange = 2400;
         abilityCooldown = new double[]{100.0,100.0,100.0};
-        abilityManaCost = new int[]{175,175,175};
+        abilityManaCost = new int[]{125,175,225};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
@@ -52,7 +52,7 @@ public final class ElderTitanEarthSplitter extends Ability {
         crack_distance = 2400;
         crack_time = 3.14;
         crack_width = 300;
-        damage_pct = 35;
+        damage_pct = new int[]{30,40,50};
         localizedName = "Earth Splitter";
         owningHeroShortKey = "elder_titan";
         slow_duration = new double[]{3.0,4.0,5.0};
@@ -137,7 +137,7 @@ public final class ElderTitanEarthSplitter extends Ability {
         return crack_width;
     }
 
-    public int getDamagePct() {
+    public int[] getDamagePct() {
         return damage_pct;
     }
 

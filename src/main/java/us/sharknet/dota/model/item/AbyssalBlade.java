@@ -55,8 +55,8 @@ public final class AbyssalBlade extends Item {
         bash_chance_ranged = 10;
         bash_cooldown = 2.3;
         bash_duration = 1.4;
-        bonus_chance_damage = 60;
-        bonus_damage = 85;
+        bonus_chance_damage = 120;
+        bonus_damage = 70;
         bonus_strength = 10;
         localizedName = "Abyssal Blade";
         stun_duration = 2;

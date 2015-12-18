@@ -100,7 +100,7 @@ public final class OgreMagi extends Hero {
         role = new String[]{"Support","Nuker","Disabler","Durable","Initiator"};
         rolelevels = new int[]{2,2,2,1,1};
         soundSet = "Hero_OgreMagi";
-        statusHealthRegen = 2.5;
+        statusHealthRegen = 3.5;
         team = "Good";
         voiceFile = "soundevents/voscripts/game_sounds_vo_ogre_magi.vsndevts";
         active = true;

@@ -30,7 +30,7 @@ public final class InvokerInvoke extends Ability {
         key = "invoker_invoke";
         levelsBetweenUpgrades = 5;
         maxLevel = 4;
-        requiredLevel = 2;
+        requiredLevel = 1;
         cooldown_scepter = new double[]{16.0,8.0,4.0,2.0};
         localizedName = "Invoke";
         mana_cost_scepter = 0;

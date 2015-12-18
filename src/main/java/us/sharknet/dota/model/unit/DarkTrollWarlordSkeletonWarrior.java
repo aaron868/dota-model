@@ -46,7 +46,7 @@ public final class DarkTrollWarlordSkeletonWarrior extends NpcUnit {
 
     private DarkTrollWarlordSkeletonWarrior() {
         armorPhysical = 1;
-        attackAcquisitionRange = 500;
+        attackAcquisitionRange = 300;
         attackAnimationPoint = .56;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
         attackDamageMax = 25;

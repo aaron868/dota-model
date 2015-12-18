@@ -27,7 +27,7 @@ public final class BloodseekerBloodBath extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = .4;
         abilityCastRange = 1500;
-        abilityCooldown = new int[]{29,26,23,20};
+        abilityCooldown = new int[]{30,25,20,15};
         abilityManaCost = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
         iD = 5016;

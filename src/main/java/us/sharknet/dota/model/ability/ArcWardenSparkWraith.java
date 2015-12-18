@@ -24,6 +24,8 @@ public final class ArcWardenSparkWraith extends Ability {
     private final int[] spark_damage;
     private final double think_interval;
     private final int wraith_speed;
+    private final double wraith_vision_duration;
+    private final int wraith_vision_radius;
 
     private ArcWardenSparkWraith() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
@@ -44,6 +46,8 @@ public final class ArcWardenSparkWraith extends Ability {
         spark_damage = new int[]{150,200,250,300};
         think_interval = .2;
         wraith_speed = 400;
+        wraith_vision_duration = 3.34;
+        wraith_vision_radius = 300;
     }
 
     public static ArcWardenSparkWraith instance() {
@@ -123,6 +127,14 @@ public final class ArcWardenSparkWraith extends Ability {
 
     public int getWraithSpeed() {
         return wraith_speed;
+    }
+
+    public double getWraithVisionDuration() {
+        return wraith_vision_duration;
+    }
+
+    public int getWraithVisionRadius() {
+        return wraith_vision_radius;
     }
 
 

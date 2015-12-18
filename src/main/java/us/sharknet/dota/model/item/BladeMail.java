@@ -24,7 +24,7 @@ public final class BladeMail extends Item {
 
     private BladeMail() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
-        abilityCooldown = 15;
+        abilityCooldown = 13;
         abilityManaCost = 25;
         iD = 127;
         itemAliases = "blade mail";

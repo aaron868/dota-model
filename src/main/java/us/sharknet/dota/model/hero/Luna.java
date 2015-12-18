@@ -94,7 +94,7 @@ public final class Luna extends Hero {
         model = "models/heroes/luna/luna.vmdl";
         modelScale = .74;
         movementSpeed = 330;
-        movementTurnRate = .4;
+        movementTurnRate = .6;
         noCombine = 0;
         pickSound = "luna_luna_spawn_01";
         portrait = "vgui/hud/heroportraits/portrait_luna";

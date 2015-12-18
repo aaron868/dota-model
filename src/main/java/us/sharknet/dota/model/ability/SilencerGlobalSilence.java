@@ -17,7 +17,6 @@ public final class SilencerGlobalSilence extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
-    private final double[] duration_scepter;
     private final String localizedName;
     private final String owningHeroShortKey;
     private final double[] tooltip_duration;
@@ -34,7 +33,6 @@ public final class SilencerGlobalSilence extends Ability {
         iD = 5380;
         key = "silencer_global_silence";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        duration_scepter = new double[]{4.0,5.0,6.0};
         localizedName = "Global Silence";
         owningHeroShortKey = "silencer";
         tooltip_duration = new double[]{4.0,5.0,6.0};
@@ -89,10 +87,6 @@ public final class SilencerGlobalSilence extends Ability {
 
     public String getSpellImmunityType() {
         return spellImmunityType;
-    }
-
-    public double[] getDurationScepter() {
-        return duration_scepter;
     }
 
     public String getLocalizedName() {

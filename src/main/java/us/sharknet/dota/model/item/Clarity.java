@@ -43,9 +43,9 @@ public final class Clarity extends Item {
         key = "item_clarity";
         model = "models/props_gameplay/clarity.vmdl";
         sideShop = 0;
-        buff_duration = 45;
+        buff_duration = 50;
         localizedName = "Clarity";
-        total_mana = 170;
+        total_mana = 190;
     }
 
     public static Clarity instance() {

@@ -65,7 +65,6 @@ public final class WinterWyvern extends Hero {
     private final String teamName;
     private final String unitRelationshipClass;
     private final int visionDaytimeRange;
-    private final int visionNighttimeRange;
     private final String voiceFile;
     private final boolean active;
     private final String localizedName;
@@ -99,7 +98,7 @@ public final class WinterWyvern extends Hero {
         baseClass = "npc_dota_hero_winter_wyvern";
         botImplemented = 0;
         boundsHullName = "DOTA_HULL_SIZE_HERO";
-        cMEnabled = 1;
+        cMEnabled = 0;
         cMTournamentIgnore = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_HERO";
@@ -132,7 +131,6 @@ public final class WinterWyvern extends Hero {
         teamName = "DOTA_TEAM_BADGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_HERO";
         visionDaytimeRange = 1800;
-        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_winter_wyvern.vsndevts";
         active = true;
         localizedName = "Winter Wyvern";
@@ -378,10 +376,6 @@ public final class WinterWyvern extends Hero {
 
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public int getVisionNighttimeRange() {
-        return visionNighttimeRange;
     }
 
     public String getVoiceFile() {

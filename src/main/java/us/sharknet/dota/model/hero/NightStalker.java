@@ -39,6 +39,7 @@ public final class NightStalker extends Hero {
     private final String lastHitChallengeRival;
     private final double loadoutScale;
     private final String model;
+    private final String model1;
     private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
@@ -91,6 +92,7 @@ public final class NightStalker extends Hero {
         lastHitChallengeRival = "npc_dota_hero_juggernaut";
         loadoutScale = .84;
         model = "models/heroes/nightstalker/nightstalker.vmdl";
+        model1 = "models/heroes/nightstalker/nightstalker_night.vmdl";
         modelScale = .74;
         movementSpeed = 295;
         movementTurnRate = .5;
@@ -244,6 +246,10 @@ public final class NightStalker extends Hero {
 
     public String getModel() {
         return model;
+    }
+
+    public String getModel1() {
+        return model1;
     }
 
     public double getModelScale() {

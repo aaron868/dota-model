@@ -21,7 +21,7 @@ public final class MagnataurSkewer extends Ability {
     private final int[] skewer_damage;
     private final int skewer_radius;
     private final int skewer_speed;
-    private final double slow_duration;
+    private final double[] slow_duration;
     private final int[] slow_pct;
     private final int tree_radius;
 
@@ -37,12 +37,12 @@ public final class MagnataurSkewer extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Skewer";
         owningHeroShortKey = "magnataur";
-        range = new int[]{750,900,1050,1200};
+        range = new int[]{900,1000,1100,1200};
         skewer_damage = new int[]{70,140,210,280};
         skewer_radius = 125;
         skewer_speed = 950;
-        slow_duration = 2.5;
-        slow_pct = new int[]{40,40,40,40};
+        slow_duration = new double[]{2.5,2.75,3.0,3.25};
+        slow_pct = new int[]{25,30,35,40};
         tree_radius = 200;
     }
 
@@ -113,7 +113,7 @@ public final class MagnataurSkewer extends Ability {
         return skewer_speed;
     }
 
-    public double getSlowDuration() {
+    public double[] getSlowDuration() {
         return slow_duration;
     }
 

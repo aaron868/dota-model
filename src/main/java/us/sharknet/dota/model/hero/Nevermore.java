@@ -76,7 +76,7 @@ public final class Nevermore extends Hero {
         ability7 = AttributeBonus.instance();
         abilityDraftDisabled = 1;
         abilityLayout = 6;
-        armorPhysical = -1;
+        armorPhysical = -2;
         attackAcquisitionRange = 800;
         attackAnimationPoint = .5;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";

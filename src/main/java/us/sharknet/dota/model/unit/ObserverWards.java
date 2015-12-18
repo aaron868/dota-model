@@ -38,7 +38,7 @@ public final class ObserverWards extends NpcUnit {
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
         bountyGoldMax = 50;
         bountyGoldMin = 50;
-        bountyXP = 50;
+        bountyXP = 100;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         healthBarOffset = 140;

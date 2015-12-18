@@ -70,7 +70,7 @@ public abstract class Hero {
         projectileModel = "particles/base_attacks/ranged_hero.vpcf";
         projectileSpeed = 900;
         ringRadius = 70;
-        statusHealth = 150;
+        statusHealth = 180;
         statusHealthRegen = .25;
         statusManaRegen = .1;
         teamName = "DOTA_TEAM_GOODGUYS";

@@ -9,7 +9,7 @@ public final class DeathProphet extends Hero {
 
     private final DeathProphetCarrionSwarm ability1;
     private final DeathProphetSilence ability2;
-    private final DeathProphetWitchcraft ability3;
+    private final DeathProphetSpiritSiphon ability3;
     private final DeathProphetExorcism ability4;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
@@ -64,7 +64,7 @@ public final class DeathProphet extends Hero {
     private DeathProphet() {
         ability1 = DeathProphetCarrionSwarm.instance();
         ability2 = DeathProphetSilence.instance();
-        ability3 = DeathProphetWitchcraft.instance();
+        ability3 = DeathProphetSpiritSiphon.instance();
         ability4 = DeathProphetExorcism.instance();
         armorPhysical = 1;
         attackAcquisitionRange = 800;
@@ -84,7 +84,7 @@ public final class DeathProphet extends Hero {
         banSound = "death_prophet_dpro_anger_01";
         botImplemented = 1;
         boundsHullName = "DOTA_HULL_SIZE_HERO";
-        cMEnabled = 1;
+        cMEnabled = 0;
         enabled = 1;
         healthBarOffset = 200;
         heroGlowColor = new int[]{15,241,28};
@@ -97,7 +97,7 @@ public final class DeathProphet extends Hero {
         lastHitChallengeRival = "npc_dota_hero_dazzle";
         model = "models/heroes/death_prophet/death_prophet.vmdl";
         modelScale = .93;
-        movementSpeed = 280;
+        movementSpeed = 310;
         movementTurnRate = .5;
         nameAliases = "dp";
         pickSound = "death_prophet_dpro_spawn_01";
@@ -132,7 +132,7 @@ public final class DeathProphet extends Hero {
         return ability2;
     }
 
-    public DeathProphetWitchcraft getAbility3() {
+    public DeathProphetSpiritSiphon getAbility3() {
         return ability3;
     }
 

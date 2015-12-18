@@ -32,7 +32,7 @@ public final class SvenGodsStrength extends Ability {
         iD = 5097;
         key = "sven_gods_strength";
         gods_strength_damage = new int[]{100,150,200};
-        gods_strength_damage_scepter = new int[]{50,75,100};
+        gods_strength_damage_scepter = new int[]{75,100,125};
         localizedName = "Gods Strength";
         owningHeroShortKey = "sven";
         scepter_aoe = 900;

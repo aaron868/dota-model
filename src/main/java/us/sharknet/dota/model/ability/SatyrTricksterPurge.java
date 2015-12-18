@@ -27,7 +27,7 @@ public final class SatyrTricksterPurge extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .2;
         abilityCastRange = 350;
-        abilityCooldown = 5;
+        abilityCooldown = 3;
         abilityManaCost = 120;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";

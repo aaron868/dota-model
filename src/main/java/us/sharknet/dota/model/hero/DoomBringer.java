@@ -9,7 +9,7 @@ public final class DoomBringer extends Hero {
 
     private final DoomBringerDevour ability1;
     private final DoomBringerScorchedEarth ability2;
-    private final DoomBringerLvlDeath ability3;
+    private final DoomBringerInfernalBlade ability3;
     private final DoomBringerEmpty1 ability4;
     private final DoomBringerEmpty2 ability5;
     private final DoomBringerDoom ability6;
@@ -63,7 +63,7 @@ public final class DoomBringer extends Hero {
     private DoomBringer() {
         ability1 = DoomBringerDevour.instance();
         ability2 = DoomBringerScorchedEarth.instance();
-        ability3 = DoomBringerLvlDeath.instance();
+        ability3 = DoomBringerInfernalBlade.instance();
         ability4 = DoomBringerEmpty1.instance();
         ability5 = DoomBringerEmpty2.instance();
         ability6 = DoomBringerDoom.instance();
@@ -77,7 +77,7 @@ public final class DoomBringer extends Hero {
         attackDamageMax = 43;
         attackDamageMin = 27;
         attackRange = 150;
-        attackRate = 1.7;
+        attackRate = 2;
         attributeAgilityGain = .9;
         attributeBaseAgility = 11;
         attributeBaseIntelligence = 13;
@@ -86,7 +86,7 @@ public final class DoomBringer extends Hero {
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 3.2;
         banSound = "doom_bringer_doom_anger_02";
-        cMEnabled = 1;
+        cMEnabled = 0;
         enabled = 1;
         healthBarOffset = 240;
         heroGlowColor = new int[]{107,74,53};
@@ -130,7 +130,7 @@ public final class DoomBringer extends Hero {
         return ability2;
     }
 
-    public DoomBringerLvlDeath getAbility3() {
+    public DoomBringerInfernalBlade getAbility3() {
         return ability3;
     }
 

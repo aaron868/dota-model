@@ -50,7 +50,6 @@ public final class Leshrac extends Hero {
     private final int[] rolelevels;
     private final String soundSet;
     private final String team;
-    private final int visionNighttimeRange;
     private final String voiceFile;
     private final boolean active;
     private final String localizedName;
@@ -101,7 +100,6 @@ public final class Leshrac extends Hero {
         rolelevels = new int[]{1,1,3,3,1};
         soundSet = "Hero_Leshrac";
         team = "Bad";
-        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_leshrac.vsndevts";
         active = true;
         localizedName = "Leshrac";
@@ -286,10 +284,6 @@ public final class Leshrac extends Hero {
 
     public String getTeam() {
         return team;
-    }
-
-    public int getVisionNighttimeRange() {
-        return visionNighttimeRange;
     }
 
     public String getVoiceFile() {

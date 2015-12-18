@@ -60,7 +60,7 @@ public final class GraniteGolem extends NpcUnit {
         bountyGoldMax = 121;
         bountyGoldMin = 107;
         bountyXP = 155;
-        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
+        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 220;
         isAncient = 1;

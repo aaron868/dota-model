@@ -12,9 +12,11 @@ public final class ObsidianDestroyerEssenceAura extends Ability {
     private final int iD;
     private final String key;
     private final int[] bonus_mana;
+    private final int intelligence_bonus;
+    private final int intelligence_duration;
     private final String localizedName;
     private final String owningHeroShortKey;
-    private final int[] radius;
+    private final int radius;
     private final double[] restore_amount;
     private final int restore_chance;
 
@@ -25,9 +27,11 @@ public final class ObsidianDestroyerEssenceAura extends Ability {
         iD = 5393;
         key = "obsidian_destroyer_essence_aura";
         bonus_mana = new int[]{75,150,225,300};
+        intelligence_bonus = 4;
+        intelligence_duration = 30;
         localizedName = "Essence Aura";
         owningHeroShortKey = "obsidian_destroyer";
-        radius = new int[]{1000,1000,1000,1000};
+        radius = 900;
         restore_amount = new double[]{10.0,15.0,20.0,25.0};
         restore_chance = 40;
     }
@@ -63,6 +67,14 @@ public final class ObsidianDestroyerEssenceAura extends Ability {
         return bonus_mana;
     }
 
+    public int getIntelligenceBonus() {
+        return intelligence_bonus;
+    }
+
+    public int getIntelligenceDuration() {
+        return intelligence_duration;
+    }
+
     public String getLocalizedName() {
         return localizedName;
     }
@@ -71,7 +83,7 @@ public final class ObsidianDestroyerEssenceAura extends Ability {
         return owningHeroShortKey;
     }
 
-    public int[] getRadius() {
+    public int getRadius() {
         return radius;
     }
 

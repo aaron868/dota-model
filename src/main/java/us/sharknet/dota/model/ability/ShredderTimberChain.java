@@ -27,7 +27,7 @@ public final class ShredderTimberChain extends Ability {
     private ShredderTimberChain() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = new int[]{800,1000,1200,1400};
+        abilityCastRange = new int[]{850,1050,1250,1450};
         abilityCooldown = new double[]{4.0,4.0,4.0,4.0};
         abilityManaCost = new int[]{60,70,80,90};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";

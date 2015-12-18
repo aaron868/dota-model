@@ -42,7 +42,7 @@ public final class Roquelaire extends NpcUnit {
         bountyGoldMin = 0;
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
-        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_WEAK";
+        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         healthBarOffset = 165;
         isSummoned = 0;
         key = "npc_dota_roquelaire";

@@ -19,21 +19,23 @@ public final class OracleFalsePromise extends Ability {
     private final double[] duration;
     private final String localizedName;
     private final String owningHeroShortKey;
+    private final int radius;
 
     private OracleFalsePromise() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = .3;
         abilityCastRange = 1000;
-        abilityCooldown = new int[]{80,60,40};
-        abilityManaCost = 200;
+        abilityCooldown = new int[]{90,60,30};
+        abilityManaCost = 100;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         iD = 5640;
         key = "oracle_false_promise";
-        duration = new double[]{6.0,7.0,8.0};
+        duration = new double[]{7.0,8.0,9.0};
         localizedName = "False Promise";
         owningHeroShortKey = "oracle";
+        radius = 4;
     }
 
     public static OracleFalsePromise instance() {
@@ -93,6 +95,10 @@ public final class OracleFalsePromise extends Ability {
 
     public String getOwningHeroShortKey() {
         return owningHeroShortKey;
+    }
+
+    public int getRadius() {
+        return radius;
     }
 
 

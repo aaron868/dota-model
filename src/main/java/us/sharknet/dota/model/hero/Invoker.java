@@ -16,6 +16,7 @@ public final class Invoker extends Hero {
     private final InvokerForgeSpirit ability14;
     private final InvokerIceWall ability15;
     private final InvokerDeafeningBlast ability16;
+    private final InvokerAttributeBonus ability17;
     private final InvokerWex ability2;
     private final InvokerExort ability3;
     private final InvokerEmpty1 ability4;
@@ -81,6 +82,7 @@ public final class Invoker extends Hero {
         ability14 = InvokerForgeSpirit.instance();
         ability15 = InvokerIceWall.instance();
         ability16 = InvokerDeafeningBlast.instance();
+        ability17 = InvokerAttributeBonus.instance();
         ability2 = InvokerWex.instance();
         ability3 = InvokerExort.instance();
         ability4 = InvokerEmpty1.instance();
@@ -178,6 +180,10 @@ public final class Invoker extends Hero {
 
     public InvokerDeafeningBlast getAbility16() {
         return ability16;
+    }
+
+    public InvokerAttributeBonus getAbility17() {
+        return ability17;
     }
 
     public InvokerWex getAbility2() {

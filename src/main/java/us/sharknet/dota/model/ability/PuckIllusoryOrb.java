@@ -9,7 +9,7 @@ public final class PuckIllusoryOrb extends Ability {
     private final String abilityBehavior;
     private final double[] abilityCastPoint;
     private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
@@ -29,9 +29,9 @@ public final class PuckIllusoryOrb extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
         abilityCastRange = 3000;
-        abilityCooldown = 11;
+        abilityCooldown = new int[]{14,13,12,11};
         abilityDamage = new int[]{70,140,210,280};
-        abilityManaCost = new int[]{150,150,150,150};
+        abilityManaCost = new int[]{80,100,120,140};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
         iD = 5069;
@@ -65,7 +65,7 @@ public final class PuckIllusoryOrb extends Ability {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 

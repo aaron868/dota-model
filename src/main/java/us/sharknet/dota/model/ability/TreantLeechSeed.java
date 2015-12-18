@@ -32,7 +32,7 @@ public final class TreantLeechSeed extends Ability {
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
         abilityCastRange = 350;
         abilityCooldown = new double[]{16.0,14.0,12.0,10.0};
-        abilityManaCost = new int[]{100,110,120,130};
+        abilityManaCost = new int[]{80,95,110,125};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};

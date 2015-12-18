@@ -77,7 +77,7 @@ public final class Terrorblade extends Hero {
         attributeStrengthGain = 1.4;
         banSound = "terrorblade_terr_anger_03";
         boundsHullName = "DOTA_HULL_SIZE_HERO";
-        cMEnabled = 0;
+        cMEnabled = 1;
         enabled = 1;
         healthBarOffset = 280;
         heroID = 109;

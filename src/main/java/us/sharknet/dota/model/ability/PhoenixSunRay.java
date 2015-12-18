@@ -56,7 +56,7 @@ public final class PhoenixSunRay extends Ability {
         radius = 130;
         tick_interval = .2;
         tooltip_duration = 6;
-        turn_rate = 2;
+        turn_rate = 25;
         turn_rate_initial = 25;
     }
 

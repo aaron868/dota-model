@@ -40,7 +40,7 @@ public final class EtherealBlade extends Item {
         abilityCastPoint = 0;
         abilityCastRange = 800;
         abilityCooldown = 2;
-        abilityManaCost = 150;
+        abilityManaCost = 100;
         abilitySharedCooldown = "ethereal";
         abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY","DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};

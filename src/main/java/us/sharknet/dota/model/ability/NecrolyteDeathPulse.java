@@ -9,7 +9,7 @@ public final class NecrolyteDeathPulse extends Ability {
     private final String abilityBehavior;
     private final double[] abilityCastPoint;
     private final int abilityCastRange;
-    private final double[] abilityCooldown;
+    private final int[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
@@ -27,7 +27,7 @@ public final class NecrolyteDeathPulse extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
         abilityCastRange = 0;
-        abilityCooldown = new double[]{8.0,7.0,6.0,5.0};
+        abilityCooldown = new int[]{8,7,6,5};
         abilityDamage = new int[]{125,175,225,275};
         abilityManaCost = new int[]{125,145,165,185};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -61,7 +61,7 @@ public final class NecrolyteDeathPulse extends Ability {
         return abilityCastRange;
     }
 
-    public double[] getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 

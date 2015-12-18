@@ -21,7 +21,7 @@ public final class ForestTrollHighPriestManaAura extends Ability {
         key = "forest_troll_high_priest_mana_aura";
         maxLevel = 1;
         localizedName = "Troll High Priest Mana Aura";
-        mana_regen = 2;
+        mana_regen = 3;
         owningHeroShortKey = "forest_troll_high_priest";
         radius = 900;
     }

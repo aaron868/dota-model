@@ -16,7 +16,7 @@ public final class SkeletonKingVampiricAura extends Ability {
     private final int vampiric_aura_radius;
 
     private SkeletonKingVampiricAura() {
-        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_AURA"};
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_AURA"};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         iD = 5087;
         key = "skeleton_king_vampiric_aura";

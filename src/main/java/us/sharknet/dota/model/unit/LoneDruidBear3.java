@@ -9,6 +9,7 @@ public final class LoneDruidBear3 extends NpcUnit {
 
     private final LoneDruidSpiritBearReturn ability1;
     private final LoneDruidSpiritBearEntangle ability2;
+    private final LoneDruidSavageRoarBear ability3;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -50,12 +51,13 @@ public final class LoneDruidBear3 extends NpcUnit {
     private LoneDruidBear3() {
         ability1 = LoneDruidSpiritBearReturn.instance();
         ability2 = LoneDruidSpiritBearEntangle.instance();
+        ability3 = LoneDruidSavageRoarBear.instance();
         armorPhysical = 5;
         attackAcquisitionRange = 500;
         attackAnimationPoint = .43;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
-        attackDamageMax = 38;
-        attackDamageMin = 28;
+        attackDamageMax = 55;
+        attackDamageMin = 55;
         attackRange = 128;
         attackRate = 1.55;
         baseClass = "npc_dota_lone_druid_bear";
@@ -72,7 +74,7 @@ public final class LoneDruidBear3 extends NpcUnit {
         model = "models/heroes/lone_druid/spirit_bear.vmdl";
         modelScale = .78;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
-        movementSpeed = 330;
+        movementSpeed = 340;
         movementTurnRate = .6;
         projectileSpeed = 0;
         ringRadius = 70;
@@ -102,6 +104,10 @@ public final class LoneDruidBear3 extends NpcUnit {
 
     public LoneDruidSpiritBearEntangle getAbility2() {
         return ability2;
+    }
+
+    public LoneDruidSavageRoarBear getAbility3() {
+        return ability3;
     }
 
     public int getArmorPhysical() {

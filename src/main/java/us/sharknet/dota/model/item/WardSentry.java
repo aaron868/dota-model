@@ -34,7 +34,7 @@ public final class WardSentry extends Item {
     private final int vision_range;
 
     private WardSentry() {
-        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET"};
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET"};
         abilityCastPoint = 0;
         abilityCastRange = 500;
         abilityCooldown = 1;

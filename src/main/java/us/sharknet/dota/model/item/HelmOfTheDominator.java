@@ -28,6 +28,7 @@ public final class HelmOfTheDominator extends Item {
     private final int health_min;
     private final int lifesteal_percent;
     private final String localizedName;
+    private final int speed_base;
 
     private HelmOfTheDominator() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
@@ -52,6 +53,7 @@ public final class HelmOfTheDominator extends Item {
         health_min = 1400;
         lifesteal_percent = 15;
         localizedName = "Helm Of The Dominator";
+        speed_base = 350;
     }
 
     public static HelmOfTheDominator instance() {
@@ -147,6 +149,10 @@ public final class HelmOfTheDominator extends Item {
 
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getSpeedBase() {
+        return speed_base;
     }
 
 

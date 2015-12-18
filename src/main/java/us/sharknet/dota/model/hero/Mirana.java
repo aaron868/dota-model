@@ -50,7 +50,6 @@ public final class Mirana extends Hero {
     private final int[] rolelevels;
     private final String soundSet;
     private final String team;
-    private final int visionNighttimeRange;
     private final String voiceFile;
     private final boolean active;
     private final String localizedName;
@@ -68,7 +67,7 @@ public final class Mirana extends Hero {
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 29;
         attackDamageMin = 18;
-        attackRange = 600;
+        attackRange = 630;
         attackRate = 1.7;
         attributeAgilityGain = 3.3;
         attributeBaseAgility = 20;
@@ -101,7 +100,6 @@ public final class Mirana extends Hero {
         rolelevels = new int[]{1,1,2,1,1};
         soundSet = "Hero_Mirana";
         team = "Good";
-        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_mirana.vsndevts";
         active = true;
         localizedName = "Mirana";
@@ -286,10 +284,6 @@ public final class Mirana extends Hero {
 
     public String getTeam() {
         return team;
-    }
-
-    public int getVisionNighttimeRange() {
-        return visionNighttimeRange;
     }
 
     public String getVoiceFile() {

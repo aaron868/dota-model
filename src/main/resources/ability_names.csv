@@ -138,8 +138,8 @@ ID,key,localizedName,owningHeroShortKey
 5141,witch_doctor_death_ward,Death Ward,witch_doctor
 5142,riki_smoke_screen,Smoke Screen,riki
 5143,riki_blink_strike,Blink Strike,riki
-5144,riki_backstab,Backstab,riki
-5145,riki_permanent_invisibility,Permanent Invisibility,riki
+5145,riki_tricks_of_the_trade,Tricks of the Trade,riki
+5144,riki_permanent_invisibility,Permanent Invisibility,riki
 5146,enigma_malefice,Malefice,enigma
 5147,enigma_demonic_conversion,Demonic Conversion,enigma
 5148,enigma_midnight_pulse,Midnight Pulse,enigma
@@ -329,7 +329,7 @@ ID,key,localizedName,owningHeroShortKey
 5338,spectre_reality,Reality,spectre
 5339,doom_bringer_devour,Devour,doom_bringer
 5340,doom_bringer_scorched_earth,Scorched Earth,doom_bringer
-5341,doom_bringer_lvl_death,Lvl Death,doom_bringer
+5341,doom_bringer_infernal_blade,Infernal Blade,doom_bringer
 5342,doom_bringer_doom,Doom,doom_bringer
 5343,doom_bringer_empty1,Empty 1,doom_bringer
 5344,doom_bringer_empty2,Empty 2,doom_bringer
@@ -401,7 +401,7 @@ ID,key,localizedName,owningHeroShortKey
 5411,brewmaster_fire_permanent_immolation,Permanent Immolation,brewmaster_fire
 5412,lone_druid_spirit_bear,Spirit Bear,lone_druid
 5413,lone_druid_rabid,Rabid,lone_druid
-5414,lone_druid_synergy,Synergy,lone_druid
+5414,lone_druid_savage_roar,Savage Roar,lone_druid
 5415,lone_druid_true_form,True Form,lone_druid
 5416,lone_druid_true_form_druid,True Form Druid,lone_druid
 5417,lone_druid_true_form_battle_cry,True Form Battle Cry,lone_druid
@@ -617,3 +617,11 @@ ID,key,localizedName,owningHeroShortKey
 5681,black_dragon_dragonhide_aura,Dragonhide Aura,black_dragon
 5682,big_thunder_lizard_wardrums_aura,Wardrums Aura,big_thunder_lizard
 5683,arc_warden_tempest_double,Tempest Double,arc_warden
+5689,black_dragon_fireball,Fireball,black_dragon
+5685,death_prophet_spirit_siphon,Spirit Siphon,death_prophet
+5691,faceless_void_time_dilation, Time Dilation,faceless_void
+5686,ancient_golem_rockslide, Rockslide,ancient_golem
+5690,invoker_attribute_bonus,Invoker Attribute Bonus,invoker
+5687,lone_druid_savage_roar_bear, Bear Savage Roar,lone_druid_bear
+5688,mudgolem_cloak_aura,Cloak Aura,mud_golem
+5684,obsidian_destroyer_mind_over_matter,Mind Over Matter,obsidian_destroyer

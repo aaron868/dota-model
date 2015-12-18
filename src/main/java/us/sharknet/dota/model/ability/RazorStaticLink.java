@@ -19,7 +19,7 @@ public final class RazorStaticLink extends Ability {
     private final String spellImmunityType;
     private final double[] drain_duration;
     private final double[] drain_length;
-    private final int[] drain_range;
+    private final int drain_range_buffer;
     private final int[] drain_rate;
     private final String localizedName;
     private final String owningHeroShortKey;
@@ -42,7 +42,7 @@ public final class RazorStaticLink extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         drain_duration = new double[]{18.0,18.0,18.0,18.0};
         drain_length = new double[]{8.0,8.0,8.0,8.0};
-        drain_range = new int[]{700,700,700,700};
+        drain_range_buffer = 100;
         drain_rate = new int[]{7,14,21,28};
         localizedName = "Static Link";
         owningHeroShortKey = "razor";
@@ -111,8 +111,8 @@ public final class RazorStaticLink extends Ability {
         return drain_length;
     }
 
-    public int[] getDrainRange() {
-        return drain_range;
+    public int getDrainRangeBuffer() {
+        return drain_range_buffer;
     }
 
     public int[] getDrainRate() {

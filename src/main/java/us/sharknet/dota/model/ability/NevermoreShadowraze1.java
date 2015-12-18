@@ -27,7 +27,7 @@ public final class NevermoreShadowraze1 extends Ability {
         abilityCastPoint = new double[]{0.67,0.67,0.67,0.67};
         abilityCooldown = new double[]{10.0,10.0,10.0,10.0};
         abilityDamage = new int[]{100,175,250,325};
-        abilityManaCost = 75;
+        abilityManaCost = 90;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
         iD = 5059;

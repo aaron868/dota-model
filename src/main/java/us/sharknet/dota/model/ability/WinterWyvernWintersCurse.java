@@ -19,6 +19,8 @@ public final class WinterWyvernWintersCurse extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
+    private final int bonus_attack_speed;
+    private final double damage_amplification;
     private final int damage_reduction;
     private final double[] duration;
     private final String localizedName;
@@ -29,7 +31,7 @@ public final class WinterWyvernWintersCurse extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCastRange = 800;
-        abilityCooldown = new int[]{110,100,90};
+        abilityCooldown = new int[]{120,110,100};
         abilityManaCost = 250;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
@@ -39,11 +41,13 @@ public final class WinterWyvernWintersCurse extends Ability {
         iD = 5654;
         key = "winter_wyvern_winters_curse";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        damage_reduction = 70;
-        duration = new double[]{2.5,3.0,3.5};
+        bonus_attack_speed = 50;
+        damage_amplification = 0.0;
+        damage_reduction = 100;
+        duration = new double[]{3.25,4.0,4.75};
         localizedName = "Winters Curse";
         owningHeroShortKey = "winter_wyvern";
-        radius = 400;
+        radius = 500;
     }
 
     public static WinterWyvernWintersCurse instance() {
@@ -103,6 +107,14 @@ public final class WinterWyvernWintersCurse extends Ability {
 
     public String getSpellImmunityType() {
         return spellImmunityType;
+    }
+
+    public int getBonusAttackSpeed() {
+        return bonus_attack_speed;
+    }
+
+    public double getDamageAmplification() {
+        return damage_amplification;
     }
 
     public int getDamageReduction() {

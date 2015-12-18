@@ -30,7 +30,7 @@ public final class SatyrHellcallerShockwave extends Ability {
         abilityCastPoint = .5;
         abilityCastRange = 700;
         abilityCooldown = 8;
-        abilityDamage = 125;
+        abilityDamage = 160;
         abilityManaCost = 100;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
@@ -38,12 +38,12 @@ public final class SatyrHellcallerShockwave extends Ability {
         iD = 5316;
         key = "satyr_hellcaller_shockwave";
         maxLevel = 1;
-        distance = 980;
+        distance = 1380;
         localizedName = "Shockwave";
         owningHeroShortKey = "satyr_hellcaller";
         radius_end = 200;
         radius_start = 180;
-        speed = 1050;
+        speed = 900;
     }
 
     public static SatyrHellcallerShockwave instance() {

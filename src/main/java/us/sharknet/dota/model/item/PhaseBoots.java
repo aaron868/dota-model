@@ -35,7 +35,7 @@ public final class PhaseBoots extends Item {
         key = "item_phase_boots";
         bonus_attack_speed = 0;
         bonus_damage = 24;
-        bonus_movement_speed = 50;
+        bonus_movement_speed = 45;
         localizedName = "Phase Boots";
         phase_duration = 2.5;
         phase_movement_speed = 24;

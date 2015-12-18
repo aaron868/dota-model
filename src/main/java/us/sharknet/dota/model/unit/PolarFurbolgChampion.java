@@ -7,6 +7,7 @@ public final class PolarFurbolgChampion extends NpcUnit {
 
     private static PolarFurbolgChampion instance;
 
+    private final MudgolemCloakAura ability1;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -43,6 +44,7 @@ public final class PolarFurbolgChampion extends NpcUnit {
     private final String localizedName;
 
     private PolarFurbolgChampion() {
+        ability1 = MudgolemCloakAura.instance();
         armorPhysical = 3;
         attackAcquisitionRange = 500;
         attackAnimationPoint = .3;
@@ -55,7 +57,7 @@ public final class PolarFurbolgChampion extends NpcUnit {
         bountyGoldMax = 55;
         bountyGoldMin = 45;
         bountyXP = 88;
-        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
+        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 180;
         isNeutralUnitType = 1;
@@ -84,6 +86,10 @@ public final class PolarFurbolgChampion extends NpcUnit {
             instance = new PolarFurbolgChampion();
         }
         return instance;
+    }
+
+    public MudgolemCloakAura getAbility1() {
+        return ability1;
     }
 
     public int getArmorPhysical() {

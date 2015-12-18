@@ -22,6 +22,7 @@ public final class WindrunnerShackleshot extends Ability {
     private final double[] fail_stun_duration;
     private final String localizedName;
     private final String owningHeroShortKey;
+    private final int shackle_angle;
     private final int shackle_count;
     private final int shackle_distance;
     private final double[] stun_duration;
@@ -39,10 +40,11 @@ public final class WindrunnerShackleshot extends Ability {
         iD = 5130;
         key = "windrunner_shackleshot";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        arrow_speed = 1515;
+        arrow_speed = 1650;
         fail_stun_duration = new double[]{0.75,0.75,0.75,0.75};
         localizedName = "Shackleshot";
         owningHeroShortKey = "windrunner";
+        shackle_angle = 23;
         shackle_count = 1;
         shackle_distance = 575;
         stun_duration = new double[]{1.5,2.25,3.0,3.75};
@@ -117,6 +119,10 @@ public final class WindrunnerShackleshot extends Ability {
 
     public String getOwningHeroShortKey() {
         return owningHeroShortKey;
+    }
+
+    public int getShackleAngle() {
+        return shackle_angle;
     }
 
     public int getShackleCount() {

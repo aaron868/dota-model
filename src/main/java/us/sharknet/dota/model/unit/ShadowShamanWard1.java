@@ -79,8 +79,8 @@ public final class ShadowShamanWard1 extends NpcUnit {
         projectileSpeed = 900;
         selectionGroup = "Shaman_Wards";
         soundSet = "ShadowShaman_Ward";
-        statusHealth = 135;
-        statusHealthRegen = .25;
+        statusHealth = 2;
+        statusHealthRegen = 0;
         statusMana = 0;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_GOODGUYS";

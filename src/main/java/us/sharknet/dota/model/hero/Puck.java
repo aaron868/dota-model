@@ -55,7 +55,6 @@ public final class Puck extends Hero {
     private final int[] rolelevels;
     private final String soundSet;
     private final String team;
-    private final int visionNighttimeRange;
     private final String voiceFile;
     private final boolean active;
     private final String localizedName;
@@ -111,7 +110,6 @@ public final class Puck extends Hero {
         rolelevels = new int[]{3,3,3,2};
         soundSet = "Hero_Puck";
         team = "Good";
-        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_puck.vsndevts";
         active = true;
         localizedName = "Puck";
@@ -316,10 +314,6 @@ public final class Puck extends Hero {
 
     public String getTeam() {
         return team;
-    }
-
-    public int getVisionNighttimeRange() {
-        return visionNighttimeRange;
     }
 
     public String getVoiceFile() {

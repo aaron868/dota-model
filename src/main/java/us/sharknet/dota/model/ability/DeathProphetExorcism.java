@@ -18,6 +18,7 @@ public final class DeathProphetExorcism extends Ability {
     private final String key;
     private final String spellImmunityType;
     private final int[] average_damage;
+    private final double ghost_spawn_rate;
     private final int[] give_up_distance;
     private final int[] heal_percent;
     private final String localizedName;
@@ -28,7 +29,6 @@ public final class DeathProphetExorcism extends Ability {
     private final int[] radius;
     private final int[] spirit_speed;
     private final int[] spirits;
-    private final int structure_reduction;
 
     private DeathProphetExorcism() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
@@ -43,6 +43,7 @@ public final class DeathProphetExorcism extends Ability {
         key = "death_prophet_exorcism";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         average_damage = new int[]{55,55,55};
+        ghost_spawn_rate = .3;
         give_up_distance = new int[]{1200,1200,1200};
         heal_percent = new int[]{25,25,25};
         localizedName = "Exorcism";
@@ -52,8 +53,7 @@ public final class DeathProphetExorcism extends Ability {
         owningHeroShortKey = "death_prophet";
         radius = new int[]{700,700,700};
         spirit_speed = new int[]{500,500,500};
-        spirits = new int[]{8,14,21};
-        structure_reduction = 0;
+        spirits = new int[]{8,16,24};
     }
 
     public static DeathProphetExorcism instance() {
@@ -111,6 +111,10 @@ public final class DeathProphetExorcism extends Ability {
         return average_damage;
     }
 
+    public double getGhostSpawnRate() {
+        return ghost_spawn_rate;
+    }
+
     public int[] getGiveUpDistance() {
         return give_up_distance;
     }
@@ -149,10 +153,6 @@ public final class DeathProphetExorcism extends Ability {
 
     public int[] getSpirits() {
         return spirits;
-    }
-
-    public int getStructureReduction() {
-        return structure_reduction;
     }
 
 

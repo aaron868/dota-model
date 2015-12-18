@@ -48,7 +48,6 @@ public final class Treant extends Hero {
     private final String soundSet;
     private final String team;
     private final int visionDaytimeRange;
-    private final int visionNighttimeRange;
     private final String voiceFile;
     private final boolean active;
     private final String localizedName;
@@ -97,7 +96,6 @@ public final class Treant extends Hero {
         soundSet = "Hero_Treant";
         team = "Good";
         visionDaytimeRange = 1800;
-        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_treant.vsndevts";
         active = true;
         localizedName = "Treant Protector";
@@ -274,10 +272,6 @@ public final class Treant extends Hero {
 
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public int getVisionNighttimeRange() {
-        return visionNighttimeRange;
     }
 
     public String getVoiceFile() {

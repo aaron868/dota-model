@@ -17,9 +17,9 @@ public final class RecipeVeilOfDiscord extends Item {
 
     private RecipeVeilOfDiscord() {
         iD = 189;
-        itemCost = 900;
+        itemCost = 0;
         itemRecipe = 1;
-        itemRequirements = new Item[]{HelmOfIronWill.instance(),NullTalisman.instance()};
+        itemRequirements = new Item[]{HelmOfIronWill.instance(),NullTalisman.instance(),Robe.instance(),Robe.instance()};
         itemResult = VeilOfDiscord.instance();
         key = "item_recipe_veil_of_discord";
         model = "models/props_gameplay/recipe.vmdl";

@@ -12,7 +12,7 @@ public final class RubickNullField extends Ability {
     private final String localizedName;
     private final int[] magic_damage_reduction_pct;
     private final String owningHeroShortKey;
-    private final int[] radius;
+    private final int radius;
 
     private RubickNullField() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
@@ -21,7 +21,7 @@ public final class RubickNullField extends Ability {
         localizedName = "Null Field";
         magic_damage_reduction_pct = new int[]{5,10,15,20};
         owningHeroShortKey = "rubick";
-        radius = new int[]{900,900,900,900};
+        radius = 900;
     }
 
     public static RubickNullField instance() {
@@ -55,7 +55,7 @@ public final class RubickNullField extends Ability {
         return owningHeroShortKey;
     }
 
-    public int[] getRadius() {
+    public int getRadius() {
         return radius;
     }
 

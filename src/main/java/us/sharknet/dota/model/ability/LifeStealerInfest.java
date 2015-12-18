@@ -9,7 +9,7 @@ public final class LifeStealerInfest extends Ability {
     private final String[] abilityBehavior;
     private final double abilityCastPoint;
     private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
@@ -33,7 +33,7 @@ public final class LifeStealerInfest extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = .2;
         abilityCastRange = 150;
-        abilityCooldown = 100;
+        abilityCooldown = new int[]{100,75,50};
         abilityManaCost = new int[]{50,50,50};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -73,7 +73,7 @@ public final class LifeStealerInfest extends Ability {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 

@@ -71,9 +71,9 @@ public final class DotaFountain extends NpcUnit {
         attributeStrengthGain = 0;
         baseClass = "ent_dota_fountain";
         boundsHullName = "DOTA_HULL_SIZE_TOWER";
-        bountyGoldMax = 88;
-        bountyGoldMin = 66;
-        bountyXP = 41;
+        bountyGoldMax = 0;
+        bountyGoldMin = 0;
+        bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_SIEGE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE";
         key = "dota_fountain";

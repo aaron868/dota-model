@@ -7,7 +7,7 @@ public final class TidehunterAnchorSmash extends Ability {
     private static TidehunterAnchorSmash instance;
 
     private final String abilityBehavior;
-    private final double[] abilityCastPoint;
+    private final double abilityCastPoint;
     private final int abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
@@ -25,7 +25,7 @@ public final class TidehunterAnchorSmash extends Ability {
 
     private TidehunterAnchorSmash() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
+        abilityCastPoint = .4;
         abilityCastRange = 375;
         abilityCooldown = new double[]{7.0,6.0,5.0,4.0};
         abilityDamage = new int[]{75,125,175,225};
@@ -53,7 +53,7 @@ public final class TidehunterAnchorSmash extends Ability {
         return abilityBehavior;
     }
 
-    public double[] getAbilityCastPoint() {
+    public double getAbilityCastPoint() {
         return abilityCastPoint;
     }
 

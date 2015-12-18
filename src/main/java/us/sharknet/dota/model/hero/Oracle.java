@@ -86,7 +86,7 @@ public final class Oracle extends Hero {
         baseClass = "npc_dota_hero_oracle";
         botImplemented = 1;
         boundsHullName = "DOTA_HULL_SIZE_HERO";
-        cMEnabled = 0;
+        cMEnabled = 1;
         enabled = 1;
         healthBarOffset = 240;
         heroID = 111;

@@ -18,9 +18,6 @@ public final class BroodmotherWeb extends NpcUnit {
     private final double attackRate;
     private final String baseClass;
     private final String boundsHullName;
-    private final int bountyGoldMax;
-    private final int bountyGoldMin;
-    private final int bountyXP;
     private final String combatClassAttack;
     private final String combatClassDefend;
     private final String key;
@@ -51,9 +48,6 @@ public final class BroodmotherWeb extends NpcUnit {
         attackRate = 1;
         baseClass = "npc_dota_broodmother_web";
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
-        bountyGoldMax = 1;
-        bountyGoldMin = 1;
-        bountyXP = 12;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         key = "npc_dota_broodmother_web";
@@ -122,18 +116,6 @@ public final class BroodmotherWeb extends NpcUnit {
 
     public String getBoundsHullName() {
         return boundsHullName;
-    }
-
-    public int getBountyGoldMax() {
-        return bountyGoldMax;
-    }
-
-    public int getBountyGoldMin() {
-        return bountyGoldMin;
-    }
-
-    public int getBountyXP() {
-        return bountyXP;
     }
 
     public String getCombatClassAttack() {

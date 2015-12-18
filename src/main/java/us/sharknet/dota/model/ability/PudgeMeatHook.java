@@ -17,6 +17,8 @@ public final class PudgeMeatHook extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
+    private final int cooldown_scepter;
+    private final int[] damage_scepter;
     private final int[] hook_distance;
     private final int hook_speed;
     private final int hook_width;
@@ -37,6 +39,8 @@ public final class PudgeMeatHook extends Ability {
         iD = 5075;
         key = "pudge_meat_hook";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
+        cooldown_scepter = 4;
+        damage_scepter = new int[]{175,275,375,475};
         hook_distance = new int[]{1000,1100,1200,1300};
         hook_speed = 16;
         hook_width = 100;
@@ -95,6 +99,14 @@ public final class PudgeMeatHook extends Ability {
 
     public String getSpellImmunityType() {
         return spellImmunityType;
+    }
+
+    public int getCooldownScepter() {
+        return cooldown_scepter;
+    }
+
+    public int[] getDamageScepter() {
+        return damage_scepter;
     }
 
     public int[] getHookDistance() {

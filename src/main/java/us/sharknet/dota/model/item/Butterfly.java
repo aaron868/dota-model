@@ -37,8 +37,8 @@ public final class Butterfly extends Item {
         bonus_attack_speed = 30;
         bonus_damage = 30;
         bonus_evasion = 35;
-        bonus_move_speed = 25;
-        duration = 6;
+        bonus_move_speed = 35;
+        duration = 4;
         localizedName = "Butterfly";
     }
 

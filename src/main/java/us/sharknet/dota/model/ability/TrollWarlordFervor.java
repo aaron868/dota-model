@@ -18,9 +18,9 @@ public final class TrollWarlordFervor extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 5511;
         key = "troll_warlord_fervor";
-        attack_speed = new int[]{20,25,30,35};
+        attack_speed = new int[]{15,20,25,30};
         localizedName = "Fervor";
-        max_stacks = 4;
+        max_stacks = 6;
         owningHeroShortKey = "troll_warlord";
     }
 

@@ -14,6 +14,7 @@ public final class VitalityBooster extends Item {
     private final String itemShopTags;
     private final String key;
     private final int secretShop;
+    private final int sideShop;
     private final int bonus_health;
     private final String localizedName;
 
@@ -26,6 +27,7 @@ public final class VitalityBooster extends Item {
         itemShopTags = "health_pool";
         key = "item_vitality_booster";
         secretShop = 1;
+        sideShop = 1;
         bonus_health = 250;
         localizedName = "Vitality Booster";
     }
@@ -67,6 +69,10 @@ public final class VitalityBooster extends Item {
 
     public int getSecretShop() {
         return secretShop;
+    }
+
+    public int getSideShop() {
+        return sideShop;
     }
 
     public int getBonusHealth() {

@@ -36,7 +36,7 @@ public final class MiranaStarfall extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Starfall";
         owningHeroShortKey = "mirana";
-        starfall_radius = 625;
+        starfall_radius = 650;
         starfall_secondary_radius = 425;
     }
 

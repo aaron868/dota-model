@@ -45,7 +45,7 @@ public final class BeastmasterHawk4 extends NpcUnit {
         bountyGoldMin = 60;
         bountyXP = 77;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
-        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_WEAK";
+        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         healthBarOffset = 165;
         isSummoned = 1;
         key = "npc_dota_beastmaster_hawk_4";

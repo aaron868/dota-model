@@ -28,7 +28,6 @@ public final class JuggernautHealingWard extends NpcUnit {
     private final String boundsHullName;
     private final int bountyGoldMax;
     private final int bountyGoldMin;
-    private final int bountyXP;
     private final String combatClassAttack;
     private final String combatClassDefend;
     private final int followRange;
@@ -75,7 +74,6 @@ public final class JuggernautHealingWard extends NpcUnit {
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
         bountyGoldMax = 0;
         bountyGoldMin = 0;
-        bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         followRange = 250;
@@ -190,10 +188,6 @@ public final class JuggernautHealingWard extends NpcUnit {
 
     public int getBountyGoldMin() {
         return bountyGoldMin;
-    }
-
-    public int getBountyXP() {
-        return bountyXP;
     }
 
     public String getCombatClassAttack() {

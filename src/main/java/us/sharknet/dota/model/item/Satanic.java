@@ -21,7 +21,7 @@ public final class Satanic extends Item {
     private final int bonus_strength;
     private final int lifesteal_percent;
     private final String localizedName;
-    private final int unholy_duration;
+    private final double unholy_duration;
     private final int unholy_lifesteal_percent;
     private final int unholy_lifesteal_total_tooltip;
 
@@ -41,7 +41,7 @@ public final class Satanic extends Item {
         bonus_strength = 25;
         lifesteal_percent = 25;
         localizedName = "Satanic";
-        unholy_duration = 4;
+        unholy_duration = 4.5;
         unholy_lifesteal_percent = 175;
         unholy_lifesteal_total_tooltip = 200;
     }
@@ -113,7 +113,7 @@ public final class Satanic extends Item {
         return localizedName;
     }
 
-    public int getUnholyDuration() {
+    public double getUnholyDuration() {
         return unholy_duration;
     }
 

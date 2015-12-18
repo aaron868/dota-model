@@ -15,7 +15,7 @@ public final class BrewmasterStormDispelMagic extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
-    private final int[] damage;
+    private final int damage;
     private final String localizedName;
     private final String owningHeroShortKey;
     private final int radius;
@@ -24,13 +24,13 @@ public final class BrewmasterStormDispelMagic extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = .4;
         abilityCastRange = new int[]{500,500,500,500};
-        abilityCooldown = 6;
+        abilityCooldown = 4;
         abilityManaCost = new int[]{75,75,75,75};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         iD = 5408;
         key = "brewmaster_storm_dispel_magic";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        damage = new int[]{200,200,200,200};
+        damage = 500;
         localizedName = "Dispel Magic";
         owningHeroShortKey = "brewmaster_storm";
         radius = 600;
@@ -79,7 +79,7 @@ public final class BrewmasterStormDispelMagic extends Ability {
         return spellImmunityType;
     }
 
-    public int[] getDamage() {
+    public int getDamage() {
         return damage;
     }
 

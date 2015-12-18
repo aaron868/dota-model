@@ -69,7 +69,6 @@ public final class Techies extends Hero {
     private final String teamName;
     private final String unitRelationshipClass;
     private final int visionDaytimeRange;
-    private final int visionNighttimeRange;
     private final String voiceFile;
     private final boolean active;
     private final String localizedName;
@@ -140,7 +139,6 @@ public final class Techies extends Hero {
         teamName = "DOTA_TEAM_GOODGUYS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_HERO";
         visionDaytimeRange = 1800;
-        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_techies.vsndevts";
         active = true;
         localizedName = "Techies";
@@ -402,10 +400,6 @@ public final class Techies extends Hero {
 
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public int getVisionNighttimeRange() {
-        return visionNighttimeRange;
     }
 
     public String getVoiceFile() {

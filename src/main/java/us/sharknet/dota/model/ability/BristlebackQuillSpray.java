@@ -36,7 +36,7 @@ public final class BristlebackQuillSpray extends Ability {
         key = "bristleback_quill_spray";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         localizedName = "Quill Spray";
-        max_damage = 4;
+        max_damage = 45;
         owningHeroShortKey = "bristleback";
         quill_base_damage = new double[]{20.0,40.0,60.0,80.0};
         quill_stack_damage = new double[]{30.0,32.0,34.0,36.0};

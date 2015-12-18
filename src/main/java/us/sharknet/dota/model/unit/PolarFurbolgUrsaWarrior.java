@@ -59,7 +59,7 @@ public final class PolarFurbolgUrsaWarrior extends NpcUnit {
         bountyGoldMax = 88;
         bountyGoldMin = 76;
         bountyXP = 119;
-        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
+        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 215;
         isNeutralUnitType = 1;

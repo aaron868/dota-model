@@ -35,7 +35,7 @@ public final class ChaosKnightRealityRift extends Ability {
         iD = 5427;
         key = "chaos_knight_reality_rift";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        bonus_damage = new int[]{60,80,100,120};
+        bonus_damage = new int[]{60,100,140,180};
         bonus_duration = 1.2;
         cast_range = new int[]{550,600,650,700};
         localizedName = "Reality Rift";

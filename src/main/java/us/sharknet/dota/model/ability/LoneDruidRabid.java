@@ -8,8 +8,7 @@ public final class LoneDruidRabid extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final double[] abilityCooldown;
-    private final double[] abilityDuration;
+    private final int abilityCooldown;
     private final int[] abilityManaCost;
     private final int fightRecapLevel;
     private final int iD;
@@ -23,17 +22,16 @@ public final class LoneDruidRabid extends Ability {
     private LoneDruidRabid() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCooldown = new double[]{30.0,30.0,30.0,30.0};
-        abilityDuration = new double[]{10.0,10.0,10.0,10.0};
+        abilityCooldown = 30;
         abilityManaCost = new int[]{50,50,50,50};
         fightRecapLevel = 1;
         iD = 5413;
         key = "lone_druid_rabid";
         bonus_attack_speed = new int[]{10,20,30,40};
-        bonus_move_speed = new int[]{5,10,15,20};
+        bonus_move_speed = new int[]{10,15,20,25};
         localizedName = "Rabid";
         owningHeroShortKey = "lone_druid";
-        rabid_duration = new double[]{10.0,10.0,10.0,10.0};
+        rabid_duration = new double[]{18.0,22.0,26.0,30.0};
     }
 
     public static LoneDruidRabid instance() {
@@ -51,12 +49,8 @@ public final class LoneDruidRabid extends Ability {
         return abilityCastPoint;
     }
 
-    public double[] getAbilityCooldown() {
+    public int getAbilityCooldown() {
         return abilityCooldown;
-    }
-
-    public double[] getAbilityDuration() {
-        return abilityDuration;
     }
 
     public int[] getAbilityManaCost() {

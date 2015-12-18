@@ -37,7 +37,7 @@ public final class TidehunterRavage extends Ability {
         iD = 5121;
         key = "tidehunter_ravage";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        duration = new double[]{2.02,2.32,2.77};
+        duration = new double[]{2.0,2.4,2.8};
         localizedName = "Ravage";
         owningHeroShortKey = "tidehunter";
         radius = 1025;

@@ -10,7 +10,7 @@ public final class ChenPenitence extends Ability {
     private final double[] abilityCastPoint;
     private final int abilityCastRange;
     private final double[] abilityCooldown;
-    private final int[] abilityManaCost;
+    private final int abilityManaCost;
     private final String abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
@@ -18,7 +18,7 @@ public final class ChenPenitence extends Ability {
     private final String spellImmunityType;
     private final int[] bonus_damage_taken;
     private final int[] bonus_movement_speed;
-    private final double[] duration;
+    private final int duration;
     private final String localizedName;
     private final String owningHeroShortKey;
     private final int[] speed;
@@ -28,7 +28,7 @@ public final class ChenPenitence extends Ability {
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCastRange = 800;
         abilityCooldown = new double[]{14.0,13.0,12.0,11.0};
-        abilityManaCost = new int[]{100,100,100,100};
+        abilityManaCost = 70;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5328;
@@ -36,7 +36,7 @@ public final class ChenPenitence extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         bonus_damage_taken = new int[]{15,20,25,30};
         bonus_movement_speed = new int[]{-15,-20,-25,-30};
-        duration = new double[]{5.0,6.0,7.0,8.0};
+        duration = 8;
         localizedName = "Penitence";
         owningHeroShortKey = "chen";
         speed = new int[]{2000,2000,2000,2000};
@@ -65,7 +65,7 @@ public final class ChenPenitence extends Ability {
         return abilityCooldown;
     }
 
-    public int[] getAbilityManaCost() {
+    public int getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -97,7 +97,7 @@ public final class ChenPenitence extends Ability {
         return bonus_movement_speed;
     }
 
-    public double[] getDuration() {
+    public int getDuration() {
         return duration;
     }
 

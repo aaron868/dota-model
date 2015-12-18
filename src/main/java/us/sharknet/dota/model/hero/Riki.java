@@ -8,9 +8,9 @@ public final class Riki extends Hero {
     private static Riki instance;
 
     private final RikiSmokeScreen ability1;
-    private final RikiPermanentInvisibility ability2;
-    private final RikiBackstab ability3;
-    private final RikiBlinkStrike ability4;
+    private final RikiBlinkStrike ability2;
+    private final RikiPermanentInvisibility ability3;
+    private final RikiTricksOfTheTrade ability4;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -25,7 +25,7 @@ public final class Riki extends Hero {
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
-    private final int attributeStrengthGain;
+    private final double attributeStrengthGain;
     private final String banSound;
     private final int botImplemented;
     private final String boundsHullName;
@@ -59,10 +59,10 @@ public final class Riki extends Hero {
 
     private Riki() {
         ability1 = RikiSmokeScreen.instance();
-        ability2 = RikiPermanentInvisibility.instance();
-        ability3 = RikiBackstab.instance();
-        ability4 = RikiBlinkStrike.instance();
-        armorPhysical = 1;
+        ability2 = RikiBlinkStrike.instance();
+        ability3 = RikiPermanentInvisibility.instance();
+        ability4 = RikiTricksOfTheTrade.instance();
+        armorPhysical = 0;
         attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
@@ -70,17 +70,17 @@ public final class Riki extends Hero {
         attackDamageMin = 4;
         attackRange = 128;
         attackRate = 1.7;
-        attributeAgilityGain = 2.9;
+        attributeAgilityGain = 2.2;
         attributeBaseAgility = 34;
         attributeBaseIntelligence = 14;
         attributeBaseStrength = 17;
         attributeIntelligenceGain = 1.3;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
-        attributeStrengthGain = 2;
+        attributeStrengthGain = 1.6;
         banSound = "riki_riki_anger_04";
-        botImplemented = 1;
+        botImplemented = 0;
         boundsHullName = "DOTA_HULL_SIZE_HERO";
-        cMEnabled = 1;
+        cMEnabled = 0;
         enabled = 1;
         healthBarOffset = 115;
         heroGlowColor = new int[]{170,112,194};
@@ -120,15 +120,15 @@ public final class Riki extends Hero {
         return ability1;
     }
 
-    public RikiPermanentInvisibility getAbility2() {
+    public RikiBlinkStrike getAbility2() {
         return ability2;
     }
 
-    public RikiBackstab getAbility3() {
+    public RikiPermanentInvisibility getAbility3() {
         return ability3;
     }
 
-    public RikiBlinkStrike getAbility4() {
+    public RikiTricksOfTheTrade getAbility4() {
         return ability4;
     }
 
@@ -188,7 +188,7 @@ public final class Riki extends Hero {
         return attributePrimary;
     }
 
-    public int getAttributeStrengthGain() {
+    public double getAttributeStrengthGain() {
         return attributeStrengthGain;
     }
 

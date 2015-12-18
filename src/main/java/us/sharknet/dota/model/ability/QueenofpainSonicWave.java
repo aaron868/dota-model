@@ -46,7 +46,7 @@ public final class QueenofpainSonicWave extends Ability {
         final_aoe = 450;
         localizedName = "Sonic Wave";
         owningHeroShortKey = "queenofpain";
-        speed = 1100;
+        speed = 900;
         starting_aoe = 100;
     }
 

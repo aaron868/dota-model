@@ -15,6 +15,7 @@ public final class UrsaEnrage extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
+    private final double[] cooldown_scepter;
     private final int damage_reduction;
     private final int duration;
     private final double[] enrage_multiplier;
@@ -31,6 +32,7 @@ public final class UrsaEnrage extends Ability {
         iD = 5360;
         key = "ursa_enrage";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
+        cooldown_scepter = new double[]{30.0,24.0,18.0};
         damage_reduction = 80;
         duration = 4;
         enrage_multiplier = new double[]{1.5,1.75,2.0};
@@ -79,6 +81,10 @@ public final class UrsaEnrage extends Ability {
 
     public String getSpellImmunityType() {
         return spellImmunityType;
+    }
+
+    public double[] getCooldownScepter() {
+        return cooldown_scepter;
     }
 
     public int getDamageReduction() {

@@ -30,7 +30,7 @@ public final class CrystalMaidenCrystalNova extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCastRange = 700;
-        abilityCooldown = 13;
+        abilityCooldown = 12;
         abilityDamage = new int[]{100,150,200,250};
         abilityManaCost = new int[]{100,120,140,160};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";

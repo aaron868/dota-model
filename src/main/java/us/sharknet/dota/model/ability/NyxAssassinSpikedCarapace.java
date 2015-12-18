@@ -27,7 +27,7 @@ public final class NyxAssassinSpikedCarapace extends Ability {
     private NyxAssassinSpikedCarapace() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new int[]{0,0,0,0};
-        abilityCooldown = new int[]{23,20,17,14};
+        abilityCooldown = new int[]{22,18,14,10};
         abilityManaCost = new int[]{40,40,40,40};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
         fightRecapLevel = 1;

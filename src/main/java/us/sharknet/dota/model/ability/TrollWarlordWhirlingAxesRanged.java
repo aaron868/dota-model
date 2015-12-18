@@ -33,7 +33,7 @@ public final class TrollWarlordWhirlingAxesRanged extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
         abilityCastRange = 900;
-        abilityCooldown = new int[]{20,19,18,17};
+        abilityCooldown = new int[]{20,18,16,14};
         abilityManaCost = new int[]{50,50,50,50};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";

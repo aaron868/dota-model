@@ -52,7 +52,6 @@ public final class Meepo extends Hero {
     private final String soundSet;
     private final String team;
     private final int visionDaytimeRange;
-    private final int visionNighttimeRange;
     private final String voiceFile;
     private final boolean active;
     private final String localizedName;
@@ -105,7 +104,6 @@ public final class Meepo extends Hero {
         soundSet = "Hero_Meepo";
         team = "Bad";
         visionDaytimeRange = 1800;
-        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_meepo.vsndevts";
         active = true;
         localizedName = "Meepo";
@@ -298,10 +296,6 @@ public final class Meepo extends Hero {
 
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public int getVisionNighttimeRange() {
-        return visionNighttimeRange;
     }
 
     public String getVoiceFile() {

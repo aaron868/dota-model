@@ -37,9 +37,9 @@ public final class TreantEyesInTheForest extends Ability {
         maxLevel = 1;
         damage = 175;
         localizedName = "Eyes in the Forest";
-        overgrowth_aoe = 700;
+        overgrowth_aoe = 800;
         owningHeroShortKey = "treant";
-        vision_aoe = 7;
+        vision_aoe = 8;
     }
 
     public static TreantEyesInTheForest instance() {

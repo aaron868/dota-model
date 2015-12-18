@@ -18,10 +18,12 @@ public final class VeilOfDiscord extends Item {
     private final String itemQuality;
     private final String[] itemShopTags;
     private final String key;
+    private final int bonus_agi;
     private final int bonus_armor;
     private final int bonus_damage;
     private final int bonus_health_regen;
-    private final int bonus_stats;
+    private final int bonus_int;
+    private final int bonus_str;
     private final int debuff_radius;
     private final String localizedName;
     private final int resist_debuff;
@@ -40,10 +42,12 @@ public final class VeilOfDiscord extends Item {
         itemQuality = "rare";
         itemShopTags = new String[]{"int","armor","regen_health","hard_to_tag"};
         key = "item_veil_of_discord";
+        bonus_agi = 6;
         bonus_armor = 6;
         bonus_damage = 6;
         bonus_health_regen = 6;
-        bonus_stats = 6;
+        bonus_int = 18;
+        bonus_str = 6;
         debuff_radius = 600;
         localizedName = "Veil Of Discord";
         resist_debuff = -25;
@@ -105,6 +109,10 @@ public final class VeilOfDiscord extends Item {
         return key;
     }
 
+    public int getBonusAgi() {
+        return bonus_agi;
+    }
+
     public int getBonusArmor() {
         return bonus_armor;
     }
@@ -117,8 +125,12 @@ public final class VeilOfDiscord extends Item {
         return bonus_health_regen;
     }
 
-    public int getBonusStats() {
-        return bonus_stats;
+    public int getBonusInt() {
+        return bonus_int;
+    }
+
+    public int getBonusStr() {
+        return bonus_str;
     }
 
     public int getDebuffRadius() {

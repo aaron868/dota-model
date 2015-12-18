@@ -25,7 +25,7 @@ public final class FlyingCourier extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 84;
         itemAliases = new String[]{"crow","flying courier"};
-        itemCost = 220;
+        itemCost = 200;
         itemDeclarations = "DECLARE_PURCHASES_TO_TEAMMATES";
         itemQuality = "consumable";
         itemShareability = "ITEM_FULLY_SHAREABLE";

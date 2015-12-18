@@ -22,7 +22,6 @@ public final class MagnataurShockwave extends Ability {
     private final String localizedName;
     private final String owningHeroShortKey;
     private final int[] shock_damage;
-    private final int shock_distance;
     private final int shock_speed;
     private final int shock_width;
 
@@ -43,7 +42,6 @@ public final class MagnataurShockwave extends Ability {
         localizedName = "Shockwave";
         owningHeroShortKey = "magnataur";
         shock_damage = new int[]{75,150,225,300};
-        shock_distance = 1150;
         shock_speed = 1050;
         shock_width = 150;
     }
@@ -117,10 +115,6 @@ public final class MagnataurShockwave extends Ability {
 
     public int[] getShockDamage() {
         return shock_damage;
-    }
-
-    public int getShockDistance() {
-        return shock_distance;
     }
 
     public int getShockSpeed() {

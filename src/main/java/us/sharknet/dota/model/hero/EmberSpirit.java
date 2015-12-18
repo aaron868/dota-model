@@ -53,7 +53,6 @@ public final class EmberSpirit extends Hero {
     private final double statusHealthRegen;
     private final String team;
     private final int visionDaytimeRange;
-    private final int visionNighttimeRange;
     private final String voiceFile;
     private final boolean active;
     private final String localizedName;
@@ -107,7 +106,6 @@ public final class EmberSpirit extends Hero {
         statusHealthRegen = .75;
         team = "Good";
         visionDaytimeRange = 1800;
-        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_ember_spirit.vsndevts";
         active = true;
         localizedName = "Ember Spirit";
@@ -304,10 +302,6 @@ public final class EmberSpirit extends Hero {
 
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public int getVisionNighttimeRange() {
-        return visionNighttimeRange;
     }
 
     public String getVoiceFile() {

@@ -8,7 +8,7 @@ public final class FacelessVoid extends Hero {
     private static FacelessVoid instance;
 
     private final FacelessVoidTimeWalk ability1;
-    private final FacelessVoidBacktrack ability2;
+    private final FacelessVoidTimeDilation ability2;
     private final FacelessVoidTimeLock ability3;
     private final FacelessVoidChronosphere ability4;
     private final int armorPhysical;
@@ -59,7 +59,7 @@ public final class FacelessVoid extends Hero {
 
     private FacelessVoid() {
         ability1 = FacelessVoidTimeWalk.instance();
-        ability2 = FacelessVoidBacktrack.instance();
+        ability2 = FacelessVoidTimeDilation.instance();
         ability3 = FacelessVoidTimeLock.instance();
         ability4 = FacelessVoidChronosphere.instance();
         armorPhysical = 1;
@@ -79,7 +79,7 @@ public final class FacelessVoid extends Hero {
         attributeStrengthGain = 1.6;
         banSound = "faceless_void_face_anger_02";
         boundsHullName = "DOTA_HULL_SIZE_HERO";
-        cMEnabled = 1;
+        cMEnabled = 0;
         enabled = 1;
         healthBarOffset = 150;
         heroGlowColor = new int[]{217,160,255};
@@ -120,7 +120,7 @@ public final class FacelessVoid extends Hero {
         return ability1;
     }
 
-    public FacelessVoidBacktrack getAbility2() {
+    public FacelessVoidTimeDilation getAbility2() {
         return ability2;
     }
 

@@ -20,7 +20,7 @@ public final class LionImpale extends Ability {
     private final String key;
     private final String spellImmunityType;
     private final double[] duration;
-    private final int length;
+    private final int length_buffer;
     private final String localizedName;
     private final String owningHeroShortKey;
     private final int[] speed;
@@ -32,7 +32,7 @@ public final class LionImpale extends Ability {
         abilityCastRange = 500;
         abilityCooldown = new double[]{12.0,12.0,12.0,12.0};
         abilityDamage = new int[]{80,140,200,260};
-        abilityManaCost = new int[]{100,120,145,170};
+        abilityManaCost = new int[]{100,120,140,160};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
@@ -40,8 +40,8 @@ public final class LionImpale extends Ability {
         iD = 5044;
         key = "lion_impale";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        duration = new double[]{1.02,1.52,2.02,2.52};
-        length = 825;
+        duration = new double[]{1.1,1.6,2.1,2.6};
+        length_buffer = 325;
         localizedName = "Impale";
         owningHeroShortKey = "lion";
         speed = new int[]{1600,1600,1600,1600};
@@ -111,8 +111,8 @@ public final class LionImpale extends Ability {
         return duration;
     }
 
-    public int getLength() {
-        return length;
+    public int getLengthBuffer() {
+        return length_buffer;
     }
 
     public String getLocalizedName() {

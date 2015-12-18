@@ -29,7 +29,7 @@ public final class Sphere extends Item {
     private Sphere() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastRange = 700;
-        abilityCooldown = 16;
+        abilityCooldown = 13;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         fightRecapLevel = 1;
@@ -42,7 +42,7 @@ public final class Sphere extends Item {
         key = "item_sphere";
         block_cooldown = 16;
         bonus_all_stats = 15;
-        bonus_damage = 10;
+        bonus_damage = 15;
         bonus_health_regen = 6;
         bonus_mana_regen = 150;
         localizedName = "Linken's Sphere";

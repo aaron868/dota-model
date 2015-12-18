@@ -41,7 +41,7 @@ public final class SmokeOfDeceit extends Item {
         iD = 188;
         itemAlertable = 1;
         itemAliases = "smoke of deceit";
-        itemCost = 100;
+        itemCost = 50;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemDisplayCharges = 1;
         itemInitialCharges = 1;

@@ -56,7 +56,7 @@ public final class KoboldTunneler extends NpcUnit {
         bountyGoldMin = 17;
         bountyXP = 25;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
-        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
+        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 150;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_kobold_tunneler";

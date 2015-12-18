@@ -66,7 +66,7 @@ public final class BroodmotherSpiderling extends NpcUnit {
         bountyGoldMax = 13;
         bountyGoldMin = 11;
         bountyXP = 31;
-        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
+        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 140;
         isSummoned = 1;

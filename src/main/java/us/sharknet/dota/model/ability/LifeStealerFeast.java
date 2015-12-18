@@ -19,7 +19,7 @@ public final class LifeStealerFeast extends Ability {
         iD = 5250;
         key = "life_stealer_feast";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        hp_leech_percent = new double[]{4.0,5.0,6.0,7.0};
+        hp_leech_percent = new double[]{4.5,5.5,6.5,7.5};
         localizedName = "Feast";
         owningHeroShortKey = "life_stealer";
     }

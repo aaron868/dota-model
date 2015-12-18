@@ -55,7 +55,7 @@ public final class PhoenixSun extends NpcUnit {
         bountyGoldMin = 20;
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
-        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
+        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 450;
         key = "npc_dota_phoenix_sun";
         level = 0;

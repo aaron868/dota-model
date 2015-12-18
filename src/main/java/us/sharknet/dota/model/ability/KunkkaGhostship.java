@@ -20,13 +20,15 @@ public final class KunkkaGhostship extends Ability {
     private final String spellImmunityType;
     private final int buff_duration;
     private final int[] ghostship_distance;
-    private final int[] ghostship_speed;
+    private final int ghostship_speed;
+    private final int ghostship_speed_scepter;
     private final int[] ghostship_width;
+    private final int ghostship_width_scepter;
     private final String localizedName;
     private final int[] movespeed_bonus;
     private final String owningHeroShortKey;
     private final double[] stun_duration;
-    private final int tooltip_delay;
+    private final double tooltip_delay;
 
     private KunkkaGhostship() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
@@ -34,7 +36,7 @@ public final class KunkkaGhostship extends Ability {
         abilityCastRange = 1000;
         abilityCooldown = new double[]{60.0,50.0,40.0};
         abilityDamage = new int[]{400,500,600};
-        abilityManaCost = new int[]{150,200,250};
+        abilityManaCost = new int[]{125,175,225};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 2;
@@ -43,13 +45,15 @@ public final class KunkkaGhostship extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         buff_duration = 1;
         ghostship_distance = new int[]{1000,1000,1000};
-        ghostship_speed = new int[]{650,650,650};
+        ghostship_speed = 650;
+        ghostship_speed_scepter = 650;
         ghostship_width = new int[]{425,425,425};
+        ghostship_width_scepter = 200;
         localizedName = "Ghostship";
         movespeed_bonus = new int[]{10,10,10};
         owningHeroShortKey = "kunkka";
         stun_duration = new double[]{1.4,1.4,1.4};
-        tooltip_delay = 3;
+        tooltip_delay = 2.7;
     }
 
     public static KunkkaGhostship instance() {
@@ -115,12 +119,20 @@ public final class KunkkaGhostship extends Ability {
         return ghostship_distance;
     }
 
-    public int[] getGhostshipSpeed() {
+    public int getGhostshipSpeed() {
         return ghostship_speed;
+    }
+
+    public int getGhostshipSpeedScepter() {
+        return ghostship_speed_scepter;
     }
 
     public int[] getGhostshipWidth() {
         return ghostship_width;
+    }
+
+    public int getGhostshipWidthScepter() {
+        return ghostship_width_scepter;
     }
 
     public String getLocalizedName() {
@@ -139,7 +151,7 @@ public final class KunkkaGhostship extends Ability {
         return stun_duration;
     }
 
-    public int getTooltipDelay() {
+    public double getTooltipDelay() {
         return tooltip_delay;
     }
 

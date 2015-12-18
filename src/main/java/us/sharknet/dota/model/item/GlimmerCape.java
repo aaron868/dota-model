@@ -42,7 +42,7 @@ public final class GlimmerCape extends Item {
         key = "item_glimmer_cape";
         active_magical_armor = 45;
         bonus_attack_speed = 20;
-        bonus_magical_armor = 20;
+        bonus_magical_armor = 15;
         duration = 5;
         fade_delay = .6;
         localizedName = "Glimmer Cape";

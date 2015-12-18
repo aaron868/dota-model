@@ -37,7 +37,7 @@ public final class TreantOvergrowth extends Ability {
         eyes_radius = 800;
         localizedName = "Overgrowth";
         owningHeroShortKey = "treant";
-        radius = 675;
+        radius = 800;
     }
 
     public static TreantOvergrowth instance() {

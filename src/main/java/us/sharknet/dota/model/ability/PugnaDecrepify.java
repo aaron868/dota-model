@@ -38,7 +38,7 @@ public final class PugnaDecrepify extends Ability {
         key = "pugna_decrepify";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         bonus_movement_speed = new int[]{-30,-40,-50,-60};
-        bonus_movement_speed_allies = -25;
+        bonus_movement_speed_allies = 0;
         bonus_spell_damage_pct = new int[]{-30,-40,-50,-60};
         bonus_spell_damage_pct_allies = -25;
         localizedName = "Decrepify";

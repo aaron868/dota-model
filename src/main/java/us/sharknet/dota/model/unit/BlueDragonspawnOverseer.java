@@ -60,7 +60,7 @@ public final class BlueDragonspawnOverseer extends NpcUnit {
         bountyGoldMax = 98;
         bountyGoldMin = 86;
         bountyXP = 119;
-        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
+        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 220;
         isAncient = 1;

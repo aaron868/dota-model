@@ -18,13 +18,14 @@ public final class ArcWardenFlux extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
+    private final int[] cast_range_tooltip;
     private final int[] damage_per_second;
     private final int duration;
     private final String localizedName;
     private final int move_speed_slow_pct;
     private final String owningHeroShortKey;
     private final int search_radius;
-    private final int think_interval;
+    private final double think_interval;
 
     private ArcWardenFlux() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
@@ -39,13 +40,14 @@ public final class ArcWardenFlux extends Ability {
         iD = 5677;
         key = "arc_warden_flux";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
+        cast_range_tooltip = new int[]{600,700,800,900};
         damage_per_second = new int[]{15,30,45,60};
         duration = 6;
         localizedName = "Flux";
         move_speed_slow_pct = 50;
         owningHeroShortKey = "arc_warden";
         search_radius = 225;
-        think_interval = 1;
+        think_interval = .5;
     }
 
     public static ArcWardenFlux instance() {
@@ -103,6 +105,10 @@ public final class ArcWardenFlux extends Ability {
         return spellImmunityType;
     }
 
+    public int[] getCastRangeTooltip() {
+        return cast_range_tooltip;
+    }
+
     public int[] getDamagePerSecond() {
         return damage_per_second;
     }
@@ -127,7 +133,7 @@ public final class ArcWardenFlux extends Ability {
         return search_radius;
     }
 
-    public int getThinkInterval() {
+    public double getThinkInterval() {
         return think_interval;
     }
 

@@ -10,7 +10,7 @@ public final class LoneDruid extends Hero {
     private final int aRDMDisabled;
     private final LoneDruidSpiritBear ability1;
     private final LoneDruidRabid ability2;
-    private final LoneDruidSynergy ability3;
+    private final LoneDruidSavageRoar ability3;
     private final LoneDruidTrueFormBattleCry ability4;
     private final LoneDruidTrueForm ability5;
     private final LoneDruidTrueFormDruid ability6;
@@ -67,7 +67,7 @@ public final class LoneDruid extends Hero {
         aRDMDisabled = 1;
         ability1 = LoneDruidSpiritBear.instance();
         ability2 = LoneDruidRabid.instance();
-        ability3 = LoneDruidSynergy.instance();
+        ability3 = LoneDruidSavageRoar.instance();
         ability4 = LoneDruidTrueFormBattleCry.instance();
         ability5 = LoneDruidTrueForm.instance();
         ability6 = LoneDruidTrueFormDruid.instance();
@@ -90,7 +90,7 @@ public final class LoneDruid extends Hero {
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 2.1;
         banSound = "lone_druid_lone_druid_anger_10";
-        cMEnabled = 1;
+        cMEnabled = 0;
         enabled = 1;
         healthBarOffset = 145;
         heroID = 80;
@@ -140,7 +140,7 @@ public final class LoneDruid extends Hero {
         return ability2;
     }
 
-    public LoneDruidSynergy getAbility3() {
+    public LoneDruidSavageRoar getAbility3() {
         return ability3;
     }
 

@@ -64,8 +64,8 @@ public final class Weaver extends Hero {
         attackAcquisitionRange = 800;
         attackAnimationPoint = .64;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
-        attackDamageMax = 46;
-        attackDamageMin = 36;
+        attackDamageMax = 49;
+        attackDamageMin = 39;
         attackRange = 425;
         attackRate = 1.8;
         attributeAgilityGain = 2.5;

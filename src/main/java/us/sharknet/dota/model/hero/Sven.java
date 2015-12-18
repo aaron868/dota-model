@@ -68,8 +68,8 @@ public final class Sven extends Hero {
         attackAcquisitionRange = 600;
         attackAnimationPoint = .4;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
-        attackDamageMax = 39;
-        attackDamageMin = 37;
+        attackDamageMax = 43;
+        attackDamageMin = 41;
         attackRange = 128;
         attackRate = 1.7;
         attributeAgilityGain = 2;

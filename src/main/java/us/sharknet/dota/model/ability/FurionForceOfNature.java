@@ -36,8 +36,8 @@ public final class FurionForceOfNature extends Ability {
         max_treants = new int[]{2,3,4,5};
         owningHeroShortKey = "furion";
         treant_health_tooltip = 550;
-        treant_max_dmg_tooltip = 30;
-        treant_min_dmg_tooltip = 26;
+        treant_max_dmg_tooltip = 34;
+        treant_min_dmg_tooltip = 30;
     }
 
     public static FurionForceOfNature instance() {

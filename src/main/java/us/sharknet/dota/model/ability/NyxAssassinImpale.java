@@ -42,7 +42,7 @@ public final class NyxAssassinImpale extends Ability {
         key = "nyx_assassin_impale";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         cooldown_upgrade = 7;
-        duration = new double[]{1.27,1.77,2.27,2.77};
+        duration = new double[]{1.6,2.0,2.4,2.8};
         length = 700;
         localizedName = "Impale";
         owningHeroShortKey = "nyx_assassin";

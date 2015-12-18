@@ -20,7 +20,7 @@ public final class BlackDragonDragonhideAura extends Ability {
         iD = 5681;
         key = "black_dragon_dragonhide_aura";
         maxLevel = 1;
-        bonus_armor = 2;
+        bonus_armor = 3;
         localizedName = "Dragonhide Aura";
         owningHeroShortKey = "black_dragon";
         radius = 900;

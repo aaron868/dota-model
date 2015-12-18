@@ -9,7 +9,7 @@ public final class DeathProphetSilence extends Ability {
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final int iD;
@@ -24,7 +24,7 @@ public final class DeathProphetSilence extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
         abilityCastRange = 900;
-        abilityCooldown = 15;
+        abilityCooldown = new int[]{15,14,13,12};
         abilityDuration = new double[]{3.0,4.0,5.0,6.0};
         abilityManaCost = new int[]{80,80,80,80};
         iD = 5091;
@@ -55,7 +55,7 @@ public final class DeathProphetSilence extends Ability {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 

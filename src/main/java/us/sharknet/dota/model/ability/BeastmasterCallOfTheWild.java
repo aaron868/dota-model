@@ -8,7 +8,7 @@ public final class BeastmasterCallOfTheWild extends Ability {
 
     private final String abilityBehavior;
     private final double abilityCastPoint;
-    private final int abilityCooldown;
+    private final int[] abilityCooldown;
     private final int abilityManaCost;
     private final int iD;
     private final String key;
@@ -24,7 +24,7 @@ public final class BeastmasterCallOfTheWild extends Ability {
     private BeastmasterCallOfTheWild() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = .3;
-        abilityCooldown = 40;
+        abilityCooldown = new int[]{42,38,34,30};
         abilityManaCost = 15;
         iD = 5169;
         key = "beastmaster_call_of_the_wild";
@@ -53,7 +53,7 @@ public final class BeastmasterCallOfTheWild extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 

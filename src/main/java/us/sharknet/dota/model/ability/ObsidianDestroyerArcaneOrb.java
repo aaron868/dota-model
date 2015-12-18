@@ -8,6 +8,7 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
 
     private final String[] abilityBehavior;
     private final int abilityCastRange;
+    private final int abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final String abilityUnitTargetTeam;
@@ -16,6 +17,8 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
     private final String key;
     private final String spellImmunityType;
     private final int[] illusion_damage;
+    private final int[] int_steal;
+    private final int int_steal_duration;
     private final String localizedName;
     private final double[] mana_pool_damage_pct;
     private final String owningHeroShortKey;
@@ -23,6 +26,7 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
     private ObsidianDestroyerArcaneOrb() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
         abilityCastRange = 450;
+        abilityCooldown = 0;
         abilityManaCost = new int[]{100,100,100,100};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
@@ -31,6 +35,8 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
         key = "obsidian_destroyer_arcane_orb";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         illusion_damage = new int[]{100,200,300,400};
+        int_steal = new int[]{0,1,2,3};
+        int_steal_duration = 4;
         localizedName = "Arcane Orb";
         mana_pool_damage_pct = new double[]{6.0,7.0,8.0,9.0};
         owningHeroShortKey = "obsidian_destroyer";
@@ -49,6 +55,10 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
 
     public int getAbilityCastRange() {
         return abilityCastRange;
+    }
+
+    public int getAbilityCooldown() {
+        return abilityCooldown;
     }
 
     public int[] getAbilityManaCost() {
@@ -81,6 +91,14 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
 
     public int[] getIllusionDamage() {
         return illusion_damage;
+    }
+
+    public int[] getIntSteal() {
+        return int_steal;
+    }
+
+    public int getIntStealDuration() {
+        return int_steal_duration;
     }
 
     public String getLocalizedName() {

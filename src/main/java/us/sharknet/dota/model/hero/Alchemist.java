@@ -50,7 +50,6 @@ public final class Alchemist extends Hero {
     private final int[] rolelevels;
     private final String soundSet;
     private final String team;
-    private final int visionNighttimeRange;
     private final String voiceFile;
     private final boolean active;
     private final String localizedName;
@@ -101,7 +100,6 @@ public final class Alchemist extends Hero {
         rolelevels = new int[]{2,1,2,1,1,1};
         soundSet = "Hero_Alchemist";
         team = "Good";
-        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_alchemist.vsndevts";
         active = true;
         localizedName = "Alchemist";
@@ -286,10 +284,6 @@ public final class Alchemist extends Hero {
 
     public String getTeam() {
         return team;
-    }
-
-    public int getVisionNighttimeRange() {
-        return visionNighttimeRange;
     }
 
     public String getVoiceFile() {

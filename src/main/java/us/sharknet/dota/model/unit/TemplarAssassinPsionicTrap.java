@@ -55,7 +55,7 @@ public final class TemplarAssassinPsionicTrap extends NpcUnit {
         bountyGoldMin = 1;
         bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
-        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
+        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 140;
         key = "npc_dota_templar_assassin_psionic_trap";
         level = 1;

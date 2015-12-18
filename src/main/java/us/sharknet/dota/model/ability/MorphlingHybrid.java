@@ -32,7 +32,7 @@ public final class MorphlingHybrid extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         abilityCastPoint = .25;
         abilityCastRange = 600;
-        abilityCooldown = 140;
+        abilityCooldown = 120;
         abilityManaCost = 200;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";

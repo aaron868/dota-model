@@ -13,7 +13,7 @@ public final class ShredderReactiveArmor extends Ability {
     private final int bonus_hp_regen;
     private final String localizedName;
     private final String owningHeroShortKey;
-    private final int stack_duration;
+    private final double[] stack_duration;
     private final int[] stack_limit;
 
     private ShredderReactiveArmor() {
@@ -24,7 +24,7 @@ public final class ShredderReactiveArmor extends Ability {
         bonus_hp_regen = 1;
         localizedName = "Reactive Armor";
         owningHeroShortKey = "shredder";
-        stack_duration = 16;
+        stack_duration = new double[]{14.0,16.0,18.0,20.0};
         stack_limit = new int[]{5,10,15,20};
     }
 
@@ -63,7 +63,7 @@ public final class ShredderReactiveArmor extends Ability {
         return owningHeroShortKey;
     }
 
-    public int getStackDuration() {
+    public double[] getStackDuration() {
         return stack_duration;
     }
 

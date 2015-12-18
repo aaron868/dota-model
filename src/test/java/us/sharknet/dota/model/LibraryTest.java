@@ -26,7 +26,7 @@ public class LibraryTest {
 
     @Test
     public void testGetNumberOfItems() throws Exception {
-        assertEquals(235, library.getNumberOfItems());
+        assertEquals(242, library.getNumberOfItems());
     }
 
     @Test
@@ -66,7 +66,7 @@ public class LibraryTest {
 
     @Test
     public void testGetNumberOfAbilities() throws Exception {
-        assertEquals(618, library.getNumberOfAbilities());
+        assertEquals(626, library.getNumberOfAbilities());
     }
 
     @Test
@@ -86,7 +86,7 @@ public class LibraryTest {
 
     @Test
     public void testGetNumberOfUnits() throws Exception {
-        assertEquals(203, library.getNumberOfUnits());
+        assertEquals(204, library.getNumberOfUnits());
     }
 
     @Test

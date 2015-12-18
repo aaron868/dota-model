@@ -65,7 +65,7 @@ public final class InvokerForgedSpirit extends NpcUnit {
         bountyGoldMax = 46;
         bountyGoldMin = 32;
         bountyXP = 31;
-        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
+        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 270;
         isSummoned = 1;

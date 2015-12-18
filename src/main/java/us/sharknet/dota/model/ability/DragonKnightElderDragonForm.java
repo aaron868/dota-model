@@ -21,8 +21,8 @@ public final class DragonKnightElderDragonForm extends Ability {
     private final double[] corrosive_breath_duration;
     private final double[] duration;
     private final int frost_aoe;
-    private final int[] frost_bonus_attack_speed;
-    private final int[] frost_bonus_movement_speed;
+    private final int frost_bonus_attack_speed;
+    private final int frost_bonus_movement_speed;
     private final double[] frost_duration;
     private final String localizedName;
     private final String owningHeroShortKey;
@@ -44,9 +44,9 @@ public final class DragonKnightElderDragonForm extends Ability {
         corrosive_breath_damage = new int[]{20,20,20};
         corrosive_breath_duration = new double[]{5.0,5.0,5.0};
         duration = new double[]{60.0,60.0,60.0};
-        frost_aoe = 25;
-        frost_bonus_attack_speed = new int[]{-20,-20,-20};
-        frost_bonus_movement_speed = new int[]{-30,-30,-30};
+        frost_aoe = 3;
+        frost_bonus_attack_speed = -20;
+        frost_bonus_movement_speed = -30;
         frost_duration = new double[]{3.0,3.0,3.0};
         localizedName = "Elder Dragon Form";
         owningHeroShortKey = "dragon_knight";
@@ -121,11 +121,11 @@ public final class DragonKnightElderDragonForm extends Ability {
         return frost_aoe;
     }
 
-    public int[] getFrostBonusAttackSpeed() {
+    public int getFrostBonusAttackSpeed() {
         return frost_bonus_attack_speed;
     }
 
-    public int[] getFrostBonusMovementSpeed() {
+    public int getFrostBonusMovementSpeed() {
         return frost_bonus_movement_speed;
     }
 

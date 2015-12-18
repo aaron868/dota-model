@@ -43,7 +43,7 @@ public final class Zuus extends Hero {
     private final String lastHitChallengeRival;
     private final int loadoutScale;
     private final String model;
-    private final double modelScale;
+    private final int modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
     private final int noCombine;
@@ -98,8 +98,8 @@ public final class Zuus extends Hero {
         key = "npc_dota_hero_zuus";
         lastHitChallengeRival = "npc_dota_hero_razor";
         loadoutScale = 1;
-        model = "models/heroes/zuus/zuus.vmdl";
-        modelScale = .86;
+        model = "models/heroes/zeus/zeus.vmdl";
+        modelScale = 1;
         movementSpeed = 295;
         movementTurnRate = .6;
         noCombine = 1;
@@ -270,7 +270,7 @@ public final class Zuus extends Hero {
         return model;
     }
 
-    public double getModelScale() {
+    public int getModelScale() {
         return modelScale;
     }
 

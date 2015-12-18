@@ -9,7 +9,7 @@ public final class BrewmasterDrunkenHaze extends Ability {
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCooldown;
     private final int abilityManaCost;
     private final String abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
@@ -29,7 +29,7 @@ public final class BrewmasterDrunkenHaze extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.4,0.4,0.4};
         abilityCastRange = new int[]{850,850,850,850};
-        abilityCooldown = 8;
+        abilityCooldown = new int[]{8,7,6,5};
         abilityManaCost = 50;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
@@ -65,7 +65,7 @@ public final class BrewmasterDrunkenHaze extends Ability {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 

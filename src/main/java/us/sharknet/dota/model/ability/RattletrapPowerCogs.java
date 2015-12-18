@@ -15,14 +15,15 @@ public final class RattletrapPowerCogs extends Ability {
     private final String key;
     private final String spellImmunityType;
     private final int[] attacks_to_destroy;
+    private final int cogs_radius;
     private final int[] drain_amount;
     private final double[] duration;
+    private final int extra_pull_buffer;
     private final String localizedName;
     private final String owningHeroShortKey;
     private final int push_length;
     private final int push_speed;
-    private final int radius;
-    private final int[] spacing;
+    private final int trigger_distance;
 
     private RattletrapPowerCogs() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
@@ -34,14 +35,15 @@ public final class RattletrapPowerCogs extends Ability {
         key = "rattletrap_power_cogs";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         attacks_to_destroy = new int[]{2,2,2,3};
+        cogs_radius = 200;
         drain_amount = new int[]{80,120,160,200};
         duration = new double[]{5.0,6.0,7.0,8.0};
+        extra_pull_buffer = -10;
         localizedName = "Power Cogs";
         owningHeroShortKey = "rattletrap";
         push_length = 252;
         push_speed = 300;
-        radius = 225;
-        spacing = new int[]{160,160,160,160};
+        trigger_distance = 170;
     }
 
     public static RattletrapPowerCogs instance() {
@@ -87,12 +89,20 @@ public final class RattletrapPowerCogs extends Ability {
         return attacks_to_destroy;
     }
 
+    public int getCogsRadius() {
+        return cogs_radius;
+    }
+
     public int[] getDrainAmount() {
         return drain_amount;
     }
 
     public double[] getDuration() {
         return duration;
+    }
+
+    public int getExtraPullBuffer() {
+        return extra_pull_buffer;
     }
 
     public String getLocalizedName() {
@@ -111,12 +121,8 @@ public final class RattletrapPowerCogs extends Ability {
         return push_speed;
     }
 
-    public int getRadius() {
-        return radius;
-    }
-
-    public int[] getSpacing() {
-        return spacing;
+    public int getTriggerDistance() {
+        return trigger_distance;
     }
 
 

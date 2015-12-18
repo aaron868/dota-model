@@ -38,9 +38,9 @@ public final class Basher extends Item {
         bash_chance_ranged = 10;
         bash_cooldown = 2.3;
         bash_duration = 1.4;
-        bonus_chance_damage = 60;
-        bonus_damage = 25;
-        bonus_strength = 8;
+        bonus_chance_damage = 120;
+        bonus_damage = 10;
+        bonus_strength = 10;
         localizedName = "Skull Basher";
     }
 

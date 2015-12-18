@@ -19,7 +19,7 @@ public final class TinkerMarchOfTheMachines extends Ability {
     private final int[] collision_radius;
     private final int distance;
     private final int distance_scepter;
-    private final double[] duration;
+    private final int duration;
     private final String localizedName;
     private final int machines_per_sec;
     private final String owningHeroShortKey;
@@ -41,7 +41,7 @@ public final class TinkerMarchOfTheMachines extends Ability {
         collision_radius = new int[]{50,50,50,50};
         distance = 1800;
         distance_scepter = 1800;
-        duration = new double[]{6.0,6.0,6.0,6.0};
+        duration = 6;
         localizedName = "March Of The Machines";
         machines_per_sec = 24;
         owningHeroShortKey = "tinker";
@@ -109,7 +109,7 @@ public final class TinkerMarchOfTheMachines extends Ability {
         return distance_scepter;
     }
 
-    public double[] getDuration() {
+    public int getDuration() {
         return duration;
     }
 

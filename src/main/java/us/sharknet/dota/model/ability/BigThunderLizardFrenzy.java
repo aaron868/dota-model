@@ -8,8 +8,11 @@ public final class BigThunderLizardFrenzy extends Ability {
 
     private final String abilityBehavior;
     private final int abilityCastPoint;
+    private final int abilityCastRange;
     private final int abilityCooldown;
     private final int abilityManaCost;
+    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final int maxLevel;
@@ -19,10 +22,13 @@ public final class BigThunderLizardFrenzy extends Ability {
     private final String owningHeroShortKey;
 
     private BigThunderLizardFrenzy() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = 0;
+        abilityCastRange = 900;
         abilityCooldown = 8;
         abilityManaCost = 50;
+        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5333;
         key = "big_thunder_lizard_frenzy";
         maxLevel = 1;
@@ -47,12 +53,24 @@ public final class BigThunderLizardFrenzy extends Ability {
         return abilityCastPoint;
     }
 
+    public int getAbilityCastRange() {
+        return abilityCastRange;
+    }
+
     public int getAbilityCooldown() {
         return abilityCooldown;
     }
 
     public int getAbilityManaCost() {
         return abilityManaCost;
+    }
+
+    public String getAbilityUnitTargetTeam() {
+        return abilityUnitTargetTeam;
+    }
+
+    public String[] getAbilityUnitTargetType() {
+        return abilityUnitTargetType;
     }
 
     public int getID() {

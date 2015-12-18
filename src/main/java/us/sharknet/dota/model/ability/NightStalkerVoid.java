@@ -44,7 +44,7 @@ public final class NightStalkerVoid extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         attackspeed_slow = new int[]{-50,-50,-50,-50};
         duration_day = new double[]{2.0,2.0,2.0,2.0};
-        duration_night = new double[]{4.0,4.0,4.0,4.0};
+        duration_night = new double[]{2.5,3.0,3.5,4.0};
         localizedName = "Void";
         movespeed_slow = new int[]{-50,-50,-50,-50};
         owningHeroShortKey = "night_stalker";

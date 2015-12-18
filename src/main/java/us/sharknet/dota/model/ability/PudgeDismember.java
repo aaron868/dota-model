@@ -24,7 +24,7 @@ public final class PudgeDismember extends Ability {
     private final int[] dismember_damage;
     private final String localizedName;
     private final String owningHeroShortKey;
-    private final int strength_damage_scepter;
+    private final double[] strength_damage;
 
     private PudgeDismember() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_CHANNELLED","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
@@ -42,10 +42,10 @@ public final class PudgeDismember extends Ability {
         iD = 5077;
         key = "pudge_dismember";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        dismember_damage = new int[]{75,125,175};
+        dismember_damage = new int[]{60,90,120};
         localizedName = "Dismember";
         owningHeroShortKey = "pudge";
-        strength_damage_scepter = 1;
+        strength_damage = new double[]{0.3,0.4,0.5};
     }
 
     public static PudgeDismember instance() {
@@ -127,8 +127,8 @@ public final class PudgeDismember extends Ability {
         return owningHeroShortKey;
     }
 
-    public int getStrengthDamageScepter() {
-        return strength_damage_scepter;
+    public double[] getStrengthDamage() {
+        return strength_damage;
     }
 
 

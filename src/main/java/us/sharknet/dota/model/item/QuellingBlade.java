@@ -37,7 +37,7 @@ public final class QuellingBlade extends Item {
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_TREE","DOTA_UNIT_TARGET_CUSTOM"};
         iD = 11;
         itemAliases = "quelling blade";
-        itemCost = 225;
+        itemCost = 200;
         itemQuality = "component";
         itemShopTags = "damage";
         key = "item_quelling_blade";

@@ -40,7 +40,7 @@ public final class WarlockShadowWord extends Ability {
         iD = 5163;
         key = "warlock_shadow_word";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        duration = 11;
+        duration = 12;
         localizedName = "Shadow Word";
         owningHeroShortKey = "warlock";
         tick_interval = 1;

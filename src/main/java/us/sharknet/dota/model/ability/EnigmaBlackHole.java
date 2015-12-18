@@ -35,7 +35,7 @@ public final class EnigmaBlackHole extends Ability {
         abilityCastPoint = new double[]{0.3,0.3,0.3};
         abilityCastRange = 275;
         abilityChannelTime = new double[]{4.0,4.0,4.0};
-        abilityCooldown = new double[]{200.0,190.0,180.0};
+        abilityCooldown = new double[]{200.0,180.0,160.0};
         abilityManaCost = new int[]{275,325,375};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";

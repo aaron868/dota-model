@@ -43,7 +43,7 @@ public final class VisageSummonFamiliarsStoneForm extends Ability {
         stun_damage = new int[]{60,100,140};
         stun_delay = 1;
         stun_duration = new double[]{1.0,1.25,1.5};
-        stun_radius = 340;
+        stun_radius = 350;
     }
 
     public static VisageSummonFamiliarsStoneForm instance() {

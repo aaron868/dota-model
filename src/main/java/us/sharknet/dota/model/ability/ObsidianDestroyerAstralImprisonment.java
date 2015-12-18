@@ -8,42 +8,44 @@ public final class ObsidianDestroyerAstralImprisonment extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final double[] abilityCooldown;
-    private final double[] abilityDuration;
+    private final int[] abilityCastRange;
+    private final int[] abilityCooldown;
+    private final int abilityDuration;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
-    private final String[] abilityUnitTargetFlags;
+    private final String abilityUnitDamageType;
+    private final String abilityUnitTargetFlags;
     private final String[] abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
-    private final int[] int_steal;
+    private final int[] damage;
     private final String localizedName;
     private final String owningHeroShortKey;
-    private final double[] prison_duration;
-    private final int steal_duration;
+    private final int prison_duration;
+    private final int radius;
 
     private ObsidianDestroyerAstralImprisonment() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.25,0.25,0.25,0.25};
-        abilityCastRange = 500;
-        abilityCooldown = new double[]{18.0,16.0,14.0,12.0};
-        abilityDuration = new double[]{1.0,2.0,3.0,4.0};
+        abilityCastRange = new int[]{450,500,550,600};
+        abilityCooldown = new int[]{20,17,14,11};
+        abilityDuration = 4;
         abilityManaCost = new int[]{120,140,160,180};
         abilityModifierSupportValue = .5;
-        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO","DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"};
+        abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
+        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES";
         abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY","DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5392;
         key = "obsidian_destroyer_astral_imprisonment";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        int_steal = new int[]{4,7,10,13};
+        damage = new int[]{75,150,225,300};
         localizedName = "Astral Imprisonment";
         owningHeroShortKey = "obsidian_destroyer";
-        prison_duration = new double[]{1.0,2.0,3.0,4.0};
-        steal_duration = 5;
+        prison_duration = 4;
+        radius = 400;
     }
 
     public static ObsidianDestroyerAstralImprisonment instance() {
@@ -61,15 +63,15 @@ public final class ObsidianDestroyerAstralImprisonment extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public double[] getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public double[] getAbilityDuration() {
+    public int getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -81,7 +83,11 @@ public final class ObsidianDestroyerAstralImprisonment extends Ability {
         return abilityModifierSupportValue;
     }
 
-    public String[] getAbilityUnitTargetFlags() {
+    public String getAbilityUnitDamageType() {
+        return abilityUnitDamageType;
+    }
+
+    public String getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
@@ -89,7 +95,7 @@ public final class ObsidianDestroyerAstralImprisonment extends Ability {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
     }
 
@@ -105,8 +111,8 @@ public final class ObsidianDestroyerAstralImprisonment extends Ability {
         return spellImmunityType;
     }
 
-    public int[] getIntSteal() {
-        return int_steal;
+    public int[] getDamage() {
+        return damage;
     }
 
     public String getLocalizedName() {
@@ -117,12 +123,12 @@ public final class ObsidianDestroyerAstralImprisonment extends Ability {
         return owningHeroShortKey;
     }
 
-    public double[] getPrisonDuration() {
+    public int getPrisonDuration() {
         return prison_duration;
     }
 
-    public int getStealDuration() {
-        return steal_duration;
+    public int getRadius() {
+        return radius;
     }
 
 

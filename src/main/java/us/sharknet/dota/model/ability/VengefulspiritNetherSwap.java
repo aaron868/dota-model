@@ -18,6 +18,8 @@ public final class VengefulspiritNetherSwap extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
+    private final int illusion_damage_in_pct;
+    private final int illusion_damage_out_pct;
     private final String localizedName;
     private final int nether_swap_cooldown_scepter;
     private final String owningHeroShortKey;
@@ -36,6 +38,8 @@ public final class VengefulspiritNetherSwap extends Ability {
         iD = 5125;
         key = "vengefulspirit_nether_swap";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
+        illusion_damage_in_pct = 50;
+        illusion_damage_out_pct = 5;
         localizedName = "Nether Swap";
         nether_swap_cooldown_scepter = 1;
         owningHeroShortKey = "vengefulspirit";
@@ -95,6 +99,14 @@ public final class VengefulspiritNetherSwap extends Ability {
 
     public String getSpellImmunityType() {
         return spellImmunityType;
+    }
+
+    public int getIllusionDamageInPct() {
+        return illusion_damage_in_pct;
+    }
+
+    public int getIllusionDamageOutPct() {
+        return illusion_damage_out_pct;
     }
 
     public String getLocalizedName() {

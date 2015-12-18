@@ -50,7 +50,7 @@ public final class DarkTroll extends NpcUnit {
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
         attackDamageMax = 27;
         attackDamageMin = 24;
-        attackRange = 500;
+        attackRange = 350;
         attackRate = 1.35;
         baseClass = "npc_dota_creep_neutral";
         bountyGoldMax = 33;

@@ -10,7 +10,7 @@ public final class BristlebackViscousNasalGoo extends Ability {
     private final double abilityCastPoint;
     private final int abilityCastRange;
     private final double[] abilityCooldown;
-    private final int[] abilityManaCost;
+    private final int abilityManaCost;
     private final String abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int fightRecapLevel;
@@ -25,6 +25,7 @@ public final class BristlebackViscousNasalGoo extends Ability {
     private final String localizedName;
     private final int[] move_slow_per_stack;
     private final String owningHeroShortKey;
+    private final int radius;
     private final int stack_limit;
 
     private BristlebackViscousNasalGoo() {
@@ -32,7 +33,7 @@ public final class BristlebackViscousNasalGoo extends Ability {
         abilityCastPoint = .3;
         abilityCastRange = 600;
         abilityCooldown = new double[]{1.5,1.5,1.5,1.5};
-        abilityManaCost = new int[]{30,30,30,30};
+        abilityManaCost = 25;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
@@ -47,6 +48,7 @@ public final class BristlebackViscousNasalGoo extends Ability {
         localizedName = "Viscous Nasal Goo";
         move_slow_per_stack = new int[]{3,6,9,12};
         owningHeroShortKey = "bristleback";
+        radius = 600;
         stack_limit = 4;
     }
 
@@ -73,7 +75,7 @@ public final class BristlebackViscousNasalGoo extends Ability {
         return abilityCooldown;
     }
 
-    public int[] getAbilityManaCost() {
+    public int getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -131,6 +133,10 @@ public final class BristlebackViscousNasalGoo extends Ability {
 
     public String getOwningHeroShortKey() {
         return owningHeroShortKey;
+    }
+
+    public int getRadius() {
+        return radius;
     }
 
     public int getStackLimit() {

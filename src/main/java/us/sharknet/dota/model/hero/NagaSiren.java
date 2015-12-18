@@ -25,7 +25,7 @@ public final class NagaSiren extends Hero {
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
-    private final double attributeIntelligenceGain;
+    private final int attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
     private final String banSound;
@@ -75,9 +75,9 @@ public final class NagaSiren extends Hero {
         attackRate = 1.7;
         attributeAgilityGain = 2.75;
         attributeBaseAgility = 21;
-        attributeBaseIntelligence = 18;
+        attributeBaseIntelligence = 21;
         attributeBaseStrength = 21;
-        attributeIntelligenceGain = 1.95;
+        attributeIntelligenceGain = 2;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 2.3;
         banSound = "naga_siren_naga_anger_12";
@@ -190,7 +190,7 @@ public final class NagaSiren extends Hero {
         return attributeBaseStrength;
     }
 
-    public double getAttributeIntelligenceGain() {
+    public int getAttributeIntelligenceGain() {
         return attributeIntelligenceGain;
     }
 

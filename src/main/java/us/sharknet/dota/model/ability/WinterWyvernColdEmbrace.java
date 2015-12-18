@@ -27,7 +27,7 @@ public final class WinterWyvernColdEmbrace extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCastRange = 1000;
-        abilityCooldown = new int[]{17,16,15,14};
+        abilityCooldown = new int[]{24,21,18,15};
         abilityManaCost = new int[]{75,75,75,75};
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};

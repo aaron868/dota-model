@@ -79,7 +79,7 @@ public final class Chen extends Hero {
         attributeAgilityGain = 2.1;
         attributeBaseAgility = 15;
         attributeBaseIntelligence = 21;
-        attributeBaseStrength = 20;
+        attributeBaseStrength = 23;
         attributeIntelligenceGain = 2.8;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 1.5;

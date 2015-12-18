@@ -7,9 +7,9 @@ public final class BlackDragon extends NpcUnit {
 
     private static BlackDragon instance;
 
-    private final BlackDragonDragonhideAura ability1;
-    private final BlackDragonSplashAttack ability2;
-    private final NeutralSpellImmunity ability3;
+    private final BlackDragonFireball ability1;
+    private final BlackDragonDragonhideAura ability2;
+    private final BlackDragonSplashAttack ability3;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -48,10 +48,10 @@ public final class BlackDragon extends NpcUnit {
     private final String localizedName;
 
     private BlackDragon() {
-        ability1 = BlackDragonDragonhideAura.instance();
-        ability2 = BlackDragonSplashAttack.instance();
-        ability3 = NeutralSpellImmunity.instance();
-        armorPhysical = 4;
+        ability1 = BlackDragonFireball.instance();
+        ability2 = BlackDragonDragonhideAura.instance();
+        ability3 = BlackDragonSplashAttack.instance();
+        armorPhysical = 3;
         attackAcquisitionRange = 300;
         attackAnimationPoint = .94;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";
@@ -63,7 +63,7 @@ public final class BlackDragon extends NpcUnit {
         bountyGoldMax = 190;
         bountyGoldMin = 150;
         bountyXP = 155;
-        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
+        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 300;
         isAncient = 1;
@@ -80,7 +80,7 @@ public final class BlackDragon extends NpcUnit {
         soundSet = "n_creep_Ranged";
         statusHealth = 2000;
         statusHealthRegen = 2;
-        statusMana = 0;
+        statusMana = 500;
         statusManaRegen = 0;
         teamName = "DOTA_TEAM_NEUTRALS";
         unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT";
@@ -96,15 +96,15 @@ public final class BlackDragon extends NpcUnit {
         return instance;
     }
 
-    public BlackDragonDragonhideAura getAbility1() {
+    public BlackDragonFireball getAbility1() {
         return ability1;
     }
 
-    public BlackDragonSplashAttack getAbility2() {
+    public BlackDragonDragonhideAura getAbility2() {
         return ability2;
     }
 
-    public NeutralSpellImmunity getAbility3() {
+    public BlackDragonSplashAttack getAbility3() {
         return ability3;
     }
 

@@ -18,7 +18,7 @@ public final class RikiSmokeScreen extends Ability {
     private final int duration;
     private final String localizedName;
     private final int[] miss_rate;
-    private final int[] movement_speed_reduction;
+    private final int movement_speed_reduction;
     private final String owningHeroShortKey;
     private final int[] radius;
     private final int turn_reduction;
@@ -36,10 +36,10 @@ public final class RikiSmokeScreen extends Ability {
         duration = 6;
         localizedName = "Smoke Screen";
         miss_rate = new int[]{40,50,60,70};
-        movement_speed_reduction = new int[]{25,25,25,25};
+        movement_speed_reduction = 25;
         owningHeroShortKey = "riki";
         radius = new int[]{250,275,300,325};
-        turn_reduction = -30;
+        turn_reduction = 0;
     }
 
     public static RikiSmokeScreen instance() {
@@ -97,7 +97,7 @@ public final class RikiSmokeScreen extends Ability {
         return miss_rate;
     }
 
-    public int[] getMovementSpeedReduction() {
+    public int getMovementSpeedReduction() {
         return movement_speed_reduction;
     }
 

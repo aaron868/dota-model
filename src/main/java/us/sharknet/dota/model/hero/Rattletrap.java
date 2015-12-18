@@ -73,7 +73,7 @@ public final class Rattletrap extends Hero {
         attributeBaseStrength = 24;
         attributeIntelligenceGain = 1.3;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
-        attributeStrengthGain = 2.7;
+        attributeStrengthGain = 2.9;
         banSound = "rattletrap_ratt_anger_06";
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;

@@ -7,7 +7,7 @@ public final class JakiroIcePath extends Ability {
     private static JakiroIcePath instance;
 
     private final String abilityBehavior;
-    private final double[] abilityCastPoint;
+    private final double abilityCastPoint;
     private final int abilityCastRange;
     private final double[] abilityCooldown;
     private final int abilityDamage;
@@ -28,7 +28,7 @@ public final class JakiroIcePath extends Ability {
 
     private JakiroIcePath() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
-        abilityCastPoint = new double[]{0.65,0.65,0.65,0.65};
+        abilityCastPoint = .65;
         abilityCastRange = 1200;
         abilityCooldown = new double[]{12.0,11.0,10.0,9.0};
         abilityDamage = 0;
@@ -59,7 +59,7 @@ public final class JakiroIcePath extends Ability {
         return abilityBehavior;
     }
 
-    public double[] getAbilityCastPoint() {
+    public double getAbilityCastPoint() {
         return abilityCastPoint;
     }
 

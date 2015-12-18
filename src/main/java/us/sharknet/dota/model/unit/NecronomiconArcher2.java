@@ -67,7 +67,7 @@ public final class NecronomiconArcher2 extends NpcUnit {
         attackDamageMax = 90;
         attackDamageMin = 90;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
-        attackRange = 450;
+        attackRange = 500;
         attackRate = 1;
         attributeAgilityGain = 0;
         attributeBaseAgility = 0;

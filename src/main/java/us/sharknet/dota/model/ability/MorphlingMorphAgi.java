@@ -15,7 +15,7 @@ public final class MorphlingMorphAgi extends Ability {
     private final int[] mana_cost;
     private final double[] morph_cooldown;
     private final String owningHeroShortKey;
-    private final int[] points_per_tick;
+    private final int points_per_tick;
 
     private MorphlingMorphAgi() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"};
@@ -25,9 +25,9 @@ public final class MorphlingMorphAgi extends Ability {
         bonus_attributes = new int[]{3,4,5,6};
         localizedName = "Morph Agi";
         mana_cost = new int[]{30,30,30,30};
-        morph_cooldown = new double[]{1.0,0.5,0.33,0.2};
+        morph_cooldown = new double[]{0.5,0.25,0.125,0.0625};
         owningHeroShortKey = "morphling";
-        points_per_tick = new int[]{2,2,2,2};
+        points_per_tick = 1;
     }
 
     public static MorphlingMorphAgi instance() {
@@ -73,7 +73,7 @@ public final class MorphlingMorphAgi extends Ability {
         return owningHeroShortKey;
     }
 
-    public int[] getPointsPerTick() {
+    public int getPointsPerTick() {
         return points_per_tick;
     }
 

@@ -46,7 +46,7 @@ public final class EarthSpiritBoulderSmash extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Boulder Smash";
         owningHeroShortKey = "earth_spirit";
-        radius = 200;
+        radius = 160;
         remnant_smash_radius_tooltip = 200;
         rock_damage = new int[]{50,100,150,200};
         rock_distance = 2;

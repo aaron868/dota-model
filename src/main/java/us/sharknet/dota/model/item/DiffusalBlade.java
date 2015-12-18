@@ -70,8 +70,8 @@ public final class DiffusalBlade extends Item {
         maxUpgradeLevel = 2;
         upgradeRecipe = "item_recipe_diffusal_blade";
         upgradesItems = "item_diffusal_blade";
-        bonus_agility = 20;
-        bonus_intellect = 6;
+        bonus_agility = 25;
+        bonus_intellect = 10;
         cast_range_tooltip = 600;
         damage_per_burn = 1;
         feedback_mana_burn = 25;

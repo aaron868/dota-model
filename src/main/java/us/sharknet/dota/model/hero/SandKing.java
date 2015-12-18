@@ -72,7 +72,7 @@ public final class SandKing extends Hero {
         attributeAgilityGain = 2.1;
         attributeBaseAgility = 19;
         attributeBaseIntelligence = 16;
-        attributeBaseStrength = 18;
+        attributeBaseStrength = 21;
         attributeIntelligenceGain = 1.8;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.6;

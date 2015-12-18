@@ -9,7 +9,7 @@ public final class DeathProphetCarrionSwarm extends Ability {
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int abilityCastRange;
-    private final double[] abilityCooldown;
+    private final int[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
@@ -30,7 +30,7 @@ public final class DeathProphetCarrionSwarm extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
         abilityCastRange = 600;
-        abilityCooldown = new double[]{8.0,8.0,8.0,8.0};
+        abilityCooldown = new int[]{8,7,6,5};
         abilityDamage = new int[]{75,150,225,300};
         abilityManaCost = new int[]{105,120,140,165};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -67,7 +67,7 @@ public final class DeathProphetCarrionSwarm extends Ability {
         return abilityCastRange;
     }
 
-    public double[] getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 

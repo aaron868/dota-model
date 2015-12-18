@@ -21,7 +21,6 @@ public final class Courier extends NpcUnit {
     private final String boundsHullName;
     private final int bountyGoldMax;
     private final int bountyGoldMin;
-    private final int bountyXP;
     private final String combatClassAttack;
     private final String combatClassDefend;
     private final int hasInventory;
@@ -62,7 +61,6 @@ public final class Courier extends NpcUnit {
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
         bountyGoldMax = 150;
         bountyGoldMin = 150;
-        bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         hasInventory = 1;
@@ -150,10 +148,6 @@ public final class Courier extends NpcUnit {
 
     public int getBountyGoldMin() {
         return bountyGoldMin;
-    }
-
-    public int getBountyXP() {
-        return bountyXP;
     }
 
     public String getCombatClassAttack() {

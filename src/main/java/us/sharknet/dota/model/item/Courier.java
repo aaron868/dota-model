@@ -24,13 +24,13 @@ public final class Courier extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         iD = 45;
         itemAliases = new String[]{"donkey","chicken","animal courier"};
-        itemCost = 120;
+        itemCost = 100;
         itemDeclarations = "DECLARE_PURCHASES_TO_TEAMMATES";
         itemQuality = "consumable";
         itemShareability = "ITEM_FULLY_SHAREABLE";
         itemShopTags = "consumable";
         itemStockMax = 1;
-        itemStockTime = 7;
+        itemStockTime = 12;
         itemSupport = 1;
         key = "item_courier";
         localizedName = "Animal Courier";

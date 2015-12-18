@@ -33,7 +33,7 @@ public final class Sheepstick extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = 0;
         abilityCastRange = 800;
-        abilityCooldown = 3;
+        abilityCooldown = 25;
         abilityManaCost = 100;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};

@@ -11,7 +11,7 @@ public final class StormSpiritElectricVortex extends Ability {
     private final int abilityCastRange;
     private final double[] abilityCooldown;
     private final double[] abilityDuration;
-    private final int[] abilityManaCost;
+    private final int abilityManaCost;
     private final String abilityUnitTargetFlags;
     private final String abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
@@ -33,7 +33,7 @@ public final class StormSpiritElectricVortex extends Ability {
         abilityCastRange = 300;
         abilityCooldown = new double[]{21.0,20.0,19.0,18.0};
         abilityDuration = new double[]{1.0,1.5,2.0,2.5};
-        abilityManaCost = new int[]{100,110,120,130};
+        abilityManaCost = 85;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
@@ -77,7 +77,7 @@ public final class StormSpiritElectricVortex extends Ability {
         return abilityDuration;
     }
 
-    public int[] getAbilityManaCost() {
+    public int getAbilityManaCost() {
         return abilityManaCost;
     }
 

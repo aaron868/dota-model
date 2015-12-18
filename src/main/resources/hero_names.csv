@@ -109,5 +109,5 @@ ID,key,localizedName,shortKey,active
 91,npc_dota_hero_wisp,Io,wisp,true
 30,npc_dota_hero_witch_doctor,Witch Doctor,witch_doctor,true
 22,npc_dota_hero_zuus,Zeus,zuus,true
-113,npc_dota_hero_arc_warden,Arc Warden,arc_warden,false
+113,npc_dota_hero_arc_warden,Arc Warden,arc_warden,true
 108,npc_dota_hero_abyssal_underlord,Abyssal Underlord,abyssal_underlord,false

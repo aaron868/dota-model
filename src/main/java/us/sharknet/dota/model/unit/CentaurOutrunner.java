@@ -7,6 +7,7 @@ public final class CentaurOutrunner extends NpcUnit {
 
     private static CentaurOutrunner instance;
 
+    private final MudgolemCloakAura ability1;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -43,6 +44,7 @@ public final class CentaurOutrunner extends NpcUnit {
     private final String localizedName;
 
     private CentaurOutrunner() {
+        ability1 = MudgolemCloakAura.instance();
         armorPhysical = 2;
         attackAcquisitionRange = 500;
         attackAnimationPoint = .5;
@@ -84,6 +86,10 @@ public final class CentaurOutrunner extends NpcUnit {
             instance = new CentaurOutrunner();
         }
         return instance;
+    }
+
+    public MudgolemCloakAura getAbility1() {
+        return ability1;
     }
 
     public int getArmorPhysical() {

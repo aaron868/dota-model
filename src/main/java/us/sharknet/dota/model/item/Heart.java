@@ -19,7 +19,7 @@ public final class Heart extends Item {
     private final int bonus_strength;
     private final int cooldown_melee;
     private final int cooldown_ranged_tooltip;
-    private final int health_regen_rate;
+    private final double health_regen_rate;
     private final String localizedName;
 
     private Heart() {
@@ -36,7 +36,7 @@ public final class Heart extends Item {
         bonus_strength = 40;
         cooldown_melee = 5;
         cooldown_ranged_tooltip = 7;
-        health_regen_rate = 4;
+        health_regen_rate = 4.75;
         localizedName = "Heart Of Tarrasque";
     }
 
@@ -99,7 +99,7 @@ public final class Heart extends Item {
         return cooldown_ranged_tooltip;
     }
 
-    public int getHealthRegenRate() {
+    public double getHealthRegenRate() {
         return health_regen_rate;
     }
 

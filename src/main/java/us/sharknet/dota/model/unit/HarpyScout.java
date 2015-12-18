@@ -57,7 +57,7 @@ public final class HarpyScout extends NpcUnit {
         bountyGoldMin = 24;
         bountyXP = 41;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_PIERCE";
-        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
+        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 180;
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_harpy_scout";

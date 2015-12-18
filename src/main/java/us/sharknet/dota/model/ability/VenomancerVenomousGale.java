@@ -9,7 +9,7 @@ public final class VenomancerVenomousGale extends Ability {
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int abilityCastRange;
-    private final double[] abilityCooldown;
+    private final int[] abilityCooldown;
     private final int abilityManaCost;
     private final String abilityUnitDamageType;
     private final int fightRecapLevel;
@@ -30,7 +30,7 @@ public final class VenomancerVenomousGale extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
         abilityCastRange = 800;
-        abilityCooldown = new double[]{22.0,22.0,22.0,22.0};
+        abilityCooldown = new int[]{21,20,19,18};
         abilityManaCost = 125;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
@@ -67,7 +67,7 @@ public final class VenomancerVenomousGale extends Ability {
         return abilityCastRange;
     }
 
-    public double[] getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 

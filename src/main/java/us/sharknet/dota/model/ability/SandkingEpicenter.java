@@ -19,10 +19,8 @@ public final class SandkingEpicenter extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
-    private final double[] epicenter_cooldown_scepter;
     private final int[] epicenter_damage;
     private final int[] epicenter_pulses;
-    private final int[] epicenter_pulses_scepter;
     private final int[] epicenter_radius;
     private final int[] epicenter_slow;
     private final int epicenter_slow_as;
@@ -44,11 +42,9 @@ public final class SandkingEpicenter extends Ability {
         iD = 5105;
         key = "sandking_epicenter";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        epicenter_cooldown_scepter = new double[]{120.0,100.0,80.0};
         epicenter_damage = new int[]{110,110,110};
         epicenter_pulses = new int[]{6,8,10};
-        epicenter_pulses_scepter = new int[]{8,10,12};
-        epicenter_radius = new int[]{275,325,375,425,475,525,575,650,675,700,775,825};
+        epicenter_radius = new int[]{275,325,375,425,475,525,575,650,675,700};
         epicenter_slow = new int[]{-30,-30,-30};
         epicenter_slow_as = -30;
         epicenter_slow_duration_tooltip = 3;
@@ -115,20 +111,12 @@ public final class SandkingEpicenter extends Ability {
         return spellImmunityType;
     }
 
-    public double[] getEpicenterCooldownScepter() {
-        return epicenter_cooldown_scepter;
-    }
-
     public int[] getEpicenterDamage() {
         return epicenter_damage;
     }
 
     public int[] getEpicenterPulses() {
         return epicenter_pulses;
-    }
-
-    public int[] getEpicenterPulsesScepter() {
-        return epicenter_pulses_scepter;
     }
 
     public int[] getEpicenterRadius() {

@@ -21,20 +21,18 @@ public final class RodOfAtos extends Item {
     private final String itemQuality;
     private final String[] itemShopTags;
     private final String key;
-    private final int bonus_attack_speed;
-    private final int bonus_damage;
     private final int bonus_health;
     private final int bonus_intellect;
-    private final int bonus_movement_speed;
     private final int duration;
     private final String localizedName;
     private final int slow;
+    private final int truestrike_chance;
 
     private RodOfAtos() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = 0;
         abilityCastRange = 1200;
-        abilityCooldown = 10;
+        abilityCooldown = 12;
         abilityManaCost = 50;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
@@ -46,14 +44,12 @@ public final class RodOfAtos extends Item {
         itemQuality = "rare";
         itemShopTags = new String[]{"int","regen_health"};
         key = "item_rod_of_atos";
-        bonus_attack_speed = 0;
-        bonus_damage = 0;
         bonus_health = 350;
         bonus_intellect = 30;
-        bonus_movement_speed = 0;
         duration = 4;
         localizedName = "Rod Of Atos";
         slow = 60;
+        truestrike_chance = 40;
     }
 
     public static RodOfAtos instance() {
@@ -123,24 +119,12 @@ public final class RodOfAtos extends Item {
         return key;
     }
 
-    public int getBonusAttackSpeed() {
-        return bonus_attack_speed;
-    }
-
-    public int getBonusDamage() {
-        return bonus_damage;
-    }
-
     public int getBonusHealth() {
         return bonus_health;
     }
 
     public int getBonusIntellect() {
         return bonus_intellect;
-    }
-
-    public int getBonusMovementSpeed() {
-        return bonus_movement_speed;
     }
 
     public int getDuration() {
@@ -153,6 +137,10 @@ public final class RodOfAtos extends Item {
 
     public int getSlow() {
         return slow;
+    }
+
+    public int getTruestrikeChance() {
+        return truestrike_chance;
     }
 
 

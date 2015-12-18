@@ -48,7 +48,7 @@ public final class PhoenixSupernova extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         aura_radius = new int[]{1000,1000,1000};
         cast_range_tooltip_scepter = 500;
-        damage_per_sec = new int[]{60,80,100};
+        damage_per_sec = new int[]{60,90,120};
         localizedName = "Supernova";
         max_hero_attacks = new int[]{5,8,11};
         owningHeroShortKey = "phoenix";

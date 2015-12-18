@@ -16,7 +16,7 @@ public final class DoomBringerScorchedEarth extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
-    private final int[] bonus_movement_speed_pct;
+    private final int bonus_movement_speed_pct;
     private final int[] damage_per_second;
     private final double[] duration;
     private final String localizedName;
@@ -34,8 +34,8 @@ public final class DoomBringerScorchedEarth extends Ability {
         iD = 5340;
         key = "doom_bringer_scorched_earth";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        bonus_movement_speed_pct = new int[]{16,16,16,16};
-        damage_per_second = new int[]{12,23,34,45};
+        bonus_movement_speed_pct = 14;
+        damage_per_second = new int[]{10,20,30,40};
         duration = new double[]{10.0,12.0,14.0,16.0};
         localizedName = "Scorched Earth";
         owningHeroShortKey = "doom_bringer";
@@ -89,7 +89,7 @@ public final class DoomBringerScorchedEarth extends Ability {
         return spellImmunityType;
     }
 
-    public int[] getBonusMovementSpeedPct() {
+    public int getBonusMovementSpeedPct() {
         return bonus_movement_speed_pct;
     }
 

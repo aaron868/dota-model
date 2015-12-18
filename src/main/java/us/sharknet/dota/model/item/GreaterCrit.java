@@ -29,8 +29,8 @@ public final class GreaterCrit extends Item {
         itemShopTags = new String[]{"damage","crit"};
         key = "item_greater_crit";
         bonus_damage = 81;
-        crit_chance = 25;
-        crit_multiplier = 240;
+        crit_chance = 30;
+        crit_multiplier = 220;
         localizedName = "Daedalus";
     }
 

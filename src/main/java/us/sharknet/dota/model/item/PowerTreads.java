@@ -31,7 +31,7 @@ public final class PowerTreads extends Item {
         key = "item_power_treads";
         bonus_attack_speed = 25;
         bonus_damage = 0;
-        bonus_movement_speed = 50;
+        bonus_movement_speed = 45;
         bonus_stat = 9;
         localizedName = "Power Treads";
     }

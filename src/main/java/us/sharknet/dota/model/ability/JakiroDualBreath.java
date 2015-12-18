@@ -37,7 +37,7 @@ public final class JakiroDualBreath extends Ability {
     private JakiroDualBreath() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.65,0.65,0.65,0.65};
-        abilityCastRange = 550;
+        abilityCastRange = 750;
         abilityCooldown = new double[]{10.0,10.0,10.0,10.0};
         abilityDamage = 0;
         abilityDuration = 5;

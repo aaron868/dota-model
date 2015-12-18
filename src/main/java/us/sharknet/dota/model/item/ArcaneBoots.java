@@ -38,7 +38,7 @@ public final class ArcaneBoots extends Item {
         itemShopTags = new String[]{"move_speed","boost_mana","mana_pool"};
         key = "item_arcane_boots";
         bonus_mana = 250;
-        bonus_movement = 55;
+        bonus_movement = 50;
         localizedName = "Arcane Boots";
         replenish_amount = 135;
         replenish_radius = 900;

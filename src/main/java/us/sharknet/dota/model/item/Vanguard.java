@@ -14,7 +14,6 @@ public final class Vanguard extends Item {
     private final String itemQuality;
     private final String[] itemShopTags;
     private final String key;
-    private final int block_chance;
     private final int block_damage_melee;
     private final int block_damage_ranged;
     private final int bonus_health;
@@ -30,9 +29,8 @@ public final class Vanguard extends Item {
         itemQuality = "epic";
         itemShopTags = new String[]{"regen_health","block","health_pool"};
         key = "item_vanguard";
-        block_chance = 75;
-        block_damage_melee = 40;
-        block_damage_ranged = 20;
+        block_damage_melee = 32;
+        block_damage_ranged = 16;
         bonus_health = 250;
         bonus_health_regen = 6;
         localizedName = "Vanguard";
@@ -75,10 +73,6 @@ public final class Vanguard extends Item {
 
     public String getKey() {
         return key;
-    }
-
-    public int getBlockChance() {
-        return block_chance;
     }
 
     public int getBlockDamageMelee() {

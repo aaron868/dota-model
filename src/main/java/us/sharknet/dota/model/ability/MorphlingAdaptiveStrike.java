@@ -20,7 +20,7 @@ public final class MorphlingAdaptiveStrike extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
-    private final double[] damage_base;
+    private final int damage_base;
     private final double[] damage_max;
     private final double[] damage_min;
     private final int knockback_max;
@@ -37,7 +37,7 @@ public final class MorphlingAdaptiveStrike extends Ability {
         abilityCastPoint = .25;
         abilityCastRange = new int[]{600,700,800,900};
         abilityCooldown = 10;
-        abilityManaCost = new int[]{100,100,100,100};
+        abilityManaCost = new int[]{100,90,80,70};
         abilityModifierSupportValue = .3;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS";
@@ -47,7 +47,7 @@ public final class MorphlingAdaptiveStrike extends Ability {
         iD = 5053;
         key = "morphling_adaptive_strike";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        damage_base = new double[]{50.0,60.0,70.0,80.0};
+        damage_base = 1;
         damage_max = new double[]{0.5,1.0,1.5,2.0};
         damage_min = new double[]{0.25,0.25,0.25,0.25};
         knockback_max = 300;
@@ -123,7 +123,7 @@ public final class MorphlingAdaptiveStrike extends Ability {
         return spellImmunityType;
     }
 
-    public double[] getDamageBase() {
+    public int getDamageBase() {
         return damage_base;
     }
 

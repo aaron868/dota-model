@@ -7,10 +7,12 @@ public final class RikiPermanentInvisibility extends Ability {
     private static RikiPermanentInvisibility instance;
 
     private final String abilityBehavior;
-    private final double[] abilityCooldown;
+    private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
-    private final double[] bonus_health_regen;
+    private final String spellImmunityType;
+    private final int[] backstab_angle;
+    private final double[] damage_multiplier;
     private final double[] fade_delay;
     private final double[] fade_time;
     private final String localizedName;
@@ -18,11 +20,13 @@ public final class RikiPermanentInvisibility extends Ability {
 
     private RikiPermanentInvisibility() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityCooldown = new double[]{8.0,6.0,4.0,2.0};
-        iD = 5145;
+        abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
+        iD = 5144;
         key = "riki_permanent_invisibility";
-        bonus_health_regen = new double[]{6.0,8.0,10.0,12.0};
-        fade_delay = new double[]{8.0,6.0,4.0,2.0};
+        spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
+        backstab_angle = new int[]{105,105,105,105};
+        damage_multiplier = new double[]{0.4,0.6,0.8,1.0};
+        fade_delay = new double[]{6.0,5.0,4.0,3.0};
         fade_time = new double[]{0.0,0.0,0.0,0.0};
         localizedName = "Permanent Invisibility";
         owningHeroShortKey = "riki";
@@ -39,8 +43,8 @@ public final class RikiPermanentInvisibility extends Ability {
         return abilityBehavior;
     }
 
-    public double[] getAbilityCooldown() {
-        return abilityCooldown;
+    public String getAbilityUnitDamageType() {
+        return abilityUnitDamageType;
     }
 
     public int getID() {
@@ -51,8 +55,16 @@ public final class RikiPermanentInvisibility extends Ability {
         return key;
     }
 
-    public double[] getBonusHealthRegen() {
-        return bonus_health_regen;
+    public String getSpellImmunityType() {
+        return spellImmunityType;
+    }
+
+    public int[] getBackstabAngle() {
+        return backstab_angle;
+    }
+
+    public double[] getDamageMultiplier() {
+        return damage_multiplier;
     }
 
     public double[] getFadeDelay() {

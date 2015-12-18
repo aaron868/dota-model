@@ -7,6 +7,9 @@ public final class LoneDruidBear1 extends NpcUnit {
 
     private static LoneDruidBear1 instance;
 
+    private final BearEmpty ability1;
+    private final BearEmpty ability2;
+    private final LoneDruidSavageRoarBear ability3;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -46,12 +49,15 @@ public final class LoneDruidBear1 extends NpcUnit {
     private final String localizedName;
 
     private LoneDruidBear1() {
+        ability1 = BearEmpty.instance();
+        ability2 = BearEmpty.instance();
+        ability3 = LoneDruidSavageRoarBear.instance();
         armorPhysical = 3;
         attackAcquisitionRange = 500;
         attackAnimationPoint = .43;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
-        attackDamageMax = 38;
-        attackDamageMin = 28;
+        attackDamageMax = 35;
+        attackDamageMin = 35;
         attackRange = 128;
         attackRate = 1.75;
         baseClass = "npc_dota_lone_druid_bear";
@@ -90,6 +96,18 @@ public final class LoneDruidBear1 extends NpcUnit {
             instance = new LoneDruidBear1();
         }
         return instance;
+    }
+
+    public BearEmpty getAbility1() {
+        return ability1;
+    }
+
+    public BearEmpty getAbility2() {
+        return ability2;
+    }
+
+    public LoneDruidSavageRoarBear getAbility3() {
+        return ability3;
     }
 
     public int getArmorPhysical() {

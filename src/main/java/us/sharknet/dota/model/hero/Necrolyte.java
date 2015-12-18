@@ -64,7 +64,7 @@ public final class Necrolyte extends Hero {
         ability2 = NecrolyteHeartstopperAura.instance();
         ability3 = NecrolyteSadist.instance();
         ability4 = NecrolyteReapersScythe.instance();
-        armorPhysical = 0;
+        armorPhysical = 1;
         attackAcquisitionRange = 800;
         attackAnimationPoint = .53;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";

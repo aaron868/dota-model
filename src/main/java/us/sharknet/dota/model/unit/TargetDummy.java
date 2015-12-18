@@ -37,7 +37,7 @@ public final class TargetDummy extends NpcUnit {
         baseClass = "npc_dota_target_dummy";
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
-        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
+        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 120;
         isNeutralUnitType = 1;
         key = "npc_dota_target_dummy";

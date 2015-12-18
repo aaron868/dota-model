@@ -40,6 +40,9 @@ public final class Tiny extends Hero {
     private final String lastHitChallengeRival;
     private final int loadoutScale;
     private final String model;
+    private final String model1;
+    private final String model2;
+    private final String model3;
     private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
@@ -90,6 +93,9 @@ public final class Tiny extends Hero {
         lastHitChallengeRival = "npc_dota_hero_earthshaker";
         loadoutScale = 1;
         model = "models/heroes/tiny_01/tiny_01.vmdl";
+        model1 = "models/heroes/tiny_02/tiny_02.vmdl";
+        model2 = "models/heroes/tiny_03/tiny_03.vmdl";
+        model3 = "models/heroes/tiny_04/tiny_04.vmdl";
         modelScale = .93;
         movementSpeed = 285;
         movementTurnRate = .5;
@@ -244,6 +250,18 @@ public final class Tiny extends Hero {
 
     public String getModel() {
         return model;
+    }
+
+    public String getModel1() {
+        return model1;
+    }
+
+    public String getModel2() {
+        return model2;
+    }
+
+    public String getModel3() {
+        return model3;
     }
 
     public double getModelScale() {

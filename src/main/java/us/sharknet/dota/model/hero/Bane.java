@@ -101,7 +101,7 @@ public final class Bane extends Hero {
         loadoutScale = .83;
         model = "models/heroes/bane/bane.vmdl";
         modelScale = .93;
-        movementSpeed = 315;
+        movementSpeed = 310;
         movementTurnRate = .6;
         noCombine = 1;
         pickSound = "bane_bane_spawn_01";

@@ -9,7 +9,7 @@ public final class MedusaMysticSnake extends Ability {
     private final String abilityBehavior;
     private final double[] abilityCastPoint;
     private final int abilityCastRange;
-    private final double[] abilityCooldown;
+    private final int abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final String abilityUnitTargetTeam;
@@ -33,7 +33,7 @@ public final class MedusaMysticSnake extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
         abilityCastRange = 800;
-        abilityCooldown = new double[]{11.0,11.0,11.0,11.0};
+        abilityCooldown = 11;
         abilityManaCost = new int[]{140,150,160,170};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
@@ -50,7 +50,7 @@ public final class MedusaMysticSnake extends Ability {
         return_speed = 800;
         snake_damage = new int[]{80,120,160,200};
         snake_jumps = new int[]{3,4,5,6};
-        snake_mana_steal = new int[]{20,35,50,65};
+        snake_mana_steal = new int[]{11,14,17,20};
         snake_scale = 35;
     }
 
@@ -73,7 +73,7 @@ public final class MedusaMysticSnake extends Ability {
         return abilityCastRange;
     }
 
-    public double[] getAbilityCooldown() {
+    public int getAbilityCooldown() {
         return abilityCooldown;
     }
 

@@ -30,7 +30,7 @@ public final class LinaDragonSlave extends Ability {
     private LinaDragonSlave() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.45,0.45,0.45,0.45};
-        abilityCastRange = 800;
+        abilityCastRange = 1075;
         abilityCooldown = 8.5;
         abilityDamage = new int[]{110,180,250,320};
         abilityDuration = new double[]{0.6875,0.6875,0.6875,0.6875};

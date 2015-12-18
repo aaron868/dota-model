@@ -20,6 +20,7 @@ public final class LunaEclipse extends Ability {
     private final String key;
     private final String spellImmunityType;
     private final double[] beam_interval;
+    private final double beam_interval_scepter;
     private final int[] beams;
     private final int[] beams_scepter;
     private final int cast_range_tooltip_scepter;
@@ -46,11 +47,12 @@ public final class LunaEclipse extends Ability {
         key = "luna_eclipse";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         beam_interval = new double[]{0.6,0.6,0.6};
+        beam_interval_scepter = .3;
         beams = new int[]{5,8,11};
         beams_scepter = new int[]{6,12,18};
         cast_range_tooltip_scepter = 2500;
         duration_tooltip = new double[]{2.4,4.2,6.0};
-        duration_tooltip_scepter = new double[]{3.6,7.2,10.8};
+        duration_tooltip_scepter = new double[]{1.8,3.6,5.4};
         hit_count = 5;
         hit_count_scepter = new int[]{6,12,18};
         localizedName = "Eclipse";
@@ -119,6 +121,10 @@ public final class LunaEclipse extends Ability {
 
     public double[] getBeamInterval() {
         return beam_interval;
+    }
+
+    public double getBeamIntervalScepter() {
+        return beam_interval_scepter;
     }
 
     public int[] getBeams() {

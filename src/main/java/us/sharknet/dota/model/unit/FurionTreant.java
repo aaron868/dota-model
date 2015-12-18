@@ -51,8 +51,8 @@ public final class FurionTreant extends NpcUnit {
         attackAcquisitionRange = 500;
         attackAnimationPoint = .467;
         attackCapabilities = "DOTA_UNIT_CAP_MELEE_ATTACK";
-        attackDamageMax = 30;
-        attackDamageMin = 26;
+        attackDamageMax = 34;
+        attackDamageMin = 30;
         attackDamageType = "DAMAGE_TYPE_ArmorPhysical";
         attackRange = 100;
         attackRate = 1.75;

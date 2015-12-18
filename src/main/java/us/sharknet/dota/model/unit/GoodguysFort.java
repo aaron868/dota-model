@@ -28,7 +28,6 @@ public final class GoodguysFort extends NpcUnit {
     private final String boundsHullName;
     private final int bountyGoldMax;
     private final int bountyGoldMin;
-    private final int bountyXP;
     private final String combatClassAttack;
     private final String combatClassDefend;
     private final int healthBarOffset;
@@ -75,7 +74,6 @@ public final class GoodguysFort extends NpcUnit {
         boundsHullName = "DOTA_HULL_SIZE_BUILDING";
         bountyGoldMax = 0;
         bountyGoldMin = 0;
-        bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_SIEGE";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE";
         healthBarOffset = 400;
@@ -190,10 +188,6 @@ public final class GoodguysFort extends NpcUnit {
 
     public int getBountyGoldMin() {
         return bountyGoldMin;
-    }
-
-    public int getBountyXP() {
-        return bountyXP;
     }
 
     public String getCombatClassAttack() {

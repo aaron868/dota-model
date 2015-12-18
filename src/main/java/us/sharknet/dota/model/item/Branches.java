@@ -7,6 +7,9 @@ public final class Branches extends Item {
     private static Branches instance;
 
     private final String abilityBehavior;
+    private final int abilityCastPoint;
+    private final int abilityCastRange;
+    private final int abilityCooldown;
     private final int iD;
     private final String[] itemAliases;
     private final int itemCost;
@@ -16,9 +19,13 @@ public final class Branches extends Item {
     private final String model;
     private final int bonus_all_stats;
     private final String localizedName;
+    private final int tree_duration;
 
     private Branches() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
+        abilityCastPoint = 0;
+        abilityCastRange = 200;
+        abilityCooldown = 0;
         iD = 16;
         itemAliases = new String[]{"gg branch","iron branch"};
         itemCost = 50;
@@ -28,6 +35,7 @@ public final class Branches extends Item {
         model = "models/props_gameplay/branch.vmdl";
         bonus_all_stats = 1;
         localizedName = "Iron Branch";
+        tree_duration = 20;
     }
 
     public static Branches instance() {
@@ -39,6 +47,18 @@ public final class Branches extends Item {
 
     public String getAbilityBehavior() {
         return abilityBehavior;
+    }
+
+    public int getAbilityCastPoint() {
+        return abilityCastPoint;
+    }
+
+    public int getAbilityCastRange() {
+        return abilityCastRange;
+    }
+
+    public int getAbilityCooldown() {
+        return abilityCooldown;
     }
 
     public int getID() {
@@ -75,6 +95,10 @@ public final class Branches extends Item {
 
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getTreeDuration() {
+        return tree_duration;
     }
 
 

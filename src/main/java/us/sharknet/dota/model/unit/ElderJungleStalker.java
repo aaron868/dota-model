@@ -58,7 +58,7 @@ public final class ElderJungleStalker extends NpcUnit {
         bountyGoldMax = 170;
         bountyGoldMin = 152;
         bountyXP = 155;
-        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_LIGHT";
+        combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 220;
         isAncient = 1;

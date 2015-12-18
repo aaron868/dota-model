@@ -45,7 +45,7 @@ public final class BlackDrake extends NpcUnit {
     private final String localizedName;
 
     private BlackDrake() {
-        armorPhysical = 0;
+        armorPhysical = -1;
         attackAcquisitionRange = 300;
         attackAnimationPoint = .94;
         attackCapabilities = "DOTA_UNIT_CAP_RANGED_ATTACK";

@@ -35,10 +35,10 @@ public final class OracleFortunesEnd extends Ability {
         abilityCastRange = 850;
         abilityChannelTime = 2.5;
         abilityCooldown = new int[]{15,12,9,6};
-        abilityManaCost = 130;
+        abilityManaCost = 110;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_INVULNERABLE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         fightRecapLevel = 1;
         iD = 5637;

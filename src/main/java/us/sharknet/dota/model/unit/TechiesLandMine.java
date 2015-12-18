@@ -57,7 +57,7 @@ public final class TechiesLandMine extends NpcUnit {
         bountyGoldMin = 10;
         bountyXP = 14;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_BASIC";
-        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_BASIC";
+        combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_STRONG";
         healthBarOffset = 140;
         key = "npc_dota_techies_land_mine";
         level = 1;

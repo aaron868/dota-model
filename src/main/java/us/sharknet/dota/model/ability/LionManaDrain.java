@@ -10,7 +10,7 @@ public final class LionManaDrain extends Ability {
     private final double[] abilityCastPoint;
     private final int abilityCastRange;
     private final double abilityChannelTime;
-    private final double[] abilityCooldown;
+    private final int[] abilityCooldown;
     private final int[] abilityManaCost;
     private final int abilityModifierSupportValue;
     private final String abilityUnitTargetFlags;
@@ -31,7 +31,7 @@ public final class LionManaDrain extends Ability {
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCastRange = 850;
         abilityChannelTime = 5.1;
-        abilityCooldown = new double[]{20.0,15.0,10.0,5.0};
+        abilityCooldown = new int[]{16,12,8,4};
         abilityManaCost = new int[]{10,10,10,10};
         abilityModifierSupportValue = 5;
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE";
@@ -71,7 +71,7 @@ public final class LionManaDrain extends Ability {
         return abilityChannelTime;
     }
 
-    public double[] getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 

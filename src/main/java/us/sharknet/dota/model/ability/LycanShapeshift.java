@@ -7,16 +7,16 @@ public final class LycanShapeshift extends Ability {
     private static LycanShapeshift instance;
 
     private final String abilityBehavior;
-    private final double[] abilityCooldown;
+    private final int[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final int bonus_night_vision;
-    private final int[] crit_chance;
-    private final int[] crit_damage;
-    private final double[] duration;
+    private final int crit_chance;
+    private final int[] crit_multiplier;
+    private final int duration;
     private final String localizedName;
     private final String owningHeroShortKey;
     private final int speed;
@@ -24,16 +24,16 @@ public final class LycanShapeshift extends Ability {
 
     private LycanShapeshift() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCooldown = new double[]{120.0,90.0,60.0};
+        abilityCooldown = new int[]{120,90,60};
         abilityManaCost = new int[]{100,100,100};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         fightRecapLevel = 2;
         iD = 5398;
         key = "lycan_shapeshift";
         bonus_night_vision = 1000;
-        crit_chance = new int[]{30,35,40};
-        crit_damage = new int[]{170,170,170};
-        duration = new double[]{18.0,18.0,18.0};
+        crit_chance = 40;
+        crit_multiplier = new int[]{140,160,180};
+        duration = 18;
         localizedName = "Shapeshift";
         owningHeroShortKey = "lycan";
         speed = 650;
@@ -51,7 +51,7 @@ public final class LycanShapeshift extends Ability {
         return abilityBehavior;
     }
 
-    public double[] getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -79,15 +79,15 @@ public final class LycanShapeshift extends Ability {
         return bonus_night_vision;
     }
 
-    public int[] getCritChance() {
+    public int getCritChance() {
         return crit_chance;
     }
 
-    public int[] getCritDamage() {
-        return crit_damage;
+    public int[] getCritMultiplier() {
+        return crit_multiplier;
     }
 
-    public double[] getDuration() {
+    public int getDuration() {
         return duration;
     }
 

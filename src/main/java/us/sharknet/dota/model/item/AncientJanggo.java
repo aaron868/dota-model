@@ -47,7 +47,7 @@ public final class AncientJanggo extends Item {
         bonus_aura_attack_speed_pct = 5;
         bonus_aura_movement_speed_pct = 5;
         bonus_damage = 3;
-        bonus_movement_speed_pct = 10;
+        bonus_movement_speed_pct = 13;
         bonus_stats = 9;
         duration = 6;
         localizedName = "Drum Of Endurance";

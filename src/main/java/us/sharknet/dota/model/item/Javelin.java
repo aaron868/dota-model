@@ -26,9 +26,9 @@ public final class Javelin extends Item {
         itemQuality = "component";
         itemShopTags = "damage";
         key = "item_javelin";
-        bonus_chance = 20;
-        bonus_chance_damage = 40;
-        bonus_damage = 21;
+        bonus_chance = 25;
+        bonus_chance_damage = 85;
+        bonus_damage = 10;
         localizedName = "Javelin";
     }
 

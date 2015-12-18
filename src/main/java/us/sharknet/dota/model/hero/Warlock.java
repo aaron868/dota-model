@@ -76,7 +76,7 @@ public final class Warlock extends Hero {
         attributeAgilityGain = 1;
         attributeBaseAgility = 10;
         attributeBaseIntelligence = 24;
-        attributeBaseStrength = 18;
+        attributeBaseStrength = 22;
         attributeIntelligenceGain = 2.7;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 2.5;

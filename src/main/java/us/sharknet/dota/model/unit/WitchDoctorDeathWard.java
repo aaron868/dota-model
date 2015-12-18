@@ -20,7 +20,6 @@ public final class WitchDoctorDeathWard extends NpcUnit {
     private final String boundsHullName;
     private final int bountyGoldMax;
     private final int bountyGoldMin;
-    private final int bountyXP;
     private final String combatClassAttack;
     private final String combatClassDefend;
     private final int hasInventory;
@@ -59,7 +58,6 @@ public final class WitchDoctorDeathWard extends NpcUnit {
         boundsHullName = "DOTA_HULL_SIZE_SIEGE";
         bountyGoldMax = 0;
         bountyGoldMin = 0;
-        bountyXP = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_HERO";
         hasInventory = 0;
@@ -142,10 +140,6 @@ public final class WitchDoctorDeathWard extends NpcUnit {
 
     public int getBountyGoldMin() {
         return bountyGoldMin;
-    }
-
-    public int getBountyXP() {
-        return bountyXP;
     }
 
     public String getCombatClassAttack() {

@@ -41,13 +41,13 @@ public final class TranquilBoots extends Item {
         itemQuality = "rare";
         itemShopTags = new String[]{"move_speed","regen_health","armor"};
         key = "item_tranquil_boots";
-        bonus_armor = 4;
+        bonus_armor = 3;
         bonus_health_regen = 12;
-        bonus_movement_speed = 90;
+        bonus_movement_speed = 85;
         break_count = 1;
         break_threshold = 20;
         break_time = 13;
-        broken_movement_speed = 60;
+        broken_movement_speed = 55;
         heal_amount = 250;
         heal_duration = 2;
         heal_interval = .334;

@@ -73,7 +73,7 @@ public final class Furion extends Hero {
         attackRate = 1.7;
         attributeAgilityGain = 1.9;
         attributeBaseAgility = 18;
-        attributeBaseIntelligence = 21;
+        attributeBaseIntelligence = 25;
         attributeBaseStrength = 19;
         attributeIntelligenceGain = 2.9;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";

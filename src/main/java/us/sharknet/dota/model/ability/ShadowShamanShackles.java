@@ -20,7 +20,6 @@ public final class ShadowShamanShackles extends Ability {
     private final String key;
     private final String spellImmunityType;
     private final double[] channel_time;
-    private final double[] damage_per_sec_tooltip;
     private final String localizedName;
     private final String owningHeroShortKey;
     private final double[] tick_interval;
@@ -41,11 +40,10 @@ public final class ShadowShamanShackles extends Ability {
         key = "shadow_shaman_shackles";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         channel_time = new double[]{2.75,3.5,4.25,5.0};
-        damage_per_sec_tooltip = new double[]{44.0,52.0,56.0,60.0};
         localizedName = "Shackles";
         owningHeroShortKey = "shadow_shaman";
         tick_interval = new double[]{0.1,0.1,0.1,0.1};
-        total_damage = new double[]{120.0,180.0,240.0,300.0};
+        total_damage = new double[]{120.0,200.0,280.0,360.0};
     }
 
     public static ShadowShamanShackles instance() {
@@ -109,10 +107,6 @@ public final class ShadowShamanShackles extends Ability {
 
     public double[] getChannelTime() {
         return channel_time;
-    }
-
-    public double[] getDamagePerSecTooltip() {
-        return damage_per_sec_tooltip;
     }
 
     public String getLocalizedName() {

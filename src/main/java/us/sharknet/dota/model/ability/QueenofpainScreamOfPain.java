@@ -26,7 +26,7 @@ public final class QueenofpainScreamOfPain extends Ability {
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
         abilityCastRange = 0;
         abilityCooldown = new double[]{7.0,7.0,7.0,7.0};
-        abilityDamage = new int[]{85,165,225,300};
+        abilityDamage = new int[]{75,150,225,300};
         abilityManaCost = new int[]{110,120,130,140};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5175;

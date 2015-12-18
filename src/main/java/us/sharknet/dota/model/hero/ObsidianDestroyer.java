@@ -75,7 +75,7 @@ public final class ObsidianDestroyer extends Hero {
         attributeBaseAgility = 24;
         attributeBaseIntelligence = 26;
         attributeBaseStrength = 19;
-        attributeIntelligenceGain = 3.3;
+        attributeIntelligenceGain = 2.7;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 2.3;
         banSound = "outworld_destroyer_odest_anger_02";

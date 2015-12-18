@@ -10,7 +10,7 @@ public final class BatriderFlamebreak extends Ability {
     private final double[] abilityCastPoint;
     private final int abilityCastRange;
     private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final int abilityModifierSupportValue;
     private final String abilityUnitDamageType;
     private final int fightRecapLevel;
@@ -35,7 +35,7 @@ public final class BatriderFlamebreak extends Ability {
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
         abilityCastRange = 1500;
         abilityCooldown = 14;
-        abilityManaCost = 140;
+        abilityManaCost = new int[]{110,120,130,140};
         abilityModifierSupportValue = 1;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
@@ -79,7 +79,7 @@ public final class BatriderFlamebreak extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 

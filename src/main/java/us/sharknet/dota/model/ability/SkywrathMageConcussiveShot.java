@@ -10,7 +10,7 @@ public final class SkywrathMageConcussiveShot extends Ability {
     private final double[] abilityCastPoint;
     private final int abilityCastRange;
     private final double[] abilityCooldown;
-    private final int[] abilityManaCost;
+    private final int abilityManaCost;
     private final String abilityUnitDamageType;
     private final int fightRecapLevel;
     private final int iD;
@@ -32,7 +32,7 @@ public final class SkywrathMageConcussiveShot extends Ability {
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
         abilityCastRange = 1600;
         abilityCooldown = new double[]{18.0,16.0,14.0,12.0};
-        abilityManaCost = new int[]{110,110,110,110};
+        abilityManaCost = 95;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         fightRecapLevel = 1;
         iD = 5582;
@@ -73,7 +73,7 @@ public final class SkywrathMageConcussiveShot extends Ability {
         return abilityCooldown;
     }
 
-    public int[] getAbilityManaCost() {
+    public int getAbilityManaCost() {
         return abilityManaCost;
     }
 

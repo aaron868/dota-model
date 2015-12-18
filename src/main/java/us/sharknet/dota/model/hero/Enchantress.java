@@ -51,7 +51,6 @@ public final class Enchantress extends Hero {
     private final int[] rolelevels;
     private final String soundSet;
     private final String team;
-    private final int visionNighttimeRange;
     private final String voiceFile;
     private final boolean active;
     private final String localizedName;
@@ -103,7 +102,6 @@ public final class Enchantress extends Hero {
         rolelevels = new int[]{2,3,2,1,1};
         soundSet = "Hero_Enchantress";
         team = "Good";
-        visionNighttimeRange = 800;
         voiceFile = "soundevents/voscripts/game_sounds_vo_enchantress.vsndevts";
         active = true;
         localizedName = "Enchantress";
@@ -292,10 +290,6 @@ public final class Enchantress extends Hero {
 
     public String getTeam() {
         return team;
-    }
-
-    public int getVisionNighttimeRange() {
-        return visionNighttimeRange;
     }
 
     public String getVoiceFile() {

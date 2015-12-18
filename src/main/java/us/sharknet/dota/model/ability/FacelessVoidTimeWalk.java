@@ -6,40 +6,38 @@ public final class FacelessVoidTimeWalk extends Ability {
 
     private static FacelessVoidTimeWalk instance;
 
-    private final String abilityBehavior;
-    private final double[] abilityCastPoint;
-    private final int[] abilityCastRange;
-    private final double[] abilityCooldown;
+    private final String[] abilityBehavior;
+    private final double abilityCastPoint;
+    private final int abilityCastRange;
+    private final int[] abilityCooldown;
     private final int abilityManaCost;
     private final double abilityModifierSupportValue;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
-    private final int duration;
+    private final int backtrack_duration;
     private final String localizedName;
-    private final int[] movement_speed_pct;
     private final String owningHeroShortKey;
     private final int radius;
+    private final int range;
     private final int speed;
-    private final int[] tooltip_range;
 
     private FacelessVoidTimeWalk() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
-        abilityCastPoint = new double[]{0.35,0.35,0.35,0.35};
-        abilityCastRange = new int[]{700,900,1100,1300};
-        abilityCooldown = new double[]{19.0,17.0,15.0,13.0};
-        abilityManaCost = 90;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"};
+        abilityCastPoint = .2;
+        abilityCastRange = 0;
+        abilityCooldown = new int[]{24,18,12,6};
+        abilityManaCost = 40;
         abilityModifierSupportValue = .25;
         iD = 5182;
         key = "faceless_void_time_walk";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        duration = 3;
+        backtrack_duration = 2;
         localizedName = "Time Walk";
-        movement_speed_pct = new int[]{-20,-30,-40,-50};
         owningHeroShortKey = "faceless_void";
         radius = 300;
+        range = 550;
         speed = 3000;
-        tooltip_range = new int[]{700,900,1100,1300};
     }
 
     public static FacelessVoidTimeWalk instance() {
@@ -49,19 +47,19 @@ public final class FacelessVoidTimeWalk extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double[] getAbilityCastPoint() {
+    public double getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int[] getAbilityCastRange() {
+    public int getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public double[] getAbilityCooldown() {
+    public int[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -85,16 +83,12 @@ public final class FacelessVoidTimeWalk extends Ability {
         return spellImmunityType;
     }
 
-    public int getDuration() {
-        return duration;
+    public int getBacktrackDuration() {
+        return backtrack_duration;
     }
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int[] getMovementSpeedPct() {
-        return movement_speed_pct;
     }
 
     public String getOwningHeroShortKey() {
@@ -105,12 +99,12 @@ public final class FacelessVoidTimeWalk extends Ability {
         return radius;
     }
 
-    public int getSpeed() {
-        return speed;
+    public int getRange() {
+        return range;
     }
 
-    public int[] getTooltipRange() {
-        return tooltip_range;
+    public int getSpeed() {
+        return speed;
     }
 
 

@@ -22,7 +22,9 @@ public final class SandkingBurrowstrike extends Ability {
     private final double burrow_anim_time;
     private final double burrow_duration;
     private final int burrow_speed;
+    private final int burrow_speed_scepter;
     private final int burrow_width;
+    private final int[] cast_range_scepter;
     private final String localizedName;
     private final String owningHeroShortKey;
     private final int[] tooltip_range;
@@ -44,7 +46,9 @@ public final class SandkingBurrowstrike extends Ability {
         burrow_anim_time = .52;
         burrow_duration = 2.17;
         burrow_speed = 2000;
+        burrow_speed_scepter = 3000;
         burrow_width = 150;
+        cast_range_scepter = new int[]{700,900,1100,1300};
         localizedName = "Burrowstrike";
         owningHeroShortKey = "sand_king";
         tooltip_range = new int[]{350,450,550,650};
@@ -121,8 +125,16 @@ public final class SandkingBurrowstrike extends Ability {
         return burrow_speed;
     }
 
+    public int getBurrowSpeedScepter() {
+        return burrow_speed_scepter;
+    }
+
     public int getBurrowWidth() {
         return burrow_width;
+    }
+
+    public int[] getCastRangeScepter() {
+        return cast_range_scepter;
     }
 
     public String getLocalizedName() {

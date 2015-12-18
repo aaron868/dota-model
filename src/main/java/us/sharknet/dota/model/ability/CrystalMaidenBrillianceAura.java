@@ -23,8 +23,8 @@ public final class CrystalMaidenBrillianceAura extends Ability {
         iD = 5128;
         key = "crystal_maiden_brilliance_aura";
         localizedName = "Brilliance Aura";
-        mana_regen = new double[]{1.0,1.5,2.0,2.5};
-        mana_regen_self = new double[]{2.0,3.0,4.0,5.0};
+        mana_regen = new double[]{1.0,1.5,2.0,3.0};
+        mana_regen_self = new double[]{2.0,3.0,4.0,6.0};
         owningHeroShortKey = "crystal_maiden";
     }
 

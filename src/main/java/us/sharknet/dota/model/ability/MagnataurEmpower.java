@@ -17,12 +17,15 @@ public final class MagnataurEmpower extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
+    private final int aura_radius;
     private final int[] bonus_damage_pct;
-    private final int[] cleave_damage_pct;
+    private final double[] cleave_damage_pct;
     private final int cleave_radius;
     private final double[] empower_duration;
     private final String localizedName;
     private final String owningHeroShortKey;
+    private final double[] splash_damage_pct;
+    private final int splash_radius;
 
     private MagnataurEmpower() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
@@ -36,12 +39,15 @@ public final class MagnataurEmpower extends Ability {
         iD = 5519;
         key = "magnataur_empower";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
+        aura_radius = 900;
         bonus_damage_pct = new int[]{20,30,40,50};
-        cleave_damage_pct = new int[]{20,30,40,50};
+        cleave_damage_pct = new double[]{20.0,30.0,40.0,50.0};
         cleave_radius = 200;
         empower_duration = new double[]{40.0,40.0,40.0,40.0};
         localizedName = "Empower";
         owningHeroShortKey = "magnataur";
+        splash_damage_pct = new double[]{10.0,15.0,20.0,25.0};
+        splash_radius = 200;
     }
 
     public static MagnataurEmpower instance() {
@@ -95,11 +101,15 @@ public final class MagnataurEmpower extends Ability {
         return spellImmunityType;
     }
 
+    public int getAuraRadius() {
+        return aura_radius;
+    }
+
     public int[] getBonusDamagePct() {
         return bonus_damage_pct;
     }
 
-    public int[] getCleaveDamagePct() {
+    public double[] getCleaveDamagePct() {
         return cleave_damage_pct;
     }
 
@@ -117,6 +127,14 @@ public final class MagnataurEmpower extends Ability {
 
     public String getOwningHeroShortKey() {
         return owningHeroShortKey;
+    }
+
+    public double[] getSplashDamagePct() {
+        return splash_damage_pct;
+    }
+
+    public int getSplashRadius() {
+        return splash_radius;
     }
 
 

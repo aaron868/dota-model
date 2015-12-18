@@ -13,7 +13,6 @@ public final class Mantle extends Item {
     private final String itemQuality;
     private final String itemShopTags;
     private final String key;
-    private final int sideShop;
     private final int bonus_intellect;
     private final String localizedName;
 
@@ -25,7 +24,6 @@ public final class Mantle extends Item {
         itemQuality = "component";
         itemShopTags = "int";
         key = "item_mantle";
-        sideShop = 1;
         bonus_intellect = 3;
         localizedName = "Mantle Of Intelligence";
     }
@@ -63,10 +61,6 @@ public final class Mantle extends Item {
 
     public String getKey() {
         return key;
-    }
-
-    public int getSideShop() {
-        return sideShop;
     }
 
     public int getBonusIntellect() {

@@ -43,7 +43,7 @@ public final class ShadowDemonDisruption extends Ability {
         key = "shadow_demon_disruption";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         disruption_duration = new double[]{2.5,2.5,2.5,2.5};
-        illusion_duration = new double[]{5.0,6.0,7.0,8.0};
+        illusion_duration = new double[]{6.0,8.0,10.0,12.0};
         illusion_incoming_damage = new double[]{50.0,50.0,50.0,50.0};
         illusion_outgoing_damage = new double[]{70.0,60.0,50.0,40.0};
         illusion_outgoing_tooltip = new double[]{30.0,40.0,50.0,60.0};

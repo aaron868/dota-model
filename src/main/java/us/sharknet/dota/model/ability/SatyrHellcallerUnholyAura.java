@@ -20,7 +20,7 @@ public final class SatyrHellcallerUnholyAura extends Ability {
         iD = 5317;
         key = "satyr_hellcaller_unholy_aura";
         maxLevel = 1;
-        health_regen = 4;
+        health_regen = 6;
         localizedName = "Unholy Aura";
         owningHeroShortKey = "satyr_hellcaller";
         radius = 900;

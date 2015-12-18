@@ -30,11 +30,11 @@ public final class WitchDoctorMaledict extends Ability {
     private WitchDoctorMaledict() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.35,0.35,0.35,0.35};
-        abilityCastRange = 525;
+        abilityCastRange = 575;
         abilityCooldown = 2;
         abilityDamage = new int[]{5,10,15,20};
         abilityDuration = 12;
-        abilityManaCost = new int[]{120,120,120,120};
+        abilityManaCost = new int[]{105,110,115,120};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         fightRecapLevel = 1;

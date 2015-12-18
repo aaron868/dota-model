@@ -10,9 +10,12 @@ public final class LycanSummonWolvesCriticalStrike extends Ability {
     private final int iD;
     private final String key;
     private final int maxLevel;
-    private final int crit_chance;
-    private final int crit_damage;
     private final String localizedName;
+    private final int maim_attack_speed;
+    private final int maim_chance;
+    private final int maim_damage;
+    private final int maim_duration;
+    private final int maim_movement_speed;
     private final String owningHeroShortKey;
 
     private LycanSummonWolvesCriticalStrike() {
@@ -20,9 +23,12 @@ public final class LycanSummonWolvesCriticalStrike extends Ability {
         iD = 5399;
         key = "lycan_summon_wolves_critical_strike";
         maxLevel = 1;
-        crit_chance = 30;
-        crit_damage = 170;
         localizedName = "Summon Wolves Critical Strike";
+        maim_attack_speed = 40;
+        maim_chance = 20;
+        maim_damage = 8;
+        maim_duration = 4;
+        maim_movement_speed = 0;
         owningHeroShortKey = "lycan";
     }
 
@@ -49,16 +55,28 @@ public final class LycanSummonWolvesCriticalStrike extends Ability {
         return maxLevel;
     }
 
-    public int getCritChance() {
-        return crit_chance;
-    }
-
-    public int getCritDamage() {
-        return crit_damage;
-    }
-
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaimAttackSpeed() {
+        return maim_attack_speed;
+    }
+
+    public int getMaimChance() {
+        return maim_chance;
+    }
+
+    public int getMaimDamage() {
+        return maim_damage;
+    }
+
+    public int getMaimDuration() {
+        return maim_duration;
+    }
+
+    public int getMaimMovementSpeed() {
+        return maim_movement_speed;
     }
 
     public String getOwningHeroShortKey() {
