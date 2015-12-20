@@ -20,7 +20,7 @@ public final class TuskLaunchSnowball extends Ability {
         abilityTextureName = "tusk_snowball";
         iD = 5641;
         key = "tusk_launch_snowball";
-        localizedName = "Launch Showball";
+        localizedName = "Launch Snowball";
         owningHeroShortKey = "tusk";
     }
 

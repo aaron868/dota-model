@@ -28,7 +28,7 @@ public final class RingOfBasilius extends Item {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE"};
         iD = 88;
         itemAliases = new String[]{"rob","ring of basilius"};
-        itemCost = 525;
+        itemCost = 500;
         itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
         itemQuality = "rare";
         itemShopTags = new String[]{"damage","regen_mana","armor"};

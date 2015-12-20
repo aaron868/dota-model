@@ -28,7 +28,7 @@ public final class Vladmir extends Item {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 81;
         itemAliases = new String[]{"vladmir's offering","vlads"};
-        itemCost = 2325;
+        itemCost = 2300;
         itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
         itemQuality = "rare";
         itemShopTags = new String[]{"lifesteal","damage","armor","regen_mana"};
