@@ -86,7 +86,7 @@ public final class DoomBringer extends Hero {
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 3.2;
         banSound = "doom_bringer_doom_anger_02";
-        cMEnabled = 0;
+        cMEnabled = 1;
         enabled = 1;
         healthBarOffset = 240;
         heroGlowColor = new int[]{107,74,53};

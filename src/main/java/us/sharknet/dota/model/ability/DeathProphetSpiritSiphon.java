@@ -46,7 +46,7 @@ public final class DeathProphetSpiritSiphon extends Ability {
         charge_restore_time = 45;
         damage = 2;
         damage_pct = new double[]{1.0,1.8,2.6,3.4};
-        haunt_duration = 4;
+        haunt_duration = 5;
         localizedName = "Spirit Siphon";
         max_charges = new int[]{1,2,3,4};
         movement_slow = new int[]{6,10,14,18};

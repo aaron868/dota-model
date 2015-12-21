@@ -84,7 +84,7 @@ public final class DeathProphet extends Hero {
         banSound = "death_prophet_dpro_anger_01";
         botImplemented = 1;
         boundsHullName = "DOTA_HULL_SIZE_HERO";
-        cMEnabled = 0;
+        cMEnabled = 1;
         enabled = 1;
         healthBarOffset = 200;
         heroGlowColor = new int[]{15,241,28};

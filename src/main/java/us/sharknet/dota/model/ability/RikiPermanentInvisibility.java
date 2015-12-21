@@ -25,7 +25,7 @@ public final class RikiPermanentInvisibility extends Ability {
         key = "riki_permanent_invisibility";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         backstab_angle = new int[]{105,105,105,105};
-        damage_multiplier = new double[]{0.4,0.6,0.8,1.0};
+        damage_multiplier = new double[]{0.5,0.75,1.0,1.25};
         fade_delay = new double[]{6.0,5.0,4.0,3.0};
         fade_time = new double[]{0.0,0.0,0.0,0.0};
         localizedName = "Permanent Invisibility";

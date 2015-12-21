@@ -90,7 +90,7 @@ public final class LoneDruid extends Hero {
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 2.1;
         banSound = "lone_druid_lone_druid_anger_10";
-        cMEnabled = 0;
+        cMEnabled = 1;
         enabled = 1;
         healthBarOffset = 145;
         heroID = 80;

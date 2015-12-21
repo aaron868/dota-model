@@ -40,7 +40,7 @@ public final class PudgeMeatHook extends Ability {
         key = "pudge_meat_hook";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         cooldown_scepter = 4;
-        damage_scepter = new int[]{175,275,375,475};
+        damage_scepter = new int[]{180,270,360,450};
         hook_distance = new int[]{1000,1100,1200,1300};
         hook_speed = 16;
         hook_width = 100;

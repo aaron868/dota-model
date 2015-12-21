@@ -25,11 +25,11 @@ public final class FacelessVoidTimeDilation extends Ability {
         abilityManaCost = 50;
         iD = 5691;
         key = "faceless_void_time_dilation";
-        duration = new double[]{6.0,7.0,8.0,9.0};
+        duration = new double[]{5.5,7.0,8.5,10.0};
         localizedName = " Time Dilation";
         owningHeroShortKey = "faceless_void";
-        radius = 650;
-        slow = new int[]{4,6,8,10};
+        radius = 725;
+        slow = new int[]{7,8,9,10};
     }
 
     public static FacelessVoidTimeDilation instance() {

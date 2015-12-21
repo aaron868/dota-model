@@ -79,7 +79,7 @@ public final class FacelessVoid extends Hero {
         attributeStrengthGain = 1.6;
         banSound = "faceless_void_face_anger_02";
         boundsHullName = "DOTA_HULL_SIZE_HERO";
-        cMEnabled = 0;
+        cMEnabled = 1;
         enabled = 1;
         healthBarOffset = 150;
         heroGlowColor = new int[]{217,160,255};

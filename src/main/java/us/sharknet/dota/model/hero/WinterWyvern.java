@@ -98,7 +98,7 @@ public final class WinterWyvern extends Hero {
         baseClass = "npc_dota_hero_winter_wyvern";
         botImplemented = 0;
         boundsHullName = "DOTA_HULL_SIZE_HERO";
-        cMEnabled = 0;
+        cMEnabled = 1;
         cMTournamentIgnore = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_HERO";
