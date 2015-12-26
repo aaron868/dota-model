@@ -23,40 +23,19 @@ public final class Lion extends Hero {
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
-    private final int attributeIntelligenceGain;
+    private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final int heroPool1;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
-    private final int new_player_enable;
     private final String shortKey;
     private final String url;
 
@@ -80,37 +59,16 @@ public final class Lion extends Hero {
         attributeIntelligenceGain = 3;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 1.7;
-        banSound = "lion_lion_anger_03";
-        botImplemented = 1;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 170;
-        heroGlowColor = new int[]{110,50,165};
         heroID = 26;
-        heroPool1 = 1;
-        heroSelectSoundEffect = "Hero_Lion.Pick";
-        heroUnlockOrder = 0;
-        idleExpression = "scenes/lion/lion_exp_idle_01.vcd";
         key = "npc_dota_hero_lion";
-        lastHitChallengeRival = "npc_dota_hero_witch_doctor";
-        loadoutScale = .82;
-        model = "models/heroes/lion/lion.vmdl";
-        modelScale = .7;
         movementSpeed = 290;
         movementTurnRate = .5;
-        pickSound = "lion_lion_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_lion";
-        projectileModel = "particles/units/heroes/hero_lion/lion_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Support","Disabler","Nuker","Initiator"};
-        rolelevels = new int[]{2,3,3,2};
-        soundSet = "Hero_Lion";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_lion.vsndevts";
         active = true;
         localizedName = "Lion";
-        new_player_enable = 1;
         shortKey = "lion";
         url = "Lion";
     }
@@ -186,7 +144,7 @@ public final class Lion extends Hero {
         return attributeBaseStrength;
     }
 
-    public int getAttributeIntelligenceGain() {
+    public double getAttributeIntelligenceGain() {
         return attributeIntelligenceGain;
     }
 
@@ -198,18 +156,6 @@ public final class Lion extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -218,52 +164,12 @@ public final class Lion extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public int getHeroPool1() {
-        return heroPool1;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -274,40 +180,12 @@ public final class Lion extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {
@@ -316,10 +194,6 @@ public final class Lion extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int getNewPlayerEnable() {
-        return new_player_enable;
     }
 
     public String getShortKey() {

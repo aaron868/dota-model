@@ -26,37 +26,16 @@ public final class Viper extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final int heroPool1;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final int noCombine;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
-    private final int new_player_enable;
     private final String shortKey;
     private final String url;
 
@@ -80,37 +59,16 @@ public final class Viper extends Hero {
         attributeIntelligenceGain = 1.8;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.9;
-        banSound = "viper_vipe_anger_06";
-        botImplemented = 1;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 210;
-        heroGlowColor = new int[]{160,229,81};
         heroID = 47;
-        heroPool1 = 1;
-        heroSelectSoundEffect = "Hero_Viper.Pick";
-        heroUnlockOrder = 1;
-        idleExpression = "scenes/viper/viper_exp_idle_01.vcd";
         key = "npc_dota_hero_viper";
-        lastHitChallengeRival = "npc_dota_hero_jakiro";
-        model = "models/heroes/viper/viper.vmdl";
-        modelScale = .74;
         movementSpeed = 285;
         movementTurnRate = .4;
-        noCombine = 1;
-        pickSound = "viper_vipe_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_viper";
-        projectileModel = "particles/units/heroes/hero_viper/viper_base_attack.vpcf";
         projectileSpeed = 1200;
-        role = new String[]{"Carry","Durable","Initiator","Disabler"};
-        rolelevels = new int[]{1,2,1,1};
-        soundSet = "Hero_Viper";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_viper.vsndevts";
         active = true;
         localizedName = "Viper";
-        new_player_enable = 1;
         shortKey = "viper";
         url = "Viper";
     }
@@ -198,18 +156,6 @@ public final class Viper extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -218,48 +164,12 @@ public final class Viper extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public int getHeroPool1() {
-        return heroPool1;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -270,44 +180,12 @@ public final class Viper extends Hero {
         return movementTurnRate;
     }
 
-    public int getNoCombine() {
-        return noCombine;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {
@@ -316,10 +194,6 @@ public final class Viper extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int getNewPlayerEnable() {
-        return new_player_enable;
     }
 
     public String getShortKey() {

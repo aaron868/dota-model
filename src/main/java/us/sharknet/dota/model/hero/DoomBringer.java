@@ -15,7 +15,6 @@ public final class DoomBringer extends Hero {
     private final DoomBringerDoom ability6;
     private final AttributeBonus ability7;
     private final int abilityDraftDisabled;
-    private final int abilityLayout;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -31,30 +30,13 @@ public final class DoomBringer extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -69,7 +51,6 @@ public final class DoomBringer extends Hero {
         ability6 = DoomBringerDoom.instance();
         ability7 = AttributeBonus.instance();
         abilityDraftDisabled = 1;
-        abilityLayout = 6;
         armorPhysical = -1;
         attackAcquisitionRange = 600;
         attackAnimationPoint = .5;
@@ -85,30 +66,13 @@ public final class DoomBringer extends Hero {
         attributeIntelligenceGain = 2.1;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 3.2;
-        banSound = "doom_bringer_doom_anger_02";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 240;
-        heroGlowColor = new int[]{107,74,53};
         heroID = 69;
-        heroSelectSoundEffect = "Hero_DoomBringer.Pick";
-        heroUnlockOrder = 2;
-        idleSoundLoop = "Hero_DoomBringer.IdleLoop";
         key = "npc_dota_hero_doom_bringer";
-        lastHitChallengeRival = "npc_dota_hero_lich";
-        loadoutScale = .7;
-        model = "models/heroes/doom/doom.vmdl";
-        modelScale = .86;
         movementSpeed = 290;
         movementTurnRate = .5;
-        nameAliases = "db";
-        pickSound = "doom_bringer_doom_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_doom_bringer";
-        role = new String[]{"Carry","Disabler","Initiator","Durable","Nuker"};
-        rolelevels = new int[]{1,2,2,2,1};
-        soundSet = "Hero_DoomBringer";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_doom_bringer.vsndevts";
         active = true;
         localizedName = "Doom";
         shortKey = "doom_bringer";
@@ -152,10 +116,6 @@ public final class DoomBringer extends Hero {
 
     public int getAbilityDraftDisabled() {
         return abilityDraftDisabled;
-    }
-
-    public int getAbilityLayout() {
-        return abilityLayout;
     }
 
     public int getArmorPhysical() {
@@ -218,10 +178,6 @@ public final class DoomBringer extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -230,48 +186,12 @@ public final class DoomBringer extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -282,36 +202,8 @@ public final class DoomBringer extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

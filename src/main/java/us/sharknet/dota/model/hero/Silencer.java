@@ -20,38 +20,22 @@ public final class Silencer extends Hero {
     private final int attackDamageMin;
     private final int attackRange;
     private final double attackRate;
-    private final int attributeAgilityGain;
+    private final double attributeAgilityGain;
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
     private final int magicalResistance;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -78,31 +62,15 @@ public final class Silencer extends Hero {
         attributeIntelligenceGain = 2.5;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 2.2;
-        banSound = "silencer_silen_anger_07";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 130;
         heroID = 75;
-        heroSelectSoundEffect = "Hero_Silencer.Pick";
-        heroUnlockOrder = 3;
-        idleExpression = "scenes/silencer/silencer_exp_idle_01.vcd";
         key = "npc_dota_hero_silencer";
-        lastHitChallengeRival = "npc_dota_hero_zuus";
-        loadoutScale = .8;
         magicalResistance = 25;
-        model = "models/heroes/silencer/silencer.vmdl";
-        modelScale = .74;
         movementSpeed = 295;
         movementTurnRate = .6;
-        pickSound = "silencer_silen_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_silencer";
-        projectileModel = "particles/units/heroes/hero_silencer/silencer_base_attack.vpcf";
         projectileSpeed = 1000;
-        role = new String[]{"Carry","Support","Disabler","Initiator","Nuker"};
-        rolelevels = new int[]{1,1,2,2,1};
-        soundSet = "Hero_Silencer";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_silencer.vsndevts";
         active = true;
         localizedName = "Silencer";
         shortKey = "silencer";
@@ -168,7 +136,7 @@ public final class Silencer extends Hero {
         return attackRate;
     }
 
-    public int getAttributeAgilityGain() {
+    public double getAttributeAgilityGain() {
         return attributeAgilityGain;
     }
 
@@ -196,10 +164,6 @@ public final class Silencer extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -208,48 +172,16 @@ public final class Silencer extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
     }
 
     public String getKey() {
         return key;
     }
 
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -260,40 +192,12 @@ public final class Silencer extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

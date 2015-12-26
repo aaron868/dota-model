@@ -27,29 +27,13 @@ public final class Undying extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -76,29 +60,13 @@ public final class Undying extends Hero {
         attributeIntelligenceGain = 2.5;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.1;
-        banSound = "undying_undying_anger_02";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 250;
         heroID = 85;
-        heroSelectSoundEffect = "Hero_Undying.Pick";
-        idleExpression = "scenes/undying/undying_exp_idle_01.vcd";
-        idleSoundLoop = "Hero_Undying.IdleLoop";
         key = "npc_dota_hero_undying";
-        lastHitChallengeRival = "npc_dota_hero_sand_king";
-        loadoutScale = .87;
-        model = "models/heroes/undying/undying.vmdl";
-        modelScale = .93;
         movementSpeed = 310;
         movementTurnRate = .6;
-        nameAliases = "dirge";
-        pickSound = "undying_undying_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_undying";
-        role = new String[]{"Support","Durable","Disabler","Nuker"};
-        rolelevels = new int[]{1,2,1,1};
-        soundSet = "Hero_Undying";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_undying.vsndevts";
         active = true;
         localizedName = "Undying";
         shortKey = "undying";
@@ -192,10 +160,6 @@ public final class Undying extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -204,44 +168,12 @@ public final class Undying extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -252,36 +184,8 @@ public final class Undying extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

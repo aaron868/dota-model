@@ -26,40 +26,17 @@ public final class DrowRanger extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final int heroPool1;
-    private final int heroPool2;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
     private final int visionDaytimeRange;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
-    private final int new_player_enable;
     private final String shortKey;
     private final String url;
 
@@ -83,40 +60,17 @@ public final class DrowRanger extends Hero {
         attributeIntelligenceGain = 1.4;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.9;
-        banSound = "drowranger_dro_anger_01";
-        botImplemented = 1;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        hasAggressiveStance = 0;
-        healthBarOffset = 130;
-        heroGlowColor = new int[]{1,60,246};
         heroID = 6;
-        heroPool1 = 1;
-        heroPool2 = 1;
-        heroSelectSoundEffect = "Hero_DrowRanger.Pick";
-        heroUnlockOrder = 0;
-        idleExpression = "scenes/drowranger/drowranger_exp_idle_01.vcd";
         key = "npc_dota_hero_drow_ranger";
-        lastHitChallengeRival = "npc_dota_hero_windrunner";
-        loadoutScale = 1.1;
-        model = "models/heroes/drow/drow.vmdl";
-        modelScale = .97;
         movementSpeed = 300;
         movementTurnRate = .6;
-        pickSound = "drowranger_dro_spawn_03";
-        portrait = "vgui/hud/heroportraits/portrait_drowranger";
-        projectileModel = "particles/units/heroes/hero_drow/drow_base_attack.vpcf";
         projectileSpeed = 1250;
-        role = new String[]{"Carry","Disabler","Pusher"};
-        rolelevels = new int[]{2,1,1};
-        soundSet = "Hero_DrowRanger";
         team = "Good";
         visionDaytimeRange = 1800;
-        voiceFile = "soundevents/voscripts/game_sounds_vo_drowranger.vsndevts";
         active = true;
         localizedName = "Drow Ranger";
-        new_player_enable = 1;
         shortKey = "drow_ranger";
         url = "Drow_Ranger";
     }
@@ -204,18 +158,6 @@ public final class DrowRanger extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -224,60 +166,12 @@ public final class DrowRanger extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public int getHeroPool1() {
-        return heroPool1;
-    }
-
-    public int getHeroPool2() {
-        return heroPool2;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -288,32 +182,8 @@ public final class DrowRanger extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
     }
 
     public String getTeam() {
@@ -324,20 +194,12 @@ public final class DrowRanger extends Hero {
         return visionDaytimeRange;
     }
 
-    public String getVoiceFile() {
-        return voiceFile;
-    }
-
     public boolean isActive() {
         return active;
     }
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int getNewPlayerEnable() {
-        return new_player_enable;
     }
 
     public String getShortKey() {

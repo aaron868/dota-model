@@ -24,32 +24,16 @@ public final class Abaddon extends Hero {
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
-    private final int attributeIntelligenceGain;
+    private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final int noCombine;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -76,29 +60,13 @@ public final class Abaddon extends Hero {
         attributeIntelligenceGain = 2;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.7;
-        banSound = "abaddon_abad_anger_07";
         cMEnabled = 1;
         enabled = 1;
-        hasAggressiveStance = 1;
-        healthBarOffset = 175;
         heroID = 102;
-        heroSelectSoundEffect = "Hero_Abaddon.Pick";
         key = "npc_dota_hero_abaddon";
-        lastHitChallengeRival = "npc_dota_hero_chaos_knight";
-        loadoutScale = .73;
-        model = "models/heroes/abaddon/abaddon.vmdl";
-        modelScale = .78;
         movementSpeed = 310;
         movementTurnRate = .5;
-        nameAliases = "Abaddon";
-        noCombine = 1;
-        pickSound = "abaddon_abad_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_abaddon";
-        role = new String[]{"Support","Carry","Durable"};
-        rolelevels = new int[]{2,1,2};
-        soundSet = "Hero_Abaddon";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_abaddon.vsndevts";
         active = true;
         localizedName = "Abaddon";
         shortKey = "abaddon";
@@ -180,7 +148,7 @@ public final class Abaddon extends Hero {
         return attributeBaseStrength;
     }
 
-    public int getAttributeIntelligenceGain() {
+    public double getAttributeIntelligenceGain() {
         return attributeIntelligenceGain;
     }
 
@@ -192,10 +160,6 @@ public final class Abaddon extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -204,40 +168,12 @@ public final class Abaddon extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -248,40 +184,8 @@ public final class Abaddon extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public int getNoCombine() {
-        return noCombine;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

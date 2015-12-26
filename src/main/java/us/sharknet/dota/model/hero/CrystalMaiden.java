@@ -26,36 +26,14 @@ public final class CrystalMaiden extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final int heroPool2;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -81,36 +59,14 @@ public final class CrystalMaiden extends Hero {
         attributeIntelligenceGain = 2.9;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 1.7;
-        banSound = "crystalmaiden_cm_anger_08";
-        botImplemented = 1;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        hasAggressiveStance = 1;
-        healthBarOffset = 135;
-        heroGlowColor = new int[]{82,236,255};
         heroID = 5;
-        heroPool2 = 1;
-        heroSelectSoundEffect = "Hero_CrystalMaiden.Pick";
-        heroUnlockOrder = 0;
-        idleExpression = "scenes/crystalmaiden/crystalmaiden_exp_idle_05.vcd";
         key = "npc_dota_hero_crystal_maiden";
-        lastHitChallengeRival = "npc_dota_hero_lina";
-        loadoutScale = .93;
-        model = "models/heroes/crystal_maiden/crystal_maiden.vmdl";
-        modelScale = .81;
         movementSpeed = 280;
         movementTurnRate = .5;
-        nameAliases = "cm";
-        pickSound = "crystalmaiden_cm_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_crystal_maiden";
-        projectileModel = "particles/units/heroes/hero_crystalmaiden/maiden_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Support","Disabler","Nuker","Jungler"};
-        rolelevels = new int[]{3,2,2,1};
-        soundSet = "hero_Crystal";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_crystalmaiden.vsndevts";
         active = true;
         localizedName = "Crystal Maiden";
         shortKey = "crystal_maiden";
@@ -200,18 +156,6 @@ public final class CrystalMaiden extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -220,56 +164,12 @@ public final class CrystalMaiden extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public int getHeroPool2() {
-        return heroPool2;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -280,44 +180,12 @@ public final class CrystalMaiden extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

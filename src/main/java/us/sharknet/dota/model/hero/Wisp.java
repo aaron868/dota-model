@@ -18,7 +18,6 @@ public final class Wisp extends Hero {
     private final AttributeBonus ability8;
     private final WispSpiritsIn ability9;
     private final int abilityDraftDisabled;
-    private final int abilityLayout;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -34,30 +33,14 @@ public final class Wisp extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final int noCombine;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -75,7 +58,6 @@ public final class Wisp extends Hero {
         ability8 = AttributeBonus.instance();
         ability9 = WispSpiritsIn.instance();
         abilityDraftDisabled = 1;
-        abilityLayout = 6;
         armorPhysical = -2;
         attackAcquisitionRange = 800;
         attackAnimationPoint = .15;
@@ -91,30 +73,14 @@ public final class Wisp extends Hero {
         attributeIntelligenceGain = 1.7;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 1.9;
-        banSound = "wisp_shitty_crummy_wizard";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 160;
         heroID = 91;
-        heroSelectSoundEffect = "Hero_Wisp.Pick";
-        idleSoundLoop = "Hero_Wisp.IdleLoop";
         key = "npc_dota_hero_wisp";
-        lastHitChallengeRival = "npc_dota_hero_zuus";
-        model = "models/heroes/wisp/wisp.vmdl";
-        modelScale = .93;
         movementSpeed = 295;
         movementTurnRate = .7;
-        nameAliases = "wisp";
-        noCombine = 1;
-        pickSound = "wisp_move03";
-        portrait = "vgui/hud/heroportraits/portrait_wisp";
-        projectileModel = "particles/units/heroes/hero_wisp/wisp_base_attack.vpcf";
         projectileSpeed = 1200;
-        role = new String[]{"Support","Escape","Nuker"};
-        rolelevels = new int[]{3,2,1};
-        soundSet = "Hero_Wisp";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_wisp.vsndevts";
         active = true;
         localizedName = "Io";
         shortKey = "wisp";
@@ -170,10 +136,6 @@ public final class Wisp extends Hero {
 
     public int getAbilityDraftDisabled() {
         return abilityDraftDisabled;
-    }
-
-    public int getAbilityLayout() {
-        return abilityLayout;
     }
 
     public int getArmorPhysical() {
@@ -236,10 +198,6 @@ public final class Wisp extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -248,36 +206,12 @@ public final class Wisp extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -288,48 +222,12 @@ public final class Wisp extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public int getNoCombine() {
-        return noCombine;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

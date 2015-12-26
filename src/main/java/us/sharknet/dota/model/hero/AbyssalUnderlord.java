@@ -29,19 +29,12 @@ public final class AbyssalUnderlord extends Hero {
     private final String attributePrimary;
     private final double attributeStrengthGain;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
     private final String key;
-    private final String model;
-    private final int modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String[] nameAliases;
-    private final String portrait;
-    private final String soundSet;
     private final String team;
     private final int visionDaytimeRange;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -70,19 +63,12 @@ public final class AbyssalUnderlord extends Hero {
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.6;
         enabled = 0;
-        healthBarOffset = 200;
         heroID = 108;
         key = "npc_dota_hero_abyssal_underlord";
-        model = "models/heroes/abyssal_underlord/abyssal_underlord.vmdl";
-        modelScale = 1;
         movementSpeed = 305;
         movementTurnRate = .6;
-        nameAliases = new String[]{"PitLord","Azgalor"};
-        portrait = "vgui/hud/heroportraits/abyssal_underlord";
-        soundSet = "Hero_AbyssalUnderlord";
         team = "Bad";
         visionDaytimeRange = 1800;
-        voiceFile = "soundevents/voscripts/game_sounds_vo_abyssal_underlord.vsndevts";
         active = false;
         localizedName = "Abyssal Underlord";
         shortKey = "abyssal_underlord";
@@ -184,24 +170,12 @@ public final class AbyssalUnderlord extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public int getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -212,28 +186,12 @@ public final class AbyssalUnderlord extends Hero {
         return movementTurnRate;
     }
 
-    public String[] getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
     }
 
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

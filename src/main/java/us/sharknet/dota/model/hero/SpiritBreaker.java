@@ -27,30 +27,14 @@ public final class SpiritBreaker extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -77,30 +61,14 @@ public final class SpiritBreaker extends Hero {
         attributeIntelligenceGain = 1.8;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.4;
-        banSound = "spirit_breaker_spir_anger_05";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 160;
-        heroGlowColor = new int[]{53,74,107};
         heroID = 71;
-        heroSelectSoundEffect = "Hero_SpiritBreaker.Pick";
-        heroUnlockOrder = 2;
-        idleExpression = "scenes/spirit_breaker/spirit_breaker_exp_idle_01.vcd";
         key = "npc_dota_hero_spirit_breaker";
-        lastHitChallengeRival = "npc_dota_hero_earthshaker";
-        model = "models/heroes/spirit_breaker/spirit_breaker.vmdl";
-        modelScale = .74;
         movementSpeed = 290;
         movementTurnRate = .4;
-        nameAliases = "sb";
-        pickSound = "spirit_breaker_spir_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_spirit_breaker";
-        role = new String[]{"Carry","Initiator","Disabler","Durable","Escape"};
-        rolelevels = new int[]{1,2,2,2,1};
-        soundSet = "Hero_spirit_breaker";
         statusHealthRegen = .75;
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_spirit_breaker.vsndevts";
         active = true;
         localizedName = "Spirit Breaker";
         shortKey = "spirit_breaker";
@@ -194,10 +162,6 @@ public final class SpiritBreaker extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -206,44 +170,12 @@ public final class SpiritBreaker extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -254,40 +186,12 @@ public final class SpiritBreaker extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public double getStatusHealthRegen() {
         return statusHealthRegen;
     }
 
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

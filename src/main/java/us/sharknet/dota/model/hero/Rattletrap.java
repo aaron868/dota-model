@@ -26,29 +26,13 @@ public final class Rattletrap extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -74,29 +58,13 @@ public final class Rattletrap extends Hero {
         attributeIntelligenceGain = 1.3;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.9;
-        banSound = "rattletrap_ratt_anger_06";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 130;
-        heroGlowColor = new int[]{252,220,64};
         heroID = 51;
-        heroSelectSoundEffect = "Hero_Rattletrap.Pick";
-        heroUnlockOrder = 3;
         key = "npc_dota_hero_rattletrap";
-        lastHitChallengeRival = "npc_dota_hero_sand_king";
-        loadoutScale = 1.1;
-        model = "models/heroes/rattletrap/rattletrap.vmdl";
-        modelScale = .88;
         movementSpeed = 315;
         movementTurnRate = .6;
-        pickSound = "rattletrap_ratt_spawn_05";
-        portrait = "vgui/hud/heroportraits/portrait_rattletrap";
-        role = new String[]{"Initiator","Disabler","Durable","Nuker"};
-        rolelevels = new int[]{3,2,1,1};
-        soundSet = "Hero_Rattletrap";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_rattletrap.vsndevts";
         active = true;
         localizedName = "Clockwerk";
         shortKey = "rattletrap";
@@ -186,14 +154,6 @@ public final class Rattletrap extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -202,44 +162,12 @@ public final class Rattletrap extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -250,32 +178,8 @@ public final class Rattletrap extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

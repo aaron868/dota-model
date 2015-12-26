@@ -19,43 +19,23 @@ public final class Sven extends Hero {
     private final int attackDamageMin;
     private final int attackRange;
     private final double attackRate;
-    private final int attributeAgilityGain;
+    private final double attributeAgilityGain;
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final int heroPool1;
-    private final int heroPool2;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
-    private final int new_player_enable;
     private final String shortKey;
     private final String url;
 
@@ -79,36 +59,16 @@ public final class Sven extends Hero {
         attributeIntelligenceGain = 1.3;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.7;
-        banSound = "sven_sven_anger_03";
-        botImplemented = 1;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 150;
-        heroGlowColor = new int[]{0,50,247};
         heroID = 18;
-        heroPool1 = 1;
-        heroPool2 = 1;
-        heroSelectSoundEffect = "Hero_Sven.Pick";
-        heroUnlockOrder = 0;
         key = "npc_dota_hero_sven";
-        lastHitChallengeRival = "npc_dota_hero_omniknight";
-        loadoutScale = .9;
-        model = "models/heroes/sven/sven.vmdl";
-        modelScale = .84;
         movementSpeed = 295;
         movementTurnRate = .6;
-        pickSound = "sven_sven_spawn_04";
-        portrait = "vgui/hud/heroportraits/portrait_sven";
         projectileSpeed = 0;
-        role = new String[]{"Carry","Disabler","Initiator","Durable","Nuker"};
-        rolelevels = new int[]{2,2,2,2,1};
-        soundSet = "Hero_Sven";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_sven.vsndevts";
         active = true;
         localizedName = "Sven";
-        new_player_enable = 1;
         shortKey = "sven";
         url = "Sven";
     }
@@ -168,7 +128,7 @@ public final class Sven extends Hero {
         return attackRate;
     }
 
-    public int getAttributeAgilityGain() {
+    public double getAttributeAgilityGain() {
         return attributeAgilityGain;
     }
 
@@ -196,18 +156,6 @@ public final class Sven extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -216,52 +164,12 @@ public final class Sven extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public int getHeroPool1() {
-        return heroPool1;
-    }
-
-    public int getHeroPool2() {
-        return heroPool2;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -272,36 +180,12 @@ public final class Sven extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {
@@ -310,10 +194,6 @@ public final class Sven extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int getNewPlayerEnable() {
-        return new_player_enable;
     }
 
     public String getShortKey() {

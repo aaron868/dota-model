@@ -28,47 +28,21 @@ public final class WinterWyvern extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String baseClass;
-    private final int botImplemented;
-    private final String boundsHullName;
     private final int cMEnabled;
-    private final int cMTournamentIgnore;
     private final String combatClassAttack;
     private final String combatClassDefend;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
     private final int heroID;
-    private final int heroPool1;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final int loadoutScale;
     private final int magicalResistance;
-    private final String model;
-    private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final int newHero;
-    private final int noCombine;
-    private final String pickSound;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String teamName;
-    private final String unitRelationshipClass;
     private final int visionDaytimeRange;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
-    private final int new_player_enable;
     private final String shortKey;
     private final String url;
 
@@ -94,47 +68,21 @@ public final class WinterWyvern extends Hero {
         attributeIntelligenceGain = 3.1;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 2.1;
-        banSound = "winter_wyvern_winwyv_anger_07";
-        baseClass = "npc_dota_hero_winter_wyvern";
-        botImplemented = 0;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
-        cMTournamentIgnore = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_HERO";
         enabled = 1;
-        hasAggressiveStance = 0;
-        healthBarOffset = 200;
         heroID = 112;
-        heroPool1 = 0;
-        heroSelectSoundEffect = "Hero_Winter_Wyvern.Pick";
-        heroUnlockOrder = 1;
-        idleExpression = "scenes/winter_wyvern/winter_wyvern_exp_idle_01.vcd";
-        idleSoundLoop = "Hero_Winter_Wyvern.IdleLoop";
         key = "npc_dota_hero_winter_wyvern";
-        loadoutScale = 1;
         magicalResistance = 25;
-        model = "models/heroes/winterwyvern/winterwyvern.vmdl";
-        modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 285;
         movementTurnRate = .4;
-        newHero = 0;
-        noCombine = 0;
-        pickSound = "winter_wyvern_winwyv_spawn_01";
-        projectileModel = "particles/units/heroes/hero_winter_wyvern/winter_wyvern_base_attack.vpcf";
         projectileSpeed = 700;
-        role = new String[]{"Support","Disabler","Nuker"};
-        rolelevels = new int[]{3,2,1};
-        soundSet = "Hero_Winter_Wyvern";
         team = "Bad";
-        teamName = "DOTA_TEAM_BADGUYS";
-        unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_HERO";
         visionDaytimeRange = 1800;
-        voiceFile = "soundevents/voscripts/game_sounds_vo_winter_wyvern.vsndevts";
         active = true;
         localizedName = "Winter Wyvern";
-        new_player_enable = 0;
         shortKey = "winter_wyvern";
         url = "Winter_Wyvern";
     }
@@ -230,28 +178,8 @@ public final class WinterWyvern extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBaseClass() {
-        return baseClass;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
-    }
-
-    public int getCMTournamentIgnore() {
-        return cMTournamentIgnore;
     }
 
     public String getCombatClassAttack() {
@@ -266,56 +194,16 @@ public final class WinterWyvern extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
-    }
-
-    public int getHeroPool1() {
-        return heroPool1;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
     }
 
     public String getKey() {
         return key;
     }
 
-    public int getLoadoutScale() {
-        return loadoutScale;
-    }
-
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public int getModelScale() {
-        return modelScale;
     }
 
     public String getMovementCapabilities() {
@@ -330,56 +218,16 @@ public final class WinterWyvern extends Hero {
         return movementTurnRate;
     }
 
-    public int getNewHero() {
-        return newHero;
-    }
-
-    public int getNoCombine() {
-        return noCombine;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
     }
 
     public String getTeam() {
         return team;
     }
 
-    public String getTeamName() {
-        return teamName;
-    }
-
-    public String getUnitRelationshipClass() {
-        return unitRelationshipClass;
-    }
-
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {
@@ -388,10 +236,6 @@ public final class WinterWyvern extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int getNewPlayerEnable() {
-        return new_player_enable;
     }
 
     public String getShortKey() {

@@ -13,7 +13,6 @@ public final class Spectre extends Hero {
     private final SpectreReality ability4;
     private final SpectreHaunt ability5;
     private final AttributeBonus ability6;
-    private final int abilityLayout;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -28,30 +27,14 @@ public final class Spectre extends Hero {
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
-    private final int attributeStrengthGain;
-    private final String banSound;
+    private final double attributeStrengthGain;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -64,7 +47,6 @@ public final class Spectre extends Hero {
         ability4 = SpectreReality.instance();
         ability5 = SpectreHaunt.instance();
         ability6 = AttributeBonus.instance();
-        abilityLayout = 5;
         armorPhysical = 0;
         attackAcquisitionRange = 600;
         attackAnimationPoint = .3;
@@ -80,29 +62,13 @@ public final class Spectre extends Hero {
         attributeIntelligenceGain = 1.9;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 2;
-        banSound = "spectre_spec_anger_02";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 180;
-        heroGlowColor = new int[]{107,74,53};
         heroID = 67;
-        heroSelectSoundEffect = "Hero_Spectre.Pick";
-        heroUnlockOrder = 2;
-        idleSoundLoop = "Hero_Spectre.IdleLoop";
         key = "npc_dota_hero_spectre";
-        lastHitChallengeRival = "npc_dota_hero_bounty_hunter";
-        loadoutScale = .75;
-        model = "models/heroes/spectre/spectre.vmdl";
-        modelScale = .67;
         movementSpeed = 290;
         movementTurnRate = .4;
-        pickSound = "spectre_spec_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_spectre";
-        role = new String[]{"Carry","Durable","Escape"};
-        rolelevels = new int[]{3,1,1};
-        soundSet = "Hero_Spectre";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_spectre.vsndevts";
         active = true;
         localizedName = "Spectre";
         shortKey = "spectre";
@@ -138,10 +104,6 @@ public final class Spectre extends Hero {
 
     public AttributeBonus getAbility6() {
         return ability6;
-    }
-
-    public int getAbilityLayout() {
-        return abilityLayout;
     }
 
     public int getArmorPhysical() {
@@ -200,12 +162,8 @@ public final class Spectre extends Hero {
         return attributePrimary;
     }
 
-    public int getAttributeStrengthGain() {
+    public double getAttributeStrengthGain() {
         return attributeStrengthGain;
-    }
-
-    public String getBanSound() {
-        return banSound;
     }
 
     public int getCMEnabled() {
@@ -216,48 +174,12 @@ public final class Spectre extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -268,32 +190,8 @@ public final class Spectre extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

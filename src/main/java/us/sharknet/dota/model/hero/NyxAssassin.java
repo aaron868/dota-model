@@ -28,29 +28,15 @@ public final class NyxAssassin extends Hero {
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
-    private final int attributeStrengthGain;
-    private final String banSound;
+    private final double attributeStrengthGain;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String[] nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -79,28 +65,14 @@ public final class NyxAssassin extends Hero {
         attributeIntelligenceGain = 2.1;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 2;
-        banSound = "nyx_assassin_nyx_anger_07";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 200;
         heroID = 88;
-        heroSelectSoundEffect = "Hero_Nyx.Pick";
-        idleExpression = "scenes/nyx_assassin/nyx_assassin_exp_idle_01.vcd";
         key = "npc_dota_hero_nyx_assassin";
-        lastHitChallengeRival = "npc_dota_hero_bounty_hunter";
-        model = "models/heroes/nerubian_assassin/nerubian_assassin.vmdl";
-        modelScale = .98;
         movementSpeed = 300;
         movementTurnRate = .5;
-        nameAliases = new String[]{"nerubian","na"};
-        pickSound = "nyx_assassin_nyx_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_nerubian_assassin";
-        role = new String[]{"Disabler","Nuker","Initiator","Escape"};
-        rolelevels = new int[]{2,2,2,1};
-        soundSet = "Hero_NyxAssassin";
         statusHealthRegen = 2.5;
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_nyx_assassin.vsndevts";
         active = true;
         localizedName = "Nyx Assassin";
         shortKey = "nyx_assassin";
@@ -198,12 +170,8 @@ public final class NyxAssassin extends Hero {
         return attributePrimary;
     }
 
-    public int getAttributeStrengthGain() {
+    public double getAttributeStrengthGain() {
         return attributeStrengthGain;
-    }
-
-    public String getBanSound() {
-        return banSound;
     }
 
     public int getCMEnabled() {
@@ -214,36 +182,12 @@ public final class NyxAssassin extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -254,40 +198,12 @@ public final class NyxAssassin extends Hero {
         return movementTurnRate;
     }
 
-    public String[] getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public double getStatusHealthRegen() {
         return statusHealthRegen;
     }
 
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

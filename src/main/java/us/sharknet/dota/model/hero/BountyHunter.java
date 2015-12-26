@@ -19,43 +19,23 @@ public final class BountyHunter extends Hero {
     private final int attackDamageMin;
     private final int attackRange;
     private final double attackRate;
-    private final int attributeAgilityGain;
+    private final double attributeAgilityGain;
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
-    private final int attributeIntelligenceGain;
+    private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final int heroPool1;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final int loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
     private final int visionDaytimeRange;
     private final int visionNighttimeRange;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -81,36 +61,16 @@ public final class BountyHunter extends Hero {
         attributeIntelligenceGain = 2;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.8;
-        banSound = "bounty_hunter_bount_anger_04";
-        botImplemented = 1;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 120;
-        heroGlowColor = new int[]{221,201,63};
         heroID = 62;
-        heroPool1 = 1;
-        heroSelectSoundEffect = "Hero_BountyHunter.Pick";
-        heroUnlockOrder = 2;
-        idleExpression = "scenes/bounty_hunter/bounty_hunter_exp_idle_01.vcd";
         key = "npc_dota_hero_bounty_hunter";
-        lastHitChallengeRival = "npc_dota_hero_skeleton_king";
-        loadoutScale = 1;
-        model = "models/heroes/bounty_hunter/bounty_hunter.vmdl";
-        modelScale = .84;
         movementSpeed = 315;
         movementTurnRate = .6;
-        nameAliases = "bh";
-        pickSound = "bounty_hunter_bount_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_bounty_hunter";
-        role = new String[]{"Escape","Nuker"};
-        rolelevels = new int[]{2,1};
-        soundSet = "Hero_BountyHunter";
         statusHealthRegen = .75;
         team = "Good";
         visionDaytimeRange = 1800;
         visionNighttimeRange = 1000;
-        voiceFile = "soundevents/voscripts/game_sounds_vo_bounty_hunter.vsndevts";
         active = true;
         localizedName = "Bounty Hunter";
         shortKey = "bounty_hunter";
@@ -172,7 +132,7 @@ public final class BountyHunter extends Hero {
         return attackRate;
     }
 
-    public int getAttributeAgilityGain() {
+    public double getAttributeAgilityGain() {
         return attributeAgilityGain;
     }
 
@@ -188,7 +148,7 @@ public final class BountyHunter extends Hero {
         return attributeBaseStrength;
     }
 
-    public int getAttributeIntelligenceGain() {
+    public double getAttributeIntelligenceGain() {
         return attributeIntelligenceGain;
     }
 
@@ -200,18 +160,6 @@ public final class BountyHunter extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -220,52 +168,12 @@ public final class BountyHunter extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public int getHeroPool1() {
-        return heroPool1;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public int getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -274,30 +182,6 @@ public final class BountyHunter extends Hero {
 
     public double getMovementTurnRate() {
         return movementTurnRate;
-    }
-
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
     }
 
     public double getStatusHealthRegen() {
@@ -314,10 +198,6 @@ public final class BountyHunter extends Hero {
 
     public int getVisionNighttimeRange() {
         return visionNighttimeRange;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

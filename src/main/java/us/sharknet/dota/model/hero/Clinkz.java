@@ -26,36 +26,16 @@ public final class Clinkz extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
-    private final int new_player_enable;
     private final String shortKey;
     private final String url;
 
@@ -79,36 +59,16 @@ public final class Clinkz extends Hero {
         attributeIntelligenceGain = 1.55;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.6;
-        banSound = "clinkz_clinkz_anger_08";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 144;
-        heroGlowColor = new int[]{205,58,0};
         heroID = 56;
-        heroSelectSoundEffect = "Hero_Clinkz.Pick";
-        heroUnlockOrder = 2;
-        idleExpression = "scenes/clinkz/clinkz_exp_idle_01.vcd";
-        idleSoundLoop = "Hero_Clinkz.IdleLoop";
         key = "npc_dota_hero_clinkz";
-        lastHitChallengeRival = "npc_dota_hero_windrunner";
-        loadoutScale = .75;
-        model = "models/heroes/clinkz/clinkz.vmdl";
-        modelScale = .65;
         movementSpeed = 300;
         movementTurnRate = .4;
-        pickSound = "clinkz_clinkz_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_clinkz";
-        projectileModel = "particles/units/heroes/hero_clinkz/clinkz_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Carry","Escape","Pusher"};
-        rolelevels = new int[]{2,3,1};
-        soundSet = "Hero_Clinkz";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_clinkz.vsndevts";
         active = true;
         localizedName = "Clinkz";
-        new_player_enable = 1;
         shortKey = "clinkz";
         url = "Clinkz";
     }
@@ -196,14 +156,6 @@ public final class Clinkz extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -212,52 +164,12 @@ public final class Clinkz extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -268,40 +180,12 @@ public final class Clinkz extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {
@@ -310,10 +194,6 @@ public final class Clinkz extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int getNewPlayerEnable() {
-        return new_player_enable;
     }
 
     public String getShortKey() {

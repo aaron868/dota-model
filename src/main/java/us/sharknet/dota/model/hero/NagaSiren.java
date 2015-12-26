@@ -25,34 +25,17 @@ public final class NagaSiren extends Hero {
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
-    private final int attributeIntelligenceGain;
+    private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -80,31 +63,14 @@ public final class NagaSiren extends Hero {
         attributeIntelligenceGain = 2;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 2.3;
-        banSound = "naga_siren_naga_anger_12";
-        boundsHullName = "DOTA_HULL_SIZE_SMALL";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 180;
-        heroGlowColor = new int[]{154,97,133};
         heroID = 89;
-        heroSelectSoundEffect = "Hero_NagaSiren.Pick";
-        idleExpression = "scenes/naga_siren/naga_siren_exp_idle_01.vcd";
-        idleSoundLoop = "Hero_NagaSiren.IdleLoop";
         key = "npc_dota_hero_naga_siren";
-        lastHitChallengeRival = "npc_dota_hero_kunkka";
-        model = "models/heroes/siren/siren.vmdl";
-        modelScale = .77;
         movementSpeed = 320;
         movementTurnRate = .5;
-        nameAliases = "naga";
-        pickSound = "naga_siren_naga_spawn_02";
-        portrait = "vgui/hud/heroportraits/portrait_naga_siren";
-        role = new String[]{"Carry","Support","Pusher","Disabler","Initiator","Escape"};
-        rolelevels = new int[]{3,1,2,2,1,1};
-        soundSet = "Hero_NagaSiren";
         statusHealthRegen = .75;
         team = "good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_naga_siren.vsndevts";
         active = true;
         localizedName = "Naga Siren";
         shortKey = "naga_siren";
@@ -190,7 +156,7 @@ public final class NagaSiren extends Hero {
         return attributeBaseStrength;
     }
 
-    public int getAttributeIntelligenceGain() {
+    public double getAttributeIntelligenceGain() {
         return attributeIntelligenceGain;
     }
 
@@ -202,14 +168,6 @@ public final class NagaSiren extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -218,44 +176,12 @@ public final class NagaSiren extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -266,40 +192,12 @@ public final class NagaSiren extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public double getStatusHealthRegen() {
         return statusHealthRegen;
     }
 
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

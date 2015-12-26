@@ -26,31 +26,14 @@ public final class Mirana extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -76,31 +59,14 @@ public final class Mirana extends Hero {
         attributeIntelligenceGain = 1.65;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.85;
-        banSound = "mirana_mir_anger_01";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 155;
-        heroGlowColor = new int[]{220,194,248};
         heroID = 9;
-        heroSelectSoundEffect = "Hero_Mirana.Pick";
-        heroUnlockOrder = 1;
-        idleExpression = "scenes/mirana/mirana_exp_idle_01.vcd";
         key = "npc_dota_hero_mirana";
-        lastHitChallengeRival = "npc_dota_hero_luna";
-        model = "models/heroes/mirana/mirana.vmdl";
-        modelScale = .79;
         movementSpeed = 300;
         movementTurnRate = .4;
-        pickSound = "mirana_mir_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_mirana";
-        projectileModel = "particles/units/heroes/hero_mirana/mirana_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Carry","Support","Escape","Nuker","Disabler"};
-        rolelevels = new int[]{1,1,2,1,1};
-        soundSet = "Hero_Mirana";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_mirana.vsndevts";
         active = true;
         localizedName = "Mirana";
         shortKey = "mirana";
@@ -190,14 +156,6 @@ public final class Mirana extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -206,44 +164,12 @@ public final class Mirana extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -254,40 +180,12 @@ public final class Mirana extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

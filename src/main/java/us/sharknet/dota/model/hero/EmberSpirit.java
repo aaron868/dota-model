@@ -14,7 +14,6 @@ public final class EmberSpirit extends Hero {
     private final EmberSpiritFireRemnant ability5;
     private final AttributeBonus ability6;
     private final int abilityDraftDisabled;
-    private final int abilityLayout;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -29,31 +28,16 @@ public final class EmberSpirit extends Hero {
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
-    private final int attributeStrengthGain;
-    private final String banSound;
+    private final double attributeStrengthGain;
     private final int cMEnabled;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final String idleSoundLoop;
     private final String key;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String[] nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
     private final int visionDaytimeRange;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -67,7 +51,6 @@ public final class EmberSpirit extends Hero {
         ability5 = EmberSpiritFireRemnant.instance();
         ability6 = AttributeBonus.instance();
         abilityDraftDisabled = 1;
-        abilityLayout = 5;
         armorPhysical = -2;
         attackAcquisitionRange = 600;
         attackAnimationPoint = .4;
@@ -83,30 +66,15 @@ public final class EmberSpirit extends Hero {
         attributeIntelligenceGain = 1.8;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 2;
-        banSound = "ember_spirit_embr_anger_04";
         cMEnabled = 1;
         enabled = 1;
-        hasAggressiveStance = 1;
-        healthBarOffset = 200;
         heroID = 106;
-        heroSelectSoundEffect = "Hero_EmberSpirit.Pick";
-        idleSoundLoop = "Hero_EmberSpirit.IdleLoop";
         key = "npc_dota_hero_ember_spirit";
-        loadoutScale = 1.1;
-        model = "models/heroes/ember_spirit/ember_spirit.vmdl";
-        modelScale = 1.2;
         movementSpeed = 310;
         movementTurnRate = .5;
-        nameAliases = new String[]{"Xin","Ember"};
-        pickSound = "ember_spirit_embr_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_ember_spirit";
-        role = new String[]{"Carry","Escape","Nuker","Disabler","Initiator"};
-        rolelevels = new int[]{2,3,1,1,1};
-        soundSet = "Hero_EmberSpirit";
         statusHealthRegen = .75;
         team = "Good";
         visionDaytimeRange = 1800;
-        voiceFile = "soundevents/voscripts/game_sounds_vo_ember_spirit.vsndevts";
         active = true;
         localizedName = "Ember Spirit";
         shortKey = "ember_spirit";
@@ -146,10 +114,6 @@ public final class EmberSpirit extends Hero {
 
     public int getAbilityDraftDisabled() {
         return abilityDraftDisabled;
-    }
-
-    public int getAbilityLayout() {
-        return abilityLayout;
     }
 
     public int getArmorPhysical() {
@@ -208,12 +172,8 @@ public final class EmberSpirit extends Hero {
         return attributePrimary;
     }
 
-    public int getAttributeStrengthGain() {
+    public double getAttributeStrengthGain() {
         return attributeStrengthGain;
-    }
-
-    public String getBanSound() {
-        return banSound;
     }
 
     public int getCMEnabled() {
@@ -224,40 +184,12 @@ public final class EmberSpirit extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -266,30 +198,6 @@ public final class EmberSpirit extends Hero {
 
     public double getMovementTurnRate() {
         return movementTurnRate;
-    }
-
-    public String[] getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
     }
 
     public double getStatusHealthRegen() {
@@ -302,10 +210,6 @@ public final class EmberSpirit extends Hero {
 
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

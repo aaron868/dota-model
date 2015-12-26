@@ -27,27 +27,13 @@ public final class LegionCommander extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String[] nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -74,27 +60,13 @@ public final class LegionCommander extends Hero {
         attributeIntelligenceGain = 2.2;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.6;
-        banSound = "legion_commander_legcom_anger_07";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 200;
         heroID = 104;
-        heroSelectSoundEffect = "Hero_LegionCommander.Pick";
-        idleExpression = "scenes/legion_commander/legion_commander_exp_idle_01.vcd";
         key = "npc_dota_hero_legion_commander";
-        lastHitChallengeRival = "npc_dota_hero_kunkka";
-        model = "models/heroes/legion_commander/legion_commander.vmdl";
-        modelScale = 1.25;
         movementSpeed = 320;
         movementTurnRate = .5;
-        nameAliases = new String[]{"Tresdin","Legion"};
-        pickSound = "legion_commander_legcom_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_legion_commander";
-        role = new String[]{"Carry","Disabler","Initiator","Durable","Nuker"};
-        rolelevels = new int[]{1,2,1,1,1};
-        soundSet = "Hero_LegionCommander";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_legion_commander.vsndevts";
         active = true;
         localizedName = "Legion Commander";
         shortKey = "legion_commander";
@@ -188,10 +160,6 @@ public final class LegionCommander extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -200,36 +168,12 @@ public final class LegionCommander extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -240,36 +184,8 @@ public final class LegionCommander extends Hero {
         return movementTurnRate;
     }
 
-    public String[] getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

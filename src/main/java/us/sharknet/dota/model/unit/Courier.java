@@ -15,7 +15,6 @@ public final class Courier extends NpcUnit {
     private final CourierBurst ability6;
     private final CourierMorph ability7;
     private final CourierTakeStashAndTransferItems ability8;
-    private final int abilityLayout;
     private final double attackDesire;
     private final String baseClass;
     private final String boundsHullName;
@@ -55,7 +54,6 @@ public final class Courier extends NpcUnit {
         ability6 = CourierBurst.instance();
         ability7 = CourierMorph.instance();
         ability8 = CourierTakeStashAndTransferItems.instance();
-        abilityLayout = 6;
         attackDesire = 1.5;
         baseClass = "npc_dota_courier";
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
@@ -124,10 +122,6 @@ public final class Courier extends NpcUnit {
 
     public CourierTakeStashAndTransferItems getAbility8() {
         return ability8;
-    }
-
-    public int getAbilityLayout() {
-        return abilityLayout;
     }
 
     public double getAttackDesire() {

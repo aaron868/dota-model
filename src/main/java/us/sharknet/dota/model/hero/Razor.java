@@ -19,41 +19,21 @@ public final class Razor extends Hero {
     private final int attackDamageMin;
     private final int attackRange;
     private final double attackRate;
-    private final int attributeAgilityGain;
+    private final double attributeAgilityGain;
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final int heroPool1;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -79,34 +59,14 @@ public final class Razor extends Hero {
         attributeIntelligenceGain = 1.8;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 2.3;
-        banSound = "razor_raz_anger_04";
-        botImplemented = 1;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 230;
-        heroGlowColor = new int[]{182,242,255};
         heroID = 15;
-        heroPool1 = 1;
-        heroSelectSoundEffect = "Hero_Razor.Pick";
-        heroUnlockOrder = 1;
-        idleExpression = "scenes/razor/razor_exp_idle_01.vcd";
-        idleSoundLoop = "Hero_Razor.IdleLoop";
         key = "npc_dota_hero_razor";
-        lastHitChallengeRival = "npc_dota_hero_zuus";
-        model = "models/heroes/razor/razor.vmdl";
-        modelScale = .86;
         movementSpeed = 295;
         movementTurnRate = .4;
-        pickSound = "razor_raz_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_razor";
-        projectileModel = "particles/units/heroes/hero_razor/razor_base_attack.vpcf";
         projectileSpeed = 2000;
-        role = new String[]{"Carry","Durable","Nuker","Pusher"};
-        rolelevels = new int[]{2,2,1,1};
-        soundSet = "Hero_Razor";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_razor.vsndevts";
         active = true;
         localizedName = "Razor";
         shortKey = "razor";
@@ -168,7 +128,7 @@ public final class Razor extends Hero {
         return attackRate;
     }
 
-    public int getAttributeAgilityGain() {
+    public double getAttributeAgilityGain() {
         return attributeAgilityGain;
     }
 
@@ -196,18 +156,6 @@ public final class Razor extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -216,52 +164,12 @@ public final class Razor extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public int getHeroPool1() {
-        return heroPool1;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -272,40 +180,12 @@ public final class Razor extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

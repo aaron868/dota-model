@@ -19,42 +19,22 @@ public final class Enigma extends Hero {
     private final int attackDamageMin;
     private final int attackRange;
     private final double attackRate;
-    private final int attributeAgilityGain;
+    private final double attributeAgilityGain;
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final int loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final int noCombine;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final int ringRadius;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -80,35 +60,15 @@ public final class Enigma extends Hero {
         attributeIntelligenceGain = 3.4;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 2.1;
-        banSound = "enigma_enig_anger_01";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 220;
-        heroGlowColor = new int[]{64,0,255};
         heroID = 33;
-        heroSelectSoundEffect = "Hero_Enigma.Pick";
-        heroUnlockOrder = 1;
-        idleSoundLoop = "Hero_Enigma.IdleLoop";
         key = "npc_dota_hero_enigma";
-        lastHitChallengeRival = "npc_dota_hero_bane";
-        loadoutScale = 1;
-        model = "models/heroes/enigma/enigma.vmdl";
-        modelScale = .81;
         movementSpeed = 300;
         movementTurnRate = .5;
-        noCombine = 1;
-        pickSound = "enigma_enig_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_enigma";
-        projectileModel = "particles/units/heroes/hero_enigma/enigma_base_attack.vpcf";
         projectileSpeed = 900;
-        ringRadius = 90;
-        role = new String[]{"Disabler","Jungler","Initiator","Pusher"};
-        rolelevels = new int[]{2,3,2,2};
-        soundSet = "Hero_Enigma";
         statusHealthRegen = .25;
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_enigma.vsndevts";
         active = true;
         localizedName = "Enigma";
         shortKey = "enigma";
@@ -170,7 +130,7 @@ public final class Enigma extends Hero {
         return attackRate;
     }
 
-    public int getAttributeAgilityGain() {
+    public double getAttributeAgilityGain() {
         return attributeAgilityGain;
     }
 
@@ -198,14 +158,6 @@ public final class Enigma extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -214,48 +166,12 @@ public final class Enigma extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public int getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -266,40 +182,8 @@ public final class Enigma extends Hero {
         return movementTurnRate;
     }
 
-    public int getNoCombine() {
-        return noCombine;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
-    }
-
-    public int getRingRadius() {
-        return ringRadius;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
     }
 
     public double getStatusHealthRegen() {
@@ -308,10 +192,6 @@ public final class Enigma extends Hero {
 
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

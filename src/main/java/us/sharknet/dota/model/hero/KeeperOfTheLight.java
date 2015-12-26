@@ -18,7 +18,6 @@ public final class KeeperOfTheLight extends Hero {
     private final KeeperOfTheLightSpiritFormIlluminate ability8;
     private final KeeperOfTheLightSpiritFormIlluminateEnd ability9;
     private final int abilityDraftDisabled;
-    private final int abilityLayout;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -34,30 +33,14 @@ public final class KeeperOfTheLight extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String[] nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -75,7 +58,6 @@ public final class KeeperOfTheLight extends Hero {
         ability8 = KeeperOfTheLightSpiritFormIlluminate.instance();
         ability9 = KeeperOfTheLightSpiritFormIlluminateEnd.instance();
         abilityDraftDisabled = 1;
-        abilityLayout = 6;
         armorPhysical = -1;
         attackAcquisitionRange = 800;
         attackAnimationPoint = .3;
@@ -91,30 +73,14 @@ public final class KeeperOfTheLight extends Hero {
         attributeIntelligenceGain = 2.8;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 1.8;
-        banSound = "keeper_of_the_light_keep_anger_05";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 230;
         heroID = 90;
-        heroSelectSoundEffect = "Hero_KeeperOfTheLight.Pick";
-        idleExpression = "scenes/keeper_of_the_light/keeper_of_the_light_exp_idle_01.vcd";
         key = "npc_dota_hero_keeper_of_the_light";
-        lastHitChallengeRival = "npc_dota_hero_chaos_knight";
-        loadoutScale = .75;
-        model = "models/heroes/keeper_of_the_light/keeper_of_the_light.vmdl";
-        modelScale = .8;
         movementSpeed = 315;
         movementTurnRate = .5;
-        nameAliases = new String[]{"keeper","ezalor"};
-        pickSound = "keeper_of_the_light_keep_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_keeper_of_the_light";
-        projectileModel = "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Support","Nuker","Disabler","Jungler"};
-        rolelevels = new int[]{3,2,1,1};
-        soundSet = "Hero_KeeperOfTheLight";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_keeper_of_the_light.vsndevts";
         active = true;
         localizedName = "Keeper of the Light";
         shortKey = "keeper_of_the_light";
@@ -170,10 +136,6 @@ public final class KeeperOfTheLight extends Hero {
 
     public int getAbilityDraftDisabled() {
         return abilityDraftDisabled;
-    }
-
-    public int getAbilityLayout() {
-        return abilityLayout;
     }
 
     public int getArmorPhysical() {
@@ -236,10 +198,6 @@ public final class KeeperOfTheLight extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -248,40 +206,12 @@ public final class KeeperOfTheLight extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -292,44 +222,12 @@ public final class KeeperOfTheLight extends Hero {
         return movementTurnRate;
     }
 
-    public String[] getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

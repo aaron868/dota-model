@@ -25,31 +25,15 @@ public final class Tinker extends Hero {
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
-    private final int attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
+    private final double attributeStrengthGain;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -75,30 +59,14 @@ public final class Tinker extends Hero {
         attributeIntelligenceGain = 2.2;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 2;
-        banSound = "tinker_tink_anger_10";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 150;
-        heroGlowColor = new int[]{220,194,8};
         heroID = 34;
-        heroSelectSoundEffect = "Hero_Tinker.Pick";
-        heroUnlockOrder = 1;
         key = "npc_dota_hero_tinker";
-        lastHitChallengeRival = "npc_dota_hero_lina";
-        model = "models/heroes/tinker/tinker.vmdl";
-        modelScale = .8;
         movementSpeed = 305;
         movementTurnRate = .6;
-        pickSound = "tinker_tink_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_tinker";
-        projectileModel = "particles/units/heroes/hero_tinker/tinker_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Carry","Nuker","Pusher"};
-        rolelevels = new int[]{1,3,2};
-        soundSet = "Hero_Tinker";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_tinker.vsndevts";
         active = true;
         localizedName = "Tinker";
         shortKey = "tinker";
@@ -184,16 +152,8 @@ public final class Tinker extends Hero {
         return attributePrimary;
     }
 
-    public int getAttributeStrengthGain() {
+    public double getAttributeStrengthGain() {
         return attributeStrengthGain;
-    }
-
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
     }
 
     public int getCMEnabled() {
@@ -204,40 +164,12 @@ public final class Tinker extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -248,40 +180,12 @@ public final class Tinker extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

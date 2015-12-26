@@ -18,7 +18,6 @@ public final class Phoenix extends Hero {
     private final PhoenixSunRayStop ability8;
     private final PhoenixSunRayToggleMove ability9;
     private final int abilityDraftDisabled;
-    private final int abilityLayout;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -34,33 +33,14 @@ public final class Phoenix extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String baseClass;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final int noCombine;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -78,7 +58,6 @@ public final class Phoenix extends Hero {
         ability8 = PhoenixSunRayStop.instance();
         ability9 = PhoenixSunRayToggleMove.instance();
         abilityDraftDisabled = 1;
-        abilityLayout = 5;
         armorPhysical = -2;
         attackAcquisitionRange = 800;
         attackAnimationPoint = .35;
@@ -94,33 +73,14 @@ public final class Phoenix extends Hero {
         attributeIntelligenceGain = 1.8;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.9;
-        banSound = "phoenix_phoenix_bird_moving01";
-        baseClass = "npc_dota_hero_phoenix";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 0;
         enabled = 1;
-        healthBarOffset = 240;
         heroID = 110;
-        heroSelectSoundEffect = "Hero_Phoenix.Pick";
-        heroUnlockOrder = 1;
-        idleExpression = "scenes/phoenix/phoenix/exp_idle_01.vcd";
-        idleSoundLoop = "Hero_Phoenix.IdleLoop";
         key = "npc_dota_hero_phoenix";
-        model = "models/heroes/phoenix/phoenix_bird.vmdl";
-        modelScale = .95;
         movementSpeed = 285;
         movementTurnRate = 1;
-        nameAliases = "ph";
-        noCombine = 1;
-        pickSound = "phoenix_phoenix_bird_respawn";
-        portrait = "vgui/hud/heroportraits/portrait_phoenix";
-        projectileModel = "particles/units/heroes/hero_phoenix/phoenix_base_attack.vpcf";
         projectileSpeed = 1100;
-        role = new String[]{"Support","Nuker","Initiator","Escape","Disabler"};
-        rolelevels = new int[]{1,3,2,2,1};
-        soundSet = "Hero_Phoenix";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_phoenix.vsndevts";
         active = true;
         localizedName = "Phoenix";
         shortKey = "phoenix";
@@ -176,10 +136,6 @@ public final class Phoenix extends Hero {
 
     public int getAbilityDraftDisabled() {
         return abilityDraftDisabled;
-    }
-
-    public int getAbilityLayout() {
-        return abilityLayout;
     }
 
     public int getArmorPhysical() {
@@ -242,18 +198,6 @@ public final class Phoenix extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBaseClass() {
-        return baseClass;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -262,40 +206,12 @@ public final class Phoenix extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -306,48 +222,12 @@ public final class Phoenix extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public int getNoCombine() {
-        return noCombine;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

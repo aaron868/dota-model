@@ -27,34 +27,16 @@ public final class Slark extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final int loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
     private final int visionDaytimeRange;
     private final int visionNighttimeRange;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -81,34 +63,16 @@ public final class Slark extends Hero {
         attributeIntelligenceGain = 1.9;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.8;
-        banSound = "slark_slark_anger_02";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 140;
         heroID = 93;
-        heroSelectSoundEffect = "Hero_Slark.Pick";
-        heroUnlockOrder = 0;
-        idleExpression = "scenes/slark/slark_exp_idle_01.vcd";
-        idleSoundLoop = "Hero_Slark.IdleLoop";
         key = "npc_dota_hero_slark";
-        lastHitChallengeRival = "npc_dota_hero_kunkka";
-        loadoutScale = 1;
-        model = "models/heroes/slark/slark.vmdl";
-        modelScale = .9;
         movementSpeed = 305;
         movementTurnRate = .5;
-        nameAliases = "slark";
-        pickSound = "slark_slark_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_slark";
         projectileSpeed = 0;
-        role = new String[]{"Carry","Escape","Disabler","Nuker"};
-        rolelevels = new int[]{2,3,1,1};
-        soundSet = "Hero_Slark";
         team = "Bad";
         visionDaytimeRange = 1800;
         visionNighttimeRange = 1800;
-        voiceFile = "soundevents/voscripts/game_sounds_vo_slark.vsndevts";
         active = true;
         localizedName = "Slark";
         shortKey = "slark";
@@ -202,14 +166,6 @@ public final class Slark extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -218,48 +174,12 @@ public final class Slark extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public int getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -270,32 +190,8 @@ public final class Slark extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
     }
 
     public String getTeam() {
@@ -308,10 +204,6 @@ public final class Slark extends Hero {
 
     public int getVisionNighttimeRange() {
         return visionNighttimeRange;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

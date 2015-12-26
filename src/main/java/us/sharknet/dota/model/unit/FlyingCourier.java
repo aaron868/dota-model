@@ -13,7 +13,6 @@ public final class FlyingCourier extends NpcUnit {
     private final CourierTransferItems ability4;
     private final CourierGoToSecretshop ability5;
     private final CourierBurst ability6;
-    private final int abilityLayout;
     private final int armorPhysical;
     private final double attackDesire;
     private final String baseClass;
@@ -54,7 +53,6 @@ public final class FlyingCourier extends NpcUnit {
         ability4 = CourierTransferItems.instance();
         ability5 = CourierGoToSecretshop.instance();
         ability6 = CourierBurst.instance();
-        abilityLayout = 6;
         armorPhysical = 10;
         attackDesire = 1.5;
         baseClass = "npc_dota_flying_courier";
@@ -118,10 +116,6 @@ public final class FlyingCourier extends NpcUnit {
 
     public CourierBurst getAbility6() {
         return ability6;
-    }
-
-    public int getAbilityLayout() {
-        return abilityLayout;
     }
 
     public int getArmorPhysical() {

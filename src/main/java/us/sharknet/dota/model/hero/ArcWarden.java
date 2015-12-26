@@ -27,31 +27,14 @@ public final class ArcWarden extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String model;
-    private final int modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -78,31 +61,14 @@ public final class ArcWarden extends Hero {
         attributeIntelligenceGain = 2.1;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.9;
-        banSound = "arc_warden_arcwar_anger_10";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 0;
         enabled = 1;
-        healthBarOffset = 160;
-        heroGlowColor = new int[]{120,64,148};
         heroID = 113;
-        heroSelectSoundEffect = "Hero_ArcWarden.Pick";
-        heroUnlockOrder = 1;
-        idleExpression = "scenes/arc_warden/arc_warden_exp_idle_01.vcd";
         key = "npc_dota_hero_arc_warden";
-        model = "models/heroes/arc_warden/arc_warden.vmdl";
-        modelScale = 1;
         movementSpeed = 295;
         movementTurnRate = .4;
-        nameAliases = "zet";
-        pickSound = "arc_warden_arcwar_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_arc_warden";
-        projectileModel = "particles/units/heroes/hero_arc_warden/arc_warden_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Carry","Escape","Nuker"};
-        rolelevels = new int[]{3,3,1};
-        soundSet = "Hero_ArcWarden";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_arc_warden.vsndevts";
         active = true;
         localizedName = "Arc Warden";
         shortKey = "arc_warden";
@@ -196,14 +162,6 @@ public final class ArcWarden extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -212,40 +170,12 @@ public final class ArcWarden extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public int getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -256,44 +186,12 @@ public final class ArcWarden extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

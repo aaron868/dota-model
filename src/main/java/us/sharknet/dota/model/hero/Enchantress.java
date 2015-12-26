@@ -25,33 +25,15 @@ public final class Enchantress extends Hero {
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
-    private final int attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
+    private final double attributeStrengthGain;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -77,32 +59,14 @@ public final class Enchantress extends Hero {
         attributeIntelligenceGain = 2.8;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 1;
-        banSound = "enchantress_ench_anger_03";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 180;
-        heroGlowColor = new int[]{216,114,11};
         heroID = 58;
-        heroSelectSoundEffect = "Hero_Enchantress.Pick";
-        heroUnlockOrder = 2;
-        idleExpression = "scenes/enchantress/enchantress_exp_idle_01.vcd";
         key = "npc_dota_hero_enchantress";
-        lastHitChallengeRival = "npc_dota_hero_drow_ranger";
-        loadoutScale = .78;
-        model = "models/heroes/enchantress/enchantress.vmdl";
-        modelScale = .74;
         movementSpeed = 335;
         movementTurnRate = .4;
-        pickSound = "enchantress_ench_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_enchantress";
-        projectileModel = "particles/units/heroes/hero_enchantress/enchantress_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Support","Jungler","Pusher","Durable","Disabler"};
-        rolelevels = new int[]{2,3,2,1,1};
-        soundSet = "Hero_Enchantress";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_enchantress.vsndevts";
         active = true;
         localizedName = "Enchantress";
         shortKey = "enchantress";
@@ -188,16 +152,8 @@ public final class Enchantress extends Hero {
         return attributePrimary;
     }
 
-    public int getAttributeStrengthGain() {
+    public double getAttributeStrengthGain() {
         return attributeStrengthGain;
-    }
-
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
     }
 
     public int getCMEnabled() {
@@ -208,48 +164,12 @@ public final class Enchantress extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -260,40 +180,12 @@ public final class Enchantress extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

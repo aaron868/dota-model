@@ -26,33 +26,13 @@ public final class PhantomAssassin extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -78,33 +58,13 @@ public final class PhantomAssassin extends Hero {
         attributeIntelligenceGain = 1.4;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.85;
-        banSound = "phantom_assassin_phass_anger_08";
-        botImplemented = 1;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        hasAggressiveStance = 1;
-        healthBarOffset = 180;
-        heroGlowColor = new int[]{154,97,133};
         heroID = 44;
-        heroSelectSoundEffect = "Hero_PhantomAssassin.Pick";
-        heroUnlockOrder = 1;
-        idleExpression = "scenes/phantom_assassin/phantom_assassin_exp_idle_01.vcd";
         key = "npc_dota_hero_phantom_assassin";
-        lastHitChallengeRival = "npc_dota_hero_bounty_hunter";
-        loadoutScale = .93;
-        model = "models/heroes/phantom_assassin/phantom_assassin.vmdl";
-        modelScale = .86;
         movementSpeed = 310;
         movementTurnRate = .4;
-        nameAliases = "pa";
-        pickSound = "phantom_assassin_phass_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_phantom_assassin";
-        role = new String[]{"Carry","Escape"};
-        rolelevels = new int[]{3,1};
-        soundSet = "Hero_PhantomAssassin";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_phantom_assassin.vsndevts";
         active = true;
         localizedName = "Phantom Assassin";
         shortKey = "phantom_assassin";
@@ -194,18 +154,6 @@ public final class PhantomAssassin extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -214,52 +162,12 @@ public final class PhantomAssassin extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -270,36 +178,8 @@ public final class PhantomAssassin extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

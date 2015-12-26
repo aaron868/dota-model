@@ -23,34 +23,17 @@ public final class PhantomLancer extends Hero {
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
-    private final int attributeIntelligenceGain;
+    private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -76,31 +59,14 @@ public final class PhantomLancer extends Hero {
         attributeIntelligenceGain = 2;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.7;
-        banSound = "phantom_lancer_plance_anger_06";
-        boundsHullName = "DOTA_HULL_SIZE_SMALL";
         cMEnabled = 1;
         enabled = 1;
-        hasAggressiveStance = 1;
-        healthBarOffset = 190;
         heroID = 12;
-        heroSelectSoundEffect = "Hero_PhantomLancer.Pick";
-        heroUnlockOrder = 2;
         key = "npc_dota_hero_phantom_lancer";
-        lastHitChallengeRival = "npc_dota_hero_juggernaut";
-        loadoutScale = .97;
-        model = "models/heroes/phantom_lancer/phantom_lancer.vmdl";
-        modelScale = .84;
         movementSpeed = 290;
         movementTurnRate = .6;
-        nameAliases = "pl";
-        pickSound = "phantom_lancer_plance_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_phantom_lancer";
-        role = new String[]{"Carry","Escape","Pusher","Nuker"};
-        rolelevels = new int[]{2,2,1,1};
-        soundSet = "Hero_PhantomLancer";
         statusHealthRegen = .75;
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_phantom_lancer.vsndevts";
         active = true;
         localizedName = "Phantom Lancer";
         shortKey = "phantom_lancer";
@@ -178,7 +144,7 @@ public final class PhantomLancer extends Hero {
         return attributeBaseStrength;
     }
 
-    public int getAttributeIntelligenceGain() {
+    public double getAttributeIntelligenceGain() {
         return attributeIntelligenceGain;
     }
 
@@ -190,14 +156,6 @@ public final class PhantomLancer extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -206,44 +164,12 @@ public final class PhantomLancer extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -254,40 +180,12 @@ public final class PhantomLancer extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public double getStatusHealthRegen() {
         return statusHealthRegen;
     }
 
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

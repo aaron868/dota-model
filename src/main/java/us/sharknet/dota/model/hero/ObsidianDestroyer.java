@@ -20,38 +20,21 @@ public final class ObsidianDestroyer extends Hero {
     private final int attackDamageMin;
     private final int attackRange;
     private final double attackRate;
-    private final int attributeAgilityGain;
+    private final double attributeAgilityGain;
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -78,31 +61,14 @@ public final class ObsidianDestroyer extends Hero {
         attributeIntelligenceGain = 2.7;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 2.3;
-        banSound = "outworld_destroyer_odest_anger_02";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 350;
         heroID = 76;
-        heroSelectSoundEffect = "Hero_OD.Pick";
-        heroUnlockOrder = 2;
-        idleExpression = "scenes/outworld_destroyer/outworld_destroyer_exp_idle_01.vcd";
-        idleSoundLoop = "Hero_ObsidianDestroyer.IdleLoop";
         key = "npc_dota_hero_obsidian_destroyer";
-        lastHitChallengeRival = "npc_dota_hero_death_prophet";
-        model = "models/heroes/obsidian_destroyer/obsidian_destroyer.vmdl";
-        modelScale = .7;
         movementSpeed = 315;
         movementTurnRate = .5;
-        nameAliases = "od";
-        pickSound = "outworld_destroyer_odest_spawn_02";
-        portrait = "vgui/hud/heroportraits/portrait_obsidian_destroyer";
-        projectileModel = "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Carry","Nuker","Disabler"};
-        rolelevels = new int[]{2,2,1};
-        soundSet = "Hero_ObsidianDestroyer";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_outworld_destroyer.vsndevts";
         active = true;
         localizedName = "Outworld Devourer";
         shortKey = "obsidian_destroyer";
@@ -168,7 +134,7 @@ public final class ObsidianDestroyer extends Hero {
         return attackRate;
     }
 
-    public int getAttributeAgilityGain() {
+    public double getAttributeAgilityGain() {
         return attributeAgilityGain;
     }
 
@@ -196,10 +162,6 @@ public final class ObsidianDestroyer extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -208,44 +170,12 @@ public final class ObsidianDestroyer extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -256,44 +186,12 @@ public final class ObsidianDestroyer extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

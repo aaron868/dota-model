@@ -26,32 +26,15 @@ public final class Venomancer extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -77,32 +60,15 @@ public final class Venomancer extends Hero {
         attributeIntelligenceGain = 1.75;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.85;
-        banSound = "venomancer_venm_anger_01";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 150;
-        heroGlowColor = new int[]{252,172,18};
         heroID = 40;
-        heroSelectSoundEffect = "Hero_Venomancer.Pick";
-        heroUnlockOrder = 0;
-        idleExpression = "scenes/venomancer/venomancer_exp_idle_01.vcd";
-        idleSoundLoop = "Hero_Venomancer.IdleLoop";
         key = "npc_dota_hero_venomancer";
-        lastHitChallengeRival = "npc_dota_hero_viper";
-        model = "models/heroes/venomancer/venomancer.vmdl";
-        modelScale = .7;
         movementSpeed = 285;
         movementTurnRate = .4;
-        pickSound = "venomancer_venm_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_venomancer";
-        projectileModel = "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Support","Nuker","Initiator","Pusher","Disabler"};
-        rolelevels = new int[]{2,1,1,1,1};
-        soundSet = "Hero_Venomancer";
         statusHealthRegen = .25;
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_venomancer.vsndevts";
         active = true;
         localizedName = "Venomancer";
         shortKey = "venomancer";
@@ -192,10 +158,6 @@ public final class Venomancer extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -204,48 +166,12 @@ public final class Venomancer extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -256,32 +182,8 @@ public final class Venomancer extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
     }
 
     public double getStatusHealthRegen() {
@@ -290,10 +192,6 @@ public final class Venomancer extends Hero {
 
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

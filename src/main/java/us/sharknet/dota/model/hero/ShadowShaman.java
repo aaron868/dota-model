@@ -23,36 +23,17 @@ public final class ShadowShaman extends Hero {
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
-    private final int attributeIntelligenceGain;
+    private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final int heroPool2;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -78,33 +59,14 @@ public final class ShadowShaman extends Hero {
         attributeIntelligenceGain = 3;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 1.8;
-        banSound = "shadowshaman_shad_anger_01";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 130;
-        heroGlowColor = new int[]{255,167,38};
         heroID = 27;
-        heroPool2 = 1;
-        heroSelectSoundEffect = "Hero_ShadowShaman.Pick";
-        heroUnlockOrder = 0;
-        idleExpression = "scenes/shadowshaman/shadowshaman_exp_idle_01.vcd";
         key = "npc_dota_hero_shadow_shaman";
-        lastHitChallengeRival = "npc_dota_hero_witch_doctor";
-        model = "models/heroes/shadowshaman/shadowshaman.vmdl";
-        modelScale = .91;
         movementSpeed = 285;
         movementTurnRate = .4;
-        nameAliases = "ss";
-        pickSound = "shadowshaman_shad_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_shadow_shaman";
-        projectileModel = "particles/units/heroes/hero_shadowshaman/shadowshaman_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Support","Pusher","Disabler","Nuker","Initiator"};
-        rolelevels = new int[]{2,3,3,2,1};
-        soundSet = "Hero_ShadowShaman";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_shadowshaman.vsndevts";
         active = true;
         localizedName = "Shadow Shaman";
         shortKey = "shadow_shaman";
@@ -182,7 +144,7 @@ public final class ShadowShaman extends Hero {
         return attributeBaseStrength;
     }
 
-    public int getAttributeIntelligenceGain() {
+    public double getAttributeIntelligenceGain() {
         return attributeIntelligenceGain;
     }
 
@@ -194,14 +156,6 @@ public final class ShadowShaman extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -210,48 +164,12 @@ public final class ShadowShaman extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public int getHeroPool2() {
-        return heroPool2;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -262,44 +180,12 @@ public final class ShadowShaman extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

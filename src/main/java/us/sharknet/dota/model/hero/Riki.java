@@ -26,32 +26,14 @@ public final class Riki extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -77,32 +59,14 @@ public final class Riki extends Hero {
         attributeIntelligenceGain = 1.3;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.6;
-        banSound = "riki_riki_anger_04";
-        botImplemented = 0;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 0;
         enabled = 1;
-        healthBarOffset = 115;
-        heroGlowColor = new int[]{170,112,194};
         heroID = 32;
-        heroSelectSoundEffect = "Hero_Riki.Pick";
-        heroUnlockOrder = 3;
-        idleExpression = "scenes/riki/riki_exp_idle_01.vcd";
         key = "npc_dota_hero_riki";
-        lastHitChallengeRival = "npc_dota_hero_bounty_hunter";
-        loadoutScale = 1.1;
-        model = "models/heroes/rikimaru/rikimaru.vmdl";
-        modelScale = .87;
         movementSpeed = 290;
         movementTurnRate = .6;
-        pickSound = "riki_riki_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_riki";
-        role = new String[]{"Carry","Escape","Disabler"};
-        rolelevels = new int[]{2,2,1};
-        soundSet = "Hero_Riki";
         statusHealthRegen = .25;
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_riki.vsndevts";
         active = true;
         localizedName = "Riki";
         shortKey = "riki";
@@ -192,18 +156,6 @@ public final class Riki extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -212,48 +164,12 @@ public final class Riki extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -264,36 +180,12 @@ public final class Riki extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public double getStatusHealthRegen() {
         return statusHealthRegen;
     }
 
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

@@ -26,33 +26,16 @@ public final class Batrider extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
     private final int visionDaytimeRange;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -78,33 +61,16 @@ public final class Batrider extends Hero {
         attributeIntelligenceGain = 2.5;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 2.4;
-        banSound = "batrider_bat_anger_02";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 240;
-        heroGlowColor = new int[]{107,74,53};
         heroID = 65;
-        heroSelectSoundEffect = "Hero_Batrider.Pick";
-        heroUnlockOrder = 3;
-        idleExpression = "scenes/batrider/batrider_exp_idle_01.vcd";
         key = "npc_dota_hero_batrider";
-        lastHitChallengeRival = "npc_dota_hero_lina";
-        model = "models/heroes/batrider/batrider.vmdl";
-        modelScale = .74;
         movementSpeed = 290;
         movementTurnRate = 1;
-        nameAliases = "br";
-        pickSound = "batrider_bat_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_batrider";
-        projectileModel = "particles/units/heroes/hero_batrider/batrider_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Initiator","Jungler","Disabler","Escape"};
-        rolelevels = new int[]{3,2,2,1};
-        soundSet = "Hero_Batrider";
         statusHealthRegen = 2;
         team = "Bad";
         visionDaytimeRange = 1200;
-        voiceFile = "soundevents/voscripts/game_sounds_vo_batrider.vsndevts";
         active = true;
         localizedName = "Batrider";
         shortKey = "batrider";
@@ -194,10 +160,6 @@ public final class Batrider extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -206,44 +168,12 @@ public final class Batrider extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -254,36 +184,8 @@ public final class Batrider extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
     }
 
     public double getStatusHealthRegen() {
@@ -296,10 +198,6 @@ public final class Batrider extends Hero {
 
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

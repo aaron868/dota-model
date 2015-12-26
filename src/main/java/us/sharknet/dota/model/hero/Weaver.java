@@ -26,30 +26,14 @@ public final class Weaver extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final int newHero;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -75,30 +59,14 @@ public final class Weaver extends Hero {
         attributeIntelligenceGain = 1.8;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.5;
-        banSound = "weaver_weav_anger_01";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 110;
         heroID = 63;
-        heroSelectSoundEffect = "Hero_Weaver.Pick";
-        heroUnlockOrder = 3;
         key = "npc_dota_hero_weaver";
-        lastHitChallengeRival = "npc_dota_hero_viper";
-        loadoutScale = .9;
-        model = "models/heroes/weaver/weaver.vmdl";
-        modelScale = .74;
         movementSpeed = 290;
         movementTurnRate = .5;
-        newHero = 1;
-        pickSound = "weaver_weav_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_weaver";
-        projectileModel = "particles/units/heroes/hero_weaver/weaver_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Carry","Escape"};
-        rolelevels = new int[]{2,3};
-        soundSet = "Hero_Weaver";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_weaver.vsndevts";
         active = true;
         localizedName = "Weaver";
         shortKey = "weaver";
@@ -188,10 +156,6 @@ public final class Weaver extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -200,40 +164,12 @@ public final class Weaver extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -244,44 +180,12 @@ public final class Weaver extends Hero {
         return movementTurnRate;
     }
 
-    public int getNewHero() {
-        return newHero;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

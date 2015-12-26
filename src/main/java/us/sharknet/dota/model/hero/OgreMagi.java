@@ -29,29 +29,14 @@ public final class OgreMagi extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -80,29 +65,14 @@ public final class OgreMagi extends Hero {
         attributeIntelligenceGain = 2.4;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 3.2;
-        banSound = "ogre_magi_ogmag_anger_04";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 180;
         heroID = 84;
-        heroSelectSoundEffect = "Hero_OgreMagi.Pick";
-        idleExpression = "scenes/ogre_magi/ogre_magi_exp_idle_01.vcd";
         key = "npc_dota_hero_ogre_magi";
-        lastHitChallengeRival = "npc_dota_hero_dragon_knight";
-        loadoutScale = .87;
-        model = "models/heroes/ogre_magi/ogre_magi.vmdl";
-        modelScale = .93;
         movementSpeed = 295;
         movementTurnRate = .6;
-        nameAliases = "om";
-        pickSound = "ogre_magi_ogmag_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_chaos_knight";
-        role = new String[]{"Support","Nuker","Disabler","Durable","Initiator"};
-        rolelevels = new int[]{2,2,2,1,1};
-        soundSet = "Hero_OgreMagi";
         statusHealthRegen = 3.5;
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_ogre_magi.vsndevts";
         active = true;
         localizedName = "Ogre Magi";
         shortKey = "ogre_magi";
@@ -204,10 +174,6 @@ public final class OgreMagi extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -216,40 +182,12 @@ public final class OgreMagi extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -260,40 +198,12 @@ public final class OgreMagi extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public double getStatusHealthRegen() {
         return statusHealthRegen;
     }
 
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

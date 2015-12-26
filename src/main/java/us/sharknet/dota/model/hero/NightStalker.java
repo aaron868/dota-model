@@ -26,34 +26,16 @@ public final class NightStalker extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final String model1;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
     private final int visionDaytimeRange;
     private final int visionNighttimeRange;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -79,34 +61,16 @@ public final class NightStalker extends Hero {
         attributeIntelligenceGain = 1.6;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.8;
-        banSound = "night_stalker_nstalk_anger_07";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 165;
-        heroGlowColor = new int[]{70,105,255};
         heroID = 60;
-        heroSelectSoundEffect = "Hero_NightStalker.Pick";
-        heroUnlockOrder = 2;
         key = "npc_dota_hero_night_stalker";
-        lastHitChallengeRival = "npc_dota_hero_juggernaut";
-        loadoutScale = .84;
-        model = "models/heroes/nightstalker/nightstalker.vmdl";
-        model1 = "models/heroes/nightstalker/nightstalker_night.vmdl";
-        modelScale = .74;
         movementSpeed = 295;
         movementTurnRate = .5;
-        nameAliases = "ns";
-        pickSound = "night_stalker_nstalk_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_night_stalker";
-        role = new String[]{"Carry","Initiator","Durable","Disabler","Nuker"};
-        rolelevels = new int[]{1,2,2,2,1};
-        soundSet = "Hero_NightStalker";
         statusHealthRegen = 2;
         team = "Bad";
         visionDaytimeRange = 1200;
         visionNighttimeRange = 1800;
-        voiceFile = "soundevents/voscripts/game_sounds_vo_night_stalker.vsndevts";
         active = true;
         localizedName = "Night Stalker";
         shortKey = "night_stalker";
@@ -196,14 +160,6 @@ public final class NightStalker extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -212,48 +168,12 @@ public final class NightStalker extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public String getModel1() {
-        return model1;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -262,30 +182,6 @@ public final class NightStalker extends Hero {
 
     public double getMovementTurnRate() {
         return movementTurnRate;
-    }
-
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
     }
 
     public double getStatusHealthRegen() {
@@ -302,10 +198,6 @@ public final class NightStalker extends Hero {
 
     public int getVisionNighttimeRange() {
         return visionNighttimeRange;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

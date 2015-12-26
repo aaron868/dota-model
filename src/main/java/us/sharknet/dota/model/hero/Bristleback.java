@@ -27,30 +27,13 @@ public final class Bristleback extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
     private final int cMEnabled;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String[] nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -77,30 +60,13 @@ public final class Bristleback extends Hero {
         attributeIntelligenceGain = 2.8;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.2;
-        banSound = "bristleback_bristle_anger_09";
-        botImplemented = 1;
         cMEnabled = 1;
         enabled = 1;
-        hasAggressiveStance = 1;
-        healthBarOffset = 200;
         heroID = 99;
-        heroSelectSoundEffect = "Hero_Bristleback.Pick";
-        idleSoundLoop = "Hero_Bristleback.IdleLoop";
         key = "npc_dota_hero_bristleback";
-        lastHitChallengeRival = "npc_dota_hero_dragon_knight";
-        loadoutScale = .9;
-        model = "models/heroes/bristleback/bristleback.vmdl";
-        modelScale = .8;
         movementSpeed = 290;
         movementTurnRate = 1;
-        nameAliases = new String[]{"Rigwarl","bb"};
-        pickSound = "bristleback_bristle_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_bristleback";
-        role = new String[]{"Carry","Durable","Initiator","Nuker"};
-        rolelevels = new int[]{2,3,1,1};
-        soundSet = "Hero_Bristleback";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_bristleback.vsndevts";
         active = true;
         localizedName = "Bristleback";
         shortKey = "bristleback";
@@ -194,14 +160,6 @@ public final class Bristleback extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -210,44 +168,12 @@ public final class Bristleback extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -258,36 +184,8 @@ public final class Bristleback extends Hero {
         return movementTurnRate;
     }
 
-    public String[] getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

@@ -26,31 +26,13 @@ public final class SandKing extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final int heroPool1;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -76,31 +58,13 @@ public final class SandKing extends Hero {
         attributeIntelligenceGain = 1.8;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.6;
-        banSound = "sandking_skg_anger_06";
-        botImplemented = 1;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 130;
-        heroGlowColor = new int[]{216,174,46};
         heroID = 16;
-        heroPool1 = 1;
-        heroSelectSoundEffect = "Hero_Sandking.Pick";
-        heroUnlockOrder = 1;
         key = "npc_dota_hero_sand_king";
-        lastHitChallengeRival = "npc_dota_hero_skeleton_king";
-        model = "models/heroes/sand_king/sand_king.vmdl";
-        modelScale = .84;
         movementSpeed = 300;
         movementTurnRate = .5;
-        nameAliases = "sk";
-        pickSound = "sandking_skg_spawn_02";
-        portrait = "vgui/hud/heroportraits/portrait_sandking";
-        role = new String[]{"Initiator","Disabler","Nuker","Escape","Jungler"};
-        rolelevels = new int[]{3,2,2,2,1};
-        soundSet = "Hero_SandKing";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_sandking.vsndevts";
         active = true;
         localizedName = "Sand King";
         shortKey = "sand_king";
@@ -190,18 +154,6 @@ public final class SandKing extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -210,44 +162,12 @@ public final class SandKing extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public int getHeroPool1() {
-        return heroPool1;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -258,36 +178,8 @@ public final class SandKing extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

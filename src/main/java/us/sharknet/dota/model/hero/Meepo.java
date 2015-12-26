@@ -7,7 +7,6 @@ public final class Meepo extends Hero {
 
     private static Meepo instance;
 
-    private final int aRDMDisabled;
     private final MeepoEarthbind ability1;
     private final MeepoPoof ability2;
     private final MeepoGeostrike ability3;
@@ -29,37 +28,21 @@ public final class Meepo extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
     private final int magicalResistance;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String[] nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
     private final int visionDaytimeRange;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
     private final String url;
 
     private Meepo() {
-        aRDMDisabled = 1;
         ability1 = MeepoEarthbind.instance();
         ability2 = MeepoPoof.instance();
         ability3 = MeepoGeostrike.instance();
@@ -81,30 +64,15 @@ public final class Meepo extends Hero {
         attributeIntelligenceGain = 1.6;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.6;
-        banSound = "meepo_meepo_anger_12";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 125;
         heroID = 82;
-        heroSelectSoundEffect = "Hero_Meepo.Pick";
-        heroUnlockOrder = 3;
-        idleExpression = "scenes/meepo/meepo_exp_idle_01.vcd";
         key = "npc_dota_hero_meepo";
-        lastHitChallengeRival = "npc_dota_hero_sand_king";
         magicalResistance = 35;
-        model = "models/heroes/meepo/meepo.vmdl";
-        modelScale = .93;
         movementSpeed = 315;
         movementTurnRate = .65;
-        nameAliases = new String[]{"geomancer","meepwn"};
-        pickSound = "meepo_meepo_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_chaos_knight";
-        role = new String[]{"Carry","Escape","Nuker","Disabler","Initiator","Pusher"};
-        rolelevels = new int[]{2,2,2,1,1,1};
-        soundSet = "Hero_Meepo";
         team = "Bad";
         visionDaytimeRange = 1800;
-        voiceFile = "soundevents/voscripts/game_sounds_vo_meepo.vsndevts";
         active = true;
         localizedName = "Meepo";
         shortKey = "meepo";
@@ -116,10 +84,6 @@ public final class Meepo extends Hero {
             instance = new Meepo();
         }
         return instance;
-    }
-
-    public int getARDMDisabled() {
-        return aRDMDisabled;
     }
 
     public MeepoEarthbind getAbility1() {
@@ -206,10 +170,6 @@ public final class Meepo extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -218,44 +178,16 @@ public final class Meepo extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
     }
 
     public String getKey() {
         return key;
     }
 
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -266,40 +198,12 @@ public final class Meepo extends Hero {
         return movementTurnRate;
     }
 
-    public String[] getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
     }
 
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

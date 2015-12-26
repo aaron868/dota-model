@@ -27,34 +27,15 @@ public final class Medusa extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String[] nameAliases;
-    private final int noCombine;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
     private final int visionDaytimeRange;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -81,34 +62,15 @@ public final class Medusa extends Hero {
         attributeIntelligenceGain = 1.85;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.65;
-        banSound = "medusa_medus_anger_13";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        hasAggressiveStance = 1;
-        healthBarOffset = 200;
         heroID = 94;
-        heroSelectSoundEffect = "Hero_Medusa.Pick";
-        heroUnlockOrder = 0;
-        idleExpression = "scenes/medusa/medusa_exp_idle_01.vcd";
         key = "npc_dota_hero_medusa";
-        lastHitChallengeRival = "npc_dota_hero_zuus";
-        model = "models/heroes/medusa/medusa.vmdl";
-        modelScale = .85;
         movementSpeed = 290;
         movementTurnRate = .5;
-        nameAliases = new String[]{"medusa","gorgon"};
-        noCombine = 1;
-        pickSound = "medusa_medus_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_medusa";
-        projectileModel = "particles/units/heroes/hero_medusa/medusa_base_attack.vpcf";
         projectileSpeed = 1200;
-        role = new String[]{"Carry","Disabler","Durable"};
-        rolelevels = new int[]{3,1,1};
-        soundSet = "Hero_Medusa";
         team = "Bad";
         visionDaytimeRange = 1800;
-        voiceFile = "soundevents/voscripts/game_sounds_vo_medusa.vsndevts";
         active = true;
         localizedName = "Medusa";
         shortKey = "medusa";
@@ -202,14 +164,6 @@ public final class Medusa extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -218,44 +172,12 @@ public final class Medusa extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -266,40 +188,8 @@ public final class Medusa extends Hero {
         return movementTurnRate;
     }
 
-    public String[] getNameAliases() {
-        return nameAliases;
-    }
-
-    public int getNoCombine() {
-        return noCombine;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
     }
 
     public String getTeam() {
@@ -308,10 +198,6 @@ public final class Medusa extends Hero {
 
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

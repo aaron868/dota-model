@@ -15,7 +15,6 @@ public final class EarthSpirit extends Hero {
     private final EarthSpiritMagnetize ability6;
     private final AttributeBonus ability7;
     private final int abilityDraftDisabled;
-    private final int abilityLayout;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -31,29 +30,14 @@ public final class EarthSpirit extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final String idleExpression;
     private final String key;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String[] nameAliases;
-    private final int noCombine;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
     private final int visionDaytimeRange;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -68,7 +52,6 @@ public final class EarthSpirit extends Hero {
         ability6 = EarthSpiritMagnetize.instance();
         ability7 = AttributeBonus.instance();
         abilityDraftDisabled = 1;
-        abilityLayout = 5;
         armorPhysical = 1;
         attackAcquisitionRange = 600;
         attackAnimationPoint = .35;
@@ -84,29 +67,14 @@ public final class EarthSpirit extends Hero {
         attributeIntelligenceGain = 2.1;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.9;
-        banSound = "earth_spirit_earthspi_anger_08";
         cMEnabled = 1;
         enabled = 1;
-        hasAggressiveStance = 1;
-        healthBarOffset = 200;
         heroID = 107;
-        heroSelectSoundEffect = "Hero_EarthSpirit.Pick";
-        idleExpression = "scenes/earth_spirit/earth_spirit_exp_idle_01.vcd";
         key = "npc_dota_hero_earth_spirit";
-        model = "models/heroes/earth_spirit/earth_spirit.vmdl";
-        modelScale = .95;
         movementSpeed = 305;
         movementTurnRate = .6;
-        nameAliases = new String[]{"Kaolin","Earth"};
-        noCombine = 0;
-        pickSound = "earth_spirit_earthspi_spawn_02";
-        portrait = "vgui/hud/heroportraits/earth_spirit";
-        role = new String[]{"Nuker","Escape","Disabler","Initiator","Durable"};
-        rolelevels = new int[]{2,2,1,1,1};
-        soundSet = "Hero_EarthSpirit";
         team = "Good";
         visionDaytimeRange = 1800;
-        voiceFile = "soundevents/voscripts/game_sounds_vo_earth_spirit.vsndevts";
         active = true;
         localizedName = "Earth Spirit";
         shortKey = "earth_spirit";
@@ -150,10 +118,6 @@ public final class EarthSpirit extends Hero {
 
     public int getAbilityDraftDisabled() {
         return abilityDraftDisabled;
-    }
-
-    public int getAbilityLayout() {
-        return abilityLayout;
     }
 
     public int getArmorPhysical() {
@@ -216,10 +180,6 @@ public final class EarthSpirit extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -228,36 +188,12 @@ public final class EarthSpirit extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -268,44 +204,12 @@ public final class EarthSpirit extends Hero {
         return movementTurnRate;
     }
 
-    public String[] getNameAliases() {
-        return nameAliases;
-    }
-
-    public int getNoCombine() {
-        return noCombine;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
     }
 
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

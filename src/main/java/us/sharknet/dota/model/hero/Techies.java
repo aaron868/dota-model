@@ -14,7 +14,6 @@ public final class Techies extends Hero {
     private final TechiesMinefieldSign ability5;
     private final TechiesRemoteMines ability6;
     private final AttributeBonus ability7;
-    private final int abilityLayout;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -30,49 +29,23 @@ public final class Techies extends Hero {
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
-    private final int attributeStrengthGain;
-    private final String banSound;
-    private final String baseClass;
-    private final int botImplemented;
-    private final String boundsHullName;
+    private final double attributeStrengthGain;
     private final int cMEnabled;
-    private final int cMTournamentIgnore;
     private final String combatClassAttack;
     private final String combatClassDefend;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
     private final int heroID;
-    private final int heroPool1;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final double loadoutScale;
     private final int magicalResistance;
-    private final String model;
-    private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final int newHero;
-    private final String pickSound;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final int ringRadius;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusManaRegen;
     private final String team;
-    private final String teamName;
-    private final String unitRelationshipClass;
     private final int visionDaytimeRange;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
-    private final int new_player_enable;
     private final String shortKey;
     private final String url;
 
@@ -84,7 +57,6 @@ public final class Techies extends Hero {
         ability5 = TechiesMinefieldSign.instance();
         ability6 = TechiesRemoteMines.instance();
         ability7 = AttributeBonus.instance();
-        abilityLayout = 6;
         armorPhysical = 5;
         attackAcquisitionRange = 800;
         attackAnimationPoint = .5;
@@ -101,48 +73,22 @@ public final class Techies extends Hero {
         attributeIntelligenceGain = 2.9;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 2;
-        banSound = "techies_tech_anger_23";
-        baseClass = "npc_dota_hero_techies";
-        botImplemented = 0;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
-        cMTournamentIgnore = 0;
         combatClassAttack = "DOTA_COMBAT_CLASS_ATTACK_HERO";
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_HERO";
         enabled = 1;
-        hasAggressiveStance = 0;
-        healthBarOffset = 150;
         heroID = 105;
-        heroPool1 = 0;
-        heroSelectSoundEffect = "Hero_Techies.Pick";
-        heroUnlockOrder = 1;
-        idleExpression = "scenes/techies/techies_exp_idle_01.vcd";
-        idleSoundLoop = "Hero_Techies.IdleLoop";
         key = "npc_dota_hero_techies";
-        loadoutScale = .6;
         magicalResistance = 25;
-        model = "models/heroes/techies/techies.vmdl";
-        modelScale = .6;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 270;
         movementTurnRate = .5;
-        newHero = 0;
-        pickSound = "techies_tech_spawn_01";
-        projectileModel = "particles/units/heroes/hero_techies/techies_base_attack.vpcf";
         projectileSpeed = 900;
-        ringRadius = 70;
-        role = new String[]{"Nuker","Disabler"};
-        rolelevels = new int[]{3,1};
-        soundSet = "Hero_Techies";
         statusManaRegen = .2;
         team = "Good";
-        teamName = "DOTA_TEAM_GOODGUYS";
-        unitRelationshipClass = "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_HERO";
         visionDaytimeRange = 1800;
-        voiceFile = "soundevents/voscripts/game_sounds_vo_techies.vsndevts";
         active = true;
         localizedName = "Techies";
-        new_player_enable = 0;
         shortKey = "techies";
         url = "Techies";
     }
@@ -180,10 +126,6 @@ public final class Techies extends Hero {
 
     public AttributeBonus getAbility7() {
         return ability7;
-    }
-
-    public int getAbilityLayout() {
-        return abilityLayout;
     }
 
     public int getArmorPhysical() {
@@ -246,32 +188,12 @@ public final class Techies extends Hero {
         return attributePrimary;
     }
 
-    public int getAttributeStrengthGain() {
+    public double getAttributeStrengthGain() {
         return attributeStrengthGain;
-    }
-
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBaseClass() {
-        return baseClass;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
     }
 
     public int getCMEnabled() {
         return cMEnabled;
-    }
-
-    public int getCMTournamentIgnore() {
-        return cMTournamentIgnore;
     }
 
     public String getCombatClassAttack() {
@@ -286,56 +208,16 @@ public final class Techies extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
-    }
-
-    public int getHeroPool1() {
-        return heroPool1;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
     }
 
     public String getKey() {
         return key;
     }
 
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public String getMovementCapabilities() {
@@ -350,36 +232,8 @@ public final class Techies extends Hero {
         return movementTurnRate;
     }
 
-    public int getNewHero() {
-        return newHero;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
-    }
-
-    public int getRingRadius() {
-        return ringRadius;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
     }
 
     public double getStatusManaRegen() {
@@ -390,20 +244,8 @@ public final class Techies extends Hero {
         return team;
     }
 
-    public String getTeamName() {
-        return teamName;
-    }
-
-    public String getUnitRelationshipClass() {
-        return unitRelationshipClass;
-    }
-
     public int getVisionDaytimeRange() {
         return visionDaytimeRange;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {
@@ -412,10 +254,6 @@ public final class Techies extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int getNewPlayerEnable() {
-        return new_player_enable;
     }
 
     public String getShortKey() {

@@ -27,30 +27,14 @@ public final class Gyrocopter extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -77,30 +61,14 @@ public final class Gyrocopter extends Hero {
         attributeIntelligenceGain = 2.1;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 1.8;
-        banSound = "gyrocopter_gyro_anger_08";
         cMEnabled = 1;
         enabled = 1;
-        hasAggressiveStance = 1;
-        healthBarOffset = 240;
         heroID = 72;
-        heroSelectSoundEffect = "Hero_Gyrocopter.Pick";
-        heroUnlockOrder = 2;
-        idleSoundLoop = "Hero_Gyrocopter.IdleLoop";
         key = "npc_dota_hero_gyrocopter";
-        lastHitChallengeRival = "npc_dota_hero_sniper";
-        model = "models/heroes/gyro/gyro.vmdl";
-        modelScale = .84;
         movementSpeed = 315;
         movementTurnRate = .6;
-        pickSound = "gyrocopter_gyro_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_gyrocopter";
-        projectileModel = "particles/units/heroes/hero_gyrocopter/gyro_base_attack.vpcf";
         projectileSpeed = 3000;
-        role = new String[]{"Carry","Nuker","Disabler"};
-        rolelevels = new int[]{3,1,1};
-        soundSet = "Hero_Gyrocopter";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_gyrocopter.vsndevts";
         active = true;
         localizedName = "Gyrocopter";
         shortKey = "gyrocopter";
@@ -194,10 +162,6 @@ public final class Gyrocopter extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -206,44 +170,12 @@ public final class Gyrocopter extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -254,40 +186,12 @@ public final class Gyrocopter extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

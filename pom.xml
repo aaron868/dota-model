@@ -6,7 +6,7 @@
 
     <groupId>us.sharknet.dota</groupId>
     <artifactId>model</artifactId>
-    <version>6.86a-0.3</version>
+    <version>6.86a-0.4</version>
 
     <dependencies>
         <dependency>

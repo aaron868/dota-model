@@ -28,29 +28,13 @@ public final class Alchemist extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int hasAggressiveStance;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -78,29 +62,13 @@ public final class Alchemist extends Hero {
         attributeIntelligenceGain = 1.8;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 1.8;
-        banSound = "alchemist_alch_anger_05";
         cMEnabled = 1;
         enabled = 1;
-        hasAggressiveStance = 1;
-        healthBarOffset = 200;
         heroID = 73;
-        heroSelectSoundEffect = "Hero_Alchemist.Pick";
-        heroUnlockOrder = 1;
-        idleExpression = "scenes/alchemist/alchemist_exp_idle_01.vcd";
         key = "npc_dota_hero_alchemist";
-        lastHitChallengeRival = "npc_dota_hero_earthshaker";
-        loadoutScale = .82;
-        model = "models/heroes/alchemist/alchemist.vmdl";
-        modelScale = .93;
         movementSpeed = 295;
         movementTurnRate = .6;
-        pickSound = "alchemist_alch_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_alchemist";
-        role = new String[]{"Carry","Support","Durable","Disabler","Initiator","Nuker"};
-        rolelevels = new int[]{2,1,2,1,1,1};
-        soundSet = "Hero_Alchemist";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_alchemist.vsndevts";
         active = true;
         localizedName = "Alchemist";
         shortKey = "alchemist";
@@ -198,10 +166,6 @@ public final class Alchemist extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -210,48 +174,12 @@ public final class Alchemist extends Hero {
         return enabled;
     }
 
-    public int getHasAggressiveStance() {
-        return hasAggressiveStance;
-    }
-
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -262,32 +190,8 @@ public final class Alchemist extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

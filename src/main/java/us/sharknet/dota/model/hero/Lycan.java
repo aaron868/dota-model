@@ -12,7 +12,6 @@ public final class Lycan extends Hero {
     private final LycanFeralImpulse ability3;
     private final LycanShapeshift ability4;
     private final AttributeBonus ability5;
-    private final double alternateLoadoutScale;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -27,29 +26,14 @@ public final class Lycan extends Hero {
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
-    private final int attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
+    private final double attributeStrengthGain;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -61,7 +45,6 @@ public final class Lycan extends Hero {
         ability3 = LycanFeralImpulse.instance();
         ability4 = LycanShapeshift.instance();
         ability5 = AttributeBonus.instance();
-        alternateLoadoutScale = .6;
         armorPhysical = 1;
         attackAcquisitionRange = 600;
         attackAnimationPoint = .55;
@@ -77,28 +60,13 @@ public final class Lycan extends Hero {
         attributeIntelligenceGain = 1.55;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 3;
-        banSound = "lycan_lycan_anger_03";
-        boundsHullName = "DOTA_HULL_SIZE_SMALL";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 220;
-        heroGlowColor = new int[]{139,1,1};
         heroID = 77;
-        heroSelectSoundEffect = "Hero_Lycan.Pick";
-        heroUnlockOrder = 0;
         key = "npc_dota_hero_lycan";
-        lastHitChallengeRival = "npc_dota_hero_skeleton_king";
-        model = "models/heroes/lycan/lycan.vmdl";
-        modelScale = .85;
         movementSpeed = 305;
         movementTurnRate = .5;
-        pickSound = "lycan_lycan_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_lycan";
-        role = new String[]{"Carry","Pusher","Jungler","Durable","Escape"};
-        rolelevels = new int[]{2,3,1,1,1};
-        soundSet = "Hero_Lycan";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_lycan.vsndevts";
         active = true;
         localizedName = "Lycan";
         shortKey = "lycan";
@@ -130,10 +98,6 @@ public final class Lycan extends Hero {
 
     public AttributeBonus getAbility5() {
         return ability5;
-    }
-
-    public double getAlternateLoadoutScale() {
-        return alternateLoadoutScale;
     }
 
     public int getArmorPhysical() {
@@ -192,16 +156,8 @@ public final class Lycan extends Hero {
         return attributePrimary;
     }
 
-    public int getAttributeStrengthGain() {
+    public double getAttributeStrengthGain() {
         return attributeStrengthGain;
-    }
-
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
     }
 
     public int getCMEnabled() {
@@ -212,40 +168,12 @@ public final class Lycan extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -256,32 +184,8 @@ public final class Lycan extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

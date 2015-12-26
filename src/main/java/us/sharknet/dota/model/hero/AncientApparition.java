@@ -28,33 +28,14 @@ public final class AncientApparition extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final int noCombine;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -82,33 +63,14 @@ public final class AncientApparition extends Hero {
         attributeIntelligenceGain = 2.6;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 1.4;
-        banSound = "ancient_apparition_appa_anger_03";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 190;
-        heroGlowColor = new int[]{53,74,107};
         heroID = 68;
-        heroSelectSoundEffect = "Hero_Ancient_Apparition.Pick";
-        heroUnlockOrder = 2;
-        idleSoundLoop = "Hero_Ancient_Apparition.IdleLoop";
         key = "npc_dota_hero_ancient_apparition";
-        lastHitChallengeRival = "npc_dota_hero_lich";
-        loadoutScale = .75;
-        model = "models/heroes/ancient_apparition/ancient_apparition.vmdl";
-        modelScale = .84;
         movementSpeed = 295;
         movementTurnRate = .6;
-        nameAliases = "aa";
-        noCombine = 1;
-        pickSound = "ancient_apparition_appa_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_ancient_apparition";
-        projectileModel = "particles/units/heroes/hero_ancient_apparition/ancient_apparition_base_attack.vpcf";
         projectileSpeed = 1250;
-        role = new String[]{"Support","Disabler","Nuker"};
-        rolelevels = new int[]{2,1,1};
-        soundSet = "Hero_ancient_apparition";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_ancient_apparition.vsndevts";
         active = true;
         localizedName = "Ancient Apparition";
         shortKey = "ancient_apparition";
@@ -206,10 +168,6 @@ public final class AncientApparition extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -218,48 +176,12 @@ public final class AncientApparition extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -270,48 +192,12 @@ public final class AncientApparition extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public int getNoCombine() {
-        return noCombine;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

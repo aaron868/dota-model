@@ -28,7 +28,7 @@ public final class DoomBringerInfernalBlade extends Ability {
     private DoomBringerInfernalBlade() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 128;
+        abilityCastRange = 150;
         abilityCooldown = new int[]{16,12,8,4};
         abilityManaCost = 40;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";

@@ -27,29 +27,14 @@ public final class Disruptor extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -76,29 +61,14 @@ public final class Disruptor extends Hero {
         attributeIntelligenceGain = 2.5;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 1.9;
-        banSound = "disruptor_dis_anger_06";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 200;
         heroID = 87;
-        heroSelectSoundEffect = "Hero_Disruptor.Pick";
         key = "npc_dota_hero_disruptor";
-        lastHitChallengeRival = "npc_dota_hero_warlock";
-        loadoutScale = .71;
-        model = "models/heroes/disruptor/disruptor.vmdl";
-        modelScale = .79;
         movementSpeed = 300;
         movementTurnRate = .5;
-        nameAliases = "disruptor";
-        pickSound = "disruptor_dis_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_disruptor";
-        projectileModel = "particles/units/heroes/hero_disruptor/disruptor_base_attack.vpcf";
         projectileSpeed = 1200;
-        role = new String[]{"Support","Disabler","Nuker","Initiator"};
-        rolelevels = new int[]{2,2,1,1};
-        soundSet = "Hero_Disruptor";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_disruptor.vsndevts";
         active = true;
         localizedName = "Disruptor";
         shortKey = "disruptor";
@@ -192,10 +162,6 @@ public final class Disruptor extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -204,36 +170,12 @@ public final class Disruptor extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -244,44 +186,12 @@ public final class Disruptor extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

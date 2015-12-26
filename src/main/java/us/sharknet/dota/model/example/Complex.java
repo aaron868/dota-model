@@ -1,5 +1,6 @@
 package us.sharknet.dota.model.example;
 
+
 import org.apache.commons.collections.CollectionUtils;
 import us.sharknet.dota.model.Item;
 import us.sharknet.dota.model.Library;
@@ -27,11 +28,12 @@ public class Complex {
         //Create a predicate that returns true if the item has a property that affects a hero's agility
         AgilityItemPredicate agilityItemPredicate = new AgilityItemPredicate();
         //Create a filtered collection of only agility related items
-        Collection<Item> agilityItems = CollectionUtils.select( library.getItems(), agilityItemPredicate );
+        Collection<Item> agilityItems = CollectionUtils.select(library.getItems(), agilityItemPredicate);
         System.out.println("Items that provide agility");
-        for( Item item : agilityItems) {
+        for (Item item : agilityItems) {
             System.out.println(item.getLocalizedName());
         }
     }
+
 
 }

@@ -25,35 +25,14 @@ public final class Tiny extends Hero {
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
-    private final int attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
+    private final double attributeStrengthGain;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final int loadoutScale;
-    private final String model;
-    private final String model1;
-    private final String model2;
-    private final String model3;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final int noCombine;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -79,34 +58,13 @@ public final class Tiny extends Hero {
         attributeIntelligenceGain = 1.6;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 3;
-        banSound = "tiny_tiny_anger_01";
-        botImplemented = 1;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 165;
-        heroGlowColor = new int[]{254,242,200};
         heroID = 19;
-        heroSelectSoundEffect = "Hero_Tiny.Pick";
-        heroUnlockOrder = 1;
         key = "npc_dota_hero_tiny";
-        lastHitChallengeRival = "npc_dota_hero_earthshaker";
-        loadoutScale = 1;
-        model = "models/heroes/tiny_01/tiny_01.vmdl";
-        model1 = "models/heroes/tiny_02/tiny_02.vmdl";
-        model2 = "models/heroes/tiny_03/tiny_03.vmdl";
-        model3 = "models/heroes/tiny_04/tiny_04.vmdl";
-        modelScale = .93;
         movementSpeed = 285;
         movementTurnRate = .5;
-        noCombine = 0;
-        pickSound = "tiny_tiny_spawn_09";
-        portrait = "vgui/hud/heroportraits/portrait_tiny";
-        role = new String[]{"Carry","Nuker","Pusher","Initiator","Durable","Disabler"};
-        rolelevels = new int[]{3,2,2,2,2,1};
-        soundSet = "Hero_Tiny";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_tiny.vsndevts";
         active = true;
         localizedName = "Tiny";
         shortKey = "tiny";
@@ -192,20 +150,8 @@ public final class Tiny extends Hero {
         return attributePrimary;
     }
 
-    public int getAttributeStrengthGain() {
+    public double getAttributeStrengthGain() {
         return attributeStrengthGain;
-    }
-
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
     }
 
     public int getCMEnabled() {
@@ -216,56 +162,12 @@ public final class Tiny extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public int getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public String getModel1() {
-        return model1;
-    }
-
-    public String getModel2() {
-        return model2;
-    }
-
-    public String getModel3() {
-        return model3;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -276,36 +178,8 @@ public final class Tiny extends Hero {
         return movementTurnRate;
     }
 
-    public int getNoCombine() {
-        return noCombine;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

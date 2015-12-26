@@ -19,39 +19,20 @@ public final class Bloodseeker extends Hero {
     private final int attackDamageMin;
     private final int attackRange;
     private final double attackRate;
-    private final int attributeAgilityGain;
+    private final double attributeAgilityGain;
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
-    private final int attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
+    private final double attributeStrengthGain;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -77,32 +58,13 @@ public final class Bloodseeker extends Hero {
         attributeIntelligenceGain = 1.7;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 2;
-        banSound = "bloodseeker_blod_anger_06";
-        botImplemented = 1;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 130;
-        heroGlowColor = new int[]{247,60,12};
         heroID = 4;
-        heroSelectSoundEffect = "Hero_Bloodseeker.Pick";
-        heroUnlockOrder = 3;
-        idleExpression = "scenes/bloodseeker/bloodseeker_exp_idle_01.vcd";
         key = "npc_dota_hero_bloodseeker";
-        lastHitChallengeRival = "npc_dota_hero_juggernaut";
-        loadoutScale = 1.1;
-        model = "models/heroes/blood_seeker/blood_seeker.vmdl";
-        modelScale = .88;
         movementSpeed = 290;
         movementTurnRate = .5;
-        nameAliases = "bs";
-        pickSound = "bloodseeker_blod_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_blood_seeker";
-        role = new String[]{"Carry","Disabler","Jungler","Nuker","Initiator"};
-        rolelevels = new int[]{1,1,1,1,1};
-        soundSet = "Hero_Bloodseeker";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_bloodseeker.vsndevts";
         active = true;
         localizedName = "Bloodseeker";
         shortKey = "bloodseeker";
@@ -164,7 +126,7 @@ public final class Bloodseeker extends Hero {
         return attackRate;
     }
 
-    public int getAttributeAgilityGain() {
+    public double getAttributeAgilityGain() {
         return attributeAgilityGain;
     }
 
@@ -188,20 +150,8 @@ public final class Bloodseeker extends Hero {
         return attributePrimary;
     }
 
-    public int getAttributeStrengthGain() {
+    public double getAttributeStrengthGain() {
         return attributeStrengthGain;
-    }
-
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
     }
 
     public int getCMEnabled() {
@@ -212,48 +162,12 @@ public final class Bloodseeker extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -264,36 +178,8 @@ public final class Bloodseeker extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

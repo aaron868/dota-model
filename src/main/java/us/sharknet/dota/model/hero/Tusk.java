@@ -14,7 +14,6 @@ public final class Tusk extends Hero {
     private final TuskWalrusKick ability5;
     private final TuskWalrusPunch ability6;
     private final AttributeBonus ability7;
-    private final int abilityLayout;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -30,28 +29,13 @@ public final class Tusk extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final int loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -65,7 +49,6 @@ public final class Tusk extends Hero {
         ability5 = TuskWalrusKick.instance();
         ability6 = TuskWalrusPunch.instance();
         ability7 = AttributeBonus.instance();
-        abilityLayout = 5;
         armorPhysical = 0;
         attackAcquisitionRange = 600;
         attackAnimationPoint = .36;
@@ -81,28 +64,13 @@ public final class Tusk extends Hero {
         attributeIntelligenceGain = 1.7;
         attributePrimary = "DOTA_ATTRIBUTE_STRENGTH";
         attributeStrengthGain = 2.3;
-        banSound = "tusk_tusk_anger_03";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 190;
         heroID = 100;
-        heroSelectSoundEffect = "Hero_Tusk.Pick";
-        idleExpression = "scenes/tusk/tusk_exp_idle_01.vcd";
         key = "npc_dota_hero_tusk";
-        lastHitChallengeRival = "npc_dota_hero_earthshaker";
-        loadoutScale = 1;
-        model = "models/heroes/tuskarr/tuskarr.vmdl";
-        modelScale = .9;
         movementSpeed = 300;
         movementTurnRate = .5;
-        nameAliases = "Tuskarr";
-        pickSound = "tusk_tusk_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_tusk";
-        role = new String[]{"Initiator","Disabler","Nuker"};
-        rolelevels = new int[]{2,2,1};
-        soundSet = "Hero_Tusk";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_tusk.vsndevts";
         active = true;
         localizedName = "Tusk";
         shortKey = "tusk";
@@ -142,10 +110,6 @@ public final class Tusk extends Hero {
 
     public AttributeBonus getAbility7() {
         return ability7;
-    }
-
-    public int getAbilityLayout() {
-        return abilityLayout;
     }
 
     public int getArmorPhysical() {
@@ -208,10 +172,6 @@ public final class Tusk extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -220,40 +180,12 @@ public final class Tusk extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public int getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -264,36 +196,8 @@ public final class Tusk extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

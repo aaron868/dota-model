@@ -15,7 +15,6 @@ public final class Nevermore extends Hero {
     private final NevermoreRequiem ability6;
     private final AttributeBonus ability7;
     private final int abilityDraftDisabled;
-    private final int abilityLayout;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -28,39 +27,18 @@ public final class Nevermore extends Hero {
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
-    private final int attributeIntelligenceGain;
+    private final double attributeIntelligenceGain;
     private final String attributePrimary;
-    private final int attributeStrengthGain;
-    private final String banSound;
-    private final int botImplemented;
-    private final String boundsHullName;
+    private final double attributeStrengthGain;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final double statusHealthRegen;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -75,7 +53,6 @@ public final class Nevermore extends Hero {
         ability6 = NevermoreRequiem.instance();
         ability7 = AttributeBonus.instance();
         abilityDraftDisabled = 1;
-        abilityLayout = 6;
         armorPhysical = -2;
         attackAcquisitionRange = 800;
         attackAnimationPoint = .5;
@@ -91,36 +68,15 @@ public final class Nevermore extends Hero {
         attributeIntelligenceGain = 2;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
         attributeStrengthGain = 2;
-        banSound = "nevermore_nev_anger_03";
-        botImplemented = 1;
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 250;
-        heroGlowColor = new int[]{240,34,18};
         heroID = 11;
-        heroSelectSoundEffect = "Hero_Nevermore.Pick";
-        heroUnlockOrder = 1;
-        idleExpression = "scenes/nevermore/nevermore_exp_idle_01.vcd";
-        idleSoundLoop = "Hero_Nevermore.IdleLoop";
         key = "npc_dota_hero_nevermore";
-        lastHitChallengeRival = "npc_dota_hero_lion";
-        loadoutScale = .82;
-        model = "models/heroes/shadow_fiend/shadow_fiend.vmdl";
-        modelScale = .98;
         movementSpeed = 305;
         movementTurnRate = 1;
-        nameAliases = "sf";
-        pickSound = "nevermore_nev_spawn_11";
-        portrait = "vgui/hud/heroportraits/portrait_nevermore";
-        projectileModel = "particles/units/heroes/hero_nevermore/nevermore_base_attack.vpcf";
         projectileSpeed = 1200;
-        role = new String[]{"Carry","Nuker"};
-        rolelevels = new int[]{2,3};
-        soundSet = "Hero_Nevermore";
         statusHealthRegen = .5;
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_nevermore.vsndevts";
         active = true;
         localizedName = "Shadow Fiend";
         shortKey = "nevermore";
@@ -164,10 +120,6 @@ public final class Nevermore extends Hero {
 
     public int getAbilityDraftDisabled() {
         return abilityDraftDisabled;
-    }
-
-    public int getAbilityLayout() {
-        return abilityLayout;
     }
 
     public int getArmorPhysical() {
@@ -218,7 +170,7 @@ public final class Nevermore extends Hero {
         return attributeBaseStrength;
     }
 
-    public int getAttributeIntelligenceGain() {
+    public double getAttributeIntelligenceGain() {
         return attributeIntelligenceGain;
     }
 
@@ -226,20 +178,8 @@ public final class Nevermore extends Hero {
         return attributePrimary;
     }
 
-    public int getAttributeStrengthGain() {
+    public double getAttributeStrengthGain() {
         return attributeStrengthGain;
-    }
-
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public int getBotImplemented() {
-        return botImplemented;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
     }
 
     public int getCMEnabled() {
@@ -250,52 +190,12 @@ public final class Nevermore extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -306,36 +206,8 @@ public final class Nevermore extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
-    }
-
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
     }
 
     public double getStatusHealthRegen() {
@@ -344,10 +216,6 @@ public final class Nevermore extends Hero {
 
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

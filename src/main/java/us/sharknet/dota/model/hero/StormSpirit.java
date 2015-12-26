@@ -26,32 +26,14 @@ public final class StormSpirit extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
-    private final String boundsHullName;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
-    private final int[] heroGlowColor;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -77,32 +59,14 @@ public final class StormSpirit extends Hero {
         attributeIntelligenceGain = 2.6;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 1.5;
-        banSound = "stormspirit_ss_anger_03";
-        boundsHullName = "DOTA_HULL_SIZE_HERO";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 170;
-        heroGlowColor = new int[]{0,250,227};
         heroID = 17;
-        heroSelectSoundEffect = "Hero_StormSpirit.Pick";
-        heroUnlockOrder = 1;
-        idleExpression = "scenes/stormspirit/stormspirit_exp_idle_01.vcd";
         key = "npc_dota_hero_storm_spirit";
-        lastHitChallengeRival = "npc_dota_hero_kunkka";
-        model = "models/heroes/storm_spirit/storm_spirit.vmdl";
-        modelScale = 1.15;
         movementSpeed = 285;
         movementTurnRate = .8;
-        nameAliases = "ss";
-        pickSound = "stormspirit_ss_spawn_09";
-        portrait = "vgui/hud/heroportraits/portrait_stormspirit";
-        projectileModel = "particles/units/heroes/hero_stormspirit/stormspirit_base_attack.vpcf";
         projectileSpeed = 1100;
-        role = new String[]{"Carry","Escape","Nuker","Initiator","Disabler"};
-        rolelevels = new int[]{2,3,2,1,1};
-        soundSet = "Hero_StormSpirit";
         team = "Good";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_stormspirit.vsndevts";
         active = true;
         localizedName = "Storm Spirit";
         shortKey = "storm_spirit";
@@ -192,14 +156,6 @@ public final class StormSpirit extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
-    public String getBoundsHullName() {
-        return boundsHullName;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -208,44 +164,12 @@ public final class StormSpirit extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
-    public int[] getHeroGlowColor() {
-        return heroGlowColor;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -256,44 +180,12 @@ public final class StormSpirit extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

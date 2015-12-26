@@ -7,7 +7,6 @@ public final class Invoker extends Hero {
 
     private static Invoker instance;
 
-    private final int aRDMDisabled;
     private final InvokerQuas ability1;
     private final InvokerEmp ability10;
     private final InvokerAlacrity ability11;
@@ -26,7 +25,6 @@ public final class Invoker extends Hero {
     private final InvokerGhostWalk ability8;
     private final InvokerTornado ability9;
     private final int abilityDraftDisabled;
-    private final int abilityLayout;
     private final int armorPhysical;
     private final int attackAcquisitionRange;
     private final double attackAnimationPoint;
@@ -39,41 +37,23 @@ public final class Invoker extends Hero {
     private final int attributeBaseAgility;
     private final int attributeBaseIntelligence;
     private final int attributeBaseStrength;
-    private final int attributeIntelligenceGain;
+    private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final int heroUnlockOrder;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
     private final String url;
 
     private Invoker() {
-        aRDMDisabled = 1;
         ability1 = InvokerQuas.instance();
         ability10 = InvokerEmp.instance();
         ability11 = InvokerAlacrity.instance();
@@ -92,7 +72,6 @@ public final class Invoker extends Hero {
         ability8 = InvokerGhostWalk.instance();
         ability9 = InvokerTornado.instance();
         abilityDraftDisabled = 1;
-        abilityLayout = 6;
         armorPhysical = -1;
         attackAcquisitionRange = 800;
         attackAnimationPoint = .4;
@@ -108,31 +87,14 @@ public final class Invoker extends Hero {
         attributeIntelligenceGain = 4;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 1.7;
-        banSound = "invoker_invo_anger_04";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 170;
         heroID = 74;
-        heroSelectSoundEffect = "Hero_Invoker.Pick";
-        heroUnlockOrder = 3;
-        idleExpression = "scenes/invoker/invoker_exp_idle_01.vcd";
-        idleSoundLoop = "Hero_Invoker.IdleLoop";
         key = "npc_dota_hero_invoker";
-        lastHitChallengeRival = "npc_dota_hero_lina";
-        loadoutScale = .8;
-        model = "models/heroes/invoker/invoker.vmdl";
-        modelScale = .74;
         movementSpeed = 280;
         movementTurnRate = .5;
-        pickSound = "invoker_invo_spawn_02";
-        portrait = "vgui/hud/heroportraits/portrait_furion";
-        projectileModel = "particles/units/heroes/hero_invoker/invoker_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Carry","Nuker","Disabler","Escape","Pusher"};
-        rolelevels = new int[]{1,3,2,1,1};
-        soundSet = "Hero_Invoker";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_invoker.vsndevts";
         active = true;
         localizedName = "Invoker";
         shortKey = "invoker";
@@ -144,10 +106,6 @@ public final class Invoker extends Hero {
             instance = new Invoker();
         }
         return instance;
-    }
-
-    public int getARDMDisabled() {
-        return aRDMDisabled;
     }
 
     public InvokerQuas getAbility1() {
@@ -222,10 +180,6 @@ public final class Invoker extends Hero {
         return abilityDraftDisabled;
     }
 
-    public int getAbilityLayout() {
-        return abilityLayout;
-    }
-
     public int getArmorPhysical() {
         return armorPhysical;
     }
@@ -274,7 +228,7 @@ public final class Invoker extends Hero {
         return attributeBaseStrength;
     }
 
-    public int getAttributeIntelligenceGain() {
+    public double getAttributeIntelligenceGain() {
         return attributeIntelligenceGain;
     }
 
@@ -286,10 +240,6 @@ public final class Invoker extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -298,48 +248,12 @@ public final class Invoker extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
     }
 
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public int getHeroUnlockOrder() {
-        return heroUnlockOrder;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
-    }
-
     public String getKey() {
         return key;
-    }
-
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -350,40 +264,12 @@ public final class Invoker extends Hero {
         return movementTurnRate;
     }
 
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {

@@ -27,33 +27,15 @@ public final class Visage extends Hero {
     private final double attributeIntelligenceGain;
     private final String attributePrimary;
     private final double attributeStrengthGain;
-    private final String banSound;
     private final int cMEnabled;
     private final int enabled;
-    private final int healthBarOffset;
     private final int heroID;
-    private final String heroSelectSoundEffect;
-    private final String idleExpression;
-    private final String idleSoundLoop;
     private final String key;
-    private final String lastHitChallengeRival;
-    private final double loadoutScale;
     private final int magicalResistance;
-    private final String model;
-    private final double modelScale;
     private final int movementSpeed;
     private final double movementTurnRate;
-    private final String nameAliases;
-    private final int noCombine;
-    private final String pickSound;
-    private final String portrait;
-    private final String projectileModel;
     private final int projectileSpeed;
-    private final String[] role;
-    private final int[] rolelevels;
-    private final String soundSet;
     private final String team;
-    private final String voiceFile;
     private final boolean active;
     private final String localizedName;
     private final String shortKey;
@@ -80,33 +62,15 @@ public final class Visage extends Hero {
         attributeIntelligenceGain = 2.5;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 2.4;
-        banSound = "visage_visa_anger_10";
         cMEnabled = 1;
         enabled = 1;
-        healthBarOffset = 180;
         heroID = 92;
-        heroSelectSoundEffect = "Hero_Visage.Pick";
-        idleExpression = "scenes/visage/visage_exp_idle_01.vcd";
-        idleSoundLoop = "Hero_Visage.IdleLoop";
         key = "npc_dota_hero_visage";
-        lastHitChallengeRival = "npc_dota_hero_lion";
-        loadoutScale = .75;
         magicalResistance = 10;
-        model = "models/heroes/visage/visage.vmdl";
-        modelScale = .67;
         movementSpeed = 285;
         movementTurnRate = .5;
-        nameAliases = "visage";
-        noCombine = 1;
-        pickSound = "visage_visa_spawn_01";
-        portrait = "vgui/hud/heroportraits/portrait_visage";
-        projectileModel = "particles/units/heroes/hero_visage/visage_base_attack.vpcf";
         projectileSpeed = 900;
-        role = new String[]{"Support","Nuker","Durable","Disabler","Pusher"};
-        rolelevels = new int[]{1,2,1,1,1};
-        soundSet = "Hero_Visage";
         team = "Bad";
-        voiceFile = "soundevents/voscripts/game_sounds_vo_visage.vsndevts";
         active = true;
         localizedName = "Visage";
         shortKey = "visage";
@@ -200,10 +164,6 @@ public final class Visage extends Hero {
         return attributeStrengthGain;
     }
 
-    public String getBanSound() {
-        return banSound;
-    }
-
     public int getCMEnabled() {
         return cMEnabled;
     }
@@ -212,48 +172,16 @@ public final class Visage extends Hero {
         return enabled;
     }
 
-    public int getHealthBarOffset() {
-        return healthBarOffset;
-    }
-
     public int getHeroID() {
         return heroID;
-    }
-
-    public String getHeroSelectSoundEffect() {
-        return heroSelectSoundEffect;
-    }
-
-    public String getIdleExpression() {
-        return idleExpression;
-    }
-
-    public String getIdleSoundLoop() {
-        return idleSoundLoop;
     }
 
     public String getKey() {
         return key;
     }
 
-    public String getLastHitChallengeRival() {
-        return lastHitChallengeRival;
-    }
-
-    public double getLoadoutScale() {
-        return loadoutScale;
-    }
-
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public double getModelScale() {
-        return modelScale;
     }
 
     public int getMovementSpeed() {
@@ -264,48 +192,12 @@ public final class Visage extends Hero {
         return movementTurnRate;
     }
 
-    public String getNameAliases() {
-        return nameAliases;
-    }
-
-    public int getNoCombine() {
-        return noCombine;
-    }
-
-    public String getPickSound() {
-        return pickSound;
-    }
-
-    public String getPortrait() {
-        return portrait;
-    }
-
-    public String getProjectileModel() {
-        return projectileModel;
-    }
-
     public int getProjectileSpeed() {
         return projectileSpeed;
     }
 
-    public String[] getRole() {
-        return role;
-    }
-
-    public int[] getRolelevels() {
-        return rolelevels;
-    }
-
-    public String getSoundSet() {
-        return soundSet;
-    }
-
     public String getTeam() {
         return team;
-    }
-
-    public String getVoiceFile() {
-        return voiceFile;
     }
 
     public boolean isActive() {
