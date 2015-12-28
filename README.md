@@ -1,7 +1,7 @@
 # dota-model
 
 ## Version Control
-I had planned to maintain older version of the library via branches but this has proved too cumbersome. From now on the master branch will have the latest version of the Dota stats.
+I had planned to maintain older versions of the library via branches but this has proved too cumbersome. From now on the master branch will have the latest version of the Dota stats.
 
 ## Overview
 This library provides a simple Java API for the Dota 2 VPK file data. This includes:
