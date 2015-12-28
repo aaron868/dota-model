@@ -5,7 +5,7 @@ import org.apache.commons.collections.Predicate;
 import us.sharknet.dota.model.Item;
 
 /**
- * A predicate that returns true if the Item improves a heroe's ability score.
+ * A predicate that returns true if the Item improves a hero's agility score.
  */
 public class AgilityItemPredicate implements Predicate{
 
