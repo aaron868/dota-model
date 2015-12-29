@@ -2,6 +2,7 @@ package us.sharknet.dota.model;
 
 public abstract class Hero {
 
+    public enum DamageType {Melee, Ranged }
 
     private final int armorPhysical;
     private final int attackAcquisitionRange;
@@ -163,6 +164,15 @@ public abstract class Hero {
     public abstract int getEnabled();
     public abstract String getTeam();
     public abstract String getUrl();
+
+    public DamageType getDamageType() {
+        if( getAttackRange() > 150 ) {
+            return DamageType.Ranged;
+        }
+        else {
+            return DamageType.Melee;
+        }
+    }
 
     @Override
     public int hashCode() {
