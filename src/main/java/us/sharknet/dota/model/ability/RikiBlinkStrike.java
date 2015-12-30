@@ -24,8 +24,8 @@ public final class RikiBlinkStrike extends Ability {
 
     private RikiBlinkStrike() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .4;
-        abilityCastRange = 700;
+        abilityCastPoint = .3;
+        abilityCastRange = 800;
         abilityCooldown = new int[]{16,12,8,4};
         abilityManaCost = 50;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";

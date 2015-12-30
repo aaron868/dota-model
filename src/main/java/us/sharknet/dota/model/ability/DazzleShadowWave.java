@@ -32,7 +32,7 @@ public final class DazzleShadowWave extends Ability {
         abilityCastRange = 900;
         abilityCooldown = new int[]{12,10,8,6};
         abilityDamage = new int[]{80,100,120,140};
-        abilityManaCost = new int[]{80,90,100,110};
+        abilityManaCost = new int[]{90,100,110,120};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};

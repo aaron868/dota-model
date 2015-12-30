@@ -58,7 +58,7 @@ public final class FacelessVoid extends Hero {
         attributeBaseStrength = 23;
         attributeIntelligenceGain = 1.5;
         attributePrimary = "DOTA_ATTRIBUTE_AGILITY";
-        attributeStrengthGain = 1.6;
+        attributeStrengthGain = 1.8;
         cMEnabled = 1;
         enabled = 1;
         heroID = 41;

@@ -50,7 +50,7 @@ All the Dota objects are modeled as immutable, singletons. There is only one ins
 I did not include the special mode objects such as the Diretide creeps or the Greevil stuff. I only included the main game objects.
 
 ## Status
-This is alpha level code and is guaranteed to have bugs and probably to change somewhat as I refine it. All the Java code is generated from a custom parser so its deeply ugly.  
+This is beta level code and is guaranteed to have bugs and probably to change somewhat as I refine it. All the Java code is generated from a custom parser so its deeply ugly.  
 
 I've also provided CSV files with the English name to Dota key mappings in case that is useful for you as well. They are under src/main/resources.
 

@@ -35,8 +35,8 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
         key = "obsidian_destroyer_arcane_orb";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         illusion_damage = new int[]{100,200,300,400};
-        int_steal = new int[]{1,2,3,4};
-        int_steal_duration = 4;
+        int_steal = new int[]{2,3,4,5};
+        int_steal_duration = 5;
         localizedName = "Arcane Orb";
         mana_pool_damage_pct = new double[]{6.0,7.0,8.0,9.0};
         owningHeroShortKey = "obsidian_destroyer";

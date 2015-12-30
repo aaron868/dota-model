@@ -10,7 +10,7 @@ public final class DarkSeerSurge extends Ability {
     private final double abilityCastPoint;
     private final int abilityCastRange;
     private final double[] abilityCooldown;
-    private final int[] abilityManaCost;
+    private final int abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
@@ -26,7 +26,7 @@ public final class DarkSeerSurge extends Ability {
         abilityCastPoint = .4;
         abilityCastRange = 600;
         abilityCooldown = new double[]{12.0,11.0,10.0,9.0};
-        abilityManaCost = new int[]{20,30,40,50};
+        abilityManaCost = 50;
         abilityModifierSupportValue = 2.5;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
@@ -61,7 +61,7 @@ public final class DarkSeerSurge extends Ability {
         return abilityCooldown;
     }
 
-    public int[] getAbilityManaCost() {
+    public int getAbilityManaCost() {
         return abilityManaCost;
     }
 

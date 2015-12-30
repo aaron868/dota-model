@@ -45,11 +45,11 @@ public final class DeathProphetSpiritSiphon extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         charge_restore_time = 45;
         damage = 2;
-        damage_pct = new double[]{1.0,1.8,2.6,3.4};
+        damage_pct = new double[]{1.0,2.0,3.0,4.0};
         haunt_duration = 5;
         localizedName = "Spirit Siphon";
         max_charges = new int[]{1,2,3,4};
-        movement_slow = new int[]{6,10,14,18};
+        movement_slow = new int[]{5,10,15,20};
         owningHeroShortKey = "death_prophet";
         siphon_buffer = 300;
     }

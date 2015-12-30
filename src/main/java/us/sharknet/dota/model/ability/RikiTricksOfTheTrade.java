@@ -23,7 +23,7 @@ public final class RikiTricksOfTheTrade extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT","DOTA_ABILITY_BEHAVIOR_CHANNELLED","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"};
         abilityCastPoint = .4;
         abilityChannelTime = new int[]{3,4,5};
-        abilityCooldown = 70;
+        abilityCooldown = 40;
         abilityManaCost = 75;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5145;
@@ -31,7 +31,7 @@ public final class RikiTricksOfTheTrade extends Ability {
         attack_count = new int[]{4,5,6};
         localizedName = "Tricks of the Trade";
         owningHeroShortKey = "riki";
-        range = 475;
+        range = 500;
     }
 
     public static RikiTricksOfTheTrade instance() {

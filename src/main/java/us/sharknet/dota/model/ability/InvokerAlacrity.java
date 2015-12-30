@@ -37,8 +37,8 @@ public final class InvokerAlacrity extends Ability {
         key = "invoker_alacrity";
         maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
-        bonus_attack_speed = new int[]{30,40,50,60,70,80,90,100};
-        bonus_damage = new int[]{30,40,50,60,70,80,90,100};
+        bonus_attack_speed = new int[]{10,25,40,55,70,85,100,115};
+        bonus_damage = new int[]{10,25,40,55,70,85,100,115};
         duration = 9;
         localizedName = "Alacrity";
         owningHeroShortKey = "invoker";

@@ -41,7 +41,7 @@ public final class WinterWyvernWintersCurse extends Ability {
         iD = 5654;
         key = "winter_wyvern_winters_curse";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
-        bonus_attack_speed = 50;
+        bonus_attack_speed = 70;
         damage_amplification = 0.0;
         damage_reduction = 100;
         duration = new double[]{3.25,4.0,4.75};

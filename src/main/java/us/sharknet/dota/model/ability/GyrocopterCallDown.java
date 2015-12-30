@@ -41,7 +41,7 @@ public final class GyrocopterCallDown extends Ability {
         iD = 5364;
         key = "gyrocopter_call_down";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        damage_first = new int[]{220,285,350};
+        damage_first = new int[]{200,275,350};
         damage_second = new int[]{100,150,200};
         damage_second_scepter = new int[]{175,225,275};
         localizedName = "Call Down";

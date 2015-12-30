@@ -25,7 +25,7 @@ public final class DazzleShallowGrave extends Ability {
 
     private DazzleShallowGrave() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .35;
+        abilityCastPoint = .4;
         abilityCastRange = new int[]{550,700,850,1000};
         abilityCooldown = new int[]{60,45,30,15};
         abilityDuration = new int[]{5,5,5,5};

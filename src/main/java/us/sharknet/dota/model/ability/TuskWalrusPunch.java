@@ -32,7 +32,7 @@ public final class TuskWalrusPunch extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
         abilityCastPoint = 0;
         abilityCastRange = 128;
-        abilityCooldown = new int[]{20,16,12};
+        abilityCooldown = new int[]{36,24,12};
         abilityManaCost = new int[]{50,75,100};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";

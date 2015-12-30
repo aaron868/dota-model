@@ -83,7 +83,7 @@ public final class Invoker extends Hero {
         attributeAgilityGain = 1.9;
         attributeBaseAgility = 20;
         attributeBaseIntelligence = 22;
-        attributeBaseStrength = 19;
+        attributeBaseStrength = 17;
         attributeIntelligenceGain = 4;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
         attributeStrengthGain = 1.7;

@@ -9,7 +9,7 @@ public final class UndyingTombstone extends Ability {
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int abilityCastRange;
-    private final double[] abilityCooldown;
+    private final int abilityCooldown;
     private final int[] abilityManaCost;
     private final int fightRecapLevel;
     private final int iD;
@@ -29,7 +29,7 @@ public final class UndyingTombstone extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.45,0.45,0.45,0.45};
         abilityCastRange = 600;
-        abilityCooldown = new double[]{60.0,60.0,60.0,60.0};
+        abilityCooldown = 70;
         abilityManaCost = new int[]{120,130,140,150};
         fightRecapLevel = 1;
         iD = 5444;
@@ -65,7 +65,7 @@ public final class UndyingTombstone extends Ability {
         return abilityCastRange;
     }
 
-    public double[] getAbilityCooldown() {
+    public int getAbilityCooldown() {
         return abilityCooldown;
     }
 

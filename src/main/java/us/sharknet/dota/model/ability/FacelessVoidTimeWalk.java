@@ -36,7 +36,7 @@ public final class FacelessVoidTimeWalk extends Ability {
         localizedName = "Time Walk";
         owningHeroShortKey = "faceless_void";
         radius = 300;
-        range = 550;
+        range = 625;
         speed = 3000;
     }
 

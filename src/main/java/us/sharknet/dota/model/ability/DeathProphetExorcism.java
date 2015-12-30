@@ -9,7 +9,7 @@ public final class DeathProphetExorcism extends Ability {
     private final String abilityBehavior;
     private final double[] abilityCastPoint;
     private final int abilityCooldown;
-    private final double[] abilityDuration;
+    private final int abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
@@ -34,7 +34,7 @@ public final class DeathProphetExorcism extends Ability {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
         abilityCastPoint = new double[]{0.5,0.5,0.5};
         abilityCooldown = 145;
-        abilityDuration = new double[]{30.0,30.0,30.0};
+        abilityDuration = 35;
         abilityManaCost = new int[]{200,300,400};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
@@ -75,7 +75,7 @@ public final class DeathProphetExorcism extends Ability {
         return abilityCooldown;
     }
 
-    public double[] getAbilityDuration() {
+    public int getAbilityDuration() {
         return abilityDuration;
     }
 

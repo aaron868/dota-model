@@ -33,7 +33,7 @@ public final class BaneNightmare extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
         abilityCastRange = new int[]{500,550,600,650};
-        abilityCooldown = new int[]{16,15,14,13};
+        abilityCooldown = new int[]{22,19,16,13};
         abilityDamage = 20;
         abilityDuration = new double[]{4.0,5.0,6.0,7.0};
         abilityManaCost = new int[]{165,165,165,165};

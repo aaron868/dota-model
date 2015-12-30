@@ -55,7 +55,7 @@ public final class DeathProphet extends Hero {
         attackRate = 1.7;
         attributeAgilityGain = 1.4;
         attributeBaseAgility = 14;
-        attributeBaseIntelligence = 20;
+        attributeBaseIntelligence = 23;
         attributeBaseStrength = 19;
         attributeIntelligenceGain = 3;
         attributePrimary = "DOTA_ATTRIBUTE_INTELLECT";
