@@ -16,7 +16,10 @@ public final class ChenHolyPersuasion extends Ability {
     private final int[] health_min;
     private final String localizedName;
     private final int[] max_units;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ChenHolyPersuasion() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
@@ -29,7 +32,10 @@ public final class ChenHolyPersuasion extends Ability {
         health_min = new int[]{700,800,900,1000};
         localizedName = "Holy Persuasion";
         max_units = new int[]{1,2,3,4};
-        owningHeroShortKey = "chen";
+        ownerKey = "npc_dota_hero_chen";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static ChenHolyPersuasion instance() {
@@ -79,8 +85,20 @@ public final class ChenHolyPersuasion extends Ability {
         return max_units;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

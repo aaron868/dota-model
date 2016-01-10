@@ -6,9 +6,9 @@ public final class NightStalkerDarkness extends Ability {
 
     private static NightStalkerDarkness instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int[] abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final int iD;
@@ -17,12 +17,15 @@ public final class NightStalkerDarkness extends Ability {
     private final int duration;
     private final int fixed_vision;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private NightStalkerDarkness() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCooldown = new int[]{160,120,80};
+        abilityCooldown = new double[]{160,120,80};
         abilityManaCost = new int[]{0,0,0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5278;
@@ -31,7 +34,10 @@ public final class NightStalkerDarkness extends Ability {
         duration = 5;
         fixed_vision = 675;
         localizedName = "Darkness";
-        owningHeroShortKey = "night_stalker";
+        ownerKey = "npc_dota_hero_night_stalker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static NightStalkerDarkness instance() {
@@ -41,7 +47,7 @@ public final class NightStalkerDarkness extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -49,7 +55,7 @@ public final class NightStalkerDarkness extends Ability {
         return abilityCastPoint;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -85,8 +91,20 @@ public final class NightStalkerDarkness extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -8,31 +8,35 @@ public final class LoneDruidTrueFormBattleCry extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int[] bonus_armor;
     private final int[] bonus_damage;
     private final int cry_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int range;
 
     private LoneDruidTrueFormBattleCry() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_TYPE_ULTIMATE","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"};
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCooldown = 6;
+        abilityCooldown = new double[]{6,6,6,6};
         abilityManaCost = new int[]{50,50,50};
         iD = 5417;
         key = "lone_druid_true_form_battle_cry";
-        maxLevel = 3;
         bonus_armor = new int[]{10,15,20};
         bonus_damage = new int[]{90,120,150};
         cry_duration = 6;
         localizedName = "True Form Battle Cry";
-        owningHeroShortKey = "lone_druid";
+        ownerKey = "npc_dota_hero_lone_druid";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         range = 1;
     }
 
@@ -51,7 +55,7 @@ public final class LoneDruidTrueFormBattleCry extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -65,10 +69,6 @@ public final class LoneDruidTrueFormBattleCry extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int[] getBonusArmor() {
@@ -87,8 +87,20 @@ public final class LoneDruidTrueFormBattleCry extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRange() {

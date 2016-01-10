@@ -8,43 +8,47 @@ public final class DarkSeerIonShell extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final int abilityModifierSupportValue;
+    private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] damage_per_second;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private DarkSeerIonShell() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 600;
-        abilityCooldown = 9;
+        abilityCastRange = new int[]{600,600,600,600};
+        abilityCooldown = new double[]{9,9,9,9};
         abilityManaCost = new int[]{70,90,110,130};
         abilityModifierSupportValue = 0;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_BOTH"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
-        fightRecapLevel = 1;
         iD = 5256;
         key = "dark_seer_ion_shell";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage_per_second = new int[]{30,50,70,90};
         duration = 25;
         localizedName = "Ion Shell";
-        owningHeroShortKey = "dark_seer";
+        ownerKey = "npc_dota_hero_dark_seer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 250;
     }
 
@@ -63,11 +67,11 @@ public final class DarkSeerIonShell extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -75,7 +79,7 @@ public final class DarkSeerIonShell extends Ability {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
@@ -83,20 +87,16 @@ public final class DarkSeerIonShell extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -123,8 +123,20 @@ public final class DarkSeerIonShell extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

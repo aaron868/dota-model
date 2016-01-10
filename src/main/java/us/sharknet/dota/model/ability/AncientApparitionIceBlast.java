@@ -8,13 +8,12 @@ public final class AncientApparitionIceBlast extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,8 +22,11 @@ public final class AncientApparitionIceBlast extends Ability {
     private final int frostbite_duration_scepter;
     private final double[] kill_pct;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
     private final int[] path_radius;
+    private final boolean placeholder;
     private final double[] radius_grow;
     private final int[] radius_max;
     private final int[] radius_min;
@@ -34,13 +36,12 @@ public final class AncientApparitionIceBlast extends Ability {
     private AncientApparitionIceBlast() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.01,0.01,0.01};
-        abilityCastRange = 0;
-        abilityCooldown = 4;
+        abilityCastRange = new int[]{0,0,0,0};
+        abilityCooldown = new double[]{4,4,4,4};
         abilityDamage = new int[]{250,350,450};
         abilityManaCost = new int[]{100,125,150};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5348;
         key = "ancient_apparition_ice_blast";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -49,8 +50,11 @@ public final class AncientApparitionIceBlast extends Ability {
         frostbite_duration_scepter = 17;
         kill_pct = new double[]{10.0,11.0,12.0};
         localizedName = "Ice Blast";
-        owningHeroShortKey = "ancient_apparition";
+        ownerKey = "npc_dota_hero_ancient_apparition";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
         path_radius = new int[]{275,275,275};
+        placeholder = false;
         radius_grow = new double[]{50.0,50.0,50.0};
         radius_max = new int[]{1000,1000,1000};
         radius_min = new int[]{275,275,275};
@@ -73,11 +77,11 @@ public final class AncientApparitionIceBlast extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -95,10 +99,6 @@ public final class AncientApparitionIceBlast extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -133,12 +133,24 @@ public final class AncientApparitionIceBlast extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
     }
 
     public int[] getPathRadius() {
         return path_radius;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getRadiusGrow() {

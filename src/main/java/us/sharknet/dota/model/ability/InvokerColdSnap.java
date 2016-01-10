@@ -7,19 +7,16 @@ public final class InvokerColdSnap extends Ability {
     private static InvokerColdSnap instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
-    private final String hotKeyOverride;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final int damage_trigger;
     private final double[] duration;
@@ -27,23 +24,23 @@ public final class InvokerColdSnap extends Ability {
     private final double[] freeze_damage;
     private final double freeze_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private InvokerColdSnap() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = 0;
-        abilityCastRange = 1000;
-        abilityCooldown = 20;
-        abilityManaCost = 100;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{1000,1000,1000,1000};
+        abilityCooldown = new double[]{20,20,20,20};
+        abilityManaCost = new int[]{100,100,100,100};
         abilityModifierSupportValue = .15;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
-        hotKeyOverride = "Y";
         iD = 5376;
         key = "invoker_cold_snap";
-        maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage_trigger = 1;
         duration = new double[]{3.0,3.5,4.0,4.5,5.0,5.5,6.0,6.5};
@@ -51,7 +48,10 @@ public final class InvokerColdSnap extends Ability {
         freeze_damage = new double[]{7.0,14.0,21.0,28.0,35.0,42.0,49.0,56.0};
         freeze_duration = .4;
         localizedName = "Cold Snap";
-        owningHeroShortKey = "invoker";
+        ownerKey = "npc_dota_hero_invoker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static InvokerColdSnap instance() {
@@ -65,19 +65,19 @@ public final class InvokerColdSnap extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -89,20 +89,12 @@ public final class InvokerColdSnap extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
-    public String getHotKeyOverride() {
-        return hotKeyOverride;
     }
 
     public int getID() {
@@ -111,10 +103,6 @@ public final class InvokerColdSnap extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getSpellImmunityType() {
@@ -145,8 +133,20 @@ public final class InvokerColdSnap extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

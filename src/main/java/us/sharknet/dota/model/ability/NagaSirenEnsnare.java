@@ -6,15 +6,14 @@ public final class NagaSirenEnsnare extends Ability {
 
     private static NagaSirenEnsnare instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,18 +21,20 @@ public final class NagaSirenEnsnare extends Ability {
     private final int[] fake_ensnare_distance;
     private final String localizedName;
     private final int[] net_speed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private NagaSirenEnsnare() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = .65;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityCastPoint = new double[]{.65,.65,.65,.65};
         abilityCastRange = new int[]{650,650,650,650};
-        abilityCooldown = 12;
+        abilityCooldown = new double[]{12,12,12,12};
         abilityManaCost = new int[]{90,100,110,120};
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5468;
         key = "naga_siren_ensnare";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -41,7 +42,10 @@ public final class NagaSirenEnsnare extends Ability {
         fake_ensnare_distance = new int[]{900,900,900,900};
         localizedName = "Ensnare";
         net_speed = new int[]{1500,1500,1500,1500};
-        owningHeroShortKey = "naga_siren";
+        ownerKey = "npc_dota_hero_naga_siren";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static NagaSirenEnsnare instance() {
@@ -51,11 +55,11 @@ public final class NagaSirenEnsnare extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -63,7 +67,7 @@ public final class NagaSirenEnsnare extends Ability {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -71,20 +75,16 @@ public final class NagaSirenEnsnare extends Ability {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -115,8 +115,20 @@ public final class NagaSirenEnsnare extends Ability {
         return net_speed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

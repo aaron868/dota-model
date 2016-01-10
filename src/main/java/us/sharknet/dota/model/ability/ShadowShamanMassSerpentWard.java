@@ -6,14 +6,13 @@ public final class ShadowShamanMassSerpentWard extends Ability {
 
     private static ShadowShamanMassSerpentWard instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -26,18 +25,20 @@ public final class ShadowShamanMassSerpentWard extends Ability {
     private final String localizedName;
     private final int[] mid_splash_radius;
     private final int[] min_splash_radius;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int ward_count;
 
     private ShadowShamanMassSerpentWard() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
-        abilityCastPoint = .3;
-        abilityCastRange = 550;
-        abilityCooldown = 120;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT"};
+        abilityCastPoint = new double[]{.3,.3,.3,.3};
+        abilityCastRange = new int[]{550,550,550,550};
+        abilityCooldown = new double[]{120,120,120,120};
         abilityManaCost = new int[]{200,350,600};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        fightRecapLevel = 2;
         iD = 5081;
         key = "shadow_shaman_mass_serpent_ward";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -50,7 +51,10 @@ public final class ShadowShamanMassSerpentWard extends Ability {
         localizedName = "Mass Serpent Ward";
         mid_splash_radius = new int[]{75,100,110};
         min_splash_radius = new int[]{150,200,220};
-        owningHeroShortKey = "shadow_shaman";
+        ownerKey = "npc_dota_hero_shadow_shaman";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         ward_count = 10;
     }
 
@@ -61,19 +65,19 @@ public final class ShadowShamanMassSerpentWard extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -87,10 +91,6 @@ public final class ShadowShamanMassSerpentWard extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -141,8 +141,20 @@ public final class ShadowShamanMassSerpentWard extends Ability {
         return min_splash_radius;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getWardCount() {

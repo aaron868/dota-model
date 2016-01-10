@@ -7,25 +7,29 @@ public final class BroodmotherSpinWebDestroy extends Ability {
     private static BroodmotherSpinWebDestroy instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BroodmotherSpinWebDestroy() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = 0;
-        abilityCooldown = 0;
-        abilityManaCost = 0;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCooldown = new double[]{0,0,0,0};
+        abilityManaCost = new int[]{0,0,0,0};
         iD = 5643;
         key = "broodmother_spin_web_destroy";
-        maxLevel = 1;
         localizedName = "Spin Web Detroy";
-        owningHeroShortKey = "broodmother";
+        ownerKey = "npc_dota_hero_broodmother";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static BroodmotherSpinWebDestroy instance() {
@@ -39,15 +43,15 @@ public final class BroodmotherSpinWebDestroy extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -59,16 +63,24 @@ public final class BroodmotherSpinWebDestroy extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -6,14 +6,13 @@ public final class PugnaNetherWard extends Ability {
 
     private static PugnaNetherWard instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
-    private final int abilityDuration;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -21,19 +20,21 @@ public final class PugnaNetherWard extends Ability {
     private final String localizedName;
     private final double[] mana_multiplier;
     private final double[] mana_regen;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int ward_duration_tooltip;
 
     private PugnaNetherWard() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
-        abilityCastRange = 150;
+        abilityCastRange = new int[]{150,150,150,150};
         abilityCooldown = new double[]{35.0,35.0,35.0,35.0};
-        abilityDuration = 3;
+        abilityDuration = new double[]{3,3,3,3};
         abilityManaCost = new int[]{80,80,80,80};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5188;
         key = "pugna_nether_ward";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -41,7 +42,10 @@ public final class PugnaNetherWard extends Ability {
         localizedName = "Nether Ward";
         mana_multiplier = new double[]{1.0,1.25,1.5,1.75};
         mana_regen = new double[]{1.5,3.0,4.5,6.0};
-        owningHeroShortKey = "pugna";
+        ownerKey = "npc_dota_hero_pugna";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 1600;
         ward_duration_tooltip = 30;
     }
@@ -53,7 +57,7 @@ public final class PugnaNetherWard extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,7 +65,7 @@ public final class PugnaNetherWard extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -69,7 +73,7 @@ public final class PugnaNetherWard extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -79,10 +83,6 @@ public final class PugnaNetherWard extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -113,8 +113,20 @@ public final class PugnaNetherWard extends Ability {
         return mana_regen;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

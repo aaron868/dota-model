@@ -7,29 +7,33 @@ public final class InvokerWex extends Ability {
     private static InvokerWex instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int[] attack_speed_per_instance;
     private final int[] bonus_agility;
     private final String localizedName;
     private final int[] move_speed_per_instance;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private InvokerWex() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCooldown = 0;
-        abilityManaCost = 0;
+        abilityCooldown = new double[]{0,0,0,0};
+        abilityManaCost = new int[]{0,0,0,0};
         iD = 5371;
         key = "invoker_wex";
-        maxLevel = 7;
         attack_speed_per_instance = new int[]{2,4,6,8,10,12,14};
         bonus_agility = new int[]{2,4,6,8,10,12,14};
         localizedName = "Wex";
         move_speed_per_instance = new int[]{1,2,3,4,5,6,7};
-        owningHeroShortKey = "invoker";
+        ownerKey = "npc_dota_hero_invoker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static InvokerWex instance() {
@@ -43,11 +47,11 @@ public final class InvokerWex extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -57,10 +61,6 @@ public final class InvokerWex extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int[] getAttackSpeedPerInstance() {
@@ -79,8 +79,20 @@ public final class InvokerWex extends Ability {
         return move_speed_per_instance;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -6,13 +6,13 @@ public final class BrewmasterEarthHurlBoulder extends Ability {
 
     private static BrewmasterEarthHurlBoulder instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
@@ -20,17 +20,20 @@ public final class BrewmasterEarthHurlBoulder extends Ability {
     private final int damage;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] speed;
 
     private BrewmasterEarthHurlBoulder() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = .4;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityCastPoint = new double[]{.4,.4,.4,.4};
         abilityCastRange = new int[]{800,800,800,800};
-        abilityCooldown = 5;
-        abilityManaCost = 0;
+        abilityCooldown = new double[]{5,5,5,5};
+        abilityManaCost = new int[]{0,0,0,0};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
         iD = 5404;
         key = "brewmaster_earth_hurl_boulder";
@@ -38,7 +41,10 @@ public final class BrewmasterEarthHurlBoulder extends Ability {
         damage = 50;
         duration = new double[]{2.0,2.0,2.0,2.0};
         localizedName = "Hurl Boulder";
-        owningHeroShortKey = "brewmaster_earth";
+        ownerKey = "npc_dota_brewmaster_earth";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
         speed = new int[]{800,800,800,800};
     }
 
@@ -49,11 +55,11 @@ public final class BrewmasterEarthHurlBoulder extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -61,11 +67,11 @@ public final class BrewmasterEarthHurlBoulder extends Ability {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -73,7 +79,7 @@ public final class BrewmasterEarthHurlBoulder extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -105,8 +111,20 @@ public final class BrewmasterEarthHurlBoulder extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getSpeed() {

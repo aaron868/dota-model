@@ -38,7 +38,6 @@ public final class Visage extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Visage() {
@@ -73,7 +72,6 @@ public final class Visage extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Visage";
-        shortKey = "visage";
         url = "Visage";
     }
 
@@ -206,10 +204,6 @@ public final class Visage extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

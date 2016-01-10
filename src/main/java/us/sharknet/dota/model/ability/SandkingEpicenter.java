@@ -15,7 +15,6 @@ public final class SandkingEpicenter extends Ability {
     private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -26,7 +25,10 @@ public final class SandkingEpicenter extends Ability {
     private final int epicenter_slow_as;
     private final int epicenter_slow_duration_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private SandkingEpicenter() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_CHANNELLED","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
@@ -38,7 +40,6 @@ public final class SandkingEpicenter extends Ability {
         abilityModifierSupportValue = .2;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5105;
         key = "sandking_epicenter";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -49,7 +50,10 @@ public final class SandkingEpicenter extends Ability {
         epicenter_slow_as = -30;
         epicenter_slow_duration_tooltip = 3;
         localizedName = "Epicenter";
-        owningHeroShortKey = "sand_king";
+        ownerKey = "npc_dota_hero_sand_king";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static SandkingEpicenter instance() {
@@ -95,10 +99,6 @@ public final class SandkingEpicenter extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -139,8 +139,20 @@ public final class SandkingEpicenter extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

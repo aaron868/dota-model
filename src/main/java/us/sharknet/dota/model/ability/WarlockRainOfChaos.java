@@ -8,13 +8,12 @@ public final class WarlockRainOfChaos extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -30,19 +29,21 @@ public final class WarlockRainOfChaos extends Ability {
     private final int hp_dmg_reduction_scepter;
     private final String localizedName;
     private final int number_of_golems_scepter;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int stun_duration;
 
     private WarlockRainOfChaos() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCastRange = 1200;
-        abilityCooldown = new int[]{165,165,165};
+        abilityCastRange = new int[]{1200,1200,1200,1200};
+        abilityCooldown = new double[]{165,165,165};
         abilityManaCost = new int[]{200,300,400};
         abilityModifierSupportValue = .5;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5165;
         key = "warlock_rain_of_chaos";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -58,7 +59,10 @@ public final class WarlockRainOfChaos extends Ability {
         hp_dmg_reduction_scepter = 25;
         localizedName = "Rain Of Chaos";
         number_of_golems_scepter = 2;
-        owningHeroShortKey = "warlock";
+        ownerKey = "npc_dota_hero_warlock";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         stun_duration = 1;
     }
 
@@ -77,11 +81,11 @@ public final class WarlockRainOfChaos extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -99,10 +103,6 @@ public final class WarlockRainOfChaos extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -165,8 +165,20 @@ public final class WarlockRainOfChaos extends Ability {
         return number_of_golems_scepter;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getStunDuration() {

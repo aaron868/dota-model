@@ -6,10 +6,10 @@ public final class TerrorbladeConjureImage extends Ability {
 
     private static TerrorbladeConjureImage instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final int illusion_duration;
@@ -18,13 +18,16 @@ public final class TerrorbladeConjureImage extends Ability {
     private final double[] illusion_outgoing_damage;
     private final double[] illusion_outgoing_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private TerrorbladeConjureImage() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = .15;
-        abilityCooldown = 16;
-        abilityManaCost = 80;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{.15,.15,.15,.15};
+        abilityCooldown = new double[]{16,16,16,16};
+        abilityManaCost = new int[]{80,80,80,80};
         iD = 5620;
         key = "terrorblade_conjure_image";
         illusion_duration = 32;
@@ -33,7 +36,10 @@ public final class TerrorbladeConjureImage extends Ability {
         illusion_outgoing_damage = new double[]{70.0,60.0,50.0,40.0};
         illusion_outgoing_tooltip = new double[]{30.0,40.0,50.0,60.0};
         localizedName = "Conjure Image";
-        owningHeroShortKey = "terrorblade";
+        ownerKey = "npc_dota_hero_terrorblade";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static TerrorbladeConjureImage instance() {
@@ -43,19 +49,19 @@ public final class TerrorbladeConjureImage extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -91,8 +97,20 @@ public final class TerrorbladeConjureImage extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

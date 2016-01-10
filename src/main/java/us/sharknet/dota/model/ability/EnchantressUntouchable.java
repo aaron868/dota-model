@@ -6,24 +6,30 @@ public final class EnchantressUntouchable extends Ability {
 
     private static EnchantressUntouchable instance;
 
-    private final String abilityBehavior;
-    private final int abilityDuration;
+    private final String[] abilityBehavior;
+    private final double[] abilityDuration;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] slow_attack_speed;
     private final int slow_duration;
 
     private EnchantressUntouchable() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityDuration = 4;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
+        abilityDuration = new double[]{4,4,4,4};
         iD = 5267;
         key = "enchantress_untouchable";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Untouchable";
-        owningHeroShortKey = "enchantress";
+        ownerKey = "npc_dota_hero_enchantress";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         slow_attack_speed = new int[]{-40,-70,-100,-130};
         slow_duration = 4;
     }
@@ -35,11 +41,11 @@ public final class EnchantressUntouchable extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -59,8 +65,20 @@ public final class EnchantressUntouchable extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getSlowAttackSpeed() {

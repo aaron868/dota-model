@@ -6,38 +6,40 @@ public final class SatyrSoulstealerManaBurn extends Ability {
 
     private static SatyrSoulstealerManaBurn instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
-    private final double modelscale;
     private final int burn_amount;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private SatyrSoulstealerManaBurn() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = .5;
-        abilityCastRange = 600;
-        abilityCooldown = 18;
-        abilityManaCost = 50;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityCastPoint = new double[]{.5,.5,.5,.5};
+        abilityCastRange = new int[]{600,600,600,600};
+        abilityCooldown = new double[]{18,18,18,18};
+        abilityManaCost = new int[]{50,50,50,50};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5315;
         key = "satyr_soulstealer_mana_burn";
-        maxLevel = 1;
-        modelscale = .85;
         burn_amount = 100;
         localizedName = "Mana Burn";
-        owningHeroShortKey = "satyr_soulstealer";
+        ownerKey = "npc_dota_neutral_satyr_soulstealer";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
     }
 
     public static SatyrSoulstealerManaBurn instance() {
@@ -47,23 +49,23 @@ public final class SatyrSoulstealerManaBurn extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -71,7 +73,7 @@ public final class SatyrSoulstealerManaBurn extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -87,14 +89,6 @@ public final class SatyrSoulstealerManaBurn extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
-    public double getModelscale() {
-        return modelscale;
-    }
-
     public int getBurnAmount() {
         return burn_amount;
     }
@@ -103,8 +97,20 @@ public final class SatyrSoulstealerManaBurn extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

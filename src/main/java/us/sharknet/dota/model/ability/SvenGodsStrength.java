@@ -12,13 +12,15 @@ public final class SvenGodsStrength extends Ability {
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final int[] gods_strength_damage;
     private final int[] gods_strength_damage_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int scepter_aoe;
 
     private SvenGodsStrength() {
@@ -28,13 +30,15 @@ public final class SvenGodsStrength extends Ability {
         abilityDuration = new double[]{25.0,25.0,25.0};
         abilityManaCost = new int[]{100,150,200};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 1;
         iD = 5097;
         key = "sven_gods_strength";
         gods_strength_damage = new int[]{100,150,200};
         gods_strength_damage_scepter = new int[]{75,100,125};
         localizedName = "Gods Strength";
-        owningHeroShortKey = "sven";
+        ownerKey = "npc_dota_hero_sven";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         scepter_aoe = 900;
     }
 
@@ -69,10 +73,6 @@ public final class SvenGodsStrength extends Ability {
         return abilityType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -93,8 +93,20 @@ public final class SvenGodsStrength extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getScepterAoe() {

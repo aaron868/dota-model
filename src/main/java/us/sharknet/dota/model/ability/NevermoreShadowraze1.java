@@ -10,14 +10,16 @@ public final class NevermoreShadowraze1 extends Ability {
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int shadowraze_cooldown;
     private final int shadowraze_radius;
     private final int shadowraze_range;
@@ -27,14 +29,16 @@ public final class NevermoreShadowraze1 extends Ability {
         abilityCastPoint = new double[]{0.67,0.67,0.67,0.67};
         abilityCooldown = new double[]{10.0,10.0,10.0,10.0};
         abilityDamage = new int[]{100,175,250,325};
-        abilityManaCost = 90;
+        abilityManaCost = new int[]{90,90,90,90};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5059;
         key = "nevermore_shadowraze1";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Shadowraze 1";
-        owningHeroShortKey = "nevermore";
+        ownerKey = "npc_dota_hero_nevermore";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         shadowraze_cooldown = 3;
         shadowraze_radius = 250;
         shadowraze_range = 200;
@@ -63,16 +67,12 @@ public final class NevermoreShadowraze1 extends Ability {
         return abilityDamage;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -91,8 +91,20 @@ public final class NevermoreShadowraze1 extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getShadowrazeCooldown() {

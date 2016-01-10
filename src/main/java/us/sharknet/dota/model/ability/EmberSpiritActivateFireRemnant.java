@@ -7,44 +7,46 @@ public final class EmberSpiritActivateFireRemnant extends Ability {
     private static EmberSpiritActivateFireRemnant instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final int charge_restore_time;
     private final int[] damage;
     private final String localizedName;
     private final int max_charges;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int speed;
     private final int speed_multiplier;
 
     private EmberSpiritActivateFireRemnant() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"};
-        abilityCastPoint = 0;
-        abilityCastRange = 99999;
-        abilityCooldown = 0;
-        abilityManaCost = 150;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{99999,99999,99999,99999};
+        abilityCooldown = new double[]{0,0,0,0};
+        abilityManaCost = new int[]{150,150,150,150};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5607;
         key = "ember_spirit_activate_fire_remnant";
-        maxLevel = 3;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         charge_restore_time = 35;
         damage = new int[]{100,150,200};
         localizedName = "Activate Fire Remnant";
         max_charges = 3;
-        owningHeroShortKey = "ember_spirit";
+        ownerKey = "npc_dota_hero_ember_spirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 450;
         speed = 1300;
         speed_multiplier = 250;
@@ -61,19 +63,19 @@ public final class EmberSpiritActivateFireRemnant extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -85,20 +87,12 @@ public final class EmberSpiritActivateFireRemnant extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getSpellImmunityType() {
@@ -121,8 +115,20 @@ public final class EmberSpiritActivateFireRemnant extends Ability {
         return max_charges;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

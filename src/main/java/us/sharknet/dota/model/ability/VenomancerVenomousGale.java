@@ -8,18 +8,20 @@ public final class VenomancerVenomousGale extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double[] duration;
     private final String localizedName;
     private final int[] movement_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int[] speed;
     private final int[] strike_damage;
@@ -29,18 +31,20 @@ public final class VenomancerVenomousGale extends Ability {
     private VenomancerVenomousGale() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 800;
-        abilityCooldown = new int[]{21,20,19,18};
-        abilityManaCost = 125;
+        abilityCastRange = new int[]{800,800,800,800};
+        abilityCooldown = new double[]{21,20,19,18};
+        abilityManaCost = new int[]{125,125,125,125};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5178;
         key = "venomancer_venomous_gale";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{15.0,15.0,15.0,15.0};
         localizedName = "Venomous Gale";
         movement_slow = new int[]{-50,-50,-50,-50};
-        owningHeroShortKey = "venomancer";
+        ownerKey = "npc_dota_hero_venomancer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 125;
         speed = new int[]{1200,1200,1200,1200};
         strike_damage = new int[]{25,50,75,100};
@@ -63,24 +67,20 @@ public final class VenomancerVenomousGale extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -107,8 +107,20 @@ public final class VenomancerVenomousGale extends Ability {
         return movement_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

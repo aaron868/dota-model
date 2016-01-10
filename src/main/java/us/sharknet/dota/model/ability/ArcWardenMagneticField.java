@@ -7,11 +7,10 @@ public final class ArcWardenMagneticField extends Ability {
     private static ArcWardenMagneticField instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
-    private final int fightRecapLevel;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -19,16 +18,18 @@ public final class ArcWardenMagneticField extends Ability {
     private final double[] duration;
     private final int evasion_chance;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private ArcWardenMagneticField() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .3;
-        abilityCastRange = 900;
-        abilityCooldown = 50;
-        abilityManaCost = 110;
-        fightRecapLevel = 1;
+        abilityCastPoint = new double[]{.3,.3,.3,.3};
+        abilityCastRange = new int[]{900,900,900,900};
+        abilityCooldown = new double[]{50,50,50,50};
+        abilityManaCost = new int[]{110,110,110,110};
         iD = 5678;
         key = "arc_warden_magnetic_field";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -36,7 +37,10 @@ public final class ArcWardenMagneticField extends Ability {
         duration = new double[]{3.5,4.0,4.5,5.0};
         evasion_chance = 100;
         localizedName = "Magnetic Field";
-        owningHeroShortKey = "arc_warden";
+        ownerKey = "npc_dota_hero_arc_warden";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 275;
     }
 
@@ -51,24 +55,20 @@ public final class ArcWardenMagneticField extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -99,8 +99,20 @@ public final class ArcWardenMagneticField extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

@@ -6,7 +6,7 @@ public final class BroodmotherPoisonSting extends Ability {
 
     private static BroodmotherPoisonSting instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int abilityModifierSupportBonus;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -17,10 +17,13 @@ public final class BroodmotherPoisonSting extends Ability {
     private final int duration_hero;
     private final String localizedName;
     private final int movement_speed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BroodmotherPoisonSting() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityModifierSupportBonus = 15;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5284;
@@ -31,7 +34,10 @@ public final class BroodmotherPoisonSting extends Ability {
         duration_hero = 2;
         localizedName = "Poison Sting";
         movement_speed = -8;
-        owningHeroShortKey = "broodmother";
+        ownerKey = "npc_dota_broodmother_spiderling";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
     }
 
     public static BroodmotherPoisonSting instance() {
@@ -41,7 +47,7 @@ public final class BroodmotherPoisonSting extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -85,8 +91,20 @@ public final class BroodmotherPoisonSting extends Ability {
         return movement_speed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

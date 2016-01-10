@@ -8,15 +8,14 @@ public final class FurionWrathOfNature extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -28,21 +27,23 @@ public final class FurionWrathOfNature extends Ability {
     private final String localizedName;
     private final int[] max_targets;
     private final int[] max_targets_scepter;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int scepter_buffer;
 
     private FurionWrathOfNature() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCastRange = 0;
-        abilityCooldown = new int[]{90,75,60};
+        abilityCastRange = new int[]{0,0,0,0};
+        abilityCooldown = new double[]{90,75,60};
         abilityManaCost = new int[]{175,225,275};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
-        fightRecapLevel = 2;
         iD = 5248;
         key = "furion_wrath_of_nature";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -54,7 +55,10 @@ public final class FurionWrathOfNature extends Ability {
         localizedName = "Wrath Of Nature";
         max_targets = new int[]{16,16,16};
         max_targets_scepter = new int[]{18,18,18};
-        owningHeroShortKey = "furion";
+        ownerKey = "npc_dota_hero_furion";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         scepter_buffer = 4;
     }
 
@@ -73,11 +77,11 @@ public final class FurionWrathOfNature extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -93,20 +97,16 @@ public final class FurionWrathOfNature extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -153,8 +153,20 @@ public final class FurionWrathOfNature extends Ability {
         return max_targets_scepter;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getScepterBuffer() {

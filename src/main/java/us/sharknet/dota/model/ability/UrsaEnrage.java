@@ -7,11 +7,10 @@ public final class UrsaEnrage extends Ability {
     private static UrsaEnrage instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -20,15 +19,17 @@ public final class UrsaEnrage extends Ability {
     private final int duration;
     private final double[] enrage_multiplier;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private UrsaEnrage() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastRange = 0;
-        abilityCooldown = new int[]{50,40,30};
+        abilityCastRange = new int[]{0,0,0,0};
+        abilityCooldown = new double[]{50,40,30};
         abilityManaCost = new int[]{0,0,0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 1;
         iD = 5360;
         key = "ursa_enrage";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -37,7 +38,10 @@ public final class UrsaEnrage extends Ability {
         duration = 4;
         enrage_multiplier = new double[]{1.5,1.75,2.0};
         localizedName = "Enrage";
-        owningHeroShortKey = "ursa";
+        ownerKey = "npc_dota_hero_ursa";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static UrsaEnrage instance() {
@@ -51,11 +55,11 @@ public final class UrsaEnrage extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -65,10 +69,6 @@ public final class UrsaEnrage extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -103,8 +103,20 @@ public final class UrsaEnrage extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

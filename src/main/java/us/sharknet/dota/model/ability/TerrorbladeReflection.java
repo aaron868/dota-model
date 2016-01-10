@@ -6,11 +6,10 @@ public final class TerrorbladeReflection extends Ability {
 
     private static TerrorbladeReflection instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int[] abilityCooldown;
-    private final int abilityManaCost;
-    private final int fightRecapLevel;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -20,15 +19,17 @@ public final class TerrorbladeReflection extends Ability {
     private final double[] illusion_outgoing_tooltip;
     private final String localizedName;
     private final int move_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int range;
 
     private TerrorbladeReflection() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = .3;
-        abilityCooldown = new int[]{22,20,18,16};
-        abilityManaCost = 50;
-        fightRecapLevel = 1;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{.3,.3,.3,.3};
+        abilityCooldown = new double[]{22,20,18,16};
+        abilityManaCost = new int[]{50,50,50,50};
         iD = 5619;
         key = "terrorblade_reflection";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -38,7 +39,10 @@ public final class TerrorbladeReflection extends Ability {
         illusion_outgoing_tooltip = new double[]{40.0,60.0,80.0,100.0};
         localizedName = "Reflection";
         move_slow = 25;
-        owningHeroShortKey = "terrorblade";
+        ownerKey = "npc_dota_hero_terrorblade";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         range = 900;
     }
 
@@ -49,24 +53,20 @@ public final class TerrorbladeReflection extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -105,8 +105,20 @@ public final class TerrorbladeReflection extends Ability {
         return move_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRange() {

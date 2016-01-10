@@ -10,34 +10,38 @@ public final class NyxAssassinManaBurn extends Ability {
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
     private final double[] abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double[] float_multiplier;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private NyxAssassinManaBurn() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
         abilityCastRange = new int[]{600,600,600,600};
         abilityCooldown = new double[]{28.0,20.0,12.0,4.0};
-        abilityManaCost = 100;
+        abilityManaCost = new int[]{100,100,100,100};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        fightRecapLevel = 1;
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO"};
         iD = 5463;
         key = "nyx_assassin_mana_burn";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         float_multiplier = new double[]{3.5,4.0,4.5,5.0};
         localizedName = "Mana Burn";
-        owningHeroShortKey = "nyx_assassin";
+        ownerKey = "npc_dota_hero_nyx_assassin";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static NyxAssassinManaBurn instance() {
@@ -63,7 +67,7 @@ public final class NyxAssassinManaBurn extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -71,16 +75,12 @@ public final class NyxAssassinManaBurn extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -103,8 +103,20 @@ public final class NyxAssassinManaBurn extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

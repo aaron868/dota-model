@@ -36,7 +36,6 @@ public final class Broodmother extends Hero {
     private final int visionDaytimeRange;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Broodmother() {
@@ -69,7 +68,6 @@ public final class Broodmother extends Hero {
         visionDaytimeRange = 1800;
         active = true;
         localizedName = "Broodmother";
-        shortKey = "broodmother";
         url = "Broodmother";
     }
 
@@ -194,10 +192,6 @@ public final class Broodmother extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

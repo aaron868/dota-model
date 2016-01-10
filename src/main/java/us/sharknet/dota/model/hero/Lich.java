@@ -36,7 +36,6 @@ public final class Lich extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Lich() {
@@ -69,7 +68,6 @@ public final class Lich extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Lich";
-        shortKey = "lich";
         url = "Lich";
     }
 
@@ -194,10 +192,6 @@ public final class Lich extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

@@ -6,7 +6,7 @@ public final class SpiritBreakerGreaterBash extends Ability {
 
     private static SpiritBreakerGreaterBash instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCooldown;
     private final int abilityModifierSupportBonus;
     private final String abilityUnitDamageType;
@@ -22,10 +22,13 @@ public final class SpiritBreakerGreaterBash extends Ability {
     private final int[] knockback_height;
     private final String localizedName;
     private final double[] movespeed_duration;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private SpiritBreakerGreaterBash() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityCooldown = new double[]{1.5,1.5,1.5,1.5};
         abilityModifierSupportBonus = 40;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -41,7 +44,10 @@ public final class SpiritBreakerGreaterBash extends Ability {
         knockback_height = new int[]{50,50,50,50};
         localizedName = "Greater Bash";
         movespeed_duration = new double[]{3.0,3.0,3.0,3.0};
-        owningHeroShortKey = "spirit_breaker";
+        ownerKey = "npc_dota_hero_spirit_breaker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static SpiritBreakerGreaterBash instance() {
@@ -51,7 +57,7 @@ public final class SpiritBreakerGreaterBash extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -115,8 +121,20 @@ public final class SpiritBreakerGreaterBash extends Ability {
         return movespeed_duration;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

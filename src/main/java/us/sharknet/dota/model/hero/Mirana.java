@@ -36,7 +36,6 @@ public final class Mirana extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Mirana() {
@@ -69,7 +68,6 @@ public final class Mirana extends Hero {
         team = "Good";
         active = true;
         localizedName = "Mirana";
-        shortKey = "mirana";
         url = "Mirana";
     }
 
@@ -194,10 +192,6 @@ public final class Mirana extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

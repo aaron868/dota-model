@@ -36,7 +36,6 @@ public final class Luna extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Luna() {
@@ -69,7 +68,6 @@ public final class Luna extends Hero {
         team = "Good";
         active = true;
         localizedName = "Luna";
-        shortKey = "luna";
         url = "Luna";
     }
 
@@ -194,10 +192,6 @@ public final class Luna extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

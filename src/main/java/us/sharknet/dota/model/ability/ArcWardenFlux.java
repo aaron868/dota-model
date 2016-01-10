@@ -6,15 +6,14 @@ public final class ArcWardenFlux extends Ability {
 
     private static ArcWardenFlux instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,20 +22,22 @@ public final class ArcWardenFlux extends Ability {
     private final int duration;
     private final String localizedName;
     private final int move_speed_slow_pct;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int search_radius;
     private final double think_interval;
 
     private ArcWardenFlux() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCastRange = new int[]{600,700,800,900};
-        abilityCooldown = 2;
-        abilityManaCost = 75;
+        abilityCooldown = new double[]{2,2,2,2};
+        abilityManaCost = new int[]{75,75,75,75};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5677;
         key = "arc_warden_flux";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -45,7 +46,10 @@ public final class ArcWardenFlux extends Ability {
         duration = 6;
         localizedName = "Flux";
         move_speed_slow_pct = 50;
-        owningHeroShortKey = "arc_warden";
+        ownerKey = "npc_dota_hero_arc_warden";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         search_radius = 225;
         think_interval = .5;
     }
@@ -57,7 +61,7 @@ public final class ArcWardenFlux extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -69,11 +73,11 @@ public final class ArcWardenFlux extends Ability {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -81,16 +85,12 @@ public final class ArcWardenFlux extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -125,8 +125,20 @@ public final class ArcWardenFlux extends Ability {
         return move_speed_slow_pct;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSearchRadius() {

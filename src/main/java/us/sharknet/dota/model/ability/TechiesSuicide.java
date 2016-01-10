@@ -8,21 +8,23 @@ public final class TechiesSuicide extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int big_radius;
     private final int[] damage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
     private final int[] partial_damage;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double respawn_time_percentage;
     private final int respawn_time_percentage_tooltip;
     private final int small_radius;
@@ -30,21 +32,23 @@ public final class TechiesSuicide extends Ability {
     private TechiesSuicide() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 100;
-        abilityCooldown = new int[]{160,140,120,100};
+        abilityCastRange = new int[]{100,100,100,100};
+        abilityCooldown = new double[]{160,140,120,100};
         abilityManaCost = new int[]{100,125,150,175};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5601;
         key = "techies_suicide";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         big_radius = 500;
         damage = new int[]{500,650,850,1150};
-        localizedName = "Suicide Squad, Attack!";
-        owningHeroShortKey = "techies";
+        localizedName = "Suicide Squad  Attack!";
+        ownerKey = "npc_dota_hero_techies";
+        ownerType = AbilityOwnerType.Hero;
         partial_damage = new int[]{260,300,340,380};
+        passive = false;
+        placeholder = false;
         respawn_time_percentage = .5;
         respawn_time_percentage_tooltip = 50;
         small_radius = 200;
@@ -65,11 +69,11 @@ public final class TechiesSuicide extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -81,16 +85,12 @@ public final class TechiesSuicide extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -117,12 +117,24 @@ public final class TechiesSuicide extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
     }
 
     public int[] getPartialDamage() {
         return partial_damage;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getRespawnTimePercentage() {

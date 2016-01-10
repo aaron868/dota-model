@@ -6,23 +6,27 @@ public final class BackdoorProtectionInBase extends Ability {
 
     private static BackdoorProtectionInBase instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int activation_time;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int regen_rate;
 
     private BackdoorProtectionInBase() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5351;
         key = "backdoor_protection_in_base";
-        maxLevel = 1;
         activation_time = 15;
         localizedName = "Backdoor Protection In Base";
-        owningHeroShortKey = "backdoor";
+        ownerKey = "tower";
+        ownerType = AbilityOwnerType.Tower;
+        passive = false;
+        placeholder = false;
         regen_rate = 90;
     }
 
@@ -33,7 +37,7 @@ public final class BackdoorProtectionInBase extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -45,10 +49,6 @@ public final class BackdoorProtectionInBase extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public int getActivationTime() {
         return activation_time;
     }
@@ -57,8 +57,20 @@ public final class BackdoorProtectionInBase extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRegenRate() {

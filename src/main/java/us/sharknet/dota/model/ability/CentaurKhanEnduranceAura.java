@@ -6,23 +6,27 @@ public final class CentaurKhanEnduranceAura extends Ability {
 
     private static CentaurKhanEnduranceAura instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int bonus_attack_speed;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private CentaurKhanEnduranceAura() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5294;
         key = "centaur_khan_endurance_aura";
-        maxLevel = 1;
         bonus_attack_speed = 15;
         localizedName = "Endurance Aura";
-        owningHeroShortKey = "centaur_khan";
+        ownerKey = "npc_dota_neutral_centaur_khan";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
         radius = 900;
     }
 
@@ -33,7 +37,7 @@ public final class CentaurKhanEnduranceAura extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -45,10 +49,6 @@ public final class CentaurKhanEnduranceAura extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public int getBonusAttackSpeed() {
         return bonus_attack_speed;
     }
@@ -57,8 +57,20 @@ public final class CentaurKhanEnduranceAura extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

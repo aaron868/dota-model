@@ -36,7 +36,6 @@ public final class Tinker extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Tinker() {
@@ -69,7 +68,6 @@ public final class Tinker extends Hero {
         team = "Good";
         active = true;
         localizedName = "Tinker";
-        shortKey = "tinker";
         url = "Tinker";
     }
 
@@ -194,10 +192,6 @@ public final class Tinker extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

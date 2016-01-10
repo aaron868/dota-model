@@ -8,16 +8,15 @@ public final class AntimageManaVoid extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final int abilityModifierSupportValue;
+    private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -25,21 +24,23 @@ public final class AntimageManaVoid extends Ability {
     private final int mana_void_aoe_radius;
     private final double[] mana_void_damage_per_mana;
     private final double mana_void_ministun;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private AntimageManaVoid() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 600;
+        abilityCastRange = new int[]{600,600,600,600};
         abilityCooldown = new double[]{70.0,70.0,70.0};
         abilityManaCost = new int[]{125,200,275};
         abilityModifierSupportValue = 0;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 2;
         iD = 5006;
         key = "antimage_mana_void";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -47,7 +48,10 @@ public final class AntimageManaVoid extends Ability {
         mana_void_aoe_radius = 500;
         mana_void_damage_per_mana = new double[]{0.6,0.85,1.1};
         mana_void_ministun = .15;
-        owningHeroShortKey = "antimage";
+        ownerKey = "npc_dota_hero_antimage";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static AntimageManaVoid instance() {
@@ -65,7 +69,7 @@ public final class AntimageManaVoid extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -77,7 +81,7 @@ public final class AntimageManaVoid extends Ability {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
@@ -89,20 +93,16 @@ public final class AntimageManaVoid extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -133,8 +133,20 @@ public final class AntimageManaVoid extends Ability {
         return mana_void_ministun;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

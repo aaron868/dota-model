@@ -8,13 +8,12 @@ public final class PuckDreamCoil extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -28,19 +27,21 @@ public final class PuckDreamCoil extends Ability {
     private final double[] coil_stun_duration;
     private final double[] coil_stun_duration_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double stun_duration;
 
     private PuckDreamCoil() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.1,0.1,0.1};
-        abilityCastRange = 750;
-        abilityCooldown = 75;
+        abilityCastRange = new int[]{750,750,750,750};
+        abilityCooldown = new double[]{75,75,75,75};
         abilityManaCost = new int[]{100,150,200};
         abilityModifierSupportValue = .5;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5073;
         key = "puck_dream_coil";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -54,7 +55,10 @@ public final class PuckDreamCoil extends Ability {
         coil_stun_duration = new double[]{1.5,2.25,3.0};
         coil_stun_duration_scepter = new double[]{1.5,3.0,4.5};
         localizedName = "Dream Coil";
-        owningHeroShortKey = "puck";
+        ownerKey = "npc_dota_hero_puck";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         stun_duration = .5;
     }
 
@@ -73,11 +77,11 @@ public final class PuckDreamCoil extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -95,10 +99,6 @@ public final class PuckDreamCoil extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -153,8 +153,20 @@ public final class PuckDreamCoil extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getStunDuration() {

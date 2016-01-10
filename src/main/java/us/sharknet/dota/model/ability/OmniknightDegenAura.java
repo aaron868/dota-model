@@ -7,27 +7,33 @@ public final class OmniknightDegenAura extends Ability {
     private static OmniknightDegenAura instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastRange;
-    private final String abilityUnitTargetTeam;
+    private final int[] abilityCastRange;
+    private final String[] abilityUnitTargetTeam;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] attack_bonus_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int[] speed_bonus;
 
     private OmniknightDegenAura() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_AURA"};
-        abilityCastRange = 350;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityCastRange = new int[]{350,350,350,350};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         iD = 5265;
         key = "omniknight_degen_aura";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         attack_bonus_tooltip = new int[]{-10,-18,-26,-34};
         localizedName = "Degen Aura";
-        owningHeroShortKey = "omniknight";
+        ownerKey = "npc_dota_hero_omniknight";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         radius = 350;
         speed_bonus = new int[]{-10,-18,-26,-34};
     }
@@ -43,11 +49,11 @@ public final class OmniknightDegenAura extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -71,8 +77,20 @@ public final class OmniknightDegenAura extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

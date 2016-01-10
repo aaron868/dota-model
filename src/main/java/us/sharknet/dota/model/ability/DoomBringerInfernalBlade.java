@@ -8,12 +8,12 @@ public final class DoomBringerInfernalBlade extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
@@ -23,17 +23,20 @@ public final class DoomBringerInfernalBlade extends Ability {
     private final int burn_duration;
     private final String localizedName;
     private final double ministun_duration;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private DoomBringerInfernalBlade() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 150;
-        abilityCooldown = new int[]{16,12,8,4};
-        abilityManaCost = 40;
+        abilityCastRange = new int[]{150,150,150,150};
+        abilityCooldown = new double[]{16,12,8,4};
+        abilityManaCost = new int[]{40,40,40,40};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5341;
         key = "doom_bringer_infernal_blade";
@@ -43,7 +46,10 @@ public final class DoomBringerInfernalBlade extends Ability {
         burn_duration = 4;
         localizedName = "Infernal Blade";
         ministun_duration = .3;
-        owningHeroShortKey = "doom_bringer";
+        ownerKey = "npc_dota_hero_doom_bringer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static DoomBringerInfernalBlade instance() {
@@ -61,15 +67,15 @@ public final class DoomBringerInfernalBlade extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -77,11 +83,11 @@ public final class DoomBringerInfernalBlade extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -121,8 +127,20 @@ public final class DoomBringerInfernalBlade extends Ability {
         return ministun_duration;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

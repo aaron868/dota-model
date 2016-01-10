@@ -6,19 +6,18 @@ public final class ShadowDemonDemonicPurge extends Ability {
 
     private static ShadowDemonDemonicPurge instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -27,24 +26,26 @@ public final class ShadowDemonDemonicPurge extends Ability {
     private final double[] creep_root_duration;
     private final String localizedName;
     private final int max_charges;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] slow_rate;
     private final double[] tooltip_duration;
 
     private ShadowDemonDemonicPurge() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 800;
+        abilityCastRange = new int[]{800,800,800,800};
         abilityCooldown = new double[]{50.0,50.0,50.0};
         abilityDamage = new int[]{200,300,400};
         abilityDuration = new double[]{5.0,5.0,5.0};
         abilityManaCost = new int[]{200,200,200};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 2;
         iD = 5425;
         key = "shadow_demon_demonic_purge";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -53,7 +54,10 @@ public final class ShadowDemonDemonicPurge extends Ability {
         creep_root_duration = new double[]{3.0,3.0,3.0};
         localizedName = "Demonic Purge";
         max_charges = 3;
-        owningHeroShortKey = "shadow_demon";
+        ownerKey = "npc_dota_hero_shadow_demon";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         slow_rate = new int[]{5,3,2};
         tooltip_duration = new double[]{5.0,5.0,5.0};
     }
@@ -65,7 +69,7 @@ public final class ShadowDemonDemonicPurge extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,7 +77,7 @@ public final class ShadowDemonDemonicPurge extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -101,20 +105,16 @@ public final class ShadowDemonDemonicPurge extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -149,8 +149,20 @@ public final class ShadowDemonDemonicPurge extends Ability {
         return max_charges;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getSlowRate() {

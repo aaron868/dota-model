@@ -6,7 +6,7 @@ public final class BountyHunterJinada extends Ability {
 
     private static BountyHunterJinada instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCooldown;
     private final int iD;
     private final String key;
@@ -15,10 +15,13 @@ public final class BountyHunterJinada extends Ability {
     private final int[] crit_multiplier;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BountyHunterJinada() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityCooldown = new double[]{12.0,10.0,8.0,6.0};
         iD = 5286;
         key = "bounty_hunter_jinada";
@@ -27,7 +30,10 @@ public final class BountyHunterJinada extends Ability {
         crit_multiplier = new int[]{150,175,200,225};
         duration = new double[]{3.0,3.0,3.0,3.0};
         localizedName = "Jinada";
-        owningHeroShortKey = "bounty_hunter";
+        ownerKey = "npc_dota_hero_bounty_hunter";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static BountyHunterJinada instance() {
@@ -37,7 +43,7 @@ public final class BountyHunterJinada extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,8 +79,20 @@ public final class BountyHunterJinada extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

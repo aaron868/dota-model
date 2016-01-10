@@ -6,24 +6,30 @@ public final class BroodmotherIncapacitatingBite extends Ability {
 
     private static BroodmotherIncapacitatingBite instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int[] bonus_movespeed;
     private final double[] duration;
     private final String localizedName;
     private final int[] miss_chance;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BroodmotherIncapacitatingBite() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5281;
         key = "broodmother_incapacitating_bite";
         bonus_movespeed = new int[]{-10,-20,-30,-40};
         duration = new double[]{2.0,2.0,2.0,2.0};
         localizedName = "Incapacitating Bite";
         miss_chance = new int[]{30,40,50,60};
-        owningHeroShortKey = "broodmother";
+        ownerKey = "npc_dota_hero_broodmother";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static BroodmotherIncapacitatingBite instance() {
@@ -33,7 +39,7 @@ public final class BroodmotherIncapacitatingBite extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,8 +67,20 @@ public final class BroodmotherIncapacitatingBite extends Ability {
         return miss_chance;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

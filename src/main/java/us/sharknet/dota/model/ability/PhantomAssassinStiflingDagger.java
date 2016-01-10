@@ -6,14 +6,14 @@ public final class PhantomAssassinStiflingDagger extends Ability {
 
     private static PhantomAssassinStiflingDagger instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
@@ -24,17 +24,20 @@ public final class PhantomAssassinStiflingDagger extends Ability {
     private final int[] hero_damage;
     private final String localizedName;
     private final int move_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private PhantomAssassinStiflingDagger() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 1200;
-        abilityCooldown = 6;
+        abilityCastRange = new int[]{1200,1200,1200,1200};
+        abilityCooldown = new double[]{6,6,6,6};
         abilityDuration = new double[]{1.0,2.0,3.0,4.0};
         abilityManaCost = new int[]{30,25,20,15};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5190;
         key = "phantom_assassin_stifling_dagger";
@@ -45,7 +48,10 @@ public final class PhantomAssassinStiflingDagger extends Ability {
         hero_damage = new int[]{30,50,70,90};
         localizedName = "Stifling Dagger";
         move_slow = -50;
-        owningHeroShortKey = "phantom_assassin";
+        ownerKey = "npc_dota_hero_phantom_assassin";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static PhantomAssassinStiflingDagger instance() {
@@ -55,7 +61,7 @@ public final class PhantomAssassinStiflingDagger extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -63,11 +69,11 @@ public final class PhantomAssassinStiflingDagger extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -83,7 +89,7 @@ public final class PhantomAssassinStiflingDagger extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -127,8 +133,20 @@ public final class PhantomAssassinStiflingDagger extends Ability {
         return move_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -8,11 +8,10 @@ public final class KeeperOfTheLightSpiritFormIlluminate extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,7 +22,10 @@ public final class KeeperOfTheLightSpiritFormIlluminate extends Ability {
     private final double[] damage_per_second;
     private final String localizedName;
     private final double[] max_channel_time;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int range;
     private final int speed;
@@ -33,11 +35,10 @@ public final class KeeperOfTheLightSpiritFormIlluminate extends Ability {
     private KeeperOfTheLightSpiritFormIlluminate() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 1800;
+        abilityCastRange = new int[]{1800,1800,1800,1800};
         abilityCooldown = new double[]{10.0,10.0,10.0,10.0};
         abilityManaCost = new int[]{150,160,170,180};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5479;
         key = "keeper_of_the_light_spirit_form_illuminate";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -48,7 +49,10 @@ public final class KeeperOfTheLightSpiritFormIlluminate extends Ability {
         damage_per_second = new double[]{100.0,100.0,100.0,100.0};
         localizedName = "Spirit Form Illuminate";
         max_channel_time = new double[]{2.0,3.0,4.0,5.0};
-        owningHeroShortKey = "keeper_of_the_light";
+        ownerKey = "npc_dota_hero_keeper_of_the_light";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{350,350,350,350};
         range = 1550;
         speed = 15;
@@ -71,7 +75,7 @@ public final class KeeperOfTheLightSpiritFormIlluminate extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -85,10 +89,6 @@ public final class KeeperOfTheLightSpiritFormIlluminate extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -131,8 +131,20 @@ public final class KeeperOfTheLightSpiritFormIlluminate extends Ability {
         return max_channel_time;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

@@ -6,7 +6,7 @@ public final class ChaosKnightChaosStrike extends Ability {
 
     private static ChaosKnightChaosStrike instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int armor_duration;
@@ -15,10 +15,13 @@ public final class ChaosKnightChaosStrike extends Ability {
     private final int[] crit_chance;
     private final int[] crit_damage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ChaosKnightChaosStrike() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5428;
         key = "chaos_knight_chaos_strike";
         armor_duration = 8;
@@ -27,7 +30,10 @@ public final class ChaosKnightChaosStrike extends Ability {
         crit_chance = new int[]{10,10,10,10};
         crit_damage = new int[]{125,175,225,275};
         localizedName = "Chaos Strike";
-        owningHeroShortKey = "chaos_knight";
+        ownerKey = "npc_dota_hero_chaos_knight";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static ChaosKnightChaosStrike instance() {
@@ -37,7 +43,7 @@ public final class ChaosKnightChaosStrike extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,8 +79,20 @@ public final class ChaosKnightChaosStrike extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

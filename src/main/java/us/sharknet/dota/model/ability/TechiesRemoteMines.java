@@ -8,7 +8,7 @@ public final class TechiesRemoteMines extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
@@ -25,7 +25,10 @@ public final class TechiesRemoteMines extends Ability {
     private final String localizedName;
     private final int max_mines;
     private final int[] model_scale;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int radius_scepter;
     private final int vision_duration;
@@ -34,7 +37,7 @@ public final class TechiesRemoteMines extends Ability {
     private TechiesRemoteMines() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"};
         abilityCastPoint = new double[]{1.5,1.5,1.5};
-        abilityCastRange = 500;
+        abilityCastRange = new int[]{500,500,500,500};
         abilityCooldown = new double[]{10.0,10.0,10.0};
         abilityManaCost = new int[]{200,240,300};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -51,7 +54,10 @@ public final class TechiesRemoteMines extends Ability {
         localizedName = "Remote Mines";
         max_mines = 21;
         model_scale = new int[]{0,10,20};
-        owningHeroShortKey = "techies";
+        ownerKey = "npc_dota_hero_techies";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 425;
         radius_scepter = 425;
         vision_duration = 3;
@@ -73,7 +79,7 @@ public final class TechiesRemoteMines extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -141,8 +147,20 @@ public final class TechiesRemoteMines extends Ability {
         return model_scale;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

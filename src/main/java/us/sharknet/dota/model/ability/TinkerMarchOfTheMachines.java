@@ -8,7 +8,7 @@ public final class TinkerMarchOfTheMachines extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
@@ -22,7 +22,10 @@ public final class TinkerMarchOfTheMachines extends Ability {
     private final int duration;
     private final String localizedName;
     private final int machines_per_sec;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int[] speed;
     private final int[] splash_radius;
@@ -30,7 +33,7 @@ public final class TinkerMarchOfTheMachines extends Ability {
     private TinkerMarchOfTheMachines() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.53,0.53,0.53,0.53};
-        abilityCastRange = 300;
+        abilityCastRange = new int[]{300,300,300,300};
         abilityCooldown = new double[]{35.0,35.0,35.0,35.0};
         abilityDamage = new int[]{16,24,32,40};
         abilityManaCost = new int[]{145,150,165,190};
@@ -44,7 +47,10 @@ public final class TinkerMarchOfTheMachines extends Ability {
         duration = 6;
         localizedName = "March Of The Machines";
         machines_per_sec = 24;
-        owningHeroShortKey = "tinker";
+        ownerKey = "npc_dota_hero_tinker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 900;
         speed = new int[]{400,400,400,400};
         splash_radius = new int[]{150,150,150,150};
@@ -65,7 +71,7 @@ public final class TinkerMarchOfTheMachines extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -121,8 +127,20 @@ public final class TinkerMarchOfTheMachines extends Ability {
         return machines_per_sec;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

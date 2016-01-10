@@ -6,17 +6,16 @@ public final class CrystalMaidenFrostbite extends Ability {
 
     private static CrystalMaidenFrostbite instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -27,20 +26,22 @@ public final class CrystalMaidenFrostbite extends Ability {
     private final double[] duration;
     private final int[] hero_damage_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private CrystalMaidenFrostbite() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 500;
-        abilityCooldown = new int[]{9,8,7,6};
+        abilityCastRange = new int[]{500,500,500,500};
+        abilityCooldown = new double[]{9,8,7,6};
         abilityManaCost = new int[]{115,125,140,150};
         abilityModifierSupportValue = .5;
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5127;
         key = "crystal_maiden_frostbite";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -51,7 +52,10 @@ public final class CrystalMaidenFrostbite extends Ability {
         duration = new double[]{1.5,2.0,2.5,3.0};
         hero_damage_tooltip = new int[]{150,200,250,300};
         localizedName = "Frostbite";
-        owningHeroShortKey = "crystal_maiden";
+        ownerKey = "npc_dota_hero_crystal_maiden";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static CrystalMaidenFrostbite instance() {
@@ -61,7 +65,7 @@ public final class CrystalMaidenFrostbite extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -69,11 +73,11 @@ public final class CrystalMaidenFrostbite extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -93,16 +97,12 @@ public final class CrystalMaidenFrostbite extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -145,8 +145,20 @@ public final class CrystalMaidenFrostbite extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

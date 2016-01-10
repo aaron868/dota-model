@@ -12,7 +12,6 @@ public final class ShredderTimberChain extends Ability {
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -20,7 +19,10 @@ public final class ShredderTimberChain extends Ability {
     private final int[] damage;
     private final int[] damage_radius;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] range;
     private final int[] speed;
 
@@ -31,7 +33,6 @@ public final class ShredderTimberChain extends Ability {
         abilityCooldown = new double[]{4.0,4.0,4.0,4.0};
         abilityManaCost = new int[]{60,70,80,90};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        fightRecapLevel = 1;
         iD = 5525;
         key = "shredder_timber_chain";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -39,7 +40,10 @@ public final class ShredderTimberChain extends Ability {
         damage = new int[]{100,140,180,220};
         damage_radius = new int[]{225,225,225,225};
         localizedName = "Timber Chain";
-        owningHeroShortKey = "shredder";
+        ownerKey = "npc_dota_hero_shredder";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         range = new int[]{850,1050,1250,1450};
         speed = new int[]{1600,2000,2400,2800};
     }
@@ -75,10 +79,6 @@ public final class ShredderTimberChain extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -107,8 +107,20 @@ public final class ShredderTimberChain extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRange() {

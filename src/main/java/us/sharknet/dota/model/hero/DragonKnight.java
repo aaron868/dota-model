@@ -36,7 +36,6 @@ public final class DragonKnight extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private DragonKnight() {
@@ -69,7 +68,6 @@ public final class DragonKnight extends Hero {
         team = "Good";
         active = true;
         localizedName = "Dragon Knight";
-        shortKey = "dragon_knight";
         url = "Dragon_Knight";
     }
 
@@ -194,10 +192,6 @@ public final class DragonKnight extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

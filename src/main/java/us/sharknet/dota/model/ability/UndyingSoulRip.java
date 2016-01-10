@@ -8,42 +8,46 @@ public final class UndyingSoulRip extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final int abilityModifierSupportValue;
+    private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] damage_per_unit;
     private final String localizedName;
     private final int[] max_units;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int[] tombstone_heal;
 
     private UndyingSoulRip() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.45,0.45,0.45,0.45};
-        abilityCastRange = 750;
+        abilityCastRange = new int[]{750,750,750,750};
         abilityCooldown = new double[]{24.0,18.0,12.0,6.0};
         abilityManaCost = new int[]{100,110,120,130};
         abilityModifierSupportValue = 0;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
-        fightRecapLevel = 1;
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_CUSTOM"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_CUSTOM"};
         iD = 5443;
         key = "undying_soul_rip";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage_per_unit = new int[]{18,22,26,30};
         localizedName = "Soul Rip";
         max_units = new int[]{10,12,14,16};
-        owningHeroShortKey = "undying";
+        ownerKey = "npc_dota_hero_undying";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 1300;
         tombstone_heal = new int[]{2,4,6,8};
     }
@@ -63,7 +67,7 @@ public final class UndyingSoulRip extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -75,7 +79,7 @@ public final class UndyingSoulRip extends Ability {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
@@ -83,16 +87,12 @@ public final class UndyingSoulRip extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -119,8 +119,20 @@ public final class UndyingSoulRip extends Ability {
         return max_units;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

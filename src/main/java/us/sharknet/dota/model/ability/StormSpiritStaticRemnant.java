@@ -6,36 +6,40 @@ public final class StormSpiritStaticRemnant extends Ability {
 
     private static StormSpiritStaticRemnant instance;
 
-    private final String abilityBehavior;
-    private final int[] abilityCastPoint;
-    private final double abilityCooldown;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
     private final double[] abilityDuration;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] static_remnant_damage;
     private final int static_remnant_damage_radius;
     private final int static_remnant_delay;
     private final int static_remnant_radius;
 
     private StormSpiritStaticRemnant() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = new int[]{0,0,0,0};
-        abilityCooldown = 3.5;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCooldown = new double[]{3.5,3.5,3.5,3.5};
         abilityDuration = new double[]{12.0,12.0,12.0,12.0};
-        abilityManaCost = 100;
+        abilityManaCost = new int[]{100,100,100,100};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5098;
         key = "storm_spirit_static_remnant";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Static Remnant";
-        owningHeroShortKey = "storm_spirit";
+        ownerKey = "npc_dota_hero_storm_spirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         static_remnant_damage = new int[]{140,180,220,260};
         static_remnant_damage_radius = 260;
         static_remnant_delay = 1;
@@ -49,15 +53,15 @@ public final class StormSpiritStaticRemnant extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public double getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -65,16 +69,12 @@ public final class StormSpiritStaticRemnant extends Ability {
         return abilityDuration;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -93,8 +93,20 @@ public final class StormSpiritStaticRemnant extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getStaticRemnantDamage() {

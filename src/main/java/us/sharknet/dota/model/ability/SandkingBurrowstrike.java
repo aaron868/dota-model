@@ -13,9 +13,8 @@ public final class SandkingBurrowstrike extends Ability {
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -26,7 +25,10 @@ public final class SandkingBurrowstrike extends Ability {
     private final int burrow_width;
     private final int[] cast_range_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] tooltip_range;
 
     private SandkingBurrowstrike() {
@@ -37,9 +39,8 @@ public final class SandkingBurrowstrike extends Ability {
         abilityDamage = new int[]{100,160,220,280};
         abilityManaCost = new int[]{110,120,130,140};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5102;
         key = "sandking_burrowstrike";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -50,7 +51,10 @@ public final class SandkingBurrowstrike extends Ability {
         burrow_width = 150;
         cast_range_scepter = new int[]{700,900,1100,1300};
         localizedName = "Burrowstrike";
-        owningHeroShortKey = "sand_king";
+        ownerKey = "npc_dota_hero_sand_king";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_range = new int[]{350,450,550,650};
     }
 
@@ -89,16 +93,12 @@ public final class SandkingBurrowstrike extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -141,8 +141,20 @@ public final class SandkingBurrowstrike extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getTooltipRange() {

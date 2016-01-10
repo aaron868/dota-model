@@ -8,14 +8,13 @@ public final class WinterWyvernSplinterBlast extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,7 +22,10 @@ public final class WinterWyvernSplinterBlast extends Ability {
     private final int duration;
     private final String localizedName;
     private final int movespeed_slow_tooltip;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int projectile_max_time;
     private final int projectile_speed;
     private final int secondary_projectile_speed;
@@ -32,14 +34,13 @@ public final class WinterWyvernSplinterBlast extends Ability {
     private WinterWyvernSplinterBlast() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 1200;
-        abilityCooldown = 7;
+        abilityCastRange = new int[]{1200,1200,1200,1200};
+        abilityCooldown = new double[]{7,7,7,7};
         abilityDamage = new int[]{100,180,260,340};
         abilityManaCost = new int[]{120,130,140,150};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5652;
         key = "winter_wyvern_splinter_blast";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -47,7 +48,10 @@ public final class WinterWyvernSplinterBlast extends Ability {
         duration = 4;
         localizedName = "Splinter Blast";
         movespeed_slow_tooltip = 25;
-        owningHeroShortKey = "winter_wyvern";
+        ownerKey = "npc_dota_hero_winter_wyvern";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         projectile_max_time = 1;
         projectile_speed = 650;
         secondary_projectile_speed = 650;
@@ -69,11 +73,11 @@ public final class WinterWyvernSplinterBlast extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -89,16 +93,12 @@ public final class WinterWyvernSplinterBlast extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -129,8 +129,20 @@ public final class WinterWyvernSplinterBlast extends Ability {
         return movespeed_slow_tooltip;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getProjectileMaxTime() {

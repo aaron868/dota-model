@@ -6,28 +6,34 @@ public final class FacelessVoidTimeDilation extends Ability {
 
     private static FacelessVoidTimeDilation instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int[] abilityCooldown;
-    private final int abilityManaCost;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int[] slow;
 
     private FacelessVoidTimeDilation() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = .1;
-        abilityCooldown = new int[]{36,30,24,18};
-        abilityManaCost = 50;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{.1,.1,.1,.1};
+        abilityCooldown = new double[]{36,30,24,18};
+        abilityManaCost = new int[]{50,50,50,50};
         iD = 5691;
         key = "faceless_void_time_dilation";
         duration = new double[]{6.0,8.0,10.0,12.0};
-        localizedName = " Time Dilation";
-        owningHeroShortKey = "faceless_void";
+        localizedName = "Time Dilation";
+        ownerKey = "npc_dota_hero_faceless_void";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 725;
         slow = new int[]{7,8,9,10};
     }
@@ -39,19 +45,19 @@ public final class FacelessVoidTimeDilation extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -71,8 +77,20 @@ public final class FacelessVoidTimeDilation extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

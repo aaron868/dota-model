@@ -38,7 +38,6 @@ public final class BountyHunter extends Hero {
     private final int visionNighttimeRange;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private BountyHunter() {
@@ -73,7 +72,6 @@ public final class BountyHunter extends Hero {
         visionNighttimeRange = 1000;
         active = true;
         localizedName = "Bounty Hunter";
-        shortKey = "bounty_hunter";
         url = "Bounty_Hunter";
     }
 
@@ -206,10 +204,6 @@ public final class BountyHunter extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

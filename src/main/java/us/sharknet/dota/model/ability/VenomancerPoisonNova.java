@@ -6,14 +6,13 @@ public final class VenomancerPoisonNova extends Ability {
 
     private static VenomancerPoisonNova instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final int abilityModifierSupportValue;
+    private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,20 +22,22 @@ public final class VenomancerPoisonNova extends Ability {
     private final int duration;
     private final int duration_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int speed;
     private final int[] start_radius;
 
     private VenomancerPoisonNova() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.0,0.0,0.0};
         abilityCooldown = new double[]{140.0,120.0,100.0};
         abilityManaCost = new int[]{200,300,400};
         abilityModifierSupportValue = 0;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5181;
         key = "venomancer_poison_nova";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -46,7 +47,10 @@ public final class VenomancerPoisonNova extends Ability {
         duration = 16;
         duration_scepter = 16;
         localizedName = "Poison Nova";
-        owningHeroShortKey = "venomancer";
+        ownerKey = "npc_dota_hero_venomancer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 830;
         speed = 500;
         start_radius = new int[]{255,255,255};
@@ -59,7 +63,7 @@ public final class VenomancerPoisonNova extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -75,7 +79,7 @@ public final class VenomancerPoisonNova extends Ability {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
@@ -85,10 +89,6 @@ public final class VenomancerPoisonNova extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -127,8 +127,20 @@ public final class VenomancerPoisonNova extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

@@ -8,12 +8,11 @@ public final class BatriderFlamebreak extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final int abilityModifierSupportValue;
+    private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -26,19 +25,21 @@ public final class BatriderFlamebreak extends Ability {
     private final int[] knockback_height;
     private final int knockback_max_distance;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] speed;
     private final double[] stun_duration;
 
     private BatriderFlamebreak() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
-        abilityCastRange = 1500;
-        abilityCooldown = 14;
+        abilityCastRange = new int[]{1500,1500,1500,1500};
+        abilityCooldown = new double[]{14,14,14,14};
         abilityManaCost = new int[]{110,120,130,140};
         abilityModifierSupportValue = 1;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5321;
         key = "batrider_flamebreak";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -51,7 +52,10 @@ public final class BatriderFlamebreak extends Ability {
         knockback_height = new int[]{100,100,100,100};
         knockback_max_distance = 4;
         localizedName = "Flamebreak";
-        owningHeroShortKey = "batrider";
+        ownerKey = "npc_dota_hero_batrider";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         speed = new int[]{900,900,900,900};
         stun_duration = new double[]{0.5,0.5,0.5,0.5};
     }
@@ -71,11 +75,11 @@ public final class BatriderFlamebreak extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -83,16 +87,12 @@ public final class BatriderFlamebreak extends Ability {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -143,8 +143,20 @@ public final class BatriderFlamebreak extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getSpeed() {

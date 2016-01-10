@@ -7,27 +7,29 @@ public final class NyxAssassinUnburrow extends Ability {
     private static NyxAssassinUnburrow instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
-    private final int fightRecapLevel;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private NyxAssassinUnburrow() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = 0;
-        abilityCooldown = 0;
-        abilityManaCost = 0;
-        fightRecapLevel = 1;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCooldown = new double[]{0,0,0,0};
+        abilityManaCost = new int[]{0,0,0,0};
         iD = 5673;
         key = "nyx_assassin_unburrow";
-        maxLevel = 1;
         localizedName = "Unburrow";
-        owningHeroShortKey = "nyx_assassin";
+        ownerKey = "npc_dota_hero_nyx_assassin";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static NyxAssassinUnburrow instance() {
@@ -41,20 +43,16 @@ public final class NyxAssassinUnburrow extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -65,16 +63,24 @@ public final class NyxAssassinUnburrow extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

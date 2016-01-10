@@ -9,13 +9,16 @@ public final class SvenWarcry extends Ability {
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
-    private final int abilityDuration;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final int duration_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] warcry_armor;
     private final int warcry_movespeed;
     private final int warcry_radius;
@@ -24,13 +27,16 @@ public final class SvenWarcry extends Ability {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
         abilityCooldown = new double[]{32.0,26.0,20.0,14.0};
-        abilityDuration = 8;
+        abilityDuration = new double[]{8,8,8,8};
         abilityManaCost = new int[]{25,25,25,25};
         iD = 5096;
         key = "sven_warcry";
         duration_tooltip = 8;
         localizedName = "Warcry";
-        owningHeroShortKey = "sven";
+        ownerKey = "npc_dota_hero_sven";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         warcry_armor = new int[]{5,10,15,20};
         warcry_movespeed = 12;
         warcry_radius = 900;
@@ -55,7 +61,7 @@ public final class SvenWarcry extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -79,8 +85,20 @@ public final class SvenWarcry extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getWarcryArmor() {

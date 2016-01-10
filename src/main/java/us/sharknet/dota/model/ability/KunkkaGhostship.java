@@ -7,14 +7,13 @@ public final class KunkkaGhostship extends Ability {
     private static KunkkaGhostship instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -26,20 +25,22 @@ public final class KunkkaGhostship extends Ability {
     private final int ghostship_width_scepter;
     private final String localizedName;
     private final int[] movespeed_bonus;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] stun_duration;
     private final double tooltip_delay;
 
     private KunkkaGhostship() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .3;
-        abilityCastRange = 1000;
+        abilityCastPoint = new double[]{.3,.3,.3,.3};
+        abilityCastRange = new int[]{1000,1000,1000,1000};
         abilityCooldown = new double[]{60.0,50.0,40.0};
         abilityDamage = new int[]{400,500,600};
         abilityManaCost = new int[]{125,175,225};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5035;
         key = "kunkka_ghostship";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -51,7 +52,10 @@ public final class KunkkaGhostship extends Ability {
         ghostship_width_scepter = 200;
         localizedName = "Ghostship";
         movespeed_bonus = new int[]{10,10,10};
-        owningHeroShortKey = "kunkka";
+        ownerKey = "npc_dota_hero_kunkka";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         stun_duration = new double[]{1.4,1.4,1.4};
         tooltip_delay = 2.7;
     }
@@ -67,11 +71,11 @@ public final class KunkkaGhostship extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -93,10 +97,6 @@ public final class KunkkaGhostship extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -143,8 +143,20 @@ public final class KunkkaGhostship extends Ability {
         return movespeed_bonus;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getStunDuration() {

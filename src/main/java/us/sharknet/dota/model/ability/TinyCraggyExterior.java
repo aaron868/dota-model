@@ -6,7 +6,7 @@ public final class TinyCraggyExterior extends Ability {
 
     private static TinyCraggyExterior instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int[] abilityDamage;
     private final int abilityModifierSupportBonus;
     private final String abilityUnitDamageType;
@@ -14,13 +14,16 @@ public final class TinyCraggyExterior extends Ability {
     private final String key;
     private final int[] bonus_armor;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int[] stun_chance;
     private final double[] stun_duration;
 
     private TinyCraggyExterior() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityDamage = new int[]{25,35,45,55};
         abilityModifierSupportBonus = 35;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -28,7 +31,10 @@ public final class TinyCraggyExterior extends Ability {
         key = "tiny_craggy_exterior";
         bonus_armor = new int[]{2,3,4,5};
         localizedName = "Craggy Exterior";
-        owningHeroShortKey = "tiny";
+        ownerKey = "npc_dota_hero_tiny";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         radius = new int[]{300,300,300,300};
         stun_chance = new int[]{10,15,20,25};
         stun_duration = new double[]{1.0,1.25,1.5,1.75};
@@ -41,7 +47,7 @@ public final class TinyCraggyExterior extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,8 +79,20 @@ public final class TinyCraggyExterior extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

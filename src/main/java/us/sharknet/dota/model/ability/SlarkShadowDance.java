@@ -7,10 +7,9 @@ public final class SlarkShadowDance extends Ability {
     private static SlarkShadowDance instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final double[] activation_delay;
@@ -20,16 +19,18 @@ public final class SlarkShadowDance extends Ability {
     private final double[] fade_time;
     private final String localizedName;
     private final double[] neutral_disable;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int scepter_aoe;
     private final int scepter_cooldown;
 
     private SlarkShadowDance() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
-        abilityCooldown = 6;
+        abilityCooldown = new double[]{6,6,6,6};
         abilityManaCost = new int[]{120,120,120};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5497;
         key = "slark_shadow_dance";
         activation_delay = new double[]{0.5,0.5,0.5};
@@ -39,7 +40,10 @@ public final class SlarkShadowDance extends Ability {
         fade_time = new double[]{0.0,0.0,0.0};
         localizedName = "Shadow Dance";
         neutral_disable = new double[]{2.0,2.0,2.0};
-        owningHeroShortKey = "slark";
+        ownerKey = "npc_dota_hero_slark";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         scepter_aoe = 350;
         scepter_cooldown = 35;
     }
@@ -55,7 +59,7 @@ public final class SlarkShadowDance extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -65,10 +69,6 @@ public final class SlarkShadowDance extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -107,8 +107,20 @@ public final class SlarkShadowDance extends Ability {
         return neutral_disable;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getScepterAoe() {

@@ -8,7 +8,7 @@ public final class ClinkzWindWalk extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int[] abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final int iD;
     private final String key;
@@ -16,12 +16,15 @@ public final class ClinkzWindWalk extends Ability {
     private final double[] fade_time;
     private final String localizedName;
     private final int[] move_speed_bonus_pct;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ClinkzWindWalk() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCooldown = new int[]{20,19,18,17};
+        abilityCooldown = new double[]{20,19,18,17};
         abilityManaCost = new int[]{75,75,75,75};
         iD = 5261;
         key = "clinkz_wind_walk";
@@ -29,7 +32,10 @@ public final class ClinkzWindWalk extends Ability {
         fade_time = new double[]{0.6,0.6,0.6,0.6};
         localizedName = "Wind Walk";
         move_speed_bonus_pct = new int[]{11,22,33,44};
-        owningHeroShortKey = "clinkz";
+        ownerKey = "npc_dota_hero_clinkz";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static ClinkzWindWalk instance() {
@@ -47,7 +53,7 @@ public final class ClinkzWindWalk extends Ability {
         return abilityCastPoint;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -79,8 +85,20 @@ public final class ClinkzWindWalk extends Ability {
         return move_speed_bonus_pct;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

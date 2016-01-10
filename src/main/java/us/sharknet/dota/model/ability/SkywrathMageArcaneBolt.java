@@ -6,15 +6,14 @@ public final class SkywrathMageArcaneBolt extends Ability {
 
     private static SkywrathMageArcaneBolt instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,19 +22,21 @@ public final class SkywrathMageArcaneBolt extends Ability {
     private final int bolt_vision;
     private final double int_multiplier;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double vision_duration;
 
     private SkywrathMageArcaneBolt() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
-        abilityCastRange = 800;
+        abilityCastRange = new int[]{800,800,800,800};
         abilityCooldown = new double[]{5.0,4.0,3.0,2.0};
         abilityManaCost = new int[]{70,70,70,70};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5581;
         key = "skywrath_mage_arcane_bolt";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -44,7 +45,10 @@ public final class SkywrathMageArcaneBolt extends Ability {
         bolt_vision = 325;
         int_multiplier = 1.6;
         localizedName = "Arcane Bolt";
-        owningHeroShortKey = "skywrath_mage";
+        ownerKey = "npc_dota_hero_skywrath_mage";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         vision_duration = 3.34;
     }
 
@@ -55,7 +59,7 @@ public final class SkywrathMageArcaneBolt extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -63,7 +67,7 @@ public final class SkywrathMageArcaneBolt extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -79,16 +83,12 @@ public final class SkywrathMageArcaneBolt extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -123,8 +123,20 @@ public final class SkywrathMageArcaneBolt extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getVisionDuration() {

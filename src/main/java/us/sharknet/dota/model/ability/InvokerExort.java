@@ -7,27 +7,31 @@ public final class InvokerExort extends Ability {
     private static InvokerExort instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int[] bonus_damage_per_instance;
     private final int[] bonus_intelligence;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private InvokerExort() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCooldown = 0;
-        abilityManaCost = 0;
+        abilityCooldown = new double[]{0,0,0,0};
+        abilityManaCost = new int[]{0,0,0,0};
         iD = 5372;
         key = "invoker_exort";
-        maxLevel = 7;
         bonus_damage_per_instance = new int[]{3,6,9,12,15,18,21};
         bonus_intelligence = new int[]{2,4,6,8,10,12,14};
         localizedName = "Exort";
-        owningHeroShortKey = "invoker";
+        ownerKey = "npc_dota_hero_invoker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static InvokerExort instance() {
@@ -41,11 +45,11 @@ public final class InvokerExort extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -55,10 +59,6 @@ public final class InvokerExort extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int[] getBonusDamagePerInstance() {
@@ -73,8 +73,20 @@ public final class InvokerExort extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -6,25 +6,31 @@ public final class LegionCommanderMomentOfCourage extends Ability {
 
     private static LegionCommanderMomentOfCourage instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCooldown;
     private final int iD;
     private final String key;
     private final int buff_duration;
     private final int[] hp_leech_percent;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int trigger_chance;
 
     private LegionCommanderMomentOfCourage() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityCooldown = new double[]{2.6,2.0,1.4,0.8};
         iD = 5597;
         key = "legion_commander_moment_of_courage";
         buff_duration = 1;
         hp_leech_percent = new int[]{55,65,75,85};
         localizedName = "Moment Of Courage";
-        owningHeroShortKey = "legion_commander";
+        ownerKey = "npc_dota_hero_legion_commander";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         trigger_chance = 25;
     }
 
@@ -35,7 +41,7 @@ public final class LegionCommanderMomentOfCourage extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -63,8 +69,20 @@ public final class LegionCommanderMomentOfCourage extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getTriggerChance() {

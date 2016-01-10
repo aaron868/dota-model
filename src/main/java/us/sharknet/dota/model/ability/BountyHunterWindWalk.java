@@ -18,7 +18,10 @@ public final class BountyHunterWindWalk extends Ability {
     private final double[] duration;
     private final double[] fade_time;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BountyHunterWindWalk() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"};
@@ -32,8 +35,11 @@ public final class BountyHunterWindWalk extends Ability {
         bonus_damage = new int[]{30,60,90,120};
         duration = new double[]{20.0,25.0,30.0,35.0};
         fade_time = new double[]{1.0,0.75,0.5,0.25};
-        localizedName = "Wind Walk";
-        owningHeroShortKey = "bounty_hunter";
+        localizedName = "Shadow Walk";
+        ownerKey = "npc_dota_hero_bounty_hunter";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static BountyHunterWindWalk instance() {
@@ -91,8 +97,20 @@ public final class BountyHunterWindWalk extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

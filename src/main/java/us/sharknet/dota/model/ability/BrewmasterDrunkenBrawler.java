@@ -6,7 +6,7 @@ public final class BrewmasterDrunkenBrawler extends Ability {
 
     private static BrewmasterDrunkenBrawler instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int[] crit_chance;
@@ -14,10 +14,13 @@ public final class BrewmasterDrunkenBrawler extends Ability {
     private final int[] dodge_chance;
     private final double[] last_proc;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BrewmasterDrunkenBrawler() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5402;
         key = "brewmaster_drunken_brawler";
         crit_chance = new int[]{10,15,20,25};
@@ -25,7 +28,10 @@ public final class BrewmasterDrunkenBrawler extends Ability {
         dodge_chance = new int[]{10,15,20,25};
         last_proc = new double[]{16.0,14.0,12.0,10.0};
         localizedName = "Drunken Brawler";
-        owningHeroShortKey = "brewmaster";
+        ownerKey = "npc_dota_hero_brewmaster";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static BrewmasterDrunkenBrawler instance() {
@@ -35,7 +41,7 @@ public final class BrewmasterDrunkenBrawler extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -67,8 +73,20 @@ public final class BrewmasterDrunkenBrawler extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

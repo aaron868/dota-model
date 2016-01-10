@@ -8,7 +8,7 @@ public final class QueenofpainBlink extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final int iD;
@@ -16,12 +16,15 @@ public final class QueenofpainBlink extends Ability {
     private final int blink_range;
     private final String localizedName;
     private final int min_blink_range;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private QueenofpainBlink() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"};
         abilityCastPoint = new double[]{0.33,0.33,0.33,0.33};
-        abilityCastRange = 0;
+        abilityCastRange = new int[]{0,0,0,0};
         abilityCooldown = new double[]{15.0,12.0,9.0,6.0};
         abilityManaCost = new int[]{60,60,60,60};
         iD = 5174;
@@ -29,7 +32,10 @@ public final class QueenofpainBlink extends Ability {
         blink_range = 1300;
         localizedName = "Blink";
         min_blink_range = 200;
-        owningHeroShortKey = "queenofpain";
+        ownerKey = "npc_dota_hero_queenofpain";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static QueenofpainBlink instance() {
@@ -47,7 +53,7 @@ public final class QueenofpainBlink extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -79,8 +85,20 @@ public final class QueenofpainBlink extends Ability {
         return min_blink_range;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

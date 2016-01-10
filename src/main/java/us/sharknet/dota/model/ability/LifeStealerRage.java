@@ -7,31 +7,37 @@ public final class LifeStealerRage extends Ability {
     private static LifeStealerRage instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int[] abilityDuration;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final int[] attack_speed_bonus;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private LifeStealerRage() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = 0;
-        abilityCastRange = 0;
-        abilityCooldown = 16;
-        abilityDuration = new int[]{3,4,5,6};
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{0,0,0,0};
+        abilityCooldown = new double[]{16,16,16,16};
+        abilityDuration = new double[]{3,4,5,6};
         abilityManaCost = new int[]{75,75,75,75};
         iD = 5249;
         key = "life_stealer_rage";
         attack_speed_bonus = new int[]{50,60,70,80};
         duration = new double[]{3.0,4.0,5.0,6.0};
         localizedName = "Rage";
-        owningHeroShortKey = "life_stealer";
+        ownerKey = "npc_dota_hero_life_stealer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static LifeStealerRage instance() {
@@ -45,19 +51,19 @@ public final class LifeStealerRage extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int[] getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -85,8 +91,20 @@ public final class LifeStealerRage extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -40,7 +40,6 @@ public final class TrollWarlord extends Hero {
     private final int visionDaytimeRange;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private TrollWarlord() {
@@ -77,7 +76,6 @@ public final class TrollWarlord extends Hero {
         visionDaytimeRange = 1800;
         active = true;
         localizedName = "Troll Warlord";
-        shortKey = "troll_warlord";
         url = "Troll_Warlord";
     }
 
@@ -218,10 +216,6 @@ public final class TrollWarlord extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

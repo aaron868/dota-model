@@ -7,7 +7,7 @@ public final class WeaverShukuchi extends Ability {
     private static WeaverShukuchi instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
@@ -18,12 +18,15 @@ public final class WeaverShukuchi extends Ability {
     private final double[] duration;
     private final double[] fade_time;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private WeaverShukuchi() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"};
-        abilityCastPoint = new int[]{0,0,0,0};
+        abilityCastPoint = new double[]{0,0,0,0};
         abilityCooldown = new double[]{12.0,10.0,8.0,6.0};
         abilityManaCost = new int[]{60,60,60,60};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -34,7 +37,10 @@ public final class WeaverShukuchi extends Ability {
         duration = new double[]{4.0,4.0,4.0,4.0};
         fade_time = new double[]{0.25,0.25,0.25,0.25};
         localizedName = "Shukuchi";
-        owningHeroShortKey = "weaver";
+        ownerKey = "npc_dota_hero_weaver";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{175,175,175,175};
     }
 
@@ -49,7 +55,7 @@ public final class WeaverShukuchi extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -93,8 +99,20 @@ public final class WeaverShukuchi extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

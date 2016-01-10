@@ -7,25 +7,29 @@ public final class AncientApparitionIceBlastRelease extends Ability {
     private static AncientApparitionIceBlastRelease instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final String abilityType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private AncientApparitionIceBlastRelease() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
-        abilityCastPoint = new int[]{0,0,0};
+        abilityCastPoint = new double[]{0,0,0};
         abilityCooldown = new double[]{1.0,1.0,1.0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5349;
         key = "ancient_apparition_ice_blast_release";
-        maxLevel = 1;
         localizedName = "Ice Blast Release";
-        owningHeroShortKey = "ancient_apparition";
+        ownerKey = "npc_dota_hero_ancient_apparition";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static AncientApparitionIceBlastRelease instance() {
@@ -39,7 +43,7 @@ public final class AncientApparitionIceBlastRelease extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -59,16 +63,24 @@ public final class AncientApparitionIceBlastRelease extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

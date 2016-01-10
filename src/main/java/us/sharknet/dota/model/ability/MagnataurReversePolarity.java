@@ -6,43 +6,47 @@ public final class MagnataurReversePolarity extends Ability {
 
     private static MagnataurReversePolarity instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int[] abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double[] creep_stun_duration;
     private final double[] hero_stun_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] polarity_damage;
     private final double[] pull_duration;
     private final int pull_radius;
 
     private MagnataurReversePolarity() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
         abilityCastRange = new int[]{410,410,410};
-        abilityCooldown = new int[]{120,110,100};
+        abilityCooldown = new double[]{120,110,100};
         abilityManaCost = new int[]{200,250,300};
         abilityModifierSupportValue = .5;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5521;
         key = "magnataur_reverse_polarity";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         creep_stun_duration = new double[]{3.0,4.0,5.0};
         hero_stun_duration = new double[]{2.25,3.0,3.75};
         localizedName = "Reverse Polarity";
-        owningHeroShortKey = "magnataur";
+        ownerKey = "npc_dota_hero_magnataur";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         polarity_damage = new int[]{50,125,200};
         pull_duration = new double[]{0.0,0.0,0.0};
         pull_radius = 410;
@@ -55,7 +59,7 @@ public final class MagnataurReversePolarity extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -67,7 +71,7 @@ public final class MagnataurReversePolarity extends Ability {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -85,10 +89,6 @@ public final class MagnataurReversePolarity extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -115,8 +115,20 @@ public final class MagnataurReversePolarity extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getPolarityDamage() {

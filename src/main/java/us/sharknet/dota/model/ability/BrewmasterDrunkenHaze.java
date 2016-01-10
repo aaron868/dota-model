@@ -9,11 +9,10 @@ public final class BrewmasterDrunkenHaze extends Ability {
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int[] abilityCooldown;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetTeam;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,18 +21,20 @@ public final class BrewmasterDrunkenHaze extends Ability {
     private final String localizedName;
     private final int[] miss_chance;
     private final int[] movement_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private BrewmasterDrunkenHaze() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.4,0.4,0.4};
         abilityCastRange = new int[]{850,850,850,850};
-        abilityCooldown = new int[]{8,7,6,5};
-        abilityManaCost = 50;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityCooldown = new double[]{8,7,6,5};
+        abilityManaCost = new int[]{50,50,50,50};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
-        fightRecapLevel = 1;
         iD = 5401;
         key = "brewmaster_drunken_haze";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -42,7 +43,10 @@ public final class BrewmasterDrunkenHaze extends Ability {
         localizedName = "Drunken Haze";
         miss_chance = new int[]{45,55,65,75};
         movement_slow = new int[]{14,18,22,26};
-        owningHeroShortKey = "brewmaster";
+        ownerKey = "npc_dota_hero_brewmaster";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 200;
     }
 
@@ -65,24 +69,20 @@ public final class BrewmasterDrunkenHaze extends Ability {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -117,8 +117,20 @@ public final class BrewmasterDrunkenHaze extends Ability {
         return movement_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

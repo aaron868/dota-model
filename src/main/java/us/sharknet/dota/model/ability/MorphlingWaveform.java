@@ -7,35 +7,39 @@ public final class MorphlingWaveform extends Ability {
     private static MorphlingWaveform instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int speed;
     private final int width;
 
     private MorphlingWaveform() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .25;
-        abilityCastRange = 1000;
+        abilityCastPoint = new double[]{.25,.25,.25,.25};
+        abilityCastRange = new int[]{1000,1000,1000,1000};
         abilityCooldown = new double[]{11.0,11.0,11.0,11.0};
         abilityDamage = new int[]{100,175,250,325};
         abilityManaCost = new int[]{140,155,160,165};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5052;
         key = "morphling_waveform";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Waveform";
-        owningHeroShortKey = "morphling";
+        ownerKey = "npc_dota_hero_morphling";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         speed = 1250;
         width = 200;
     }
@@ -51,11 +55,11 @@ public final class MorphlingWaveform extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -75,10 +79,6 @@ public final class MorphlingWaveform extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -95,8 +95,20 @@ public final class MorphlingWaveform extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSpeed() {

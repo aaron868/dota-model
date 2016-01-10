@@ -7,33 +7,37 @@ public final class ForestTrollHighPriestHeal extends Ability {
     private static ForestTrollHighPriestHeal instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final double abilityCooldown;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetTeam;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int health;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ForestTrollHighPriestHeal() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_AUTOCAST"};
-        abilityCastPoint = .5;
-        abilityCastRange = 350;
-        abilityCooldown = .5;
-        abilityManaCost = 5;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
+        abilityCastPoint = new double[]{.5,.5,.5,.5};
+        abilityCastRange = new int[]{350,350,350,350};
+        abilityCooldown = new double[]{.5,.5,.5,.5};
+        abilityManaCost = new int[]{5,5,5,5};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5318;
         key = "forest_troll_high_priest_heal";
-        maxLevel = 1;
         health = 15;
         localizedName = "Heal";
-        owningHeroShortKey = "forest_troll_high_priest";
+        ownerKey = "npc_dota_neutral_forest_troll_high_priest";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
     }
 
     public static ForestTrollHighPriestHeal instance() {
@@ -47,23 +51,23 @@ public final class ForestTrollHighPriestHeal extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public double getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -79,10 +83,6 @@ public final class ForestTrollHighPriestHeal extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public int getHealth() {
         return health;
     }
@@ -91,8 +91,20 @@ public final class ForestTrollHighPriestHeal extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -6,7 +6,7 @@ public final class BristlebackWarpath extends Ability {
 
     private static BristlebackWarpath instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityDuration;
     private final String abilityType;
     private final int iD;
@@ -17,11 +17,14 @@ public final class BristlebackWarpath extends Ability {
     private final String localizedName;
     private final int[] max_stacks;
     private final int[] move_speed_per_stack;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int stack_duration;
 
     private BristlebackWarpath() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityDuration = new double[]{10.0,10.0,10.0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5551;
@@ -32,7 +35,10 @@ public final class BristlebackWarpath extends Ability {
         localizedName = "Warpath";
         max_stacks = new int[]{5,6,7};
         move_speed_per_stack = new int[]{3,4,5};
-        owningHeroShortKey = "bristleback";
+        ownerKey = "npc_dota_hero_bristleback";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         stack_duration = 14;
     }
 
@@ -43,7 +49,7 @@ public final class BristlebackWarpath extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -87,8 +93,20 @@ public final class BristlebackWarpath extends Ability {
         return move_speed_per_stack;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getStackDuration() {

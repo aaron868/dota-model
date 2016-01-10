@@ -6,9 +6,9 @@ public final class LoneDruidSpiritBearEntangle extends Ability {
 
     private static LoneDruidSpiritBearEntangle instance;
 
-    private final String abilityBehavior;
-    private final int abilityCooldown;
-    private final int abilityDamage;
+    private final String[] abilityBehavior;
+    private final double[] abilityCooldown;
+    private final int[] abilityDamage;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
@@ -17,12 +17,15 @@ public final class LoneDruidSpiritBearEntangle extends Ability {
     private final int entangle_chance;
     private final int hero_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private LoneDruidSpiritBearEntangle() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityCooldown = 5;
-        abilityDamage = 60;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
+        abilityCooldown = new double[]{5,5,5,5};
+        abilityDamage = new int[]{60,60,60,60};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         iD = 5419;
         key = "lone_druid_spirit_bear_entangle";
@@ -31,7 +34,10 @@ public final class LoneDruidSpiritBearEntangle extends Ability {
         entangle_chance = 20;
         hero_duration = 3;
         localizedName = "Spirit Bear Entangle";
-        owningHeroShortKey = "lone_druid_spirit_bear";
+        ownerKey = "npc_dota_lone_druid_bear";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
     }
 
     public static LoneDruidSpiritBearEntangle instance() {
@@ -41,15 +47,15 @@ public final class LoneDruidSpiritBearEntangle extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityDamage() {
+    public int[] getAbilityDamage() {
         return abilityDamage;
     }
 
@@ -85,8 +91,20 @@ public final class LoneDruidSpiritBearEntangle extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

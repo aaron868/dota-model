@@ -7,9 +7,9 @@ public final class AlchemistAcidSpray extends Ability {
     private static AlchemistAcidSpray instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -19,15 +19,18 @@ public final class AlchemistAcidSpray extends Ability {
     private final int[] damage;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int tick_rate;
 
     private AlchemistAcidSpray() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
-        abilityCastPoint = .2;
-        abilityCastRange = 900;
-        abilityCooldown = 22;
+        abilityCastPoint = new double[]{.2,.2,.2,.2};
+        abilityCastRange = new int[]{900,900,900,900};
+        abilityCooldown = new double[]{22,22,22,22};
         abilityManaCost = new int[]{130,140,150,160};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         iD = 5365;
@@ -37,7 +40,10 @@ public final class AlchemistAcidSpray extends Ability {
         damage = new int[]{15,20,25,30};
         duration = 16;
         localizedName = "Acid Spray";
-        owningHeroShortKey = "alchemist";
+        ownerKey = "npc_dota_hero_alchemist";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 625;
         tick_rate = 1;
     }
@@ -53,15 +59,15 @@ public final class AlchemistAcidSpray extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -101,8 +107,20 @@ public final class AlchemistAcidSpray extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

@@ -15,13 +15,15 @@ public final class NevermoreRequiem extends Ability {
     private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double cast_time_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int requiem_damage_scepter_pct;
     private final int requiem_heal_scepter_pct;
     private final int[] requiem_line_speed;
@@ -46,13 +48,15 @@ public final class NevermoreRequiem extends Ability {
         abilityModifierSupportValue = .5;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5064;
         key = "nevermore_requiem";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         cast_time_tooltip = 1.67;
         localizedName = "Requiem of Souls";
-        owningHeroShortKey = "nevermore";
+        ownerKey = "npc_dota_hero_nevermore";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         requiem_damage_scepter_pct = 4;
         requiem_heal_scepter_pct = 1;
         requiem_line_speed = new int[]{700,700,700};
@@ -111,10 +115,6 @@ public final class NevermoreRequiem extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -135,8 +135,20 @@ public final class NevermoreRequiem extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRequiemDamageScepterPct() {

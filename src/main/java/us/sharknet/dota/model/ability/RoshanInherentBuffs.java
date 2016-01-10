@@ -10,14 +10,20 @@ public final class RoshanInherentBuffs extends Ability {
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private RoshanInherentBuffs() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5216;
         key = "roshan_inherent_buffs";
         localizedName = "Inherent Buffs";
-        owningHeroShortKey = "roshan";
+        ownerKey = "npc_dota_roshan";
+        ownerType = AbilityOwnerType.Roshan;
+        passive = false;
+        placeholder = false;
     }
 
     public static RoshanInherentBuffs instance() {
@@ -43,8 +49,20 @@ public final class RoshanInherentBuffs extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

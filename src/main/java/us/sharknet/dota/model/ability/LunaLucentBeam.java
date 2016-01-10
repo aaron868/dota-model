@@ -6,41 +6,45 @@ public final class LunaLucentBeam extends Ability {
 
     private static LunaLucentBeam instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] stun_duration;
 
     private LunaLucentBeam() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.6,0.6,0.6,0.6};
-        abilityCastRange = 800;
+        abilityCastRange = new int[]{800,800,800,800};
         abilityCooldown = new double[]{6.0,6.0,6.0,6.0};
         abilityDamage = new int[]{75,150,225,300};
         abilityManaCost = new int[]{90,100,110,120};
         abilityModifierSupportValue = .5;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5222;
         key = "luna_lucent_beam";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Lucent Beam";
-        owningHeroShortKey = "luna";
+        ownerKey = "npc_dota_hero_luna";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         stun_duration = new double[]{0.6,0.6,0.6,0.6};
     }
 
@@ -51,7 +55,7 @@ public final class LunaLucentBeam extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -59,7 +63,7 @@ public final class LunaLucentBeam extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -83,16 +87,12 @@ public final class LunaLucentBeam extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -111,8 +111,20 @@ public final class LunaLucentBeam extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getStunDuration() {

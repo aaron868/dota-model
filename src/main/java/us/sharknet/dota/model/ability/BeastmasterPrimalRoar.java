@@ -6,18 +6,17 @@ public final class BeastmasterPrimalRoar extends Ability {
 
     private static BeastmasterPrimalRoar instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -27,7 +26,10 @@ public final class BeastmasterPrimalRoar extends Ability {
     private final int damage_radius;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int push_distance;
     private final double push_duration;
     private final int[] side_damage;
@@ -36,18 +38,17 @@ public final class BeastmasterPrimalRoar extends Ability {
     private final int[] slow_movement_speed_pct;
 
     private BeastmasterPrimalRoar() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCastRange = 600;
+        abilityCastRange = new int[]{600,600,600,600};
         abilityCooldown = new double[]{80.0,75.0,70.0};
         abilityManaCost = new int[]{150,175,200};
         abilityModifierSupportValue = .6;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 2;
         iD = 5177;
         key = "beastmaster_primal_roar";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -57,7 +58,10 @@ public final class BeastmasterPrimalRoar extends Ability {
         damage_radius = 300;
         duration = new double[]{3.0,3.5,4.0};
         localizedName = "Primal Roar";
-        owningHeroShortKey = "beastmaster";
+        ownerKey = "npc_dota_hero_beastmaster";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         push_distance = 300;
         push_duration = .6;
         side_damage = new int[]{200,250,300};
@@ -73,7 +77,7 @@ public final class BeastmasterPrimalRoar extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -81,7 +85,7 @@ public final class BeastmasterPrimalRoar extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -105,20 +109,16 @@ public final class BeastmasterPrimalRoar extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -157,8 +157,20 @@ public final class BeastmasterPrimalRoar extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getPushDistance() {

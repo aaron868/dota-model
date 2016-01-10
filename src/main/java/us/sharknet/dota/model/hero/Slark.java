@@ -39,7 +39,6 @@ public final class Slark extends Hero {
     private final int visionNighttimeRange;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Slark() {
@@ -75,7 +74,6 @@ public final class Slark extends Hero {
         visionNighttimeRange = 1800;
         active = true;
         localizedName = "Slark";
-        shortKey = "slark";
         url = "Slark";
     }
 
@@ -212,10 +210,6 @@ public final class Slark extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

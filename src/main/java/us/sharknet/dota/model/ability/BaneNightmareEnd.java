@@ -9,17 +9,21 @@ public final class BaneNightmareEnd extends Ability {
     private final String[] abilityBehavior;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BaneNightmareEnd() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"};
         iD = 5523;
         key = "bane_nightmare_end";
-        maxLevel = 1;
         localizedName = "Nightmare End";
-        owningHeroShortKey = "bane";
+        ownerKey = "npc_dota_hero_bane";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static BaneNightmareEnd instance() {
@@ -41,16 +45,24 @@ public final class BaneNightmareEnd extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

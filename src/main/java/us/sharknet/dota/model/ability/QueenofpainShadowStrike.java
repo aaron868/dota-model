@@ -6,16 +6,15 @@ public final class QueenofpainShadowStrike extends Ability {
 
     private static QueenofpainShadowStrike instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final double[] abilityDuration;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -24,21 +23,23 @@ public final class QueenofpainShadowStrike extends Ability {
     private final int duration_tooltip;
     private final String localizedName;
     private final int[] movement_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int projectile_speed;
     private final int[] strike_damage;
 
     private QueenofpainShadowStrike() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.452,0.452,0.452,0.452};
         abilityCastRange = new int[]{450,475,500,525};
         abilityCooldown = new double[]{16.0,12.0,8.0,4.0};
         abilityDuration = new double[]{15.0,15.0,15.0,15.0};
-        abilityManaCost = 110;
+        abilityManaCost = new int[]{110,110,110,110};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5173;
         key = "queenofpain_shadow_strike";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -47,7 +48,10 @@ public final class QueenofpainShadowStrike extends Ability {
         duration_tooltip = 15;
         localizedName = "Shadow Strike";
         movement_slow = new int[]{-20,-30,-40,-50};
-        owningHeroShortKey = "queenofpain";
+        ownerKey = "npc_dota_hero_queenofpain";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         projectile_speed = 900;
         strike_damage = new int[]{50,75,100,125};
     }
@@ -59,7 +63,7 @@ public final class QueenofpainShadowStrike extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -79,7 +83,7 @@ public final class QueenofpainShadowStrike extends Ability {
         return abilityDuration;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -87,16 +91,12 @@ public final class QueenofpainShadowStrike extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -131,8 +131,20 @@ public final class QueenofpainShadowStrike extends Ability {
         return movement_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getProjectileSpeed() {

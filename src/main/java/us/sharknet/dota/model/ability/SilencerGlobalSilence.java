@@ -6,35 +6,39 @@ public final class SilencerGlobalSilence extends Ability {
 
     private static SilencerGlobalSilence instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] tooltip_duration;
 
     private SilencerGlobalSilence() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCooldown = 13;
+        abilityCooldown = new double[]{13,13,13,13};
         abilityDuration = new double[]{4.0,5.0,6.0};
         abilityManaCost = new int[]{250,375,500};
         abilityModifierSupportValue = .5;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5380;
         key = "silencer_global_silence";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         localizedName = "Global Silence";
-        owningHeroShortKey = "silencer";
+        ownerKey = "npc_dota_hero_silencer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_duration = new double[]{4.0,5.0,6.0};
     }
 
@@ -45,7 +49,7 @@ public final class SilencerGlobalSilence extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -53,7 +57,7 @@ public final class SilencerGlobalSilence extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -73,10 +77,6 @@ public final class SilencerGlobalSilence extends Ability {
         return abilityType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -93,8 +93,20 @@ public final class SilencerGlobalSilence extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getTooltipDuration() {

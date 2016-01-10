@@ -7,36 +7,40 @@ public final class NagaSirenRipTide extends Ability {
     private static NagaSirenRipTide instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
-    private final int abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] armor_reduction;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private NagaSirenRipTide() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = new int[]{0,0,0,0};
-        abilityCooldown = 1;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCooldown = new double[]{1,1,1,1};
         abilityDamage = new int[]{100,140,180,220};
         abilityManaCost = new int[]{80,90,100,110};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5469;
         key = "naga_siren_rip_tide";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         armor_reduction = new int[]{-2,-3,-4,-5};
         duration = new double[]{8.0,8.0,8.0,8.0};
         localizedName = "Rip Tide";
-        owningHeroShortKey = "naga_siren";
+        ownerKey = "npc_dota_hero_naga_siren";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 320;
     }
 
@@ -51,11 +55,11 @@ public final class NagaSirenRipTide extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -69,10 +73,6 @@ public final class NagaSirenRipTide extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -99,8 +99,20 @@ public final class NagaSirenRipTide extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

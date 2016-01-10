@@ -6,23 +6,27 @@ public final class GraniteGolemHpAura extends Ability {
 
     private static GraniteGolemHpAura instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int bonus_hp;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private GraniteGolemHpAura() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5656;
         key = "granite_golem_hp_aura";
-        maxLevel = 1;
         bonus_hp = 15;
-        localizedName = "HP Aura";
-        owningHeroShortKey = "granite_golem";
+        localizedName = "Granite Aura";
+        ownerKey = "npc_dota_neutral_granite_golem";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
         radius = 900;
     }
 
@@ -33,7 +37,7 @@ public final class GraniteGolemHpAura extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -45,10 +49,6 @@ public final class GraniteGolemHpAura extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public int getBonusHp() {
         return bonus_hp;
     }
@@ -57,8 +57,20 @@ public final class GraniteGolemHpAura extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

@@ -8,8 +8,8 @@ public final class ElderTitanAncestralSpirit extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -22,8 +22,11 @@ public final class ElderTitanAncestralSpirit extends Ability {
     private final int move_pct_cap;
     private final int move_pct_creeps;
     private final int move_pct_heroes;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
     private final int[] pass_damage;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int speed;
     private final int spirit_duration;
@@ -31,8 +34,8 @@ public final class ElderTitanAncestralSpirit extends Ability {
     private ElderTitanAncestralSpirit() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 1200;
-        abilityCooldown = 16;
+        abilityCastRange = new int[]{1200,1200,1200,1200};
+        abilityCooldown = new double[]{16,16,16,16};
         abilityManaCost = new int[]{80,90,100,110};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5591;
@@ -45,8 +48,11 @@ public final class ElderTitanAncestralSpirit extends Ability {
         move_pct_cap = 30;
         move_pct_creeps = 1;
         move_pct_heroes = 5;
-        owningHeroShortKey = "elder_titan";
+        ownerKey = "npc_dota_hero_elder_titan";
+        ownerType = AbilityOwnerType.Hero;
         pass_damage = new int[]{60,90,120,150};
+        passive = false;
+        placeholder = false;
         radius = 275;
         speed = 600;
         spirit_duration = 8;
@@ -67,11 +73,11 @@ public final class ElderTitanAncestralSpirit extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -123,12 +129,24 @@ public final class ElderTitanAncestralSpirit extends Ability {
         return move_pct_heroes;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
     }
 
     public int[] getPassDamage() {
         return pass_damage;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

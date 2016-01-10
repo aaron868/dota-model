@@ -42,7 +42,6 @@ public final class Morphling extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Morphling() {
@@ -81,7 +80,6 @@ public final class Morphling extends Hero {
         team = "Good";
         active = true;
         localizedName = "Morphling";
-        shortKey = "morphling";
         url = "Morphling";
     }
 
@@ -230,10 +228,6 @@ public final class Morphling extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

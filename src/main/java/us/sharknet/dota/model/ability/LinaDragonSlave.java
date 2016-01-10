@@ -8,15 +8,14 @@ public final class LinaDragonSlave extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final double abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -25,20 +24,22 @@ public final class LinaDragonSlave extends Ability {
     private final int dragon_slave_width_end;
     private final int dragon_slave_width_initial;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private LinaDragonSlave() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.45,0.45,0.45,0.45};
-        abilityCastRange = 1075;
-        abilityCooldown = 8.5;
+        abilityCastRange = new int[]{1075,1075,1075,1075};
+        abilityCooldown = new double[]{8.5,8.5,8.5,8.5};
         abilityDamage = new int[]{110,180,250,320};
         abilityDuration = new double[]{0.6875,0.6875,0.6875,0.6875};
         abilityManaCost = new int[]{100,115,130,145};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5040;
         key = "lina_dragon_slave";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -47,7 +48,10 @@ public final class LinaDragonSlave extends Ability {
         dragon_slave_width_end = 200;
         dragon_slave_width_initial = 275;
         localizedName = "Dragon Slave";
-        owningHeroShortKey = "lina";
+        ownerKey = "npc_dota_hero_lina";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static LinaDragonSlave instance() {
@@ -65,11 +69,11 @@ public final class LinaDragonSlave extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public double getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -89,16 +93,12 @@ public final class LinaDragonSlave extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -133,8 +133,20 @@ public final class LinaDragonSlave extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -7,41 +7,43 @@ public final class InvokerAlacrity extends Ability {
     private static InvokerAlacrity instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetTeam;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final String hotKeyOverride;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final int[] bonus_attack_speed;
     private final int[] bonus_damage;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private InvokerAlacrity() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = 0;
-        abilityCastRange = 650;
-        abilityCooldown = 15;
-        abilityManaCost = 45;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{650,650,650,650};
+        abilityCooldown = new double[]{15,15,15,15};
+        abilityManaCost = new int[]{45,45,45,45};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
-        hotKeyOverride = "Z";
         iD = 5384;
         key = "invoker_alacrity";
-        maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
         bonus_attack_speed = new int[]{10,25,40,55,70,85,100,115};
         bonus_damage = new int[]{10,25,40,55,70,85,100,115};
         duration = 9;
         localizedName = "Alacrity";
-        owningHeroShortKey = "invoker";
+        ownerKey = "npc_dota_hero_invoker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static InvokerAlacrity instance() {
@@ -55,32 +57,28 @@ public final class InvokerAlacrity extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public String getHotKeyOverride() {
-        return hotKeyOverride;
     }
 
     public int getID() {
@@ -89,10 +87,6 @@ public final class InvokerAlacrity extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getSpellImmunityType() {
@@ -115,8 +109,20 @@ public final class InvokerAlacrity extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

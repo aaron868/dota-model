@@ -36,7 +36,6 @@ public final class StormSpirit extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private StormSpirit() {
@@ -69,7 +68,6 @@ public final class StormSpirit extends Hero {
         team = "Good";
         active = true;
         localizedName = "Storm Spirit";
-        shortKey = "storm_spirit";
         url = "Storm_Spirit";
     }
 
@@ -194,10 +192,6 @@ public final class StormSpirit extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

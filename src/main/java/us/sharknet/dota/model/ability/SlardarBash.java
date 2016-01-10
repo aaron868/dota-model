@@ -6,7 +6,7 @@ public final class SlardarBash extends Ability {
 
     private static SlardarBash instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int abilityModifierSupportBonus;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -17,10 +17,13 @@ public final class SlardarBash extends Ability {
     private final int duration;
     private final int duration_creep;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private SlardarBash() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityModifierSupportBonus = 25;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         iD = 5116;
@@ -31,7 +34,10 @@ public final class SlardarBash extends Ability {
         duration = 1;
         duration_creep = 2;
         localizedName = "Bash";
-        owningHeroShortKey = "slardar";
+        ownerKey = "npc_dota_hero_slardar";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static SlardarBash instance() {
@@ -41,7 +47,7 @@ public final class SlardarBash extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -85,8 +91,20 @@ public final class SlardarBash extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

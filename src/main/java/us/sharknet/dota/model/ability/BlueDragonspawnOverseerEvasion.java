@@ -6,22 +6,26 @@ public final class BlueDragonspawnOverseerEvasion extends Ability {
 
     private static BlueDragonspawnOverseerEvasion instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int evasion_chance_pct;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BlueDragonspawnOverseerEvasion() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5326;
         key = "blue_dragonspawn_overseer_evasion";
-        maxLevel = 1;
         evasion_chance_pct = 15;
         localizedName = "Evasion";
-        owningHeroShortKey = "blue_dragonspawn";
+        ownerKey = "npc_dota_neutral_blue_dragonspawn_overseer";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
     }
 
     public static BlueDragonspawnOverseerEvasion instance() {
@@ -31,7 +35,7 @@ public final class BlueDragonspawnOverseerEvasion extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -43,10 +47,6 @@ public final class BlueDragonspawnOverseerEvasion extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public int getEvasionChancePct() {
         return evasion_chance_pct;
     }
@@ -55,8 +55,20 @@ public final class BlueDragonspawnOverseerEvasion extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

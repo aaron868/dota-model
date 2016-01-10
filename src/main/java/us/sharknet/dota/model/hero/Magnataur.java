@@ -37,7 +37,6 @@ public final class Magnataur extends Hero {
     private final int visionDaytimeRange;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Magnataur() {
@@ -71,7 +70,6 @@ public final class Magnataur extends Hero {
         visionDaytimeRange = 1800;
         active = true;
         localizedName = "Magnus";
-        shortKey = "magnataur";
         url = "Magnus";
     }
 
@@ -200,10 +198,6 @@ public final class Magnataur extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

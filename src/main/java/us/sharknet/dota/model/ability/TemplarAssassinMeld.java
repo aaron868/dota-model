@@ -8,7 +8,7 @@ public final class TemplarAssassinMeld extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
@@ -19,12 +19,15 @@ public final class TemplarAssassinMeld extends Ability {
     private final int[] bonus_armor;
     private final int[] bonus_damage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private TemplarAssassinMeld() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCooldown = 6;
+        abilityCooldown = new double[]{6,6,6,6};
         abilityDuration = new double[]{10.0,10.0,10.0,10.0};
         abilityManaCost = new int[]{50,50,50,50};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
@@ -35,7 +38,10 @@ public final class TemplarAssassinMeld extends Ability {
         bonus_armor = new int[]{-2,-4,-6,-8};
         bonus_damage = new int[]{50,100,150,200};
         localizedName = "Meld";
-        owningHeroShortKey = "templar_assassin";
+        ownerKey = "npc_dota_hero_templar_assassin";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static TemplarAssassinMeld instance() {
@@ -53,7 +59,7 @@ public final class TemplarAssassinMeld extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -97,8 +103,20 @@ public final class TemplarAssassinMeld extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

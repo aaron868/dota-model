@@ -6,14 +6,13 @@ public final class PuckIllusoryOrb extends Ability {
 
     private static PuckIllusoryOrb instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -21,19 +20,21 @@ public final class PuckIllusoryOrb extends Ability {
     private final int max_distance;
     private final int orb_speed;
     private final int[] orb_vision;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final double[] vision_duration;
 
     private PuckIllusoryOrb() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
-        abilityCastRange = 3000;
-        abilityCooldown = new int[]{14,13,12,11};
+        abilityCastRange = new int[]{3000,3000,3000,3000};
+        abilityCooldown = new double[]{14,13,12,11};
         abilityDamage = new int[]{70,140,210,280};
         abilityManaCost = new int[]{80,100,120,140};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5069;
         key = "puck_illusory_orb";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -41,7 +42,10 @@ public final class PuckIllusoryOrb extends Ability {
         max_distance = 1950;
         orb_speed = 650;
         orb_vision = new int[]{800,800,800,800};
-        owningHeroShortKey = "puck";
+        ownerKey = "npc_dota_hero_puck";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 225;
         vision_duration = new double[]{3.34,3.34,3.34,3.34};
     }
@@ -53,7 +57,7 @@ public final class PuckIllusoryOrb extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,11 +65,11 @@ public final class PuckIllusoryOrb extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -79,10 +83,6 @@ public final class PuckIllusoryOrb extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -113,8 +113,20 @@ public final class PuckIllusoryOrb extends Ability {
         return orb_vision;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

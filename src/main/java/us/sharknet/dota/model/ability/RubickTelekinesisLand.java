@@ -9,18 +9,22 @@ public final class RubickTelekinesisLand extends Ability {
     private final String[] abilityBehavior;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private RubickTelekinesisLand() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_AOE"};
         iD = 5449;
         key = "rubick_telekinesis_land";
-        maxLevel = 1;
         localizedName = "Telekinesis Land";
-        owningHeroShortKey = "rubick";
+        ownerKey = "npc_dota_hero_rubick";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{325,325,325,325};
     }
 
@@ -43,16 +47,24 @@ public final class RubickTelekinesisLand extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

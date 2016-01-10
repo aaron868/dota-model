@@ -6,14 +6,14 @@ public final class WispTether extends Ability {
 
     private static WispTether instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,7 +22,10 @@ public final class WispTether extends Ability {
     private final int[] latch_speed;
     private final String localizedName;
     private final int[] movespeed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int slow;
     private final double[] stun_duration;
@@ -30,14 +33,14 @@ public final class WispTether extends Ability {
     private final double tether_heal_amp;
 
     private WispTether() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.001,0.001,0.001,0.001};
         abilityCastRange = new int[]{1800,1800,1800,1800};
         abilityCooldown = new double[]{12.0,12.0,12.0,12.0};
         abilityDuration = new double[]{12.0,12.0,12.0,12.0};
         abilityManaCost = new int[]{40,40,40,40};
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_CUSTOM"};
         iD = 5485;
         key = "wisp_tether";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -46,7 +49,10 @@ public final class WispTether extends Ability {
         latch_speed = new int[]{1000,1000,1000,1000};
         localizedName = "Tether";
         movespeed = new int[]{14,15,16,17};
-        owningHeroShortKey = "wisp";
+        ownerKey = "npc_dota_hero_wisp";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{900,900,900,900};
         slow = -100;
         stun_duration = new double[]{0.75,1.25,1.75,2.25};
@@ -61,7 +67,7 @@ public final class WispTether extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -85,11 +91,11 @@ public final class WispTether extends Ability {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
     }
 
@@ -125,8 +131,20 @@ public final class WispTether extends Ability {
         return movespeed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

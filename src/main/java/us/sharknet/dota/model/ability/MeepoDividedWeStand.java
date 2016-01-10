@@ -6,15 +6,17 @@ public final class MeepoDividedWeStand extends Ability {
 
     private static MeepoDividedWeStand instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
-    private final int displayAdditionalHeroes;
     private final int iD;
     private final String key;
     private final int levelsBetweenUpgrades;
     private final int requiredLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double respawn;
     private final int[] tooltip_clones;
     private final int tooltip_respawn;
@@ -22,15 +24,17 @@ public final class MeepoDividedWeStand extends Ability {
     private final int tooltip_share_percentage_scepter;
 
     private MeepoDividedWeStand() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        displayAdditionalHeroes = 1;
         iD = 5433;
         key = "meepo_divided_we_stand";
         levelsBetweenUpgrades = 7;
         requiredLevel = 3;
         localizedName = "Divided We Stand";
-        owningHeroShortKey = "meepo";
+        ownerKey = "npc_dota_hero_meepo";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         respawn = 0.0;
         tooltip_clones = new int[]{1,2,3};
         tooltip_respawn = 20;
@@ -45,16 +49,12 @@ public final class MeepoDividedWeStand extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getDisplayAdditionalHeroes() {
-        return displayAdditionalHeroes;
     }
 
     public int getID() {
@@ -77,8 +77,20 @@ public final class MeepoDividedWeStand extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getRespawn() {

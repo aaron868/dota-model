@@ -567,7 +567,6 @@ public final class Library {
         abilities.put("arc_warden_magnetic_field", us.sharknet.dota.model.ability.ArcWardenMagneticField.instance());
         abilities.put("phoenix_supernova", us.sharknet.dota.model.ability.PhoenixSupernova.instance());
         abilities.put("viper_corrosive_skin", us.sharknet.dota.model.ability.ViperCorrosiveSkin.instance());
-        abilities.put("granite_golem_bash", us.sharknet.dota.model.ability.GraniteGolemBash.instance());
         abilities.put("ember_spirit_sleight_of_fist", us.sharknet.dota.model.ability.EmberSpiritSleightOfFist.instance());
         abilities.put("shadow_shaman_shackles", us.sharknet.dota.model.ability.ShadowShamanShackles.instance());
         abilities.put("shredder_return_chakram_2", us.sharknet.dota.model.ability.ShredderReturnChakram2.instance());
@@ -584,7 +583,6 @@ public final class Library {
         abilities.put("dragon_knight_elder_dragon_form", us.sharknet.dota.model.ability.DragonKnightElderDragonForm.instance());
         abilities.put("invoker_emp", us.sharknet.dota.model.ability.InvokerEmp.instance());
         abilities.put("tinker_heat_seeking_missile", us.sharknet.dota.model.ability.TinkerHeatSeekingMissile.instance());
-        abilities.put("faceless_void_backtrack", us.sharknet.dota.model.ability.FacelessVoidBacktrack.instance());
         abilities.put("invoker_forge_spirit", us.sharknet.dota.model.ability.InvokerForgeSpirit.instance());
         abilities.put("rubick_fade_bolt", us.sharknet.dota.model.ability.RubickFadeBolt.instance());
         abilities.put("furion_force_of_nature", us.sharknet.dota.model.ability.FurionForceOfNature.instance());
@@ -615,7 +613,6 @@ public final class Library {
         abilities.put("templar_assassin_trap", us.sharknet.dota.model.ability.TemplarAssassinTrap.instance());
         abilities.put("satyr_trickster_purge", us.sharknet.dota.model.ability.SatyrTricksterPurge.instance());
         abilities.put("slark_shadow_dance", us.sharknet.dota.model.ability.SlarkShadowDance.instance());
-        abilities.put("ability_deward", us.sharknet.dota.model.ability.AbilityDeward.instance());
         abilities.put("troll_warlord_whirling_axes_ranged", us.sharknet.dota.model.ability.TrollWarlordWhirlingAxesRanged.instance());
         abilities.put("faceless_void_time_dilation", us.sharknet.dota.model.ability.FacelessVoidTimeDilation.instance());
         abilities.put("lone_druid_savage_roar_bear", us.sharknet.dota.model.ability.LoneDruidSavageRoarBear.instance());
@@ -779,7 +776,6 @@ public final class Library {
         abilities.put("lich_dark_ritual", us.sharknet.dota.model.ability.LichDarkRitual.instance());
         abilities.put("warlock_upheaval", us.sharknet.dota.model.ability.WarlockUpheaval.instance());
         abilities.put("antimage_blink", us.sharknet.dota.model.ability.AntimageBlink.instance());
-        abilities.put("death_prophet_witchcraft", us.sharknet.dota.model.ability.DeathProphetWitchcraft.instance());
         abilities.put("shadow_demon_soul_catcher", us.sharknet.dota.model.ability.ShadowDemonSoulCatcher.instance());
         abilities.put("slardar_slithereen_crush", us.sharknet.dota.model.ability.SlardarSlithereenCrush.instance());
         abilities.put("axe_culling_blade", us.sharknet.dota.model.ability.AxeCullingBlade.instance());
@@ -857,7 +853,6 @@ public final class Library {
         abilities.put("shredder_chakram", us.sharknet.dota.model.ability.ShredderChakram.instance());
         abilities.put("chen_test_of_faith", us.sharknet.dota.model.ability.ChenTestOfFaith.instance());
         abilities.put("earthshaker_fissure", us.sharknet.dota.model.ability.EarthshakerFissure.instance());
-        abilities.put("drow_ranger_silence", us.sharknet.dota.model.ability.DrowRangerSilence.instance());
         abilities.put("meepo_poof", us.sharknet.dota.model.ability.MeepoPoof.instance());
         abilities.put("lich_chain_frost", us.sharknet.dota.model.ability.LichChainFrost.instance());
         abilities.put("ancient_apparition_ice_vortex", us.sharknet.dota.model.ability.AncientApparitionIceVortex.instance());
@@ -1090,7 +1085,6 @@ public final class Library {
         abilities.put("broodmother_spawn_spiderlings", us.sharknet.dota.model.ability.BroodmotherSpawnSpiderlings.instance());
         abilities.put("furion_teleportation", us.sharknet.dota.model.ability.FurionTeleportation.instance());
         abilities.put("chen_test_of_faith_teleport", us.sharknet.dota.model.ability.ChenTestOfFaithTeleport.instance());
-        abilities.put("default_attack", us.sharknet.dota.model.ability.DefaultAttack.instance());
         abilities.put("roshan_slam", us.sharknet.dota.model.ability.RoshanSlam.instance());
         abilities.put("polar_furbolg_ursa_warrior_thunder_clap", us.sharknet.dota.model.ability.PolarFurbolgUrsaWarriorThunderClap.instance());
         abilities.put("dazzle_poison_touch", us.sharknet.dota.model.ability.DazzlePoisonTouch.instance());
@@ -1111,7 +1105,6 @@ public final class Library {
         abilities.put("rubick_telekinesis", us.sharknet.dota.model.ability.RubickTelekinesis.instance());
         abilities.put("blue_dragonspawn_sorcerer_evasion", us.sharknet.dota.model.ability.BlueDragonspawnSorcererEvasion.instance());
         abilities.put("earthshaker_enchant_totem", us.sharknet.dota.model.ability.EarthshakerEnchantTotem.instance());
-        abilities.put("ancient_golem_rockslide", us.sharknet.dota.model.ability.AncientGolemRockslide.instance());
         abilities.put("venomancer_poison_nova", us.sharknet.dota.model.ability.VenomancerPoisonNova.instance());
         abilities.put("chen_hand_of_god", us.sharknet.dota.model.ability.ChenHandOfGod.instance());
         abilities.put("zuus_thundergods_wrath", us.sharknet.dota.model.ability.ZuusThundergodsWrath.instance());

@@ -6,17 +6,19 @@ public final class MagnataurSkewer extends Ability {
 
     private static MagnataurSkewer instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] range;
     private final int[] skewer_damage;
     private final int skewer_radius;
@@ -26,17 +28,19 @@ public final class MagnataurSkewer extends Ability {
     private final int tree_radius;
 
     private MagnataurSkewer() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCooldown = new double[]{30.0,30.0,30.0,30.0};
         abilityManaCost = new int[]{80,80,80,80};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5520;
         key = "magnataur_skewer";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Skewer";
-        owningHeroShortKey = "magnataur";
+        ownerKey = "npc_dota_hero_magnataur";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         range = new int[]{900,1000,1100,1200};
         skewer_damage = new int[]{70,140,210,280};
         skewer_radius = 125;
@@ -53,7 +57,7 @@ public final class MagnataurSkewer extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,10 +77,6 @@ public final class MagnataurSkewer extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -93,8 +93,20 @@ public final class MagnataurSkewer extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRange() {

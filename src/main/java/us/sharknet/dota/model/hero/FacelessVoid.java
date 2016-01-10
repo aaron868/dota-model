@@ -36,7 +36,6 @@ public final class FacelessVoid extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private FacelessVoid() {
@@ -69,7 +68,6 @@ public final class FacelessVoid extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Faceless Void";
-        shortKey = "faceless_void";
         url = "Faceless_Void";
     }
 
@@ -194,10 +192,6 @@ public final class FacelessVoid extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

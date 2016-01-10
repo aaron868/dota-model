@@ -6,45 +6,49 @@ public final class LeshracLightningStorm extends Ability {
 
     private static LeshracLightningStorm instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] jump_count;
     private final double[] jump_delay;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final double[] slow_duration;
     private final int slow_movement_speed;
 
     private LeshracLightningStorm() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = .6;
-        abilityCastRange = 800;
-        abilityCooldown = 4;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityCastPoint = new double[]{.6,.6,.6,.6};
+        abilityCastRange = new int[]{800,800,800,800};
+        abilityCooldown = new double[]{4,4,4,4};
         abilityDamage = new int[]{50,100,150,200};
         abilityManaCost = new int[]{90,100,110,120};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5243;
         key = "leshrac_lightning_storm";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         jump_count = new int[]{4,5,6,7};
         jump_delay = new double[]{0.25,0.25,0.25,0.25};
         localizedName = "Lightning Storm";
-        owningHeroShortKey = "leshrac";
+        ownerKey = "npc_dota_hero_leshrac";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 475;
         slow_duration = new double[]{0.7,0.8,0.9,1.0};
         slow_movement_speed = -75;
@@ -57,19 +61,19 @@ public final class LeshracLightningStorm extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -85,16 +89,12 @@ public final class LeshracLightningStorm extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -121,8 +121,20 @@ public final class LeshracLightningStorm extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

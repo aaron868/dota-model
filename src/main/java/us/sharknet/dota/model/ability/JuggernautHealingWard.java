@@ -8,7 +8,7 @@ public final class JuggernautHealingWard extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
@@ -19,12 +19,15 @@ public final class JuggernautHealingWard extends Ability {
     private final int[] healing_ward_heal_amount;
     private final int healing_ward_movespeed_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private JuggernautHealingWard() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 350;
+        abilityCastRange = new int[]{350,350,350,350};
         abilityCooldown = new double[]{60.0,60.0,60.0,60.0};
         abilityDuration = new double[]{25.0,25.0,25.0,25.0};
         abilityManaCost = new int[]{120,125,130,135};
@@ -35,7 +38,10 @@ public final class JuggernautHealingWard extends Ability {
         healing_ward_heal_amount = new int[]{2,3,4,5};
         healing_ward_movespeed_tooltip = 420;
         localizedName = "Healing Ward";
-        owningHeroShortKey = "juggernaut";
+        ownerKey = "npc_dota_hero_juggernaut";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static JuggernautHealingWard instance() {
@@ -53,7 +59,7 @@ public final class JuggernautHealingWard extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -97,8 +103,20 @@ public final class JuggernautHealingWard extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

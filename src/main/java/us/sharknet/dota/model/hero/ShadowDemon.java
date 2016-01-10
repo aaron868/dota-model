@@ -39,7 +39,6 @@ public final class ShadowDemon extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private ShadowDemon() {
@@ -75,7 +74,6 @@ public final class ShadowDemon extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Shadow Demon";
-        shortKey = "shadow_demon";
         url = "Shadow_Demon";
     }
 
@@ -212,10 +210,6 @@ public final class ShadowDemon extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

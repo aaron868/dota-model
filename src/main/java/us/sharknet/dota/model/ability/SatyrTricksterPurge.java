@@ -6,38 +6,42 @@ public final class SatyrTricksterPurge extends Ability {
 
     private static SatyrTricksterPurge instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int purge_rate;
     private final int summon_damage;
 
     private SatyrTricksterPurge() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = .2;
-        abilityCastRange = 350;
-        abilityCooldown = 3;
-        abilityManaCost = 120;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityCastPoint = new double[]{.2,.2,.2,.2};
+        abilityCastRange = new int[]{350,350,350,350};
+        abilityCooldown = new double[]{3,3,3,3};
+        abilityManaCost = new int[]{120,120,120,120};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_BOTH"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5314;
         key = "satyr_trickster_purge";
-        maxLevel = 1;
         duration = 5;
         localizedName = "Purge";
-        owningHeroShortKey = "satyr_trickster";
+        ownerKey = "npc_dota_neutral_satyr_trickster";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
         purge_rate = 5;
         summon_damage = 400;
     }
@@ -49,23 +53,23 @@ public final class SatyrTricksterPurge extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -73,7 +77,7 @@ public final class SatyrTricksterPurge extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -89,10 +93,6 @@ public final class SatyrTricksterPurge extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public int getDuration() {
         return duration;
     }
@@ -101,8 +101,20 @@ public final class SatyrTricksterPurge extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getPurgeRate() {

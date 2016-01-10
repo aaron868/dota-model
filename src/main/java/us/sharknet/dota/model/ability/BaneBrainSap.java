@@ -6,39 +6,43 @@ public final class BaneBrainSap extends Ability {
 
     private static BaneBrainSap instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] tooltip_brain_sap_heal_amt;
 
     private BaneBrainSap() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 600;
+        abilityCastRange = new int[]{600,600,600,600};
         abilityCooldown = new double[]{14.0,14.0,14.0,14.0};
         abilityDamage = new int[]{90,160,230,300};
         abilityManaCost = new int[]{70,100,130,160};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5011;
         key = "bane_brain_sap";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Brain Sap";
-        owningHeroShortKey = "bane";
+        ownerKey = "npc_dota_hero_bane";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_brain_sap_heal_amt = new int[]{90,160,230,300};
     }
 
@@ -49,7 +53,7 @@ public final class BaneBrainSap extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -57,7 +61,7 @@ public final class BaneBrainSap extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -77,16 +81,12 @@ public final class BaneBrainSap extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -105,8 +105,20 @@ public final class BaneBrainSap extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getTooltipBrainSapHealAmt() {

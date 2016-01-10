@@ -6,7 +6,7 @@ public final class SpectreDispersion extends Ability {
 
     private static SpectreDispersion instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -14,10 +14,13 @@ public final class SpectreDispersion extends Ability {
     private final String localizedName;
     private final int[] max_radius;
     private final int[] min_radius;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private SpectreDispersion() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5336;
         key = "spectre_dispersion";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -25,7 +28,10 @@ public final class SpectreDispersion extends Ability {
         localizedName = "Dispersion";
         max_radius = new int[]{1000,1000,1000,1000};
         min_radius = new int[]{300,300,300,300};
-        owningHeroShortKey = "spectre";
+        ownerKey = "npc_dota_hero_spectre";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static SpectreDispersion instance() {
@@ -35,7 +41,7 @@ public final class SpectreDispersion extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -67,8 +73,20 @@ public final class SpectreDispersion extends Ability {
         return min_radius;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

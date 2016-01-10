@@ -6,14 +6,13 @@ public final class SkeletonKingReincarnation extends Ability {
 
     private static SkeletonKingReincarnation instance;
 
-    private final String abilityBehavior;
-    private final int[] abilityCooldown;
-    private final int abilityManaCost;
+    private final String[] abilityBehavior;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityType;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,21 +21,23 @@ public final class SkeletonKingReincarnation extends Ability {
     private final int aura_radius_tooltip_scepter;
     private final String localizedName;
     private final int movespeed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] reincarnate_time;
     private final int scepter_duration;
     private final int slow_duration;
     private final int slow_radius;
 
     private SkeletonKingReincarnation() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityCooldown = new int[]{260,160,60};
-        abilityManaCost = 160;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
+        abilityCooldown = new double[]{260,160,60};
+        abilityManaCost = new int[]{160,160,160,160};
         abilityModifierSupportValue = .2;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        fightRecapLevel = 2;
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO"};
         iD = 5089;
         key = "skeleton_king_reincarnation";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -45,7 +46,10 @@ public final class SkeletonKingReincarnation extends Ability {
         aura_radius_tooltip_scepter = 1200;
         localizedName = "Reincarnation";
         movespeed = -75;
-        owningHeroShortKey = "skeleton_king";
+        ownerKey = "npc_dota_hero_skeleton_king";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         reincarnate_time = new double[]{3.0,3.0,3.0};
         scepter_duration = 7;
         slow_duration = 5;
@@ -59,15 +63,15 @@ public final class SkeletonKingReincarnation extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -79,16 +83,12 @@ public final class SkeletonKingReincarnation extends Ability {
         return abilityType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -123,8 +123,20 @@ public final class SkeletonKingReincarnation extends Ability {
         return movespeed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getReincarnateTime() {

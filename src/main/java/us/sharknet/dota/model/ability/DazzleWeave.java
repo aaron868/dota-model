@@ -8,11 +8,10 @@ public final class DazzleWeave extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -21,7 +20,10 @@ public final class DazzleWeave extends Ability {
     private final int duration;
     private final int duration_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int[] radius_scepter;
     private final int vision;
@@ -29,11 +31,10 @@ public final class DazzleWeave extends Ability {
     private DazzleWeave() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 2000;
-        abilityCooldown = new int[]{40,40,40};
+        abilityCastRange = new int[]{2000,2000,2000,2000};
+        abilityCooldown = new double[]{40,40,40};
         abilityManaCost = new int[]{100,100,100};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5236;
         key = "dazzle_weave";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -42,7 +43,10 @@ public final class DazzleWeave extends Ability {
         duration = 24;
         duration_scepter = 24;
         localizedName = "Weave";
-        owningHeroShortKey = "dazzle";
+        ownerKey = "npc_dota_hero_dazzle";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{575,575,575};
         radius_scepter = new int[]{775,775,775};
         vision = 800;
@@ -63,11 +67,11 @@ public final class DazzleWeave extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -77,10 +81,6 @@ public final class DazzleWeave extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -115,8 +115,20 @@ public final class DazzleWeave extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

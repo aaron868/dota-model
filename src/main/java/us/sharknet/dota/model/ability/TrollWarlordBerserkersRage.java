@@ -19,7 +19,10 @@ public final class TrollWarlordBerserkersRage extends Ability {
     private final int[] bonus_move_speed;
     private final int bonus_range;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private TrollWarlordBerserkersRage() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
@@ -35,7 +38,10 @@ public final class TrollWarlordBerserkersRage extends Ability {
         bonus_move_speed = new int[]{10,20,30,40};
         bonus_range = 372;
         localizedName = "Berserkers Rage";
-        owningHeroShortKey = "troll_warlord";
+        ownerKey = "npc_dota_hero_troll_warlord";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static TrollWarlordBerserkersRage instance() {
@@ -97,8 +103,20 @@ public final class TrollWarlordBerserkersRage extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

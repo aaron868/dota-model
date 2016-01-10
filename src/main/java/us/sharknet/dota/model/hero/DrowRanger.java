@@ -37,7 +37,6 @@ public final class DrowRanger extends Hero {
     private final int visionDaytimeRange;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private DrowRanger() {
@@ -71,7 +70,6 @@ public final class DrowRanger extends Hero {
         visionDaytimeRange = 1800;
         active = true;
         localizedName = "Drow Ranger";
-        shortKey = "drow_ranger";
         url = "Drow_Ranger";
     }
 
@@ -200,10 +198,6 @@ public final class DrowRanger extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

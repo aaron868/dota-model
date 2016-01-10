@@ -9,17 +9,21 @@ public final class PhoenixSunRayToggleMoveEmpty extends Ability {
     private final String[] abilityBehavior;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private PhoenixSunRayToggleMoveEmpty() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"};
         iD = 5629;
         key = "phoenix_sun_ray_toggle_move_empty";
-        maxLevel = 0;
         localizedName = "Sun Ray Move Empty";
-        owningHeroShortKey = "phoenix";
+        ownerKey = "npc_dota_hero_phoenix";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = true;
     }
 
     public static PhoenixSunRayToggleMoveEmpty instance() {
@@ -41,16 +45,24 @@ public final class PhoenixSunRayToggleMoveEmpty extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

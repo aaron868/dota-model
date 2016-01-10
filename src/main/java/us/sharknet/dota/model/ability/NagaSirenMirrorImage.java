@@ -6,8 +6,8 @@ public final class NagaSirenMirrorImage extends Ability {
 
     private static NagaSirenMirrorImage instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final int iD;
@@ -19,12 +19,15 @@ public final class NagaSirenMirrorImage extends Ability {
     private final String localizedName;
     private final int[] outgoing_damage;
     private final int[] outgoing_damage_tooltip;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] tooltip_incoming_damage_total_pct;
 
     private NagaSirenMirrorImage() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = .65;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{.65,.65,.65,.65};
         abilityCooldown = new double[]{40.0,40.0,40.0,40.0};
         abilityManaCost = new int[]{70,80,90,100};
         iD = 5467;
@@ -36,7 +39,10 @@ public final class NagaSirenMirrorImage extends Ability {
         localizedName = "Mirror Image";
         outgoing_damage = new int[]{-80,-75,-70,-65};
         outgoing_damage_tooltip = new int[]{20,25,30,35};
-        owningHeroShortKey = "naga_siren";
+        ownerKey = "npc_dota_hero_naga_siren";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_incoming_damage_total_pct = new int[]{600,500,400,300};
     }
 
@@ -47,11 +53,11 @@ public final class NagaSirenMirrorImage extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -99,8 +105,20 @@ public final class NagaSirenMirrorImage extends Ability {
         return outgoing_damage_tooltip;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getTooltipIncomingDamageTotalPct() {

@@ -37,7 +37,6 @@ public final class ArcWarden extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private ArcWarden() {
@@ -71,7 +70,6 @@ public final class ArcWarden extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Arc Warden";
-        shortKey = "arc_warden";
         url = "Arc_Warden";
     }
 
@@ -200,10 +198,6 @@ public final class ArcWarden extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

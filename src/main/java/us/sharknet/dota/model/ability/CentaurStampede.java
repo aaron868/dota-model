@@ -8,10 +8,9 @@ public final class CentaurStampede extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -21,7 +20,10 @@ public final class CentaurStampede extends Ability {
     private final int damage_reduction_tooltip_scepter;
     private final double duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final double slow_duration;
     private final int slow_movement_speed;
@@ -30,10 +32,9 @@ public final class CentaurStampede extends Ability {
     private CentaurStampede() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCooldown = new double[]{90.0,75.0,60.0};
-        abilityManaCost = 100;
+        abilityManaCost = new int[]{100,100,100,100};
         abilityModifierSupportValue = .2;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5517;
         key = "centaur_stampede";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -43,7 +44,10 @@ public final class CentaurStampede extends Ability {
         damage_reduction_tooltip_scepter = 60;
         duration = 3.75;
         localizedName = "Stampede";
-        owningHeroShortKey = "centaur";
+        ownerKey = "npc_dota_hero_centaur";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 105;
         slow_duration = 1.5;
         slow_movement_speed = 100;
@@ -65,7 +69,7 @@ public final class CentaurStampede extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -75,10 +79,6 @@ public final class CentaurStampede extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -117,8 +117,20 @@ public final class CentaurStampede extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

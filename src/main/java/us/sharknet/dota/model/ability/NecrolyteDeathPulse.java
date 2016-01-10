@@ -6,39 +6,43 @@ public final class NecrolyteDeathPulse extends Ability {
 
     private static NecrolyteDeathPulse instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int area_of_effect;
     private final int[] heal;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int projectile_speed;
 
     private NecrolyteDeathPulse() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 0;
-        abilityCooldown = new int[]{8,7,6,5};
+        abilityCastRange = new int[]{0,0,0,0};
+        abilityCooldown = new double[]{8,7,6,5};
         abilityDamage = new int[]{125,175,225,275};
         abilityManaCost = new int[]{125,145,165,185};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5158;
         key = "necrolyte_death_pulse";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         area_of_effect = 475;
         heal = new int[]{70,90,110,130};
         localizedName = "Death Pulse";
-        owningHeroShortKey = "necrolyte";
+        ownerKey = "npc_dota_hero_necrolyte";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         projectile_speed = 400;
     }
 
@@ -49,7 +53,7 @@ public final class NecrolyteDeathPulse extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -57,11 +61,11 @@ public final class NecrolyteDeathPulse extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -75,10 +79,6 @@ public final class NecrolyteDeathPulse extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -105,8 +105,20 @@ public final class NecrolyteDeathPulse extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getProjectileSpeed() {

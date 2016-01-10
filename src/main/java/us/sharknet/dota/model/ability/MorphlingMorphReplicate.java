@@ -7,23 +7,29 @@ public final class MorphlingMorphReplicate extends Ability {
     private static MorphlingMorphReplicate instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private MorphlingMorphReplicate() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
-        abilityCastPoint = .25;
+        abilityCastPoint = new double[]{.25,.25,.25,.25};
         abilityManaCost = new int[]{150,150,150};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5058;
         key = "morphling_morph_replicate";
         localizedName = "Morph Replicate";
-        owningHeroShortKey = "morphling";
+        ownerKey = "npc_dota_hero_morphling";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static MorphlingMorphReplicate instance() {
@@ -37,7 +43,7 @@ public final class MorphlingMorphReplicate extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -61,8 +67,20 @@ public final class MorphlingMorphReplicate extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -7,17 +7,16 @@ public final class SpiritBreakerNetherStrike extends Ability {
     private static SpiritBreakerNetherStrike instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final int abilityCastRangeBuffer;
-    private final int[] abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -27,22 +26,24 @@ public final class SpiritBreakerNetherStrike extends Ability {
     private final int[] damage;
     private final double[] fade_time;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int tooltip_range;
 
     private SpiritBreakerNetherStrike() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = 1.2;
-        abilityCastRange = 700;
+        abilityCastPoint = new double[]{1.2,1.2,1.2,1.2};
+        abilityCastRange = new int[]{700,700,700,700};
         abilityCastRangeBuffer = 500;
-        abilityCooldown = new int[]{80,70,60};
+        abilityCooldown = new double[]{80,70,60};
         abilityManaCost = new int[]{125,150,175};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 2;
         iD = 5356;
         key = "spirit_breaker_nether_strike";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -52,7 +53,10 @@ public final class SpiritBreakerNetherStrike extends Ability {
         damage = new int[]{150,250,350};
         fade_time = new double[]{1.0,1.0,1.0};
         localizedName = "Nether Strike";
-        owningHeroShortKey = "spirit_breaker";
+        ownerKey = "npc_dota_hero_spirit_breaker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_range = 700;
     }
 
@@ -67,11 +71,11 @@ public final class SpiritBreakerNetherStrike extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -79,7 +83,7 @@ public final class SpiritBreakerNetherStrike extends Ability {
         return abilityCastRangeBuffer;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -95,20 +99,16 @@ public final class SpiritBreakerNetherStrike extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -147,8 +147,20 @@ public final class SpiritBreakerNetherStrike extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getTooltipRange() {

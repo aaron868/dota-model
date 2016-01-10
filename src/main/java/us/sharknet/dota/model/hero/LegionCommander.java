@@ -36,7 +36,6 @@ public final class LegionCommander extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private LegionCommander() {
@@ -69,7 +68,6 @@ public final class LegionCommander extends Hero {
         team = "Good";
         active = true;
         localizedName = "Legion Commander";
-        shortKey = "legion_commander";
         url = "Legion_Commander";
     }
 
@@ -194,10 +192,6 @@ public final class LegionCommander extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

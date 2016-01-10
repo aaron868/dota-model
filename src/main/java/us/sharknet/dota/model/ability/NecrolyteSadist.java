@@ -6,25 +6,31 @@ public final class NecrolyteSadist extends Ability {
 
     private static NecrolyteSadist instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int[] health_regen;
     private final int hero_multiplier;
     private final String localizedName;
     private final int[] mana_regen;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int regen_duration;
 
     private NecrolyteSadist() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5160;
         key = "necrolyte_sadist";
         health_regen = new int[]{1,2,3,6};
         hero_multiplier = 10;
         localizedName = "Sadist";
         mana_regen = new int[]{2,4,6,12};
-        owningHeroShortKey = "necrolyte";
+        ownerKey = "npc_dota_hero_necrolyte";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         regen_duration = 6;
     }
 
@@ -35,7 +41,7 @@ public final class NecrolyteSadist extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -63,8 +69,20 @@ public final class NecrolyteSadist extends Ability {
         return mana_regen;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRegenDuration() {

@@ -7,13 +7,12 @@ public final class EarthSpiritMagnetize extends Ability {
     private static EarthSpiritMagnetize instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,7 +21,10 @@ public final class EarthSpiritMagnetize extends Ability {
     private final int damage_interval;
     private final int[] damage_per_second;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int rock_explosion_delay;
     private final int rock_explosion_radius;
     private final int rock_search_radius;
@@ -31,13 +33,12 @@ public final class EarthSpiritMagnetize extends Ability {
 
     private EarthSpiritMagnetize() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .1;
-        abilityCastRange = 300;
-        abilityCooldown = 8;
-        abilityManaCost = 1;
+        abilityCastPoint = new double[]{.1,.1,.1,.1};
+        abilityCastRange = new int[]{300,300,300,300};
+        abilityCooldown = new double[]{8,8,8,8};
+        abilityManaCost = new int[]{1,1,1,1};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5612;
         key = "earth_spirit_magnetize";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -46,7 +47,10 @@ public final class EarthSpiritMagnetize extends Ability {
         damage_interval = 1;
         damage_per_second = new int[]{50,75,100};
         localizedName = "Magnetize";
-        owningHeroShortKey = "earth_spirit";
+        ownerKey = "npc_dota_hero_earth_spirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         rock_explosion_delay = 8;
         rock_explosion_radius = 600;
         rock_search_radius = 400;
@@ -65,19 +69,19 @@ public final class EarthSpiritMagnetize extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -87,10 +91,6 @@ public final class EarthSpiritMagnetize extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -125,8 +125,20 @@ public final class EarthSpiritMagnetize extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRockExplosionDelay() {

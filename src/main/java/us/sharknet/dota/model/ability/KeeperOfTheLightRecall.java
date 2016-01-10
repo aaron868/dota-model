@@ -8,35 +8,39 @@ public final class KeeperOfTheLightRecall extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] teleport_delay;
 
     private KeeperOfTheLightRecall() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_CHANNELLED","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 0;
+        abilityCastRange = new int[]{0,0,0,0};
         abilityCooldown = new double[]{15.0,15.0,15.0};
         abilityManaCost = new int[]{100,100,100};
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_INVULNERABLE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_CUSTOM"};
         iD = 5475;
         key = "keeper_of_the_light_recall";
-        maxLevel = 3;
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
         localizedName = "Recall";
-        owningHeroShortKey = "keeper_of_the_light";
+        ownerKey = "npc_dota_hero_keeper_of_the_light";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         teleport_delay = new double[]{5.0,4.0,3.0};
     }
 
@@ -55,7 +59,7 @@ public final class KeeperOfTheLightRecall extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -67,15 +71,15 @@ public final class KeeperOfTheLightRecall extends Ability {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
     }
 
@@ -87,10 +91,6 @@ public final class KeeperOfTheLightRecall extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getSpellImmunityType() {
         return spellImmunityType;
     }
@@ -99,8 +99,20 @@ public final class KeeperOfTheLightRecall extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getTeleportDelay() {

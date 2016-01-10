@@ -7,25 +7,31 @@ public final class VengefulspiritCommandAura extends Ability {
     private static VengefulspiritCommandAura instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastRange;
-    private final String abilityUnitTargetTeam;
+    private final int[] abilityCastRange;
+    private final String[] abilityUnitTargetTeam;
     private final int iD;
     private final String key;
     private final int aura_radius;
     private final int[] bonus_damage_pct;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private VengefulspiritCommandAura() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_AURA"};
-        abilityCastRange = 900;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
+        abilityCastRange = new int[]{900,900,900,900};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         iD = 5123;
         key = "vengefulspirit_command_aura";
         aura_radius = 900;
         bonus_damage_pct = new int[]{12,20,28,36};
         localizedName = "Command Aura";
-        owningHeroShortKey = "vengefulspirit";
+        ownerKey = "npc_dota_hero_vengefulspirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static VengefulspiritCommandAura instance() {
@@ -39,11 +45,11 @@ public final class VengefulspiritCommandAura extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -67,8 +73,20 @@ public final class VengefulspiritCommandAura extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

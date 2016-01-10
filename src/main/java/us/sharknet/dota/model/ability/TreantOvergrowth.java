@@ -6,37 +6,41 @@ public final class TreantOvergrowth extends Ability {
 
     private static TreantOvergrowth instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double[] duration;
     private final int eyes_radius;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private TreantOvergrowth() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCooldown = 70;
+        abilityCooldown = new double[]{70,70,70,70};
         abilityManaCost = new int[]{150,175,200};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5437;
         key = "treant_overgrowth";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         duration = new double[]{3.0,3.75,4.5};
         eyes_radius = 800;
         localizedName = "Overgrowth";
-        owningHeroShortKey = "treant";
+        ownerKey = "npc_dota_hero_treant";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 800;
     }
 
@@ -47,7 +51,7 @@ public final class TreantOvergrowth extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -55,7 +59,7 @@ public final class TreantOvergrowth extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -69,10 +73,6 @@ public final class TreantOvergrowth extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -99,8 +99,20 @@ public final class TreantOvergrowth extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

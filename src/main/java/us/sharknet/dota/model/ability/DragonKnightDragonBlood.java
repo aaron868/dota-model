@@ -6,22 +6,28 @@ public final class DragonKnightDragonBlood extends Ability {
 
     private static DragonKnightDragonBlood instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int[] bonus_armor;
     private final int[] bonus_health_regen;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private DragonKnightDragonBlood() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5228;
         key = "dragon_knight_dragon_blood";
         bonus_armor = new int[]{3,6,9,12};
         bonus_health_regen = new int[]{3,6,9,12};
         localizedName = "Dragon Blood";
-        owningHeroShortKey = "dragon_knight";
+        ownerKey = "npc_dota_hero_dragon_knight";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static DragonKnightDragonBlood instance() {
@@ -31,7 +37,7 @@ public final class DragonKnightDragonBlood extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -55,8 +61,20 @@ public final class DragonKnightDragonBlood extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

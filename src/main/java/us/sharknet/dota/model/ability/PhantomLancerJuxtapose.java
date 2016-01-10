@@ -6,7 +6,7 @@ public final class PhantomLancerJuxtapose extends Ability {
 
     private static PhantomLancerJuxtapose instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final int iD;
     private final String key;
@@ -17,13 +17,16 @@ public final class PhantomLancerJuxtapose extends Ability {
     private final int illusion_proc_chance_pct;
     private final String localizedName;
     private final int[] max_illusions;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] proc_chance_pct;
     private final int tooltip_illusion_damage;
     private final int tooltip_total_illusion_damage_in_pct;
 
     private PhantomLancerJuxtapose() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5067;
         key = "phantom_lancer_juxtapose";
@@ -34,7 +37,10 @@ public final class PhantomLancerJuxtapose extends Ability {
         illusion_proc_chance_pct = 8;
         localizedName = "Juxtapose";
         max_illusions = new int[]{5,7,9};
-        owningHeroShortKey = "phantom_lancer";
+        ownerKey = "npc_dota_hero_phantom_lancer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         proc_chance_pct = new int[]{40,45,50};
         tooltip_illusion_damage = 16;
         tooltip_total_illusion_damage_in_pct = 500;
@@ -47,7 +53,7 @@ public final class PhantomLancerJuxtapose extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -91,8 +97,20 @@ public final class PhantomLancerJuxtapose extends Ability {
         return max_illusions;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getProcChancePct() {

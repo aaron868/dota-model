@@ -6,14 +6,13 @@ public final class MedusaStoneGaze extends Ability {
 
     private static MedusaStoneGaze instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -21,21 +20,23 @@ public final class MedusaStoneGaze extends Ability {
     private final double[] duration;
     private final double[] face_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int slow;
     private final double[] stone_duration;
     private final double vision_cone;
 
     private MedusaStoneGaze() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.4,0.4,0.4};
         abilityCastRange = new int[]{1000,1000,1000};
         abilityCooldown = new double[]{90.0,90.0,90.0};
         abilityManaCost = new int[]{200,200,200};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5507;
         key = "medusa_stone_gaze";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -43,7 +44,10 @@ public final class MedusaStoneGaze extends Ability {
         duration = new double[]{6.0,6.0,6.0};
         face_duration = new double[]{2.0,2.0,2.0};
         localizedName = "Stone Gaze";
-        owningHeroShortKey = "medusa";
+        ownerKey = "npc_dota_hero_medusa";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{1000,1000,1000};
         slow = 50;
         stone_duration = new double[]{3.0,3.0,3.0};
@@ -57,7 +61,7 @@ public final class MedusaStoneGaze extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -83,10 +87,6 @@ public final class MedusaStoneGaze extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -117,8 +117,20 @@ public final class MedusaStoneGaze extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

@@ -6,39 +6,43 @@ public final class BigThunderLizardSlam extends Ability {
 
     private static BigThunderLizardSlam instance;
 
-    private final String abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCooldown;
-    private final int abilityDamage;
-    private final int abilityManaCost;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
+    private final int[] abilityDamage;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int attack_slow_tooltip;
     private final int hero_duration;
     private final String localizedName;
     private final int movespeed_slow;
     private final int non_hero_duration;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private BigThunderLizardSlam() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = 0;
-        abilityCooldown = 6;
-        abilityDamage = 70;
-        abilityManaCost = 90;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCooldown = new double[]{6,6,6,6};
+        abilityDamage = new int[]{70,70,70,70};
+        abilityManaCost = new int[]{90,90,90,90};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5332;
         key = "big_thunder_lizard_slam";
-        maxLevel = 1;
         attack_slow_tooltip = -25;
         hero_duration = 2;
         localizedName = "Slam";
         movespeed_slow = -25;
         non_hero_duration = 4;
-        owningHeroShortKey = "big_thunder_lizard";
+        ownerKey = "npc_dota_neutral_big_thunder_lizard";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
         radius = 250;
     }
 
@@ -49,23 +53,23 @@ public final class BigThunderLizardSlam extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityDamage() {
+    public int[] getAbilityDamage() {
         return abilityDamage;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -79,10 +83,6 @@ public final class BigThunderLizardSlam extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int getAttackSlowTooltip() {
@@ -105,8 +105,20 @@ public final class BigThunderLizardSlam extends Ability {
         return non_hero_duration;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

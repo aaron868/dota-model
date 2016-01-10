@@ -7,10 +7,10 @@ public final class EarthSpiritRollingBoulder extends Ability {
     private static EarthSpiritRollingBoulder instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
@@ -20,7 +20,10 @@ public final class EarthSpiritRollingBoulder extends Ability {
     private final int distance;
     private final String localizedName;
     private final int move_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int rock_distance;
     private final int rock_speed;
@@ -29,10 +32,10 @@ public final class EarthSpiritRollingBoulder extends Ability {
 
     private EarthSpiritRollingBoulder() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .1;
-        abilityCastRange = 3000;
+        abilityCastPoint = new double[]{.1,.1,.1,.1};
+        abilityCastRange = new int[]{3000,3000,3000,3000};
         abilityCooldown = new double[]{16.0,12.0,8.0,4.0};
-        abilityManaCost = 50;
+        abilityManaCost = new int[]{50,50,50,50};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5609;
         key = "earth_spirit_rolling_boulder";
@@ -42,7 +45,10 @@ public final class EarthSpiritRollingBoulder extends Ability {
         distance = 8;
         localizedName = "Rolling Boulder";
         move_slow = 80;
-        owningHeroShortKey = "earth_spirit";
+        ownerKey = "npc_dota_hero_earth_spirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 150;
         rock_distance = 16;
         rock_speed = 1600;
@@ -61,11 +67,11 @@ public final class EarthSpiritRollingBoulder extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -73,7 +79,7 @@ public final class EarthSpiritRollingBoulder extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -113,8 +119,20 @@ public final class EarthSpiritRollingBoulder extends Ability {
         return move_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

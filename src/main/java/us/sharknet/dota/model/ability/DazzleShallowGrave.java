@@ -7,38 +7,42 @@ public final class DazzleShallowGrave extends Ability {
     private static DazzleShallowGrave instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int[] abilityCooldown;
-    private final int[] abilityDuration;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
+    private final double[] abilityCooldown;
+    private final double[] abilityDuration;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double[] duration_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] range_tooltip;
 
     private DazzleShallowGrave() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .4;
+        abilityCastPoint = new double[]{.4,.4,.4,.4};
         abilityCastRange = new int[]{550,700,850,1000};
-        abilityCooldown = new int[]{60,45,30,15};
-        abilityDuration = new int[]{5,5,5,5};
-        abilityManaCost = 150;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        fightRecapLevel = 1;
+        abilityCooldown = new double[]{60,45,30,15};
+        abilityDuration = new double[]{5,5,5,5};
+        abilityManaCost = new int[]{150,150,150,150};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO"};
         iD = 5234;
         key = "dazzle_shallow_grave";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
         duration_tooltip = new double[]{5.0,5.0,5.0,5.0};
         localizedName = "Shallow Grave";
-        owningHeroShortKey = "dazzle";
+        ownerKey = "npc_dota_hero_dazzle";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         range_tooltip = new int[]{550,700,850,1000};
     }
 
@@ -53,7 +57,7 @@ public final class DazzleShallowGrave extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -61,28 +65,24 @@ public final class DazzleShallowGrave extends Ability {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int[] getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -105,8 +105,20 @@ public final class DazzleShallowGrave extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRangeTooltip() {

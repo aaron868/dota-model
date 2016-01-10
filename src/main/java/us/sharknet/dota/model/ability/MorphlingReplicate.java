@@ -6,14 +6,14 @@ public final class MorphlingReplicate extends Ability {
 
     private static MorphlingReplicate instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,19 +23,22 @@ public final class MorphlingReplicate extends Ability {
     private final int illusion_damage_out_pct_scepter;
     private final int[] illusion_incoming_dmg_pct_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] tooltip_cast_range;
     private final double[] tooltip_illusion_damage_out_pct;
 
     private MorphlingReplicate() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = .25;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityCastPoint = new double[]{.25,.25,.25,.25};
         abilityCastRange = new int[]{700,1100,1500};
         abilityCooldown = new double[]{80.0,80.0,80.0};
         abilityManaCost = new int[]{25,25,25};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_CUSTOM"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_CUSTOM"};
         iD = 5057;
         key = "morphling_replicate";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -45,7 +48,10 @@ public final class MorphlingReplicate extends Ability {
         illusion_damage_out_pct_scepter = 2;
         illusion_incoming_dmg_pct_tooltip = new int[]{100,100,100};
         localizedName = "Replicate";
-        owningHeroShortKey = "morphling";
+        ownerKey = "npc_dota_hero_morphling";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_cast_range = new int[]{700,1100,1500};
         tooltip_illusion_damage_out_pct = new double[]{50.0,50.0,50.0};
     }
@@ -57,11 +63,11 @@ public final class MorphlingReplicate extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -81,11 +87,11 @@ public final class MorphlingReplicate extends Ability {
         return abilityType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
     }
 
@@ -125,8 +131,20 @@ public final class MorphlingReplicate extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getTooltipCastRange() {

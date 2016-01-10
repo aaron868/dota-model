@@ -6,17 +6,16 @@ public final class WitchDoctorParalyzingCask extends Ability {
 
     private static WitchDoctorParalyzingCask instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -28,21 +27,23 @@ public final class WitchDoctorParalyzingCask extends Ability {
     private final int[] hero_damage;
     private final double[] hero_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int speed;
 
     private WitchDoctorParalyzingCask() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.35,0.35,0.35,0.35};
-        abilityCastRange = 700;
+        abilityCastRange = new int[]{700,700,700,700};
         abilityCooldown = new double[]{20.0,18.0,16.0,14.0};
         abilityDamage = new int[]{75,100,125,150};
         abilityManaCost = new int[]{110,120,130,140};
         abilityModifierSupportValue = .5;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5138;
         key = "witch_doctor_paralyzing_cask";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -54,7 +55,10 @@ public final class WitchDoctorParalyzingCask extends Ability {
         hero_damage = new int[]{50,50,50,50};
         hero_duration = new double[]{1.0,1.0,1.0,1.0};
         localizedName = "Paralyzing Cask";
-        owningHeroShortKey = "witch_doctor";
+        ownerKey = "npc_dota_hero_witch_doctor";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         speed = 1000;
     }
 
@@ -65,7 +69,7 @@ public final class WitchDoctorParalyzingCask extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,7 +77,7 @@ public final class WitchDoctorParalyzingCask extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -97,16 +101,12 @@ public final class WitchDoctorParalyzingCask extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -153,8 +153,20 @@ public final class WitchDoctorParalyzingCask extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSpeed() {

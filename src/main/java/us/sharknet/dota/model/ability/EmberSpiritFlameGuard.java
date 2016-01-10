@@ -6,10 +6,10 @@ public final class EmberSpiritFlameGuard extends Ability {
 
     private static EmberSpiritFlameGuard instance;
 
-    private final String abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -19,15 +19,18 @@ public final class EmberSpiritFlameGuard extends Ability {
     private final int[] damage_per_second;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final double tick_interval;
 
     private EmberSpiritFlameGuard() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = 0;
-        abilityCastRange = 400;
-        abilityCooldown = 35;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{400,400,400,400};
+        abilityCooldown = new double[]{35,35,35,35};
         abilityManaCost = new int[]{80,90,100,110};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5605;
@@ -37,7 +40,10 @@ public final class EmberSpiritFlameGuard extends Ability {
         damage_per_second = new int[]{30,40,50,60};
         duration = new double[]{8.0,12.0,16.0,20.0};
         localizedName = "Flame Guard";
-        owningHeroShortKey = "ember_spirit";
+        ownerKey = "npc_dota_hero_ember_spirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 400;
         tick_interval = .2;
     }
@@ -49,19 +55,19 @@ public final class EmberSpiritFlameGuard extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -101,8 +107,20 @@ public final class EmberSpiritFlameGuard extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

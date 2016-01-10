@@ -37,7 +37,6 @@ public final class Terrorblade extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Terrorblade() {
@@ -71,7 +70,6 @@ public final class Terrorblade extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Terrorblade";
-        shortKey = "terrorblade";
         url = "Terrorblade";
     }
 
@@ -200,10 +198,6 @@ public final class Terrorblade extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

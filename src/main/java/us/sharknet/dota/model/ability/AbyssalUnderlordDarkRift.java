@@ -7,35 +7,41 @@ public final class AbyssalUnderlordDarkRift extends Ability {
     private static AbyssalUnderlordDarkRift instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final double[] teleport_delay;
 
     private AbyssalUnderlordDarkRift() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
-        abilityCastPoint = .6;
-        abilityCastRange = 0;
-        abilityCooldown = 13;
+        abilityCastPoint = new double[]{.6,.6,.6,.6};
+        abilityCastRange = new int[]{0,0,0,0};
+        abilityCooldown = new double[]{13,13,13,13};
         abilityManaCost = new int[]{75,150,225};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_INVULNERABLE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_BUILDING";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_BUILDING"};
         iD = 5616;
         key = "abyssal_underlord_dark_rift";
         localizedName = "Dark Rift";
-        owningHeroShortKey = "abyssal_underlord";
+        ownerKey = "npc_dota_hero_abyssal_underlord";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 450;
         teleport_delay = new double[]{5.0,4.0,3.0};
     }
@@ -51,15 +57,15 @@ public final class AbyssalUnderlordDarkRift extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -71,15 +77,15 @@ public final class AbyssalUnderlordDarkRift extends Ability {
         return abilityType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
     }
 
@@ -95,8 +101,20 @@ public final class AbyssalUnderlordDarkRift extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

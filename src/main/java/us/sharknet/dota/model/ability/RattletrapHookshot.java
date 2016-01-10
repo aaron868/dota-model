@@ -13,7 +13,6 @@ public final class RattletrapHookshot extends Ability {
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,7 +21,10 @@ public final class RattletrapHookshot extends Ability {
     private final double[] duration;
     private final int[] latch_radius;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] speed;
     private final int[] stun_radius;
     private final int[] tooltip_range;
@@ -35,7 +37,6 @@ public final class RattletrapHookshot extends Ability {
         abilityManaCost = new int[]{150,150,150};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5240;
         key = "rattletrap_hookshot";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -44,7 +45,10 @@ public final class RattletrapHookshot extends Ability {
         duration = new double[]{1.0,1.5,2.0};
         latch_radius = new int[]{125,125,125};
         localizedName = "Hookshot";
-        owningHeroShortKey = "rattletrap";
+        ownerKey = "npc_dota_hero_rattletrap";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         speed = new int[]{4000,5000,6000};
         stun_radius = new int[]{175,175,175};
         tooltip_range = new int[]{2000,2500,3000};
@@ -85,10 +89,6 @@ public final class RattletrapHookshot extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -121,8 +121,20 @@ public final class RattletrapHookshot extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getSpeed() {

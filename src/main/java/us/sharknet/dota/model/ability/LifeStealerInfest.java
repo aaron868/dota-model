@@ -7,16 +7,15 @@ public final class LifeStealerInfest extends Ability {
     private static LifeStealerInfest instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -26,21 +25,23 @@ public final class LifeStealerInfest extends Ability {
     private final int damage_increase_pct;
     private final int infest_scepter_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private LifeStealerInfest() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
-        abilityCastPoint = .2;
-        abilityCastRange = 150;
-        abilityCooldown = new int[]{100,75,50};
+        abilityCastPoint = new double[]{.2,.2,.2,.2};
+        abilityCastRange = new int[]{150,150,150,150};
+        abilityCooldown = new double[]{100,75,50};
         abilityManaCost = new int[]{50,50,50};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
-        fightRecapLevel = 1;
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_CUSTOM"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_CUSTOM"};
         iD = 5252;
         key = "life_stealer_infest";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
@@ -50,7 +51,10 @@ public final class LifeStealerInfest extends Ability {
         damage_increase_pct = 5;
         infest_scepter_duration = 8;
         localizedName = "Infest";
-        owningHeroShortKey = "life_stealer";
+        ownerKey = "npc_dota_hero_life_stealer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{700,700,700};
     }
 
@@ -65,15 +69,15 @@ public final class LifeStealerInfest extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -89,20 +93,16 @@ public final class LifeStealerInfest extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -141,8 +141,20 @@ public final class LifeStealerInfest extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

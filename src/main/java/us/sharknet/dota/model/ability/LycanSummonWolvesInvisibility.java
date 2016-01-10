@@ -6,22 +6,28 @@ public final class LycanSummonWolvesInvisibility extends Ability {
 
     private static LycanSummonWolvesInvisibility instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final double fade_delay;
     private final double[] fade_time;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private LycanSummonWolvesInvisibility() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5500;
         key = "lycan_summon_wolves_invisibility";
         fade_delay = 1.7;
         fade_time = new double[]{0.0,0.0,0.0};
         localizedName = "Summon Wolves Invisibility";
-        owningHeroShortKey = "lycan";
+        ownerKey = "npc_dota_hero_lycan";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static LycanSummonWolvesInvisibility instance() {
@@ -31,7 +37,7 @@ public final class LycanSummonWolvesInvisibility extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -55,8 +61,20 @@ public final class LycanSummonWolvesInvisibility extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

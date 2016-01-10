@@ -6,14 +6,13 @@ public final class EarthshakerEchoSlam extends Ability {
 
     private static EarthshakerEchoSlam instance;
 
-    private final String abilityBehavior;
-    private final int[] abilityCastPoint;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,17 +21,19 @@ public final class EarthshakerEchoSlam extends Ability {
     private final int echo_slam_echo_range;
     private final int echo_slam_echo_search_range;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private EarthshakerEchoSlam() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = new int[]{0,0,0,0};
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{0,0,0,0};
         abilityCooldown = new double[]{150.0,130.0,110.0};
         abilityDamage = new int[]{160,210,270};
         abilityManaCost = new int[]{145,205,265};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5026;
         key = "earthshaker_echo_slam";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -41,7 +42,10 @@ public final class EarthshakerEchoSlam extends Ability {
         echo_slam_echo_range = 575;
         echo_slam_echo_search_range = 575;
         localizedName = "Echo Slam";
-        owningHeroShortKey = "earthshaker";
+        ownerKey = "npc_dota_hero_earthshaker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static EarthshakerEchoSlam instance() {
@@ -51,11 +55,11 @@ public final class EarthshakerEchoSlam extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -77,10 +81,6 @@ public final class EarthshakerEchoSlam extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -115,8 +115,20 @@ public final class EarthshakerEchoSlam extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

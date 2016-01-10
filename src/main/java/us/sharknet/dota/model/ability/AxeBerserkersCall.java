@@ -7,34 +7,38 @@ public final class AxeBerserkersCall extends Ability {
     private static AxeBerserkersCall instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int[] abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int bonus_armor;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private AxeBerserkersCall() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"};
-        abilityCastPoint = .4;
-        abilityCooldown = new int[]{16,14,12,10};
+        abilityCastPoint = new double[]{.4,.4,.4,.4};
+        abilityCooldown = new double[]{16,14,12,10};
         abilityDamage = new int[]{0,0,0,0};
         abilityManaCost = new int[]{80,90,100,110};
-        fightRecapLevel = 1;
         iD = 5007;
         key = "axe_berserkers_call";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         bonus_armor = 40;
         duration = new double[]{2.0,2.4,2.8,3.2};
         localizedName = "Berserkers Call";
-        owningHeroShortKey = "axe";
+        ownerKey = "npc_dota_hero_axe";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 300;
     }
 
@@ -49,11 +53,11 @@ public final class AxeBerserkersCall extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -63,10 +67,6 @@ public final class AxeBerserkersCall extends Ability {
 
     public int[] getAbilityManaCost() {
         return abilityManaCost;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -93,8 +93,20 @@ public final class AxeBerserkersCall extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

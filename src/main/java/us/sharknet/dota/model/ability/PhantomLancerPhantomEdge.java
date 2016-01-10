@@ -6,26 +6,32 @@ public final class PhantomLancerPhantomEdge extends Ability {
 
     private static PhantomLancerPhantomEdge instance;
 
-    private final String abilityBehavior;
-    private final int[] abilityCooldown;
+    private final String[] abilityBehavior;
+    private final double[] abilityCooldown;
     private final int iD;
     private final String key;
     private final int bonus_speed;
     private final String localizedName;
     private final int[] max_distance;
     private final int min_distance;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private PhantomLancerPhantomEdge() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityCooldown = new int[]{16,12,8,4};
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
+        abilityCooldown = new double[]{16,12,8,4};
         iD = 5068;
         key = "phantom_lancer_phantom_edge";
         bonus_speed = 800;
-        localizedName = "Phantom Edge";
+        localizedName = "Phantom Rush";
         max_distance = new int[]{600,700,800,900};
         min_distance = 300;
-        owningHeroShortKey = "phantom_lancer";
+        ownerKey = "npc_dota_hero_phantom_lancer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static PhantomLancerPhantomEdge instance() {
@@ -35,11 +41,11 @@ public final class PhantomLancerPhantomEdge extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -67,8 +73,20 @@ public final class PhantomLancerPhantomEdge extends Ability {
         return min_distance;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

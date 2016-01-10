@@ -7,7 +7,7 @@ public final class ElderTitanNaturalOrder extends Ability {
     private static ElderTitanNaturalOrder instance;
 
     private final String[] abilityBehavior;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
@@ -15,12 +15,15 @@ public final class ElderTitanNaturalOrder extends Ability {
     private final int[] armor_reduction_pct;
     private final String localizedName;
     private final int[] magic_resistance_pct;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private ElderTitanNaturalOrder() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_AURA"};
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5593;
         key = "elder_titan_natural_order";
@@ -28,7 +31,10 @@ public final class ElderTitanNaturalOrder extends Ability {
         armor_reduction_pct = new int[]{40,60,80,100};
         localizedName = "Natural Order";
         magic_resistance_pct = new int[]{12,19,26,33};
-        owningHeroShortKey = "elder_titan";
+        ownerKey = "npc_dota_hero_elder_titan";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         radius = new int[]{275,275,275,275};
     }
 
@@ -43,7 +49,7 @@ public final class ElderTitanNaturalOrder extends Ability {
         return abilityBehavior;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -75,8 +81,20 @@ public final class ElderTitanNaturalOrder extends Ability {
         return magic_resistance_pct;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

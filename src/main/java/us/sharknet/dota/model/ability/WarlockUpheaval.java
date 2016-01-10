@@ -8,9 +8,9 @@ public final class WarlockUpheaval extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityChannelTime;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityChannelTime;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final int iD;
@@ -20,15 +20,18 @@ public final class WarlockUpheaval extends Ability {
     private final int duration;
     private final String localizedName;
     private final int max_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] slow_rate_duration;
 
     private WarlockUpheaval() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_CHANNELLED","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 1200;
-        abilityChannelTime = 16;
-        abilityCooldown = new int[]{50,46,42,38};
+        abilityCastRange = new int[]{1200,1200,1200,1200};
+        abilityChannelTime = new double[]{16,16,16,16};
+        abilityCooldown = new double[]{50,46,42,38};
         abilityDamage = new int[]{0,0,0,0};
         abilityManaCost = new int[]{100,110,120,130};
         iD = 5164;
@@ -38,7 +41,10 @@ public final class WarlockUpheaval extends Ability {
         duration = 3;
         localizedName = "Upheaval";
         max_slow = 84;
-        owningHeroShortKey = "warlock";
+        ownerKey = "npc_dota_hero_warlock";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         slow_rate_duration = new double[]{12.5,6.5,4.5,3.5};
     }
 
@@ -57,15 +63,15 @@ public final class WarlockUpheaval extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityChannelTime() {
+    public double[] getAbilityChannelTime() {
         return abilityChannelTime;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -105,8 +111,20 @@ public final class WarlockUpheaval extends Ability {
         return max_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getSlowRateDuration() {

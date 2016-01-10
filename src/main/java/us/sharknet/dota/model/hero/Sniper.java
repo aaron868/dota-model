@@ -37,7 +37,6 @@ public final class Sniper extends Hero {
     private final int visionNighttimeRange;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Sniper() {
@@ -71,7 +70,6 @@ public final class Sniper extends Hero {
         visionNighttimeRange = 1000;
         active = true;
         localizedName = "Sniper";
-        shortKey = "sniper";
         url = "Sniper";
     }
 
@@ -200,10 +198,6 @@ public final class Sniper extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

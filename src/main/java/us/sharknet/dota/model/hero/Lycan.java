@@ -36,7 +36,6 @@ public final class Lycan extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Lycan() {
@@ -69,7 +68,6 @@ public final class Lycan extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Lycan";
-        shortKey = "lycan";
         url = "Lycan";
     }
 
@@ -194,10 +192,6 @@ public final class Lycan extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

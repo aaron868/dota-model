@@ -6,31 +6,35 @@ public final class WispRelocate extends Ability {
 
     private static WispRelocate instance;
 
-    private final String abilityBehavior;
-    private final int[] abilityCastPoint;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final double[] cast_delay;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] return_time;
 
     private WispRelocate() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
-        abilityCastPoint = new int[]{0,0,0};
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT"};
+        abilityCastPoint = new double[]{0,0,0};
         abilityCooldown = new double[]{90.0,75.0,60.0};
         abilityManaCost = new int[]{100,100,100};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 1;
         iD = 5488;
         key = "wisp_relocate";
         cast_delay = new double[]{2.5,2.25,2.0};
         localizedName = "Relocate";
-        owningHeroShortKey = "wisp";
+        ownerKey = "npc_dota_hero_wisp";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         return_time = new double[]{12.0,12.0,12.0};
     }
 
@@ -41,11 +45,11 @@ public final class WispRelocate extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -59,10 +63,6 @@ public final class WispRelocate extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -81,8 +81,20 @@ public final class WispRelocate extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getReturnTime() {

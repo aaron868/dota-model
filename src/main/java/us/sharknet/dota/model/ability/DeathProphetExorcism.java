@@ -6,14 +6,13 @@ public final class DeathProphetExorcism extends Ability {
 
     private static DeathProphetExorcism instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCooldown;
-    private final int abilityDuration;
+    private final double[] abilityCooldown;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -25,20 +24,22 @@ public final class DeathProphetExorcism extends Ability {
     private final int max_damage;
     private final int[] max_distance;
     private final int min_damage;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int[] spirit_speed;
     private final int[] spirits;
 
     private DeathProphetExorcism() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCooldown = 145;
-        abilityDuration = 35;
+        abilityCooldown = new double[]{145,145,145,145};
+        abilityDuration = new double[]{35,35,35,35};
         abilityManaCost = new int[]{200,300,400};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        fightRecapLevel = 2;
         iD = 5093;
         key = "death_prophet_exorcism";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -50,7 +51,10 @@ public final class DeathProphetExorcism extends Ability {
         max_damage = 58;
         max_distance = new int[]{2000,2000,2000};
         min_damage = 53;
-        owningHeroShortKey = "death_prophet";
+        ownerKey = "npc_dota_hero_death_prophet";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{700,700,700};
         spirit_speed = new int[]{500,500,500};
         spirits = new int[]{8,16,24};
@@ -63,7 +67,7 @@ public final class DeathProphetExorcism extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -71,11 +75,11 @@ public final class DeathProphetExorcism extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -89,10 +93,6 @@ public final class DeathProphetExorcism extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -139,8 +139,20 @@ public final class DeathProphetExorcism extends Ability {
         return min_damage;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

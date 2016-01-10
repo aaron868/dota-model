@@ -7,11 +7,10 @@ public final class TrollWarlordWhirlingAxesMelee extends Ability {
     private static TrollWarlordWhirlingAxesMelee instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,16 +21,18 @@ public final class TrollWarlordWhirlingAxesMelee extends Ability {
     private final int hit_radius;
     private final String localizedName;
     private final int max_range;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int whirl_duration;
 
     private TrollWarlordWhirlingAxesMelee() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = 0;
+        abilityCastPoint = new double[]{0,0,0,0};
         abilityCooldown = new double[]{12.0,12.0,12.0,12.0};
         abilityManaCost = new int[]{50,50,50,50};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5510;
         key = "troll_warlord_whirling_axes_melee";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -42,7 +43,10 @@ public final class TrollWarlordWhirlingAxesMelee extends Ability {
         hit_radius = 100;
         localizedName = "Whirling Axes Melee";
         max_range = 45;
-        owningHeroShortKey = "troll_warlord";
+        ownerKey = "npc_dota_hero_troll_warlord";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         whirl_duration = 3;
     }
 
@@ -57,7 +61,7 @@ public final class TrollWarlordWhirlingAxesMelee extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -71,10 +75,6 @@ public final class TrollWarlordWhirlingAxesMelee extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -117,8 +117,20 @@ public final class TrollWarlordWhirlingAxesMelee extends Ability {
         return max_range;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getWhirlDuration() {

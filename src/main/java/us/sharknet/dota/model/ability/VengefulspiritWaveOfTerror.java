@@ -6,12 +6,12 @@ public final class VengefulspiritWaveOfTerror extends Ability {
 
     private static VengefulspiritWaveOfTerror instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
-    private final int abilityDuration;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -19,7 +19,10 @@ public final class VengefulspiritWaveOfTerror extends Ability {
     private final String spellImmunityType;
     private final int[] armor_reduction;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int tooltip_duration;
     private final double[] vision_aoe;
     private final double[] vision_duration;
@@ -27,12 +30,12 @@ public final class VengefulspiritWaveOfTerror extends Ability {
     private final int wave_width;
 
     private VengefulspiritWaveOfTerror() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 1400;
-        abilityCooldown = 20;
+        abilityCastRange = new int[]{1400,1400,1400,1400};
+        abilityCooldown = new double[]{20,20,20,20};
         abilityDamage = new int[]{30,50,70,90};
-        abilityDuration = 15;
+        abilityDuration = new double[]{15,15,15,15};
         abilityManaCost = new int[]{40,40,40,40};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
         iD = 5124;
@@ -40,7 +43,10 @@ public final class VengefulspiritWaveOfTerror extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         armor_reduction = new int[]{-3,-4,-5,-6};
         localizedName = "Wave Of Terror";
-        owningHeroShortKey = "vengefulspirit";
+        ownerKey = "npc_dota_hero_vengefulspirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_duration = 15;
         vision_aoe = new double[]{500.0,500.0,500.0,500.0};
         vision_duration = new double[]{3.0,3.0,3.0,3.0};
@@ -55,7 +61,7 @@ public final class VengefulspiritWaveOfTerror extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -63,11 +69,11 @@ public final class VengefulspiritWaveOfTerror extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -75,7 +81,7 @@ public final class VengefulspiritWaveOfTerror extends Ability {
         return abilityDamage;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -107,8 +113,20 @@ public final class VengefulspiritWaveOfTerror extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getTooltipDuration() {

@@ -6,29 +6,35 @@ public final class MeepoGeostrike extends Ability {
 
     private static MeepoGeostrike instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int[] abilityDamage;
-    private final int abilityDuration;
+    private final double[] abilityDuration;
     private final int abilityModifierSupportBonus;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int duration_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] slow;
 
     private MeepoGeostrike() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityDamage = new int[]{8,16,24,32};
-        abilityDuration = 2;
+        abilityDuration = new double[]{2,2,2,2};
         abilityModifierSupportBonus = 5;
         iD = 5432;
         key = "meepo_geostrike";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         duration_tooltip = 2;
         localizedName = "Geostrike";
-        owningHeroShortKey = "meepo";
+        ownerKey = "npc_dota_hero_meepo";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         slow = new int[]{-5,-10,-15,-20};
     }
 
@@ -39,7 +45,7 @@ public final class MeepoGeostrike extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -47,7 +53,7 @@ public final class MeepoGeostrike extends Ability {
         return abilityDamage;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -75,8 +81,20 @@ public final class MeepoGeostrike extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getSlow() {

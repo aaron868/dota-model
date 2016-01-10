@@ -8,31 +8,33 @@ public final class TrollWarlordBattleTrance extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int[] attack_speed;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int trance_duration;
 
     private TrollWarlordBattleTrance() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.0,0.0,0.0};
-        abilityCooldown = 30;
+        abilityCooldown = new double[]{30,30,30,30};
         abilityManaCost = new int[]{75,75,75};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5512;
         key = "troll_warlord_battle_trance";
-        maxLevel = 3;
         attack_speed = new int[]{60,120,180};
         localizedName = "Battle Trance";
-        owningHeroShortKey = "troll_warlord";
+        ownerKey = "npc_dota_hero_troll_warlord";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         trance_duration = 5;
     }
 
@@ -51,7 +53,7 @@ public final class TrollWarlordBattleTrance extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -63,20 +65,12 @@ public final class TrollWarlordBattleTrance extends Ability {
         return abilityType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int[] getAttackSpeed() {
@@ -87,8 +81,20 @@ public final class TrollWarlordBattleTrance extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getTranceDuration() {

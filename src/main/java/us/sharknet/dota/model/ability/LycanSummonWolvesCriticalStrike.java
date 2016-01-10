@@ -6,30 +6,34 @@ public final class LycanSummonWolvesCriticalStrike extends Ability {
 
     private static LycanSummonWolvesCriticalStrike instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
     private final int maim_attack_speed;
     private final int maim_chance;
     private final int maim_damage;
     private final int maim_duration;
     private final int maim_movement_speed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private LycanSummonWolvesCriticalStrike() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5399;
         key = "lycan_summon_wolves_critical_strike";
-        maxLevel = 1;
         localizedName = "Summon Wolves Critical Strike";
         maim_attack_speed = 40;
         maim_chance = 20;
         maim_damage = 8;
         maim_duration = 4;
         maim_movement_speed = 0;
-        owningHeroShortKey = "lycan";
+        ownerKey = "npc_dota_hero_lycan";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static LycanSummonWolvesCriticalStrike instance() {
@@ -39,7 +43,7 @@ public final class LycanSummonWolvesCriticalStrike extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -49,10 +53,6 @@ public final class LycanSummonWolvesCriticalStrike extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getLocalizedName() {
@@ -79,8 +79,20 @@ public final class LycanSummonWolvesCriticalStrike extends Ability {
         return maim_movement_speed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

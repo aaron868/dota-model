@@ -38,7 +38,6 @@ public final class Batrider extends Hero {
     private final int visionDaytimeRange;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Batrider() {
@@ -73,7 +72,6 @@ public final class Batrider extends Hero {
         visionDaytimeRange = 1200;
         active = true;
         localizedName = "Batrider";
-        shortKey = "batrider";
         url = "Batrider";
     }
 
@@ -206,10 +204,6 @@ public final class Batrider extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

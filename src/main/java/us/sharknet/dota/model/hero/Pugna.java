@@ -36,7 +36,6 @@ public final class Pugna extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Pugna() {
@@ -69,7 +68,6 @@ public final class Pugna extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Pugna";
-        shortKey = "pugna";
         url = "Pugna";
     }
 
@@ -194,10 +192,6 @@ public final class Pugna extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

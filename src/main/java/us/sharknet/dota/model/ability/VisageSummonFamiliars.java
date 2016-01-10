@@ -7,7 +7,7 @@ public final class VisageSummonFamiliars extends Ability {
     private static VisageSummonFamiliars instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
@@ -24,11 +24,14 @@ public final class VisageSummonFamiliars extends Ability {
     private final int[] familiar_speed;
     private final String localizedName;
     private final int max_damage_charges;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private VisageSummonFamiliars() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = new int[]{0,0,0};
+        abilityCastPoint = new double[]{0,0,0};
         abilityCooldown = new double[]{180.0,160.0,140.0};
         abilityManaCost = new int[]{150,150,150};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -45,7 +48,10 @@ public final class VisageSummonFamiliars extends Ability {
         familiar_speed = new int[]{380,390,400};
         localizedName = "Summon Familiars";
         max_damage_charges = 7;
-        owningHeroShortKey = "visage";
+        ownerKey = "npc_dota_hero_visage";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static VisageSummonFamiliars instance() {
@@ -59,7 +65,7 @@ public final class VisageSummonFamiliars extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -127,8 +133,20 @@ public final class VisageSummonFamiliars extends Ability {
         return max_damage_charges;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

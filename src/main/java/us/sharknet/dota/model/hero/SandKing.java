@@ -35,7 +35,6 @@ public final class SandKing extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private SandKing() {
@@ -67,7 +66,6 @@ public final class SandKing extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Sand King";
-        shortKey = "sand_king";
         url = "Sand_King";
     }
 
@@ -188,10 +186,6 @@ public final class SandKing extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

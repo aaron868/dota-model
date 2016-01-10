@@ -6,16 +6,15 @@ public final class SlardarSlithereenCrush extends Ability {
 
     private static SlardarSlithereenCrush instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -24,20 +23,22 @@ public final class SlardarSlithereenCrush extends Ability {
     private final int crush_extra_slow_duration;
     private final int crush_radius;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] stun_duration;
 
     private SlardarSlithereenCrush() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.35,0.35,0.35,0.35};
-        abilityCastRange = 0;
+        abilityCastRange = new int[]{0,0,0,0};
         abilityCooldown = new double[]{8.0,8.0,8.0,8.0};
         abilityDamage = new int[]{75,125,175,225};
         abilityDuration = new double[]{1.6,1.9,2.2,2.5};
         abilityManaCost = new int[]{80,95,105,115};
         abilityModifierSupportValue = .5;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        fightRecapLevel = 1;
         iD = 5115;
         key = "slardar_slithereen_crush";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -46,7 +47,10 @@ public final class SlardarSlithereenCrush extends Ability {
         crush_extra_slow_duration = 2;
         crush_radius = 350;
         localizedName = "Slithereen Crush";
-        owningHeroShortKey = "slardar";
+        ownerKey = "npc_dota_hero_slardar";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         stun_duration = new double[]{1.6,1.9,2.2,2.5};
     }
 
@@ -57,7 +61,7 @@ public final class SlardarSlithereenCrush extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -65,7 +69,7 @@ public final class SlardarSlithereenCrush extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -91,10 +95,6 @@ public final class SlardarSlithereenCrush extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -129,8 +129,20 @@ public final class SlardarSlithereenCrush extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getStunDuration() {

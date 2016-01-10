@@ -6,46 +6,48 @@ public final class OgreMagiUnrefinedFireblast extends Ability {
 
     private static OgreMagiUnrefinedFireblast instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityDamage;
-    private final int abilityManaCost;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityDamage;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
-    private final int isGrantedByScepter;
+    private final boolean isGrantedByScepter;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final String localizedName;
     private final double multicast_delay;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double scepter_mana;
     private final double stun_duration;
 
     private OgreMagiUnrefinedFireblast() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = .45;
-        abilityCastRange = 475;
-        abilityCooldown = 6;
-        abilityDamage = 275;
-        abilityManaCost = 400;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityCastPoint = new double[]{.45,.45,.45,.45};
+        abilityCastRange = new int[]{475,475,475,475};
+        abilityCooldown = new double[]{6,6,6,6};
+        abilityDamage = new int[]{275,275,275,275};
+        abilityManaCost = new int[]{400,400,400,400};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5466;
-        isGrantedByScepter = 1;
+        isGrantedByScepter = true;
         key = "ogre_magi_unrefined_fireblast";
-        maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Unrefined Fireblast";
         multicast_delay = .4;
-        owningHeroShortKey = "ogre_magi";
+        ownerKey = "npc_dota_hero_ogre_magi";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         scepter_mana = .6;
         stun_duration = 1.5;
     }
@@ -57,27 +59,27 @@ public final class OgreMagiUnrefinedFireblast extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityDamage() {
+    public int[] getAbilityDamage() {
         return abilityDamage;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -85,7 +87,7 @@ public final class OgreMagiUnrefinedFireblast extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -93,24 +95,16 @@ public final class OgreMagiUnrefinedFireblast extends Ability {
         return abilityUnitTargetType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
-    public int getIsGrantedByScepter() {
+    public boolean getIsGrantedByScepter() {
         return isGrantedByScepter;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getSpellImmunityType() {
@@ -125,8 +119,20 @@ public final class OgreMagiUnrefinedFireblast extends Ability {
         return multicast_delay;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getScepterMana() {

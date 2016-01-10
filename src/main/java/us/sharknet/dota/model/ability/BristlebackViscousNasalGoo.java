@@ -7,13 +7,12 @@ public final class BristlebackViscousNasalGoo extends Ability {
     private static BristlebackViscousNasalGoo instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetTeam;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -24,19 +23,21 @@ public final class BristlebackViscousNasalGoo extends Ability {
     private final int goo_speed;
     private final String localizedName;
     private final int[] move_slow_per_stack;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int stack_limit;
 
     private BristlebackViscousNasalGoo() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .3;
-        abilityCastRange = 600;
+        abilityCastPoint = new double[]{.3,.3,.3,.3};
+        abilityCastRange = new int[]{600,600,600,600};
         abilityCooldown = new double[]{1.5,1.5,1.5,1.5};
-        abilityManaCost = 25;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityManaCost = new int[]{25,25,25,25};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5548;
         key = "bristleback_viscous_nasal_goo";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -47,7 +48,10 @@ public final class BristlebackViscousNasalGoo extends Ability {
         goo_speed = 1000;
         localizedName = "Viscous Nasal Goo";
         move_slow_per_stack = new int[]{3,6,9,12};
-        owningHeroShortKey = "bristleback";
+        ownerKey = "npc_dota_hero_bristleback";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 600;
         stack_limit = 4;
     }
@@ -63,11 +67,11 @@ public final class BristlebackViscousNasalGoo extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -75,20 +79,16 @@ public final class BristlebackViscousNasalGoo extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -131,8 +131,20 @@ public final class BristlebackViscousNasalGoo extends Ability {
         return move_slow_per_stack;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

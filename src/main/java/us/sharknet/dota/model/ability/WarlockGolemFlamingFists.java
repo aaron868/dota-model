@@ -6,31 +6,35 @@ public final class WarlockGolemFlamingFists extends Ability {
 
     private static WarlockGolemFlamingFists instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final int chance;
     private final int[] damage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private WarlockGolemFlamingFists() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
         iD = 5166;
         key = "warlock_golem_flaming_fists";
-        maxLevel = 3;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         chance = 40;
         damage = new int[]{80,115,150};
         localizedName = "Flaming Fists";
-        owningHeroShortKey = "warlock";
+        ownerKey = "npc_dota_warlock_golem";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
         radius = new int[]{300,300,300};
     }
 
@@ -41,7 +45,7 @@ public final class WarlockGolemFlamingFists extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,10 +65,6 @@ public final class WarlockGolemFlamingFists extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getSpellImmunityType() {
         return spellImmunityType;
     }
@@ -81,8 +81,20 @@ public final class WarlockGolemFlamingFists extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

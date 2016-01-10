@@ -6,17 +6,16 @@ public final class SkeletonKingHellfireBlast extends Ability {
 
     private static SkeletonKingHellfireBlast instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -26,21 +25,23 @@ public final class SkeletonKingHellfireBlast extends Ability {
     private final int blast_speed;
     private final int blast_stun_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int tooltip_slow_duration;
 
     private SkeletonKingHellfireBlast() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.35,0.35,0.35,0.35};
-        abilityCastRange = 525;
+        abilityCastRange = new int[]{525,525,525,525};
         abilityCooldown = new double[]{8.0,8.0,8.0,8.0};
         abilityDamage = new int[]{50,100,150,200};
-        abilityManaCost = 140;
+        abilityManaCost = new int[]{140,140,140,140};
         abilityModifierSupportValue = .5;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5086;
         key = "skeleton_king_hellfire_blast";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -50,7 +51,10 @@ public final class SkeletonKingHellfireBlast extends Ability {
         blast_speed = 1000;
         blast_stun_duration = 2;
         localizedName = "Hellfire Blast";
-        owningHeroShortKey = "skeleton_king";
+        ownerKey = "npc_dota_hero_skeleton_king";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_slow_duration = 2;
     }
 
@@ -61,7 +65,7 @@ public final class SkeletonKingHellfireBlast extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -69,7 +73,7 @@ public final class SkeletonKingHellfireBlast extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -81,7 +85,7 @@ public final class SkeletonKingHellfireBlast extends Ability {
         return abilityDamage;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -93,16 +97,12 @@ public final class SkeletonKingHellfireBlast extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -141,8 +141,20 @@ public final class SkeletonKingHellfireBlast extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getTooltipSlowDuration() {

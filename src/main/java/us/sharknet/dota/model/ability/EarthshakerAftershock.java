@@ -6,7 +6,7 @@ public final class EarthshakerAftershock extends Ability {
 
     private static EarthshakerAftershock instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int abilityModifierSupportBonus;
@@ -16,11 +16,14 @@ public final class EarthshakerAftershock extends Ability {
     private final String spellImmunityType;
     private final int aftershock_range;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] tooltip_duration;
 
     private EarthshakerAftershock() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityDamage = new int[]{50,75,100,125};
         abilityDuration = new double[]{0.6,0.9,1.2,1.5};
         abilityModifierSupportBonus = 100;
@@ -30,7 +33,10 @@ public final class EarthshakerAftershock extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         aftershock_range = 300;
         localizedName = "Aftershock";
-        owningHeroShortKey = "earthshaker";
+        ownerKey = "npc_dota_hero_earthshaker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         tooltip_duration = new double[]{0.6,0.9,1.2,1.5};
     }
 
@@ -41,7 +47,7 @@ public final class EarthshakerAftershock extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -81,8 +87,20 @@ public final class EarthshakerAftershock extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getTooltipDuration() {

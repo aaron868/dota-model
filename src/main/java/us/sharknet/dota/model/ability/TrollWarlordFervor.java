@@ -6,22 +6,28 @@ public final class TrollWarlordFervor extends Ability {
 
     private static TrollWarlordFervor instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int[] attack_speed;
     private final String localizedName;
     private final int max_stacks;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private TrollWarlordFervor() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5511;
         key = "troll_warlord_fervor";
         attack_speed = new int[]{15,20,25,30};
         localizedName = "Fervor";
         max_stacks = 6;
-        owningHeroShortKey = "troll_warlord";
+        ownerKey = "npc_dota_hero_troll_warlord";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static TrollWarlordFervor instance() {
@@ -31,7 +37,7 @@ public final class TrollWarlordFervor extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -55,8 +61,20 @@ public final class TrollWarlordFervor extends Ability {
         return max_stacks;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

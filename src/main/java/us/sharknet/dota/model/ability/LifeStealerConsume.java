@@ -7,23 +7,27 @@ public final class LifeStealerConsume extends Ability {
     private static LifeStealerConsume instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private LifeStealerConsume() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_UNRESTRICTED","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = 0;
+        abilityCastPoint = new double[]{0,0,0,0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 1;
         iD = 5253;
         key = "life_stealer_consume";
         localizedName = "Consume";
-        owningHeroShortKey = "life_stealer";
+        ownerKey = "npc_dota_hero_life_stealer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static LifeStealerConsume instance() {
@@ -37,16 +41,12 @@ public final class LifeStealerConsume extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -61,8 +61,20 @@ public final class LifeStealerConsume extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -6,16 +6,15 @@ public final class OraclePurifyingFlames extends Ability {
 
     private static OraclePurifyingFlames instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final double abilityCooldown;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetFlags;
     private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,21 +22,23 @@ public final class OraclePurifyingFlames extends Ability {
     private final int duration;
     private final double[] heal_per_second;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int tick_rate;
     private final int[] total_heal_tooltip;
 
     private OraclePurifyingFlames() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = .3;
-        abilityCastRange = 750;
-        abilityCooldown = 2.25;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityCastPoint = new double[]{.3,.3,.3,.3};
+        abilityCastRange = new int[]{750,750,750,750};
+        abilityCooldown = new double[]{2.25,2.25,2.25,2.25};
         abilityManaCost = new int[]{50,60,70,80};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"};
         abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY","DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5639;
         key = "oracle_purifying_flames";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -45,7 +46,10 @@ public final class OraclePurifyingFlames extends Ability {
         duration = 9;
         heal_per_second = new double[]{11.0,22.0,33.0,44.0};
         localizedName = "Purifying Flames";
-        owningHeroShortKey = "oracle";
+        ownerKey = "npc_dota_hero_oracle";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tick_rate = 1;
         total_heal_tooltip = new int[]{99,198,297,396};
     }
@@ -57,19 +61,19 @@ public final class OraclePurifyingFlames extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public double getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -81,7 +85,7 @@ public final class OraclePurifyingFlames extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
@@ -91,10 +95,6 @@ public final class OraclePurifyingFlames extends Ability {
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -125,8 +125,20 @@ public final class OraclePurifyingFlames extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getTickRate() {

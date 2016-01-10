@@ -6,7 +6,7 @@ public final class StormSpiritOverload extends Ability {
 
     private static StormSpiritOverload instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int abilityModifierSupportBonus;
@@ -18,11 +18,14 @@ public final class StormSpiritOverload extends Ability {
     private final int overload_aoe;
     private final int overload_attack_slow;
     private final int overload_move_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] tooltip_duration;
 
     private StormSpiritOverload() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityDamage = new int[]{30,50,70,90};
         abilityDuration = new double[]{0.6,0.6,0.6,0.6};
         abilityModifierSupportBonus = 40;
@@ -34,7 +37,10 @@ public final class StormSpiritOverload extends Ability {
         overload_aoe = 275;
         overload_attack_slow = -50;
         overload_move_slow = -80;
-        owningHeroShortKey = "storm_spirit";
+        ownerKey = "npc_dota_hero_storm_spirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         tooltip_duration = new double[]{0.6,0.6,0.6,0.6};
     }
 
@@ -45,7 +51,7 @@ public final class StormSpiritOverload extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -93,8 +99,20 @@ public final class StormSpiritOverload extends Ability {
         return overload_move_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getTooltipDuration() {

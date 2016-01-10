@@ -37,7 +37,6 @@ public final class SpiritBreaker extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private SpiritBreaker() {
@@ -71,7 +70,6 @@ public final class SpiritBreaker extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Spirit Breaker";
-        shortKey = "spirit_breaker";
         url = "Spirit_Breaker";
     }
 
@@ -200,10 +198,6 @@ public final class SpiritBreaker extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

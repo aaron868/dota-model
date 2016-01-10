@@ -7,23 +7,27 @@ public final class ShadowDemonShadowPoisonRelease extends Ability {
     private static ShadowDemonShadowPoisonRelease instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ShadowDemonShadowPoisonRelease() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .3;
-        abilityCooldown = 1;
+        abilityCastPoint = new double[]{.3,.3,.3,.3};
+        abilityCooldown = new double[]{1,1,1,1};
         iD = 5424;
         key = "shadow_demon_shadow_poison_release";
-        maxLevel = 1;
         localizedName = "Shadow Poison Release";
-        owningHeroShortKey = "shadow_demon";
+        ownerKey = "npc_dota_hero_shadow_demon";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static ShadowDemonShadowPoisonRelease instance() {
@@ -37,11 +41,11 @@ public final class ShadowDemonShadowPoisonRelease extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -53,16 +57,24 @@ public final class ShadowDemonShadowPoisonRelease extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -8,17 +8,19 @@ public final class BristlebackQuillSpray extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
     private final int max_damage;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] quill_base_damage;
     private final double[] quill_stack_damage;
     private final int quill_stack_duration;
@@ -27,17 +29,19 @@ public final class BristlebackQuillSpray extends Ability {
     private BristlebackQuillSpray() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 625;
+        abilityCastRange = new int[]{625,625,625,625};
         abilityCooldown = new double[]{3.0,3.0,3.0,3.0};
         abilityManaCost = new int[]{35,35,35,35};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        fightRecapLevel = 1;
         iD = 5549;
         key = "bristleback_quill_spray";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         localizedName = "Quill Spray";
         max_damage = 45;
-        owningHeroShortKey = "bristleback";
+        ownerKey = "npc_dota_hero_bristleback";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         quill_base_damage = new double[]{20.0,40.0,60.0,80.0};
         quill_stack_damage = new double[]{30.0,32.0,34.0,36.0};
         quill_stack_duration = 14;
@@ -59,7 +63,7 @@ public final class BristlebackQuillSpray extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -73,10 +77,6 @@ public final class BristlebackQuillSpray extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -99,8 +99,20 @@ public final class BristlebackQuillSpray extends Ability {
         return max_damage;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getQuillBaseDamage() {

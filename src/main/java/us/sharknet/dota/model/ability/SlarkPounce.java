@@ -6,18 +6,20 @@ public final class SlarkPounce extends Ability {
 
     private static SlarkPounce instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double leash_duration;
     private final int leash_radius;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int pounce_acceleration;
     private final int[] pounce_damage;
     private final int pounce_distance;
@@ -25,18 +27,20 @@ public final class SlarkPounce extends Ability {
     private final double pounce_speed;
 
     private SlarkPounce() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCooldown = new double[]{20.0,16.0,12.0,8.0};
         abilityManaCost = new int[]{75,75,75,75};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5495;
         key = "slark_pounce";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         leash_duration = 3.5;
         leash_radius = 325;
         localizedName = "Pounce";
-        owningHeroShortKey = "slark";
+        ownerKey = "npc_dota_hero_slark";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         pounce_acceleration = 7;
         pounce_damage = new int[]{50,100,150,200};
         pounce_distance = 700;
@@ -51,7 +55,7 @@ public final class SlarkPounce extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -65,10 +69,6 @@ public final class SlarkPounce extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -95,8 +95,20 @@ public final class SlarkPounce extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getPounceAcceleration() {

@@ -7,18 +7,20 @@ public final class VisageSummonFamiliarsStoneForm extends Ability {
     private static VisageSummonFamiliarsStoneForm instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final double[] hp_regen;
     private final String localizedName;
     private final int max_damage_charges;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int stone_duration;
     private final int[] stun_damage;
     private final int stun_delay;
@@ -27,18 +29,20 @@ public final class VisageSummonFamiliarsStoneForm extends Ability {
 
     private VisageSummonFamiliarsStoneForm() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_AOE"};
-        abilityCastPoint = 0;
-        abilityCastRange = 160;
-        abilityCooldown = 26;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{160,160,160,160};
+        abilityCooldown = new double[]{26,26,26,26};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5484;
         key = "visage_summon_familiars_stone_form";
-        maxLevel = 3;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         hp_regen = new double[]{50.0,68.7,87.5};
         localizedName = "Summon Familiars Stone Form";
         max_damage_charges = 7;
-        owningHeroShortKey = "visage";
+        ownerKey = "npc_dota_hero_visage";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         stone_duration = 8;
         stun_damage = new int[]{60,100,140};
         stun_delay = 1;
@@ -57,15 +61,15 @@ public final class VisageSummonFamiliarsStoneForm extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -79,10 +83,6 @@ public final class VisageSummonFamiliarsStoneForm extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getSpellImmunityType() {
@@ -101,8 +101,20 @@ public final class VisageSummonFamiliarsStoneForm extends Ability {
         return max_damage_charges;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getStoneDuration() {

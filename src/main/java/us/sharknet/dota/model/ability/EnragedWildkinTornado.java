@@ -7,33 +7,37 @@ public final class EnragedWildkinTornado extends Ability {
     private static EnragedWildkinTornado instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityChannelTime;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityChannelTime;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private EnragedWildkinTornado() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
-        abilityCastPoint = .75;
-        abilityCastRange = 500;
-        abilityChannelTime = 4;
-        abilityCooldown = 7;
-        abilityManaCost = 200;
+        abilityCastPoint = new double[]{.75,.75,.75,.75};
+        abilityCastRange = new int[]{500,500,500,500};
+        abilityChannelTime = new double[]{4,4,4,4};
+        abilityCooldown = new double[]{7,7,7,7};
+        abilityManaCost = new int[]{200,200,200,200};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5312;
         key = "enraged_wildkin_tornado";
-        maxLevel = 1;
         duration = 4;
         localizedName = "Tornado";
-        owningHeroShortKey = "enraged_wildkin";
+        ownerKey = "npc_dota_neutral_enraged_wildkin";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
     }
 
     public static EnragedWildkinTornado instance() {
@@ -47,23 +51,23 @@ public final class EnragedWildkinTornado extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityChannelTime() {
+    public double[] getAbilityChannelTime() {
         return abilityChannelTime;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -79,10 +83,6 @@ public final class EnragedWildkinTornado extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public int getDuration() {
         return duration;
     }
@@ -91,8 +91,20 @@ public final class EnragedWildkinTornado extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

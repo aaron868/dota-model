@@ -7,30 +7,34 @@ public final class PudgeRot extends Ability {
     private static PudgeRot instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final int[] abilityDamage;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int rot_radius;
     private final int rot_slow;
     private final double rot_tick;
 
     private PudgeRot() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = new int[]{0,0,0,0};
+        abilityCastPoint = new double[]{0,0,0,0};
         abilityDamage = new int[]{30,60,90,120};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5076;
         key = "pudge_rot";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Rot";
-        owningHeroShortKey = "pudge";
+        ownerKey = "npc_dota_hero_pudge";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         rot_radius = 250;
         rot_slow = -27;
         rot_tick = .2;
@@ -47,7 +51,7 @@ public final class PudgeRot extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -57,10 +61,6 @@ public final class PudgeRot extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -79,8 +79,20 @@ public final class PudgeRot extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRotRadius() {

@@ -22,8 +22,11 @@ public final class WinterWyvernArcticBurn extends Ability {
     private final String localizedName;
     private final int max_attacks;
     private final int night_vision_bonus;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
     private final int percent_damage;
+    private final boolean placeholder;
     private final int projectile_speed_bonus;
     private final int tick_rate;
     private final int tree_destruction_radius;
@@ -45,8 +48,11 @@ public final class WinterWyvernArcticBurn extends Ability {
         localizedName = "Arctic Burn";
         max_attacks = 5;
         night_vision_bonus = 400;
-        owningHeroShortKey = "winter_wyvern";
+        ownerKey = "npc_dota_hero_winter_wyvern";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
         percent_damage = 8;
+        placeholder = false;
         projectile_speed_bonus = 500;
         tick_rate = 1;
         tree_destruction_radius = 250;
@@ -123,12 +129,24 @@ public final class WinterWyvernArcticBurn extends Ability {
         return night_vision_bonus;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
     }
 
     public int getPercentDamage() {
         return percent_damage;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getProjectileSpeedBonus() {

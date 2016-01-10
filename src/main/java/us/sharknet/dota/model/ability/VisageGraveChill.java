@@ -6,14 +6,13 @@ public final class VisageGraveChill extends Ability {
 
     private static VisageGraveChill instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
     private final double[] abilityCooldown;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetTeam;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -21,17 +20,19 @@ public final class VisageGraveChill extends Ability {
     private final double[] chill_duration;
     private final String localizedName;
     private final int[] movespeed_bonus;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private VisageGraveChill() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
         abilityCastRange = new int[]{600,600,600,600};
         abilityCooldown = new double[]{16.0,14.0,12.0,10.0};
-        abilityManaCost = 100;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityManaCost = new int[]{100,100,100,100};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5480;
         key = "visage_grave_chill";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -39,7 +40,10 @@ public final class VisageGraveChill extends Ability {
         chill_duration = new double[]{3.0,4.0,5.0,6.0};
         localizedName = "Grave Chill";
         movespeed_bonus = new int[]{32,32,32,32};
-        owningHeroShortKey = "visage";
+        ownerKey = "npc_dota_hero_visage";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static VisageGraveChill instance() {
@@ -49,7 +53,7 @@ public final class VisageGraveChill extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -65,20 +69,16 @@ public final class VisageGraveChill extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -109,8 +109,20 @@ public final class VisageGraveChill extends Ability {
         return movespeed_bonus;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

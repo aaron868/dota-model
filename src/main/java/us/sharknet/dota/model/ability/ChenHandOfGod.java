@@ -6,12 +6,11 @@ public final class ChenHandOfGod extends Ability {
 
     private static ChenHandOfGod instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -19,15 +18,17 @@ public final class ChenHandOfGod extends Ability {
     private final int cooldown_scepter;
     private final int[] heal_amount;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ChenHandOfGod() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
         abilityCooldown = new double[]{160.0,140.0,120.0};
         abilityManaCost = new int[]{200,300,400};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5331;
         key = "chen_hand_of_god";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
@@ -35,7 +36,10 @@ public final class ChenHandOfGod extends Ability {
         cooldown_scepter = 3;
         heal_amount = new int[]{200,300,400};
         localizedName = "Hand Of God";
-        owningHeroShortKey = "chen";
+        ownerKey = "npc_dota_hero_chen";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static ChenHandOfGod instance() {
@@ -45,7 +49,7 @@ public final class ChenHandOfGod extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -63,10 +67,6 @@ public final class ChenHandOfGod extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -97,8 +97,20 @@ public final class ChenHandOfGod extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

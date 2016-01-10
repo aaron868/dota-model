@@ -6,14 +6,13 @@ public final class WinterWyvernColdEmbrace extends Ability {
 
     private static WinterWyvernColdEmbrace instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -21,17 +20,19 @@ public final class WinterWyvernColdEmbrace extends Ability {
     private final int heal_additive;
     private final double[] heal_percentage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private WinterWyvernColdEmbrace() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 1000;
-        abilityCooldown = new int[]{24,21,18,15};
+        abilityCastRange = new int[]{1000,1000,1000,1000};
+        abilityCooldown = new double[]{24,21,18,15};
         abilityManaCost = new int[]{75,75,75,75};
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
-        fightRecapLevel = 1;
         iD = 5653;
         key = "winter_wyvern_cold_embrace";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
@@ -39,7 +40,10 @@ public final class WinterWyvernColdEmbrace extends Ability {
         heal_additive = 20;
         heal_percentage = new double[]{3.0,4.0,5.0,6.0};
         localizedName = "Cold Embrace";
-        owningHeroShortKey = "winter_wyvern";
+        ownerKey = "npc_dota_hero_winter_wyvern";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static WinterWyvernColdEmbrace instance() {
@@ -49,7 +53,7 @@ public final class WinterWyvernColdEmbrace extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -57,11 +61,11 @@ public final class WinterWyvernColdEmbrace extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -69,16 +73,12 @@ public final class WinterWyvernColdEmbrace extends Ability {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -109,8 +109,20 @@ public final class WinterWyvernColdEmbrace extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -6,23 +6,27 @@ public final class ForestTrollHighPriestManaAura extends Ability {
 
     private static ForestTrollHighPriestManaAura instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
     private final int mana_regen;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private ForestTrollHighPriestManaAura() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5491;
         key = "forest_troll_high_priest_mana_aura";
-        maxLevel = 1;
         localizedName = "Troll High Priest Mana Aura";
         mana_regen = 3;
-        owningHeroShortKey = "forest_troll_high_priest";
+        ownerKey = "npc_dota_neutral_forest_troll_high_priest";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
         radius = 900;
     }
 
@@ -33,7 +37,7 @@ public final class ForestTrollHighPriestManaAura extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -45,10 +49,6 @@ public final class ForestTrollHighPriestManaAura extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
@@ -57,8 +57,20 @@ public final class ForestTrollHighPriestManaAura extends Ability {
         return mana_regen;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

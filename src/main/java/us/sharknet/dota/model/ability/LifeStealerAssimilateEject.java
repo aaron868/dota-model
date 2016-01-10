@@ -8,25 +8,27 @@ public final class LifeStealerAssimilateEject extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int damage_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius_tooltip;
 
     private LifeStealerAssimilateEject() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        fightRecapLevel = 1;
         iD = 5675;
         key = "life_stealer_assimilate_eject";
-        maxLevel = 1;
         damage_tooltip = 300;
         localizedName = "Eject";
-        owningHeroShortKey = "life_stealer";
+        ownerKey = "npc_dota_hero_life_stealer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius_tooltip = new int[]{700,700,700};
     }
 
@@ -45,20 +47,12 @@ public final class LifeStealerAssimilateEject extends Ability {
         return abilityCastPoint;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int getDamageTooltip() {
@@ -69,8 +63,20 @@ public final class LifeStealerAssimilateEject extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadiusTooltip() {

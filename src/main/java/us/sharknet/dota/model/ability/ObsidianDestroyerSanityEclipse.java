@@ -8,12 +8,11 @@ public final class ObsidianDestroyerSanityEclipse extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,18 +21,20 @@ public final class ObsidianDestroyerSanityEclipse extends Ability {
     private final int[] damage_multiplier_scepter;
     private final String localizedName;
     private final int mana_drain;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private ObsidianDestroyerSanityEclipse() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.25,0.25,0.25};
-        abilityCastRange = 700;
-        abilityCooldown = 160;
+        abilityCastRange = new int[]{700,700,700,700};
+        abilityCooldown = new double[]{160,160,160,160};
         abilityManaCost = new int[]{175,250,325};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5394;
         key = "obsidian_destroyer_sanity_eclipse";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -42,7 +43,10 @@ public final class ObsidianDestroyerSanityEclipse extends Ability {
         damage_multiplier_scepter = new int[]{8,9,10};
         localizedName = "Sanity Eclipse";
         mana_drain = 40;
-        owningHeroShortKey = "obsidian_destroyer";
+        ownerKey = "npc_dota_hero_obsidian_destroyer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{375,475,575};
     }
 
@@ -61,11 +65,11 @@ public final class ObsidianDestroyerSanityEclipse extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -79,10 +83,6 @@ public final class ObsidianDestroyerSanityEclipse extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -117,8 +117,20 @@ public final class ObsidianDestroyerSanityEclipse extends Ability {
         return mana_drain;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

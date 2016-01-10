@@ -6,28 +6,32 @@ public final class InvokerAttributeBonus extends Ability {
 
     private static InvokerAttributeBonus instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final int iD;
     private final String key;
     private final int levelsBetweenUpgrades;
-    private final int maxLevel;
     private final int requiredLevel;
     private final int attribute_bonus_per_level;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private InvokerAttributeBonus() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_ATTRIBUTES";
         iD = 5690;
         key = "invoker_attribute_bonus";
         levelsBetweenUpgrades = 1;
-        maxLevel = 1;
         requiredLevel = 25;
         attribute_bonus_per_level = 6;
         localizedName = "Invoker Attribute Bonus";
-        owningHeroShortKey = "invoker";
+        ownerKey = "npc_dota_hero_invoker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static InvokerAttributeBonus instance() {
@@ -37,7 +41,7 @@ public final class InvokerAttributeBonus extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -57,10 +61,6 @@ public final class InvokerAttributeBonus extends Ability {
         return levelsBetweenUpgrades;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public int getRequiredLevel() {
         return requiredLevel;
     }
@@ -73,8 +73,20 @@ public final class InvokerAttributeBonus extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

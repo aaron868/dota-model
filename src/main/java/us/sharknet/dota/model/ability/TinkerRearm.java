@@ -16,7 +16,10 @@ public final class TinkerRearm extends Ability {
     private final String key;
     private final double[] channel_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private TinkerRearm() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
@@ -29,7 +32,10 @@ public final class TinkerRearm extends Ability {
         key = "tinker_rearm";
         channel_tooltip = new double[]{3.0,1.5,0.75};
         localizedName = "Rearm";
-        owningHeroShortKey = "tinker";
+        ownerKey = "npc_dota_hero_tinker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static TinkerRearm instance() {
@@ -79,8 +85,20 @@ public final class TinkerRearm extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

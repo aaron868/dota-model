@@ -8,9 +8,9 @@ public final class RikiSmokeScreen extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityDuration;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final int iD;
     private final String key;
@@ -19,16 +19,19 @@ public final class RikiSmokeScreen extends Ability {
     private final String localizedName;
     private final int[] miss_rate;
     private final int movement_speed_reduction;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int turn_reduction;
 
     private RikiSmokeScreen() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCastRange = 550;
-        abilityCooldown = 11;
-        abilityDuration = 6;
+        abilityCastRange = new int[]{550,550,550,550};
+        abilityCooldown = new double[]{11,11,11,11};
+        abilityDuration = new double[]{6,6,6,6};
         abilityManaCost = new int[]{75,80,85,90};
         iD = 5142;
         key = "riki_smoke_screen";
@@ -37,7 +40,10 @@ public final class RikiSmokeScreen extends Ability {
         localizedName = "Smoke Screen";
         miss_rate = new int[]{40,50,60,70};
         movement_speed_reduction = 25;
-        owningHeroShortKey = "riki";
+        ownerKey = "npc_dota_hero_riki";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{250,275,300,325};
         turn_reduction = 0;
     }
@@ -57,15 +63,15 @@ public final class RikiSmokeScreen extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -101,8 +107,20 @@ public final class RikiSmokeScreen extends Ability {
         return movement_speed_reduction;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

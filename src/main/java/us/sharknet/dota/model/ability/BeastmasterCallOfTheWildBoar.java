@@ -6,10 +6,10 @@ public final class BeastmasterCallOfTheWildBoar extends Ability {
 
     private static BeastmasterCallOfTheWildBoar instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int[] abilityCooldown;
-    private final int abilityManaCost;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final int[] boar_attackslow_tooltip;
@@ -19,14 +19,17 @@ public final class BeastmasterCallOfTheWildBoar extends Ability {
     private final int[] boar_moveslow_tooltip;
     private final int[] hawk_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int poison_duration_tooltip;
 
     private BeastmasterCallOfTheWildBoar() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = .3;
-        abilityCooldown = new int[]{42,38,34,30};
-        abilityManaCost = 15;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{.3,.3,.3,.3};
+        abilityCooldown = new double[]{42,38,34,30};
+        abilityManaCost = new int[]{15,15,15,15};
         iD = 5580;
         key = "beastmaster_call_of_the_wild_boar";
         boar_attackslow_tooltip = new int[]{10,20,30,40};
@@ -36,7 +39,10 @@ public final class BeastmasterCallOfTheWildBoar extends Ability {
         boar_moveslow_tooltip = new int[]{10,20,30,40};
         hawk_duration = new int[]{60,60,60,60};
         localizedName = "Call Of The Wild Boar";
-        owningHeroShortKey = "beastmaster";
+        ownerKey = "npc_dota_hero_beastmaster";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         poison_duration_tooltip = 3;
     }
 
@@ -47,19 +53,19 @@ public final class BeastmasterCallOfTheWildBoar extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -99,8 +105,20 @@ public final class BeastmasterCallOfTheWildBoar extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getPoisonDurationTooltip() {

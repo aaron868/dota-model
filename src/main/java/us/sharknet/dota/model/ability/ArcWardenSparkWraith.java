@@ -7,19 +7,21 @@ public final class ArcWardenSparkWraith extends Ability {
     private static ArcWardenSparkWraith instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int activation_delay;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int[] spark_damage;
     private final double think_interval;
@@ -29,19 +31,21 @@ public final class ArcWardenSparkWraith extends Ability {
 
     private ArcWardenSparkWraith() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
-        abilityCastPoint = .3;
-        abilityCastRange = 2000;
+        abilityCastPoint = new double[]{.3,.3,.3,.3};
+        abilityCastRange = new int[]{2000,2000,2000,2000};
         abilityCooldown = new double[]{4.0,4.0,4.0,4.0};
         abilityManaCost = new int[]{100,110,120,130};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5679;
         key = "arc_warden_spark_wraith";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         activation_delay = 3;
         duration = 5;
         localizedName = "Spark Wraith";
-        owningHeroShortKey = "arc_warden";
+        ownerKey = "npc_dota_hero_arc_warden";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 375;
         spark_damage = new int[]{150,200,250,300};
         think_interval = .2;
@@ -61,11 +65,11 @@ public final class ArcWardenSparkWraith extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -79,10 +83,6 @@ public final class ArcWardenSparkWraith extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -109,8 +109,20 @@ public final class ArcWardenSparkWraith extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

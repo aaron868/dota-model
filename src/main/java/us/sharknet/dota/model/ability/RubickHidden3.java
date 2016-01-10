@@ -9,17 +9,21 @@ public final class RubickHidden3 extends Ability {
     private final String[] abilityBehavior;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private RubickHidden3() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"};
         iD = 5457;
         key = "rubick_hidden3";
-        maxLevel = 0;
         localizedName = "Hidden 3";
-        owningHeroShortKey = "rubick";
+        ownerKey = "npc_dota_hero_rubick";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = true;
     }
 
     public static RubickHidden3 instance() {
@@ -41,16 +45,24 @@ public final class RubickHidden3 extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

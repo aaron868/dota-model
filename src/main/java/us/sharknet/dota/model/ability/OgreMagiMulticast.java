@@ -6,7 +6,7 @@ public final class OgreMagiMulticast extends Ability {
 
     private static OgreMagiMulticast instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final int iD;
     private final String key;
@@ -23,10 +23,13 @@ public final class OgreMagiMulticast extends Ability {
     private final double[] multicast_3_times_tooltip;
     private final double[] multicast_4_times;
     private final double[] multicast_4_times_tooltip;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private OgreMagiMulticast() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5441;
         key = "ogre_magi_multicast";
@@ -43,7 +46,10 @@ public final class OgreMagiMulticast extends Ability {
         multicast_3_times_tooltip = new double[]{0.0,20.0,25.0};
         multicast_4_times = new double[]{0.0,0.0,0.125};
         multicast_4_times_tooltip = new double[]{0.0,0.0,12.5};
-        owningHeroShortKey = "ogre_magi";
+        ownerKey = "npc_dota_hero_ogre_magi";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static OgreMagiMulticast instance() {
@@ -53,7 +59,7 @@ public final class OgreMagiMulticast extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -121,8 +127,20 @@ public final class OgreMagiMulticast extends Ability {
         return multicast_4_times_tooltip;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

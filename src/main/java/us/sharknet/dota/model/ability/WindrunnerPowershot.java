@@ -7,14 +7,13 @@ public final class WindrunnerPowershot extends Ability {
     private static WindrunnerPowershot instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityChannelTime;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,21 +22,23 @@ public final class WindrunnerPowershot extends Ability {
     private final int[] arrow_width;
     private final double[] damage_reduction;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] tree_width;
     private final double[] vision_duration;
     private final int vision_radius;
 
     private WindrunnerPowershot() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
-        abilityCastPoint = 0;
-        abilityCastRange = 2600;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{2600,2600,2600,2600};
         abilityChannelTime = new double[]{1.0,1.0,1.0,1.0};
         abilityCooldown = new double[]{9.0,9.0,9.0,9.0};
         abilityDamage = new int[]{120,200,280,360};
         abilityManaCost = new int[]{90,100,110,120};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5131;
         key = "windrunner_powershot";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -46,7 +47,10 @@ public final class WindrunnerPowershot extends Ability {
         arrow_width = new int[]{125,125,125,125};
         damage_reduction = new double[]{0.1,0.1,0.1,0.1};
         localizedName = "Powershot";
-        owningHeroShortKey = "windrunner";
+        ownerKey = "npc_dota_hero_windrunner";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tree_width = new double[]{75.0,75.0,75.0,75.0};
         vision_duration = new double[]{3.34,3.34,3.34,3.34};
         vision_radius = 400;
@@ -63,11 +67,11 @@ public final class WindrunnerPowershot extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -89,10 +93,6 @@ public final class WindrunnerPowershot extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -127,8 +127,20 @@ public final class WindrunnerPowershot extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getTreeWidth() {

@@ -38,7 +38,6 @@ public final class AncientApparition extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private AncientApparition() {
@@ -73,7 +72,6 @@ public final class AncientApparition extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Ancient Apparition";
-        shortKey = "ancient_apparition";
         url = "Ancient_Apparition";
     }
 
@@ -206,10 +204,6 @@ public final class AncientApparition extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

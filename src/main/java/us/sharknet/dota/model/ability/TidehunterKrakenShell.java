@@ -6,24 +6,30 @@ public final class TidehunterKrakenShell extends Ability {
 
     private static TidehunterKrakenShell instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int[] damage_cleanse;
     private final int[] damage_reduction;
     private final double[] damage_reset_interval;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private TidehunterKrakenShell() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5119;
         key = "tidehunter_kraken_shell";
         damage_cleanse = new int[]{600,550,500,450};
         damage_reduction = new int[]{12,24,36,48};
         damage_reset_interval = new double[]{6.0,6.0,6.0,6.0};
         localizedName = "Kraken Shell";
-        owningHeroShortKey = "tidehunter";
+        ownerKey = "npc_dota_hero_tidehunter";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static TidehunterKrakenShell instance() {
@@ -33,7 +39,7 @@ public final class TidehunterKrakenShell extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,8 +67,20 @@ public final class TidehunterKrakenShell extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

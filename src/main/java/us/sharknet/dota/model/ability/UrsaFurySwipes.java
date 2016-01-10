@@ -6,7 +6,7 @@ public final class UrsaFurySwipes extends Ability {
 
     private static UrsaFurySwipes instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
@@ -15,10 +15,13 @@ public final class UrsaFurySwipes extends Ability {
     private final int bonus_reset_time_roshan;
     private final int[] damage_per_stack;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private UrsaFurySwipes() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         iD = 5359;
         key = "ursa_fury_swipes";
@@ -27,7 +30,10 @@ public final class UrsaFurySwipes extends Ability {
         bonus_reset_time_roshan = 6;
         damage_per_stack = new int[]{15,20,25,30};
         localizedName = "Fury Swipes";
-        owningHeroShortKey = "ursa";
+        ownerKey = "npc_dota_hero_ursa";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static UrsaFurySwipes instance() {
@@ -37,7 +43,7 @@ public final class UrsaFurySwipes extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,8 +79,20 @@ public final class UrsaFurySwipes extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

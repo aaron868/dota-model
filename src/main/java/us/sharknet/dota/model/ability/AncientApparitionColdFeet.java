@@ -14,9 +14,8 @@ public final class AncientApparitionColdFeet extends Ability {
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -24,7 +23,10 @@ public final class AncientApparitionColdFeet extends Ability {
     private final int[] cast_range_tooltip;
     private final double[] damage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] stun_duration;
 
     private AncientApparitionColdFeet() {
@@ -36,9 +38,8 @@ public final class AncientApparitionColdFeet extends Ability {
         abilityManaCost = new int[]{150,150,150,150};
         abilityModifierSupportValue = .5;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5345;
         key = "ancient_apparition_cold_feet";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -46,7 +47,10 @@ public final class AncientApparitionColdFeet extends Ability {
         cast_range_tooltip = new int[]{700,800,900,1000};
         damage = new double[]{37.5,50.0,62.5,75.0};
         localizedName = "Cold Feet";
-        owningHeroShortKey = "ancient_apparition";
+        ownerKey = "npc_dota_hero_ancient_apparition";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         stun_duration = new double[]{1.25,2.0,2.75,3.5};
     }
 
@@ -89,16 +93,12 @@ public final class AncientApparitionColdFeet extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -129,8 +129,20 @@ public final class AncientApparitionColdFeet extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getStunDuration() {

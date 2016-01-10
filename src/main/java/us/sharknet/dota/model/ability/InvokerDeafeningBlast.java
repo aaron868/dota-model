@@ -7,24 +7,24 @@ public final class InvokerDeafeningBlast extends Ability {
     private static InvokerDeafeningBlast instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
-    private final String hotKeyOverride;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final double[] damage;
     private final double[] disarm_duration;
     private final double end_vision_duration;
     private final double[] knockback_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius_end;
     private final int radius_start;
     private final int travel_distance;
@@ -32,24 +32,24 @@ public final class InvokerDeafeningBlast extends Ability {
 
     private InvokerDeafeningBlast() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = 0;
-        abilityCastRange = 1000;
-        abilityCooldown = 40;
-        abilityManaCost = 200;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{1000,1000,1000,1000};
+        abilityCooldown = new double[]{40,40,40,40};
+        abilityManaCost = new int[]{200,200,200,200};
         abilityModifierSupportValue = .5;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
-        hotKeyOverride = "B";
         iD = 5390;
         key = "invoker_deafening_blast";
-        maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = new double[]{40.0,80.0,120.0,160.0,200.0,240.0,280.0,320.0};
         disarm_duration = new double[]{1.0,1.5,2.0,2.5,3.0,3.5,4.0,4.5};
         end_vision_duration = 1.75;
         knockback_duration = new double[]{0.25,0.5,0.75,1.0,1.25,1.5,1.75,2.0};
         localizedName = "Deafening Blast";
-        owningHeroShortKey = "invoker";
+        ownerKey = "npc_dota_hero_invoker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius_end = 225;
         radius_start = 175;
         travel_distance = 1000;
@@ -67,19 +67,19 @@ public final class InvokerDeafeningBlast extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -91,24 +91,12 @@ public final class InvokerDeafeningBlast extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
-    public String getHotKeyOverride() {
-        return hotKeyOverride;
-    }
-
     public int getID() {
         return iD;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getSpellImmunityType() {
@@ -135,8 +123,20 @@ public final class InvokerDeafeningBlast extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadiusEnd() {

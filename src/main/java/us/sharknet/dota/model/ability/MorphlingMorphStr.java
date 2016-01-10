@@ -7,26 +7,32 @@ public final class MorphlingMorphStr extends Ability {
     private static MorphlingMorphStr instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int iD;
     private final String key;
     private final int[] bonus_attributes;
     private final String localizedName;
     private final int[] mana_cost;
     private final double[] morph_cooldown;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int points_per_tick;
 
     private MorphlingMorphStr() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"};
-        abilityCooldown = 0;
+        abilityCooldown = new double[]{0,0,0,0};
         iD = 5056;
         key = "morphling_morph_str";
         bonus_attributes = new int[]{3,4,5,6};
         localizedName = "Morph Str";
         mana_cost = new int[]{30,30,30,30};
         morph_cooldown = new double[]{0.5,0.25,0.125,0.0625};
-        owningHeroShortKey = "morphling";
+        ownerKey = "npc_dota_hero_morphling";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         points_per_tick = 1;
     }
 
@@ -41,7 +47,7 @@ public final class MorphlingMorphStr extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -69,8 +75,20 @@ public final class MorphlingMorphStr extends Ability {
         return morph_cooldown;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getPointsPerTick() {

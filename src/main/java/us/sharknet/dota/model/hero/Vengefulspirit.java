@@ -36,7 +36,6 @@ public final class Vengefulspirit extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Vengefulspirit() {
@@ -69,7 +68,6 @@ public final class Vengefulspirit extends Hero {
         team = "Good";
         active = true;
         localizedName = "Vengeful Spirit";
-        shortKey = "vengefulspirit";
         url = "Vengeful_Spirit";
     }
 
@@ -194,10 +192,6 @@ public final class Vengefulspirit extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

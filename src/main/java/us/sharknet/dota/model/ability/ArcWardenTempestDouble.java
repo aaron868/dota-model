@@ -7,31 +7,35 @@ public final class ArcWardenTempestDouble extends Ability {
     private static ArcWardenTempestDouble instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final int duration;
     private final int[] health_cost_pct;
     private final String localizedName;
     private final int[] mana_cost_pct;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ArcWardenTempestDouble() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = 0;
+        abilityCastPoint = new double[]{0,0,0,0};
         abilityCooldown = new double[]{65.0,60.0,55.0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5683;
         key = "arc_warden_tempest_double";
         duration = 2;
         health_cost_pct = new int[]{30,15,0};
         localizedName = "Tempest Double";
         mana_cost_pct = new int[]{30,15,0};
-        owningHeroShortKey = "arc_warden";
+        ownerKey = "npc_dota_hero_arc_warden";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static ArcWardenTempestDouble instance() {
@@ -45,7 +49,7 @@ public final class ArcWardenTempestDouble extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -55,10 +59,6 @@ public final class ArcWardenTempestDouble extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -85,8 +85,20 @@ public final class ArcWardenTempestDouble extends Ability {
         return mana_cost_pct;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

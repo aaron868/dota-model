@@ -8,9 +8,32 @@ import us.sharknet.dota.model.Ability;
 public class BearEmpty extends Ability {
 
     private static BearEmpty instance;
+    private final String[] abilityBehavior;
 
     private BearEmpty() {
+        abilityBehavior = new String[0];
+    }
 
+    public AbilityOwnerType getOwnerType() {
+        return AbilityOwnerType.Summoned;
+    }
+
+    public String[] getAbilityBehavior() {
+        return abilityBehavior;
+    }
+
+    @Override
+    public boolean isPlaceholder() {
+        return true;
+    }
+
+    @Override
+    public boolean isPassive() {
+        return false;
+    }
+
+    public int getID() {
+        return -1;
     }
 
     public static BearEmpty instance() {
@@ -28,5 +51,10 @@ public class BearEmpty extends Ability {
     @Override
     public String getKey() {
         return "bear_empty";
+    }
+
+    @Override
+    public String getOwnerKey() {
+        return "npc_dota_hero_lone_druid";
     }
 }

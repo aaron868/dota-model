@@ -15,7 +15,10 @@ public final class MedusaSplitShot extends Ability {
     private final int damage_modifier;
     private final int damage_modifier_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int projectile_speed;
     private final int range;
     private final int[] total_arrow_count;
@@ -30,7 +33,10 @@ public final class MedusaSplitShot extends Ability {
         damage_modifier = -20;
         damage_modifier_tooltip = 80;
         localizedName = "Split Shot";
-        owningHeroShortKey = "medusa";
+        ownerKey = "npc_dota_hero_medusa";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         projectile_speed = 1200;
         range = 700;
         total_arrow_count = new int[]{2,3,4,5};
@@ -79,8 +85,20 @@ public final class MedusaSplitShot extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getProjectileSpeed() {

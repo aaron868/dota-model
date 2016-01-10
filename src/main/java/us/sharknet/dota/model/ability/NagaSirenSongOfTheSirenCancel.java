@@ -7,25 +7,29 @@ public final class NagaSirenSongOfTheSirenCancel extends Ability {
     private static NagaSirenSongOfTheSirenCancel instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final String abilityType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private NagaSirenSongOfTheSirenCancel() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
-        abilityCastPoint = new int[]{0,0,0};
+        abilityCastPoint = new double[]{0,0,0};
         abilityCooldown = new double[]{1.0,1.0,1.0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5478;
         key = "naga_siren_song_of_the_siren_cancel";
-        maxLevel = 1;
         localizedName = "Song Of The Siren Cancel";
-        owningHeroShortKey = "naga_siren";
+        ownerKey = "npc_dota_hero_naga_siren";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static NagaSirenSongOfTheSirenCancel instance() {
@@ -39,7 +43,7 @@ public final class NagaSirenSongOfTheSirenCancel extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -59,16 +63,24 @@ public final class NagaSirenSongOfTheSirenCancel extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

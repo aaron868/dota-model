@@ -8,20 +8,22 @@ public final class UndyingDecay extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] decay_damage;
     private final int decay_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int str_scale_up;
     private final int str_steal;
@@ -30,20 +32,22 @@ public final class UndyingDecay extends Ability {
     private UndyingDecay() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.45,0.45,0.45,0.45};
-        abilityCastRange = 625;
+        abilityCastRange = new int[]{625,625,625,625};
         abilityCooldown = new double[]{10.0,8.0,6.0,4.0};
         abilityDuration = new double[]{21.0,24.0,27.0,30.0};
         abilityManaCost = new int[]{70,90,110,130};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
-        fightRecapLevel = 1;
         iD = 5442;
         key = "undying_decay";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         decay_damage = new int[]{20,60,100,140};
         decay_duration = 4;
         localizedName = "Decay";
-        owningHeroShortKey = "undying";
+        ownerKey = "npc_dota_hero_undying";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 325;
         str_scale_up = 2;
         str_steal = 4;
@@ -65,7 +69,7 @@ public final class UndyingDecay extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -87,10 +91,6 @@ public final class UndyingDecay extends Ability {
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -117,8 +117,20 @@ public final class UndyingDecay extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

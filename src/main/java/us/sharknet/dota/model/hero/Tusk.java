@@ -38,7 +38,6 @@ public final class Tusk extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Tusk() {
@@ -73,7 +72,6 @@ public final class Tusk extends Hero {
         team = "Good";
         active = true;
         localizedName = "Tusk";
-        shortKey = "tusk";
         url = "Tusk";
     }
 
@@ -206,10 +204,6 @@ public final class Tusk extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

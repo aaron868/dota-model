@@ -11,9 +11,11 @@ public final class ElderTitanReturnSpirit extends Ability {
     private final double[] abilityCooldown;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ElderTitanReturnSpirit() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"};
@@ -21,9 +23,11 @@ public final class ElderTitanReturnSpirit extends Ability {
         abilityCooldown = new double[]{0.0,0.0,0.0};
         iD = 5592;
         key = "elder_titan_return_spirit";
-        maxLevel = 1;
         localizedName = "Return Spirit";
-        owningHeroShortKey = "elder_titan";
+        ownerKey = "npc_dota_hero_elder_titan";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static ElderTitanReturnSpirit instance() {
@@ -53,16 +57,24 @@ public final class ElderTitanReturnSpirit extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

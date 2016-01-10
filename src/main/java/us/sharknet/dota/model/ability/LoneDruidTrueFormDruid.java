@@ -7,26 +7,32 @@ public final class LoneDruidTrueFormDruid extends Ability {
     private static LoneDruidTrueFormDruid instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double transformation_time;
 
     private LoneDruidTrueFormDruid() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
-        abilityCastPoint = new int[]{0,0,0};
+        abilityCastPoint = new double[]{0,0,0};
         abilityCooldown = new double[]{0.0,0.0,0.0};
         abilityManaCost = new int[]{25,25,25};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5416;
         key = "lone_druid_true_form_druid";
         localizedName = "True Form Druid";
-        owningHeroShortKey = "lone_druid";
+        ownerKey = "npc_dota_hero_lone_druid";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         transformation_time = 1.933;
     }
 
@@ -41,7 +47,7 @@ public final class LoneDruidTrueFormDruid extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -69,8 +75,20 @@ public final class LoneDruidTrueFormDruid extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getTransformationTime() {

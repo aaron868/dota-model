@@ -8,16 +8,15 @@ public final class JuggernautOmniSlash extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final int abilityModifierSupportValue;
+    private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
     private final String[] abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -28,21 +27,23 @@ public final class JuggernautOmniSlash extends Ability {
     private final int[] omni_slash_jumps;
     private final int[] omni_slash_jumps_scepter;
     private final int omni_slash_radius;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private JuggernautOmniSlash() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 350;
+        abilityCastRange = new int[]{350,350,350,350};
         abilityCooldown = new double[]{130.0,120.0,110.0};
         abilityManaCost = new int[]{200,275,350};
         abilityModifierSupportValue = 0;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES","DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"};
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 2;
         iD = 5030;
         key = "juggernaut_omni_slash";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -53,7 +54,10 @@ public final class JuggernautOmniSlash extends Ability {
         omni_slash_jumps = new int[]{3,6,9};
         omni_slash_jumps_scepter = new int[]{6,9,12};
         omni_slash_radius = 425;
-        owningHeroShortKey = "juggernaut";
+        ownerKey = "npc_dota_hero_juggernaut";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static JuggernautOmniSlash instance() {
@@ -71,7 +75,7 @@ public final class JuggernautOmniSlash extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -83,7 +87,7 @@ public final class JuggernautOmniSlash extends Ability {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
@@ -99,16 +103,12 @@ public final class JuggernautOmniSlash extends Ability {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -151,8 +151,20 @@ public final class JuggernautOmniSlash extends Ability {
         return omni_slash_radius;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

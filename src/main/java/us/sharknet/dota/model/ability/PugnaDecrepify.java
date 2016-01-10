@@ -10,10 +10,10 @@ public final class PugnaDecrepify extends Ability {
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
     private final double[] abilityCooldown;
-    private final double abilityDuration;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
+    private final double[] abilityDuration;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,7 +22,10 @@ public final class PugnaDecrepify extends Ability {
     private final int[] bonus_spell_damage_pct;
     private final int bonus_spell_damage_pct_allies;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double tooltip_duration;
 
     private PugnaDecrepify() {
@@ -30,10 +33,10 @@ public final class PugnaDecrepify extends Ability {
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
         abilityCastRange = new int[]{700,700,700,700};
         abilityCooldown = new double[]{15.0,12.0,9.0,6.0};
-        abilityDuration = 3.5;
-        abilityManaCost = 60;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
+        abilityDuration = new double[]{3.5,3.5,3.5,3.5};
+        abilityManaCost = new int[]{60,60,60,60};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_CUSTOM"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_CUSTOM"};
         iD = 5187;
         key = "pugna_decrepify";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -42,7 +45,10 @@ public final class PugnaDecrepify extends Ability {
         bonus_spell_damage_pct = new int[]{-30,-40,-50,-60};
         bonus_spell_damage_pct_allies = -25;
         localizedName = "Decrepify";
-        owningHeroShortKey = "pugna";
+        ownerKey = "npc_dota_hero_pugna";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_duration = 3.5;
     }
 
@@ -69,19 +75,19 @@ public final class PugnaDecrepify extends Ability {
         return abilityCooldown;
     }
 
-    public double getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
     }
 
@@ -117,8 +123,20 @@ public final class PugnaDecrepify extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getTooltipDuration() {

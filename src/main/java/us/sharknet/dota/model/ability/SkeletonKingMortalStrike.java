@@ -6,9 +6,9 @@ public final class SkeletonKingMortalStrike extends Ability {
 
     private static SkeletonKingMortalStrike instance;
 
-    private final String abilityBehavior;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
+    private final String[] abilityBehavior;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final int crit_chance;
@@ -16,12 +16,15 @@ public final class SkeletonKingMortalStrike extends Ability {
     private final int drain_duration;
     private final int hp_drain;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private SkeletonKingMortalStrike() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO"};
         iD = 5088;
         key = "skeleton_king_mortal_strike";
         crit_chance = 15;
@@ -29,7 +32,10 @@ public final class SkeletonKingMortalStrike extends Ability {
         drain_duration = 7;
         hp_drain = 20;
         localizedName = "Mortal Strike";
-        owningHeroShortKey = "skeleton_king";
+        ownerKey = "npc_dota_hero_skeleton_king";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static SkeletonKingMortalStrike instance() {
@@ -39,15 +45,15 @@ public final class SkeletonKingMortalStrike extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
     }
 
@@ -79,8 +85,20 @@ public final class SkeletonKingMortalStrike extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

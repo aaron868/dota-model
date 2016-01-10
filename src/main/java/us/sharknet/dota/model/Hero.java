@@ -153,7 +153,6 @@ public abstract class Hero {
     public abstract int getHeroID();
     public abstract String getLocalizedName();
     public abstract String getKey();
-    public abstract String getShortKey();
     public abstract boolean isActive();
     public abstract double getAttributeAgilityGain();
     public abstract int getAttributeBaseAgility();

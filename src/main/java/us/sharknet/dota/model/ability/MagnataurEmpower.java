@@ -8,11 +8,11 @@ public final class MagnataurEmpower extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
@@ -23,18 +23,21 @@ public final class MagnataurEmpower extends Ability {
     private final int cleave_radius;
     private final double[] empower_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] splash_damage_pct;
     private final int splash_radius;
 
     private MagnataurEmpower() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 800;
-        abilityCooldown = 8;
+        abilityCastRange = new int[]{800,800,800,800};
+        abilityCooldown = new double[]{8,8,8,8};
         abilityManaCost = new int[]{30,40,50,60};
         abilityModifierSupportValue = .3;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5519;
         key = "magnataur_empower";
@@ -45,7 +48,10 @@ public final class MagnataurEmpower extends Ability {
         cleave_radius = 200;
         empower_duration = new double[]{40.0,40.0,40.0,40.0};
         localizedName = "Empower";
-        owningHeroShortKey = "magnataur";
+        ownerKey = "npc_dota_hero_magnataur";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         splash_damage_pct = new double[]{10.0,15.0,20.0,25.0};
         splash_radius = 200;
     }
@@ -65,11 +71,11 @@ public final class MagnataurEmpower extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -81,7 +87,7 @@ public final class MagnataurEmpower extends Ability {
         return abilityModifierSupportValue;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -125,8 +131,20 @@ public final class MagnataurEmpower extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getSplashDamagePct() {

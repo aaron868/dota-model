@@ -15,7 +15,10 @@ public final class AntimageBlink extends Ability {
     private final int[] blink_range;
     private final String localizedName;
     private final int min_blink_range;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private AntimageBlink() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"};
@@ -27,7 +30,10 @@ public final class AntimageBlink extends Ability {
         blink_range = new int[]{925,1000,1075,1150};
         localizedName = "Blink";
         min_blink_range = 200;
-        owningHeroShortKey = "antimage";
+        ownerKey = "npc_dota_hero_antimage";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static AntimageBlink instance() {
@@ -73,8 +79,20 @@ public final class AntimageBlink extends Ability {
         return min_blink_range;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

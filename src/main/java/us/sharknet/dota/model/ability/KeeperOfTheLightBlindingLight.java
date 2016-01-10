@@ -11,10 +11,9 @@ public final class KeeperOfTheLightBlindingLight extends Ability {
     private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final int abilityModifierSupportValue;
+    private final double abilityModifierSupportValue;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final int knockback_distance;
     private final double[] knockback_duration;
@@ -22,7 +21,10 @@ public final class KeeperOfTheLightBlindingLight extends Ability {
     private final String localizedName;
     private final double[] miss_duration;
     private final int[] miss_rate;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private KeeperOfTheLightBlindingLight() {
@@ -34,7 +36,6 @@ public final class KeeperOfTheLightBlindingLight extends Ability {
         abilityModifierSupportValue = 1;
         iD = 5476;
         key = "keeper_of_the_light_blinding_light";
-        maxLevel = 3;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         knockback_distance = 400;
         knockback_duration = new double[]{0.4,0.4,0.4};
@@ -42,7 +43,10 @@ public final class KeeperOfTheLightBlindingLight extends Ability {
         localizedName = "Blinding Light";
         miss_duration = new double[]{4.0,5.0,6.0};
         miss_rate = new int[]{80,80,80};
-        owningHeroShortKey = "keeper_of_the_light";
+        ownerKey = "npc_dota_hero_keeper_of_the_light";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{675,675,675};
     }
 
@@ -73,7 +77,7 @@ public final class KeeperOfTheLightBlindingLight extends Ability {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
@@ -83,10 +87,6 @@ public final class KeeperOfTheLightBlindingLight extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getSpellImmunityType() {
@@ -117,8 +117,20 @@ public final class KeeperOfTheLightBlindingLight extends Ability {
         return miss_rate;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

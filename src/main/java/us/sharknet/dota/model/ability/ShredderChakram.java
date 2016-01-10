@@ -13,7 +13,6 @@ public final class ShredderChakram extends Ability {
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,9 +21,12 @@ public final class ShredderChakram extends Ability {
     private final int[] damage_per_second;
     private final String localizedName;
     private final double[] mana_per_second;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
     private final int[] pass_damage;
     private final double pass_slow_duration;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int slow;
     private final int speed;
@@ -37,7 +39,6 @@ public final class ShredderChakram extends Ability {
         abilityManaCost = new int[]{100,150,200};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        fightRecapLevel = 1;
         iD = 5527;
         key = "shredder_chakram";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -46,9 +47,12 @@ public final class ShredderChakram extends Ability {
         damage_per_second = new int[]{50,75,100};
         localizedName = "Chakram";
         mana_per_second = new double[]{20.0,25.0,30.0};
-        owningHeroShortKey = "shredder";
+        ownerKey = "npc_dota_hero_shredder";
+        ownerType = AbilityOwnerType.Hero;
         pass_damage = new int[]{100,140,180};
         pass_slow_duration = .5;
+        passive = false;
+        placeholder = false;
         radius = 2;
         slow = 5;
         speed = 9;
@@ -89,10 +93,6 @@ public final class ShredderChakram extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -125,8 +125,12 @@ public final class ShredderChakram extends Ability {
         return mana_per_second;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
     }
 
     public int[] getPassDamage() {
@@ -135,6 +139,14 @@ public final class ShredderChakram extends Ability {
 
     public double getPassSlowDuration() {
         return pass_slow_duration;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

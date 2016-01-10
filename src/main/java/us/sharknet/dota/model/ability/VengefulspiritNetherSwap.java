@@ -6,15 +6,14 @@ public final class VengefulspiritNetherSwap extends Ability {
 
     private static VengefulspiritNetherSwap instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,19 +21,21 @@ public final class VengefulspiritNetherSwap extends Ability {
     private final int illusion_damage_out_pct;
     private final String localizedName;
     private final int nether_swap_cooldown_scepter;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] tooltip_range;
 
     private VengefulspiritNetherSwap() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
         abilityCastRange = new int[]{700,950,1200};
-        abilityCooldown = 45;
+        abilityCooldown = new double[]{45,45,45,45};
         abilityManaCost = new int[]{100,150,200};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
-        fightRecapLevel = 2;
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_CUSTOM"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_CUSTOM"};
         iD = 5125;
         key = "vengefulspirit_nether_swap";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -42,7 +43,10 @@ public final class VengefulspiritNetherSwap extends Ability {
         illusion_damage_out_pct = 5;
         localizedName = "Nether Swap";
         nether_swap_cooldown_scepter = 1;
-        owningHeroShortKey = "vengefulspirit";
+        ownerKey = "npc_dota_hero_vengefulspirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_range = new int[]{700,950,1200};
     }
 
@@ -53,7 +57,7 @@ public final class VengefulspiritNetherSwap extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -65,7 +69,7 @@ public final class VengefulspiritNetherSwap extends Ability {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -77,16 +81,12 @@ public final class VengefulspiritNetherSwap extends Ability {
         return abilityType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -117,8 +117,20 @@ public final class VengefulspiritNetherSwap extends Ability {
         return nether_swap_cooldown_scepter;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getTooltipRange() {

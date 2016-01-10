@@ -7,14 +7,14 @@ public final class WindrunnerFocusfire extends Ability {
     private static WindrunnerFocusfire instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
@@ -25,18 +25,21 @@ public final class WindrunnerFocusfire extends Ability {
     private final int[] focusfire_damage_reduction_scepter;
     private final int focusfire_duration_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private WindrunnerFocusfire() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = 0;
-        abilityCastRange = 600;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{600,600,600,600};
         abilityCooldown = new double[]{60.0,60.0,60.0};
         abilityDuration = new double[]{20.0,20.0,20.0};
         abilityManaCost = new int[]{75,100,125};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC","DOTA_UNIT_TARGET_BUILDING"};
         iD = 5133;
         key = "windrunner_focusfire";
@@ -47,7 +50,10 @@ public final class WindrunnerFocusfire extends Ability {
         focusfire_damage_reduction_scepter = new int[]{-30,-15,0};
         focusfire_duration_tooltip = 20;
         localizedName = "Focusfire";
-        owningHeroShortKey = "windrunner";
+        ownerKey = "npc_dota_hero_windrunner";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static WindrunnerFocusfire instance() {
@@ -61,11 +67,11 @@ public final class WindrunnerFocusfire extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -85,11 +91,11 @@ public final class WindrunnerFocusfire extends Ability {
         return abilityType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -133,8 +139,20 @@ public final class WindrunnerFocusfire extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

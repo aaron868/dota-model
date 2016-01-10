@@ -6,16 +6,15 @@ public final class PhantomLancerSpiritLance extends Ability {
 
     private static PhantomLancerSpiritLance instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -27,21 +26,23 @@ public final class PhantomLancerSpiritLance extends Ability {
     private final int[] lance_speed;
     private final String localizedName;
     private final int[] movement_speed_pct;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] tooltip_illusion_damage;
     private final int[] tooltip_illusion_total_damage_in_pct;
 
     private PhantomLancerSpiritLance() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 750;
+        abilityCastRange = new int[]{750,750,750,750};
         abilityCooldown = new double[]{7.0,7.0,7.0,7.0};
         abilityDamage = new int[]{100,150,200,250};
         abilityManaCost = new int[]{125,130,135,140};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5065;
         key = "phantom_lancer_spirit_lance";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -53,7 +54,10 @@ public final class PhantomLancerSpiritLance extends Ability {
         lance_speed = new int[]{1000,1000,1000,1000};
         localizedName = "Spirit Lance";
         movement_speed_pct = new int[]{-10,-20,-30,-40};
-        owningHeroShortKey = "phantom_lancer";
+        ownerKey = "npc_dota_hero_phantom_lancer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_illusion_damage = new int[]{20,20,20,20};
         tooltip_illusion_total_damage_in_pct = new int[]{400,400,400,400};
     }
@@ -65,7 +69,7 @@ public final class PhantomLancerSpiritLance extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,7 +77,7 @@ public final class PhantomLancerSpiritLance extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -93,16 +97,12 @@ public final class PhantomLancerSpiritLance extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -149,8 +149,20 @@ public final class PhantomLancerSpiritLance extends Ability {
         return movement_speed_pct;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getTooltipIllusionDamage() {

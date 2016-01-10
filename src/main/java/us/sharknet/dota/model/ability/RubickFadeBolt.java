@@ -6,16 +6,15 @@ public final class RubickFadeBolt extends Ability {
 
     private static RubickFadeBolt instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -26,20 +25,22 @@ public final class RubickFadeBolt extends Ability {
     private final int[] jump_damage_reduction_pct;
     private final double[] jump_delay;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private RubickFadeBolt() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
         abilityCastRange = new int[]{800,800,800,800};
         abilityCooldown = new double[]{16.0,14.0,12.0,10.0};
         abilityManaCost = new int[]{120,130,140,150};
         abilityModifierSupportValue = .35;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5450;
         key = "rubick_fade_bolt";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -50,7 +51,10 @@ public final class RubickFadeBolt extends Ability {
         jump_damage_reduction_pct = new int[]{4,4,4,4};
         jump_delay = new double[]{0.25,0.25,0.25,0.25};
         localizedName = "Fade Bolt";
-        owningHeroShortKey = "rubick";
+        ownerKey = "npc_dota_hero_rubick";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 440;
     }
 
@@ -61,7 +65,7 @@ public final class RubickFadeBolt extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -89,16 +93,12 @@ public final class RubickFadeBolt extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -141,8 +141,20 @@ public final class RubickFadeBolt extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

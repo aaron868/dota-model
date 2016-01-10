@@ -7,37 +7,41 @@ public final class RazorPlasmaField extends Ability {
     private static RazorPlasmaField instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] damage_max;
     private final int[] damage_min;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int speed;
 
     private RazorPlasmaField() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = new int[]{0,0,0,0};
-        abilityCastRange = 0;
-        abilityCooldown = 14;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{0,0,0,0};
+        abilityCooldown = new double[]{14,14,14,14};
         abilityManaCost = new int[]{125,125,125,125};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5082;
         key = "razor_plasma_field";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage_max = new int[]{160,230,300,370};
         damage_min = new int[]{30,50,70,90};
         localizedName = "Plasma Field";
-        owningHeroShortKey = "razor";
+        ownerKey = "npc_dota_hero_razor";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 700;
         speed = 636;
     }
@@ -53,15 +57,15 @@ public final class RazorPlasmaField extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -71,10 +75,6 @@ public final class RazorPlasmaField extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -101,8 +101,20 @@ public final class RazorPlasmaField extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

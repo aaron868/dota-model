@@ -8,32 +8,36 @@ public final class TechiesMinefieldSign extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int aura_radius;
     private final int lifetime;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private TechiesMinefieldSign() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 10;
-        abilityCooldown = 36;
-        abilityManaCost = 0;
+        abilityCastRange = new int[]{10,10,10,10};
+        abilityCooldown = new double[]{36,36,36,36};
+        abilityManaCost = new int[]{0,0,0,0};
         abilityUnitDamageType = "DAMAGE_TYPE_NONE";
         iD = 5644;
         key = "techies_minefield_sign";
-        maxLevel = 1;
         aura_radius = 125;
         lifetime = 180;
         localizedName = "Minefield Sign";
-        owningHeroShortKey = "techies";
+        ownerKey = "npc_dota_hero_techies";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static TechiesMinefieldSign instance() {
@@ -51,15 +55,15 @@ public final class TechiesMinefieldSign extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -75,10 +79,6 @@ public final class TechiesMinefieldSign extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public int getAuraRadius() {
         return aura_radius;
     }
@@ -91,8 +91,20 @@ public final class TechiesMinefieldSign extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

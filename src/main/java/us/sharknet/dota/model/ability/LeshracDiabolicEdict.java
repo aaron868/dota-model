@@ -6,44 +6,48 @@ public final class LeshracDiabolicEdict extends Ability {
 
     private static LeshracDiabolicEdict instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int[] abilityCooldown;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
-    private final int abilityDuration;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int duration_tooltip;
     private final String localizedName;
     private final int num_explosions;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int tower_bonus;
 
     private LeshracDiabolicEdict() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = .5;
-        abilityCooldown = new int[]{22,22,22,22};
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{.5,.5,.5,.5};
+        abilityCooldown = new double[]{22,22,22,22};
         abilityDamage = new int[]{9,18,27,36};
-        abilityDuration = 10;
+        abilityDuration = new double[]{10,10,10,10};
         abilityManaCost = new int[]{95,120,135,155};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC","DOTA_UNIT_TARGET_BUILDING"};
-        fightRecapLevel = 1;
         iD = 5242;
         key = "leshrac_diabolic_edict";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         duration_tooltip = 10;
         localizedName = "Diabolic Edict";
         num_explosions = 40;
-        owningHeroShortKey = "leshrac";
+        ownerKey = "npc_dota_hero_leshrac";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 500;
         tower_bonus = 40;
     }
@@ -55,15 +59,15 @@ public final class LeshracDiabolicEdict extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -71,7 +75,7 @@ public final class LeshracDiabolicEdict extends Ability {
         return abilityDamage;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -83,16 +87,12 @@ public final class LeshracDiabolicEdict extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -119,8 +119,20 @@ public final class LeshracDiabolicEdict extends Ability {
         return num_explosions;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

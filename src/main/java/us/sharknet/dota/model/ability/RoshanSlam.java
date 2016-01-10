@@ -6,32 +6,38 @@ public final class RoshanSlam extends Ability {
 
     private static RoshanSlam instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
     private final int damage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int slow_amount;
     private final int slow_duration_hero;
     private final int slow_duration_unit;
 
     private RoshanSlam() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.47,0.47,0.47,0.47};
-        abilityCooldown = 1;
-        abilityManaCost = 0;
+        abilityCooldown = new double[]{1,1,1,1};
+        abilityManaCost = new int[]{0,0,0,0};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5215;
         key = "roshan_slam";
         damage = 70;
         localizedName = "Slam";
-        owningHeroShortKey = "roshan";
+        ownerKey = "npc_dota_roshan";
+        ownerType = AbilityOwnerType.Roshan;
+        passive = false;
+        placeholder = false;
         radius = 350;
         slow_amount = 50;
         slow_duration_hero = 2;
@@ -45,7 +51,7 @@ public final class RoshanSlam extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -53,11 +59,11 @@ public final class RoshanSlam extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -81,8 +87,20 @@ public final class RoshanSlam extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

@@ -11,7 +11,10 @@ public final class KeeperOfTheLightIlluminateEnd extends Ability {
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private KeeperOfTheLightIlluminateEnd() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
@@ -19,7 +22,10 @@ public final class KeeperOfTheLightIlluminateEnd extends Ability {
         iD = 5477;
         key = "keeper_of_the_light_illuminate_end";
         localizedName = "Illuminate End";
-        owningHeroShortKey = "keeper_of_the_light";
+        ownerKey = "npc_dota_hero_keeper_of_the_light";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static KeeperOfTheLightIlluminateEnd instance() {
@@ -49,8 +55,20 @@ public final class KeeperOfTheLightIlluminateEnd extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

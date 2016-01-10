@@ -7,40 +7,44 @@ public final class OgreMagiFrostArmor extends Ability {
     private static OgreMagiFrostArmor instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetTeam;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int armor_bonus;
     private final int attackspeed_slow;
     private final int duration;
     private final String localizedName;
     private final int movespeed_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int slow_duration;
 
     private OgreMagiFrostArmor() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
-        abilityCastPoint = .56;
-        abilityCastRange = 800;
-        abilityCooldown = 5;
-        abilityManaCost = 40;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
+        abilityCastPoint = new double[]{.56,.56,.56,.56};
+        abilityCastRange = new int[]{800,800,800,800};
+        abilityCooldown = new double[]{5,5,5,5};
+        abilityManaCost = new int[]{40,40,40,40};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5304;
         key = "ogre_magi_frost_armor";
-        maxLevel = 1;
         armor_bonus = 8;
         attackspeed_slow = -20;
         duration = 45;
         localizedName = "Frost Armor";
         movespeed_slow = -30;
-        owningHeroShortKey = "ogre_magi";
+        ownerKey = "npc_dota_hero_ogre_magi";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         slow_duration = 5;
     }
 
@@ -55,23 +59,23 @@ public final class OgreMagiFrostArmor extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -85,10 +89,6 @@ public final class OgreMagiFrostArmor extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int getArmorBonus() {
@@ -111,8 +111,20 @@ public final class OgreMagiFrostArmor extends Ability {
         return movespeed_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSlowDuration() {

@@ -7,34 +7,40 @@ public final class SilencerGlaivesOfWisdom extends Ability {
     private static SilencerGlaivesOfWisdom instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double[] intellect_damage_pct;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int steal_range;
 
     private SilencerGlaivesOfWisdom() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
-        abilityCastRange = 600;
+        abilityCastRange = new int[]{600,600,600,600};
         abilityDuration = new double[]{0.0,0.0,0.0,0.0};
         abilityManaCost = new int[]{15,15,15,15};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5378;
         key = "silencer_glaives_of_wisdom";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         intellect_damage_pct = new double[]{30.0,50.0,70.0,90.0};
         localizedName = "Glaives Of Wisdom";
-        owningHeroShortKey = "silencer";
+        ownerKey = "npc_dota_hero_silencer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         steal_range = 925;
     }
 
@@ -49,7 +55,7 @@ public final class SilencerGlaivesOfWisdom extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -65,7 +71,7 @@ public final class SilencerGlaivesOfWisdom extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -93,8 +99,20 @@ public final class SilencerGlaivesOfWisdom extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getStealRange() {

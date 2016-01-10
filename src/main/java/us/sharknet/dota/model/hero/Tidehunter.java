@@ -35,7 +35,6 @@ public final class Tidehunter extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Tidehunter() {
@@ -67,7 +66,6 @@ public final class Tidehunter extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Tidehunter";
-        shortKey = "tidehunter";
         url = "Tidehunter";
     }
 
@@ -188,10 +186,6 @@ public final class Tidehunter extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

@@ -7,11 +7,10 @@ public final class NyxAssassinSpikedCarapace extends Ability {
     private static NyxAssassinSpikedCarapace instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
-    private final int[] abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -20,17 +19,19 @@ public final class NyxAssassinSpikedCarapace extends Ability {
     private final int bonus_intellect;
     private final int burrow_aoe;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double reflect_duration;
     private final double[] stun_duration;
 
     private NyxAssassinSpikedCarapace() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = new int[]{0,0,0,0};
-        abilityCooldown = new int[]{22,18,14,10};
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCooldown = new double[]{22,18,14,10};
         abilityManaCost = new int[]{40,40,40,40};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        fightRecapLevel = 1;
         iD = 5464;
         key = "nyx_assassin_spiked_carapace";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -39,7 +40,10 @@ public final class NyxAssassinSpikedCarapace extends Ability {
         bonus_intellect = 0;
         burrow_aoe = 300;
         localizedName = "Spiked Carapace";
-        owningHeroShortKey = "nyx_assassin";
+        ownerKey = "npc_dota_hero_nyx_assassin";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         reflect_duration = 2.25;
         stun_duration = new double[]{0.6,1.2,1.8,2.4};
     }
@@ -55,11 +59,11 @@ public final class NyxAssassinSpikedCarapace extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -69,10 +73,6 @@ public final class NyxAssassinSpikedCarapace extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -107,8 +107,20 @@ public final class NyxAssassinSpikedCarapace extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getReflectDuration() {

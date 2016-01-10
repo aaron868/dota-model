@@ -6,25 +6,31 @@ public final class RoshanBash extends Ability {
 
     private static RoshanBash instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
     private final int bash_chance;
     private final int bonus_damage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double stun_duration;
 
     private RoshanBash() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5214;
         key = "roshan_bash";
         bash_chance = 15;
         bonus_damage = 50;
         localizedName = "Bash";
-        owningHeroShortKey = "roshan";
+        ownerKey = "npc_dota_roshan";
+        ownerType = AbilityOwnerType.Roshan;
+        passive = false;
+        placeholder = false;
         stun_duration = 1.65;
     }
 
@@ -35,7 +41,7 @@ public final class RoshanBash extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -63,8 +69,20 @@ public final class RoshanBash extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getStunDuration() {

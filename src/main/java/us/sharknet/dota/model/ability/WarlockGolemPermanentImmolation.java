@@ -6,30 +6,34 @@ public final class WarlockGolemPermanentImmolation extends Ability {
 
     private static WarlockGolemPermanentImmolation instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final int[] aura_damage;
     private final int aura_radius;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private WarlockGolemPermanentImmolation() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5167;
         key = "warlock_golem_permanent_immolation";
-        maxLevel = 3;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         aura_damage = new int[]{30,40,50};
         aura_radius = 300;
         localizedName = "Permanent Immolation";
-        owningHeroShortKey = "warlock";
+        ownerKey = "npc_dota_warlock_golem";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
     }
 
     public static WarlockGolemPermanentImmolation instance() {
@@ -39,7 +43,7 @@ public final class WarlockGolemPermanentImmolation extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -59,10 +63,6 @@ public final class WarlockGolemPermanentImmolation extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getSpellImmunityType() {
         return spellImmunityType;
     }
@@ -79,8 +79,20 @@ public final class WarlockGolemPermanentImmolation extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

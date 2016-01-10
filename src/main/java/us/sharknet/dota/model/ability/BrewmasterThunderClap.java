@@ -6,9 +6,9 @@ public final class BrewmasterThunderClap extends Ability {
 
     private static BrewmasterThunderClap instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -20,13 +20,16 @@ public final class BrewmasterThunderClap extends Ability {
     private final double[] duration_creeps;
     private final String localizedName;
     private final int[] movement_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private BrewmasterThunderClap() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.4,0.4,0.4};
-        abilityCooldown = 13;
+        abilityCooldown = new double[]{13,13,13,13};
         abilityManaCost = new int[]{90,105,130,150};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5400;
@@ -38,7 +41,10 @@ public final class BrewmasterThunderClap extends Ability {
         duration_creeps = new double[]{8.0,8.0,8.0,8.0};
         localizedName = "Thunder Clap";
         movement_slow = new int[]{25,35,45,55};
-        owningHeroShortKey = "brewmaster";
+        ownerKey = "npc_dota_hero_brewmaster";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{400,400,400,400};
     }
 
@@ -49,7 +55,7 @@ public final class BrewmasterThunderClap extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -57,7 +63,7 @@ public final class BrewmasterThunderClap extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -105,8 +111,20 @@ public final class BrewmasterThunderClap extends Ability {
         return movement_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

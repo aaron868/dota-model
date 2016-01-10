@@ -6,16 +6,15 @@ public final class BroodmotherSpawnSpiderlings extends Ability {
 
     private static BroodmotherSpawnSpiderlings instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final int abilityModifierSupportValue;
+    private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,21 +22,23 @@ public final class BroodmotherSpawnSpiderlings extends Ability {
     private final int[] count;
     private final int[] damage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int projectile_speed;
     private final double[] spiderling_duration;
 
     private BroodmotherSpawnSpiderlings() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
-        abilityCastRange = 700;
+        abilityCastRange = new int[]{700,700,700,700};
         abilityCooldown = new double[]{10.0,10.0,10.0,10.0};
         abilityManaCost = new int[]{120,120,120,120};
         abilityModifierSupportValue = 0;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5279;
         key = "broodmother_spawn_spiderlings";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -45,7 +46,10 @@ public final class BroodmotherSpawnSpiderlings extends Ability {
         count = new int[]{1,2,3,4};
         damage = new int[]{70,140,210,280};
         localizedName = "Spawn Spiderlings";
-        owningHeroShortKey = "broodmother";
+        ownerKey = "npc_dota_hero_broodmother";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         projectile_speed = 1200;
         spiderling_duration = new double[]{60.0,60.0,60.0,60.0};
     }
@@ -57,7 +61,7 @@ public final class BroodmotherSpawnSpiderlings extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -65,7 +69,7 @@ public final class BroodmotherSpawnSpiderlings extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -77,7 +81,7 @@ public final class BroodmotherSpawnSpiderlings extends Ability {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
@@ -85,16 +89,12 @@ public final class BroodmotherSpawnSpiderlings extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -125,8 +125,20 @@ public final class BroodmotherSpawnSpiderlings extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getProjectileSpeed() {

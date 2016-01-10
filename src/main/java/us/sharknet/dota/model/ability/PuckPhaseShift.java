@@ -7,7 +7,7 @@ public final class PuckPhaseShift extends Ability {
     private static PuckPhaseShift instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final double[] abilityChannelTime;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
@@ -15,11 +15,14 @@ public final class PuckPhaseShift extends Ability {
     private final String key;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private PuckPhaseShift() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT","DOTA_ABILITY_BEHAVIOR_CHANNELLED","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"};
-        abilityCastPoint = new int[]{0,0,0,0};
+        abilityCastPoint = new double[]{0,0,0,0};
         abilityChannelTime = new double[]{0.75,1.50,2.25,3.25};
         abilityCooldown = new double[]{6.0,6.0,6.0,6.0};
         abilityManaCost = new int[]{0,0,0,0};
@@ -27,7 +30,10 @@ public final class PuckPhaseShift extends Ability {
         key = "puck_phase_shift";
         duration = new double[]{0.75,1.5,2.25,3.25};
         localizedName = "Phase Shift";
-        owningHeroShortKey = "puck";
+        ownerKey = "npc_dota_hero_puck";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static PuckPhaseShift instance() {
@@ -41,7 +47,7 @@ public final class PuckPhaseShift extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -73,8 +79,20 @@ public final class PuckPhaseShift extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

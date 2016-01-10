@@ -6,8 +6,8 @@ public final class WispSpirits extends Ability {
 
     private static WispSpirits instance;
 
-    private final String abilityBehavior;
-    private final int abilityCastPoint;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
@@ -24,14 +24,17 @@ public final class WispSpirits extends Ability {
     private final String localizedName;
     private final int[] max_range;
     private final int[] min_range;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] revolution_time;
     private final double[] spirit_duration;
     private final int[] spirit_movement_rate;
 
     private WispSpirits() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = 0;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{0,0,0,0};
         abilityCooldown = new double[]{20.0,18.0,16.0,14.0};
         abilityDuration = new double[]{19.0,19.0,19.0,19.0};
         abilityManaCost = new int[]{120,130,140,150};
@@ -48,7 +51,10 @@ public final class WispSpirits extends Ability {
         localizedName = "Spirits";
         max_range = new int[]{875,875,875,875};
         min_range = new int[]{100,100,100,100};
-        owningHeroShortKey = "wisp";
+        ownerKey = "npc_dota_hero_wisp";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         revolution_time = new double[]{5.0,5.0,5.0,5.0};
         spirit_duration = new double[]{19.0,19.0,19.0,19.0};
         spirit_movement_rate = new int[]{250,250,250,250};
@@ -61,11 +67,11 @@ public final class WispSpirits extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -133,8 +139,20 @@ public final class WispSpirits extends Ability {
         return min_range;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getRevolutionTime() {

@@ -9,32 +9,36 @@ public final class DisruptorKineticField extends Ability {
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int[] abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double[] duration;
     private final double[] formation_time;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private DisruptorKineticField() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.05,0.05,0.05,0.05};
         abilityCastRange = new int[]{900,900,900,900};
-        abilityCooldown = new int[]{13,12,11,10};
+        abilityCooldown = new double[]{13,12,11,10};
         abilityManaCost = new int[]{70,70,70,70};
-        fightRecapLevel = 1;
         iD = 5460;
         key = "disruptor_kinetic_field";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{2.6,3.2,3.8,4.4};
         formation_time = new double[]{1.2,1.2,1.2,1.2};
         localizedName = "Kinetic Field";
-        owningHeroShortKey = "disruptor";
+        ownerKey = "npc_dota_hero_disruptor";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 325;
     }
 
@@ -57,16 +61,12 @@ public final class DisruptorKineticField extends Ability {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
     public int[] getAbilityManaCost() {
         return abilityManaCost;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -93,8 +93,20 @@ public final class DisruptorKineticField extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

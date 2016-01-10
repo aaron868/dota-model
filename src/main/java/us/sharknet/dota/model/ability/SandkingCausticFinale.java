@@ -6,7 +6,7 @@ public final class SandkingCausticFinale extends Ability {
 
     private static SandkingCausticFinale instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
@@ -20,10 +20,13 @@ public final class SandkingCausticFinale extends Ability {
     private final int caustic_finale_slow;
     private final int caustic_finale_slow_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private SandkingCausticFinale() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5104;
         key = "sandking_caustic_finale";
@@ -37,7 +40,10 @@ public final class SandkingCausticFinale extends Ability {
         caustic_finale_slow = -30;
         caustic_finale_slow_duration = 3;
         localizedName = "Caustic Finale";
-        owningHeroShortKey = "sand_king";
+        ownerKey = "npc_dota_hero_sand_king";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static SandkingCausticFinale instance() {
@@ -47,7 +53,7 @@ public final class SandkingCausticFinale extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -103,8 +109,20 @@ public final class SandkingCausticFinale extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

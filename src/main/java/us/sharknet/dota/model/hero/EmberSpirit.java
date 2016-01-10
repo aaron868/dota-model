@@ -40,7 +40,6 @@ public final class EmberSpirit extends Hero {
     private final int visionDaytimeRange;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private EmberSpirit() {
@@ -77,7 +76,6 @@ public final class EmberSpirit extends Hero {
         visionDaytimeRange = 1800;
         active = true;
         localizedName = "Ember Spirit";
-        shortKey = "ember_spirit";
         url = "Ember_Spirit";
     }
 
@@ -218,10 +216,6 @@ public final class EmberSpirit extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

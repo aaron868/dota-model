@@ -6,20 +6,26 @@ public final class RoshanSpellBlock extends Ability {
 
     private static RoshanSpellBlock instance;
 
-    private final String abilityBehavior;
-    private final int abilityCooldown;
+    private final String[] abilityBehavior;
+    private final double[] abilityCooldown;
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private RoshanSpellBlock() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityCooldown = 15;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
+        abilityCooldown = new double[]{15,15,15,15};
         iD = 5213;
         key = "roshan_spell_block";
         localizedName = "Spell Block";
-        owningHeroShortKey = "roshan";
+        ownerKey = "npc_dota_roshan";
+        ownerType = AbilityOwnerType.Roshan;
+        passive = false;
+        placeholder = false;
     }
 
     public static RoshanSpellBlock instance() {
@@ -29,11 +35,11 @@ public final class RoshanSpellBlock extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -49,8 +55,20 @@ public final class RoshanSpellBlock extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

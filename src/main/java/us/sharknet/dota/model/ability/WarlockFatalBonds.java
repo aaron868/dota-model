@@ -7,15 +7,14 @@ public final class WarlockFatalBonds extends Ability {
     private static WarlockFatalBonds instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
-    private final int abilityModifierSupportValue;
-    private final String abilityUnitTargetTeam;
+    private final double abilityModifierSupportValue;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,20 +22,22 @@ public final class WarlockFatalBonds extends Ability {
     private final int damage_share_percentage;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int search_aoe;
 
     private WarlockFatalBonds() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .2;
-        abilityCastRange = 1000;
+        abilityCastPoint = new double[]{.2,.2,.2,.2};
+        abilityCastRange = new int[]{1000,1000,1000,1000};
         abilityCooldown = new double[]{25.0,25.0,25.0,25.0};
         abilityDamage = new int[]{0,0,0,0};
         abilityManaCost = new int[]{120,120,120,120};
         abilityModifierSupportValue = 0;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5162;
         key = "warlock_fatal_bonds";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -44,7 +45,10 @@ public final class WarlockFatalBonds extends Ability {
         damage_share_percentage = 25;
         duration = 25;
         localizedName = "Fatal Bonds";
-        owningHeroShortKey = "warlock";
+        ownerKey = "npc_dota_hero_warlock";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         search_aoe = 7;
     }
 
@@ -59,11 +63,11 @@ public final class WarlockFatalBonds extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -79,20 +83,16 @@ public final class WarlockFatalBonds extends Ability {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -123,8 +123,20 @@ public final class WarlockFatalBonds extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSearchAoe() {

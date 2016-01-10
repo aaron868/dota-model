@@ -7,9 +7,9 @@ public final class ObsidianDestroyerMindOverMatter extends Ability {
     private static ObsidianDestroyerMindOverMatter instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -18,16 +18,19 @@ public final class ObsidianDestroyerMindOverMatter extends Ability {
     private final int area_of_effect;
     private final int[] base_damage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int slow_duration;
     private final double slow_per_int;
     private final int trigger_delay;
 
     private ObsidianDestroyerMindOverMatter() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
-        abilityCastPoint = .2;
-        abilityCastRange = 800;
-        abilityCooldown = new int[]{16,14,12,10};
+        abilityCastPoint = new double[]{.2,.2,.2,.2};
+        abilityCastRange = new int[]{800,800,800,800};
+        abilityCooldown = new double[]{16,14,12,10};
         abilityManaCost = new int[]{80,100,120,140};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGIC";
         iD = 5684;
@@ -36,7 +39,10 @@ public final class ObsidianDestroyerMindOverMatter extends Ability {
         area_of_effect = 350;
         base_damage = new int[]{100,175,250,325};
         localizedName = "Mind Over Matter";
-        owningHeroShortKey = "obsidian_destroyer";
+        ownerKey = "npc_dota_hero_obsidian_destroyer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         slow_duration = 4;
         slow_per_int = .5;
         trigger_delay = 2;
@@ -53,15 +59,15 @@ public final class ObsidianDestroyerMindOverMatter extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -97,8 +103,20 @@ public final class ObsidianDestroyerMindOverMatter extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSlowDuration() {

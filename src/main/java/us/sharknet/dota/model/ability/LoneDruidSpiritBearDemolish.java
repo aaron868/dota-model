@@ -6,21 +6,27 @@ public final class LoneDruidSpiritBearDemolish extends Ability {
 
     private static LoneDruidSpiritBearDemolish instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int bonus_building_damage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int spell_resistance;
 
     private LoneDruidSpiritBearDemolish() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5420;
         key = "lone_druid_spirit_bear_demolish";
         bonus_building_damage = 40;
         localizedName = "Spirit Bear Demolish";
-        owningHeroShortKey = "lone_druid_spirit_bear";
+        ownerKey = "npc_dota_lone_druid_bear";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
         spell_resistance = 33;
     }
 
@@ -31,7 +37,7 @@ public final class LoneDruidSpiritBearDemolish extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -51,8 +57,20 @@ public final class LoneDruidSpiritBearDemolish extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSpellResistance() {

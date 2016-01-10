@@ -6,11 +6,10 @@ public final class LycanShapeshift extends Ability {
 
     private static LycanShapeshift instance;
 
-    private final String abilityBehavior;
-    private final int[] abilityCooldown;
+    private final String[] abilityBehavior;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final int bonus_night_vision;
@@ -18,16 +17,18 @@ public final class LycanShapeshift extends Ability {
     private final int[] crit_multiplier;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int speed;
     private final double transformation_time;
 
     private LycanShapeshift() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCooldown = new int[]{120,90,60};
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCooldown = new double[]{120,90,60};
         abilityManaCost = new int[]{100,100,100};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5398;
         key = "lycan_shapeshift";
         bonus_night_vision = 1000;
@@ -35,7 +36,10 @@ public final class LycanShapeshift extends Ability {
         crit_multiplier = new int[]{140,160,180};
         duration = 18;
         localizedName = "Shapeshift";
-        owningHeroShortKey = "lycan";
+        ownerKey = "npc_dota_hero_lycan";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         speed = 650;
         transformation_time = 1.5;
     }
@@ -47,11 +51,11 @@ public final class LycanShapeshift extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -61,10 +65,6 @@ public final class LycanShapeshift extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -95,8 +95,20 @@ public final class LycanShapeshift extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSpeed() {

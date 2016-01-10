@@ -7,8 +7,8 @@ public final class TechiesStasisTrap extends Ability {
     private static TechiesStasisTrap instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final int iD;
@@ -20,14 +20,17 @@ public final class TechiesStasisTrap extends Ability {
     private final double explode_delay;
     private final int fade_time;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] stun_duration;
     private final int stun_radius;
 
     private TechiesStasisTrap() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN","DOTA_ABILITY_BEHAVIOR_AOE"};
-        abilityCastPoint = 1;
-        abilityCastRange = 150;
+        abilityCastPoint = new double[]{1,1,1,1};
+        abilityCastRange = new int[]{150,150,150,150};
         abilityCooldown = new double[]{20.0,16.0,13.0,10.0};
         abilityManaCost = new int[]{80,110,140,160};
         iD = 5600;
@@ -39,7 +42,10 @@ public final class TechiesStasisTrap extends Ability {
         explode_delay = 1.5;
         fade_time = 2;
         localizedName = "Stasis Trap";
-        owningHeroShortKey = "techies";
+        ownerKey = "npc_dota_hero_techies";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         stun_duration = new double[]{2.5,3.0,3.5,4.0};
         stun_radius = 450;
     }
@@ -55,11 +61,11 @@ public final class TechiesStasisTrap extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -107,8 +113,20 @@ public final class TechiesStasisTrap extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getStunDuration() {

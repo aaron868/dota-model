@@ -6,35 +6,39 @@ public final class OmniknightGuardianAngel extends Ability {
 
     private static OmniknightGuardianAngel instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double[] duration;
     private final double[] duration_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private OmniknightGuardianAngel() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.5,0.5,0.5};
         abilityCooldown = new double[]{150.0,150.0,150.0};
         abilityManaCost = new int[]{125,175,250};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5266;
         key = "omniknight_guardian_angel";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
         duration = new double[]{6.0,7.0,8.0};
         duration_scepter = new double[]{8.0,9.0,10.0};
         localizedName = "Guardian Angel";
-        owningHeroShortKey = "omniknight";
+        ownerKey = "npc_dota_hero_omniknight";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{600,600,600};
     }
 
@@ -45,7 +49,7 @@ public final class OmniknightGuardianAngel extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -63,10 +67,6 @@ public final class OmniknightGuardianAngel extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -93,8 +93,20 @@ public final class OmniknightGuardianAngel extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

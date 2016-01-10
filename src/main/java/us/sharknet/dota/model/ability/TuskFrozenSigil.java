@@ -6,7 +6,7 @@ public final class TuskFrozenSigil extends Ability {
 
     private static TuskFrozenSigil instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
@@ -16,12 +16,15 @@ public final class TuskFrozenSigil extends Ability {
     private final int[] attack_slow;
     private final String localizedName;
     private final int[] move_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int sigil_duration;
     private final int sigil_radius;
 
     private TuskFrozenSigil() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
         abilityCooldown = new double[]{50.0,50.0,50.0,50.0};
         abilityManaCost = new int[]{75,75,75,75};
@@ -31,7 +34,10 @@ public final class TuskFrozenSigil extends Ability {
         attack_slow = new int[]{30,40,50,60};
         localizedName = "Frozen Sigil";
         move_slow = new int[]{10,15,20,25};
-        owningHeroShortKey = "tusk";
+        ownerKey = "npc_dota_hero_tusk";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         sigil_duration = 3;
         sigil_radius = 600;
     }
@@ -43,7 +49,7 @@ public final class TuskFrozenSigil extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -83,8 +89,20 @@ public final class TuskFrozenSigil extends Ability {
         return move_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSigilDuration() {

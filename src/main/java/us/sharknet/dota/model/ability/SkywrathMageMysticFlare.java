@@ -8,13 +8,12 @@ public final class SkywrathMageMysticFlare extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,20 +21,22 @@ public final class SkywrathMageMysticFlare extends Ability {
     private final double damage_interval;
     private final double duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final double[] scepter_cooldown;
 
     private SkywrathMageMysticFlare() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.1,0.1,0.1,0.1};
-        abilityCastRange = 1200;
+        abilityCastRange = new int[]{1200,1200,1200,1200};
         abilityCooldown = new double[]{60.0,40.0,20.0};
         abilityManaCost = new int[]{350,575,800};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        fightRecapLevel = 2;
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO"};
         iD = 5584;
         key = "skywrath_mage_mystic_flare";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -43,7 +44,10 @@ public final class SkywrathMageMysticFlare extends Ability {
         damage_interval = .1;
         duration = 2.4;
         localizedName = "Mystic Flare";
-        owningHeroShortKey = "skywrath_mage";
+        ownerKey = "npc_dota_hero_skywrath_mage";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 170;
         scepter_cooldown = new double[]{20.0,10.0,0.0};
     }
@@ -63,7 +67,7 @@ public final class SkywrathMageMysticFlare extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -83,12 +87,8 @@ public final class SkywrathMageMysticFlare extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -119,8 +119,20 @@ public final class SkywrathMageMysticFlare extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

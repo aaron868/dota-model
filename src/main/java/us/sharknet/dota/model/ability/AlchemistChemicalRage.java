@@ -6,12 +6,11 @@ public final class AlchemistChemicalRage extends Ability {
 
     private static AlchemistChemicalRage instance;
 
-    private final String abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCooldown;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final double[] base_attack_time;
@@ -21,16 +20,18 @@ public final class AlchemistChemicalRage extends Ability {
     private final int[] bonus_movespeed;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double transformation_time;
 
     private AlchemistChemicalRage() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = 0;
-        abilityCooldown = 45;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCooldown = new double[]{45,45,45,45};
         abilityManaCost = new int[]{50,100,150};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5369;
         key = "alchemist_chemical_rage";
         base_attack_time = new double[]{1.4,1.2,1.0};
@@ -40,7 +41,10 @@ public final class AlchemistChemicalRage extends Ability {
         bonus_movespeed = new int[]{30,40,60};
         duration = 25;
         localizedName = "Chemical Rage";
-        owningHeroShortKey = "alchemist";
+        ownerKey = "npc_dota_hero_alchemist";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         transformation_time = .35;
     }
 
@@ -51,15 +55,15 @@ public final class AlchemistChemicalRage extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -69,10 +73,6 @@ public final class AlchemistChemicalRage extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -111,8 +111,20 @@ public final class AlchemistChemicalRage extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getTransformationTime() {

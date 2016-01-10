@@ -8,9 +8,9 @@ public final class MiranaLeap extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
-    private final int abilityDuration;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final int iD;
     private final String key;
@@ -21,14 +21,17 @@ public final class MiranaLeap extends Ability {
     private final int[] leap_speedbonus;
     private final int[] leap_speedbonus_as;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private MiranaLeap() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 0;
+        abilityCastRange = new int[]{0,0,0,0};
         abilityCooldown = new double[]{30.0,26.0,22.0,18.0};
-        abilityDuration = 1;
+        abilityDuration = new double[]{1,1,1,1};
         abilityManaCost = new int[]{40,35,30,20};
         iD = 5050;
         key = "mirana_leap";
@@ -39,7 +42,10 @@ public final class MiranaLeap extends Ability {
         leap_speedbonus = new int[]{4,8,12,16};
         leap_speedbonus_as = new int[]{8,16,24,32};
         localizedName = "Leap";
-        owningHeroShortKey = "mirana";
+        ownerKey = "npc_dota_hero_mirana";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static MiranaLeap instance() {
@@ -57,7 +63,7 @@ public final class MiranaLeap extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -65,7 +71,7 @@ public final class MiranaLeap extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -109,8 +115,20 @@ public final class MiranaLeap extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

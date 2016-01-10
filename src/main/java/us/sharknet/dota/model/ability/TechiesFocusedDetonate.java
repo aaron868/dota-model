@@ -7,26 +7,30 @@ public final class TechiesFocusedDetonate extends Ability {
     private static TechiesFocusedDetonate instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private TechiesFocusedDetonate() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_UNRESTRICTED","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastRange = 0;
+        abilityCastRange = new int[]{0,0,0,0};
         abilityCooldown = new double[]{1.0,1.0,1.0};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5635;
         key = "techies_focused_detonate";
-        maxLevel = 1;
         localizedName = "Focused Detonate";
-        owningHeroShortKey = "techies";
+        ownerKey = "npc_dota_hero_techies";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 700;
     }
 
@@ -41,7 +45,7 @@ public final class TechiesFocusedDetonate extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -61,16 +65,24 @@ public final class TechiesFocusedDetonate extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

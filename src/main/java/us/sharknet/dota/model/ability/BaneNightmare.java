@@ -9,14 +9,14 @@ public final class BaneNightmare extends Ability {
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int[] abilityCooldown;
-    private final int abilityDamage;
+    private final double[] abilityCooldown;
+    private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
@@ -27,20 +27,23 @@ public final class BaneNightmare extends Ability {
     private final String localizedName;
     private final int nightmare_dot_interval;
     private final int nightmare_invuln_time;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BaneNightmare() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
         abilityCastRange = new int[]{500,550,600,650};
-        abilityCooldown = new int[]{22,19,16,13};
-        abilityDamage = 20;
+        abilityCooldown = new double[]{22,19,16,13};
+        abilityDamage = new int[]{20,20,20,20};
         abilityDuration = new double[]{4.0,5.0,6.0,7.0};
         abilityManaCost = new int[]{165,165,165,165};
         abilityModifierSupportValue = .5;
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_BOTH"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
         iD = 5014;
         key = "bane_nightmare";
@@ -51,7 +54,10 @@ public final class BaneNightmare extends Ability {
         localizedName = "Nightmare";
         nightmare_dot_interval = 1;
         nightmare_invuln_time = 1;
-        owningHeroShortKey = "bane";
+        ownerKey = "npc_dota_hero_bane";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static BaneNightmare instance() {
@@ -73,11 +79,11 @@ public final class BaneNightmare extends Ability {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityDamage() {
+    public int[] getAbilityDamage() {
         return abilityDamage;
     }
 
@@ -97,11 +103,11 @@ public final class BaneNightmare extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -145,8 +151,20 @@ public final class BaneNightmare extends Ability {
         return nightmare_invuln_time;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

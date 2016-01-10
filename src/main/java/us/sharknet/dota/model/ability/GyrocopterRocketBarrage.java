@@ -7,37 +7,41 @@ public final class GyrocopterRocketBarrage extends Ability {
     private static GyrocopterRocketBarrage instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
-    private final int[] abilityDuration;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int rockets_per_second;
 
     private GyrocopterRocketBarrage() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = 0;
-        abilityCastRange = 0;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{0,0,0,0};
         abilityCooldown = new double[]{7.0,6.5,6,5.5};
         abilityDamage = new int[]{7,12,17,22};
-        abilityDuration = new int[]{3,3,3,3};
+        abilityDuration = new double[]{3,3,3,3};
         abilityManaCost = new int[]{90,90,90,90};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5361;
         key = "gyrocopter_rocket_barrage";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Rocket Barrage";
-        owningHeroShortKey = "gyrocopter";
+        ownerKey = "npc_dota_hero_gyrocopter";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 400;
         rockets_per_second = 10;
     }
@@ -53,11 +57,11 @@ public final class GyrocopterRocketBarrage extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -69,7 +73,7 @@ public final class GyrocopterRocketBarrage extends Ability {
         return abilityDamage;
     }
 
-    public int[] getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -79,10 +83,6 @@ public final class GyrocopterRocketBarrage extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -101,8 +101,20 @@ public final class GyrocopterRocketBarrage extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

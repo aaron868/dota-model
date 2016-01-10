@@ -8,8 +8,8 @@ public final class TechiesLandMines extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -21,14 +21,17 @@ public final class TechiesLandMines extends Ability {
     private final double explode_delay;
     private final int fade_time;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int small_radius;
 
     private TechiesLandMines() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 100;
-        abilityCooldown = new int[]{9,8,7,5};
+        abilityCastRange = new int[]{100,100,100,100};
+        abilityCooldown = new double[]{9,8,7,5};
         abilityManaCost = new int[]{60,75,85,100};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         iD = 5599;
@@ -40,7 +43,10 @@ public final class TechiesLandMines extends Ability {
         explode_delay = .3;
         fade_time = 2;
         localizedName = "Land Mines";
-        owningHeroShortKey = "techies";
+        ownerKey = "npc_dota_hero_techies";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         small_radius = 200;
     }
 
@@ -59,11 +65,11 @@ public final class TechiesLandMines extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -111,8 +117,20 @@ public final class TechiesLandMines extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSmallRadius() {

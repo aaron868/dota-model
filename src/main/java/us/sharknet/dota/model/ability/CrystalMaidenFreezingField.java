@@ -8,14 +8,13 @@ public final class CrystalMaidenFreezingField extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityChannelTime;
-    private final int abilityCooldown;
-    private final int abilityDuration;
+    private final double[] abilityChannelTime;
+    private final double[] abilityCooldown;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -31,21 +30,23 @@ public final class CrystalMaidenFreezingField extends Ability {
     private final String localizedName;
     private final int movespeed_slow;
     private final int movespeed_slow_scepter;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int slow_duration;
 
     private CrystalMaidenFreezingField() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_CHANNELLED","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityChannelTime = 10;
-        abilityCooldown = 90;
-        abilityDuration = 1;
+        abilityChannelTime = new double[]{10,10,10,10};
+        abilityCooldown = new double[]{90,90,90,90};
+        abilityDuration = new double[]{1,1,1,1};
         abilityManaCost = new int[]{200,400,600};
         abilityModifierSupportValue = .35;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5129;
         key = "crystal_maiden_freezing_field";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -61,7 +62,10 @@ public final class CrystalMaidenFreezingField extends Ability {
         localizedName = "Freezing Field";
         movespeed_slow = -30;
         movespeed_slow_scepter = -50;
-        owningHeroShortKey = "crystal_maiden";
+        ownerKey = "npc_dota_hero_crystal_maiden";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 835;
         slow_duration = 1;
     }
@@ -81,15 +85,15 @@ public final class CrystalMaidenFreezingField extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityChannelTime() {
+    public double[] getAbilityChannelTime() {
         return abilityChannelTime;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -107,10 +111,6 @@ public final class CrystalMaidenFreezingField extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -173,8 +173,20 @@ public final class CrystalMaidenFreezingField extends Ability {
         return movespeed_slow_scepter;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

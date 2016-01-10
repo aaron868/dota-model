@@ -10,20 +10,24 @@ public final class CourierReturnStashItems extends Ability {
     private final String abilityType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int handoff_distance;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private CourierReturnStashItems() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         iD = 5207;
         key = "courier_return_stash_items";
-        maxLevel = 1;
         handoff_distance = 400;
         localizedName = "Return Stash Items";
-        owningHeroShortKey = "courier";
+        ownerKey = "npc_dota_courier";
+        ownerType = AbilityOwnerType.Courier;
+        passive = false;
+        placeholder = false;
     }
 
     public static CourierReturnStashItems instance() {
@@ -49,10 +53,6 @@ public final class CourierReturnStashItems extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public int getHandoffDistance() {
         return handoff_distance;
     }
@@ -61,8 +61,20 @@ public final class CourierReturnStashItems extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

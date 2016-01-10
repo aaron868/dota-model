@@ -7,7 +7,7 @@ public final class BrewmasterStormWindWalk extends Ability {
     private static BrewmasterStormWindWalk instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final int iD;
     private final String key;
@@ -16,11 +16,14 @@ public final class BrewmasterStormWindWalk extends Ability {
     private final double[] duration;
     private final double[] fade_time;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BrewmasterStormWindWalk() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCooldown = 5;
+        abilityCooldown = new double[]{5,5,5,5};
         abilityManaCost = new int[]{75,75,75,75};
         iD = 5410;
         key = "brewmaster_storm_wind_walk";
@@ -29,7 +32,10 @@ public final class BrewmasterStormWindWalk extends Ability {
         duration = new double[]{20.0,20.0,20.0,20.0};
         fade_time = new double[]{0.6,0.6,0.6,0.6};
         localizedName = "Wind Walk";
-        owningHeroShortKey = "brewmaster_storm";
+        ownerKey = "npc_dota_brewmaster_storm";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
     }
 
     public static BrewmasterStormWindWalk instance() {
@@ -43,7 +49,7 @@ public final class BrewmasterStormWindWalk extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -79,8 +85,20 @@ public final class BrewmasterStormWindWalk extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

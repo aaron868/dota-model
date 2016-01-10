@@ -6,14 +6,14 @@ public final class LegionCommanderPressTheAttack extends Ability {
 
     private static LegionCommanderPressTheAttack instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
-    private final int abilityManaCost;
-    private final int abilityModifierSupportValue;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final int[] abilityManaCost;
+    private final double abilityModifierSupportValue;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
@@ -22,17 +22,20 @@ public final class LegionCommanderPressTheAttack extends Ability {
     private final int duration;
     private final int[] hp_regen;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private LegionCommanderPressTheAttack() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = .2;
-        abilityCastRange = 800;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityCastPoint = new double[]{.2,.2,.2,.2};
+        abilityCastRange = new int[]{800,800,800,800};
         abilityCooldown = new double[]{16.0,15.0,14.0,13.0};
-        abilityManaCost = 110;
+        abilityManaCost = new int[]{110,110,110,110};
         abilityModifierSupportValue = 3;
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5596;
         key = "legion_commander_press_the_attack";
@@ -41,7 +44,10 @@ public final class LegionCommanderPressTheAttack extends Ability {
         duration = 5;
         hp_regen = new int[]{30,40,50,60};
         localizedName = "Press The Attack";
-        owningHeroShortKey = "legion_commander";
+        ownerKey = "npc_dota_hero_legion_commander";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static LegionCommanderPressTheAttack instance() {
@@ -51,15 +57,15 @@ public final class LegionCommanderPressTheAttack extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -67,19 +73,19 @@ public final class LegionCommanderPressTheAttack extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -115,8 +121,20 @@ public final class LegionCommanderPressTheAttack extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

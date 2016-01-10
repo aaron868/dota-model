@@ -6,14 +6,13 @@ public final class ChaosKnightRealityRift extends Ability {
 
     private static ChaosKnightRealityRift instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int[] abilityCooldown;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetTeam;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -21,17 +20,19 @@ public final class ChaosKnightRealityRift extends Ability {
     private final double bonus_duration;
     private final int[] cast_range;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ChaosKnightRealityRift() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
         abilityCastRange = new int[]{550,600,650,700};
-        abilityCooldown = new int[]{24,18,12,6};
-        abilityManaCost = 50;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityCooldown = new double[]{24,18,12,6};
+        abilityManaCost = new int[]{50,50,50,50};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5427;
         key = "chaos_knight_reality_rift";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -39,7 +40,10 @@ public final class ChaosKnightRealityRift extends Ability {
         bonus_duration = 1.2;
         cast_range = new int[]{550,600,650,700};
         localizedName = "Reality Rift";
-        owningHeroShortKey = "chaos_knight";
+        ownerKey = "npc_dota_hero_chaos_knight";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static ChaosKnightRealityRift instance() {
@@ -49,7 +53,7 @@ public final class ChaosKnightRealityRift extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,24 +65,20 @@ public final class ChaosKnightRealityRift extends Ability {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -109,8 +109,20 @@ public final class ChaosKnightRealityRift extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

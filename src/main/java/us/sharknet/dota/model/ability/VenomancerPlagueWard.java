@@ -6,10 +6,10 @@ public final class VenomancerPlagueWard extends Ability {
 
     private static VenomancerPlagueWard instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -17,15 +17,18 @@ public final class VenomancerPlagueWard extends Ability {
     private final String spellImmunityType;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] ward_damage_tooltip;
     private final int[] ward_hp_tooltip;
 
     private VenomancerPlagueWard() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 850;
-        abilityCooldown = 5;
+        abilityCastRange = new int[]{850,850,850,850};
+        abilityCooldown = new double[]{5,5,5,5};
         abilityManaCost = new int[]{20,20,20,20};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         iD = 5180;
@@ -33,7 +36,10 @@ public final class VenomancerPlagueWard extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         duration = 4;
         localizedName = "Plague Ward";
-        owningHeroShortKey = "venomancer";
+        ownerKey = "npc_dota_hero_venomancer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         ward_damage_tooltip = new int[]{10,19,29,38};
         ward_hp_tooltip = new int[]{75,200,325,450};
     }
@@ -45,7 +51,7 @@ public final class VenomancerPlagueWard extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -53,11 +59,11 @@ public final class VenomancerPlagueWard extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -89,8 +95,20 @@ public final class VenomancerPlagueWard extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getWardDamageTooltip() {

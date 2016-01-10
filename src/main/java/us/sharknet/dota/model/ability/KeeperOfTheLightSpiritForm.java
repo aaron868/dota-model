@@ -6,7 +6,7 @@ public final class KeeperOfTheLightSpiritForm extends Ability {
 
     private static KeeperOfTheLightSpiritForm instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
@@ -15,10 +15,13 @@ public final class KeeperOfTheLightSpiritForm extends Ability {
     private final String key;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private KeeperOfTheLightSpiritForm() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCooldown = new double[]{80.0,70.0,60.0};
         abilityManaCost = new int[]{100,100,100};
         abilityModifierSupportValue = .35;
@@ -27,7 +30,10 @@ public final class KeeperOfTheLightSpiritForm extends Ability {
         key = "keeper_of_the_light_spirit_form";
         duration = new double[]{40.0,40.0,40.0};
         localizedName = "Spirit Form";
-        owningHeroShortKey = "keeper_of_the_light";
+        ownerKey = "npc_dota_hero_keeper_of_the_light";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static KeeperOfTheLightSpiritForm instance() {
@@ -37,7 +43,7 @@ public final class KeeperOfTheLightSpiritForm extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,8 +79,20 @@ public final class KeeperOfTheLightSpiritForm extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

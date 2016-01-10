@@ -43,7 +43,6 @@ public final class Phoenix extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Phoenix() {
@@ -83,7 +82,6 @@ public final class Phoenix extends Hero {
         team = "Good";
         active = true;
         localizedName = "Phoenix";
-        shortKey = "phoenix";
         url = "Phoenix";
     }
 
@@ -236,10 +234,6 @@ public final class Phoenix extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

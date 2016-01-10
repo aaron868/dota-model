@@ -7,27 +7,31 @@ public final class InvokerQuas extends Ability {
     private static InvokerQuas instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int[] bonus_strength;
     private final double[] health_regen_per_instance;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private InvokerQuas() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCooldown = 0;
-        abilityManaCost = 0;
+        abilityCooldown = new double[]{0,0,0,0};
+        abilityManaCost = new int[]{0,0,0,0};
         iD = 5370;
         key = "invoker_quas";
-        maxLevel = 7;
         bonus_strength = new int[]{2,4,6,8,10,12,14};
         health_regen_per_instance = new double[]{1.0,2.0,3.0,4.0,5.0,6.0,7.0};
         localizedName = "Quas";
-        owningHeroShortKey = "invoker";
+        ownerKey = "npc_dota_hero_invoker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static InvokerQuas instance() {
@@ -41,11 +45,11 @@ public final class InvokerQuas extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -55,10 +59,6 @@ public final class InvokerQuas extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int[] getBonusStrength() {
@@ -73,8 +73,20 @@ public final class InvokerQuas extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

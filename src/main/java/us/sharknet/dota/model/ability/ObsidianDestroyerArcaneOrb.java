@@ -7,11 +7,11 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
     private static ObsidianDestroyerArcaneOrb instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
@@ -21,15 +21,18 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
     private final int int_steal_duration;
     private final String localizedName;
     private final double[] mana_pool_damage_pct;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ObsidianDestroyerArcaneOrb() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
-        abilityCastRange = 450;
-        abilityCooldown = 0;
+        abilityCastRange = new int[]{450,450,450,450};
+        abilityCooldown = new double[]{0,0,0,0};
         abilityManaCost = new int[]{100,100,100,100};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5391;
         key = "obsidian_destroyer_arcane_orb";
@@ -39,7 +42,10 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
         int_steal_duration = 5;
         localizedName = "Arcane Orb";
         mana_pool_damage_pct = new double[]{6.0,7.0,8.0,9.0};
-        owningHeroShortKey = "obsidian_destroyer";
+        ownerKey = "npc_dota_hero_obsidian_destroyer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static ObsidianDestroyerArcaneOrb instance() {
@@ -53,11 +59,11 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -69,7 +75,7 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -109,8 +115,20 @@ public final class ObsidianDestroyerArcaneOrb extends Ability {
         return mana_pool_damage_pct;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

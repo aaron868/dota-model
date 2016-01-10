@@ -7,38 +7,42 @@ public final class AbyssalUnderlordPitOfMalice extends Ability {
     private static AbyssalUnderlordPitOfMalice instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final double[] ensnare_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
     private final int pit_damage;
     private final int pit_duration;
     private final double pit_interval;
+    private final boolean placeholder;
     private final int radius;
 
     private AbyssalUnderlordPitOfMalice() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
-        abilityCastPoint = .6;
-        abilityCastRange = 750;
+        abilityCastPoint = new double[]{.6,.6,.6,.6};
+        abilityCastRange = new int[]{750,750,750,750};
         abilityCooldown = new double[]{24.0,21.0,18.0,15.0};
         abilityManaCost = new int[]{100,115,130,145};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5614;
         key = "abyssal_underlord_pit_of_malice";
         ensnare_duration = new double[]{1.0,1.5,2.0,2.5};
         localizedName = "Pit Of Malice";
-        owningHeroShortKey = "abyssal_underlord";
+        ownerKey = "npc_dota_hero_abyssal_underlord";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
         pit_damage = 100;
         pit_duration = 7;
         pit_interval = .5;
+        placeholder = false;
         radius = 275;
     }
 
@@ -53,11 +57,11 @@ public final class AbyssalUnderlordPitOfMalice extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -71,10 +75,6 @@ public final class AbyssalUnderlordPitOfMalice extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -93,8 +93,16 @@ public final class AbyssalUnderlordPitOfMalice extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
     }
 
     public int getPitDamage() {
@@ -107,6 +115,10 @@ public final class AbyssalUnderlordPitOfMalice extends Ability {
 
     public double getPitInterval() {
         return pit_interval;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

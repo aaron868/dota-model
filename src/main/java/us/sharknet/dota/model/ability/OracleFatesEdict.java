@@ -6,12 +6,12 @@ public final class OracleFatesEdict extends Ability {
 
     private static OracleFatesEdict instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int[] abilityCooldown;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetFlags;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetFlags;
     private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
@@ -20,15 +20,18 @@ public final class OracleFatesEdict extends Ability {
     private final double[] duration;
     private final String localizedName;
     private final int magic_damage_resistance_pct_tooltip;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private OracleFatesEdict() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = .3;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityCastPoint = new double[]{.3,.3,.3,.3};
         abilityCastRange = new int[]{500,600,700,800};
-        abilityCooldown = new int[]{16,13,10,7};
-        abilityManaCost = 50;
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES";
+        abilityCooldown = new double[]{16,13,10,7};
+        abilityManaCost = new int[]{50,50,50,50};
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"};
         abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY","DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5638;
@@ -37,7 +40,10 @@ public final class OracleFatesEdict extends Ability {
         duration = new double[]{3.0,3.5,4.0,4.5};
         localizedName = "Fates Edict";
         magic_damage_resistance_pct_tooltip = 100;
-        owningHeroShortKey = "oracle";
+        ownerKey = "npc_dota_hero_oracle";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static OracleFatesEdict instance() {
@@ -47,11 +53,11 @@ public final class OracleFatesEdict extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -59,15 +65,15 @@ public final class OracleFatesEdict extends Ability {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
@@ -103,8 +109,20 @@ public final class OracleFatesEdict extends Ability {
         return magic_damage_resistance_pct_tooltip;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

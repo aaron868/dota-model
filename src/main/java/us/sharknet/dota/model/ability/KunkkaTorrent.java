@@ -7,42 +7,46 @@ public final class KunkkaTorrent extends Ability {
     private static KunkkaTorrent instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double[] delay;
     private final String localizedName;
     private final int movespeed_bonus;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final double[] slow_duration;
     private final double[] stun_duration;
 
     private KunkkaTorrent() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .4;
-        abilityCastRange = 1500;
-        abilityCooldown = 10;
+        abilityCastPoint = new double[]{.4,.4,.4,.4};
+        abilityCastRange = new int[]{1500,1500,1500,1500};
+        abilityCooldown = new double[]{10,10,10,10};
         abilityDamage = new int[]{120,180,240,300};
         abilityManaCost = new int[]{120,120,120,120};
         abilityModifierSupportValue = .5;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5031;
         key = "kunkka_torrent";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         delay = new double[]{1.6,1.6,1.6,1.6};
         localizedName = "Torrent";
         movespeed_bonus = -35;
-        owningHeroShortKey = "kunkka";
+        ownerKey = "npc_dota_hero_kunkka";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 225;
         slow_duration = new double[]{1.0,2.0,3.0,4.0};
         stun_duration = new double[]{1.53,1.53,1.53,1.53};
@@ -59,15 +63,15 @@ public final class KunkkaTorrent extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -85,10 +89,6 @@ public final class KunkkaTorrent extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -115,8 +115,20 @@ public final class KunkkaTorrent extends Ability {
         return movespeed_bonus;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

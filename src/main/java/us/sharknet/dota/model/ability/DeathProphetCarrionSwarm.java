@@ -8,20 +8,22 @@ public final class DeathProphetCarrionSwarm extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] end_radius;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] range;
     private final int[] speed;
     private final int[] start_radius;
@@ -29,20 +31,22 @@ public final class DeathProphetCarrionSwarm extends Ability {
     private DeathProphetCarrionSwarm() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 600;
-        abilityCooldown = new int[]{8,7,6,5};
+        abilityCastRange = new int[]{600,600,600,600};
+        abilityCooldown = new double[]{8,7,6,5};
         abilityDamage = new int[]{75,150,225,300};
         abilityManaCost = new int[]{105,120,140,165};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5090;
         key = "death_prophet_carrion_swarm";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         end_radius = new int[]{300,300,300,300};
-        localizedName = "Carrion Swarm";
-        owningHeroShortKey = "death_prophet";
+        localizedName = "Crypt Swarm";
+        ownerKey = "npc_dota_hero_death_prophet";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         range = new int[]{810,810,810,810};
         speed = new int[]{1100,1100,1100,1100};
         start_radius = new int[]{110,110,110,110};
@@ -63,11 +67,11 @@ public final class DeathProphetCarrionSwarm extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -83,16 +87,12 @@ public final class DeathProphetCarrionSwarm extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -115,8 +115,20 @@ public final class DeathProphetCarrionSwarm extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRange() {

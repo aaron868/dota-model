@@ -66,7 +66,7 @@ public class LibraryTest {
 
     @Test
     public void testGetNumberOfAbilities() throws Exception {
-        assertEquals(626, library.getNumberOfAbilities());
+        assertEquals(619, library.getNumberOfAbilities());
     }
 
     @Test

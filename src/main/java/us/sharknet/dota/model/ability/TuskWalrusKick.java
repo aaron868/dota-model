@@ -7,18 +7,16 @@ public final class TuskWalrusKick extends Ability {
     private static TuskWalrusKick instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
-    private final int isGrantedByScepter;
+    private final boolean isGrantedByScepter;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final int air_time;
     private final int cooldown_scepter;
@@ -26,24 +24,25 @@ public final class TuskWalrusKick extends Ability {
     private final int damage;
     private final String localizedName;
     private final int move_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int push_length;
     private final int slow_duration;
 
     private TuskWalrusKick() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
-        abilityCastPoint = .2;
-        abilityCastRange = 128;
-        abilityCooldown = 12;
-        abilityManaCost = 100;
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityCastPoint = new double[]{.2,.2,.2,.2};
+        abilityCastRange = new int[]{128,128,128,128};
+        abilityCooldown = new double[]{12,12,12,12};
+        abilityManaCost = new int[]{100,100,100,100};
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5672;
-        isGrantedByScepter = 1;
+        isGrantedByScepter = true;
         key = "tusk_walrus_kick";
-        maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         air_time = 1;
         cooldown_scepter = 12;
@@ -51,7 +50,10 @@ public final class TuskWalrusKick extends Ability {
         damage = 200;
         localizedName = "Walrus Kick";
         move_slow = 40;
-        owningHeroShortKey = "tusk";
+        ownerKey = "npc_dota_hero_tusk";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         push_length = 900;
         slow_duration = 4;
     }
@@ -67,27 +69,27 @@ public final class TuskWalrusKick extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -95,24 +97,16 @@ public final class TuskWalrusKick extends Ability {
         return abilityUnitTargetType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
-    public int getIsGrantedByScepter() {
+    public boolean getIsGrantedByScepter() {
         return isGrantedByScepter;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getSpellImmunityType() {
@@ -143,8 +137,20 @@ public final class TuskWalrusKick extends Ability {
         return move_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getPushLength() {

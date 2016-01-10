@@ -6,10 +6,10 @@ public final class StormSpiritBallLightning extends Ability {
 
     private static StormSpiritBallLightning instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityDamage;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -24,13 +24,16 @@ public final class StormSpiritBallLightning extends Ability {
     private final int ball_lightning_vision_radius;
     private final int blocker_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private StormSpiritBallLightning() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
         abilityDamage = new int[]{8,12,16};
-        abilityManaCost = 30;
+        abilityManaCost = new int[]{30,30,30,30};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5101;
@@ -45,7 +48,10 @@ public final class StormSpiritBallLightning extends Ability {
         ball_lightning_vision_radius = 400;
         blocker_duration = 5;
         localizedName = "Ball Lightning";
-        owningHeroShortKey = "storm_spirit";
+        ownerKey = "npc_dota_hero_storm_spirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static StormSpiritBallLightning instance() {
@@ -55,7 +61,7 @@ public final class StormSpiritBallLightning extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -67,7 +73,7 @@ public final class StormSpiritBallLightning extends Ability {
         return abilityDamage;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -127,8 +133,20 @@ public final class StormSpiritBallLightning extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

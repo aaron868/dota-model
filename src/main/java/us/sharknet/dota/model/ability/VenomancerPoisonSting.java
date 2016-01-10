@@ -6,7 +6,7 @@ public final class VenomancerPoisonSting extends Ability {
 
     private static VenomancerPoisonSting instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -16,10 +16,13 @@ public final class VenomancerPoisonSting extends Ability {
     private final double[] duration;
     private final String localizedName;
     private final int[] movement_speed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private VenomancerPoisonSting() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5179;
@@ -29,7 +32,10 @@ public final class VenomancerPoisonSting extends Ability {
         duration = new double[]{6.0,9.0,12.0,15.0};
         localizedName = "Poison Sting";
         movement_speed = new int[]{-11,-12,-13,-14};
-        owningHeroShortKey = "venomancer";
+        ownerKey = "npc_dota_hero_venomancer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static VenomancerPoisonSting instance() {
@@ -39,7 +45,7 @@ public final class VenomancerPoisonSting extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -79,8 +85,20 @@ public final class VenomancerPoisonSting extends Ability {
         return movement_speed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

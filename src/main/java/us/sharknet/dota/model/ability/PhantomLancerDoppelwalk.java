@@ -7,11 +7,10 @@ public final class PhantomLancerDoppelwalk extends Ability {
     private static PhantomLancerDoppelwalk instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
-    private final int abilityManaCost;
-    private final int fightRecapLevel;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final int delay;
@@ -21,17 +20,19 @@ public final class PhantomLancerDoppelwalk extends Ability {
     private final int illusion_2_damage_out_pct;
     private final int illusion_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int search_radius;
     private final int target_aoe;
 
     private PhantomLancerDoppelwalk() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
-        abilityCastPoint = .1;
-        abilityCastRange = 600;
-        abilityCooldown = new int[]{25,20,15,10};
-        abilityManaCost = 50;
-        fightRecapLevel = 1;
+        abilityCastPoint = new double[]{.1,.1,.1,.1};
+        abilityCastRange = new int[]{600,600,600,600};
+        abilityCooldown = new double[]{25,20,15,10};
+        abilityManaCost = new int[]{50,50,50,50};
         iD = 5066;
         key = "phantom_lancer_doppelwalk";
         delay = 1;
@@ -40,8 +41,11 @@ public final class PhantomLancerDoppelwalk extends Ability {
         illusion_2_damage_in_pct = 500;
         illusion_2_damage_out_pct = -80;
         illusion_duration = 8;
-        localizedName = "Phantom Doppelganger";
-        owningHeroShortKey = "phantom_lancer";
+        localizedName = "Doppelganger";
+        ownerKey = "npc_dota_hero_phantom_lancer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         search_radius = 900;
         target_aoe = 325;
     }
@@ -57,24 +61,20 @@ public final class PhantomLancerDoppelwalk extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -113,8 +113,20 @@ public final class PhantomLancerDoppelwalk extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSearchRadius() {

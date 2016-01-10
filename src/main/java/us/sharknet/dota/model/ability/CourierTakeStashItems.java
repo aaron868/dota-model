@@ -10,9 +10,11 @@ public final class CourierTakeStashItems extends Ability {
     private final String abilityType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int stash_pickup_distance;
 
     private CourierTakeStashItems() {
@@ -20,9 +22,11 @@ public final class CourierTakeStashItems extends Ability {
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         iD = 5208;
         key = "courier_take_stash_items";
-        maxLevel = 1;
         localizedName = "Take Stash Items";
-        owningHeroShortKey = "courier";
+        ownerKey = "npc_dota_courier";
+        ownerType = AbilityOwnerType.Courier;
+        passive = false;
+        placeholder = false;
         stash_pickup_distance = 250;
     }
 
@@ -49,16 +53,24 @@ public final class CourierTakeStashItems extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getStashPickupDistance() {

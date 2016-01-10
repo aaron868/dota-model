@@ -7,9 +7,9 @@ public final class TerrorbladeMetamorphosis extends Ability {
     private static TerrorbladeMetamorphosis instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final double base_attack_time;
@@ -18,16 +18,19 @@ public final class TerrorbladeMetamorphosis extends Ability {
     private final double[] duration;
     private final String localizedName;
     private final int metamorph_aura_tooltip;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int speed_loss;
     private final int tooltip_attack_range;
     private final double transformation_time;
 
     private TerrorbladeMetamorphosis() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = 0;
-        abilityCooldown = 14;
-        abilityManaCost = 50;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCooldown = new double[]{14,14,14,14};
+        abilityManaCost = new int[]{50,50,50,50};
         iD = 5621;
         key = "terrorblade_metamorphosis";
         base_attack_time = 1.6;
@@ -36,7 +39,10 @@ public final class TerrorbladeMetamorphosis extends Ability {
         duration = new double[]{40.0,44.0,48.0,52.0};
         localizedName = "Metamorphosis";
         metamorph_aura_tooltip = 900;
-        owningHeroShortKey = "terrorblade";
+        ownerKey = "npc_dota_hero_terrorblade";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         speed_loss = 25;
         tooltip_attack_range = 550;
         transformation_time = .35;
@@ -53,15 +59,15 @@ public final class TerrorbladeMetamorphosis extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -97,8 +103,20 @@ public final class TerrorbladeMetamorphosis extends Ability {
         return metamorph_aura_tooltip;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSpeedLoss() {

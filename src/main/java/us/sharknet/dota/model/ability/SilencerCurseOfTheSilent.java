@@ -8,41 +8,45 @@ public final class SilencerCurseOfTheSilent extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] damage;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
     private final int penalty_duration;
+    private final boolean placeholder;
     private final int radius;
 
     private SilencerCurseOfTheSilent() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 1000;
-        abilityCooldown = new int[]{18,16,14,12};
+        abilityCastRange = new int[]{1000,1000,1000,1000};
+        abilityCooldown = new double[]{18,16,14,12};
         abilityManaCost = new int[]{75,95,115,135};
         abilityModifierSupportValue = .5;
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5377;
         key = "silencer_curse_of_the_silent";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = new int[]{14,21,28,35};
         duration = 7;
         localizedName = "Curse Of The Silent";
-        owningHeroShortKey = "silencer";
+        ownerKey = "npc_dota_hero_silencer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
         penalty_duration = 4;
+        placeholder = false;
         radius = 425;
     }
 
@@ -61,11 +65,11 @@ public final class SilencerCurseOfTheSilent extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -83,10 +87,6 @@ public final class SilencerCurseOfTheSilent extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -113,12 +113,24 @@ public final class SilencerCurseOfTheSilent extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
     }
 
     public int getPenaltyDuration() {
         return penalty_duration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

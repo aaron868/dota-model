@@ -6,14 +6,17 @@ public final class LycanSummonWolves extends Ability {
 
     private static LycanSummonWolves instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] wolf_bat;
     private final int[] wolf_damage;
     private final double[] wolf_duration;
@@ -21,14 +24,17 @@ public final class LycanSummonWolves extends Ability {
     private final int[] wolf_index;
 
     private LycanSummonWolves() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCooldown = new double[]{30.0,30.0,30.0,30.0};
-        abilityManaCost = 145;
+        abilityManaCost = new int[]{145,145,145,145};
         iD = 5395;
         key = "lycan_summon_wolves";
         localizedName = "Summon Wolves";
-        owningHeroShortKey = "lycan";
+        ownerKey = "npc_dota_hero_lycan";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         wolf_bat = new double[]{1.25,1.2,1.15,1.1};
         wolf_damage = new int[]{18,29,37,46};
         wolf_duration = new double[]{55.0,55.0,55.0,55.0};
@@ -43,7 +49,7 @@ public final class LycanSummonWolves extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -55,7 +61,7 @@ public final class LycanSummonWolves extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -71,8 +77,20 @@ public final class LycanSummonWolves extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getWolfBat() {

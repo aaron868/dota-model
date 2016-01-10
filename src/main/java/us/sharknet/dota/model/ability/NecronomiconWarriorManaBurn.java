@@ -6,7 +6,7 @@ public final class NecronomiconWarriorManaBurn extends Ability {
 
     private static NecronomiconWarriorManaBurn instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -14,10 +14,13 @@ public final class NecronomiconWarriorManaBurn extends Ability {
     private final int[] burn_amount;
     private final int burn_damage_conversion;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private NecronomiconWarriorManaBurn() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         iD = 5202;
@@ -25,7 +28,10 @@ public final class NecronomiconWarriorManaBurn extends Ability {
         burn_amount = new int[]{25,50,75};
         burn_damage_conversion = 60;
         localizedName = "Mana Burn";
-        owningHeroShortKey = "necronomicon_warrior";
+        ownerKey = "npc_dota_necronomicon_warrior";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
     }
 
     public static NecronomiconWarriorManaBurn instance() {
@@ -35,7 +41,7 @@ public final class NecronomiconWarriorManaBurn extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -67,8 +73,20 @@ public final class NecronomiconWarriorManaBurn extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

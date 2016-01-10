@@ -8,10 +8,9 @@ public final class UndyingTombstone extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -20,7 +19,10 @@ public final class UndyingTombstone extends Ability {
     private final int[] health_threshold_pct_tooltip;
     private final int[] hits_to_destroy_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int[] tombstone_health;
     private final int zombie_interval;
@@ -28,10 +30,9 @@ public final class UndyingTombstone extends Ability {
     private UndyingTombstone() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.45,0.45,0.45,0.45};
-        abilityCastRange = 600;
-        abilityCooldown = 70;
+        abilityCastRange = new int[]{600,600,600,600};
+        abilityCooldown = new double[]{70,70,70,70};
         abilityManaCost = new int[]{120,130,140,150};
-        fightRecapLevel = 1;
         iD = 5444;
         key = "undying_tombstone";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -40,7 +41,10 @@ public final class UndyingTombstone extends Ability {
         health_threshold_pct_tooltip = new int[]{20,25,30,35};
         hits_to_destroy_tooltip = new int[]{3,4,5,7};
         localizedName = "Tombstone";
-        owningHeroShortKey = "undying";
+        ownerKey = "npc_dota_hero_undying";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{600,800,1000,1200};
         tombstone_health = new int[]{6,8,10,14};
         zombie_interval = 3;
@@ -61,20 +65,16 @@ public final class UndyingTombstone extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
     public int[] getAbilityManaCost() {
         return abilityManaCost;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -109,8 +109,20 @@ public final class UndyingTombstone extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

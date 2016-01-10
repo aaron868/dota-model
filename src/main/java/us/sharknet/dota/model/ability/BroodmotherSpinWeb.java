@@ -7,10 +7,10 @@ public final class BroodmotherSpinWeb extends Ability {
     private static BroodmotherSpinWeb instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final int[] bonus_movespeed;
@@ -22,15 +22,18 @@ public final class BroodmotherSpinWeb extends Ability {
     private final int[] invis_movespeed_tooltip;
     private final String localizedName;
     private final int[] max_charges;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private BroodmotherSpinWeb() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
-        abilityCastPoint = .4;
-        abilityCastRange = 1000;
-        abilityCooldown = 0;
-        abilityManaCost = 50;
+        abilityCastPoint = new double[]{.4,.4,.4,.4};
+        abilityCastRange = new int[]{1000,1000,1000,1000};
+        abilityCooldown = new double[]{0,0,0,0};
+        abilityManaCost = new int[]{50,50,50,50};
         iD = 5280;
         key = "broodmother_spin_web";
         bonus_movespeed = new int[]{20,25,30,35};
@@ -42,7 +45,10 @@ public final class BroodmotherSpinWeb extends Ability {
         invis_movespeed_tooltip = new int[]{40,50,60,70};
         localizedName = "Spin Web";
         max_charges = new int[]{1,2,3,4};
-        owningHeroShortKey = "broodmother";
+        ownerKey = "npc_dota_hero_broodmother";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 900;
     }
 
@@ -57,19 +63,19 @@ public final class BroodmotherSpinWeb extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -117,8 +123,20 @@ public final class BroodmotherSpinWeb extends Ability {
         return max_charges;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

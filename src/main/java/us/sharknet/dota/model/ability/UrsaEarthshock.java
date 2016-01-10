@@ -8,37 +8,41 @@ public final class UrsaEarthshock extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
     private final int[] movement_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int shock_radius;
 
     private UrsaEarthshock() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 0;
-        abilityCooldown = 5;
+        abilityCastRange = new int[]{0,0,0,0};
+        abilityCooldown = new double[]{5,5,5,5};
         abilityDamage = new int[]{90,140,190,240};
         abilityDuration = new double[]{4.0,4.0,4.0,4.0};
         abilityManaCost = new int[]{75,75,75,75};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5357;
         key = "ursa_earthshock";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Earthshock";
         movement_slow = new int[]{-25,-35,-45,-55};
-        owningHeroShortKey = "ursa";
+        ownerKey = "npc_dota_hero_ursa";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         shock_radius = 385;
     }
 
@@ -57,11 +61,11 @@ public final class UrsaEarthshock extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -79,10 +83,6 @@ public final class UrsaEarthshock extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -105,8 +105,20 @@ public final class UrsaEarthshock extends Ability {
         return movement_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getShockRadius() {

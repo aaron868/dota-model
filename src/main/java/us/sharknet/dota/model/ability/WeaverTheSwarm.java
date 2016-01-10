@@ -8,8 +8,8 @@ public final class WeaverTheSwarm extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
@@ -23,7 +23,10 @@ public final class WeaverTheSwarm extends Ability {
     private final int[] destroy_attacks;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int[] spawn_radius;
     private final int[] speed;
@@ -31,8 +34,8 @@ public final class WeaverTheSwarm extends Ability {
     private WeaverTheSwarm() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 3000;
-        abilityCooldown = new int[]{35,30,25,20};
+        abilityCastRange = new int[]{3000,3000,3000,3000};
+        abilityCooldown = new double[]{35,30,25,20};
         abilityManaCost = new int[]{70,80,90,100};
         abilityModifierSupportValue = .2;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
@@ -46,7 +49,10 @@ public final class WeaverTheSwarm extends Ability {
         destroy_attacks = new int[]{8,8,8,8};
         duration = 16;
         localizedName = "The Swarm";
-        owningHeroShortKey = "weaver";
+        ownerKey = "npc_dota_hero_weaver";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{100,100,100,100};
         spawn_radius = new int[]{300,300,300,300};
         speed = new int[]{600,600,600,600};
@@ -67,11 +73,11 @@ public final class WeaverTheSwarm extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -127,8 +133,20 @@ public final class WeaverTheSwarm extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

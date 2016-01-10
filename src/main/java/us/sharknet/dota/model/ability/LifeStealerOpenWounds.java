@@ -6,43 +6,47 @@ public final class LifeStealerOpenWounds extends Ability {
 
     private static LifeStealerOpenWounds instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int[] abilityCooldown;
-    private final int[] abilityDuration;
+    private final double[] abilityCooldown;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int duration;
     private final int heal_percent;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] slow_steps;
     private final int slow_tooltip;
     private final int[] tooltip_range;
 
     private LifeStealerOpenWounds() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = .2;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityCastPoint = new double[]{.2,.2,.2,.2};
         abilityCastRange = new int[]{200,300,400,500};
-        abilityCooldown = new int[]{24,20,16,12};
-        abilityDuration = new int[]{8,8,8,8};
+        abilityCooldown = new double[]{24,20,16,12};
+        abilityDuration = new double[]{8,8,8,8};
         abilityManaCost = new int[]{110,110,110,110};
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5251;
         key = "life_stealer_open_wounds";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = 8;
         heal_percent = 50;
         localizedName = "Open Wounds";
-        owningHeroShortKey = "life_stealer";
+        ownerKey = "npc_dota_hero_life_stealer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         slow_steps = new int[]{-70,-70,-60,-50,-30,-10,-10,-10};
         slow_tooltip = 70;
         tooltip_range = new int[]{200,300,400,500};
@@ -55,11 +59,11 @@ public final class LifeStealerOpenWounds extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -67,11 +71,11 @@ public final class LifeStealerOpenWounds extends Ability {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int[] getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -79,16 +83,12 @@ public final class LifeStealerOpenWounds extends Ability {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -115,8 +115,20 @@ public final class LifeStealerOpenWounds extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getSlowSteps() {

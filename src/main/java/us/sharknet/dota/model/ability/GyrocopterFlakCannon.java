@@ -7,35 +7,39 @@ public final class GyrocopterFlakCannon extends Ability {
     private static GyrocopterFlakCannon instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
-    private final int[] abilityCooldown;
-    private final int[] abilityDuration;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
     private final int[] max_attacks;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int projectile_speed;
     private final int radius;
 
     private GyrocopterFlakCannon() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = new int[]{0,0,0,0};
-        abilityCooldown = new int[]{30,30,30,30};
-        abilityDuration = new int[]{15,15,15,15};
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCooldown = new double[]{30,30,30,30};
+        abilityDuration = new double[]{15,15,15,15};
         abilityManaCost = new int[]{50,50,50,50};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        fightRecapLevel = 1;
         iD = 5363;
         key = "gyrocopter_flak_cannon";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         localizedName = "Flak Cannon";
         max_attacks = new int[]{3,4,5,6};
-        owningHeroShortKey = "gyrocopter";
+        ownerKey = "npc_dota_hero_gyrocopter";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         projectile_speed = 800;
         radius = 1000;
     }
@@ -51,15 +55,15 @@ public final class GyrocopterFlakCannon extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int[] getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -69,10 +73,6 @@ public final class GyrocopterFlakCannon extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -95,8 +95,20 @@ public final class GyrocopterFlakCannon extends Ability {
         return max_attacks;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getProjectileSpeed() {

@@ -38,7 +38,6 @@ public final class NightStalker extends Hero {
     private final int visionNighttimeRange;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private NightStalker() {
@@ -73,7 +72,6 @@ public final class NightStalker extends Hero {
         visionNighttimeRange = 1800;
         active = true;
         localizedName = "Night Stalker";
-        shortKey = "night_stalker";
         url = "Night_Stalker";
     }
 
@@ -206,10 +204,6 @@ public final class NightStalker extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

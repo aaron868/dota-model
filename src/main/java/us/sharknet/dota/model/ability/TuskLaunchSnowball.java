@@ -8,20 +8,24 @@ public final class TuskLaunchSnowball extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final String abilityTextureName;
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private TuskLaunchSnowball() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityTextureName = "tusk_snowball";
         iD = 5641;
         key = "tusk_launch_snowball";
         localizedName = "Launch Snowball";
-        owningHeroShortKey = "tusk";
+        ownerKey = "npc_dota_hero_tusk";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static TuskLaunchSnowball instance() {
@@ -39,10 +43,6 @@ public final class TuskLaunchSnowball extends Ability {
         return abilityCastPoint;
     }
 
-    public String getAbilityTextureName() {
-        return abilityTextureName;
-    }
-
     public int getID() {
         return iD;
     }
@@ -55,8 +55,20 @@ public final class TuskLaunchSnowball extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

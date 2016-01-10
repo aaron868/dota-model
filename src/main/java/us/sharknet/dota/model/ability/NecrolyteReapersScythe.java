@@ -6,18 +6,17 @@ public final class NecrolyteReapersScythe extends Ability {
 
     private static NecrolyteReapersScythe instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -26,24 +25,26 @@ public final class NecrolyteReapersScythe extends Ability {
     private final double[] damage_per_health_scepter;
     private final String localizedName;
     private final int[] mana_cost_scepter;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double respawn;
     private final int respawn_constant;
     private final double[] stun_duration;
 
     private NecrolyteReapersScythe() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCastRange = 600;
-        abilityCooldown = new int[]{100,85,70};
+        abilityCastRange = new int[]{600,600,600,600};
+        abilityCooldown = new double[]{100,85,70};
         abilityManaCost = new int[]{175,340,500};
         abilityModifierSupportValue = .1;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        fightRecapLevel = 2;
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO"};
         iD = 5161;
         key = "necrolyte_reapers_scythe";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -52,7 +53,10 @@ public final class NecrolyteReapersScythe extends Ability {
         damage_per_health_scepter = new double[]{0.6,0.9,1.2};
         localizedName = "Reapers Scythe";
         mana_cost_scepter = new int[]{150,340,500};
-        owningHeroShortKey = "necrolyte";
+        ownerKey = "npc_dota_hero_necrolyte";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         respawn = 0.0;
         respawn_constant = 30;
         stun_duration = new double[]{1.5,1.5,1.5};
@@ -65,7 +69,7 @@ public final class NecrolyteReapersScythe extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,11 +77,11 @@ public final class NecrolyteReapersScythe extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -97,20 +101,16 @@ public final class NecrolyteReapersScythe extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -145,8 +145,20 @@ public final class NecrolyteReapersScythe extends Ability {
         return mana_cost_scepter;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getRespawn() {

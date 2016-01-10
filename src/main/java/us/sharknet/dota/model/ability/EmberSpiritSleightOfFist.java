@@ -7,12 +7,11 @@ public final class EmberSpiritSleightOfFist extends Ability {
     private static EmberSpiritSleightOfFist instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -20,17 +19,19 @@ public final class EmberSpiritSleightOfFist extends Ability {
     private final int[] bonus_hero_damage;
     private final int creep_damage_penalty;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private EmberSpiritSleightOfFist() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
-        abilityCastPoint = 0;
-        abilityCastRange = 700;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{700,700,700,700};
         abilityCooldown = new double[]{30.0,22.0,14.0,6.0};
-        abilityManaCost = 50;
+        abilityManaCost = new int[]{50,50,50,50};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        fightRecapLevel = 1;
         iD = 5604;
         key = "ember_spirit_sleight_of_fist";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -38,7 +39,10 @@ public final class EmberSpiritSleightOfFist extends Ability {
         bonus_hero_damage = new int[]{20,40,60,80};
         creep_damage_penalty = -50;
         localizedName = "Sleight Of Fist";
-        owningHeroShortKey = "ember_spirit";
+        ownerKey = "npc_dota_hero_ember_spirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{250,350,450,550};
     }
 
@@ -53,11 +57,11 @@ public final class EmberSpiritSleightOfFist extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -65,16 +69,12 @@ public final class EmberSpiritSleightOfFist extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -105,8 +105,20 @@ public final class EmberSpiritSleightOfFist extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

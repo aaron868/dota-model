@@ -9,7 +9,7 @@ public final class WindrunnerWindrun extends Ability {
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
-    private final int[] abilityDuration;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final int iD;
@@ -20,14 +20,17 @@ public final class WindrunnerWindrun extends Ability {
     private final int evasion_pct_tooltip;
     private final String localizedName;
     private final int[] movespeed_bonus_pct;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private WindrunnerWindrun() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCooldown = new double[]{15.0,15.0,15.0,15.0};
-        abilityDuration = new int[]{3,4,5,6};
+        abilityDuration = new double[]{3,4,5,6};
         abilityManaCost = new int[]{100,100,100,100};
         abilityModifierSupportValue = .1;
         iD = 5132;
@@ -38,7 +41,10 @@ public final class WindrunnerWindrun extends Ability {
         evasion_pct_tooltip = 100;
         localizedName = "Windrun";
         movespeed_bonus_pct = new int[]{50,50,50,50};
-        owningHeroShortKey = "windrunner";
+        ownerKey = "npc_dota_hero_windrunner";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{300,300,300,300};
     }
 
@@ -61,7 +67,7 @@ public final class WindrunnerWindrun extends Ability {
         return abilityCooldown;
     }
 
-    public int[] getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -105,8 +111,20 @@ public final class WindrunnerWindrun extends Ability {
         return movespeed_bonus_pct;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

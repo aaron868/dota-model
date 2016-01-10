@@ -6,28 +6,32 @@ public final class MudGolemRockDestroy extends Ability {
 
     private static MudGolemRockDestroy instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int duration;
     private final String localizedName;
     private final int movespeed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int shard_damage_tooltip;
     private final int shard_duration_tooltip;
     private final int shard_health_tooltip;
 
     private MudGolemRockDestroy() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5667;
         key = "mud_golem_rock_destroy";
-        maxLevel = 1;
         duration = 2;
-        localizedName = "Rock Destroy";
+        localizedName = "Shard Split";
         movespeed = -25;
-        owningHeroShortKey = "mud_golem";
+        ownerKey = "npc_dota_neutral_mud_golem";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
         radius = 250;
         shard_damage_tooltip = 9;
         shard_duration_tooltip = 60;
@@ -41,7 +45,7 @@ public final class MudGolemRockDestroy extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -51,10 +55,6 @@ public final class MudGolemRockDestroy extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int getDuration() {
@@ -69,8 +69,20 @@ public final class MudGolemRockDestroy extends Ability {
         return movespeed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

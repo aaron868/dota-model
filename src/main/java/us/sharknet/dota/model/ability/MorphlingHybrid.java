@@ -7,47 +7,49 @@ public final class MorphlingHybrid extends Ability {
     private static MorphlingHybrid instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
-    private final int isGrantedByScepter;
+    private final boolean isGrantedByScepter;
     private final String key;
-    private final int maxLevel;
     private final int duration;
     private final int[] illusion_damage_in_pct;
     private final double[] illusion_damage_out_pct;
     private final int illusion_damage_out_pct_scepter;
     private final int[] illusion_incoming_dmg_pct_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int tooltip_cast_range;
     private final double[] tooltip_illusion_damage_out_pct;
 
     private MorphlingHybrid() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
-        abilityCastPoint = .25;
-        abilityCastRange = 600;
-        abilityCooldown = 120;
-        abilityManaCost = 200;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
-        fightRecapLevel = 1;
+        abilityCastPoint = new double[]{.25,.25,.25,.25};
+        abilityCastRange = new int[]{600,600,600,600};
+        abilityCooldown = new double[]{120,120,120,120};
+        abilityManaCost = new int[]{200,200,200,200};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_CUSTOM"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_CUSTOM"};
         iD = 5674;
-        isGrantedByScepter = 1;
+        isGrantedByScepter = true;
         key = "morphling_hybrid";
-        maxLevel = 1;
         duration = 2;
         illusion_damage_in_pct = new int[]{0,0,0};
         illusion_damage_out_pct = new double[]{50.0,50.0,50.0};
         illusion_damage_out_pct_scepter = 2;
         illusion_incoming_dmg_pct_tooltip = new int[]{100,100,100};
         localizedName = "Hybrid";
-        owningHeroShortKey = "morphling";
+        ownerKey = "npc_dota_hero_morphling";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_cast_range = 600;
         tooltip_illusion_damage_out_pct = new double[]{50.0,50.0,50.0};
     }
@@ -63,48 +65,40 @@ public final class MorphlingHybrid extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
         return iD;
     }
 
-    public int getIsGrantedByScepter() {
+    public boolean getIsGrantedByScepter() {
         return isGrantedByScepter;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int getDuration() {
@@ -131,8 +125,20 @@ public final class MorphlingHybrid extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getTooltipCastRange() {

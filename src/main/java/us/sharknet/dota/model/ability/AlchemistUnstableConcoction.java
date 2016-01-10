@@ -7,11 +7,10 @@ public final class AlchemistUnstableConcoction extends Ability {
     private static AlchemistUnstableConcoction instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,16 +21,18 @@ public final class AlchemistUnstableConcoction extends Ability {
     private final double[] max_stun;
     private final int min_damage;
     private final double min_stun;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private AlchemistUnstableConcoction() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastPoint = 0;
-        abilityCooldown = 16;
-        abilityManaCost = 120;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCooldown = new double[]{16,16,16,16};
+        abilityManaCost = new int[]{120,120,120,120};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        fightRecapLevel = 1;
         iD = 5366;
         key = "alchemist_unstable_concoction";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -42,7 +43,10 @@ public final class AlchemistUnstableConcoction extends Ability {
         max_stun = new double[]{1.75,2.5,3.25,4.0};
         min_damage = 0;
         min_stun = .25;
-        owningHeroShortKey = "alchemist";
+        ownerKey = "npc_dota_hero_alchemist";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 175;
     }
 
@@ -57,24 +61,20 @@ public final class AlchemistUnstableConcoction extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -117,8 +117,20 @@ public final class AlchemistUnstableConcoction extends Ability {
         return min_stun;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

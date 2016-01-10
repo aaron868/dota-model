@@ -39,7 +39,6 @@ public final class Meepo extends Hero {
     private final int visionDaytimeRange;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Meepo() {
@@ -75,7 +74,6 @@ public final class Meepo extends Hero {
         visionDaytimeRange = 1800;
         active = true;
         localizedName = "Meepo";
-        shortKey = "meepo";
         url = "Meepo";
     }
 
@@ -212,10 +210,6 @@ public final class Meepo extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

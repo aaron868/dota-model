@@ -7,29 +7,33 @@ public final class ForgedSpiritMeltingStrike extends Ability {
     private static ForgedSpiritMeltingStrike instance;
 
     private final String[] abilityBehavior;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final int armor_removed;
     private final int duration;
     private final String localizedName;
     private final int max_armor_removed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ForgedSpiritMeltingStrike() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"};
-        abilityManaCost = 40;
+        abilityManaCost = new int[]{40,40,40,40};
         iD = 5388;
         key = "forged_spirit_melting_strike";
-        maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         armor_removed = 1;
         duration = 5;
         localizedName = "Melting Strike";
         max_armor_removed = 10;
-        owningHeroShortKey = "forged_spirit";
+        ownerKey = "npc_dota_invoker_forged_spirit";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
     }
 
     public static ForgedSpiritMeltingStrike instance() {
@@ -43,7 +47,7 @@ public final class ForgedSpiritMeltingStrike extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -53,10 +57,6 @@ public final class ForgedSpiritMeltingStrike extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getSpellImmunityType() {
@@ -79,8 +79,20 @@ public final class ForgedSpiritMeltingStrike extends Ability {
         return max_armor_removed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

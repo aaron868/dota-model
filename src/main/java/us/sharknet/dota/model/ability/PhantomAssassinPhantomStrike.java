@@ -6,39 +6,45 @@ public final class PhantomAssassinPhantomStrike extends Ability {
 
     private static PhantomAssassinPhantomStrike instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int[] abilityCooldown;
-    private final int[] abilityDuration;
+    private final double[] abilityCooldown;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int bonus_attack_speed;
     private final int bonus_max_attack_count;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] tooltip_range;
 
     private PhantomAssassinPhantomStrike() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCastRange = new int[]{1000,1000,1000,1000};
-        abilityCooldown = new int[]{14,11,8,5};
-        abilityDuration = new int[]{3,3,3,3};
+        abilityCooldown = new double[]{14,11,8,5};
+        abilityDuration = new double[]{3,3,3,3};
         abilityManaCost = new int[]{50,50,50,50};
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_CUSTOM"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_CUSTOM"};
         iD = 5191;
         key = "phantom_assassin_phantom_strike";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         bonus_attack_speed = 130;
         bonus_max_attack_count = 4;
         localizedName = "Phantom Strike";
-        owningHeroShortKey = "phantom_assassin";
+        ownerKey = "npc_dota_hero_phantom_assassin";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_range = new int[]{1000,1000,1000,1000};
     }
 
@@ -49,7 +55,7 @@ public final class PhantomAssassinPhantomStrike extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,11 +67,11 @@ public final class PhantomAssassinPhantomStrike extends Ability {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int[] getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -73,11 +79,11 @@ public final class PhantomAssassinPhantomStrike extends Ability {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
     }
 
@@ -105,8 +111,20 @@ public final class PhantomAssassinPhantomStrike extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getTooltipRange() {

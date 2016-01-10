@@ -36,7 +36,6 @@ public final class Pudge extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Pudge() {
@@ -69,7 +68,6 @@ public final class Pudge extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Pudge";
-        shortKey = "pudge";
         url = "Pudge";
     }
 
@@ -194,10 +192,6 @@ public final class Pudge extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

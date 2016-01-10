@@ -38,7 +38,6 @@ public final class NagaSiren extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private NagaSiren() {
@@ -73,7 +72,6 @@ public final class NagaSiren extends Hero {
         team = "good";
         active = true;
         localizedName = "Naga Siren";
-        shortKey = "naga_siren";
         url = "Naga_Siren";
     }
 
@@ -206,10 +204,6 @@ public final class NagaSiren extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

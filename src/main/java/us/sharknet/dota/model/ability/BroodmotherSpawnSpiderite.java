@@ -6,21 +6,27 @@ public final class BroodmotherSpawnSpiderite extends Ability {
 
     private static BroodmotherSpawnSpiderite instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int buff_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int spiderite_duration;
 
     private BroodmotherSpawnSpiderite() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5283;
         key = "broodmother_spawn_spiderite";
         buff_duration = 2;
         localizedName = "Spawn Spiderite";
-        owningHeroShortKey = "broodmother";
+        ownerKey = "npc_dota_broodmother_spiderling";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
         spiderite_duration = 6;
     }
 
@@ -31,7 +37,7 @@ public final class BroodmotherSpawnSpiderite extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -51,8 +57,20 @@ public final class BroodmotherSpawnSpiderite extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSpideriteDuration() {

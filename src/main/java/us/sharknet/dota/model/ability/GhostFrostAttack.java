@@ -6,28 +6,32 @@ public final class GhostFrostAttack extends Ability {
 
     private static GhostFrostAttack instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int attackspeed_slow;
     private final double duration;
     private final String localizedName;
     private final int movespeed_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private GhostFrostAttack() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         iD = 5301;
         key = "ghost_frost_attack";
-        maxLevel = 1;
         attackspeed_slow = -20;
         duration = 1.5;
         localizedName = "Frost Attack";
         movespeed_slow = -20;
-        owningHeroShortKey = "ghost";
+        ownerKey = "npc_dota_neutral_ghost";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
     }
 
     public static GhostFrostAttack instance() {
@@ -37,7 +41,7 @@ public final class GhostFrostAttack extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -51,10 +55,6 @@ public final class GhostFrostAttack extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int getAttackspeedSlow() {
@@ -73,8 +73,20 @@ public final class GhostFrostAttack extends Ability {
         return movespeed_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

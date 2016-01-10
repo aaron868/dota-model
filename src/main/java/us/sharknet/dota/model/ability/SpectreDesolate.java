@@ -6,25 +6,31 @@ public final class SpectreDesolate extends Ability {
 
     private static SpectreDesolate instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] bonus_damage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private SpectreDesolate() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
         iD = 5335;
         key = "spectre_desolate";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         bonus_damage = new int[]{20,35,50,65};
         localizedName = "Desolate";
-        owningHeroShortKey = "spectre";
+        ownerKey = "npc_dota_hero_spectre";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         radius = new int[]{325,325,325,325};
     }
 
@@ -35,7 +41,7 @@ public final class SpectreDesolate extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -63,8 +69,20 @@ public final class SpectreDesolate extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

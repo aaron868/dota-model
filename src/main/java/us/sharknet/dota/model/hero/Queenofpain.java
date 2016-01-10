@@ -36,7 +36,6 @@ public final class Queenofpain extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Queenofpain() {
@@ -69,7 +68,6 @@ public final class Queenofpain extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Queen of Pain";
-        shortKey = "queenofpain";
         url = "Queen_of_Pain";
     }
 
@@ -194,10 +192,6 @@ public final class Queenofpain extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

@@ -7,25 +7,31 @@ public final class FurionTeleportation extends Ability {
     private static FurionTeleportation instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private FurionTeleportation() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN","DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"};
-        abilityCastPoint = new int[]{3,3,3,3};
-        abilityCastRange = 0;
-        abilityCooldown = new int[]{50,40,30,20};
+        abilityCastPoint = new double[]{3,3,3,3};
+        abilityCastRange = new int[]{0,0,0,0};
+        abilityCooldown = new double[]{50,40,30,20};
         abilityManaCost = new int[]{50,50,50,50};
         iD = 5246;
         key = "furion_teleportation";
         localizedName = "Teleportation";
-        owningHeroShortKey = "furion";
+        ownerKey = "npc_dota_hero_furion";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static FurionTeleportation instance() {
@@ -39,15 +45,15 @@ public final class FurionTeleportation extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -67,8 +73,20 @@ public final class FurionTeleportation extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

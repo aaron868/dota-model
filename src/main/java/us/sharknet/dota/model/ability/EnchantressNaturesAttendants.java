@@ -6,32 +6,38 @@ public final class EnchantressNaturesAttendants extends Ability {
 
     private static EnchantressNaturesAttendants instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
-    private final int abilityDuration;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final double[] heal;
     private final int heal_interval;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int[] wisp_count;
 
     private EnchantressNaturesAttendants() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCooldown = new double[]{45.0,45.0,45.0,45.0};
-        abilityDuration = 11;
+        abilityDuration = new double[]{11,11,11,11};
         abilityManaCost = new int[]{125,140,155,170};
         iD = 5269;
         key = "enchantress_natures_attendants";
         heal = new double[]{10.0,10.0,10.0,10.0};
         heal_interval = 1;
         localizedName = "Natures Attendants";
-        owningHeroShortKey = "enchantress";
+        ownerKey = "npc_dota_hero_enchantress";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{275,275,275,275};
         wisp_count = new int[]{4,6,8,10};
     }
@@ -43,7 +49,7 @@ public final class EnchantressNaturesAttendants extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -55,7 +61,7 @@ public final class EnchantressNaturesAttendants extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -83,8 +89,20 @@ public final class EnchantressNaturesAttendants extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

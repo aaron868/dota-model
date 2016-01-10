@@ -7,12 +7,12 @@ public final class AlchemistUnstableConcoctionThrow extends Ability {
     private static AlchemistUnstableConcoctionThrow instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final int abilityModifierSupportBonus;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -25,17 +25,20 @@ public final class AlchemistUnstableConcoctionThrow extends Ability {
     private final int min_damage;
     private final double min_stun;
     private final int movement_speed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int vision_range;
 
     private AlchemistUnstableConcoctionThrow() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
-        abilityCastPoint = .2;
-        abilityCastRange = 775;
+        abilityCastPoint = new double[]{.2,.2,.2,.2};
+        abilityCastRange = new int[]{775,775,775,775};
         abilityModifierSupportBonus = 120;
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO"};
         iD = 5367;
         key = "alchemist_unstable_concoction_throw";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -48,7 +51,10 @@ public final class AlchemistUnstableConcoctionThrow extends Ability {
         min_damage = 0;
         min_stun = .25;
         movement_speed = 900;
-        owningHeroShortKey = "alchemist";
+        ownerKey = "npc_dota_hero_alchemist";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         vision_range = 400;
     }
 
@@ -63,11 +69,11 @@ public final class AlchemistUnstableConcoctionThrow extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -75,15 +81,15 @@ public final class AlchemistUnstableConcoctionThrow extends Ability {
         return abilityModifierSupportBonus;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
     }
 
@@ -135,8 +141,20 @@ public final class AlchemistUnstableConcoctionThrow extends Ability {
         return movement_speed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getVisionRange() {

@@ -8,17 +8,19 @@ public final class ShredderWhirlingDeath extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int stat_loss_pct;
     private final int[] whirling_damage;
     private final int whirling_radius;
@@ -27,17 +29,19 @@ public final class ShredderWhirlingDeath extends Ability {
     private ShredderWhirlingDeath() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 300;
-        abilityCooldown = 6;
-        abilityManaCost = 70;
+        abilityCastRange = new int[]{300,300,300,300};
+        abilityCooldown = new double[]{6,6,6,6};
+        abilityManaCost = new int[]{70,70,70,70};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5524;
         key = "shredder_whirling_death";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = 11;
         localizedName = "Whirling Death";
-        owningHeroShortKey = "shredder";
+        ownerKey = "npc_dota_hero_shredder";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         stat_loss_pct = 15;
         whirling_damage = new int[]{100,150,200,250};
         whirling_radius = 300;
@@ -59,24 +63,20 @@ public final class ShredderWhirlingDeath extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -99,8 +99,20 @@ public final class ShredderWhirlingDeath extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getStatLossPct() {

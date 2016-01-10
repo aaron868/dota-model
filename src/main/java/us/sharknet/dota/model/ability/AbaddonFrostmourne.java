@@ -6,7 +6,7 @@ public final class AbaddonFrostmourne extends Ability {
 
     private static AbaddonFrostmourne instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -16,11 +16,14 @@ public final class AbaddonFrostmourne extends Ability {
     private final double debuff_duration;
     private final String localizedName;
     private final int move_speed_pct;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] slow_pct;
 
     private AbaddonFrostmourne() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5587;
         key = "abaddon_frostmourne";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -30,7 +33,10 @@ public final class AbaddonFrostmourne extends Ability {
         debuff_duration = 2.5;
         localizedName = "Curse of Avernus";
         move_speed_pct = 15;
-        owningHeroShortKey = "abaddon";
+        ownerKey = "npc_dota_hero_abaddon";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         slow_pct = new int[]{5,10,15,20};
     }
 
@@ -41,7 +47,7 @@ public final class AbaddonFrostmourne extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -81,8 +87,20 @@ public final class AbaddonFrostmourne extends Ability {
         return move_speed_pct;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getSlowPct() {

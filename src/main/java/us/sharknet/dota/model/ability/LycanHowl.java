@@ -8,8 +8,8 @@ public final class LycanHowl extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int[] abilityCooldown;
-    private final int abilityDuration;
+    private final double[] abilityCooldown;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final int abilityModifierSupportBonus;
     private final int iD;
@@ -17,14 +17,17 @@ public final class LycanHowl extends Ability {
     private final int[] hero_bonus_damage;
     private final int howl_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] unit_bonus_damage;
 
     private LycanHowl() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCooldown = new int[]{50,45,40,35};
-        abilityDuration = 10;
+        abilityCooldown = new double[]{50,45,40,35};
+        abilityDuration = new double[]{10,10,10,10};
         abilityManaCost = new int[]{15,20,25,30};
         abilityModifierSupportBonus = 5;
         iD = 5396;
@@ -32,7 +35,10 @@ public final class LycanHowl extends Ability {
         hero_bonus_damage = new int[]{14,26,38,50};
         howl_duration = 1;
         localizedName = "Howl";
-        owningHeroShortKey = "lycan";
+        ownerKey = "npc_dota_hero_lycan";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         unit_bonus_damage = new int[]{5,10,15,20};
     }
 
@@ -51,11 +57,11 @@ public final class LycanHowl extends Ability {
         return abilityCastPoint;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -87,8 +93,20 @@ public final class LycanHowl extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getUnitBonusDamage() {

@@ -41,7 +41,6 @@ public final class LoneDruid extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private LoneDruid() {
@@ -79,7 +78,6 @@ public final class LoneDruid extends Hero {
         team = "Good";
         active = true;
         localizedName = "Lone Druid";
-        shortKey = "lone_druid";
         url = "Lone_Druid";
     }
 
@@ -224,10 +222,6 @@ public final class LoneDruid extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

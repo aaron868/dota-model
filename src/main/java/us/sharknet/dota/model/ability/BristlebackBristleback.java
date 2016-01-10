@@ -6,25 +6,31 @@ public final class BristlebackBristleback extends Ability {
 
     private static BristlebackBristleback instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int back_angle;
     private final int[] back_damage_reduction;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int quill_release_threshold;
     private final int side_angle;
     private final int[] side_damage_reduction;
 
     private BristlebackBristleback() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5550;
         key = "bristleback_bristleback";
         back_angle = 70;
         back_damage_reduction = new int[]{16,24,32,40};
         localizedName = "Bristleback";
-        owningHeroShortKey = "bristleback";
+        ownerKey = "npc_dota_hero_bristleback";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         quill_release_threshold = 230;
         side_angle = 110;
         side_damage_reduction = new int[]{8,12,16,20};
@@ -37,7 +43,7 @@ public final class BristlebackBristleback extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,8 +67,20 @@ public final class BristlebackBristleback extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getQuillReleaseThreshold() {

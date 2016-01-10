@@ -7,25 +7,29 @@ public final class CourierShield extends Ability {
     private static CourierShield instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final String abilityType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private CourierShield() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCooldown = 2;
+        abilityCooldown = new double[]{2,2,2,2};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5209;
         key = "courier_shield";
-        maxLevel = 1;
         duration = 7;
         localizedName = "Shield";
-        owningHeroShortKey = "courier";
+        ownerKey = "npc_dota_courier";
+        ownerType = AbilityOwnerType.Courier;
+        passive = false;
+        placeholder = false;
     }
 
     public static CourierShield instance() {
@@ -39,7 +43,7 @@ public final class CourierShield extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -55,10 +59,6 @@ public final class CourierShield extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public int getDuration() {
         return duration;
     }
@@ -67,8 +67,20 @@ public final class CourierShield extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

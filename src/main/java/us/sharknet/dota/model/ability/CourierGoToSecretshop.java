@@ -10,18 +10,22 @@ public final class CourierGoToSecretshop extends Ability {
     private final String abilityType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private CourierGoToSecretshop() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         iD = 5492;
         key = "courier_go_to_secretshop";
-        maxLevel = 1;
         localizedName = "Go To Secret Shop";
-        owningHeroShortKey = "courier";
+        ownerKey = "npc_dota_courier";
+        ownerType = AbilityOwnerType.Courier;
+        passive = false;
+        placeholder = false;
     }
 
     public static CourierGoToSecretshop instance() {
@@ -47,16 +51,24 @@ public final class CourierGoToSecretshop extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

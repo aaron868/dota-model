@@ -8,7 +8,7 @@ public final class TemplarAssassinPsionicTrap extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
@@ -19,14 +19,17 @@ public final class TemplarAssassinPsionicTrap extends Ability {
     private final int[] max_traps;
     private final int movement_speed_max_tooltip;
     private final int movement_speed_min_tooltip;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int trap_duration_tooltip;
     private final double[] trap_fade_time;
 
     private TemplarAssassinPsionicTrap() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 2000;
+        abilityCastRange = new int[]{2000,2000,2000,2000};
         abilityCooldown = new double[]{11.0,8.0,5.0};
         abilityManaCost = new int[]{15,15,15};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -37,7 +40,10 @@ public final class TemplarAssassinPsionicTrap extends Ability {
         max_traps = new int[]{5,8,11};
         movement_speed_max_tooltip = 50;
         movement_speed_min_tooltip = 30;
-        owningHeroShortKey = "templar_assassin";
+        ownerKey = "npc_dota_hero_templar_assassin";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         trap_duration_tooltip = 5;
         trap_fade_time = new double[]{2.0,2.0,2.0};
     }
@@ -57,7 +63,7 @@ public final class TemplarAssassinPsionicTrap extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -101,8 +107,20 @@ public final class TemplarAssassinPsionicTrap extends Ability {
         return movement_speed_min_tooltip;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getTrapDurationTooltip() {

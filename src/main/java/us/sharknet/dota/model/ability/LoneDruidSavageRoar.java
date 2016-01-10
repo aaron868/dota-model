@@ -6,31 +6,37 @@ public final class LoneDruidSavageRoar extends Ability {
 
     private static LoneDruidSavageRoar instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int[] abilityCooldown;
-    private final int abilityManaCost;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int bonus_speed;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private LoneDruidSavageRoar() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = .1;
-        abilityCooldown = new int[]{28,24,20,16};
-        abilityManaCost = 50;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{.1,.1,.1,.1};
+        abilityCooldown = new double[]{28,24,20,16};
+        abilityManaCost = new int[]{50,50,50,50};
         iD = 5414;
         key = "lone_druid_savage_roar";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         bonus_speed = 20;
         duration = new double[]{1.2,1.6,2.0,2.4};
         localizedName = "Savage Roar";
-        owningHeroShortKey = "lone_druid";
+        ownerKey = "npc_dota_hero_lone_druid";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 325;
     }
 
@@ -41,19 +47,19 @@ public final class LoneDruidSavageRoar extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -81,8 +87,20 @@ public final class LoneDruidSavageRoar extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

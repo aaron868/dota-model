@@ -8,7 +8,7 @@ public final class UrsaOverpower extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
@@ -18,12 +18,15 @@ public final class UrsaOverpower extends Ability {
     private final int duration_tooltip;
     private final String localizedName;
     private final int[] max_attacks;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private UrsaOverpower() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 0;
+        abilityCastRange = new int[]{0,0,0,0};
         abilityCooldown = new double[]{10.0,10.0,10.0,10.0};
         abilityDuration = new double[]{15.0,15.0,15.0,15.0};
         abilityManaCost = new int[]{45,55,65,75};
@@ -33,7 +36,10 @@ public final class UrsaOverpower extends Ability {
         duration_tooltip = 15;
         localizedName = "Overpower";
         max_attacks = new int[]{3,4,5,6};
-        owningHeroShortKey = "ursa";
+        ownerKey = "npc_dota_hero_ursa";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static UrsaOverpower instance() {
@@ -51,7 +57,7 @@ public final class UrsaOverpower extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -91,8 +97,20 @@ public final class UrsaOverpower extends Ability {
         return max_attacks;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

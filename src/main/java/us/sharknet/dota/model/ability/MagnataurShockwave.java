@@ -8,19 +8,21 @@ public final class MagnataurShockwave extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] shock_damage;
     private final int shock_speed;
     private final int shock_width;
@@ -28,19 +30,21 @@ public final class MagnataurShockwave extends Ability {
     private MagnataurShockwave() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 1150;
+        abilityCastRange = new int[]{1150,1150,1150,1150};
         abilityCooldown = new double[]{10.0,9.0,8.0,7.0};
         abilityDuration = new double[]{0.6875,0.6875,0.6875,0.6875};
         abilityManaCost = new int[]{90,90,90,90};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5518;
         key = "magnataur_shockwave";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Shockwave";
-        owningHeroShortKey = "magnataur";
+        ownerKey = "npc_dota_hero_magnataur";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         shock_damage = new int[]{75,150,225,300};
         shock_speed = 1050;
         shock_width = 150;
@@ -61,7 +65,7 @@ public final class MagnataurShockwave extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -81,16 +85,12 @@ public final class MagnataurShockwave extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -109,8 +109,20 @@ public final class MagnataurShockwave extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getShockDamage() {

@@ -36,7 +36,6 @@ public final class Razor extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Razor() {
@@ -69,7 +68,6 @@ public final class Razor extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Razor";
-        shortKey = "razor";
         url = "Razor";
     }
 
@@ -194,10 +192,6 @@ public final class Razor extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

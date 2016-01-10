@@ -7,38 +7,40 @@ public final class TreantEyesInTheForest extends Ability {
     private static TreantEyesInTheForest instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
-    private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
+    private final String[] abilityUnitTargetType;
     private final int iD;
-    private final int isGrantedByScepter;
+    private final boolean isGrantedByScepter;
     private final String key;
-    private final int maxLevel;
     private final int damage;
     private final String localizedName;
     private final int overgrowth_aoe;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int vision_aoe;
 
     private TreantEyesInTheForest() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
-        abilityCastPoint = .2;
-        abilityCastRange = 160;
-        abilityCooldown = 25;
-        abilityManaCost = 100;
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_TREE";
-        fightRecapLevel = 1;
+        abilityCastPoint = new double[]{.2,.2,.2,.2};
+        abilityCastRange = new int[]{160,160,160,160};
+        abilityCooldown = new double[]{25,25,25,25};
+        abilityManaCost = new int[]{100,100,100,100};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_TREE"};
         iD = 5649;
-        isGrantedByScepter = 1;
+        isGrantedByScepter = true;
         key = "treant_eyes_in_the_forest";
-        maxLevel = 1;
         damage = 175;
         localizedName = "Eyes in the Forest";
         overgrowth_aoe = 800;
-        owningHeroShortKey = "treant";
+        ownerKey = "npc_dota_hero_treant";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         vision_aoe = 8;
     }
 
@@ -53,44 +55,36 @@ public final class TreantEyesInTheForest extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
         return iD;
     }
 
-    public int getIsGrantedByScepter() {
+    public boolean getIsGrantedByScepter() {
         return isGrantedByScepter;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int getDamage() {
@@ -105,8 +99,20 @@ public final class TreantEyesInTheForest extends Ability {
         return overgrowth_aoe;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getVisionAoe() {

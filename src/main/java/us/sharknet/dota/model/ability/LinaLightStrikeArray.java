@@ -8,13 +8,12 @@ public final class LinaLightStrikeArray extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -22,18 +21,20 @@ public final class LinaLightStrikeArray extends Ability {
     private final double light_strike_array_delay_time;
     private final double[] light_strike_array_stun_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private LinaLightStrikeArray() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.45,0.45,0.45,0.45};
-        abilityCastRange = 625;
+        abilityCastRange = new int[]{625,625,625,625};
         abilityCooldown = new double[]{7.0,7.0,7.0,7.0};
         abilityDamage = new int[]{80,120,160,200};
         abilityDuration = new double[]{1.6,1.9,2.2,2.5};
         abilityManaCost = new int[]{100,110,120,130};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5041;
         key = "lina_light_strike_array";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -41,7 +42,10 @@ public final class LinaLightStrikeArray extends Ability {
         light_strike_array_delay_time = .5;
         light_strike_array_stun_duration = new double[]{1.6,1.9,2.2,2.5};
         localizedName = "Light Strike Array";
-        owningHeroShortKey = "lina";
+        ownerKey = "npc_dota_hero_lina";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static LinaLightStrikeArray instance() {
@@ -59,7 +63,7 @@ public final class LinaLightStrikeArray extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -81,10 +85,6 @@ public final class LinaLightStrikeArray extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -115,8 +115,20 @@ public final class LinaLightStrikeArray extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -6,16 +6,15 @@ public final class BatriderFlamingLasso extends Ability {
 
     private static BatriderFlamingLasso instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final String abilityType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -25,20 +24,22 @@ public final class BatriderFlamingLasso extends Ability {
     private final int grab_radius;
     private final int grab_radius_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int scepter_damage;
 
     private BatriderFlamingLasso() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
-        abilityCastRange = 100;
+        abilityCastRange = new int[]{100,100,100,100};
         abilityCooldown = new double[]{90.0,75.0,60.0};
-        abilityManaCost = 225;
+        abilityManaCost = new int[]{225,225,225,225};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 2;
         iD = 5323;
         key = "batrider_flaming_lasso";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -48,7 +49,10 @@ public final class BatriderFlamingLasso extends Ability {
         grab_radius = 400;
         grab_radius_scepter = 400;
         localizedName = "Flaming Lasso";
-        owningHeroShortKey = "batrider";
+        ownerKey = "npc_dota_hero_batrider";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         scepter_damage = 1;
     }
 
@@ -59,7 +63,7 @@ public final class BatriderFlamingLasso extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -67,7 +71,7 @@ public final class BatriderFlamingLasso extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -75,7 +79,7 @@ public final class BatriderFlamingLasso extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -83,20 +87,16 @@ public final class BatriderFlamingLasso extends Ability {
         return abilityType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -135,8 +135,20 @@ public final class BatriderFlamingLasso extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getScepterDamage() {

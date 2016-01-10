@@ -6,15 +6,15 @@ public final class BountyHunterTrack extends Ability {
 
     private static BountyHunterTrack instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityType;
     private final String[] abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -27,18 +27,21 @@ public final class BountyHunterTrack extends Ability {
     private final double[] duration;
     private final double[] gold_steal;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BountyHunterTrack() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 1200;
-        abilityCooldown = 4;
-        abilityManaCost = 50;
+        abilityCastRange = new int[]{1200,1200,1200,1200};
+        abilityCooldown = new double[]{4,4,4,4};
+        abilityManaCost = new int[]{50,50,50,50};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES","DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"};
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO"};
         iD = 5288;
         key = "bounty_hunter_track";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -51,7 +54,10 @@ public final class BountyHunterTrack extends Ability {
         duration = new double[]{30.0,30.0,30.0};
         gold_steal = new double[]{0.3,0.4,0.5};
         localizedName = "Track";
-        owningHeroShortKey = "bounty_hunter";
+        ownerKey = "npc_dota_hero_bounty_hunter";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static BountyHunterTrack instance() {
@@ -61,7 +67,7 @@ public final class BountyHunterTrack extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -69,15 +75,15 @@ public final class BountyHunterTrack extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -89,11 +95,11 @@ public final class BountyHunterTrack extends Ability {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
     }
 
@@ -145,8 +151,20 @@ public final class BountyHunterTrack extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -10,7 +10,7 @@ public final class AncientApparitionChillingTouch extends Ability {
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
     private final double[] abilityCooldown;
-    private final int abilityDuration;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -20,7 +20,10 @@ public final class AncientApparitionChillingTouch extends Ability {
     private final int[] bonus_damage;
     private final String localizedName;
     private final int[] max_attacks;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private AncientApparitionChillingTouch() {
@@ -28,7 +31,7 @@ public final class AncientApparitionChillingTouch extends Ability {
         abilityCastPoint = new double[]{0.01,0.01,0.01,0.01};
         abilityCastRange = new int[]{800,800,800,800};
         abilityCooldown = new double[]{50.0,42.0,34.0,26.0};
-        abilityDuration = 3;
+        abilityDuration = new double[]{3,3,3,3};
         abilityManaCost = new int[]{110,120,130,140};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5347;
@@ -38,7 +41,10 @@ public final class AncientApparitionChillingTouch extends Ability {
         bonus_damage = new int[]{50,60,70,80};
         localizedName = "Chilling Touch";
         max_attacks = new int[]{3,4,5,6};
-        owningHeroShortKey = "ancient_apparition";
+        ownerKey = "npc_dota_hero_ancient_apparition";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 525;
     }
 
@@ -65,7 +71,7 @@ public final class AncientApparitionChillingTouch extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -105,8 +111,20 @@ public final class AncientApparitionChillingTouch extends Ability {
         return max_attacks;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

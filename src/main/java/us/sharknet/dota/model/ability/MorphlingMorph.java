@@ -6,20 +6,26 @@ public final class MorphlingMorph extends Ability {
 
     private static MorphlingMorph instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int[] bonus_attributes;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private MorphlingMorph() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_HIDDEN";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         iD = 5054;
         key = "morphling_morph";
         bonus_attributes = new int[]{3,4,5,6};
         localizedName = "Morph";
-        owningHeroShortKey = "morphling";
+        ownerKey = "npc_dota_hero_morphling";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static MorphlingMorph instance() {
@@ -29,7 +35,7 @@ public final class MorphlingMorph extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -49,8 +55,20 @@ public final class MorphlingMorph extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

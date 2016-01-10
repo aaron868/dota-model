@@ -8,14 +8,13 @@ public final class JakiroMacropyre extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -27,21 +26,23 @@ public final class JakiroMacropyre extends Ability {
     private final int duration;
     private final int duration_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
     private final int path_radius;
+    private final boolean placeholder;
     private final int tooltip_duration;
 
     private JakiroMacropyre() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.65,0.65,0.65,0.65};
-        abilityCastRange = 900;
-        abilityCooldown = new int[]{60,60,60};
+        abilityCastRange = new int[]{900,900,900,900};
+        abilityCooldown = new double[]{60,60,60};
         abilityManaCost = new int[]{220,330,440};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 2;
         iD = 5300;
         key = "jakiro_macropyre";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -53,8 +54,11 @@ public final class JakiroMacropyre extends Ability {
         duration = 10;
         duration_scepter = 20;
         localizedName = "Macropyre";
-        owningHeroShortKey = "jakiro";
+        ownerKey = "npc_dota_hero_jakiro";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
         path_radius = 240;
+        placeholder = false;
         tooltip_duration = 10;
     }
 
@@ -73,11 +77,11 @@ public final class JakiroMacropyre extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -93,16 +97,12 @@ public final class JakiroMacropyre extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -149,12 +149,24 @@ public final class JakiroMacropyre extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
     }
 
     public int getPathRadius() {
         return path_radius;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getTooltipDuration() {

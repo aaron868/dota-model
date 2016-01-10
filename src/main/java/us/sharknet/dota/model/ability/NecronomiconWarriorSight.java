@@ -6,21 +6,27 @@ public final class NecronomiconWarriorSight extends Ability {
 
     private static NecronomiconWarriorSight instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private NecronomiconWarriorSight() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         iD = 5201;
         key = "necronomicon_warrior_sight";
         localizedName = "Sight";
-        owningHeroShortKey = "necronomicon_warrior";
+        ownerKey = "npc_dota_necronomicon_warrior";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
         radius = 1000;
     }
 
@@ -31,7 +37,7 @@ public final class NecronomiconWarriorSight extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -51,8 +57,20 @@ public final class NecronomiconWarriorSight extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

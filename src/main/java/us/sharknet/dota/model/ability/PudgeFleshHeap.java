@@ -6,24 +6,30 @@ public final class PudgeFleshHeap extends Ability {
 
     private static PudgeFleshHeap instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int[] flesh_heap_magic_resist;
     private final int flesh_heap_range;
     private final double[] flesh_heap_strength_buff_amount;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private PudgeFleshHeap() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5074;
         key = "pudge_flesh_heap";
         flesh_heap_magic_resist = new int[]{6,8,10,12};
         flesh_heap_range = 450;
         flesh_heap_strength_buff_amount = new double[]{1.0,1.5,2.0,2.5};
         localizedName = "Flesh Heap";
-        owningHeroShortKey = "pudge";
+        ownerKey = "npc_dota_hero_pudge";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static PudgeFleshHeap instance() {
@@ -33,7 +39,7 @@ public final class PudgeFleshHeap extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,8 +67,20 @@ public final class PudgeFleshHeap extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

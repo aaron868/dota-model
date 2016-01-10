@@ -10,7 +10,10 @@ public final class RoshanDevotion extends Ability {
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private RoshanDevotion() {
@@ -18,7 +21,10 @@ public final class RoshanDevotion extends Ability {
         iD = 5217;
         key = "roshan_devotion";
         localizedName = "Devotion";
-        owningHeroShortKey = "roshan";
+        ownerKey = "npc_dota_roshan";
+        ownerType = AbilityOwnerType.Roshan;
+        passive = false;
+        placeholder = false;
         radius = 5;
     }
 
@@ -45,8 +51,20 @@ public final class RoshanDevotion extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

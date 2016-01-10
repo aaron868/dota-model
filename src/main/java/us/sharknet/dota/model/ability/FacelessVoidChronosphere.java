@@ -8,12 +8,11 @@ public final class FacelessVoidChronosphere extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final int abilityModifierSupportBonus;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -21,19 +20,21 @@ public final class FacelessVoidChronosphere extends Ability {
     private final double[] duration;
     private final double[] duration_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int vision_radius;
 
     private FacelessVoidChronosphere() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.35,0.35,0.35};
-        abilityCastRange = 600;
+        abilityCastRange = new int[]{600,600,600,600};
         abilityCooldown = new double[]{130.0,115.0,100.0};
         abilityManaCost = new int[]{150,225,300};
         abilityModifierSupportBonus = 50;
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5185;
         key = "faceless_void_chronosphere";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -41,7 +42,10 @@ public final class FacelessVoidChronosphere extends Ability {
         duration = new double[]{4.0,4.5,5.0};
         duration_scepter = new double[]{4.0,5.0,6.0};
         localizedName = "Chronosphere";
-        owningHeroShortKey = "faceless_void";
+        ownerKey = "npc_dota_hero_faceless_void";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 425;
         vision_radius = 475;
     }
@@ -61,7 +65,7 @@ public final class FacelessVoidChronosphere extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -79,10 +83,6 @@ public final class FacelessVoidChronosphere extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -113,8 +113,20 @@ public final class FacelessVoidChronosphere extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

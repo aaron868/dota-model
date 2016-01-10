@@ -6,7 +6,7 @@ public final class DragonKnightFrostBreath extends Ability {
 
     private static DragonKnightFrostBreath instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -14,10 +14,13 @@ public final class DragonKnightFrostBreath extends Ability {
     private final int bonus_movement_speed;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private DragonKnightFrostBreath() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5232;
         key = "dragon_knight_frost_breath";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -25,7 +28,10 @@ public final class DragonKnightFrostBreath extends Ability {
         bonus_movement_speed = -30;
         duration = 3;
         localizedName = "Frost Breath";
-        owningHeroShortKey = "dragon_knight";
+        ownerKey = "npc_dota_hero_dragon_knight";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static DragonKnightFrostBreath instance() {
@@ -35,7 +41,7 @@ public final class DragonKnightFrostBreath extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -67,8 +73,20 @@ public final class DragonKnightFrostBreath extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

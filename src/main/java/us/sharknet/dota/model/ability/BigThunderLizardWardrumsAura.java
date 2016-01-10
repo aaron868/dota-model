@@ -6,24 +6,30 @@ public final class BigThunderLizardWardrumsAura extends Ability {
 
     private static BigThunderLizardWardrumsAura instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final int iD;
     private final String key;
     private final int damage_bonus;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int speed_bonus;
 
     private BigThunderLizardWardrumsAura() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         iD = 5682;
         key = "big_thunder_lizard_wardrums_aura";
         damage_bonus = 15;
         localizedName = "Wardrums Aura";
-        owningHeroShortKey = "big_thunder_lizard";
+        ownerKey = "npc_dota_neutral_big_thunder_lizard";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
         radius = 900;
         speed_bonus = 15;
     }
@@ -35,7 +41,7 @@ public final class BigThunderLizardWardrumsAura extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -59,8 +65,20 @@ public final class BigThunderLizardWardrumsAura extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

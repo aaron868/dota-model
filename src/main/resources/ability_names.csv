@@ -1,627 +1,620 @@
-ID,key,localizedName,owningHeroShortKey
-5001,default_attack,Default Attack,default
-5002,attribute_bonus,Stats,stats
-5003,antimage_mana_break,Mana Break,antimage
-5004,antimage_blink,Blink,antimage
-5005,antimage_spell_shield,Spell Shield,antimage
-5006,antimage_mana_void,Mana Void,antimage
-5007,axe_berserkers_call,Berserkers Call,axe
-5008,axe_battle_hunger,Battle Hunger,axe
-5009,axe_counter_helix,Counter Helix,axe
-5010,axe_culling_blade,Culling Blade,axe
-5011,bane_brain_sap,Brain Sap,bane
-5012,bane_enfeeble,Enfeeble,bane
-5013,bane_fiends_grip,Fiends Grip,bane
-5014,bane_nightmare,Nightmare,bane
-5015,bloodseeker_bloodrage,Bloodrage,bloodseeker
-5016,bloodseeker_blood_bath,Blood Bath,bloodseeker
-5017,bloodseeker_thirst,Thirst,bloodseeker
-5018,bloodseeker_rupture,Rupture,bloodseeker
-5019,drow_ranger_frost_arrows,Frost Arrows,drow_ranger
-5020,drow_ranger_silence,Silence,drow_ranger
-5021,drow_ranger_trueshot,Trueshot,drow_ranger
-5022,drow_ranger_marksmanship,Marksmanship,drow_ranger
-5023,earthshaker_fissure,Fissure,earthshaker
-5024,earthshaker_enchant_totem,Enchant Totem,earthshaker
-5025,earthshaker_aftershock,Aftershock,earthshaker
-5026,earthshaker_echo_slam,Echo Slam,earthshaker
-5027,juggernaut_blade_dance,Blade Dance,juggernaut
-5028,juggernaut_blade_fury,Blade Fury,juggernaut
-5029,juggernaut_healing_ward,Healing Ward,juggernaut
-5030,juggernaut_omni_slash,Omnislash,juggernaut
-5031,kunkka_torrent,Torrent,kunkka
-5032,kunkka_tidebringer,Tidebringer,kunkka
-5033,kunkka_x_marks_the_spot,X Marks The Spot,kunkka
-5034,kunkka_return,Return,kunkka
-5035,kunkka_ghostship,Ghostship,kunkka
-5040,lina_dragon_slave,Dragon Slave,lina
-5041,lina_light_strike_array,Light Strike Array,lina
-5042,lina_fiery_soul,Fiery Soul,lina
-5043,lina_laguna_blade,Laguna Blade,lina
-5044,lion_impale,Impale,lion
-5045,lion_voodoo,Voodoo,lion
-5046,lion_mana_drain,Mana Drain,lion
-5047,lion_finger_of_death,Finger Of Death,lion
-5048,mirana_arrow,Sacred Arrow,mirana
-5049,mirana_invis,Moonlight Shadow,mirana
-5050,mirana_leap,Leap,mirana
-5051,mirana_starfall,Starfall,mirana
-5052,morphling_waveform,Waveform,morphling
-5053,morphling_adaptive_strike,Adaptive Strike,morphling
-5054,morphling_morph,Morph,morphling
-5055,morphling_morph_agi,Morph Agi,morphling
-5056,morphling_morph_str,Morph Str,morphling
-5057,morphling_replicate,Replicate,morphling
-5058,morphling_morph_replicate,Morph Replicate,morphling
-5059,nevermore_shadowraze1,Shadowraze 1,nevermore
-5060,nevermore_shadowraze2,Shadowraze 2,nevermore
-5061,nevermore_shadowraze3,Shadowraze 3,nevermore
-5062,nevermore_necromastery,Necromastery,nevermore
-5063,nevermore_dark_lord,Presence of the Dark Lord,nevermore
-5064,nevermore_requiem,Requiem of Souls,nevermore
-5065,phantom_lancer_spirit_lance,Spirit Lance,phantom_lancer
-5066,phantom_lancer_doppelwalk,Phantom Doppelganger,phantom_lancer
-5067,phantom_lancer_juxtapose,Juxtapose,phantom_lancer
-5068,phantom_lancer_phantom_edge,Phantom Edge,phantom_lancer
-5069,puck_illusory_orb,Illusory Orb,puck
-5070,puck_ethereal_jaunt,Ethereal Jaunt,puck
-5071,puck_waning_rift,Waning Rift,puck
-5072,puck_phase_shift,Phase Shift,puck
-5073,puck_dream_coil,Dream Coil,puck
-5074,pudge_flesh_heap,Flesh Heap,pudge
-5075,pudge_meat_hook,Meat Hook,pudge
-5076,pudge_rot,Rot,pudge
-5077,pudge_dismember,Dismember,pudge
-5078,shadow_shaman_ether_shock,Ether Shock,shadow_shaman
-5079,shadow_shaman_voodoo,Voodoo,shadow_shaman
-5080,shadow_shaman_shackles,Shackles,shadow_shaman
-5081,shadow_shaman_mass_serpent_ward,Mass Serpent Ward,shadow_shaman
-5082,razor_plasma_field,Plasma Field,razor
-5083,razor_static_link,Static Link,razor
-5084,razor_unstable_current,Unstable Current,razor
-5085,razor_eye_of_the_storm,Eye Of The Storm,razor
-5086,skeleton_king_hellfire_blast,Hellfire Blast,skeleton_king
-5087,skeleton_king_vampiric_aura,Vampiric Aura,skeleton_king
-5088,skeleton_king_mortal_strike,Mortal Strike,skeleton_king
-5089,skeleton_king_reincarnation,Reincarnation,skeleton_king
-5090,death_prophet_carrion_swarm,Carrion Swarm,death_prophet
-5091,death_prophet_silence,Silence,death_prophet
-5092,death_prophet_witchcraft,Witchcraft,death_prophet
-5093,death_prophet_exorcism,Exorcism,death_prophet
-5094,sven_storm_bolt,Storm Bolt,sven
-5095,sven_great_cleave,Great Cleave,sven
-5096,sven_warcry,Warcry,sven
-5097,sven_gods_strength,Gods Strength,sven
-5098,storm_spirit_static_remnant,Static Remnant,storm_spirit
-5099,storm_spirit_electric_vortex,Electric Vortex,storm_spirit
-5100,storm_spirit_overload,Overload,storm_spirit
-5101,storm_spirit_ball_lightning,Ball Lightning,storm_spirit
-5102,sandking_burrowstrike,Burrowstrike,sand_king
-5103,sandking_sand_storm,Sand Storm,sand_king
-5104,sandking_caustic_finale,Caustic Finale,sand_king
-5105,sandking_epicenter,Epicenter,sand_king
-5106,tiny_avalanche,Avalanche,tiny
-5107,tiny_toss,Toss,tiny
-5108,tiny_craggy_exterior,Craggy Exterior,tiny
-5109,tiny_grow,Grow,tiny
-5110,zuus_arc_lightning,Arc Lightning,zuus
-5111,zuus_lightning_bolt,Lightning Bolt,zuus
-5112,zuus_static_field,Static Field,zuus
-5113,zuus_thundergods_wrath,Thundergods Wrath,zuus
-5114,slardar_sprint,Sprint,slardar
-5115,slardar_slithereen_crush,Slithereen Crush,slardar
-5116,slardar_bash,Bash,slardar
-5117,slardar_amplify_damage,Amplify Damage,slardar
-5118,tidehunter_gush,Gush,tidehunter
-5119,tidehunter_kraken_shell,Kraken Shell,tidehunter
-5120,tidehunter_anchor_smash,Anchor Smash,tidehunter
-5121,tidehunter_ravage,Ravage,tidehunter
-5122,vengefulspirit_magic_missile,Magic Missile,vengefulspirit
-5123,vengefulspirit_command_aura,Command Aura,vengefulspirit
-5124,vengefulspirit_wave_of_terror,Wave Of Terror,vengefulspirit
-5125,vengefulspirit_nether_swap,Nether Swap,vengefulspirit
-5126,crystal_maiden_crystal_nova,Crystal Nova,crystal_maiden
-5127,crystal_maiden_frostbite,Frostbite,crystal_maiden
-5128,crystal_maiden_brilliance_aura,Brilliance Aura,crystal_maiden
-5129,crystal_maiden_freezing_field,Freezing Field,crystal_maiden
-5130,windrunner_shackleshot,Shackleshot,windrunner
-5131,windrunner_powershot,Powershot,windrunner
-5132,windrunner_windrun,Windrun,windrunner
-5133,windrunner_focusfire,Focusfire,windrunner
-5134,lich_frost_nova,Frost Blast,lich
-5135,lich_frost_armor,Frost Armor,lich
-5136,lich_dark_ritual,Sacrifice,lich
-5137,lich_chain_frost,Chain Frost,lich
-5138,witch_doctor_paralyzing_cask,Paralyzing Cask,witch_doctor
-5139,witch_doctor_voodoo_restoration,Voodoo Restoration,witch_doctor
-5140,witch_doctor_maledict,Maledict,witch_doctor
-5141,witch_doctor_death_ward,Death Ward,witch_doctor
-5142,riki_smoke_screen,Smoke Screen,riki
-5143,riki_blink_strike,Blink Strike,riki
-5145,riki_tricks_of_the_trade,Tricks of the Trade,riki
-5144,riki_permanent_invisibility,Permanent Invisibility,riki
-5146,enigma_malefice,Malefice,enigma
-5147,enigma_demonic_conversion,Demonic Conversion,enigma
-5148,enigma_midnight_pulse,Midnight Pulse,enigma
-5149,enigma_black_hole,Black Hole,enigma
-5150,tinker_laser,Laser,tinker
-5151,tinker_heat_seeking_missile,Heat Seeking Missile,tinker
-5152,tinker_march_of_the_machines,March Of The Machines,tinker
-5153,tinker_rearm,Rearm,tinker
-5154,sniper_shrapnel,Shrapnel,sniper
-5155,sniper_headshot,Headshot,sniper
-5156,sniper_take_aim,Take Aim,sniper
-5157,sniper_assassinate,Assassinate,sniper
-5158,necrolyte_death_pulse,Death Pulse,necrolyte
-5159,necrolyte_heartstopper_aura,Heartstopper Aura,necrolyte
-5160,necrolyte_sadist,Sadist,necrolyte
-5161,necrolyte_reapers_scythe,Reapers Scythe,necrolyte
-5162,warlock_fatal_bonds,Fatal Bonds,warlock
-5163,warlock_shadow_word,Shadow Word,warlock
-5164,warlock_upheaval,Upheaval,warlock
-5165,warlock_rain_of_chaos,Rain Of Chaos,warlock
-5166,warlock_golem_flaming_fists,Flaming Fists,warlock
-5167,warlock_golem_permanent_immolation,Permanent Immolation,warlock
-5168,beastmaster_wild_axes,Wild Axes,beastmaster
-5169,beastmaster_call_of_the_wild,Call Of The Wild,beastmaster
-5170,beastmaster_hawk_invisibility,Hawk Invisibility,beastmaster
-5171,beastmaster_boar_poison,Boar Poison,beastmaster
-5172,beastmaster_inner_beast,Inner Beast,beastmaster
-5173,queenofpain_shadow_strike,Shadow Strike,queenofpain
-5174,queenofpain_blink,Blink,queenofpain
-5175,queenofpain_scream_of_pain,Scream Of Pain,queenofpain
-5176,queenofpain_sonic_wave,Sonic Wave,queenofpain
-5177,beastmaster_primal_roar,Primal Roar,beastmaster
-5178,venomancer_venomous_gale,Venomous Gale,venomancer
-5179,venomancer_poison_sting,Poison Sting,venomancer
-5180,venomancer_plague_ward,Plague Ward,venomancer
-5181,venomancer_poison_nova,Poison Nova,venomancer
-5182,faceless_void_time_walk,Time Walk,faceless_void
-5183,faceless_void_backtrack,Backtrack,faceless_void
-5184,faceless_void_time_lock,Time Lock,faceless_void
-5185,faceless_void_chronosphere,Chronosphere,faceless_void
-5186,pugna_nether_blast,Nether Blast,pugna
-5187,pugna_decrepify,Decrepify,pugna
-5188,pugna_nether_ward,Nether Ward,pugna
-5189,pugna_life_drain,Life Drain,pugna
-5190,phantom_assassin_stifling_dagger,Stifling Dagger,phantom_assassin
-5191,phantom_assassin_phantom_strike,Phantom Strike,phantom_assassin
-5192,phantom_assassin_blur,Blur,phantom_assassin
-5193,phantom_assassin_coup_de_grace,Coup De Grace,phantom_assassin
-5194,templar_assassin_refraction,Refraction,templar_assassin
-5195,templar_assassin_meld,Meld,templar_assassin
-5196,templar_assassin_psi_blades,Psi Blades,templar_assassin
-5197,templar_assassin_psionic_trap,Psionic Trap,templar_assassin
-5198,templar_assassin_trap,Trap,templar_assassin
-5199,templar_assassin_self_trap,Self Trap,templar_assassin
-5200,necronomicon_warrior_last_will,Last Will,necronomicon_warrior
-5201,necronomicon_warrior_sight,Sight,necronomicon_warrior
-5202,necronomicon_warrior_mana_burn,Mana Burn,necronomicon_warrior
-5203,necronomicon_archer_mana_burn,Mana Burn,necronomicon_archer
-5204,necronomicon_archer_aoe,AoE,necronomicon_archer
-5205,courier_return_to_base,Return To Base,courier
-5206,courier_transfer_items,Transfer Items,courier
-5207,courier_return_stash_items,Return Stash Items,courier
-5208,courier_take_stash_items,Take Stash Items,courier
-5209,courier_shield,Shield,courier
-5210,courier_burst,Burst,courier
-5213,roshan_spell_block,Spell Block,roshan
-5214,roshan_bash,Bash,roshan
-5215,roshan_slam,Slam,roshan
-5216,roshan_inherent_buffs,Inherent Buffs,roshan
-5217,roshan_devotion,Devotion,roshan
-5218,viper_poison_attack,Poison Attack,viper
-5219,viper_nethertoxin,Nethertoxin,viper
-5220,viper_corrosive_skin,Corrosive Skin,viper
-5221,viper_viper_strike,Viper Strike,viper
-5222,luna_lucent_beam,Lucent Beam,luna
-5223,luna_moon_glaive,Moon Glaive,luna
-5224,luna_lunar_blessing,Lunar Blessing,luna
-5225,luna_eclipse,Eclipse,luna
-5226,dragon_knight_breathe_fire,Breathe Fire,dragon_knight
-5227,dragon_knight_dragon_tail,Dragon Tail,dragon_knight
-5228,dragon_knight_dragon_blood,Dragon Blood,dragon_knight
-5229,dragon_knight_elder_dragon_form,Elder Dragon Form,dragon_knight
-5232,dragon_knight_frost_breath,Frost Breath,dragon_knight
-5233,dazzle_poison_touch,Poison Touch,dazzle
-5234,dazzle_shallow_grave,Shallow Grave,dazzle
-5235,dazzle_shadow_wave,Shadow Wave,dazzle
-5236,dazzle_weave,Weave,dazzle
-5237,rattletrap_battery_assault,Battery Assault,rattletrap
-5238,rattletrap_power_cogs,Power Cogs,rattletrap
-5239,rattletrap_rocket_flare,Rocket Flare,rattletrap
-5240,rattletrap_hookshot,Hookshot,rattletrap
-5241,leshrac_split_earth,Split Earth,leshrac
-5242,leshrac_diabolic_edict,Diabolic Edict,leshrac
-5243,leshrac_lightning_storm,Lightning Storm,leshrac
-5244,leshrac_pulse_nova,Pulse Nova,leshrac
-5245,furion_sprout,Sprout,furion
-5246,furion_teleportation,Teleportation,furion
-5247,furion_force_of_nature,Force Of Nature,furion
-5248,furion_wrath_of_nature,Wrath Of Nature,furion
-5249,life_stealer_rage,Rage,life_stealer
-5250,life_stealer_feast,Feast,life_stealer
-5251,life_stealer_open_wounds,Open Wounds,life_stealer
-5252,life_stealer_infest,Infest,life_stealer
-5253,life_stealer_consume,Consume,life_stealer
-5255,dark_seer_vacuum,Vacuum,dark_seer
-5256,dark_seer_ion_shell,Ion Shell,dark_seer
-5257,dark_seer_surge,Surge,dark_seer
-5258,dark_seer_wall_of_replica,Wall Of Replica,dark_seer
-5259,clinkz_strafe,Strafe,clinkz
-5260,clinkz_searing_arrows,Searing Arrows,clinkz
-5261,clinkz_wind_walk,Wind Walk,clinkz
-5262,clinkz_death_pact,Death Pact,clinkz
-5263,omniknight_purification,Purification,omniknight
-5264,omniknight_repel,Repel,omniknight
-5265,omniknight_degen_aura,Degen Aura,omniknight
-5266,omniknight_guardian_angel,Guardian Angel,omniknight
-5267,enchantress_untouchable,Untouchable,enchantress
-5268,enchantress_enchant,Enchant,enchantress
-5269,enchantress_natures_attendants,Natures Attendants,enchantress
-5270,enchantress_impetus,Impetus,enchantress
-5271,huskar_inner_vitality,Inner Vitality,huskar
-5272,huskar_burning_spear,Burning Spear,huskar
-5273,huskar_berserkers_blood,Berserkers Blood,huskar
-5274,huskar_life_break,Life Break,huskar
-5275,night_stalker_void,Void,night_stalker
-5276,night_stalker_crippling_fear,Crippling Fear,night_stalker
-5277,night_stalker_hunter_in_the_night,Hunter In The Night,night_stalker
-5278,night_stalker_darkness,Darkness,night_stalker
-5279,broodmother_spawn_spiderlings,Spawn Spiderlings,broodmother
-5280,broodmother_spin_web,Spin Web,broodmother
-5281,broodmother_incapacitating_bite,Incapacitating Bite,broodmother
-5282,broodmother_insatiable_hunger,Insatiable Hunger,broodmother
-5283,broodmother_spawn_spiderite,Spawn Spiderite,broodmother
-5284,broodmother_poison_sting,Poison Sting,broodmother
-5285,bounty_hunter_shuriken_toss,Shuriken Toss,bounty_hunter
-5286,bounty_hunter_jinada,Jinada,bounty_hunter
-5287,bounty_hunter_wind_walk,Wind Walk,bounty_hunter
-5288,bounty_hunter_track,Track,bounty_hunter
-5289,weaver_the_swarm,The Swarm,weaver
-5290,weaver_shukuchi,Shukuchi,weaver
-5291,weaver_geminate_attack,Geminate Attack,weaver
-5292,weaver_time_lapse,Time Lapse,weaver
-5293,kobold_taskmaster_speed_aura,Speed Aura,kobold_taskmaster
-5294,centaur_khan_endurance_aura,Endurance Aura,centaur_khan
-5295,centaur_khan_war_stomp,War Stomp,centaur_khan
-5296,gnoll_assassin_envenomed_weapon,Envenomed Weapon,gnoll_assassin
-5297,jakiro_dual_breath,Dual Breath,jakiro
-5298,jakiro_ice_path,Ice Path,jakiro
-5299,jakiro_liquid_fire,Liquid Fire,jakiro
-5300,jakiro_macropyre,Macropyre,jakiro
-5301,ghost_frost_attack,Frost Attack,ghost
-5302,polar_furbolg_ursa_warrior_thunder_clap,Thunder Clap,polar_furbolg_ursa_warrior
-5303,neutral_spell_immunity,Spell Immunity,neutral
-5304,ogre_magi_frost_armor,Frost Armor,ogre_magi
-5305,dark_troll_warlord_ensnare,Ensnare,dark_troll_warlord
-5306,dark_troll_warlord_raise_dead,Raise Dead,dark_troll_warlord
-5307,giant_wolf_critical_strike,Critical Strike,giant_wolf
-5308,alpha_wolf_critical_strike,Critical Strike,alpha_wolf
-5309,alpha_wolf_command_aura,Command Aura,alpha_wolf
-5310,tornado_tempest,Tornado Tempest,tornado
-5312,enraged_wildkin_tornado,Tornado,enraged_wildkin
-5313,enraged_wildkin_toughness_aura,Toughness Aura,enraged_wildkin
-5314,satyr_trickster_purge,Purge,satyr_trickster
-5315,satyr_soulstealer_mana_burn,Mana Burn,satyr_soulstealer
-5316,satyr_hellcaller_shockwave,Shockwave,satyr_hellcaller
-5317,satyr_hellcaller_unholy_aura,Unholy Aura,satyr_hellcaller
-5318,forest_troll_high_priest_heal,Heal,forest_troll_high_priest
-5319,harpy_storm_chain_lightning,Chain Lightning,harpy_storm
-5320,batrider_sticky_napalm,Sticky Napalm,batrider
-5321,batrider_flamebreak,Flamebreak,batrider
-5322,batrider_firefly,Firefly,batrider
-5323,batrider_flaming_lasso,Flaming Lasso,batrider
-5324,black_dragon_splash_attack,Splash Attack,black_dragon
-5325,blue_dragonspawn_sorcerer_evasion,Evasion,blue_dragonspawn
-5326,blue_dragonspawn_overseer_evasion,Evasion,blue_dragonspawn
-5327,blue_dragonspawn_overseer_devotion_aura,Devotion Aura,blue_dragonspawn
-5328,chen_penitence,Penitence,chen
-5329,chen_test_of_faith,Test Of Faith,chen
-5330,chen_holy_persuasion,Holy Persuasion,chen
-5331,chen_hand_of_god,Hand Of God,chen
-5332,big_thunder_lizard_slam,Slam,big_thunder_lizard
-5333,big_thunder_lizard_frenzy,Frenzy,big_thunder_lizard
-5334,spectre_spectral_dagger,Spectral Dagger,spectre
-5335,spectre_desolate,Desolate,spectre
-5336,spectre_dispersion,Dispersion,spectre
-5337,spectre_haunt,Haunt,spectre
-5338,spectre_reality,Reality,spectre
-5339,doom_bringer_devour,Devour,doom_bringer
-5340,doom_bringer_scorched_earth,Scorched Earth,doom_bringer
-5341,doom_bringer_infernal_blade,Infernal Blade,doom_bringer
-5342,doom_bringer_doom,Doom,doom_bringer
-5343,doom_bringer_empty1,Empty 1,doom_bringer
-5344,doom_bringer_empty2,Empty 2,doom_bringer
-5345,ancient_apparition_cold_feet,Cold Feet,ancient_apparition
-5346,ancient_apparition_ice_vortex,Ice Vortex,ancient_apparition
-5347,ancient_apparition_chilling_touch,Chilling Touch,ancient_apparition
-5348,ancient_apparition_ice_blast,Ice Blast,ancient_apparition
-5349,ancient_apparition_ice_blast_release,Ice Blast Release,ancient_apparition
-5350,backdoor_protection,Backdoor Protection,backdoor
-5351,backdoor_protection_in_base,Backdoor Protection In Base,backdoor
-5352,beastmaster_greater_boar_poison,Poison,beastmaster
-5353,spirit_breaker_charge_of_darkness,Charge Of Darkness,spirit_breaker
-5354,spirit_breaker_empowering_haste,Empowering Haste,spirit_breaker
-5355,spirit_breaker_greater_bash,Greater Bash,spirit_breaker
-5356,spirit_breaker_nether_strike,Nether Strike,spirit_breaker
-5357,ursa_earthshock,Earthshock,ursa
-5358,ursa_overpower,Overpower,ursa
-5359,ursa_fury_swipes,Fury Swipes,ursa
-5360,ursa_enrage,Enrage,ursa
-5361,gyrocopter_rocket_barrage,Rocket Barrage,gyrocopter
-5362,gyrocopter_homing_missile,Homing Missile,gyrocopter
-5363,gyrocopter_flak_cannon,Flak Cannon,gyrocopter
-5364,gyrocopter_call_down,Call Down,gyrocopter
-5365,alchemist_acid_spray,Acid Spray,alchemist
-5366,alchemist_unstable_concoction,Unstable Concoction,alchemist
-5367,alchemist_unstable_concoction_throw,Unstable Concoction Throw,alchemist
-5368,alchemist_goblins_greed,Goblins Greed,alchemist
-5369,alchemist_chemical_rage,Chemical Rage,alchemist
-5370,invoker_quas,Quas,invoker
-5371,invoker_wex,Wex,invoker
-5372,invoker_exort,Exort,invoker
-5373,invoker_empty1,Empty1,invoker
-5374,invoker_empty2,Empty2,invoker
-5375,invoker_invoke,Invoke,invoker
-5376,invoker_cold_snap,Cold Snap,invoker
-5377,silencer_curse_of_the_silent,Curse Of The Silent,silencer
-5378,silencer_glaives_of_wisdom,Glaives Of Wisdom,silencer
-5379,silencer_last_word,Last Word,silencer
-5380,silencer_global_silence,Global Silence,silencer
-5381,invoker_ghost_walk,Ghost Walk,invoker
-5382,invoker_tornado,Tornado,invoker
-5383,invoker_emp,Emp,invoker
-5384,invoker_alacrity,Alacrity,invoker
-5385,invoker_chaos_meteor,Chaos Meteor,invoker
-5386,invoker_sun_strike,Sun Strike,invoker
-5387,invoker_forge_spirit,Forge Spirit,invoker
-5388,forged_spirit_melting_strike,Melting Strike,forged_spirit
-5389,invoker_ice_wall,Ice Wall,invoker
-5390,invoker_deafening_blast,Deafening Blast,invoker
-5391,obsidian_destroyer_arcane_orb,Arcane Orb,obsidian_destroyer
-5392,obsidian_destroyer_astral_imprisonment,Astral Imprisonment,obsidian_destroyer
-5393,obsidian_destroyer_essence_aura,Essence Aura,obsidian_destroyer
-5394,obsidian_destroyer_sanity_eclipse,Sanity Eclipse,obsidian_destroyer
-5395,lycan_summon_wolves,Summon Wolves,lycan
-5396,lycan_howl,Howl,lycan
-5397,lycan_feral_impulse,Feral Impulse,lycan
-5398,lycan_shapeshift,Shapeshift,lycan
-5399,lycan_summon_wolves_critical_strike,Summon Wolves Critical Strike,lycan
-5400,brewmaster_thunder_clap,Thunder Clap,brewmaster
-5401,brewmaster_drunken_haze,Drunken Haze,brewmaster
-5402,brewmaster_drunken_brawler,Drunken Brawler,brewmaster
-5403,brewmaster_primal_split,Primal Split,brewmaster
-5404,brewmaster_earth_hurl_boulder,Hurl Boulder,brewmaster_earth
-5405,brewmaster_earth_spell_immunity,Spell Immunity,brewmaster_earth
-5406,brewmaster_earth_pulverize,Pulverize,brewmaster_earth
-5408,brewmaster_storm_dispel_magic,Dispel Magic,brewmaster_storm
-5409,brewmaster_storm_cyclone,Cyclone,brewmaster_storm
-5410,brewmaster_storm_wind_walk,Wind Walk,brewmaster_storm
-5411,brewmaster_fire_permanent_immolation,Permanent Immolation,brewmaster_fire
-5412,lone_druid_spirit_bear,Spirit Bear,lone_druid
-5413,lone_druid_rabid,Rabid,lone_druid
-5414,lone_druid_savage_roar,Savage Roar,lone_druid
-5415,lone_druid_true_form,True Form,lone_druid
-5416,lone_druid_true_form_druid,True Form Druid,lone_druid
-5417,lone_druid_true_form_battle_cry,True Form Battle Cry,lone_druid
-5418,lone_druid_spirit_bear_return,Spirit Bear Return,lone_druid_spirit_bear
-5419,lone_druid_spirit_bear_entangle,Spirit Bear Entangle,lone_druid_spirit_bear
-5420,lone_druid_spirit_bear_demolish,Spirit Bear Demolish,lone_druid_spirit_bear
-5421,shadow_demon_disruption,Disruption,shadow_demon
-5422,shadow_demon_soul_catcher,Soul Catcher,shadow_demon
-5423,shadow_demon_shadow_poison,Shadow Poison,shadow_demon
-5424,shadow_demon_shadow_poison_release,Shadow Poison Release,shadow_demon
-5425,shadow_demon_demonic_purge,Demonic Purge,shadow_demon
-5426,chaos_knight_chaos_bolt,Chaos Bolt,chaos_knight
-5427,chaos_knight_reality_rift,Reality Rift,chaos_knight
-5428,chaos_knight_chaos_strike,Chaos Strike,chaos_knight
-5429,chaos_knight_phantasm,Phantasm,chaos_knight
-5430,meepo_earthbind,Earthbind,meepo
-5431,meepo_poof,Poof,meepo
-5432,meepo_geostrike,Geostrike,meepo
-5433,meepo_divided_we_stand,Divided We Stand,meepo
-5434,treant_natures_guise,Natures Guise,treant
-5435,treant_leech_seed,Leech Seed,treant
-5436,treant_living_armor,Living Armor,treant
-5437,treant_overgrowth,Overgrowth,treant
-5438,ogre_magi_fireblast,Fireblast,ogre_magi
-5439,ogre_magi_ignite,Ignite,ogre_magi
-5440,ogre_magi_bloodlust,Bloodlust,ogre_magi
-5441,ogre_magi_multicast,Multicast,ogre_magi
-5442,undying_decay,Decay,undying
-5443,undying_soul_rip,Soul Rip,undying
-5444,undying_tombstone,Tombstone,undying
-5445,undying_tombstone_zombie_aura,Tombstone Zombie Aura,undying
-5446,undying_tombstone_zombie_deathstrike,Tombstone Zombie Deathstrike,undying
-5447,undying_flesh_golem,Flesh Golem,undying
-5448,rubick_telekinesis,Telekinesis,rubick
-5449,rubick_telekinesis_land,Telekinesis Land,rubick
-5450,rubick_fade_bolt,Fade Bolt,rubick
-5451,rubick_null_field,Null Field,rubick
-5452,rubick_spell_steal,Spell Steal,rubick
-5453,rubick_empty1,Empty 1,rubick
-5454,rubick_empty2,Empty 2,rubick
-5455,rubick_hidden1,Hidden 1,rubick
-5456,rubick_hidden2,Hidden 2,rubick
-5457,rubick_hidden3,Hidden 3,rubick
-5458,disruptor_thunder_strike,Thunder Strike,disruptor
-5459,disruptor_glimpse,Glimpse,disruptor
-5460,disruptor_kinetic_field,Kinetic Field,disruptor
-5461,disruptor_static_storm,Static Storm,disruptor
-5462,nyx_assassin_impale,Impale,nyx_assassin
-5463,nyx_assassin_mana_burn,Mana Burn,nyx_assassin
-5464,nyx_assassin_spiked_carapace,Spiked Carapace,nyx_assassin
-5465,nyx_assassin_vendetta,Vendetta,nyx_assassin
-5466,ogre_magi_unrefined_fireblast,Unrefined Fireblast,ogre_magi
-5467,naga_siren_mirror_image,Mirror Image,naga_siren
-5468,naga_siren_ensnare,Ensnare,naga_siren
-5469,naga_siren_rip_tide,Rip Tide,naga_siren
-5470,naga_siren_song_of_the_siren,Song Of The Siren,naga_siren
-5471,keeper_of_the_light_illuminate,Illuminate,keeper_of_the_light
-5472,keeper_of_the_light_mana_leak,Mana Leak,keeper_of_the_light
-5473,keeper_of_the_light_chakra_magic,Chakra Magic,keeper_of_the_light
-5474,keeper_of_the_light_spirit_form,Spirit Form,keeper_of_the_light
-5475,keeper_of_the_light_recall,Recall,keeper_of_the_light
-5476,keeper_of_the_light_blinding_light,Blinding Light,keeper_of_the_light
-5477,keeper_of_the_light_illuminate_end,Illuminate End,keeper_of_the_light
-5478,naga_siren_song_of_the_siren_cancel,Song Of The Siren Cancel,naga_siren
-5479,keeper_of_the_light_spirit_form_illuminate,Spirit Form Illuminate,keeper_of_the_light
-5480,visage_grave_chill,Grave Chill,visage
-5481,visage_soul_assumption,Soul Assumption,visage
-5482,visage_gravekeepers_cloak,Gravekeepers Cloak,visage
-5483,visage_summon_familiars,Summon Familiars,visage
-5484,visage_summon_familiars_stone_form,Summon Familiars Stone Form,visage
-5485,wisp_tether,Tether,wisp
-5486,wisp_spirits,Spirits,wisp
-5487,wisp_overcharge,Overcharge,wisp
-5488,wisp_relocate,Relocate,wisp
-5489,wisp_tether_break,Tether Break,wisp
-5490,wisp_spirits_in,Spirits In,wisp
-5491,forest_troll_high_priest_mana_aura,Troll High Priest Mana Aura,forest_troll_high_priest
-5492,courier_go_to_secretshop,Go To Secret Shop,courier
-5493,wisp_spirits_out,Spirits Out,wisp
-5494,slark_dark_pact,Dark Pact,slark
-5495,slark_pounce,Pounce,slark
-5496,slark_essence_shift,Essence Shift,slark
-5497,slark_shadow_dance,Shadow Dance,slark
-5498,wisp_empty1,Empty 1,wisp
-5499,wisp_empty2,Empty 2,wisp
-5500,lycan_summon_wolves_invisibility,Summon Wolves Invisibility,lycan
-5501,keeper_of_the_light_empty1,Empty 1,keeper_of_the_light
-5502,keeper_of_the_light_empty2,Empty 2,keeper_of_the_light
-5503,keeper_of_the_light_spirit_form_illuminate_end,Spirit Form Illuminate End,keeper_of_the_light
-5504,medusa_split_shot,Split Shot,medusa
-5505,medusa_mystic_snake,Mystic Snake,medusa
-5506,medusa_mana_shield,Mana Shield,medusa
-5507,medusa_stone_gaze,Stone Gaze,medusa
-5508,troll_warlord_berserkers_rage,Berserkers Rage,troll_warlord
-5509,troll_warlord_whirling_axes_ranged,Whirling Axes Ranged,troll_warlord
-5510,troll_warlord_whirling_axes_melee,Whirling Axes Melee,troll_warlord
-5511,troll_warlord_fervor,Fervor,troll_warlord
-5512,troll_warlord_battle_trance,Battle Trance,troll_warlord
-5514,centaur_hoof_stomp,Hoof Stomp,centaur
-5515,centaur_double_edge,Double Edge,centaur
-5516,centaur_return,Return,centaur
-5517,centaur_stampede,Stampede,centaur
-5518,magnataur_shockwave,Shockwave,magnataur
-5519,magnataur_empower,Empower,magnataur
-5520,magnataur_skewer,Skewer,magnataur
-5521,magnataur_reverse_polarity,Reverse Polarity,magnataur
-5522,chen_test_of_faith_teleport,Test Of Faith Teleport,chen
-5523,bane_nightmare_end,Nightmare End,bane
-5524,shredder_whirling_death,Whirling Death,shredder
-5525,shredder_timber_chain,Timber Chain,shredder
-5526,shredder_reactive_armor,Reactive Armor,shredder
-5527,shredder_chakram,Chakram,shredder
-5528,shredder_return_chakram,Return Chakram,shredder
-5548,bristleback_viscous_nasal_goo,Viscous Nasal Goo,bristleback
-5549,bristleback_quill_spray,Quill Spray,bristleback
-5550,bristleback_bristleback,Bristleback,bristleback
-5551,bristleback_warpath,Warpath,bristleback
-5565,tusk_ice_shards,Ice Shards,tusk
-5566,tusk_snowball,Snowball,tusk
-5567,tusk_frozen_sigil,Frozen Sigil,tusk
-5568,tusk_walrus_punch,Walrus Punch,tusk
-5580,beastmaster_call_of_the_wild_boar,Call Of The Wild Boar,beastmaster
-5581,skywrath_mage_arcane_bolt,Arcane Bolt,skywrath_mage
-5582,skywrath_mage_concussive_shot,Concussive Shot,skywrath_mage
-5583,skywrath_mage_ancient_seal,Ancient Seal,skywrath_mage
-5584,skywrath_mage_mystic_flare,Mystic Flare,skywrath_mage
-5585,abaddon_death_coil,Mist Coil,abaddon
-5586,abaddon_aphotic_shield,Aphotic Shield,abaddon
-5587,abaddon_frostmourne,Curse of Avernus,abaddon
-5588,abaddon_borrowed_time,Borrowed Time,abaddon
-5589,elder_titan_echo_stomp,Echo Stomp,elder_titan
-5590,elder_titan_echo_stomp_spirit,Echo Stomp Sprit,elder_titan
-5591,elder_titan_ancestral_spirit,Ancestral Spirit,elder_titan
-5592,elder_titan_return_spirit,Return Spirit,elder_titan
-5593,elder_titan_natural_order,Natural Order,elder_titan
-5594,elder_titan_earth_splitter,Earth Splitter,elder_titan
-5595,legion_commander_overwhelming_odds,Overwhelming Odds,legion_commander
-5596,legion_commander_press_the_attack,Press The Attack,legion_commander
-5597,legion_commander_moment_of_courage,Moment Of Courage,legion_commander
-5598,legion_commander_duel,Duel,legion_commander
-5599,techies_land_mines,Land Mines,techies
-5600,techies_stasis_trap,Stasis Trap,techies
-5601,techies_suicide,"Suicide Squad, Attack!",techies
-5602,techies_remote_mines,Remote Mines,techies
-5603,ember_spirit_searing_chains,Searing Chains,ember_spirit
-5604,ember_spirit_sleight_of_fist,Sleight Of Fist,ember_spirit
-5605,ember_spirit_flame_guard,Flame Guard,ember_spirit
-5606,ember_spirit_fire_remnant,Fire Remnant,ember_spirit
-5607,ember_spirit_activate_fire_remnant,Activate Fire Remnant,ember_spirit
-5608,earth_spirit_boulder_smash,Boulder Smash,earth_spirit
-5609,earth_spirit_rolling_boulder,Rolling Boulder,earth_spirit
-5610,earth_spirit_geomagnetic_grip,Geomagnetic Grip,earth_spirit
-5611,earth_spirit_stone_caller,Stone Caller,earth_spirit
-5612,earth_spirit_magnetize,Magnetize,earth_spirit
-5613,abyssal_underlord_firestorm,Firestorm,abyssal_underlord
-5614,abyssal_underlord_pit_of_malice,Pit Of Malice,abyssal_underlord
-5615,abyssal_underlord_atrophy_aura,Atrophy Aura,abyssal_underlord
-5616,abyssal_underlord_dark_rift,Dark Rift,abyssal_underlord
-5617,abyssal_underlord_cancel_dark_rift,Cancel Dark Rift,abyssal_underlord
-5619,terrorblade_reflection,Reflection,terrorblade
-5620,terrorblade_conjure_image,Conjure Image,terrorblade
-5621,terrorblade_metamorphosis,Metamorphosis,terrorblade
-5622,terrorblade_sunder,Sunder,terrorblade
-5623,phoenix_icarus_dive,Icarus Dive,phoenix
-5624,phoenix_icarus_dive_stop,Icarus Dive Stop,phoenix
-5625,phoenix_fire_spirits,Fire Spirits,phoenix
-5626,phoenix_sun_ray,Sun Ray,phoenix
-5627,phoenix_sun_ray_stop,Sun Ray Stop,phoenix
-5628,phoenix_sun_ray_toggle_move,Sun Ray Move,phoenix
-5629,phoenix_sun_ray_toggle_move_empty,Sun Ray Move Empty,phoenix
-5630,phoenix_supernova,Supernova,phoenix
-5631,phoenix_launch_fire_spirit,Launch Fire Spirits,phoenix
-5632,drow_ranger_wave_of_silence,Wave Of Silence,drow_ranger
-5635,techies_focused_detonate,Focused Detonate,techies
-5636,techies_remote_mines_self_detonate,Remote Mines Self Detonate,techies
-5637,oracle_fortunes_end,Fortunes End,oracle
-5638,oracle_fates_edict,Fates Edict,oracle
-5639,oracle_purifying_flames,Purifying Flames,oracle
-5640,oracle_false_promise,False Promise,oracle
-5641,tusk_launch_snowball,Launch Snowball,tusk
-5642,courier_morph,Morph,courier
-5643,broodmother_spin_web_destroy,Spin Web Detroy,broodmother
-5644,techies_minefield_sign,Minefield Sign,techies
-5645,shredder_chakram_2,Chakram 2,shredder
-5646,shredder_return_chakram_2,Return Chakram 2,shredder
-5648,earth_spirit_petrify,Petrify,earth_spirit
-5649,treant_eyes_in_the_forest,Eyes in the Forest,treant
-5651,winter_wyvern_arctic_burn,Arctic Burn,winter_wyvern
-5652,winter_wyvern_splinter_blast,Splinter Blast,winter_wyvern
-5653,winter_wyvern_cold_embrace,Cold Embrace,winter_wyvern
-5654,winter_wyvern_winters_curse,Winters Curse,winter_wyvern
-5655,life_stealer_control,Control,life_stealer
-5656,granite_golem_hp_aura,HP Aura,granite_golem
-5657,life_stealer_empty_1,Empty 1,life_stealer
-5658,life_stealer_empty_2,Empty 2,life_stealer
-5659,life_stealer_empty_3,Empty 3,life_stealer
-5660,life_stealer_empty_4,Empty 4,life_stealer
-5666,nyx_assassin_burrow,Burrow,nyx_assassin
-5667,mud_golem_rock_destroy,Rock Destroy,mud_golem
-5668,tusk_ice_shards_stop,Ice Shards Stop,tusk
-5669,ability_deward,Deward,ward
-5670,mud_golem_hurl_boulder,Hurl Boulder,mud_golem
-5671,life_stealer_assimilate,Assimilate,life_stealer
-5672,tusk_walrus_kick,Walrus Kick,tusk
-5673,nyx_assassin_unburrow,Unburrow,nyx_assassin
-5674,morphling_hybrid,Hybrid,morphling
-5675,life_stealer_assimilate_eject,Eject,life_stealer
-5676,courier_take_stash_and_transfer_items,Take Stash and Transfer Items,courier
-5677,arc_warden_flux,Flux,arc_warden
-5678,arc_warden_magnetic_field,Magnetic Field,arc_warden
-5679,arc_warden_spark_wraith,Spark Wraith,arc_warden
-5680,granite_golem_bash,Bash,granite_golem
-5681,black_dragon_dragonhide_aura,Dragonhide Aura,black_dragon
-5682,big_thunder_lizard_wardrums_aura,Wardrums Aura,big_thunder_lizard
-5683,arc_warden_tempest_double,Tempest Double,arc_warden
-5689,black_dragon_fireball,Fireball,black_dragon
-5685,death_prophet_spirit_siphon,Spirit Siphon,death_prophet
-5691,faceless_void_time_dilation, Time Dilation,faceless_void
-5686,ancient_golem_rockslide, Rockslide,ancient_golem
-5690,invoker_attribute_bonus,Invoker Attribute Bonus,invoker
-5687,lone_druid_savage_roar_bear, Bear Savage Roar,lone_druid_bear
-5688,mudgolem_cloak_aura,Cloak Aura,mud_golem
-5684,obsidian_destroyer_mind_over_matter,Mind Over Matter,obsidian_destroyer
+ID,key,localizedName,ownerKey,ownerType,placeholder,passive
+5303,neutral_spell_immunity,Spell Immunity,neutral,Neutral,FALSE,FALSE
+5171,beastmaster_boar_poison,Boar Poison,npc_dota_beastmaster_boar,Summoned,FALSE,FALSE
+5352,beastmaster_greater_boar_poison,Poison,npc_dota_beastmaster_boar,Summoned,FALSE,FALSE
+5404,brewmaster_earth_hurl_boulder,Hurl Boulder,npc_dota_brewmaster_earth,Summoned,FALSE,FALSE
+5406,brewmaster_earth_pulverize,Pulverize,npc_dota_brewmaster_earth,Summoned,FALSE,FALSE
+5405,brewmaster_earth_spell_immunity,Spell Immunity,npc_dota_brewmaster_earth,Summoned,FALSE,FALSE
+5411,brewmaster_fire_permanent_immolation,Permanent Immolation,npc_dota_brewmaster_fire,Summoned,FALSE,FALSE
+5409,brewmaster_storm_cyclone,Cyclone,npc_dota_brewmaster_storm,Summoned,FALSE,FALSE
+5408,brewmaster_storm_dispel_magic,Dispel Magic,npc_dota_brewmaster_storm,Summoned,FALSE,FALSE
+5410,brewmaster_storm_wind_walk,Wind Walk,npc_dota_brewmaster_storm,Summoned,FALSE,FALSE
+5284,broodmother_poison_sting,Poison Sting,npc_dota_broodmother_spiderling,Summoned,FALSE,FALSE
+5283,broodmother_spawn_spiderite,Spawn Spiderite,npc_dota_broodmother_spiderling,Summoned,FALSE,FALSE
+5210,courier_burst,Burst,npc_dota_courier,Courier,FALSE,FALSE
+5492,courier_go_to_secretshop,Go To Secret Shop,npc_dota_courier,Courier,FALSE,FALSE
+5642,courier_morph,Morph,npc_dota_courier,Courier,FALSE,FALSE
+5207,courier_return_stash_items,Return Stash Items,npc_dota_courier,Courier,FALSE,FALSE
+5205,courier_return_to_base,Return To Base,npc_dota_courier,Courier,FALSE,FALSE
+5209,courier_shield,Shield,npc_dota_courier,Courier,FALSE,FALSE
+5676,courier_take_stash_and_transfer_items,Take Stash and Transfer Items,npc_dota_courier,Courier,FALSE,FALSE
+5208,courier_take_stash_items,Take Stash Items,npc_dota_courier,Courier,FALSE,FALSE
+5206,courier_transfer_items,Transfer Items,npc_dota_courier,Courier,FALSE,FALSE
+5310,tornado_tempest,Tornado Tempest,npc_dota_enraged_wildkin_tornado,Neutral,FALSE,FALSE
+5586,abaddon_aphotic_shield,Aphotic Shield,npc_dota_hero_abaddon,Hero,FALSE,FALSE
+5588,abaddon_borrowed_time,Borrowed Time,npc_dota_hero_abaddon,Hero,FALSE,FALSE
+5587,abaddon_frostmourne,Curse of Avernus,npc_dota_hero_abaddon,Hero,FALSE,FALSE
+5585,abaddon_death_coil,Mist Coil,npc_dota_hero_abaddon,Hero,FALSE,FALSE
+5615,abyssal_underlord_atrophy_aura,Atrophy Aura,npc_dota_hero_abyssal_underlord,Hero,FALSE,FALSE
+5617,abyssal_underlord_cancel_dark_rift,Cancel Dark Rift,npc_dota_hero_abyssal_underlord,Hero,FALSE,FALSE
+5616,abyssal_underlord_dark_rift,Dark Rift,npc_dota_hero_abyssal_underlord,Hero,FALSE,FALSE
+5613,abyssal_underlord_firestorm,Firestorm,npc_dota_hero_abyssal_underlord,Hero,FALSE,FALSE
+5614,abyssal_underlord_pit_of_malice,Pit Of Malice,npc_dota_hero_abyssal_underlord,Hero,FALSE,FALSE
+5368,alchemist_goblins_greed,Goblins Greed,npc_dota_hero_alchemist,Hero,FALSE,TRUE
+5365,alchemist_acid_spray,Acid Spray,npc_dota_hero_alchemist,Hero,FALSE,FALSE
+5369,alchemist_chemical_rage,Chemical Rage,npc_dota_hero_alchemist,Hero,FALSE,FALSE
+5366,alchemist_unstable_concoction,Unstable Concoction,npc_dota_hero_alchemist,Hero,FALSE,FALSE
+5367,alchemist_unstable_concoction_throw,Unstable Concoction Throw,npc_dota_hero_alchemist,Hero,FALSE,FALSE
+5347,ancient_apparition_chilling_touch,Chilling Touch,npc_dota_hero_ancient_apparition,Hero,FALSE,FALSE
+5345,ancient_apparition_cold_feet,Cold Feet,npc_dota_hero_ancient_apparition,Hero,FALSE,FALSE
+5348,ancient_apparition_ice_blast,Ice Blast,npc_dota_hero_ancient_apparition,Hero,FALSE,FALSE
+5349,ancient_apparition_ice_blast_release,Ice Blast Release,npc_dota_hero_ancient_apparition,Hero,FALSE,FALSE
+5346,ancient_apparition_ice_vortex,Ice Vortex,npc_dota_hero_ancient_apparition,Hero,FALSE,FALSE
+5003,antimage_mana_break,Mana Break,npc_dota_hero_antimage,Hero,FALSE,TRUE
+5005,antimage_spell_shield,Spell Shield,npc_dota_hero_antimage,Hero,FALSE,TRUE
+5004,antimage_blink,Blink,npc_dota_hero_antimage,Hero,FALSE,FALSE
+5006,antimage_mana_void,Mana Void,npc_dota_hero_antimage,Hero,FALSE,FALSE
+5677,arc_warden_flux,Flux,npc_dota_hero_arc_warden,Hero,FALSE,FALSE
+5678,arc_warden_magnetic_field,Magnetic Field,npc_dota_hero_arc_warden,Hero,FALSE,FALSE
+5679,arc_warden_spark_wraith,Spark Wraith,npc_dota_hero_arc_warden,Hero,FALSE,FALSE
+5683,arc_warden_tempest_double,Tempest Double,npc_dota_hero_arc_warden,Hero,FALSE,FALSE
+5009,axe_counter_helix,Counter Helix,npc_dota_hero_axe,Hero,FALSE,TRUE
+5008,axe_battle_hunger,Battle Hunger,npc_dota_hero_axe,Hero,FALSE,FALSE
+5007,axe_berserkers_call,Berserkers Call,npc_dota_hero_axe,Hero,FALSE,FALSE
+5010,axe_culling_blade,Culling Blade,npc_dota_hero_axe,Hero,FALSE,FALSE
+5011,bane_brain_sap,Brain Sap,npc_dota_hero_bane,Hero,FALSE,FALSE
+5012,bane_enfeeble,Enfeeble,npc_dota_hero_bane,Hero,FALSE,FALSE
+5013,bane_fiends_grip,Fiends Grip,npc_dota_hero_bane,Hero,FALSE,FALSE
+5014,bane_nightmare,Nightmare,npc_dota_hero_bane,Hero,FALSE,FALSE
+5523,bane_nightmare_end,Nightmare End,npc_dota_hero_bane,Hero,FALSE,FALSE
+5322,batrider_firefly,Firefly,npc_dota_hero_batrider,Hero,FALSE,FALSE
+5321,batrider_flamebreak,Flamebreak,npc_dota_hero_batrider,Hero,FALSE,FALSE
+5323,batrider_flaming_lasso,Flaming Lasso,npc_dota_hero_batrider,Hero,FALSE,FALSE
+5320,batrider_sticky_napalm,Sticky Napalm,npc_dota_hero_batrider,Hero,FALSE,FALSE
+5172,beastmaster_inner_beast,Inner Beast,npc_dota_hero_beastmaster,Hero,FALSE,TRUE
+5169,beastmaster_call_of_the_wild,Call Of The Wild,npc_dota_hero_beastmaster,Hero,FALSE,FALSE
+5580,beastmaster_call_of_the_wild_boar,Call Of The Wild Boar,npc_dota_hero_beastmaster,Hero,FALSE,FALSE
+5177,beastmaster_primal_roar,Primal Roar,npc_dota_hero_beastmaster,Hero,FALSE,FALSE
+5168,beastmaster_wild_axes,Wild Axes,npc_dota_hero_beastmaster,Hero,FALSE,FALSE
+5017,bloodseeker_thirst,Thirst,npc_dota_hero_bloodseeker,Hero,FALSE,TRUE
+5016,bloodseeker_blood_bath,Blood Bath,npc_dota_hero_bloodseeker,Hero,FALSE,FALSE
+5015,bloodseeker_bloodrage,Bloodrage,npc_dota_hero_bloodseeker,Hero,FALSE,FALSE
+5018,bloodseeker_rupture,Rupture,npc_dota_hero_bloodseeker,Hero,FALSE,FALSE
+5286,bounty_hunter_jinada,Jinada,npc_dota_hero_bounty_hunter,Hero,FALSE,TRUE
+5285,bounty_hunter_shuriken_toss,Shuriken Toss,npc_dota_hero_bounty_hunter,Hero,FALSE,FALSE
+5288,bounty_hunter_track,Track,npc_dota_hero_bounty_hunter,Hero,FALSE,FALSE
+5287,bounty_hunter_wind_walk,Shadow Walk,npc_dota_hero_bounty_hunter,Hero,FALSE,FALSE
+5402,brewmaster_drunken_brawler,Drunken Brawler,npc_dota_hero_brewmaster,Hero,FALSE,TRUE
+5401,brewmaster_drunken_haze,Drunken Haze,npc_dota_hero_brewmaster,Hero,FALSE,FALSE
+5403,brewmaster_primal_split,Primal Split,npc_dota_hero_brewmaster,Hero,FALSE,FALSE
+5400,brewmaster_thunder_clap,Thunder Clap,npc_dota_hero_brewmaster,Hero,FALSE,FALSE
+5550,bristleback_bristleback,Bristleback,npc_dota_hero_bristleback,Hero,FALSE,TRUE
+5551,bristleback_warpath,Warpath,npc_dota_hero_bristleback,Hero,FALSE,TRUE
+5549,bristleback_quill_spray,Quill Spray,npc_dota_hero_bristleback,Hero,FALSE,FALSE
+5548,bristleback_viscous_nasal_goo,Viscous Nasal Goo,npc_dota_hero_bristleback,Hero,FALSE,FALSE
+5281,broodmother_incapacitating_bite,Incapacitating Bite,npc_dota_hero_broodmother,Hero,FALSE,TRUE
+5282,broodmother_insatiable_hunger,Insatiable Hunger,npc_dota_hero_broodmother,Hero,FALSE,FALSE
+5279,broodmother_spawn_spiderlings,Spawn Spiderlings,npc_dota_hero_broodmother,Hero,FALSE,FALSE
+5280,broodmother_spin_web,Spin Web,npc_dota_hero_broodmother,Hero,FALSE,FALSE
+5643,broodmother_spin_web_destroy,Spin Web Detroy,npc_dota_hero_broodmother,Hero,FALSE,FALSE
+5516,centaur_return,Return,npc_dota_hero_centaur,Hero,FALSE,TRUE
+5515,centaur_double_edge,Double Edge,npc_dota_hero_centaur,Hero,FALSE,FALSE
+5514,centaur_hoof_stomp,Hoof Stomp,npc_dota_hero_centaur,Hero,FALSE,FALSE
+5517,centaur_stampede,Stampede,npc_dota_hero_centaur,Hero,FALSE,FALSE
+5428,chaos_knight_chaos_strike,Chaos Strike,npc_dota_hero_chaos_knight,Hero,FALSE,TRUE
+5426,chaos_knight_chaos_bolt,Chaos Bolt,npc_dota_hero_chaos_knight,Hero,FALSE,FALSE
+5429,chaos_knight_phantasm,Phantasm,npc_dota_hero_chaos_knight,Hero,FALSE,FALSE
+5427,chaos_knight_reality_rift,Reality Rift,npc_dota_hero_chaos_knight,Hero,FALSE,FALSE
+5331,chen_hand_of_god,Hand Of God,npc_dota_hero_chen,Hero,FALSE,FALSE
+5330,chen_holy_persuasion,Holy Persuasion,npc_dota_hero_chen,Hero,FALSE,FALSE
+5328,chen_penitence,Penitence,npc_dota_hero_chen,Hero,FALSE,FALSE
+5329,chen_test_of_faith,Test Of Faith,npc_dota_hero_chen,Hero,FALSE,FALSE
+5522,chen_test_of_faith_teleport,Test Of Faith Teleport,npc_dota_hero_chen,Hero,FALSE,FALSE
+5262,clinkz_death_pact,Death Pact,npc_dota_hero_clinkz,Hero,FALSE,FALSE
+5260,clinkz_searing_arrows,Searing Arrows,npc_dota_hero_clinkz,Hero,FALSE,FALSE
+5259,clinkz_strafe,Strafe,npc_dota_hero_clinkz,Hero,FALSE,FALSE
+5261,clinkz_wind_walk,Wind Walk,npc_dota_hero_clinkz,Hero,FALSE,FALSE
+5128,crystal_maiden_brilliance_aura,Arcane Aura,npc_dota_hero_crystal_maiden,Hero,FALSE,TRUE
+5126,crystal_maiden_crystal_nova,Crystal Nova,npc_dota_hero_crystal_maiden,Hero,FALSE,FALSE
+5129,crystal_maiden_freezing_field,Freezing Field,npc_dota_hero_crystal_maiden,Hero,FALSE,FALSE
+5127,crystal_maiden_frostbite,Frostbite,npc_dota_hero_crystal_maiden,Hero,FALSE,FALSE
+5256,dark_seer_ion_shell,Ion Shell,npc_dota_hero_dark_seer,Hero,FALSE,FALSE
+5257,dark_seer_surge,Surge,npc_dota_hero_dark_seer,Hero,FALSE,FALSE
+5255,dark_seer_vacuum,Vacuum,npc_dota_hero_dark_seer,Hero,FALSE,FALSE
+5258,dark_seer_wall_of_replica,Wall Of Replica,npc_dota_hero_dark_seer,Hero,FALSE,FALSE
+5233,dazzle_poison_touch,Poison Touch,npc_dota_hero_dazzle,Hero,FALSE,FALSE
+5235,dazzle_shadow_wave,Shadow Wave,npc_dota_hero_dazzle,Hero,FALSE,FALSE
+5234,dazzle_shallow_grave,Shallow Grave,npc_dota_hero_dazzle,Hero,FALSE,FALSE
+5236,dazzle_weave,Weave,npc_dota_hero_dazzle,Hero,FALSE,FALSE
+5090,death_prophet_carrion_swarm,Crypt Swarm,npc_dota_hero_death_prophet,Hero,FALSE,FALSE
+5091,death_prophet_silence,Silence,npc_dota_hero_death_prophet,Hero,FALSE,FALSE
+5685,death_prophet_spirit_siphon,Spirit Siphon,npc_dota_hero_death_prophet,Hero,FALSE,FALSE
+5093,death_prophet_exorcism,Exorcism,npc_dota_hero_death_prophet,Hero,FALSE,FALSE
+5459,disruptor_glimpse,Glimpse,npc_dota_hero_disruptor,Hero,FALSE,FALSE
+5460,disruptor_kinetic_field,Kinetic Field,npc_dota_hero_disruptor,Hero,FALSE,FALSE
+5461,disruptor_static_storm,Static Storm,npc_dota_hero_disruptor,Hero,FALSE,FALSE
+5458,disruptor_thunder_strike,Thunder Strike,npc_dota_hero_disruptor,Hero,FALSE,FALSE
+5339,doom_bringer_devour,Devour,npc_dota_hero_doom_bringer,Hero,FALSE,FALSE
+5342,doom_bringer_doom,Doom,npc_dota_hero_doom_bringer,Hero,FALSE,FALSE
+5343,doom_bringer_empty1,Empty 1,npc_dota_hero_doom_bringer,Hero,TRUE,FALSE
+5344,doom_bringer_empty2,Empty 2,npc_dota_hero_doom_bringer,Hero,TRUE,FALSE
+5341,doom_bringer_infernal_blade,Infernal Blade,npc_dota_hero_doom_bringer,Hero,FALSE,FALSE
+5340,doom_bringer_scorched_earth,Scorched Earth,npc_dota_hero_doom_bringer,Hero,FALSE,FALSE
+5228,dragon_knight_dragon_blood,Dragon Blood,npc_dota_hero_dragon_knight,Hero,FALSE,TRUE
+5226,dragon_knight_breathe_fire,Breathe Fire,npc_dota_hero_dragon_knight,Hero,FALSE,FALSE
+5227,dragon_knight_dragon_tail,Dragon Tail,npc_dota_hero_dragon_knight,Hero,FALSE,FALSE
+5229,dragon_knight_elder_dragon_form,Elder Dragon Form,npc_dota_hero_dragon_knight,Hero,FALSE,FALSE
+5232,dragon_knight_frost_breath,Frost Breath,npc_dota_hero_dragon_knight,Hero,FALSE,FALSE
+5022,drow_ranger_marksmanship,Marksmanship,npc_dota_hero_drow_ranger,Hero,FALSE,TRUE
+5019,drow_ranger_frost_arrows,Frost Arrows,npc_dota_hero_drow_ranger,Hero,FALSE,FALSE
+5021,drow_ranger_trueshot,Precision Aura,npc_dota_hero_drow_ranger,Hero,FALSE,FALSE
+5632,drow_ranger_wave_of_silence,Gust,npc_dota_hero_drow_ranger,Hero,FALSE,FALSE
+5608,earth_spirit_boulder_smash,Boulder Smash,npc_dota_hero_earth_spirit,Hero,FALSE,FALSE
+5610,earth_spirit_geomagnetic_grip,Geomagnetic Grip,npc_dota_hero_earth_spirit,Hero,FALSE,FALSE
+5612,earth_spirit_magnetize,Magnetize,npc_dota_hero_earth_spirit,Hero,FALSE,FALSE
+5648,earth_spirit_petrify,Petrify,npc_dota_hero_earth_spirit,Hero,FALSE,FALSE
+5609,earth_spirit_rolling_boulder,Rolling Boulder,npc_dota_hero_earth_spirit,Hero,FALSE,FALSE
+5611,earth_spirit_stone_caller,Stone Caller,npc_dota_hero_earth_spirit,Hero,FALSE,FALSE
+5025,earthshaker_aftershock,Aftershock,npc_dota_hero_earthshaker,Hero,FALSE,TRUE
+5026,earthshaker_echo_slam,Echo Slam,npc_dota_hero_earthshaker,Hero,FALSE,FALSE
+5024,earthshaker_enchant_totem,Enchant Totem,npc_dota_hero_earthshaker,Hero,FALSE,FALSE
+5023,earthshaker_fissure,Fissure,npc_dota_hero_earthshaker,Hero,FALSE,FALSE
+5593,elder_titan_natural_order,Natural Order,npc_dota_hero_elder_titan,Hero,FALSE,TRUE
+5591,elder_titan_ancestral_spirit,Ancestral Spirit,npc_dota_hero_elder_titan,Hero,FALSE,FALSE
+5594,elder_titan_earth_splitter,Earth Splitter,npc_dota_hero_elder_titan,Hero,FALSE,FALSE
+5589,elder_titan_echo_stomp,Echo Stomp,npc_dota_hero_elder_titan,Hero,FALSE,FALSE
+5590,elder_titan_echo_stomp_spirit,Echo Stomp Sprit,npc_dota_hero_elder_titan,Hero,FALSE,FALSE
+5592,elder_titan_return_spirit,Return Spirit,npc_dota_hero_elder_titan,Hero,FALSE,FALSE
+5607,ember_spirit_activate_fire_remnant,Activate Fire Remnant,npc_dota_hero_ember_spirit,Hero,FALSE,FALSE
+5606,ember_spirit_fire_remnant,Fire Remnant,npc_dota_hero_ember_spirit,Hero,FALSE,FALSE
+5605,ember_spirit_flame_guard,Flame Guard,npc_dota_hero_ember_spirit,Hero,FALSE,FALSE
+5603,ember_spirit_searing_chains,Searing Chains,npc_dota_hero_ember_spirit,Hero,FALSE,FALSE
+5604,ember_spirit_sleight_of_fist,Sleight Of Fist,npc_dota_hero_ember_spirit,Hero,FALSE,FALSE
+5267,enchantress_untouchable,Untouchable,npc_dota_hero_enchantress,Hero,FALSE,TRUE
+5268,enchantress_enchant,Enchant,npc_dota_hero_enchantress,Hero,FALSE,FALSE
+5270,enchantress_impetus,Impetus,npc_dota_hero_enchantress,Hero,FALSE,FALSE
+5269,enchantress_natures_attendants,Natures Attendants,npc_dota_hero_enchantress,Hero,FALSE,FALSE
+5149,enigma_black_hole,Black Hole,npc_dota_hero_enigma,Hero,FALSE,FALSE
+5147,enigma_demonic_conversion,Demonic Conversion,npc_dota_hero_enigma,Hero,FALSE,FALSE
+5146,enigma_malefice,Malefice,npc_dota_hero_enigma,Hero,FALSE,FALSE
+5148,enigma_midnight_pulse,Midnight Pulse,npc_dota_hero_enigma,Hero,FALSE,FALSE
+5184,faceless_void_time_lock,Time Lock,npc_dota_hero_faceless_void,Hero,FALSE,TRUE
+5691,faceless_void_time_dilation,Time Dilation,npc_dota_hero_faceless_void,Hero,FALSE,FALSE
+5185,faceless_void_chronosphere,Chronosphere,npc_dota_hero_faceless_void,Hero,FALSE,FALSE
+5182,faceless_void_time_walk,Time Walk,npc_dota_hero_faceless_void,Hero,FALSE,FALSE
+5247,furion_force_of_nature,Force Of Nature,npc_dota_hero_furion,Hero,FALSE,FALSE
+5245,furion_sprout,Sprout,npc_dota_hero_furion,Hero,FALSE,FALSE
+5246,furion_teleportation,Teleportation,npc_dota_hero_furion,Hero,FALSE,FALSE
+5248,furion_wrath_of_nature,Wrath Of Nature,npc_dota_hero_furion,Hero,FALSE,FALSE
+5364,gyrocopter_call_down,Call Down,npc_dota_hero_gyrocopter,Hero,FALSE,FALSE
+5363,gyrocopter_flak_cannon,Flak Cannon,npc_dota_hero_gyrocopter,Hero,FALSE,FALSE
+5362,gyrocopter_homing_missile,Homing Missile,npc_dota_hero_gyrocopter,Hero,FALSE,FALSE
+5361,gyrocopter_rocket_barrage,Rocket Barrage,npc_dota_hero_gyrocopter,Hero,FALSE,FALSE
+5273,huskar_berserkers_blood,Berserkers Blood,npc_dota_hero_huskar,Hero,FALSE,TRUE
+5272,huskar_burning_spear,Burning Spear,npc_dota_hero_huskar,Hero,FALSE,FALSE
+5271,huskar_inner_vitality,Inner Vitality,npc_dota_hero_huskar,Hero,FALSE,FALSE
+5274,huskar_life_break,Life Break,npc_dota_hero_huskar,Hero,FALSE,FALSE
+5384,invoker_alacrity,Alacrity,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5385,invoker_chaos_meteor,Chaos Meteor,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5376,invoker_cold_snap,Cold Snap,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5390,invoker_deafening_blast,Deafening Blast,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5383,invoker_emp,Emp,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5373,invoker_empty1,Empty1,npc_dota_hero_invoker,Hero,TRUE,FALSE
+5374,invoker_empty2,Empty2,npc_dota_hero_invoker,Hero,TRUE,FALSE
+5372,invoker_exort,Exort,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5387,invoker_forge_spirit,Forge Spirit,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5381,invoker_ghost_walk,Ghost Walk,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5389,invoker_ice_wall,Ice Wall,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5375,invoker_invoke,Invoke,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5690,invoker_attribute_bonus,Invoker Attribute Bonus,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5370,invoker_quas,Quas,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5386,invoker_sun_strike,Sun Strike,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5382,invoker_tornado,Tornado,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5371,invoker_wex,Wex,npc_dota_hero_invoker,Hero,FALSE,FALSE
+5297,jakiro_dual_breath,Dual Breath,npc_dota_hero_jakiro,Hero,FALSE,FALSE
+5298,jakiro_ice_path,Ice Path,npc_dota_hero_jakiro,Hero,FALSE,FALSE
+5299,jakiro_liquid_fire,Liquid Fire,npc_dota_hero_jakiro,Hero,FALSE,FALSE
+5300,jakiro_macropyre,Macropyre,npc_dota_hero_jakiro,Hero,FALSE,FALSE
+5027,juggernaut_blade_dance,Blade Dance,npc_dota_hero_juggernaut,Hero,FALSE,TRUE
+5028,juggernaut_blade_fury,Blade Fury,npc_dota_hero_juggernaut,Hero,FALSE,FALSE
+5029,juggernaut_healing_ward,Healing Ward,npc_dota_hero_juggernaut,Hero,FALSE,FALSE
+5030,juggernaut_omni_slash,Omnislash,npc_dota_hero_juggernaut,Hero,FALSE,FALSE
+5476,keeper_of_the_light_blinding_light,Blinding Light,npc_dota_hero_keeper_of_the_light,Hero,FALSE,FALSE
+5473,keeper_of_the_light_chakra_magic,Chakra Magic,npc_dota_hero_keeper_of_the_light,Hero,FALSE,FALSE
+5501,keeper_of_the_light_empty1,Empty 1,npc_dota_hero_keeper_of_the_light,Hero,TRUE,FALSE
+5502,keeper_of_the_light_empty2,Empty 2,npc_dota_hero_keeper_of_the_light,Hero,TRUE,FALSE
+5471,keeper_of_the_light_illuminate,Illuminate,npc_dota_hero_keeper_of_the_light,Hero,FALSE,FALSE
+5477,keeper_of_the_light_illuminate_end,Illuminate End,npc_dota_hero_keeper_of_the_light,Hero,FALSE,FALSE
+5472,keeper_of_the_light_mana_leak,Mana Leak,npc_dota_hero_keeper_of_the_light,Hero,FALSE,FALSE
+5475,keeper_of_the_light_recall,Recall,npc_dota_hero_keeper_of_the_light,Hero,FALSE,FALSE
+5474,keeper_of_the_light_spirit_form,Spirit Form,npc_dota_hero_keeper_of_the_light,Hero,FALSE,FALSE
+5479,keeper_of_the_light_spirit_form_illuminate,Spirit Form Illuminate,npc_dota_hero_keeper_of_the_light,Hero,FALSE,FALSE
+5503,keeper_of_the_light_spirit_form_illuminate_end,Spirit Form Illuminate End,npc_dota_hero_keeper_of_the_light,Hero,FALSE,FALSE
+5035,kunkka_ghostship,Ghostship,npc_dota_hero_kunkka,Hero,FALSE,FALSE
+5034,kunkka_return,Return,npc_dota_hero_kunkka,Hero,FALSE,FALSE
+5032,kunkka_tidebringer,Tidebringer,npc_dota_hero_kunkka,Hero,FALSE,FALSE
+5031,kunkka_torrent,Torrent,npc_dota_hero_kunkka,Hero,FALSE,FALSE
+5033,kunkka_x_marks_the_spot,X Marks The Spot,npc_dota_hero_kunkka,Hero,FALSE,FALSE
+5597,legion_commander_moment_of_courage,Moment Of Courage,npc_dota_hero_legion_commander,Hero,FALSE,TRUE
+5598,legion_commander_duel,Duel,npc_dota_hero_legion_commander,Hero,FALSE,FALSE
+5595,legion_commander_overwhelming_odds,Overwhelming Odds,npc_dota_hero_legion_commander,Hero,FALSE,FALSE
+5596,legion_commander_press_the_attack,Press The Attack,npc_dota_hero_legion_commander,Hero,FALSE,FALSE
+5242,leshrac_diabolic_edict,Diabolic Edict,npc_dota_hero_leshrac,Hero,FALSE,FALSE
+5243,leshrac_lightning_storm,Lightning Storm,npc_dota_hero_leshrac,Hero,FALSE,FALSE
+5244,leshrac_pulse_nova,Pulse Nova,npc_dota_hero_leshrac,Hero,FALSE,FALSE
+5241,leshrac_split_earth,Split Earth,npc_dota_hero_leshrac,Hero,FALSE,FALSE
+5137,lich_chain_frost,Chain Frost,npc_dota_hero_lich,Hero,FALSE,FALSE
+5135,lich_frost_armor,Frost Armor,npc_dota_hero_lich,Hero,FALSE,FALSE
+5134,lich_frost_nova,Frost Blast,npc_dota_hero_lich,Hero,FALSE,FALSE
+5136,lich_dark_ritual,Sacrifice,npc_dota_hero_lich,Hero,FALSE,FALSE
+5250,life_stealer_feast,Feast,npc_dota_hero_life_stealer,Hero,FALSE,TRUE
+5671,life_stealer_assimilate,Assimilate,npc_dota_hero_life_stealer,Hero,FALSE,FALSE
+5253,life_stealer_consume,Consume,npc_dota_hero_life_stealer,Hero,FALSE,FALSE
+5655,life_stealer_control,Control,npc_dota_hero_life_stealer,Hero,FALSE,FALSE
+5675,life_stealer_assimilate_eject,Eject,npc_dota_hero_life_stealer,Hero,FALSE,FALSE
+5657,life_stealer_empty_1,Empty 1,npc_dota_hero_life_stealer,Hero,TRUE,FALSE
+5658,life_stealer_empty_2,Empty 2,npc_dota_hero_life_stealer,Hero,TRUE,FALSE
+5659,life_stealer_empty_3,Empty 3,npc_dota_hero_life_stealer,Hero,TRUE,FALSE
+5660,life_stealer_empty_4,Empty 4,npc_dota_hero_life_stealer,Hero,TRUE,FALSE
+5252,life_stealer_infest,Infest,npc_dota_hero_life_stealer,Hero,FALSE,FALSE
+5251,life_stealer_open_wounds,Open Wounds,npc_dota_hero_life_stealer,Hero,FALSE,FALSE
+5249,life_stealer_rage,Rage,npc_dota_hero_life_stealer,Hero,FALSE,FALSE
+5042,lina_fiery_soul,Fiery Soul,npc_dota_hero_lina,Hero,FALSE,TRUE
+5040,lina_dragon_slave,Dragon Slave,npc_dota_hero_lina,Hero,FALSE,FALSE
+5043,lina_laguna_blade,Laguna Blade,npc_dota_hero_lina,Hero,FALSE,FALSE
+5041,lina_light_strike_array,Light Strike Array,npc_dota_hero_lina,Hero,FALSE,FALSE
+5047,lion_finger_of_death,Finger Of Death,npc_dota_hero_lion,Hero,FALSE,FALSE
+5044,lion_impale,Impale,npc_dota_hero_lion,Hero,FALSE,FALSE
+5046,lion_mana_drain,Mana Drain,npc_dota_hero_lion,Hero,FALSE,FALSE
+5045,lion_voodoo,Voodoo,npc_dota_hero_lion,Hero,FALSE,FALSE
+5413,lone_druid_rabid,Rabid,npc_dota_hero_lone_druid,Hero,FALSE,FALSE
+5414,lone_druid_savage_roar,Savage Roar,npc_dota_hero_lone_druid,Hero,FALSE,FALSE
+5412,lone_druid_spirit_bear,Spirit Bear,npc_dota_hero_lone_druid,Hero,FALSE,FALSE
+5415,lone_druid_true_form,True Form,npc_dota_hero_lone_druid,Hero,FALSE,FALSE
+5417,lone_druid_true_form_battle_cry,True Form Battle Cry,npc_dota_hero_lone_druid,Hero,FALSE,FALSE
+5416,lone_druid_true_form_druid,True Form Druid,npc_dota_hero_lone_druid,Hero,FALSE,FALSE
+5224,luna_lunar_blessing,Lunar Blessing,npc_dota_hero_luna,Hero,FALSE,TRUE
+5225,luna_eclipse,Eclipse,npc_dota_hero_luna,Hero,FALSE,FALSE
+5222,luna_lucent_beam,Lucent Beam,npc_dota_hero_luna,Hero,FALSE,FALSE
+5223,luna_moon_glaive,Moon Glaive,npc_dota_hero_luna,Hero,FALSE,FALSE
+5397,lycan_feral_impulse,Feral Impulse,npc_dota_hero_lycan,Hero,FALSE,TRUE
+5396,lycan_howl,Howl,npc_dota_hero_lycan,Hero,FALSE,FALSE
+5398,lycan_shapeshift,Shapeshift,npc_dota_hero_lycan,Hero,FALSE,FALSE
+5395,lycan_summon_wolves,Summon Wolves,npc_dota_hero_lycan,Hero,FALSE,FALSE
+5399,lycan_summon_wolves_critical_strike,Summon Wolves Critical Strike,npc_dota_hero_lycan,Hero,FALSE,FALSE
+5500,lycan_summon_wolves_invisibility,Summon Wolves Invisibility,npc_dota_hero_lycan,Hero,FALSE,FALSE
+5519,magnataur_empower,Empower,npc_dota_hero_magnataur,Hero,FALSE,FALSE
+5521,magnataur_reverse_polarity,Reverse Polarity,npc_dota_hero_magnataur,Hero,FALSE,FALSE
+5518,magnataur_shockwave,Shockwave,npc_dota_hero_magnataur,Hero,FALSE,FALSE
+5520,magnataur_skewer,Skewer,npc_dota_hero_magnataur,Hero,FALSE,FALSE
+5506,medusa_mana_shield,Mana Shield,npc_dota_hero_medusa,Hero,FALSE,FALSE
+5505,medusa_mystic_snake,Mystic Snake,npc_dota_hero_medusa,Hero,FALSE,FALSE
+5504,medusa_split_shot,Split Shot,npc_dota_hero_medusa,Hero,FALSE,FALSE
+5507,medusa_stone_gaze,Stone Gaze,npc_dota_hero_medusa,Hero,FALSE,FALSE
+5433,meepo_divided_we_stand,Divided We Stand,npc_dota_hero_meepo,Hero,FALSE,TRUE
+5432,meepo_geostrike,Geostrike,npc_dota_hero_meepo,Hero,FALSE,TRUE
+5430,meepo_earthbind,Earthbind,npc_dota_hero_meepo,Hero,FALSE,FALSE
+5431,meepo_poof,Poof,npc_dota_hero_meepo,Hero,FALSE,FALSE
+5050,mirana_leap,Leap,npc_dota_hero_mirana,Hero,FALSE,FALSE
+5049,mirana_invis,Moonlight Shadow,npc_dota_hero_mirana,Hero,FALSE,FALSE
+5048,mirana_arrow,Sacred Arrow,npc_dota_hero_mirana,Hero,FALSE,FALSE
+5051,mirana_starfall,Starfall,npc_dota_hero_mirana,Hero,FALSE,FALSE
+5053,morphling_adaptive_strike,Adaptive Strike,npc_dota_hero_morphling,Hero,FALSE,FALSE
+5674,morphling_hybrid,Hybrid,npc_dota_hero_morphling,Hero,FALSE,FALSE
+5054,morphling_morph,Morph,npc_dota_hero_morphling,Hero,FALSE,FALSE
+5055,morphling_morph_agi,Morph Agi,npc_dota_hero_morphling,Hero,FALSE,FALSE
+5058,morphling_morph_replicate,Morph Replicate,npc_dota_hero_morphling,Hero,FALSE,FALSE
+5056,morphling_morph_str,Morph Str,npc_dota_hero_morphling,Hero,FALSE,FALSE
+5057,morphling_replicate,Replicate,npc_dota_hero_morphling,Hero,FALSE,FALSE
+5052,morphling_waveform,Waveform,npc_dota_hero_morphling,Hero,FALSE,FALSE
+5468,naga_siren_ensnare,Ensnare,npc_dota_hero_naga_siren,Hero,FALSE,FALSE
+5467,naga_siren_mirror_image,Mirror Image,npc_dota_hero_naga_siren,Hero,FALSE,FALSE
+5469,naga_siren_rip_tide,Rip Tide,npc_dota_hero_naga_siren,Hero,FALSE,FALSE
+5470,naga_siren_song_of_the_siren,Song Of The Siren,npc_dota_hero_naga_siren,Hero,FALSE,FALSE
+5478,naga_siren_song_of_the_siren_cancel,Song Of The Siren Cancel,npc_dota_hero_naga_siren,Hero,FALSE,FALSE
+5159,necrolyte_heartstopper_aura,Heartstopper Aura,npc_dota_hero_necrolyte,Hero,FALSE,TRUE
+5160,necrolyte_sadist,Sadist,npc_dota_hero_necrolyte,Hero,FALSE,TRUE
+5158,necrolyte_death_pulse,Death Pulse,npc_dota_hero_necrolyte,Hero,FALSE,FALSE
+5161,necrolyte_reapers_scythe,Reapers Scythe,npc_dota_hero_necrolyte,Hero,FALSE,FALSE
+5062,nevermore_necromastery,Necromastery,npc_dota_hero_nevermore,Hero,FALSE,TRUE
+5063,nevermore_dark_lord,Presence of the Dark Lord,npc_dota_hero_nevermore,Hero,FALSE,TRUE
+5064,nevermore_requiem,Requiem of Souls,npc_dota_hero_nevermore,Hero,FALSE,FALSE
+5059,nevermore_shadowraze1,Shadowraze 1,npc_dota_hero_nevermore,Hero,FALSE,FALSE
+5060,nevermore_shadowraze2,Shadowraze 2,npc_dota_hero_nevermore,Hero,FALSE,FALSE
+5061,nevermore_shadowraze3,Shadowraze 3,npc_dota_hero_nevermore,Hero,FALSE,FALSE
+5277,night_stalker_hunter_in_the_night,Hunter In The Night,npc_dota_hero_night_stalker,Hero,FALSE,TRUE
+5276,night_stalker_crippling_fear,Crippling Fear,npc_dota_hero_night_stalker,Hero,FALSE,FALSE
+5278,night_stalker_darkness,Darkness,npc_dota_hero_night_stalker,Hero,FALSE,FALSE
+5275,night_stalker_void,Void,npc_dota_hero_night_stalker,Hero,FALSE,FALSE
+5666,nyx_assassin_burrow,Burrow,npc_dota_hero_nyx_assassin,Hero,FALSE,FALSE
+5462,nyx_assassin_impale,Impale,npc_dota_hero_nyx_assassin,Hero,FALSE,FALSE
+5463,nyx_assassin_mana_burn,Mana Burn,npc_dota_hero_nyx_assassin,Hero,FALSE,FALSE
+5464,nyx_assassin_spiked_carapace,Spiked Carapace,npc_dota_hero_nyx_assassin,Hero,FALSE,FALSE
+5673,nyx_assassin_unburrow,Unburrow,npc_dota_hero_nyx_assassin,Hero,FALSE,FALSE
+5465,nyx_assassin_vendetta,Vendetta,npc_dota_hero_nyx_assassin,Hero,FALSE,FALSE
+5393,obsidian_destroyer_essence_aura,Essence Aura,npc_dota_hero_obsidian_destroyer,Hero,FALSE,TRUE
+5391,obsidian_destroyer_arcane_orb,Arcane Orb,npc_dota_hero_obsidian_destroyer,Hero,FALSE,FALSE
+5392,obsidian_destroyer_astral_imprisonment,Astral Imprisonment,npc_dota_hero_obsidian_destroyer,Hero,FALSE,FALSE
+5684,obsidian_destroyer_mind_over_matter,Mind Over Matter,npc_dota_hero_obsidian_destroyer,Hero,FALSE,FALSE
+5394,obsidian_destroyer_sanity_eclipse,Sanity Eclipse,npc_dota_hero_obsidian_destroyer,Hero,FALSE,FALSE
+5441,ogre_magi_multicast,Multicast,npc_dota_hero_ogre_magi,Hero,FALSE,TRUE
+5440,ogre_magi_bloodlust,Bloodlust,npc_dota_hero_ogre_magi,Hero,FALSE,FALSE
+5438,ogre_magi_fireblast,Fireblast,npc_dota_hero_ogre_magi,Hero,FALSE,FALSE
+5304,ogre_magi_frost_armor,Frost Armor,npc_dota_hero_ogre_magi,Hero,FALSE,FALSE
+5439,ogre_magi_ignite,Ignite,npc_dota_hero_ogre_magi,Hero,FALSE,FALSE
+5466,ogre_magi_unrefined_fireblast,Unrefined Fireblast,npc_dota_hero_ogre_magi,Hero,FALSE,FALSE
+5265,omniknight_degen_aura,Degen Aura,npc_dota_hero_omniknight,Hero,FALSE,TRUE
+5266,omniknight_guardian_angel,Guardian Angel,npc_dota_hero_omniknight,Hero,FALSE,FALSE
+5263,omniknight_purification,Purification,npc_dota_hero_omniknight,Hero,FALSE,FALSE
+5264,omniknight_repel,Repel,npc_dota_hero_omniknight,Hero,FALSE,FALSE
+5640,oracle_false_promise,False Promise,npc_dota_hero_oracle,Hero,FALSE,FALSE
+5638,oracle_fates_edict,Fates Edict,npc_dota_hero_oracle,Hero,FALSE,FALSE
+5637,oracle_fortunes_end,Fortunes End,npc_dota_hero_oracle,Hero,FALSE,FALSE
+5639,oracle_purifying_flames,Purifying Flames,npc_dota_hero_oracle,Hero,FALSE,FALSE
+5192,phantom_assassin_blur,Blur,npc_dota_hero_phantom_assassin,Hero,FALSE,TRUE
+5193,phantom_assassin_coup_de_grace,Coup De Grace,npc_dota_hero_phantom_assassin,Hero,FALSE,TRUE
+5191,phantom_assassin_phantom_strike,Phantom Strike,npc_dota_hero_phantom_assassin,Hero,FALSE,FALSE
+5190,phantom_assassin_stifling_dagger,Stifling Dagger,npc_dota_hero_phantom_assassin,Hero,FALSE,FALSE
+5067,phantom_lancer_juxtapose,Juxtapose,npc_dota_hero_phantom_lancer,Hero,FALSE,TRUE
+5068,phantom_lancer_phantom_edge,Phantom Rush,npc_dota_hero_phantom_lancer,Hero,FALSE,TRUE
+5066,phantom_lancer_doppelwalk,Doppelganger,npc_dota_hero_phantom_lancer,Hero,FALSE,FALSE
+5065,phantom_lancer_spirit_lance,Spirit Lance,npc_dota_hero_phantom_lancer,Hero,FALSE,FALSE
+5625,phoenix_fire_spirits,Fire Spirits,npc_dota_hero_phoenix,Hero,FALSE,FALSE
+5623,phoenix_icarus_dive,Icarus Dive,npc_dota_hero_phoenix,Hero,FALSE,FALSE
+5624,phoenix_icarus_dive_stop,Icarus Dive Stop,npc_dota_hero_phoenix,Hero,FALSE,FALSE
+5631,phoenix_launch_fire_spirit,Launch Fire Spirits,npc_dota_hero_phoenix,Hero,FALSE,FALSE
+5626,phoenix_sun_ray,Sun Ray,npc_dota_hero_phoenix,Hero,FALSE,FALSE
+5628,phoenix_sun_ray_toggle_move,Sun Ray Move,npc_dota_hero_phoenix,Hero,FALSE,FALSE
+5629,phoenix_sun_ray_toggle_move_empty,Sun Ray Move Empty,npc_dota_hero_phoenix,Hero,TRUE,FALSE
+5627,phoenix_sun_ray_stop,Sun Ray Stop,npc_dota_hero_phoenix,Hero,FALSE,FALSE
+5630,phoenix_supernova,Supernova,npc_dota_hero_phoenix,Hero,FALSE,FALSE
+5073,puck_dream_coil,Dream Coil,npc_dota_hero_puck,Hero,FALSE,FALSE
+5070,puck_ethereal_jaunt,Ethereal Jaunt,npc_dota_hero_puck,Hero,FALSE,FALSE
+5069,puck_illusory_orb,Illusory Orb,npc_dota_hero_puck,Hero,FALSE,FALSE
+5072,puck_phase_shift,Phase Shift,npc_dota_hero_puck,Hero,FALSE,FALSE
+5071,puck_waning_rift,Waning Rift,npc_dota_hero_puck,Hero,FALSE,FALSE
+5074,pudge_flesh_heap,Flesh Heap,npc_dota_hero_pudge,Hero,FALSE,TRUE
+5077,pudge_dismember,Dismember,npc_dota_hero_pudge,Hero,FALSE,FALSE
+5075,pudge_meat_hook,Meat Hook,npc_dota_hero_pudge,Hero,FALSE,FALSE
+5076,pudge_rot,Rot,npc_dota_hero_pudge,Hero,FALSE,FALSE
+5187,pugna_decrepify,Decrepify,npc_dota_hero_pugna,Hero,FALSE,FALSE
+5189,pugna_life_drain,Life Drain,npc_dota_hero_pugna,Hero,FALSE,FALSE
+5186,pugna_nether_blast,Nether Blast,npc_dota_hero_pugna,Hero,FALSE,FALSE
+5188,pugna_nether_ward,Nether Ward,npc_dota_hero_pugna,Hero,FALSE,FALSE
+5174,queenofpain_blink,Blink,npc_dota_hero_queenofpain,Hero,FALSE,FALSE
+5175,queenofpain_scream_of_pain,Scream Of Pain,npc_dota_hero_queenofpain,Hero,FALSE,FALSE
+5173,queenofpain_shadow_strike,Shadow Strike,npc_dota_hero_queenofpain,Hero,FALSE,FALSE
+5176,queenofpain_sonic_wave,Sonic Wave,npc_dota_hero_queenofpain,Hero,FALSE,FALSE
+5237,rattletrap_battery_assault,Battery Assault,npc_dota_hero_rattletrap,Hero,FALSE,FALSE
+5240,rattletrap_hookshot,Hookshot,npc_dota_hero_rattletrap,Hero,FALSE,FALSE
+5238,rattletrap_power_cogs,Power Cogs,npc_dota_hero_rattletrap,Hero,FALSE,FALSE
+5239,rattletrap_rocket_flare,Rocket Flare,npc_dota_hero_rattletrap,Hero,FALSE,FALSE
+5084,razor_unstable_current,Unstable Current,npc_dota_hero_razor,Hero,FALSE,TRUE
+5085,razor_eye_of_the_storm,Eye Of The Storm,npc_dota_hero_razor,Hero,FALSE,FALSE
+5082,razor_plasma_field,Plasma Field,npc_dota_hero_razor,Hero,FALSE,FALSE
+5083,razor_static_link,Static Link,npc_dota_hero_razor,Hero,FALSE,FALSE
+5144,riki_permanent_invisibility,Cloak and Dagger,npc_dota_hero_riki,Hero,FALSE,TRUE
+5143,riki_blink_strike,Blink Strike,npc_dota_hero_riki,Hero,FALSE,FALSE
+5142,riki_smoke_screen,Smoke Screen,npc_dota_hero_riki,Hero,FALSE,FALSE
+5145,riki_tricks_of_the_trade,Tricks of the Trade,npc_dota_hero_riki,Hero,FALSE,FALSE
+5451,rubick_null_field,Null Field,npc_dota_hero_rubick,Hero,FALSE,TRUE
+5453,rubick_empty1,Empty 1,npc_dota_hero_rubick,Hero,TRUE,FALSE
+5454,rubick_empty2,Empty 2,npc_dota_hero_rubick,Hero,TRUE,FALSE
+5450,rubick_fade_bolt,Fade Bolt,npc_dota_hero_rubick,Hero,FALSE,FALSE
+5455,rubick_hidden1,Hidden 1,npc_dota_hero_rubick,Hero,TRUE,FALSE
+5456,rubick_hidden2,Hidden 2,npc_dota_hero_rubick,Hero,TRUE,FALSE
+5457,rubick_hidden3,Hidden 3,npc_dota_hero_rubick,Hero,TRUE,FALSE
+5452,rubick_spell_steal,Spell Steal,npc_dota_hero_rubick,Hero,FALSE,FALSE
+5448,rubick_telekinesis,Telekinesis,npc_dota_hero_rubick,Hero,FALSE,FALSE
+5449,rubick_telekinesis_land,Telekinesis Land,npc_dota_hero_rubick,Hero,FALSE,FALSE
+5104,sandking_caustic_finale,Caustic Finale,npc_dota_hero_sand_king,Hero,FALSE,TRUE
+5102,sandking_burrowstrike,Burrowstrike,npc_dota_hero_sand_king,Hero,FALSE,FALSE
+5105,sandking_epicenter,Epicenter,npc_dota_hero_sand_king,Hero,FALSE,FALSE
+5103,sandking_sand_storm,Sand Storm,npc_dota_hero_sand_king,Hero,FALSE,FALSE
+5425,shadow_demon_demonic_purge,Demonic Purge,npc_dota_hero_shadow_demon,Hero,FALSE,FALSE
+5421,shadow_demon_disruption,Disruption,npc_dota_hero_shadow_demon,Hero,FALSE,FALSE
+5423,shadow_demon_shadow_poison,Shadow Poison,npc_dota_hero_shadow_demon,Hero,FALSE,FALSE
+5424,shadow_demon_shadow_poison_release,Shadow Poison Release,npc_dota_hero_shadow_demon,Hero,FALSE,FALSE
+5422,shadow_demon_soul_catcher,Soul Catcher,npc_dota_hero_shadow_demon,Hero,FALSE,FALSE
+5078,shadow_shaman_ether_shock,Ether Shock,npc_dota_hero_shadow_shaman,Hero,FALSE,FALSE
+5081,shadow_shaman_mass_serpent_ward,Mass Serpent Ward,npc_dota_hero_shadow_shaman,Hero,FALSE,FALSE
+5080,shadow_shaman_shackles,Shackles,npc_dota_hero_shadow_shaman,Hero,FALSE,FALSE
+5079,shadow_shaman_voodoo,Voodoo,npc_dota_hero_shadow_shaman,Hero,FALSE,FALSE
+5526,shredder_reactive_armor,Reactive Armor,npc_dota_hero_shredder,Hero,FALSE,TRUE
+5527,shredder_chakram,Chakram,npc_dota_hero_shredder,Hero,FALSE,FALSE
+5645,shredder_chakram_2,Chakram 2,npc_dota_hero_shredder,Hero,FALSE,FALSE
+5528,shredder_return_chakram,Return Chakram,npc_dota_hero_shredder,Hero,FALSE,FALSE
+5646,shredder_return_chakram_2,Return Chakram 2,npc_dota_hero_shredder,Hero,FALSE,FALSE
+5525,shredder_timber_chain,Timber Chain,npc_dota_hero_shredder,Hero,FALSE,FALSE
+5524,shredder_whirling_death,Whirling Death,npc_dota_hero_shredder,Hero,FALSE,FALSE
+5377,silencer_curse_of_the_silent,Curse Of The Silent,npc_dota_hero_silencer,Hero,FALSE,FALSE
+5378,silencer_glaives_of_wisdom,Glaives Of Wisdom,npc_dota_hero_silencer,Hero,FALSE,FALSE
+5380,silencer_global_silence,Global Silence,npc_dota_hero_silencer,Hero,FALSE,FALSE
+5379,silencer_last_word,Last Word,npc_dota_hero_silencer,Hero,FALSE,FALSE
+5088,skeleton_king_mortal_strike,Mortal Strike,npc_dota_hero_skeleton_king,Hero,FALSE,TRUE
+5089,skeleton_king_reincarnation,Reincarnation,npc_dota_hero_skeleton_king,Hero,FALSE,TRUE
+5087,skeleton_king_vampiric_aura,Vampiric Aura,npc_dota_hero_skeleton_king,Hero,FALSE,TRUE
+5086,skeleton_king_hellfire_blast,Hellfire Blast,npc_dota_hero_skeleton_king,Hero,FALSE,FALSE
+5583,skywrath_mage_ancient_seal,Ancient Seal,npc_dota_hero_skywrath_mage,Hero,FALSE,FALSE
+5581,skywrath_mage_arcane_bolt,Arcane Bolt,npc_dota_hero_skywrath_mage,Hero,FALSE,FALSE
+5582,skywrath_mage_concussive_shot,Concussive Shot,npc_dota_hero_skywrath_mage,Hero,FALSE,FALSE
+5584,skywrath_mage_mystic_flare,Mystic Flare,npc_dota_hero_skywrath_mage,Hero,FALSE,FALSE
+5116,slardar_bash,Bash,npc_dota_hero_slardar,Hero,FALSE,TRUE
+5117,slardar_amplify_damage,Amplify Damage,npc_dota_hero_slardar,Hero,FALSE,FALSE
+5115,slardar_slithereen_crush,Slithereen Crush,npc_dota_hero_slardar,Hero,FALSE,FALSE
+5114,slardar_sprint,Sprint,npc_dota_hero_slardar,Hero,FALSE,FALSE
+5496,slark_essence_shift,Essence Shift,npc_dota_hero_slark,Hero,FALSE,TRUE
+5494,slark_dark_pact,Dark Pact,npc_dota_hero_slark,Hero,FALSE,FALSE
+5495,slark_pounce,Pounce,npc_dota_hero_slark,Hero,FALSE,FALSE
+5497,slark_shadow_dance,Shadow Dance,npc_dota_hero_slark,Hero,FALSE,FALSE
+5155,sniper_headshot,Headshot,npc_dota_hero_sniper,Hero,FALSE,TRUE
+5156,sniper_take_aim,Take Aim,npc_dota_hero_sniper,Hero,FALSE,TRUE
+5157,sniper_assassinate,Assassinate,npc_dota_hero_sniper,Hero,FALSE,FALSE
+5154,sniper_shrapnel,Shrapnel,npc_dota_hero_sniper,Hero,FALSE,FALSE
+5335,spectre_desolate,Desolate,npc_dota_hero_spectre,Hero,FALSE,TRUE
+5336,spectre_dispersion,Dispersion,npc_dota_hero_spectre,Hero,FALSE,TRUE
+5337,spectre_haunt,Haunt,npc_dota_hero_spectre,Hero,FALSE,FALSE
+5338,spectre_reality,Reality,npc_dota_hero_spectre,Hero,FALSE,FALSE
+5334,spectre_spectral_dagger,Spectral Dagger,npc_dota_hero_spectre,Hero,FALSE,FALSE
+5355,spirit_breaker_greater_bash,Greater Bash,npc_dota_hero_spirit_breaker,Hero,FALSE,TRUE
+5353,spirit_breaker_charge_of_darkness,Charge Of Darkness,npc_dota_hero_spirit_breaker,Hero,FALSE,FALSE
+5354,spirit_breaker_empowering_haste,Empowering Haste,npc_dota_hero_spirit_breaker,Hero,FALSE,FALSE
+5356,spirit_breaker_nether_strike,Nether Strike,npc_dota_hero_spirit_breaker,Hero,FALSE,FALSE
+5100,storm_spirit_overload,Overload,npc_dota_hero_storm_spirit,Hero,FALSE,TRUE
+5101,storm_spirit_ball_lightning,Ball Lightning,npc_dota_hero_storm_spirit,Hero,FALSE,FALSE
+5099,storm_spirit_electric_vortex,Electric Vortex,npc_dota_hero_storm_spirit,Hero,FALSE,FALSE
+5098,storm_spirit_static_remnant,Static Remnant,npc_dota_hero_storm_spirit,Hero,FALSE,FALSE
+5095,sven_great_cleave,Great Cleave,npc_dota_hero_sven,Hero,FALSE,TRUE
+5097,sven_gods_strength,Gods Strength,npc_dota_hero_sven,Hero,FALSE,FALSE
+5094,sven_storm_bolt,Storm Bolt,npc_dota_hero_sven,Hero,FALSE,FALSE
+5096,sven_warcry,Warcry,npc_dota_hero_sven,Hero,FALSE,FALSE
+5635,techies_focused_detonate,Focused Detonate,npc_dota_hero_techies,Hero,FALSE,FALSE
+5599,techies_land_mines,Land Mines,npc_dota_hero_techies,Hero,FALSE,FALSE
+5644,techies_minefield_sign,Minefield Sign,npc_dota_hero_techies,Hero,FALSE,FALSE
+5602,techies_remote_mines,Remote Mines,npc_dota_hero_techies,Hero,FALSE,FALSE
+5636,techies_remote_mines_self_detonate,Remote Mines Self Detonate,npc_dota_hero_techies,Hero,FALSE,FALSE
+5600,techies_stasis_trap,Stasis Trap,npc_dota_hero_techies,Hero,FALSE,FALSE
+5601,techies_suicide,Suicide Squad  Attack!,npc_dota_hero_techies,Hero,FALSE,FALSE
+5196,templar_assassin_psi_blades,Psi Blades,npc_dota_hero_templar_assassin,Hero,FALSE,TRUE
+5195,templar_assassin_meld,Meld,npc_dota_hero_templar_assassin,Hero,FALSE,FALSE
+5197,templar_assassin_psionic_trap,Psionic Trap,npc_dota_hero_templar_assassin,Hero,FALSE,FALSE
+5194,templar_assassin_refraction,Refraction,npc_dota_hero_templar_assassin,Hero,FALSE,FALSE
+5199,templar_assassin_self_trap,Self Trap,npc_dota_hero_templar_assassin,Hero,FALSE,FALSE
+5198,templar_assassin_trap,Trap,npc_dota_hero_templar_assassin,Hero,FALSE,FALSE
+5620,terrorblade_conjure_image,Conjure Image,npc_dota_hero_terrorblade,Hero,FALSE,FALSE
+5621,terrorblade_metamorphosis,Metamorphosis,npc_dota_hero_terrorblade,Hero,FALSE,FALSE
+5619,terrorblade_reflection,Reflection,npc_dota_hero_terrorblade,Hero,FALSE,FALSE
+5622,terrorblade_sunder,Sunder,npc_dota_hero_terrorblade,Hero,FALSE,FALSE
+5119,tidehunter_kraken_shell,Kraken Shell,npc_dota_hero_tidehunter,Hero,FALSE,TRUE
+5120,tidehunter_anchor_smash,Anchor Smash,npc_dota_hero_tidehunter,Hero,FALSE,FALSE
+5118,tidehunter_gush,Gush,npc_dota_hero_tidehunter,Hero,FALSE,FALSE
+5121,tidehunter_ravage,Ravage,npc_dota_hero_tidehunter,Hero,FALSE,FALSE
+5151,tinker_heat_seeking_missile,Heat Seeking Missile,npc_dota_hero_tinker,Hero,FALSE,FALSE
+5150,tinker_laser,Laser,npc_dota_hero_tinker,Hero,FALSE,FALSE
+5152,tinker_march_of_the_machines,March Of The Machines,npc_dota_hero_tinker,Hero,FALSE,FALSE
+5153,tinker_rearm,Rearm,npc_dota_hero_tinker,Hero,FALSE,FALSE
+5108,tiny_craggy_exterior,Craggy Exterior,npc_dota_hero_tiny,Hero,FALSE,TRUE
+5109,tiny_grow,Grow,npc_dota_hero_tiny,Hero,FALSE,TRUE
+5106,tiny_avalanche,Avalanche,npc_dota_hero_tiny,Hero,FALSE,FALSE
+5107,tiny_toss,Toss,npc_dota_hero_tiny,Hero,FALSE,FALSE
+5649,treant_eyes_in_the_forest,Eyes in the Forest,npc_dota_hero_treant,Hero,FALSE,FALSE
+5435,treant_leech_seed,Leech Seed,npc_dota_hero_treant,Hero,FALSE,FALSE
+5436,treant_living_armor,Living Armor,npc_dota_hero_treant,Hero,FALSE,FALSE
+5434,treant_natures_guise,Natures Guise,npc_dota_hero_treant,Hero,FALSE,FALSE
+5437,treant_overgrowth,Overgrowth,npc_dota_hero_treant,Hero,FALSE,FALSE
+5511,troll_warlord_fervor,Fervor,npc_dota_hero_troll_warlord,Hero,FALSE,TRUE
+5512,troll_warlord_battle_trance,Battle Trance,npc_dota_hero_troll_warlord,Hero,FALSE,FALSE
+5508,troll_warlord_berserkers_rage,Berserkers Rage,npc_dota_hero_troll_warlord,Hero,FALSE,FALSE
+5510,troll_warlord_whirling_axes_melee,Whirling Axes Melee,npc_dota_hero_troll_warlord,Hero,FALSE,FALSE
+5509,troll_warlord_whirling_axes_ranged,Whirling Axes Ranged,npc_dota_hero_troll_warlord,Hero,FALSE,FALSE
+5567,tusk_frozen_sigil,Frozen Sigil,npc_dota_hero_tusk,Hero,FALSE,FALSE
+5565,tusk_ice_shards,Ice Shards,npc_dota_hero_tusk,Hero,FALSE,FALSE
+5668,tusk_ice_shards_stop,Ice Shards Stop,npc_dota_hero_tusk,Hero,FALSE,FALSE
+5641,tusk_launch_snowball,Launch Snowball,npc_dota_hero_tusk,Hero,FALSE,FALSE
+5566,tusk_snowball,Snowball,npc_dota_hero_tusk,Hero,FALSE,FALSE
+5672,tusk_walrus_kick,Walrus Kick,npc_dota_hero_tusk,Hero,FALSE,FALSE
+5568,tusk_walrus_punch,Walrus Punch,npc_dota_hero_tusk,Hero,FALSE,FALSE
+5442,undying_decay,Decay,npc_dota_hero_undying,Hero,FALSE,FALSE
+5447,undying_flesh_golem,Flesh Golem,npc_dota_hero_undying,Hero,FALSE,FALSE
+5443,undying_soul_rip,Soul Rip,npc_dota_hero_undying,Hero,FALSE,FALSE
+5444,undying_tombstone,Tombstone,npc_dota_hero_undying,Hero,FALSE,FALSE
+5445,undying_tombstone_zombie_aura,Tombstone Zombie Aura,npc_dota_hero_undying,Hero,FALSE,FALSE
+5446,undying_tombstone_zombie_deathstrike,Tombstone Zombie Deathstrike,npc_dota_hero_undying,Hero,FALSE,FALSE
+5359,ursa_fury_swipes,Fury Swipes,npc_dota_hero_ursa,Hero,FALSE,TRUE
+5357,ursa_earthshock,Earthshock,npc_dota_hero_ursa,Hero,FALSE,FALSE
+5360,ursa_enrage,Enrage,npc_dota_hero_ursa,Hero,FALSE,FALSE
+5358,ursa_overpower,Overpower,npc_dota_hero_ursa,Hero,FALSE,FALSE
+5123,vengefulspirit_command_aura,Command Aura,npc_dota_hero_vengefulspirit,Hero,FALSE,TRUE
+5122,vengefulspirit_magic_missile,Magic Missile,npc_dota_hero_vengefulspirit,Hero,FALSE,FALSE
+5125,vengefulspirit_nether_swap,Nether Swap,npc_dota_hero_vengefulspirit,Hero,FALSE,FALSE
+5124,vengefulspirit_wave_of_terror,Wave Of Terror,npc_dota_hero_vengefulspirit,Hero,FALSE,FALSE
+5179,venomancer_poison_sting,Poison Sting,npc_dota_hero_venomancer,Hero,FALSE,TRUE
+5180,venomancer_plague_ward,Plague Ward,npc_dota_hero_venomancer,Hero,FALSE,FALSE
+5181,venomancer_poison_nova,Poison Nova,npc_dota_hero_venomancer,Hero,FALSE,FALSE
+5178,venomancer_venomous_gale,Venomous Gale,npc_dota_hero_venomancer,Hero,FALSE,FALSE
+5220,viper_corrosive_skin,Corrosive Skin,npc_dota_hero_viper,Hero,FALSE,TRUE
+5219,viper_nethertoxin,Nethertoxin,npc_dota_hero_viper,Hero,FALSE,TRUE
+5218,viper_poison_attack,Poison Attack,npc_dota_hero_viper,Hero,FALSE,FALSE
+5221,viper_viper_strike,Viper Strike,npc_dota_hero_viper,Hero,FALSE,FALSE
+5482,visage_gravekeepers_cloak,Gravekeepers Cloak,npc_dota_hero_visage,Hero,FALSE,TRUE
+5480,visage_grave_chill,Grave Chill,npc_dota_hero_visage,Hero,FALSE,FALSE
+5481,visage_soul_assumption,Soul Assumption,npc_dota_hero_visage,Hero,FALSE,FALSE
+5483,visage_summon_familiars,Summon Familiars,npc_dota_hero_visage,Hero,FALSE,FALSE
+5484,visage_summon_familiars_stone_form,Summon Familiars Stone Form,npc_dota_hero_visage,Hero,FALSE,FALSE
+5162,warlock_fatal_bonds,Fatal Bonds,npc_dota_hero_warlock,Hero,FALSE,FALSE
+5165,warlock_rain_of_chaos,Rain Of Chaos,npc_dota_hero_warlock,Hero,FALSE,FALSE
+5163,warlock_shadow_word,Shadow Word,npc_dota_hero_warlock,Hero,FALSE,FALSE
+5164,warlock_upheaval,Upheaval,npc_dota_hero_warlock,Hero,FALSE,FALSE
+5291,weaver_geminate_attack,Geminate Attack,npc_dota_hero_weaver,Hero,FALSE,TRUE
+5290,weaver_shukuchi,Shukuchi,npc_dota_hero_weaver,Hero,FALSE,FALSE
+5289,weaver_the_swarm,The Swarm,npc_dota_hero_weaver,Hero,FALSE,FALSE
+5292,weaver_time_lapse,Time Lapse,npc_dota_hero_weaver,Hero,FALSE,FALSE
+5133,windrunner_focusfire,Focusfire,npc_dota_hero_windrunner,Hero,FALSE,FALSE
+5131,windrunner_powershot,Powershot,npc_dota_hero_windrunner,Hero,FALSE,FALSE
+5130,windrunner_shackleshot,Shackleshot,npc_dota_hero_windrunner,Hero,FALSE,FALSE
+5132,windrunner_windrun,Windrun,npc_dota_hero_windrunner,Hero,FALSE,FALSE
+5651,winter_wyvern_arctic_burn,Arctic Burn,npc_dota_hero_winter_wyvern,Hero,FALSE,FALSE
+5653,winter_wyvern_cold_embrace,Cold Embrace,npc_dota_hero_winter_wyvern,Hero,FALSE,FALSE
+5652,winter_wyvern_splinter_blast,Splinter Blast,npc_dota_hero_winter_wyvern,Hero,FALSE,FALSE
+5654,winter_wyvern_winters_curse,Winters Curse,npc_dota_hero_winter_wyvern,Hero,FALSE,FALSE
+5498,wisp_empty1,Empty 1,npc_dota_hero_wisp,Hero,TRUE,FALSE
+5499,wisp_empty2,Empty 2,npc_dota_hero_wisp,Hero,TRUE,FALSE
+5487,wisp_overcharge,Overcharge,npc_dota_hero_wisp,Hero,FALSE,FALSE
+5488,wisp_relocate,Relocate,npc_dota_hero_wisp,Hero,FALSE,FALSE
+5486,wisp_spirits,Spirits,npc_dota_hero_wisp,Hero,FALSE,FALSE
+5490,wisp_spirits_in,Spirits In,npc_dota_hero_wisp,Hero,FALSE,FALSE
+5493,wisp_spirits_out,Spirits Out,npc_dota_hero_wisp,Hero,FALSE,FALSE
+5485,wisp_tether,Tether,npc_dota_hero_wisp,Hero,FALSE,FALSE
+5489,wisp_tether_break,Tether Break,npc_dota_hero_wisp,Hero,FALSE,FALSE
+5141,witch_doctor_death_ward,Death Ward,npc_dota_hero_witch_doctor,Hero,FALSE,FALSE
+5140,witch_doctor_maledict,Maledict,npc_dota_hero_witch_doctor,Hero,FALSE,FALSE
+5138,witch_doctor_paralyzing_cask,Paralyzing Cask,npc_dota_hero_witch_doctor,Hero,FALSE,FALSE
+5139,witch_doctor_voodoo_restoration,Voodoo Restoration,npc_dota_hero_witch_doctor,Hero,FALSE,FALSE
+5112,zuus_static_field,Static Field,npc_dota_hero_zuus,Hero,FALSE,TRUE
+5110,zuus_arc_lightning,Arc Lightning,npc_dota_hero_zuus,Hero,FALSE,FALSE
+5111,zuus_lightning_bolt,Lightning Bolt,npc_dota_hero_zuus,Hero,FALSE,FALSE
+5113,zuus_thundergods_wrath,Thundergods Wrath,npc_dota_hero_zuus,Hero,FALSE,FALSE
+5388,forged_spirit_melting_strike,Melting Strike,npc_dota_invoker_forged_spirit,Summoned,FALSE,FALSE
+5687,lone_druid_savage_roar_bear,Bear Savage Roar,npc_dota_lone_druid_bear,Summoned,FALSE,FALSE
+5420,lone_druid_spirit_bear_demolish,Spirit Bear Demolish,npc_dota_lone_druid_bear,Summoned,FALSE,FALSE
+5419,lone_druid_spirit_bear_entangle,Spirit Bear Entangle,npc_dota_lone_druid_bear,Summoned,FALSE,FALSE
+5418,lone_druid_spirit_bear_return,Spirit Bear Return,npc_dota_lone_druid_bear,Summoned,FALSE,FALSE
+5204,necronomicon_archer_aoe,AoE,npc_dota_necronomicon_archer,Summoned,FALSE,FALSE
+5203,necronomicon_archer_mana_burn,Mana Burn,npc_dota_necronomicon_archer,Summoned,FALSE,FALSE
+5200,necronomicon_warrior_last_will,Last Will,npc_dota_necronomicon_warrior,Summoned,FALSE,FALSE
+5202,necronomicon_warrior_mana_burn,Mana Burn,npc_dota_necronomicon_warrior,Summoned,FALSE,FALSE
+5201,necronomicon_warrior_sight,Sight,npc_dota_necronomicon_warrior,Summoned,FALSE,FALSE
+5309,alpha_wolf_command_aura,Command Aura,npc_dota_neutral_alpha_wolf,Neutral,FALSE,FALSE
+5308,alpha_wolf_critical_strike,Critical Strike,npc_dota_neutral_alpha_wolf,Neutral,FALSE,FALSE
+5333,big_thunder_lizard_frenzy,Frenzy,npc_dota_neutral_big_thunder_lizard,Neutral,FALSE,FALSE
+5332,big_thunder_lizard_slam,Slam,npc_dota_neutral_big_thunder_lizard,Neutral,FALSE,FALSE
+5682,big_thunder_lizard_wardrums_aura,Wardrums Aura,npc_dota_neutral_big_thunder_lizard,Neutral,FALSE,FALSE
+5681,black_dragon_dragonhide_aura,Dragonhide Aura,npc_dota_neutral_black_dragon,Neutral,FALSE,FALSE
+5689,black_dragon_fireball,Fireball,npc_dota_neutral_black_dragon,Neutral,FALSE,FALSE
+5324,black_dragon_splash_attack,Splash Attack,npc_dota_neutral_black_dragon,Neutral,FALSE,FALSE
+5327,blue_dragonspawn_overseer_devotion_aura,Devotion Aura,npc_dota_neutral_blue_dragonspawn_overseer,Neutral,FALSE,FALSE
+5326,blue_dragonspawn_overseer_evasion,Evasion,npc_dota_neutral_blue_dragonspawn_overseer,Neutral,FALSE,FALSE
+5325,blue_dragonspawn_sorcerer_evasion,Evasion,npc_dota_neutral_blue_dragonspawn_sorcerer,Neutral,FALSE,FALSE
+5294,centaur_khan_endurance_aura,Endurance Aura,npc_dota_neutral_centaur_khan,Neutral,FALSE,FALSE
+5295,centaur_khan_war_stomp,War Stomp,npc_dota_neutral_centaur_khan,Neutral,FALSE,FALSE
+5305,dark_troll_warlord_ensnare,Ensnare,npc_dota_neutral_dark_troll_warlord,Neutral,FALSE,FALSE
+5306,dark_troll_warlord_raise_dead,Raise Dead,npc_dota_neutral_dark_troll_warlord,Neutral,FALSE,FALSE
+5312,enraged_wildkin_tornado,Tornado,npc_dota_neutral_enraged_wildkin,Neutral,FALSE,FALSE
+5313,enraged_wildkin_toughness_aura,Toughness Aura,npc_dota_neutral_enraged_wildkin,Neutral,FALSE,FALSE
+5318,forest_troll_high_priest_heal,Heal,npc_dota_neutral_forest_troll_high_priest,Neutral,FALSE,FALSE
+5491,forest_troll_high_priest_mana_aura,Troll High Priest Mana Aura,npc_dota_neutral_forest_troll_high_priest,Neutral,FALSE,FALSE
+5301,ghost_frost_attack,Frost Attack,npc_dota_neutral_ghost,Neutral,FALSE,FALSE
+5307,giant_wolf_critical_strike,Critical Strike,npc_dota_neutral_giant_wolf,Neutral,FALSE,FALSE
+5296,gnoll_assassin_envenomed_weapon,Envenomed Weapon,npc_dota_neutral_gnoll_assassin,Neutral,FALSE,FALSE
+5656,granite_golem_hp_aura,Granite Aura,npc_dota_neutral_granite_golem,Neutral,FALSE,FALSE
+5319,harpy_storm_chain_lightning,Chain Lightning,npc_dota_neutral_harpy_storm,Neutral,FALSE,FALSE
+5293,kobold_taskmaster_speed_aura,Speed Aura,npc_dota_neutral_kobold_taskmaster,Neutral,FALSE,FALSE
+5688,mudgolem_cloak_aura,Cloak Aura,npc_dota_neutral_mud_golem,Summoned,FALSE,FALSE
+5670,mud_golem_hurl_boulder,Hurl Boulder,npc_dota_neutral_mud_golem,Summoned,FALSE,FALSE
+5667,mud_golem_rock_destroy,Shard Split,npc_dota_neutral_mud_golem,Summoned,FALSE,FALSE
+5302,polar_furbolg_ursa_warrior_thunder_clap,Thunder Clap,npc_dota_neutral_polar_furbolg_ursa_warrior,Neutral,FALSE,FALSE
+5316,satyr_hellcaller_shockwave,Shockwave,npc_dota_neutral_satyr_hellcaller,Neutral,FALSE,FALSE
+5317,satyr_hellcaller_unholy_aura,Unholy Aura,npc_dota_neutral_satyr_hellcaller,Neutral,FALSE,FALSE
+5315,satyr_soulstealer_mana_burn,Mana Burn,npc_dota_neutral_satyr_soulstealer,Neutral,FALSE,FALSE
+5314,satyr_trickster_purge,Purge,npc_dota_neutral_satyr_trickster,Neutral,FALSE,FALSE
+5214,roshan_bash,Bash,npc_dota_roshan,Roshan,FALSE,FALSE
+5217,roshan_devotion,Devotion,npc_dota_roshan,Roshan,FALSE,FALSE
+5216,roshan_inherent_buffs,Inherent Buffs,npc_dota_roshan,Roshan,FALSE,FALSE
+5215,roshan_slam,Slam,npc_dota_roshan,Roshan,FALSE,FALSE
+5213,roshan_spell_block,Spell Block,npc_dota_roshan,Roshan,FALSE,FALSE
+5170,beastmaster_hawk_invisibility,Hawk Invisibility,npc_dota_scout_hawk,Summoned,FALSE,FALSE
+5166,warlock_golem_flaming_fists,Flaming Fists,npc_dota_warlock_golem,Summoned,FALSE,FALSE
+5167,warlock_golem_permanent_immolation,Permanent Immolation,npc_dota_warlock_golem,Summoned,FALSE,FALSE
+5002,attribute_bonus,Stats,stats,Hero,FALSE,FALSE
+5350,backdoor_protection,Backdoor Protection,tower,Tower,FALSE,FALSE
+5351,backdoor_protection_in_base,Backdoor Protection In Base,tower,Tower,FALSE,FALSE

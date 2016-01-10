@@ -7,20 +7,21 @@ public final class EarthSpiritBoulderSmash extends Ability {
     private static EarthSpiritBoulderSmash instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlag;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int remnant_smash_radius_tooltip;
     private final int[] rock_damage;
@@ -32,20 +33,21 @@ public final class EarthSpiritBoulderSmash extends Ability {
 
     private EarthSpiritBoulderSmash() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .1;
-        abilityCastRange = 150;
+        abilityCastPoint = new double[]{.1,.1,.1,.1};
+        abilityCastRange = new int[]{150,150,150,150};
         abilityCooldown = new double[]{22.0,18.0,14.0,10.0};
-        abilityManaCost = 100;
+        abilityManaCost = new int[]{100,100,100,100};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlag = "DOTA_UNIT_TARGET_FLAG_INVULNERABLE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_BOTH"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
-        fightRecapLevel = 1;
         iD = 5608;
         key = "earth_spirit_boulder_smash";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Boulder Smash";
-        owningHeroShortKey = "earth_spirit";
+        ownerKey = "npc_dota_hero_earth_spirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 160;
         remnant_smash_radius_tooltip = 200;
         rock_damage = new int[]{50,100,150,200};
@@ -67,11 +69,11 @@ public final class EarthSpiritBoulderSmash extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -79,7 +81,7 @@ public final class EarthSpiritBoulderSmash extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -87,20 +89,12 @@ public final class EarthSpiritBoulderSmash extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlag() {
-        return abilityUnitTargetFlag;
-    }
-
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -119,8 +113,20 @@ public final class EarthSpiritBoulderSmash extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

@@ -6,7 +6,7 @@ public final class RikiPermanentInvisibility extends Ability {
 
     private static RikiPermanentInvisibility instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
@@ -16,10 +16,13 @@ public final class RikiPermanentInvisibility extends Ability {
     private final double[] fade_delay;
     private final double[] fade_time;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private RikiPermanentInvisibility() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         iD = 5144;
         key = "riki_permanent_invisibility";
@@ -28,8 +31,11 @@ public final class RikiPermanentInvisibility extends Ability {
         damage_multiplier = new double[]{0.5,0.75,1.0,1.25};
         fade_delay = new double[]{6.0,5.0,4.0,3.0};
         fade_time = new double[]{0.0,0.0,0.0,0.0};
-        localizedName = "Permanent Invisibility";
-        owningHeroShortKey = "riki";
+        localizedName = "Cloak and Dagger";
+        ownerKey = "npc_dota_hero_riki";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static RikiPermanentInvisibility instance() {
@@ -39,7 +45,7 @@ public final class RikiPermanentInvisibility extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -79,8 +85,20 @@ public final class RikiPermanentInvisibility extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -41,7 +41,6 @@ public final class Nevermore extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Nevermore() {
@@ -79,7 +78,6 @@ public final class Nevermore extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Shadow Fiend";
-        shortKey = "nevermore";
         url = "Shadow_Fiend";
     }
 
@@ -224,10 +222,6 @@ public final class Nevermore extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

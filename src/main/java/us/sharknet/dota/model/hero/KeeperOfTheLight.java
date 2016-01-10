@@ -43,7 +43,6 @@ public final class KeeperOfTheLight extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private KeeperOfTheLight() {
@@ -83,7 +82,6 @@ public final class KeeperOfTheLight extends Hero {
         team = "Good";
         active = true;
         localizedName = "Keeper of the Light";
-        shortKey = "keeper_of_the_light";
         url = "Keeper_of_the_Light";
     }
 
@@ -236,10 +234,6 @@ public final class KeeperOfTheLight extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

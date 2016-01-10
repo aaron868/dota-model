@@ -15,7 +15,10 @@ public final class WitchDoctorVoodooRestoration extends Ability {
     private final double[] heal_interval;
     private final String localizedName;
     private final int[] mana_per_second;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private WitchDoctorVoodooRestoration() {
@@ -28,7 +31,10 @@ public final class WitchDoctorVoodooRestoration extends Ability {
         heal_interval = new double[]{0.33,0.33,0.33,0.33};
         localizedName = "Voodoo Restoration";
         mana_per_second = new int[]{8,12,16,20};
-        owningHeroShortKey = "witch_doctor";
+        ownerKey = "npc_dota_hero_witch_doctor";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 500;
     }
 
@@ -75,8 +81,20 @@ public final class WitchDoctorVoodooRestoration extends Ability {
         return mana_per_second;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

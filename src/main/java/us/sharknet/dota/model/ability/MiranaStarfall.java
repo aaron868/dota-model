@@ -13,12 +13,14 @@ public final class MiranaStarfall extends Ability {
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int starfall_radius;
     private final int starfall_secondary_radius;
 
@@ -30,12 +32,14 @@ public final class MiranaStarfall extends Ability {
         abilityDuration = new double[]{10.0,10.0,10.0,10.0};
         abilityManaCost = new int[]{100,120,140,160};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5051;
         key = "mirana_starfall";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Starfall";
-        owningHeroShortKey = "mirana";
+        ownerKey = "npc_dota_hero_mirana";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         starfall_radius = 650;
         starfall_secondary_radius = 425;
     }
@@ -75,10 +79,6 @@ public final class MiranaStarfall extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -95,8 +95,20 @@ public final class MiranaStarfall extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getStarfallRadius() {

@@ -8,8 +8,8 @@ public final class PhoenixLaunchFireSpirit extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
@@ -21,7 +21,10 @@ public final class PhoenixLaunchFireSpirit extends Ability {
     private final int duration;
     private final int hp_cost_perc;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int spirit_count;
     private final double[] spirit_duration;
@@ -31,8 +34,8 @@ public final class PhoenixLaunchFireSpirit extends Ability {
     private PhoenixLaunchFireSpirit() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         abilityCastPoint = new double[]{0.01,0.01,0.01,0.01};
-        abilityCastRange = 1400;
-        abilityCooldown = new int[]{0,0,0,0};
+        abilityCastRange = new int[]{1400,1400,1400,1400};
+        abilityCooldown = new double[]{0,0,0,0};
         abilityManaCost = new int[]{0,0,0,0};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
@@ -44,7 +47,10 @@ public final class PhoenixLaunchFireSpirit extends Ability {
         duration = 4;
         hp_cost_perc = 20;
         localizedName = "Launch Fire Spirits";
-        owningHeroShortKey = "phoenix";
+        ownerKey = "npc_dota_hero_phoenix";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{175,175,175,175};
         spirit_count = 4;
         spirit_duration = new double[]{16.0,16.0,16.0,16.0};
@@ -67,11 +73,11 @@ public final class PhoenixLaunchFireSpirit extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -119,8 +125,20 @@ public final class PhoenixLaunchFireSpirit extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

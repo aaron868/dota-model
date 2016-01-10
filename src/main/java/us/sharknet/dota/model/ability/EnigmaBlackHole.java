@@ -8,13 +8,12 @@ public final class EnigmaBlackHole extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityChannelTime;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -24,7 +23,10 @@ public final class EnigmaBlackHole extends Ability {
     private final String localizedName;
     private final int[] near_damage;
     private final int near_radius;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int pull_radius;
     private final int[] pull_speed;
     private final double[] tick_rate;
@@ -33,13 +35,12 @@ public final class EnigmaBlackHole extends Ability {
     private EnigmaBlackHole() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 275;
+        abilityCastRange = new int[]{275,275,275,275};
         abilityChannelTime = new double[]{4.0,4.0,4.0};
         abilityCooldown = new double[]{200.0,180.0,160.0};
         abilityManaCost = new int[]{275,325,375};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5149;
         key = "enigma_black_hole";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -49,7 +50,10 @@ public final class EnigmaBlackHole extends Ability {
         localizedName = "Black Hole";
         near_damage = new int[]{55,110,165};
         near_radius = 200;
-        owningHeroShortKey = "enigma";
+        ownerKey = "npc_dota_hero_enigma";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         pull_radius = 420;
         pull_speed = new int[]{40,40,40};
         tick_rate = new double[]{0.1,0.1,0.1};
@@ -71,7 +75,7 @@ public final class EnigmaBlackHole extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -93,10 +97,6 @@ public final class EnigmaBlackHole extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -135,8 +135,20 @@ public final class EnigmaBlackHole extends Ability {
         return near_radius;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getPullRadius() {

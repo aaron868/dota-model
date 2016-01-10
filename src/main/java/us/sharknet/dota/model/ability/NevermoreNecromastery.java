@@ -6,30 +6,34 @@ public final class NevermoreNecromastery extends Ability {
 
     private static NevermoreNecromastery instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
-    private final int onCastbar;
     private final String localizedName;
     private final int necromastery_damage_per_soul;
     private final int[] necromastery_max_souls;
     private final int[] necromastery_max_souls_scepter;
     private final double necromastery_soul_release;
     private final int necromastery_souls_hero_bonus;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private NevermoreNecromastery() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5062;
         key = "nevermore_necromastery";
-        onCastbar = 0;
         localizedName = "Necromastery";
         necromastery_damage_per_soul = 2;
         necromastery_max_souls = new int[]{15,22,29,36};
         necromastery_max_souls_scepter = new int[]{15,22,29,36};
         necromastery_soul_release = .5;
         necromastery_souls_hero_bonus = 11;
-        owningHeroShortKey = "nevermore";
+        ownerKey = "npc_dota_hero_nevermore";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static NevermoreNecromastery instance() {
@@ -39,7 +43,7 @@ public final class NevermoreNecromastery extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -49,10 +53,6 @@ public final class NevermoreNecromastery extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getOnCastbar() {
-        return onCastbar;
     }
 
     public String getLocalizedName() {
@@ -79,8 +79,20 @@ public final class NevermoreNecromastery extends Ability {
         return necromastery_souls_hero_bonus;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

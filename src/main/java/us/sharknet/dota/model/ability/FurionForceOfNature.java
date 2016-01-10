@@ -8,8 +8,8 @@ public final class FurionForceOfNature extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final int iD;
     private final String key;
@@ -17,7 +17,10 @@ public final class FurionForceOfNature extends Ability {
     private final double[] duration;
     private final String localizedName;
     private final int[] max_treants;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int treant_health_tooltip;
     private final int treant_max_dmg_tooltip;
     private final int treant_min_dmg_tooltip;
@@ -25,8 +28,8 @@ public final class FurionForceOfNature extends Ability {
     private FurionForceOfNature() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 750;
-        abilityCooldown = new int[]{37,37,37,37};
+        abilityCastRange = new int[]{750,750,750,750};
+        abilityCooldown = new double[]{37,37,37,37};
         abilityManaCost = new int[]{160,160,160,160};
         iD = 5247;
         key = "furion_force_of_nature";
@@ -34,7 +37,10 @@ public final class FurionForceOfNature extends Ability {
         duration = new double[]{60.0,60.0,60.0,60.0};
         localizedName = "Force Of Nature";
         max_treants = new int[]{2,3,4,5};
-        owningHeroShortKey = "furion";
+        ownerKey = "npc_dota_hero_furion";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         treant_health_tooltip = 550;
         treant_max_dmg_tooltip = 34;
         treant_min_dmg_tooltip = 30;
@@ -55,11 +61,11 @@ public final class FurionForceOfNature extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -91,8 +97,20 @@ public final class FurionForceOfNature extends Ability {
         return max_treants;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getTreantHealthTooltip() {

@@ -7,32 +7,38 @@ public final class BrewmasterStormDispelMagic extends Ability {
     private static BrewmasterStormDispelMagic instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
+    private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int damage;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private BrewmasterStormDispelMagic() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
-        abilityCastPoint = .4;
+        abilityCastPoint = new double[]{.4,.4,.4,.4};
         abilityCastRange = new int[]{500,500,500,500};
-        abilityCooldown = 4;
+        abilityCooldown = new double[]{4,4,4,4};
         abilityManaCost = new int[]{75,75,75,75};
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         iD = 5408;
         key = "brewmaster_storm_dispel_magic";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = 500;
         localizedName = "Dispel Magic";
-        owningHeroShortKey = "brewmaster_storm";
+        ownerKey = "npc_dota_brewmaster_storm";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
         radius = 600;
     }
 
@@ -47,7 +53,7 @@ public final class BrewmasterStormDispelMagic extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -55,7 +61,7 @@ public final class BrewmasterStormDispelMagic extends Ability {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -63,7 +69,7 @@ public final class BrewmasterStormDispelMagic extends Ability {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -87,8 +93,20 @@ public final class BrewmasterStormDispelMagic extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

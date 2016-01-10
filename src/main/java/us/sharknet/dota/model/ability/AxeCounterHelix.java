@@ -6,7 +6,7 @@ public final class AxeCounterHelix extends Ability {
 
     private static AxeCounterHelix instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final String abilityUnitDamageType;
@@ -15,12 +15,15 @@ public final class AxeCounterHelix extends Ability {
     private final String spellImmunityType;
     private final double[] cooldown;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int trigger_chance;
 
     private AxeCounterHelix() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityCooldown = new double[]{0.45,0.4,0.35,0.3};
         abilityDamage = new int[]{100,135,170,205};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
@@ -29,7 +32,10 @@ public final class AxeCounterHelix extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         cooldown = new double[]{0.45,0.4,0.35,0.3};
         localizedName = "Counter Helix";
-        owningHeroShortKey = "axe";
+        ownerKey = "npc_dota_hero_axe";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         radius = 275;
         trigger_chance = 20;
     }
@@ -41,7 +47,7 @@ public final class AxeCounterHelix extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -77,8 +83,20 @@ public final class AxeCounterHelix extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

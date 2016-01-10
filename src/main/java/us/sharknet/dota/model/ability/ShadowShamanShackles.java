@@ -8,40 +8,44 @@ public final class ShadowShamanShackles extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityChannelTime;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double[] channel_time;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] tick_interval;
     private final double[] total_damage;
 
     private ShadowShamanShackles() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_CHANNELLED"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 400;
+        abilityCastRange = new int[]{400,400,400,400};
         abilityChannelTime = new double[]{2.75,3.5,4.25,5.0};
-        abilityCooldown = 10;
+        abilityCooldown = new double[]{10,10,10,10};
         abilityManaCost = new int[]{140,150,160,170};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5080;
         key = "shadow_shaman_shackles";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         channel_time = new double[]{2.75,3.5,4.25,5.0};
         localizedName = "Shackles";
-        owningHeroShortKey = "shadow_shaman";
+        ownerKey = "npc_dota_hero_shadow_shaman";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tick_interval = new double[]{0.1,0.1,0.1,0.1};
         total_damage = new double[]{120.0,200.0,280.0,360.0};
     }
@@ -61,7 +65,7 @@ public final class ShadowShamanShackles extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -69,7 +73,7 @@ public final class ShadowShamanShackles extends Ability {
         return abilityChannelTime;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -81,16 +85,12 @@ public final class ShadowShamanShackles extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -113,8 +113,20 @@ public final class ShadowShamanShackles extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getTickInterval() {

@@ -8,20 +8,22 @@ public final class SpiritBreakerChargeOfDarkness extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] bash_radius;
     private final String localizedName;
     private final int[] movement_speed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] stun_duration;
     private final double[] vision_duration;
     private final int[] vision_radius;
@@ -29,20 +31,22 @@ public final class SpiritBreakerChargeOfDarkness extends Ability {
     private SpiritBreakerChargeOfDarkness() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_ALERT_TARGET","DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"};
         abilityCastPoint = new double[]{0.47,0.47,0.47,0.47};
-        abilityCastRange = 0;
-        abilityCooldown = 12;
+        abilityCastRange = new int[]{0,0,0,0};
+        abilityCooldown = new double[]{12,12,12,12};
         abilityManaCost = new int[]{100,100,100,100};
         abilityModifierSupportValue = .3;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5353;
         key = "spirit_breaker_charge_of_darkness";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         bash_radius = new int[]{300,300,300,300};
         localizedName = "Charge Of Darkness";
         movement_speed = new int[]{600,650,700,750};
-        owningHeroShortKey = "spirit_breaker";
+        ownerKey = "npc_dota_hero_spirit_breaker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         stun_duration = new double[]{1.2,1.6,2.0,2.4};
         vision_duration = new double[]{0.94,0.94,0.94,0.94};
         vision_radius = new int[]{400,400,400,400};
@@ -63,11 +67,11 @@ public final class SpiritBreakerChargeOfDarkness extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -79,16 +83,12 @@ public final class SpiritBreakerChargeOfDarkness extends Ability {
         return abilityModifierSupportValue;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -115,8 +115,20 @@ public final class SpiritBreakerChargeOfDarkness extends Ability {
         return movement_speed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getStunDuration() {

@@ -6,24 +6,26 @@ public final class DazzlePoisonTouch extends Ability {
 
     private static DazzlePoisonTouch instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
-    private final int abilityDuration;
-    private final int abilityManaCost;
+    private final double[] abilityDuration;
+    private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int duration_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int projectile_speed;
     private final int set_time;
     private final int[] should_stun;
@@ -33,24 +35,26 @@ public final class DazzlePoisonTouch extends Ability {
     private final int stun_duration;
 
     private DazzlePoisonTouch() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 600;
-        abilityCooldown = new int[]{15,13,11,7};
+        abilityCastRange = new int[]{600,600,600,600};
+        abilityCooldown = new double[]{15,13,11,7};
         abilityDamage = new int[]{14,20,26,36};
-        abilityDuration = 10;
-        abilityManaCost = 70;
+        abilityDuration = new double[]{10,10,10,10};
+        abilityManaCost = new int[]{70,70,70,70};
         abilityModifierSupportValue = .35;
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5233;
         key = "dazzle_poison_touch";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration_tooltip = 1;
         localizedName = "Poison Touch";
-        owningHeroShortKey = "dazzle";
+        ownerKey = "npc_dota_hero_dazzle";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         projectile_speed = 1300;
         set_time = 3;
         should_stun = new int[]{0,0,0,1};
@@ -67,7 +71,7 @@ public final class DazzlePoisonTouch extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -75,11 +79,11 @@ public final class DazzlePoisonTouch extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -87,11 +91,11 @@ public final class DazzlePoisonTouch extends Ability {
         return abilityDamage;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -103,16 +107,12 @@ public final class DazzlePoisonTouch extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -135,8 +135,20 @@ public final class DazzlePoisonTouch extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getProjectileSpeed() {

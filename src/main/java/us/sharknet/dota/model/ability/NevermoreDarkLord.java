@@ -7,27 +7,31 @@ public final class NevermoreDarkLord extends Ability {
     private static NevermoreDarkLord instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastRange;
-    private final String abilityUnitTargetTeam;
+    private final int[] abilityCastRange;
+    private final String[] abilityUnitTargetTeam;
     private final int iD;
     private final String key;
-    private final int onCastbar;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] presence_armor_reduction;
     private final int presence_radius;
 
     private NevermoreDarkLord() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_AURA"};
-        abilityCastRange = 900;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityCastRange = new int[]{900,900,900,900};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         iD = 5063;
         key = "nevermore_dark_lord";
-        onCastbar = 0;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         localizedName = "Presence of the Dark Lord";
-        owningHeroShortKey = "nevermore";
+        ownerKey = "npc_dota_hero_nevermore";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         presence_armor_reduction = new int[]{-3,-4,-5,-6};
         presence_radius = 900;
     }
@@ -43,11 +47,11 @@ public final class NevermoreDarkLord extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -59,10 +63,6 @@ public final class NevermoreDarkLord extends Ability {
         return key;
     }
 
-    public int getOnCastbar() {
-        return onCastbar;
-    }
-
     public String getSpellImmunityType() {
         return spellImmunityType;
     }
@@ -71,8 +71,20 @@ public final class NevermoreDarkLord extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getPresenceArmorReduction() {

@@ -6,22 +6,28 @@ public final class PhantomAssassinBlur extends Ability {
 
     private static PhantomAssassinBlur instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int[] bonus_evasion;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final double transparency_fade;
 
     private PhantomAssassinBlur() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5192;
         key = "phantom_assassin_blur";
         bonus_evasion = new int[]{20,30,40,50};
         localizedName = "Blur";
-        owningHeroShortKey = "phantom_assassin";
+        ownerKey = "npc_dota_hero_phantom_assassin";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         radius = new int[]{1600,1600,1600,1600};
         transparency_fade = 0.0;
     }
@@ -33,7 +39,7 @@ public final class PhantomAssassinBlur extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -53,8 +59,20 @@ public final class PhantomAssassinBlur extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

@@ -10,14 +10,16 @@ public final class AbaddonBorrowedTime extends Ability {
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final double[] duration;
     private final double[] duration_scepter;
     private final int hp_threshold;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double redirect;
     private final int redirect_pct_tooltip_scepter;
     private final int redirect_range_tooltip_scepter;
@@ -27,14 +29,16 @@ public final class AbaddonBorrowedTime extends Ability {
         abilityCooldown = new double[]{60.0,50.0,40.0};
         abilityManaCost = new int[]{0,0,0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5588;
         key = "abaddon_borrowed_time";
         duration = new double[]{4.0,5.0,6.0};
         duration_scepter = new double[]{5.0,6.0,7.0};
         hp_threshold = 400;
         localizedName = "Borrowed Time";
-        owningHeroShortKey = "abaddon";
+        ownerKey = "npc_dota_hero_abaddon";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         redirect = .5;
         redirect_pct_tooltip_scepter = 50;
         redirect_range_tooltip_scepter = 9;
@@ -63,10 +67,6 @@ public final class AbaddonBorrowedTime extends Ability {
         return abilityType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -91,8 +91,20 @@ public final class AbaddonBorrowedTime extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getRedirect() {

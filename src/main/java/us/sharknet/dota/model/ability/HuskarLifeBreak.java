@@ -6,18 +6,17 @@ public final class HuskarLifeBreak extends Ability {
 
     private static HuskarLifeBreak instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int[] abilityDuration;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -28,25 +27,27 @@ public final class HuskarLifeBreak extends Ability {
     private final double health_damage_scepter;
     private final String localizedName;
     private final int[] movespeed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] slow_durtion_tooltip;
     private final int tooltip_health_cost_percent;
     private final int tooltip_health_damage;
     private final int tooltip_health_damage_scepter;
 
     private HuskarLifeBreak() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 550;
-        abilityCooldown = 12;
-        abilityDuration = new int[]{4,5,6};
+        abilityCastRange = new int[]{550,550,550,550};
+        abilityCooldown = new double[]{12,12,12,12};
+        abilityDuration = new double[]{4,5,6};
         abilityManaCost = new int[]{0,0,0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_CREEP"};
-        fightRecapLevel = 2;
         iD = 5274;
         key = "huskar_life_break";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -57,7 +58,10 @@ public final class HuskarLifeBreak extends Ability {
         health_damage_scepter = .65;
         localizedName = "Life Break";
         movespeed = new int[]{-40,-50,-60};
-        owningHeroShortKey = "huskar";
+        ownerKey = "npc_dota_hero_huskar";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         slow_durtion_tooltip = new double[]{4.0,5.0,6.0};
         tooltip_health_cost_percent = 35;
         tooltip_health_damage = 35;
@@ -71,7 +75,7 @@ public final class HuskarLifeBreak extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -79,15 +83,15 @@ public final class HuskarLifeBreak extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int[] getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -103,20 +107,16 @@ public final class HuskarLifeBreak extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -159,8 +159,20 @@ public final class HuskarLifeBreak extends Ability {
         return movespeed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getSlowDurtionTooltip() {

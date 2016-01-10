@@ -6,26 +6,32 @@ public final class CrystalMaidenBrillianceAura extends Ability {
 
     private static CrystalMaidenBrillianceAura instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final String[] abilityUnitTargetTeam;
     private final int iD;
     private final String key;
     private final String localizedName;
     private final double[] mana_regen;
     private final double[] mana_regen_self;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private CrystalMaidenBrillianceAura() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityCastPoint = .2;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
+        abilityCastPoint = new double[]{.2,.2,.2,.2};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         iD = 5128;
         key = "crystal_maiden_brilliance_aura";
-        localizedName = "Brilliance Aura";
+        localizedName = "Arcane Aura";
         mana_regen = new double[]{1.0,1.5,2.0,3.0};
         mana_regen_self = new double[]{2.0,3.0,4.0,6.0};
-        owningHeroShortKey = "crystal_maiden";
+        ownerKey = "npc_dota_hero_crystal_maiden";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static CrystalMaidenBrillianceAura instance() {
@@ -35,15 +41,15 @@ public final class CrystalMaidenBrillianceAura extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -67,8 +73,20 @@ public final class CrystalMaidenBrillianceAura extends Ability {
         return mana_regen_self;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

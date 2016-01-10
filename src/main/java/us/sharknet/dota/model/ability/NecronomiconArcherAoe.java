@@ -6,22 +6,28 @@ public final class NecronomiconArcherAoe extends Ability {
 
     private static NecronomiconArcherAoe instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int[] speed_bonus;
 
     private NecronomiconArcherAoe() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         iD = 5204;
         key = "necronomicon_archer_aoe";
         localizedName = "AoE";
-        owningHeroShortKey = "necronomicon_archer";
+        ownerKey = "npc_dota_necronomicon_archer";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
         radius = 900;
         speed_bonus = new int[]{5,7,9};
     }
@@ -33,7 +39,7 @@ public final class NecronomiconArcherAoe extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -53,8 +59,20 @@ public final class NecronomiconArcherAoe extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

@@ -37,7 +37,6 @@ public final class Venomancer extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Venomancer() {
@@ -71,7 +70,6 @@ public final class Venomancer extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Venomancer";
-        shortKey = "venomancer";
         url = "Venomancer";
     }
 
@@ -200,10 +198,6 @@ public final class Venomancer extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

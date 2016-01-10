@@ -6,9 +6,9 @@ public final class QueenofpainScreamOfPain extends Ability {
 
     private static QueenofpainScreamOfPain instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
@@ -18,13 +18,16 @@ public final class QueenofpainScreamOfPain extends Ability {
     private final String spellImmunityType;
     private final int area_of_effect;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int projectile_speed;
 
     private QueenofpainScreamOfPain() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 0;
+        abilityCastRange = new int[]{0,0,0,0};
         abilityCooldown = new double[]{7.0,7.0,7.0,7.0};
         abilityDamage = new int[]{75,150,225,300};
         abilityManaCost = new int[]{110,120,130,140};
@@ -34,7 +37,10 @@ public final class QueenofpainScreamOfPain extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         area_of_effect = 475;
         localizedName = "Scream Of Pain";
-        owningHeroShortKey = "queenofpain";
+        ownerKey = "npc_dota_hero_queenofpain";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         projectile_speed = 900;
     }
 
@@ -45,7 +51,7 @@ public final class QueenofpainScreamOfPain extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -53,7 +59,7 @@ public final class QueenofpainScreamOfPain extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -93,8 +99,20 @@ public final class QueenofpainScreamOfPain extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getProjectileSpeed() {

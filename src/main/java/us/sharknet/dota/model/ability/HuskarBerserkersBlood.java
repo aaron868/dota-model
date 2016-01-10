@@ -6,24 +6,30 @@ public final class HuskarBerserkersBlood extends Ability {
 
     private static HuskarBerserkersBlood instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int hp_threshold_max;
     private final String localizedName;
     private final int[] maximum_attack_speed;
     private final int[] maximum_resistance;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private HuskarBerserkersBlood() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5273;
         key = "huskar_berserkers_blood";
         hp_threshold_max = 10;
         localizedName = "Berserkers Blood";
         maximum_attack_speed = new int[]{196,224,252,280};
         maximum_resistance = new int[]{20,30,40,50};
-        owningHeroShortKey = "huskar";
+        ownerKey = "npc_dota_hero_huskar";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static HuskarBerserkersBlood instance() {
@@ -33,7 +39,7 @@ public final class HuskarBerserkersBlood extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,8 +67,20 @@ public final class HuskarBerserkersBlood extends Ability {
         return maximum_resistance;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

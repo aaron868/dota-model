@@ -7,12 +7,11 @@ public final class AbyssalUnderlordFirestorm extends Ability {
     private static AbyssalUnderlordFirestorm instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final int[] burn_damage;
@@ -20,7 +19,10 @@ public final class AbyssalUnderlordFirestorm extends Ability {
     private final int burn_interval;
     private final double first_wave_delay;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int wave_count;
     private final int[] wave_damage;
@@ -29,12 +31,11 @@ public final class AbyssalUnderlordFirestorm extends Ability {
 
     private AbyssalUnderlordFirestorm() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
-        abilityCastPoint = .6;
-        abilityCastRange = 750;
-        abilityCooldown = 14;
+        abilityCastPoint = new double[]{.6,.6,.6,.6};
+        abilityCastRange = new int[]{750,750,750,750};
+        abilityCooldown = new double[]{14,14,14,14};
         abilityManaCost = new int[]{100,110,120,130};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5613;
         key = "abyssal_underlord_firestorm";
         burn_damage = new int[]{5,10,15,20};
@@ -42,7 +43,10 @@ public final class AbyssalUnderlordFirestorm extends Ability {
         burn_interval = 1;
         first_wave_delay = .9;
         localizedName = "Firestorm";
-        owningHeroShortKey = "abyssal_underlord";
+        ownerKey = "npc_dota_hero_abyssal_underlord";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 400;
         wave_count = 6;
         wave_damage = new int[]{25,40,55,70};
@@ -61,15 +65,15 @@ public final class AbyssalUnderlordFirestorm extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -79,10 +83,6 @@ public final class AbyssalUnderlordFirestorm extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -113,8 +113,20 @@ public final class AbyssalUnderlordFirestorm extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

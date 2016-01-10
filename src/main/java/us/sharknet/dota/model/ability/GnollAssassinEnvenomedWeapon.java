@@ -6,28 +6,32 @@ public final class GnollAssassinEnvenomedWeapon extends Ability {
 
     private static GnollAssassinEnvenomedWeapon instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int damage_per_second;
     private final int hero_duration;
     private final String localizedName;
     private final int non_hero_duration;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private GnollAssassinEnvenomedWeapon() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5296;
         key = "gnoll_assassin_envenomed_weapon";
-        maxLevel = 1;
         damage_per_second = 2;
         hero_duration = 1;
         localizedName = "Envenomed Weapon";
         non_hero_duration = 2;
-        owningHeroShortKey = "gnoll_assassin";
+        ownerKey = "npc_dota_neutral_gnoll_assassin";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
     }
 
     public static GnollAssassinEnvenomedWeapon instance() {
@@ -37,7 +41,7 @@ public final class GnollAssassinEnvenomedWeapon extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -51,10 +55,6 @@ public final class GnollAssassinEnvenomedWeapon extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int getDamagePerSecond() {
@@ -73,8 +73,20 @@ public final class GnollAssassinEnvenomedWeapon extends Ability {
         return non_hero_duration;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

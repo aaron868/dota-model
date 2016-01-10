@@ -7,36 +7,40 @@ public final class EnigmaMidnightPulse extends Ability {
     private static EnigmaMidnightPulse instance;
 
     private final String[] abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double[] damage_percent;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private EnigmaMidnightPulse() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = .1;
-        abilityCastRange = 700;
-        abilityCooldown = 35;
+        abilityCastPoint = new double[]{.1,.1,.1,.1};
+        abilityCastRange = new int[]{700,700,700,700};
+        abilityCooldown = new double[]{35,35,35,35};
         abilityManaCost = new int[]{95,110,125,140};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        fightRecapLevel = 1;
         iD = 5148;
         key = "enigma_midnight_pulse";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         damage_percent = new double[]{3.0,3.75,4.5,5.25};
         duration = 11;
         localizedName = "Midnight Pulse";
-        owningHeroShortKey = "enigma";
+        ownerKey = "npc_dota_hero_enigma";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 550;
     }
 
@@ -51,15 +55,15 @@ public final class EnigmaMidnightPulse extends Ability {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -69,10 +73,6 @@ public final class EnigmaMidnightPulse extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -99,8 +99,20 @@ public final class EnigmaMidnightPulse extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

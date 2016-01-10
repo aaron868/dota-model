@@ -13,7 +13,10 @@ public final class MedusaManaShield extends Ability {
     private final int absorption_tooltip;
     private final double[] damage_per_mana;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private MedusaManaShield() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
@@ -23,7 +26,10 @@ public final class MedusaManaShield extends Ability {
         absorption_tooltip = 6;
         damage_per_mana = new double[]{1.6,1.9,2.2,2.5};
         localizedName = "Mana Shield";
-        owningHeroShortKey = "medusa";
+        ownerKey = "npc_dota_hero_medusa";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static MedusaManaShield instance() {
@@ -61,8 +67,20 @@ public final class MedusaManaShield extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

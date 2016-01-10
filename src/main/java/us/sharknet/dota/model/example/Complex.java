@@ -3,6 +3,7 @@ package us.sharknet.dota.model.example;
 
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.commons.collections.CollectionUtils;
+import us.sharknet.dota.model.Ability;
 import us.sharknet.dota.model.Item;
 import us.sharknet.dota.model.Library;
 import us.sharknet.dota.model.item.Manta;
@@ -28,6 +29,7 @@ public class Complex {
         Complex complex = new Complex();
         complex.printAgilityItems();
         complex.getAgilityBonus();
+        complex.printPassiveAbilties();
     }
 
     public void printAgilityItems() {
@@ -71,6 +73,17 @@ public class Complex {
             e.printStackTrace();
         }
         return bonus;
+    }
+
+    public void printPassiveAbilties() {
+        System.out.println("-----------------");
+        System.out.println("Passive Abilities");
+        System.out.println("-----------------");
+        for(Ability ability : library.getAbilities()) {
+            if( ability.isPassive() && !ability.getLocalizedName().startsWith("Empty")) {
+                System.out.println(ability.getOwnerKey() + ":" + ability.getLocalizedName());
+            }
+        }
     }
 
 

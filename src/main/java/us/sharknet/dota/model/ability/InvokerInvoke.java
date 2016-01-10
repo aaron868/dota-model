@@ -7,35 +7,39 @@ public final class InvokerInvoke extends Ability {
     private static InvokerInvoke instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final int iD;
     private final String key;
     private final int levelsBetweenUpgrades;
-    private final int maxLevel;
     private final int requiredLevel;
     private final double[] cooldown_scepter;
     private final String localizedName;
     private final int mana_cost_scepter;
     private final int[] max_invoked_spells;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private InvokerInvoke() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCooldown = new int[]{22,17,12,5};
+        abilityCooldown = new double[]{22,17,12,5};
         abilityManaCost = new int[]{20,40,60,80};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5375;
         key = "invoker_invoke";
         levelsBetweenUpgrades = 5;
-        maxLevel = 4;
         requiredLevel = 1;
         cooldown_scepter = new double[]{16.0,8.0,4.0,2.0};
         localizedName = "Invoke";
         mana_cost_scepter = 0;
         max_invoked_spells = new int[]{2,2,2,2};
-        owningHeroShortKey = "invoker";
+        ownerKey = "npc_dota_hero_invoker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static InvokerInvoke instance() {
@@ -49,7 +53,7 @@ public final class InvokerInvoke extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -73,10 +77,6 @@ public final class InvokerInvoke extends Ability {
         return levelsBetweenUpgrades;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public int getRequiredLevel() {
         return requiredLevel;
     }
@@ -97,8 +97,20 @@ public final class InvokerInvoke extends Ability {
         return max_invoked_spells;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

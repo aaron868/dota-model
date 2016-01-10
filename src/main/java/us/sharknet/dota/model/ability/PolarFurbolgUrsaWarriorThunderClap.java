@@ -6,37 +6,41 @@ public final class PolarFurbolgUrsaWarriorThunderClap extends Ability {
 
     private static PolarFurbolgUrsaWarriorThunderClap instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCooldown;
-    private final int abilityDamage;
-    private final int abilityManaCost;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
+    private final int[] abilityDamage;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int attackspeed_slow;
     private final int duration;
     private final String localizedName;
     private final int movespeed_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private PolarFurbolgUrsaWarriorThunderClap() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = .5;
-        abilityCooldown = 12;
-        abilityDamage = 150;
-        abilityManaCost = 100;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{.5,.5,.5,.5};
+        abilityCooldown = new double[]{12,12,12,12};
+        abilityDamage = new int[]{150,150,150,150};
+        abilityManaCost = new int[]{100,100,100,100};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5302;
         key = "polar_furbolg_ursa_warrior_thunder_clap";
-        maxLevel = 1;
         attackspeed_slow = -25;
         duration = 3;
         localizedName = "Thunder Clap";
         movespeed_slow = -25;
-        owningHeroShortKey = "polar_furbolg_ursa_warrior";
+        ownerKey = "npc_dota_neutral_polar_furbolg_ursa_warrior";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
         radius = 300;
     }
 
@@ -47,23 +51,23 @@ public final class PolarFurbolgUrsaWarriorThunderClap extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityDamage() {
+    public int[] getAbilityDamage() {
         return abilityDamage;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -77,10 +81,6 @@ public final class PolarFurbolgUrsaWarriorThunderClap extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int getAttackspeedSlow() {
@@ -99,8 +99,20 @@ public final class PolarFurbolgUrsaWarriorThunderClap extends Ability {
         return movespeed_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

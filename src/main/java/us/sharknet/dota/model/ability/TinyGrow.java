@@ -6,7 +6,7 @@ public final class TinyGrow extends Ability {
 
     private static TinyGrow instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final int iD;
     private final String key;
@@ -20,10 +20,13 @@ public final class TinyGrow extends Ability {
     private final int[] grow_bonus_damage_pct;
     private final int[] grow_bonus_damage_pct_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private TinyGrow() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5109;
         key = "tiny_grow";
@@ -37,7 +40,10 @@ public final class TinyGrow extends Ability {
         grow_bonus_damage_pct = new int[]{35,50,65};
         grow_bonus_damage_pct_scepter = new int[]{50,65,80};
         localizedName = "Grow";
-        owningHeroShortKey = "tiny";
+        ownerKey = "npc_dota_hero_tiny";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static TinyGrow instance() {
@@ -47,7 +53,7 @@ public final class TinyGrow extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -103,8 +109,20 @@ public final class TinyGrow extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

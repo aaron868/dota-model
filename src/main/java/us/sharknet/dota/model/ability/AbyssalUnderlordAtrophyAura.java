@@ -7,8 +7,8 @@ public final class AbyssalUnderlordAtrophyAura extends Ability {
     private static AbyssalUnderlordAtrophyAura instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastRange;
-    private final String abilityUnitTargetTeam;
+    private final int[] abilityCastRange;
+    private final String[] abilityUnitTargetTeam;
     private final int iD;
     private final String key;
     private final double[] bonus_damage_duration;
@@ -16,13 +16,16 @@ public final class AbyssalUnderlordAtrophyAura extends Ability {
     private final int bonus_damage_from_hero;
     private final int[] damage_reduction_pct;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private AbyssalUnderlordAtrophyAura() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE","DOTA_ABILITY_BEHAVIOR_AURA"};
-        abilityCastRange = 900;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityCastRange = new int[]{900,900,900,900};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         iD = 5615;
         key = "abyssal_underlord_atrophy_aura";
         bonus_damage_duration = new double[]{30.0,35.0,40.0,45.0};
@@ -30,7 +33,10 @@ public final class AbyssalUnderlordAtrophyAura extends Ability {
         bonus_damage_from_hero = 30;
         damage_reduction_pct = new int[]{18,26,34,42};
         localizedName = "Atrophy Aura";
-        owningHeroShortKey = "abyssal_underlord";
+        ownerKey = "npc_dota_hero_abyssal_underlord";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 900;
     }
 
@@ -45,11 +51,11 @@ public final class AbyssalUnderlordAtrophyAura extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -81,8 +87,20 @@ public final class AbyssalUnderlordAtrophyAura extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

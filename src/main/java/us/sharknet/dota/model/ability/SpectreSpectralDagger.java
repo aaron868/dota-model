@@ -11,12 +11,11 @@ public final class SpectreSpectralDagger extends Ability {
     private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final int abilityModifierSupportValue;
+    private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -28,8 +27,11 @@ public final class SpectreSpectralDagger extends Ability {
     private final int[] damage;
     private final double[] hero_path_duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
     private final int[] path_radius;
+    private final boolean placeholder;
     private final int speed;
     private final int vision_radius;
 
@@ -41,10 +43,9 @@ public final class SpectreSpectralDagger extends Ability {
         abilityManaCost = new int[]{130,140,150,160};
         abilityModifierSupportValue = 0;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        fightRecapLevel = 1;
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO"};
         iD = 5334;
         key = "spectre_spectral_dagger";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -56,8 +57,11 @@ public final class SpectreSpectralDagger extends Ability {
         damage = new int[]{50,100,150,200};
         hero_path_duration = new double[]{7.0,7.0,7.0,7.0};
         localizedName = "Spectral Dagger";
-        owningHeroShortKey = "spectre";
+        ownerKey = "npc_dota_hero_spectre";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
         path_radius = new int[]{175,175,175,175};
+        placeholder = false;
         speed = 800;
         vision_radius = 200;
     }
@@ -89,7 +93,7 @@ public final class SpectreSpectralDagger extends Ability {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
@@ -97,20 +101,16 @@ public final class SpectreSpectralDagger extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -157,12 +157,24 @@ public final class SpectreSpectralDagger extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
     }
 
     public int[] getPathRadius() {
         return path_radius;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSpeed() {

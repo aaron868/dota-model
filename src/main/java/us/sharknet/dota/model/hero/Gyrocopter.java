@@ -37,7 +37,6 @@ public final class Gyrocopter extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Gyrocopter() {
@@ -71,7 +70,6 @@ public final class Gyrocopter extends Hero {
         team = "Good";
         active = true;
         localizedName = "Gyrocopter";
-        shortKey = "gyrocopter";
         url = "Gyrocopter";
     }
 
@@ -200,10 +198,6 @@ public final class Gyrocopter extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

@@ -7,35 +7,39 @@ public final class EarthSpiritStoneCaller extends Ability {
     private static EarthSpiritStoneCaller instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int charge_restore_time;
     private final int duration;
     private final String localizedName;
     private final int max_charges;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private EarthSpiritStoneCaller() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = 0;
-        abilityCastRange = 1100;
-        abilityCooldown = 0;
-        abilityManaCost = 0;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{1100,1100,1100,1100};
+        abilityCooldown = new double[]{0,0,0,0};
+        abilityManaCost = new int[]{0,0,0,0};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         iD = 5611;
         key = "earth_spirit_stone_caller";
-        maxLevel = 1;
         charge_restore_time = 3;
         duration = 12;
         localizedName = "Stone Caller";
         max_charges = 6;
-        owningHeroShortKey = "earth_spirit";
+        ownerKey = "npc_dota_hero_earth_spirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static EarthSpiritStoneCaller instance() {
@@ -49,19 +53,19 @@ public final class EarthSpiritStoneCaller extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -75,10 +79,6 @@ public final class EarthSpiritStoneCaller extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int getChargeRestoreTime() {
@@ -97,8 +97,20 @@ public final class EarthSpiritStoneCaller extends Ability {
         return max_charges;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

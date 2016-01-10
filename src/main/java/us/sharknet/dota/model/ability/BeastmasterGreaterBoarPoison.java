@@ -6,7 +6,7 @@ public final class BeastmasterGreaterBoarPoison extends Ability {
 
     private static BeastmasterGreaterBoarPoison instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
@@ -15,10 +15,13 @@ public final class BeastmasterGreaterBoarPoison extends Ability {
     private final int duration;
     private final String localizedName;
     private final int movement_speed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BeastmasterGreaterBoarPoison() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5352;
         key = "beastmaster_greater_boar_poison";
@@ -27,7 +30,10 @@ public final class BeastmasterGreaterBoarPoison extends Ability {
         duration = 3;
         localizedName = "Poison";
         movement_speed = -35;
-        owningHeroShortKey = "beastmaster";
+        ownerKey = "npc_dota_beastmaster_boar";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
     }
 
     public static BeastmasterGreaterBoarPoison instance() {
@@ -37,7 +43,7 @@ public final class BeastmasterGreaterBoarPoison extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,8 +79,20 @@ public final class BeastmasterGreaterBoarPoison extends Ability {
         return movement_speed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

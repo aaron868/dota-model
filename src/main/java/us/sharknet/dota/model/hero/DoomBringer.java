@@ -39,7 +39,6 @@ public final class DoomBringer extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private DoomBringer() {
@@ -75,7 +74,6 @@ public final class DoomBringer extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Doom";
-        shortKey = "doom_bringer";
         url = "Doom";
     }
 
@@ -212,10 +210,6 @@ public final class DoomBringer extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

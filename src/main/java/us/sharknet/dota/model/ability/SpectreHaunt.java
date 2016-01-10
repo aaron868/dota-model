@@ -6,12 +6,11 @@ public final class SpectreHaunt extends Ability {
 
     private static SpectreHaunt instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -20,17 +19,19 @@ public final class SpectreHaunt extends Ability {
     private final int[] illusion_damage_incoming;
     private final int illusion_damage_outgoing;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] tooltip_illusion_total_damage_incoming;
     private final int tooltip_outgoing;
 
     private SpectreHaunt() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
         abilityCooldown = new double[]{120.0,120.0,120.0};
         abilityManaCost = new int[]{150,150,150};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5337;
         key = "spectre_haunt";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -39,7 +40,10 @@ public final class SpectreHaunt extends Ability {
         illusion_damage_incoming = new int[]{100,100,100};
         illusion_damage_outgoing = -70;
         localizedName = "Haunt";
-        owningHeroShortKey = "spectre";
+        ownerKey = "npc_dota_hero_spectre";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_illusion_total_damage_incoming = new int[]{200,200,200};
         tooltip_outgoing = 30;
     }
@@ -51,7 +55,7 @@ public final class SpectreHaunt extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -69,10 +73,6 @@ public final class SpectreHaunt extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -107,8 +107,20 @@ public final class SpectreHaunt extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getTooltipIllusionTotalDamageIncoming() {

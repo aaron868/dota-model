@@ -6,8 +6,8 @@ public final class LinaFierySoul extends Ability {
 
     private static LinaFierySoul instance;
 
-    private final String abilityBehavior;
-    private final int abilityDuration;
+    private final String[] abilityBehavior;
+    private final double[] abilityDuration;
     private final int iD;
     private final String key;
     private final int duration_tooltip;
@@ -15,11 +15,14 @@ public final class LinaFierySoul extends Ability {
     private final int fiery_soul_max_stacks;
     private final int[] fiery_soul_move_speed_bonus;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private LinaFierySoul() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
-        abilityDuration = 10;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
+        abilityDuration = new double[]{10,10,10,10};
         iD = 5042;
         key = "lina_fiery_soul";
         duration_tooltip = 10;
@@ -27,7 +30,10 @@ public final class LinaFierySoul extends Ability {
         fiery_soul_max_stacks = 3;
         fiery_soul_move_speed_bonus = new int[]{5,6,7,8};
         localizedName = "Fiery Soul";
-        owningHeroShortKey = "lina";
+        ownerKey = "npc_dota_hero_lina";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static LinaFierySoul instance() {
@@ -37,11 +43,11 @@ public final class LinaFierySoul extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -73,8 +79,20 @@ public final class LinaFierySoul extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

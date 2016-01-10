@@ -8,7 +8,7 @@ public final class BatriderStickyNapalm extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
@@ -20,14 +20,17 @@ public final class BatriderStickyNapalm extends Ability {
     private final String localizedName;
     private final int[] max_stacks;
     private final int[] movement_speed_pct;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int[] turn_rate_pct;
 
     private BatriderStickyNapalm() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.2,0.2,0.2,0.2};
-        abilityCastRange = 700;
+        abilityCastRange = new int[]{700,700,700,700};
         abilityCooldown = new double[]{3.0,3.0,3.0,3.0};
         abilityManaCost = new int[]{20,20,20,20};
         abilityModifierSupportValue = .5;
@@ -39,7 +42,10 @@ public final class BatriderStickyNapalm extends Ability {
         localizedName = "Sticky Napalm";
         max_stacks = new int[]{10,10,10,10};
         movement_speed_pct = new int[]{-3,-5,-7,-9};
-        owningHeroShortKey = "batrider";
+        ownerKey = "npc_dota_hero_batrider";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{375,375,375,375};
         turn_rate_pct = new int[]{-70,-70,-70,-70};
     }
@@ -59,7 +65,7 @@ public final class BatriderStickyNapalm extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -107,8 +113,20 @@ public final class BatriderStickyNapalm extends Ability {
         return movement_speed_pct;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

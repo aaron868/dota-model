@@ -6,20 +6,22 @@ public final class ZuusThundergodsWrath extends Ability {
 
     private static ZuusThundergodsWrath instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] damage;
     private final int[] damage_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] sight_duration;
     private final int sight_radius_day;
     private final int sight_radius_night;
@@ -27,20 +29,22 @@ public final class ZuusThundergodsWrath extends Ability {
     private final int true_sight_radius_tooltip;
 
     private ZuusThundergodsWrath() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.4,0.4,0.4,0.4};
-        abilityCooldown = 9;
+        abilityCooldown = new double[]{9,9,9,9};
         abilityManaCost = new int[]{225,325,450};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5113;
         key = "zuus_thundergods_wrath";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = new int[]{225,350,475};
         damage_scepter = new int[]{440,540,640};
         localizedName = "Thundergods Wrath";
-        owningHeroShortKey = "zuus";
+        ownerKey = "npc_dota_hero_zuus";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         sight_duration = new double[]{3.0,3.0,3.0,3.0};
         sight_radius_day = 500;
         sight_radius_night = 500;
@@ -55,7 +59,7 @@ public final class ZuusThundergodsWrath extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -63,7 +67,7 @@ public final class ZuusThundergodsWrath extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -77,10 +81,6 @@ public final class ZuusThundergodsWrath extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -107,8 +107,20 @@ public final class ZuusThundergodsWrath extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getSightDuration() {

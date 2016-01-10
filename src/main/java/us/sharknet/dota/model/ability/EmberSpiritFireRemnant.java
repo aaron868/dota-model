@@ -6,11 +6,11 @@ public final class EmberSpiritFireRemnant extends Ability {
 
     private static EmberSpiritFireRemnant instance;
 
-    private final String abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -21,16 +21,19 @@ public final class EmberSpiritFireRemnant extends Ability {
     private final int duration;
     private final String localizedName;
     private final int max_charges;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int speed_multiplier;
 
     private EmberSpiritFireRemnant() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
-        abilityCastPoint = 0;
-        abilityCastRange = 1500;
-        abilityCooldown = 0;
-        abilityManaCost = 0;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT"};
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{1500,1500,1500,1500};
+        abilityCooldown = new double[]{0,0,0,0};
+        abilityManaCost = new int[]{0,0,0,0};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5606;
@@ -41,7 +44,10 @@ public final class EmberSpiritFireRemnant extends Ability {
         duration = 45;
         localizedName = "Fire Remnant";
         max_charges = 3;
-        owningHeroShortKey = "ember_spirit";
+        ownerKey = "npc_dota_hero_ember_spirit";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 450;
         speed_multiplier = 250;
     }
@@ -53,23 +59,23 @@ public final class EmberSpiritFireRemnant extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -113,8 +119,20 @@ public final class EmberSpiritFireRemnant extends Ability {
         return max_charges;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

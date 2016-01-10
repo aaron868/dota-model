@@ -8,12 +8,11 @@ public final class GyrocopterCallDown extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -21,7 +20,10 @@ public final class GyrocopterCallDown extends Ability {
     private final int[] damage_second;
     private final int[] damage_second_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int range_scepter;
     private final int slow_duration_first;
@@ -32,12 +34,11 @@ public final class GyrocopterCallDown extends Ability {
     private GyrocopterCallDown() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_AOE"};
         abilityCastPoint = new double[]{0.3,0.3,0.3};
-        abilityCastRange = 1000;
-        abilityCooldown = new int[]{55,50,45};
+        abilityCastRange = new int[]{1000,1000,1000,1000};
+        abilityCooldown = new double[]{55,50,45};
         abilityManaCost = new int[]{125,125,125};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5364;
         key = "gyrocopter_call_down";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -45,7 +46,10 @@ public final class GyrocopterCallDown extends Ability {
         damage_second = new int[]{100,150,200};
         damage_second_scepter = new int[]{175,225,275};
         localizedName = "Call Down";
-        owningHeroShortKey = "gyrocopter";
+        ownerKey = "npc_dota_hero_gyrocopter";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 600;
         range_scepter = 0;
         slow_duration_first = 2;
@@ -69,11 +73,11 @@ public final class GyrocopterCallDown extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -87,10 +91,6 @@ public final class GyrocopterCallDown extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -121,8 +121,20 @@ public final class GyrocopterCallDown extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

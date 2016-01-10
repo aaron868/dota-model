@@ -6,12 +6,11 @@ public final class ChaosKnightPhantasm extends Ability {
 
     private static ChaosKnightPhantasm instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final int extra_phantasm_chance_pct_tooltip;
@@ -23,16 +22,18 @@ public final class ChaosKnightPhantasm extends Ability {
     private final String localizedName;
     private final int[] outgoing_damage;
     private final int[] outgoing_damage_tooltip;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int vision_radius;
 
     private ChaosKnightPhantasm() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.4,0.4,0.4};
         abilityCooldown = new double[]{140.0,140.0,140.0};
         abilityManaCost = new int[]{125,200,275};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5429;
         key = "chaos_knight_phantasm";
         extra_phantasm_chance_pct_tooltip = 50;
@@ -44,7 +45,10 @@ public final class ChaosKnightPhantasm extends Ability {
         localizedName = "Phantasm";
         outgoing_damage = new int[]{0,0,0};
         outgoing_damage_tooltip = new int[]{100,100,100};
-        owningHeroShortKey = "chaos_knight";
+        ownerKey = "npc_dota_hero_chaos_knight";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         vision_radius = 400;
     }
 
@@ -55,7 +59,7 @@ public final class ChaosKnightPhantasm extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,10 +77,6 @@ public final class ChaosKnightPhantasm extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -123,8 +123,20 @@ public final class ChaosKnightPhantasm extends Ability {
         return outgoing_damage_tooltip;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getVisionRadius() {

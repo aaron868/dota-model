@@ -6,16 +6,15 @@ public final class ElderTitanEarthSplitter extends Ability {
 
     private static ElderTitanEarthSplitter instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -24,7 +23,10 @@ public final class ElderTitanEarthSplitter extends Ability {
     private final int crack_width;
     private final int[] damage_pct;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] slow_duration;
     private final double[] slow_duration_scepter;
     private final int[] slow_pct;
@@ -36,16 +38,15 @@ public final class ElderTitanEarthSplitter extends Ability {
     private final int vision_width;
 
     private ElderTitanEarthSplitter() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.4,0.4,0.4};
-        abilityCastRange = 2400;
+        abilityCastRange = new int[]{2400,2400,2400,2400};
         abilityCooldown = new double[]{100.0,100.0,100.0};
         abilityManaCost = new int[]{125,175,225};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 2;
         iD = 5594;
         key = "elder_titan_earth_splitter";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -54,7 +55,10 @@ public final class ElderTitanEarthSplitter extends Ability {
         crack_width = 300;
         damage_pct = new int[]{30,40,50};
         localizedName = "Earth Splitter";
-        owningHeroShortKey = "elder_titan";
+        ownerKey = "npc_dota_hero_elder_titan";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         slow_duration = new double[]{3.0,4.0,5.0};
         slow_duration_scepter = new double[]{4.0,5.0,6.0};
         slow_pct = new int[]{30,40,50};
@@ -73,7 +77,7 @@ public final class ElderTitanEarthSplitter extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -81,7 +85,7 @@ public final class ElderTitanEarthSplitter extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -101,16 +105,12 @@ public final class ElderTitanEarthSplitter extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -145,8 +145,20 @@ public final class ElderTitanEarthSplitter extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getSlowDuration() {

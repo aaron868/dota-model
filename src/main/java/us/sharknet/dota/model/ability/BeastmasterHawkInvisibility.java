@@ -6,24 +6,30 @@ public final class BeastmasterHawkInvisibility extends Ability {
 
     private static BeastmasterHawkInvisibility instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int fade_time;
     private final int[] fade_tooltip;
     private final int idle_invis_delay;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private BeastmasterHawkInvisibility() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5170;
         key = "beastmaster_hawk_invisibility";
         fade_time = 1;
         fade_tooltip = new int[]{0,0,4,4};
         idle_invis_delay = 3;
         localizedName = "Hawk Invisibility";
-        owningHeroShortKey = "beastmaster";
+        ownerKey = "npc_dota_scout_hawk";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
     }
 
     public static BeastmasterHawkInvisibility instance() {
@@ -33,7 +39,7 @@ public final class BeastmasterHawkInvisibility extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,8 +67,20 @@ public final class BeastmasterHawkInvisibility extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

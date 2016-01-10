@@ -8,12 +8,12 @@ public final class DrowRangerFrostArrows extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
@@ -22,17 +22,20 @@ public final class DrowRangerFrostArrows extends Ability {
     private final double frost_arrows_hero_duration_tooltip;
     private final int[] frost_arrows_movement_speed;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private DrowRangerFrostArrows() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_AUTOCAST","DOTA_ABILITY_BEHAVIOR_ATTACK"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 625;
+        abilityCastRange = new int[]{625,625,625,625};
         abilityCooldown = new double[]{0.0,0.0,0.0,0.0};
         abilityDamage = new int[]{0,0,0,0};
         abilityDuration = new double[]{1.5,1.5,1.5,1.5};
         abilityManaCost = new int[]{12,12,12,12};
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5019;
         key = "drow_ranger_frost_arrows";
@@ -41,7 +44,10 @@ public final class DrowRangerFrostArrows extends Ability {
         frost_arrows_hero_duration_tooltip = 1.5;
         frost_arrows_movement_speed = new int[]{-15,-30,-45,-60};
         localizedName = "Frost Arrows";
-        owningHeroShortKey = "drow_ranger";
+        ownerKey = "npc_dota_hero_drow_ranger";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static DrowRangerFrostArrows instance() {
@@ -59,7 +65,7 @@ public final class DrowRangerFrostArrows extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -79,7 +85,7 @@ public final class DrowRangerFrostArrows extends Ability {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -115,8 +121,20 @@ public final class DrowRangerFrostArrows extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

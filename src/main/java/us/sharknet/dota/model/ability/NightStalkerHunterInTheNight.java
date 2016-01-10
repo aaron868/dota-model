@@ -6,22 +6,28 @@ public final class NightStalkerHunterInTheNight extends Ability {
 
     private static NightStalkerHunterInTheNight instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int[] bonus_attack_speed_night;
     private final int[] bonus_movement_speed_pct_night;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private NightStalkerHunterInTheNight() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5277;
         key = "night_stalker_hunter_in_the_night";
         bonus_attack_speed_night = new int[]{45,60,75,90};
         bonus_movement_speed_pct_night = new int[]{20,25,30,35};
         localizedName = "Hunter In The Night";
-        owningHeroShortKey = "night_stalker";
+        ownerKey = "npc_dota_hero_night_stalker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static NightStalkerHunterInTheNight instance() {
@@ -31,7 +37,7 @@ public final class NightStalkerHunterInTheNight extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -55,8 +61,20 @@ public final class NightStalkerHunterInTheNight extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

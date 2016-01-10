@@ -35,7 +35,6 @@ public final class DarkSeer extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private DarkSeer() {
@@ -67,7 +66,6 @@ public final class DarkSeer extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Dark Seer";
-        shortKey = "dark_seer";
         url = "Dark_Seer";
     }
 
@@ -188,10 +186,6 @@ public final class DarkSeer extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

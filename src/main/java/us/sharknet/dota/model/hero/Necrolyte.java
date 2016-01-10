@@ -36,7 +36,6 @@ public final class Necrolyte extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Necrolyte() {
@@ -69,7 +68,6 @@ public final class Necrolyte extends Hero {
         team = "Bad";
         active = true;
         localizedName = "Necrophos";
-        shortKey = "necrolyte";
         url = "Necrophos";
     }
 
@@ -194,10 +192,6 @@ public final class Necrolyte extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

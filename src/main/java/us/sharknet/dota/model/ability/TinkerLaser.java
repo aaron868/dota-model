@@ -6,17 +6,16 @@ public final class TinkerLaser extends Ability {
 
     private static TinkerLaser instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -26,20 +25,22 @@ public final class TinkerLaser extends Ability {
     private final double[] duration_hero;
     private final String localizedName;
     private final int[] miss_rate;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private TinkerLaser() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
-        abilityCastPoint = .4;
-        abilityCastRange = 650;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
+        abilityCastPoint = new double[]{.4,.4,.4,.4};
+        abilityCastRange = new int[]{650,650,650,650};
         abilityCooldown = new double[]{14.0,14.0,14.0,14.0};
         abilityDamage = new int[]{80,160,240,320};
         abilityManaCost = new int[]{95,120,145,170};
         abilityModifierSupportValue = .3;
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5150;
         key = "tinker_laser";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -49,7 +50,10 @@ public final class TinkerLaser extends Ability {
         duration_hero = new double[]{3.0,3.5,4.0,4.5};
         localizedName = "Laser";
         miss_rate = new int[]{100,100,100,100};
-        owningHeroShortKey = "tinker";
+        ownerKey = "npc_dota_hero_tinker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static TinkerLaser instance() {
@@ -59,15 +63,15 @@ public final class TinkerLaser extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -91,16 +95,12 @@ public final class TinkerLaser extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -139,8 +139,20 @@ public final class TinkerLaser extends Ability {
         return miss_rate;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

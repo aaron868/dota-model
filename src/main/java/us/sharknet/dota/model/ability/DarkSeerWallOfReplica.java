@@ -6,21 +6,23 @@ public final class DarkSeerWallOfReplica extends Ability {
 
     private static DarkSeerWallOfReplica instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final int[] damage;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] range_tooltip;
     private final int[] replica_damage_incoming;
     private final int[] replica_damage_outgoing;
@@ -32,21 +34,23 @@ public final class DarkSeerWallOfReplica extends Ability {
     private final int[] width;
 
     private DarkSeerWallOfReplica() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.4,0.4,0.4};
         abilityCastRange = new int[]{500,900,1300};
         abilityCooldown = new double[]{100.0,100.0,100.0};
         abilityManaCost = new int[]{125,250,375};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 2;
         iD = 5258;
         key = "dark_seer_wall_of_replica";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = new int[]{150,150,150};
         duration = 45;
         localizedName = "Wall Of Replica";
-        owningHeroShortKey = "dark_seer";
+        ownerKey = "npc_dota_hero_dark_seer";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         range_tooltip = new int[]{500,900,1300};
         replica_damage_incoming = new int[]{300,300,300};
         replica_damage_outgoing = new int[]{-40,-25,-10};
@@ -65,7 +69,7 @@ public final class DarkSeerWallOfReplica extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -93,10 +97,6 @@ public final class DarkSeerWallOfReplica extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -121,8 +121,20 @@ public final class DarkSeerWallOfReplica extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRangeTooltip() {

@@ -10,7 +10,6 @@ public final class UndyingFleshGolem extends Ability {
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,7 +22,10 @@ public final class UndyingFleshGolem extends Ability {
     private final int max_speed_slow;
     private final int min_damage_amp;
     private final int min_speed_slow;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private UndyingFleshGolem() {
@@ -31,7 +33,6 @@ public final class UndyingFleshGolem extends Ability {
         abilityCooldown = new double[]{75.0,75.0,75.0};
         abilityManaCost = new int[]{100,100,100};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5447;
         key = "undying_flesh_golem";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
@@ -44,7 +45,10 @@ public final class UndyingFleshGolem extends Ability {
         max_speed_slow = 20;
         min_damage_amp = 1;
         min_speed_slow = 1;
-        owningHeroShortKey = "undying";
+        ownerKey = "npc_dota_hero_undying";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 750;
     }
 
@@ -69,10 +73,6 @@ public final class UndyingFleshGolem extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -123,8 +123,20 @@ public final class UndyingFleshGolem extends Ability {
         return min_speed_slow;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

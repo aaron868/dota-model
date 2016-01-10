@@ -6,24 +6,30 @@ public final class ShredderReactiveArmor extends Ability {
 
     private static ShredderReactiveArmor instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int bonus_armor;
     private final int bonus_hp_regen;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] stack_duration;
     private final int[] stack_limit;
 
     private ShredderReactiveArmor() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5526;
         key = "shredder_reactive_armor";
         bonus_armor = 1;
         bonus_hp_regen = 1;
         localizedName = "Reactive Armor";
-        owningHeroShortKey = "shredder";
+        ownerKey = "npc_dota_hero_shredder";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
         stack_duration = new double[]{14.0,16.0,18.0,20.0};
         stack_limit = new int[]{5,10,15,20};
     }
@@ -35,7 +41,7 @@ public final class ShredderReactiveArmor extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -59,8 +65,20 @@ public final class ShredderReactiveArmor extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getStackDuration() {

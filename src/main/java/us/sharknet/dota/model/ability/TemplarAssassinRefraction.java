@@ -9,7 +9,7 @@ public final class TemplarAssassinRefraction extends Ability {
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
@@ -19,13 +19,16 @@ public final class TemplarAssassinRefraction extends Ability {
     private final double[] duration;
     private final int[] instances;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private TemplarAssassinRefraction() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
         abilityCooldown = new double[]{17.0,17.0,17.0,17.0};
-        abilityManaCost = 100;
+        abilityManaCost = new int[]{100,100,100,100};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         iD = 5194;
         key = "templar_assassin_refraction";
@@ -35,7 +38,10 @@ public final class TemplarAssassinRefraction extends Ability {
         duration = new double[]{17.0,17.0,17.0,17.0};
         instances = new int[]{3,4,5,6};
         localizedName = "Refraction";
-        owningHeroShortKey = "templar_assassin";
+        ownerKey = "npc_dota_hero_templar_assassin";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static TemplarAssassinRefraction instance() {
@@ -57,7 +63,7 @@ public final class TemplarAssassinRefraction extends Ability {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -97,8 +103,20 @@ public final class TemplarAssassinRefraction extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

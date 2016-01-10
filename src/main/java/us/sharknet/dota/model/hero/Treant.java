@@ -38,7 +38,6 @@ public final class Treant extends Hero {
     private final int visionDaytimeRange;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Treant() {
@@ -73,7 +72,6 @@ public final class Treant extends Hero {
         visionDaytimeRange = 1800;
         active = true;
         localizedName = "Treant Protector";
-        shortKey = "treant";
         url = "Treant_Protector";
     }
 
@@ -206,10 +204,6 @@ public final class Treant extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

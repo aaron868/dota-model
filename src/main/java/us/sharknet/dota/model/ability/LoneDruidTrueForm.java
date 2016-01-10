@@ -6,8 +6,8 @@ public final class LoneDruidTrueForm extends Ability {
 
     private static LoneDruidTrueForm instance;
 
-    private final String abilityBehavior;
-    private final int[] abilityCastPoint;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
@@ -17,13 +17,16 @@ public final class LoneDruidTrueForm extends Ability {
     private final int[] bonus_armor;
     private final int[] bonus_hp;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int speed_loss;
     private final double transformation_time;
 
     private LoneDruidTrueForm() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = new int[]{0,0,0};
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{0,0,0};
         abilityCooldown = new double[]{0.0,0.0,0.0};
         abilityManaCost = new int[]{25,25,25};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
@@ -33,7 +36,10 @@ public final class LoneDruidTrueForm extends Ability {
         bonus_armor = new int[]{4,6,8};
         bonus_hp = new int[]{300,600,900};
         localizedName = "True Form";
-        owningHeroShortKey = "lone_druid";
+        ownerKey = "npc_dota_hero_lone_druid";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         speed_loss = 45;
         transformation_time = 1.933;
     }
@@ -45,11 +51,11 @@ public final class LoneDruidTrueForm extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -89,8 +95,20 @@ public final class LoneDruidTrueForm extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getSpeedLoss() {

@@ -6,17 +6,16 @@ public final class TidehunterGush extends Ability {
 
     private static TidehunterGush instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -26,22 +25,24 @@ public final class TidehunterGush extends Ability {
     private final int cooldown_scepter;
     private final String localizedName;
     private final int[] movement_speed;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] projectile_speed;
     private final int speed_scepter;
 
     private TidehunterGush() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 700;
-        abilityCooldown = 12;
+        abilityCastRange = new int[]{700,700,700,700};
+        abilityCooldown = new double[]{12,12,12,12};
         abilityDamage = new int[]{110,160,210,260};
         abilityDuration = new double[]{4.0,4.0,4.0,4.0};
         abilityManaCost = new int[]{120,120,120,120};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 5118;
         key = "tidehunter_gush";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -51,7 +52,10 @@ public final class TidehunterGush extends Ability {
         cooldown_scepter = 7;
         localizedName = "Gush";
         movement_speed = new int[]{-40,-40,-40,-40};
-        owningHeroShortKey = "tidehunter";
+        ownerKey = "npc_dota_hero_tidehunter";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         projectile_speed = new int[]{4000,4000,4000,4000};
         speed_scepter = 1500;
     }
@@ -63,7 +67,7 @@ public final class TidehunterGush extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -71,11 +75,11 @@ public final class TidehunterGush extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -95,16 +99,12 @@ public final class TidehunterGush extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
     public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -143,8 +143,20 @@ public final class TidehunterGush extends Ability {
         return movement_speed;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getProjectileSpeed() {

@@ -8,13 +8,13 @@ public final class HuskarInnerVitality extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
-    private final int[] abilityDuration;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
-    private final int abilityModifierSupportValue;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
+    private final double abilityModifierSupportValue;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final double[] attrib_bonus;
@@ -22,20 +22,23 @@ public final class HuskarInnerVitality extends Ability {
     private final double[] hurt_attrib_bonus;
     private final double hurt_percent;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] tooltip_attrib_bonus;
     private final int[] tooltip_hurt_attrib_bonus;
 
     private HuskarInnerVitality() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 800;
-        abilityCooldown = new int[]{22,18,14,10};
-        abilityDuration = new int[]{16,16,16,16};
+        abilityCastRange = new int[]{800,800,800,800};
+        abilityCooldown = new double[]{22,18,14,10};
+        abilityDuration = new double[]{16,16,16,16};
         abilityManaCost = new int[]{170,170,170,170};
         abilityModifierSupportValue = 0;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO"};
         iD = 5271;
         key = "huskar_inner_vitality";
         attrib_bonus = new double[]{0.05,0.1,0.15,0.2};
@@ -43,7 +46,10 @@ public final class HuskarInnerVitality extends Ability {
         hurt_attrib_bonus = new double[]{0.2,0.4,0.6,0.8};
         hurt_percent = .4;
         localizedName = "Inner Vitality";
-        owningHeroShortKey = "huskar";
+        ownerKey = "npc_dota_hero_huskar";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_attrib_bonus = new int[]{5,10,15,20};
         tooltip_hurt_attrib_bonus = new int[]{20,40,60,80};
     }
@@ -63,15 +69,15 @@ public final class HuskarInnerVitality extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int[] getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -79,15 +85,15 @@ public final class HuskarInnerVitality extends Ability {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
     }
 
@@ -119,8 +125,20 @@ public final class HuskarInnerVitality extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getTooltipAttribBonus() {

@@ -8,12 +8,12 @@ public final class ShadowDemonShadowPoison extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final double abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
-    private final int abilityManaCost;
-    private final int abilityModifierSupportValue;
+    private final int[] abilityManaCost;
+    private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
@@ -21,7 +21,10 @@ public final class ShadowDemonShadowPoison extends Ability {
     private final double[] bonus_stack_damage;
     private final String localizedName;
     private final int max_multiply_stacks;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int[] speed;
     private final double[] stack_damage;
@@ -30,11 +33,11 @@ public final class ShadowDemonShadowPoison extends Ability {
     private ShadowDemonShadowPoison() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 1500;
-        abilityCooldown = 2.5;
+        abilityCastRange = new int[]{1500,1500,1500,1500};
+        abilityCooldown = new double[]{2.5,2.5,2.5,2.5};
         abilityDamage = new int[]{50,50,50,50};
         abilityDuration = new double[]{10.0,10.0,10.0,10.0};
-        abilityManaCost = 40;
+        abilityManaCost = new int[]{40,40,40,40};
         abilityModifierSupportValue = 0;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5423;
@@ -43,7 +46,10 @@ public final class ShadowDemonShadowPoison extends Ability {
         bonus_stack_damage = new double[]{50.0,50.0,50.0,50.0};
         localizedName = "Shadow Poison";
         max_multiply_stacks = 5;
-        owningHeroShortKey = "shadow_demon";
+        ownerKey = "npc_dota_hero_shadow_demon";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 190;
         speed = new int[]{1000,1000,1000,1000};
         stack_damage = new double[]{20.0,35.0,50.0,65.0};
@@ -65,11 +71,11 @@ public final class ShadowDemonShadowPoison extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public double getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -81,11 +87,11 @@ public final class ShadowDemonShadowPoison extends Ability {
         return abilityDuration;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
-    public int getAbilityModifierSupportValue() {
+    public double getAbilityModifierSupportValue() {
         return abilityModifierSupportValue;
     }
 
@@ -117,8 +123,20 @@ public final class ShadowDemonShadowPoison extends Ability {
         return max_multiply_stacks;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

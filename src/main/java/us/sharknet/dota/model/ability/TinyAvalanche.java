@@ -8,19 +8,21 @@ public final class TinyAvalanche extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final String localizedName;
     private final int[] num_ticks;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double projectile_duration;
     private final int[] radius;
     private final int stun_duration;
@@ -29,19 +31,21 @@ public final class TinyAvalanche extends Ability {
     private TinyAvalanche() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.0,0.0,0.0,0.0};
-        abilityCastRange = 600;
+        abilityCastRange = new int[]{600,600,600,600};
         abilityCooldown = new double[]{17.0,17.0,17.0,17.0};
         abilityDamage = new int[]{100,180,260,300};
         abilityDuration = new double[]{2.0,2.0,2.0,2.0};
         abilityManaCost = new int[]{120,120,120,120};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5106;
         key = "tiny_avalanche";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Avalanche";
         num_ticks = new int[]{4,4,4,4};
-        owningHeroShortKey = "tiny";
+        ownerKey = "npc_dota_hero_tiny";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         projectile_duration = .5;
         radius = new int[]{275,275,275,275};
         stun_duration = 1;
@@ -63,7 +67,7 @@ public final class TinyAvalanche extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -87,10 +91,6 @@ public final class TinyAvalanche extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -111,8 +111,20 @@ public final class TinyAvalanche extends Ability {
         return num_ticks;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getProjectileDuration() {

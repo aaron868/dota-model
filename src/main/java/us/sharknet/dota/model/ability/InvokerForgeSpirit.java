@@ -7,15 +7,16 @@ public final class InvokerForgeSpirit extends Ability {
     private static InvokerForgeSpirit instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
-    private final String hotKeyOverride;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] spirit_armor;
     private final double[] spirit_attack_range;
     private final double[] spirit_damage;
@@ -25,15 +26,16 @@ public final class InvokerForgeSpirit extends Ability {
 
     private InvokerForgeSpirit() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCooldown = 30;
-        abilityManaCost = 75;
-        hotKeyOverride = "F";
+        abilityCooldown = new double[]{30,30,30,30};
+        abilityManaCost = new int[]{75,75,75,75};
         iD = 5387;
         key = "invoker_forge_spirit";
-        maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         localizedName = "Forge Spirit";
-        owningHeroShortKey = "invoker";
+        ownerKey = "npc_dota_hero_invoker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         spirit_armor = new int[]{0,1,2,3,4,5,6,7};
         spirit_attack_range = new double[]{300.0,365.0,430.0,495.0,560.0,625.0,690.0,755.0};
         spirit_damage = new double[]{29.0,38.0,47.0,56.0,65.0,74.0,83.0,92.0};
@@ -53,16 +55,12 @@ public final class InvokerForgeSpirit extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
-    }
-
-    public String getHotKeyOverride() {
-        return hotKeyOverride;
     }
 
     public int getID() {
@@ -73,10 +71,6 @@ public final class InvokerForgeSpirit extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getSpellImmunityType() {
         return spellImmunityType;
     }
@@ -85,8 +79,20 @@ public final class InvokerForgeSpirit extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getSpiritArmor() {

@@ -36,7 +36,6 @@ public final class SkywrathMage extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private SkywrathMage() {
@@ -69,7 +68,6 @@ public final class SkywrathMage extends Hero {
         team = "Good";
         active = true;
         localizedName = "Skywrath Mage";
-        shortKey = "skywrath_mage";
         url = "Skywrath_Mage";
     }
 
@@ -194,10 +192,6 @@ public final class SkywrathMage extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

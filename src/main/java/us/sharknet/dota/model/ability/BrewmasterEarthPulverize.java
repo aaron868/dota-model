@@ -6,26 +6,32 @@ public final class BrewmasterEarthPulverize extends Ability {
 
     private static BrewmasterEarthPulverize instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int[] chance;
     private final int[] damage_inner;
     private final int[] damage_outer;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius_inner;
     private final int[] radius_outer;
 
     private BrewmasterEarthPulverize() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5406;
         key = "brewmaster_earth_pulverize";
         chance = new int[]{20,20,20,20};
         damage_inner = new int[]{40,40,40,40};
         damage_outer = new int[]{20,20,20,20};
         localizedName = "Pulverize";
-        owningHeroShortKey = "brewmaster_earth";
+        ownerKey = "npc_dota_brewmaster_earth";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
         radius_inner = new int[]{150,150,150,150};
         radius_outer = new int[]{250,250,250,250};
     }
@@ -37,7 +43,7 @@ public final class BrewmasterEarthPulverize extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -65,8 +71,20 @@ public final class BrewmasterEarthPulverize extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadiusInner() {

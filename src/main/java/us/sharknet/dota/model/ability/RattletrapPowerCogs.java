@@ -6,7 +6,7 @@ public final class RattletrapPowerCogs extends Ability {
 
     private static RattletrapPowerCogs instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
@@ -20,13 +20,16 @@ public final class RattletrapPowerCogs extends Ability {
     private final double[] duration;
     private final int extra_pull_buffer;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int push_length;
     private final int push_speed;
     private final int trigger_distance;
 
     private RattletrapPowerCogs() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCooldown = new double[]{15.0,15.0,15.0,15.0};
         abilityManaCost = new int[]{50,60,70,80};
@@ -40,7 +43,10 @@ public final class RattletrapPowerCogs extends Ability {
         duration = new double[]{5.0,6.0,7.0,8.0};
         extra_pull_buffer = -10;
         localizedName = "Power Cogs";
-        owningHeroShortKey = "rattletrap";
+        ownerKey = "npc_dota_hero_rattletrap";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         push_length = 252;
         push_speed = 300;
         trigger_distance = 170;
@@ -53,7 +59,7 @@ public final class RattletrapPowerCogs extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -109,8 +115,20 @@ public final class RattletrapPowerCogs extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getPushLength() {

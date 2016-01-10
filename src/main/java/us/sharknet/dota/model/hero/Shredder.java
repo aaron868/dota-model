@@ -39,7 +39,6 @@ public final class Shredder extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private Shredder() {
@@ -75,7 +74,6 @@ public final class Shredder extends Hero {
         team = "Good";
         active = true;
         localizedName = "Timbersaw";
-        shortKey = "shredder";
         url = "Timbersaw";
     }
 
@@ -212,10 +210,6 @@ public final class Shredder extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

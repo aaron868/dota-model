@@ -17,7 +17,10 @@ public final class BatriderFirefly extends Ability {
     private final int[] damage_per_second;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final double[] tick_interval;
     private final int[] tree_radius;
@@ -34,7 +37,10 @@ public final class BatriderFirefly extends Ability {
         damage_per_second = new int[]{10,30,50,70};
         duration = new double[]{18.0,18.0,18.0,18.0};
         localizedName = "Firefly";
-        owningHeroShortKey = "batrider";
+        ownerKey = "npc_dota_hero_batrider";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{200,200,200,200};
         tick_interval = new double[]{0.5,0.5,0.5,0.5};
         tree_radius = new int[]{100,100,100,100};
@@ -91,8 +97,20 @@ public final class BatriderFirefly extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

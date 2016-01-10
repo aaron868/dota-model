@@ -7,24 +7,28 @@ public final class TechiesRemoteMinesSelfDetonate extends Ability {
     private static TechiesRemoteMinesSelfDetonate instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private TechiesRemoteMinesSelfDetonate() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
-        abilityCastRange = 0;
+        abilityCastRange = new int[]{0,0,0,0};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5636;
         key = "techies_remote_mines_self_detonate";
-        maxLevel = 1;
         localizedName = "Remote Mines Self Detonate";
-        owningHeroShortKey = "techies";
+        ownerKey = "npc_dota_hero_techies";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{400,410,425};
     }
 
@@ -39,7 +43,7 @@ public final class TechiesRemoteMinesSelfDetonate extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -55,16 +59,24 @@ public final class TechiesRemoteMinesSelfDetonate extends Ability {
         return key;
     }
 
-    public int getMaxLevel() {
-        return maxLevel;
-    }
-
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

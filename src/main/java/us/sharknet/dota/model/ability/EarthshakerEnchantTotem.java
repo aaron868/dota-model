@@ -6,34 +6,38 @@ public final class EarthshakerEnchantTotem extends Ability {
 
     private static EarthshakerEnchantTotem instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] tooltip_duration;
     private final int[] totem_damage_percentage;
 
     private EarthshakerEnchantTotem() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.69,0.69,0.69,0.69};
-        abilityCastRange = 0;
-        abilityCooldown = 5;
+        abilityCastRange = new int[]{0,0,0,0};
+        abilityCooldown = new double[]{5,5,5,5};
         abilityDamage = new int[]{0,0,0,0};
         abilityDuration = new double[]{14.0,14.0,14.0,14.0};
         abilityManaCost = new int[]{20,30,40,50};
-        fightRecapLevel = 1;
         iD = 5024;
         key = "earthshaker_enchant_totem";
         localizedName = "Enchant Totem";
-        owningHeroShortKey = "earthshaker";
+        ownerKey = "npc_dota_hero_earthshaker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         tooltip_duration = new double[]{14.0,14.0,14.0,14.0};
         totem_damage_percentage = new int[]{100,200,300,400};
     }
@@ -45,7 +49,7 @@ public final class EarthshakerEnchantTotem extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -53,11 +57,11 @@ public final class EarthshakerEnchantTotem extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -73,10 +77,6 @@ public final class EarthshakerEnchantTotem extends Ability {
         return abilityManaCost;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -89,8 +89,20 @@ public final class EarthshakerEnchantTotem extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getTooltipDuration() {

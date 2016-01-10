@@ -6,12 +6,12 @@ public final class KeeperOfTheLightManaLeak extends Ability {
 
     private static KeeperOfTheLightManaLeak instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
     private final int[] abilityCastRange;
-    private final int[] abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
@@ -20,16 +20,19 @@ public final class KeeperOfTheLightManaLeak extends Ability {
     private final double[] duration;
     private final String localizedName;
     private final int mana_leak_pct;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] stun_duration;
 
     private KeeperOfTheLightManaLeak() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
         abilityCastRange = new int[]{550,700,850,1000};
-        abilityCooldown = new int[]{16,14,12,10};
+        abilityCooldown = new double[]{16,14,12,10};
         abilityManaCost = new int[]{75,75,75,75};
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5472;
         key = "keeper_of_the_light_mana_leak";
@@ -38,7 +41,10 @@ public final class KeeperOfTheLightManaLeak extends Ability {
         duration = new double[]{5.0,6.0,7.0,8.0};
         localizedName = "Mana Leak";
         mana_leak_pct = 5;
-        owningHeroShortKey = "keeper_of_the_light";
+        ownerKey = "npc_dota_hero_keeper_of_the_light";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         stun_duration = new double[]{1.5,2.0,2.5,3.0};
     }
 
@@ -49,7 +55,7 @@ public final class KeeperOfTheLightManaLeak extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,7 +67,7 @@ public final class KeeperOfTheLightManaLeak extends Ability {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -69,7 +75,7 @@ public final class KeeperOfTheLightManaLeak extends Ability {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -105,8 +111,20 @@ public final class KeeperOfTheLightManaLeak extends Ability {
         return mana_leak_pct;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getStunDuration() {

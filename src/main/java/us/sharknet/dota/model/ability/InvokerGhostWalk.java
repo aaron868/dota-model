@@ -7,36 +7,38 @@ public final class InvokerGhostWalk extends Ability {
     private static InvokerGhostWalk instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
-    private final String hotKeyOverride;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final int area_of_effect;
     private final int aura_fade_time;
     private final int duration;
     private final int[] enemy_slow;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double[] self_slow;
 
     private InvokerGhostWalk() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"};
-        abilityCooldown = 35;
-        abilityManaCost = 200;
-        hotKeyOverride = "V";
+        abilityCooldown = new double[]{35,35,35,35};
+        abilityManaCost = new int[]{200,200,200,200};
         iD = 5381;
         key = "invoker_ghost_walk";
-        maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         area_of_effect = 400;
         aura_fade_time = 2;
         duration = 1;
         enemy_slow = new int[]{-20,-25,-30,-35,-40,-45,-50,-55};
         localizedName = "Ghost Walk";
-        owningHeroShortKey = "invoker";
+        ownerKey = "npc_dota_hero_invoker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         self_slow = new double[]{30.0,20.0,10.0,0.0,10.0,20.0,30.0,40.0};
     }
 
@@ -51,16 +53,12 @@ public final class InvokerGhostWalk extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
-    }
-
-    public String getHotKeyOverride() {
-        return hotKeyOverride;
     }
 
     public int getID() {
@@ -69,10 +67,6 @@ public final class InvokerGhostWalk extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getSpellImmunityType() {
@@ -99,8 +93,20 @@ public final class InvokerGhostWalk extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double[] getSelfSlow() {

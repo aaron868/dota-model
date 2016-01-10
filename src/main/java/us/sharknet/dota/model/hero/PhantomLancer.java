@@ -36,7 +36,6 @@ public final class PhantomLancer extends Hero {
     private final String team;
     private final boolean active;
     private final String localizedName;
-    private final String shortKey;
     private final String url;
 
     private PhantomLancer() {
@@ -69,7 +68,6 @@ public final class PhantomLancer extends Hero {
         team = "Good";
         active = true;
         localizedName = "Phantom Lancer";
-        shortKey = "phantom_lancer";
         url = "Phantom_Lancer";
     }
 
@@ -194,10 +192,6 @@ public final class PhantomLancer extends Hero {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public String getShortKey() {
-        return shortKey;
     }
 
     public String getUrl() {

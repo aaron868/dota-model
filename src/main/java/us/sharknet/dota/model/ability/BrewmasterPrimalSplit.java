@@ -6,31 +6,35 @@ public final class BrewmasterPrimalSplit extends Ability {
 
     private static BrewmasterPrimalSplit instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double split_duration;
 
     private BrewmasterPrimalSplit() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
-        abilityCastPoint = .65;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
+        abilityCastPoint = new double[]{.65,.65,.65,.65};
         abilityCooldown = new double[]{140.0,120.0,100.0};
         abilityManaCost = new int[]{125,150,175};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
-        fightRecapLevel = 2;
         iD = 5403;
         key = "brewmaster_primal_split";
         duration = new double[]{15.0,17.0,19.0};
         localizedName = "Primal Split";
-        owningHeroShortKey = "brewmaster";
+        ownerKey = "npc_dota_hero_brewmaster";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         split_duration = .6;
     }
 
@@ -41,11 +45,11 @@ public final class BrewmasterPrimalSplit extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
@@ -59,10 +63,6 @@ public final class BrewmasterPrimalSplit extends Ability {
 
     public String getAbilityType() {
         return abilityType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -81,8 +81,20 @@ public final class BrewmasterPrimalSplit extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getSplitDuration() {

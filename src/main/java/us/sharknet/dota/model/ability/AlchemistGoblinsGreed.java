@@ -6,7 +6,7 @@ public final class AlchemistGoblinsGreed extends Ability {
 
     private static AlchemistGoblinsGreed instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int iD;
     private final String key;
     private final int bonus_bonus_gold;
@@ -15,10 +15,13 @@ public final class AlchemistGoblinsGreed extends Ability {
     private final int[] bounty_multiplier_tooltip;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private AlchemistGoblinsGreed() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         iD = 5368;
         key = "alchemist_goblins_greed";
         bonus_bonus_gold = 3;
@@ -27,7 +30,10 @@ public final class AlchemistGoblinsGreed extends Ability {
         bounty_multiplier_tooltip = new int[]{3,4,5,6};
         duration = 30;
         localizedName = "Goblins Greed";
-        owningHeroShortKey = "alchemist";
+        ownerKey = "npc_dota_hero_alchemist";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static AlchemistGoblinsGreed instance() {
@@ -37,7 +43,7 @@ public final class AlchemistGoblinsGreed extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,8 +79,20 @@ public final class AlchemistGoblinsGreed extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

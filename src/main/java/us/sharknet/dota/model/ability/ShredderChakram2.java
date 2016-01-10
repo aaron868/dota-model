@@ -12,20 +12,21 @@ public final class ShredderChakram2 extends Ability {
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
-    private final int isGrantedByScepter;
+    private final boolean isGrantedByScepter;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final int break_distance;
     private final double damage_interval;
     private final int[] damage_per_second;
     private final String localizedName;
     private final double[] mana_per_second;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
     private final int[] pass_damage;
     private final double pass_slow_duration;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int slow;
     private final int speed;
@@ -37,20 +38,21 @@ public final class ShredderChakram2 extends Ability {
         abilityCooldown = new double[]{8.0,8.0,8.0};
         abilityManaCost = new int[]{100,150,200};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        fightRecapLevel = 1;
         iD = 5645;
-        isGrantedByScepter = 1;
+        isGrantedByScepter = true;
         key = "shredder_chakram_2";
-        maxLevel = 3;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         break_distance = 2;
         damage_interval = .5;
         damage_per_second = new int[]{50,75,100};
         localizedName = "Chakram 2";
         mana_per_second = new double[]{20.0,25.0,30.0};
-        owningHeroShortKey = "shredder";
+        ownerKey = "npc_dota_hero_shredder";
+        ownerType = AbilityOwnerType.Hero;
         pass_damage = new int[]{100,140,180};
         pass_slow_duration = .5;
+        passive = false;
+        placeholder = false;
         radius = 2;
         slow = 5;
         speed = 9;
@@ -87,24 +89,16 @@ public final class ShredderChakram2 extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
-    public int getIsGrantedByScepter() {
+    public boolean getIsGrantedByScepter() {
         return isGrantedByScepter;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getSpellImmunityType() {
@@ -131,8 +125,12 @@ public final class ShredderChakram2 extends Ability {
         return mana_per_second;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
     }
 
     public int[] getPassDamage() {
@@ -141,6 +139,14 @@ public final class ShredderChakram2 extends Ability {
 
     public double getPassSlowDuration() {
         return pass_slow_duration;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

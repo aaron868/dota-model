@@ -6,7 +6,7 @@ public final class ViperCorrosiveSkin extends Ability {
 
     private static ViperCorrosiveSkin instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final int abilityModifierSupportBonus;
     private final String abilityUnitDamageType;
     private final int iD;
@@ -19,10 +19,13 @@ public final class ViperCorrosiveSkin extends Ability {
     private final int duration;
     private final String localizedName;
     private final int max_range_tooltip;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ViperCorrosiveSkin() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityModifierSupportBonus = 10;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5220;
@@ -35,7 +38,10 @@ public final class ViperCorrosiveSkin extends Ability {
         duration = 4;
         localizedName = "Corrosive Skin";
         max_range_tooltip = 1400;
-        owningHeroShortKey = "viper";
+        ownerKey = "npc_dota_hero_viper";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static ViperCorrosiveSkin instance() {
@@ -45,7 +51,7 @@ public final class ViperCorrosiveSkin extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -97,8 +103,20 @@ public final class ViperCorrosiveSkin extends Ability {
         return max_range_tooltip;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

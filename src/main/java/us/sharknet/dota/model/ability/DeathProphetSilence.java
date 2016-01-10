@@ -8,8 +8,8 @@ public final class DeathProphetSilence extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final int iD;
@@ -17,14 +17,17 @@ public final class DeathProphetSilence extends Ability {
     private final String spellImmunityType;
     private final double[] duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
 
     private DeathProphetSilence() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCastRange = 900;
-        abilityCooldown = new int[]{15,14,13,12};
+        abilityCastRange = new int[]{900,900,900,900};
+        abilityCooldown = new double[]{15,14,13,12};
         abilityDuration = new double[]{3.0,4.0,5.0,6.0};
         abilityManaCost = new int[]{80,80,80,80};
         iD = 5091;
@@ -32,7 +35,10 @@ public final class DeathProphetSilence extends Ability {
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{3.0,4.0,5.0,6.0};
         localizedName = "Silence";
-        owningHeroShortKey = "death_prophet";
+        ownerKey = "npc_dota_hero_death_prophet";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 425;
     }
 
@@ -51,11 +57,11 @@ public final class DeathProphetSilence extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -87,8 +93,20 @@ public final class DeathProphetSilence extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

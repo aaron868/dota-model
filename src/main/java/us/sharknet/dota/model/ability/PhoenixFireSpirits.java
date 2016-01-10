@@ -8,11 +8,10 @@ public final class PhoenixFireSpirits extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -21,7 +20,10 @@ public final class PhoenixFireSpirits extends Ability {
     private final int duration;
     private final int hp_cost_perc;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
     private final int spirit_count;
     private final double[] spirit_duration;
@@ -31,11 +33,10 @@ public final class PhoenixFireSpirits extends Ability {
     private PhoenixFireSpirits() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.01,0.01,0.01,0.01};
-        abilityCastRange = 1400;
-        abilityCooldown = new int[]{45,40,35,30};
+        abilityCastRange = new int[]{1400,1400,1400,1400};
+        abilityCooldown = new double[]{45,40,35,30};
         abilityManaCost = new int[]{80,90,100,110};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5625;
         key = "phoenix_fire_spirits";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -44,7 +45,10 @@ public final class PhoenixFireSpirits extends Ability {
         duration = 4;
         hp_cost_perc = 20;
         localizedName = "Fire Spirits";
-        owningHeroShortKey = "phoenix";
+        ownerKey = "npc_dota_hero_phoenix";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{175,175,175,175};
         spirit_count = 4;
         spirit_duration = new double[]{16.0,16.0,16.0,16.0};
@@ -67,11 +71,11 @@ public final class PhoenixFireSpirits extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -81,10 +85,6 @@ public final class PhoenixFireSpirits extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -119,8 +119,20 @@ public final class PhoenixFireSpirits extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

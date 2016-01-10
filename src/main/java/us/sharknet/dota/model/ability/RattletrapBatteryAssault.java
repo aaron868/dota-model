@@ -13,14 +13,16 @@ public final class RattletrapBatteryAssault extends Ability {
     private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double[] duration;
     private final double[] interval;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] radius;
 
     private RattletrapBatteryAssault() {
@@ -31,14 +33,16 @@ public final class RattletrapBatteryAssault extends Ability {
         abilityManaCost = new int[]{75,75,75,75};
         abilityModifierSupportValue = .2;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5237;
         key = "rattletrap_battery_assault";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         duration = new double[]{10.5,10.5,10.5,10.5};
         interval = new double[]{0.7,0.7,0.7,0.7};
         localizedName = "Battery Assault";
-        owningHeroShortKey = "rattletrap";
+        ownerKey = "npc_dota_hero_rattletrap";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = new int[]{275,275,275,275};
     }
 
@@ -77,10 +81,6 @@ public final class RattletrapBatteryAssault extends Ability {
         return abilityUnitDamageType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
@@ -105,8 +105,20 @@ public final class RattletrapBatteryAssault extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getRadius() {

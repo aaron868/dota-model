@@ -8,17 +8,19 @@ public final class SlarkDarkPact extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double delay;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int pulse_duration;
     private final double pulse_interval;
     private final int radius;
@@ -28,17 +30,19 @@ public final class SlarkDarkPact extends Ability {
     private SlarkDarkPact() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE"};
         abilityCastPoint = new double[]{0.001,0.001,0.001,0.001};
-        abilityCastRange = 325;
+        abilityCastRange = new int[]{325,325,325,325};
         abilityCooldown = new double[]{9.0,8.0,7.0,6.0};
         abilityManaCost = new int[]{55,50,45,40};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5494;
         key = "slark_dark_pact";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         delay = 1.5;
         localizedName = "Dark Pact";
-        owningHeroShortKey = "slark";
+        ownerKey = "npc_dota_hero_slark";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         pulse_duration = 1;
         pulse_interval = .1;
         radius = 325;
@@ -61,7 +65,7 @@ public final class SlarkDarkPact extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -75,10 +79,6 @@ public final class SlarkDarkPact extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -101,8 +101,20 @@ public final class SlarkDarkPact extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getPulseDuration() {

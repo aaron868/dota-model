@@ -6,14 +6,13 @@ public final class PhoenixSunRay extends Ability {
 
     private static PhoenixSunRay instance;
 
-    private final String abilityBehavior;
-    private final double abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityDuration;
-    private final int abilityManaCost;
+    private final String[] abilityBehavior;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final double[] abilityDuration;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -25,7 +24,10 @@ public final class PhoenixSunRay extends Ability {
     private final double[] hp_perc_dmg;
     private final double[] hp_perc_heal;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final double tick_interval;
     private final int tooltip_duration;
@@ -33,14 +35,13 @@ public final class PhoenixSunRay extends Ability {
     private final int turn_rate_initial;
 
     private PhoenixSunRay() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_POINT";
-        abilityCastPoint = .1;
-        abilityCastRange = 1300;
-        abilityCooldown = 20;
-        abilityDuration = 6;
-        abilityManaCost = 100;
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT"};
+        abilityCastPoint = new double[]{.1,.1,.1,.1};
+        abilityCastRange = new int[]{1300,1300,1300,1300};
+        abilityCooldown = new double[]{20,20,20,20};
+        abilityDuration = new double[]{6,6,6,6};
+        abilityManaCost = new int[]{100,100,100,100};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        fightRecapLevel = 1;
         iD = 5626;
         key = "phoenix_sun_ray";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -52,7 +53,10 @@ public final class PhoenixSunRay extends Ability {
         hp_perc_dmg = new double[]{1.25,2.5,3.75,5.0};
         hp_perc_heal = new double[]{0.625,1.25,1.875,2.5};
         localizedName = "Sun Ray";
-        owningHeroShortKey = "phoenix";
+        ownerKey = "npc_dota_hero_phoenix";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 130;
         tick_interval = .2;
         tooltip_duration = 6;
@@ -67,36 +71,32 @@ public final class PhoenixSunRay extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
-    public double getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -143,8 +143,20 @@ public final class PhoenixSunRay extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

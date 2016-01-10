@@ -7,8 +7,8 @@ public final class WispOvercharge extends Ability {
     private static WispOvercharge instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
-    private final int abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final double[] abilityCooldown;
     private final int iD;
     private final String key;
     private final int[] bonus_attack_speed;
@@ -17,12 +17,15 @@ public final class WispOvercharge extends Ability {
     private final double[] drain_pct;
     private final double[] drain_pct_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private WispOvercharge() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE"};
-        abilityCastPoint = new int[]{0,0,0,0};
-        abilityCooldown = 2;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCooldown = new double[]{2,2,2,2};
         iD = 5487;
         key = "wisp_overcharge";
         bonus_attack_speed = new int[]{40,50,60,70};
@@ -31,7 +34,10 @@ public final class WispOvercharge extends Ability {
         drain_pct = new double[]{0.045,0.045,0.045,0.045};
         drain_pct_tooltip = new double[]{4.5,4.5,4.5,4.5};
         localizedName = "Overcharge";
-        owningHeroShortKey = "wisp";
+        ownerKey = "npc_dota_hero_wisp";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static WispOvercharge instance() {
@@ -45,11 +51,11 @@ public final class WispOvercharge extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -85,8 +91,20 @@ public final class WispOvercharge extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

@@ -6,13 +6,13 @@ public final class NecronomiconArcherManaBurn extends Ability {
 
     private static NecronomiconArcherManaBurn instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
@@ -20,16 +20,19 @@ public final class NecronomiconArcherManaBurn extends Ability {
     private final int burn_as_damage_tooltip;
     private final int cast_range_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private NecronomiconArcherManaBurn() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"};
         abilityCastPoint = new double[]{0.5,0.5,0.5};
-        abilityCastRange = 600;
-        abilityCooldown = 20;
+        abilityCastRange = new int[]{600,600,600,600};
+        abilityCooldown = new double[]{20,20,20,20};
         abilityManaCost = new int[]{0,0,0};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_ENEMY"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 5203;
         key = "necronomicon_archer_mana_burn";
@@ -37,7 +40,10 @@ public final class NecronomiconArcherManaBurn extends Ability {
         burn_as_damage_tooltip = 100;
         cast_range_tooltip = 600;
         localizedName = "Mana Burn";
-        owningHeroShortKey = "necronomicon_archer";
+        ownerKey = "npc_dota_necronomicon_archer";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
     }
 
     public static NecronomiconArcherManaBurn instance() {
@@ -47,7 +53,7 @@ public final class NecronomiconArcherManaBurn extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -55,11 +61,11 @@ public final class NecronomiconArcherManaBurn extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -71,7 +77,7 @@ public final class NecronomiconArcherManaBurn extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -103,8 +109,20 @@ public final class NecronomiconArcherManaBurn extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

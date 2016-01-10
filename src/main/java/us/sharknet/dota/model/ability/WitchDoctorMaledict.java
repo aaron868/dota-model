@@ -8,14 +8,13 @@ public final class WitchDoctorMaledict extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
-    private final int abilityDuration;
+    private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -23,21 +22,23 @@ public final class WitchDoctorMaledict extends Ability {
     private final int bonus_damage_threshold;
     private final int duration_tooltip;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final int ticks;
 
     private WitchDoctorMaledict() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.35,0.35,0.35,0.35};
-        abilityCastRange = 575;
-        abilityCooldown = 2;
+        abilityCastRange = new int[]{575,575,575,575};
+        abilityCooldown = new double[]{2,2,2,2};
         abilityDamage = new int[]{5,10,15,20};
-        abilityDuration = 12;
+        abilityDuration = new double[]{12,12,12,12};
         abilityManaCost = new int[]{105,110,115,120};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        fightRecapLevel = 1;
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO"};
         iD = 5140;
         key = "witch_doctor_maledict";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -45,7 +46,10 @@ public final class WitchDoctorMaledict extends Ability {
         bonus_damage_threshold = 100;
         duration_tooltip = 12;
         localizedName = "Maledict";
-        owningHeroShortKey = "witch_doctor";
+        ownerKey = "npc_dota_hero_witch_doctor";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 180;
         ticks = 3;
     }
@@ -65,11 +69,11 @@ public final class WitchDoctorMaledict extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -77,7 +81,7 @@ public final class WitchDoctorMaledict extends Ability {
         return abilityDamage;
     }
 
-    public int getAbilityDuration() {
+    public double[] getAbilityDuration() {
         return abilityDuration;
     }
 
@@ -89,12 +93,8 @@ public final class WitchDoctorMaledict extends Ability {
         return abilityUnitDamageType;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -125,8 +125,20 @@ public final class WitchDoctorMaledict extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

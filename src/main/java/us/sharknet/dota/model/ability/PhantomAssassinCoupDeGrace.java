@@ -6,7 +6,7 @@ public final class PhantomAssassinCoupDeGrace extends Ability {
 
     private static PhantomAssassinCoupDeGrace instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final int iD;
     private final String key;
@@ -14,10 +14,13 @@ public final class PhantomAssassinCoupDeGrace extends Ability {
     private final int[] crit_bonus;
     private final int crit_chance;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private PhantomAssassinCoupDeGrace() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_ULTIMATE";
         iD = 5193;
         key = "phantom_assassin_coup_de_grace";
@@ -25,7 +28,10 @@ public final class PhantomAssassinCoupDeGrace extends Ability {
         crit_bonus = new int[]{230,340,450};
         crit_chance = 15;
         localizedName = "Coup De Grace";
-        owningHeroShortKey = "phantom_assassin";
+        ownerKey = "npc_dota_hero_phantom_assassin";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static PhantomAssassinCoupDeGrace instance() {
@@ -35,7 +41,7 @@ public final class PhantomAssassinCoupDeGrace extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -67,8 +73,20 @@ public final class PhantomAssassinCoupDeGrace extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

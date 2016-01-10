@@ -8,13 +8,13 @@ public final class EnigmaDemonicConversion extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
+    private final int[] abilityCastRange;
     private final double[] abilityCooldown;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
-    private final String abilityUnitTargetFlags;
-    private final String abilityUnitTargetTeam;
-    private final String abilityUnitTargetType;
+    private final String[] abilityUnitTargetFlags;
+    private final String[] abilityUnitTargetTeam;
+    private final String[] abilityUnitTargetType;
     private final int iD;
     private final String key;
     private final int duration_tooltip;
@@ -22,20 +22,23 @@ public final class EnigmaDemonicConversion extends Ability {
     private final int[] eidolon_hp_tooltip;
     private final double[] life_extension;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int[] spawn_count;
     private final int[] split_attack_count;
 
     private EnigmaDemonicConversion() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 700;
+        abilityCastRange = new int[]{700,700,700,700};
         abilityCooldown = new double[]{35.0,35.0,35.0,35.0};
         abilityDuration = new double[]{35.0,35.0,35.0,35.0};
         abilityManaCost = new int[]{170,170,170,170};
-        abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO";
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
-        abilityUnitTargetType = "DOTA_UNIT_TARGET_CUSTOM";
+        abilityUnitTargetFlags = new String[]{"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_CUSTOM"};
+        abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_CUSTOM"};
         iD = 5147;
         key = "enigma_demonic_conversion";
         duration_tooltip = 35;
@@ -43,7 +46,10 @@ public final class EnigmaDemonicConversion extends Ability {
         eidolon_hp_tooltip = new int[]{180,200,220,240};
         life_extension = new double[]{2.0,2.0,2.0,2.0};
         localizedName = "Demonic Conversion";
-        owningHeroShortKey = "enigma";
+        ownerKey = "npc_dota_hero_enigma";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         spawn_count = new int[]{3,3,3,3};
         split_attack_count = new int[]{6,6,6,6};
     }
@@ -63,7 +69,7 @@ public final class EnigmaDemonicConversion extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
@@ -79,15 +85,15 @@ public final class EnigmaDemonicConversion extends Ability {
         return abilityManaCost;
     }
 
-    public String getAbilityUnitTargetFlags() {
+    public String[] getAbilityUnitTargetFlags() {
         return abilityUnitTargetFlags;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
-    public String getAbilityUnitTargetType() {
+    public String[] getAbilityUnitTargetType() {
         return abilityUnitTargetType;
     }
 
@@ -119,8 +125,20 @@ public final class EnigmaDemonicConversion extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int[] getSpawnCount() {

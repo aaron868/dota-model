@@ -8,13 +8,12 @@ public final class SniperShrapnel extends Ability {
 
     private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
-    private final int abilityManaCost;
+    private final int[] abilityManaCost;
     private final double abilityModifierSupportValue;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
@@ -24,7 +23,10 @@ public final class SniperShrapnel extends Ability {
     private final int duration;
     private final String localizedName;
     private final int max_charges;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final int radius;
     private final double[] slow_duration;
     private final int[] slow_movement_speed;
@@ -32,13 +34,12 @@ public final class SniperShrapnel extends Ability {
     private SniperShrapnel() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
         abilityCastPoint = new double[]{0.3,0.3,0.3,0.3};
-        abilityCastRange = 1800;
-        abilityCooldown = 0;
+        abilityCastRange = new int[]{1800,1800,1800,1800};
+        abilityCooldown = new double[]{0,0,0,0};
         abilityDamage = new int[]{12,24,36,48};
-        abilityManaCost = 50;
+        abilityManaCost = new int[]{50,50,50,50};
         abilityModifierSupportValue = .25;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5154;
         key = "sniper_shrapnel";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
@@ -48,7 +49,10 @@ public final class SniperShrapnel extends Ability {
         duration = 1;
         localizedName = "Shrapnel";
         max_charges = 3;
-        owningHeroShortKey = "sniper";
+        ownerKey = "npc_dota_hero_sniper";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
         radius = 450;
         slow_duration = new double[]{2.0,2.0,2.0,2.0};
         slow_movement_speed = new int[]{-15,-20,-25,-30};
@@ -69,11 +73,11 @@ public final class SniperShrapnel extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -81,7 +85,7 @@ public final class SniperShrapnel extends Ability {
         return abilityDamage;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
@@ -91,10 +95,6 @@ public final class SniperShrapnel extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -133,8 +133,20 @@ public final class SniperShrapnel extends Ability {
         return max_charges;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getRadius() {

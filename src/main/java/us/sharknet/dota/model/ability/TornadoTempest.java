@@ -6,11 +6,10 @@ public final class TornadoTempest extends Ability {
 
     private static TornadoTempest instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final int attackspeed_slow;
     private final int far_damage;
     private final int far_radius;
@@ -18,15 +17,17 @@ public final class TornadoTempest extends Ability {
     private final int movespeed_slow;
     private final int near_damage;
     private final int near_radius;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
     private final double tick_rate;
 
     private TornadoTempest() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5310;
         key = "tornado_tempest";
-        maxLevel = 1;
         attackspeed_slow = -15;
         far_damage = 15;
         far_radius = 600;
@@ -34,7 +35,10 @@ public final class TornadoTempest extends Ability {
         movespeed_slow = -15;
         near_damage = 45;
         near_radius = 150;
-        owningHeroShortKey = "tornado";
+        ownerKey = "npc_dota_enraged_wildkin_tornado";
+        ownerType = AbilityOwnerType.Neutral;
+        passive = false;
+        placeholder = false;
         tick_rate = .25;
     }
 
@@ -45,7 +49,7 @@ public final class TornadoTempest extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -59,10 +63,6 @@ public final class TornadoTempest extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public int getAttackspeedSlow() {
@@ -93,8 +93,20 @@ public final class TornadoTempest extends Ability {
         return near_radius;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public double getTickRate() {

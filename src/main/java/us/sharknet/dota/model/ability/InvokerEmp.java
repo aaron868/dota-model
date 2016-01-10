@@ -7,41 +7,43 @@ public final class InvokerEmp extends Ability {
     private static InvokerEmp instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCastPoint;
-    private final int abilityCastRange;
-    private final int abilityCooldown;
-    private final int abilityManaCost;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
+    private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final String hotKeyOverride;
     private final int iD;
     private final String key;
-    private final int maxLevel;
     private final String spellImmunityType;
     private final int area_of_effect;
     private final int damage_per_mana_pct;
     private final double delay;
     private final String localizedName;
     private final int[] mana_burned;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private InvokerEmp() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_HIDDEN","DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE","DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"};
-        abilityCastPoint = 0;
-        abilityCastRange = 950;
-        abilityCooldown = 30;
-        abilityManaCost = 125;
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{950,950,950,950};
+        abilityCooldown = new double[]{30,30,30,30};
+        abilityManaCost = new int[]{125,125,125,125};
         abilityUnitDamageType = "DAMAGE_TYPE_PURE";
-        hotKeyOverride = "C";
         iD = 5383;
         key = "invoker_emp";
-        maxLevel = 1;
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         area_of_effect = 675;
         damage_per_mana_pct = 50;
         delay = 2.9;
         localizedName = "Emp";
         mana_burned = new int[]{100,175,250,325,400,475,550,625};
-        owningHeroShortKey = "invoker";
+        ownerKey = "npc_dota_hero_invoker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static InvokerEmp instance() {
@@ -55,28 +57,24 @@ public final class InvokerEmp extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public int getAbilityManaCost() {
+    public int[] getAbilityManaCost() {
         return abilityManaCost;
     }
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public String getHotKeyOverride() {
-        return hotKeyOverride;
     }
 
     public int getID() {
@@ -85,10 +83,6 @@ public final class InvokerEmp extends Ability {
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxLevel() {
-        return maxLevel;
     }
 
     public String getSpellImmunityType() {
@@ -115,8 +109,20 @@ public final class InvokerEmp extends Ability {
         return mana_burned;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

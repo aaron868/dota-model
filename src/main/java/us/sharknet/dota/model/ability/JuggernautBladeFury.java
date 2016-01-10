@@ -7,39 +7,43 @@ public final class JuggernautBladeFury extends Ability {
     private static JuggernautBladeFury instance;
 
     private final String[] abilityBehavior;
-    private final int[] abilityCastPoint;
-    private final int abilityCastRange;
-    private final int[] abilityCooldown;
+    private final double[] abilityCastPoint;
+    private final int[] abilityCastRange;
+    private final double[] abilityCooldown;
     private final int[] abilityDamage;
     private final double[] abilityDuration;
     private final int[] abilityManaCost;
     private final String abilityUnitDamageType;
-    private final int fightRecapLevel;
     private final int iD;
     private final String key;
     private final String spellImmunityType;
     private final double blade_fury_damage_tick;
     private final int blade_fury_radius;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private JuggernautBladeFury() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"};
-        abilityCastPoint = new int[]{0,0,0,0};
-        abilityCastRange = 0;
-        abilityCooldown = new int[]{42,34,26,18};
+        abilityCastPoint = new double[]{0,0,0,0};
+        abilityCastRange = new int[]{0,0,0,0};
+        abilityCooldown = new double[]{42,34,26,18};
         abilityDamage = new int[]{80,105,130,155};
         abilityDuration = new double[]{5.0,5.0,5.0,5.0};
         abilityManaCost = new int[]{120,110,100,90};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
-        fightRecapLevel = 1;
         iD = 5028;
         key = "juggernaut_blade_fury";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         blade_fury_damage_tick = .2;
         blade_fury_radius = 250;
         localizedName = "Blade Fury";
-        owningHeroShortKey = "juggernaut";
+        ownerKey = "npc_dota_hero_juggernaut";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static JuggernautBladeFury instance() {
@@ -53,15 +57,15 @@ public final class JuggernautBladeFury extends Ability {
         return abilityBehavior;
     }
 
-    public int[] getAbilityCastPoint() {
+    public double[] getAbilityCastPoint() {
         return abilityCastPoint;
     }
 
-    public int getAbilityCastRange() {
+    public int[] getAbilityCastRange() {
         return abilityCastRange;
     }
 
-    public int[] getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
@@ -79,10 +83,6 @@ public final class JuggernautBladeFury extends Ability {
 
     public String getAbilityUnitDamageType() {
         return abilityUnitDamageType;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
     }
 
     public int getID() {
@@ -109,8 +109,20 @@ public final class JuggernautBladeFury extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

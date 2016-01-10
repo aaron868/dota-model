@@ -7,8 +7,8 @@ public final class SpiritBreakerEmpoweringHaste extends Ability {
     private static SpiritBreakerEmpoweringHaste instance;
 
     private final String[] abilityBehavior;
-    private final int abilityCooldown;
-    private final String abilityUnitTargetTeam;
+    private final double[] abilityCooldown;
+    private final String[] abilityUnitTargetTeam;
     private final int iD;
     private final String key;
     private final int[] aura_radius;
@@ -16,12 +16,15 @@ public final class SpiritBreakerEmpoweringHaste extends Ability {
     private final int[] bonus_movespeed_pct_extra;
     private final int duration;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private SpiritBreakerEmpoweringHaste() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_AURA"};
-        abilityCooldown = 12;
-        abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
+        abilityCooldown = new double[]{12,12,12,12};
+        abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_FRIENDLY"};
         iD = 5354;
         key = "spirit_breaker_empowering_haste";
         aura_radius = new int[]{900,900,900,900};
@@ -29,7 +32,10 @@ public final class SpiritBreakerEmpoweringHaste extends Ability {
         bonus_movespeed_pct_extra = new int[]{3,5,7,9};
         duration = 6;
         localizedName = "Empowering Haste";
-        owningHeroShortKey = "spirit_breaker";
+        ownerKey = "npc_dota_hero_spirit_breaker";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static SpiritBreakerEmpoweringHaste instance() {
@@ -43,11 +49,11 @@ public final class SpiritBreakerEmpoweringHaste extends Ability {
         return abilityBehavior;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
-    public String getAbilityUnitTargetTeam() {
+    public String[] getAbilityUnitTargetTeam() {
         return abilityUnitTargetTeam;
     }
 
@@ -79,8 +85,20 @@ public final class SpiritBreakerEmpoweringHaste extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

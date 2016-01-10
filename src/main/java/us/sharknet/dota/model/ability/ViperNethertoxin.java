@@ -6,7 +6,7 @@ public final class ViperNethertoxin extends Ability {
 
     private static ViperNethertoxin instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
@@ -15,10 +15,13 @@ public final class ViperNethertoxin extends Ability {
     private final String localizedName;
     private final int[] max_damage_tooltip;
     private final int[] non_hero_damage_pct;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private ViperNethertoxin() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityUnitDamageType = "DAMAGE_TYPE_PHYSICAL";
         iD = 5219;
         key = "viper_nethertoxin";
@@ -27,7 +30,10 @@ public final class ViperNethertoxin extends Ability {
         localizedName = "Nethertoxin";
         max_damage_tooltip = new int[]{40,80,120,160};
         non_hero_damage_pct = new int[]{50,50,50,50};
-        owningHeroShortKey = "viper";
+        ownerKey = "npc_dota_hero_viper";
+        ownerType = AbilityOwnerType.Hero;
+        passive = true;
+        placeholder = false;
     }
 
     public static ViperNethertoxin instance() {
@@ -37,7 +43,7 @@ public final class ViperNethertoxin extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -73,8 +79,20 @@ public final class ViperNethertoxin extends Ability {
         return non_hero_damage_pct;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

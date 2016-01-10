@@ -6,11 +6,10 @@ public final class LoneDruidSpiritBear extends Ability {
 
     private static LoneDruidSpiritBear instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final double[] abilityCastPoint;
-    private final int abilityCooldown;
+    private final double[] abilityCooldown;
     private final int[] abilityManaCost;
-    private final int displayAdditionalHeroes;
     private final int iD;
     private final String key;
     private final int backlash_damage;
@@ -20,14 +19,16 @@ public final class LoneDruidSpiritBear extends Ability {
     private final int[] bear_regen_tooltip;
     private final int cooldown_scepter;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private LoneDruidSpiritBear() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_NO_TARGET";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCastPoint = new double[]{0.5,0.5,0.5,0.5};
-        abilityCooldown = 12;
+        abilityCooldown = new double[]{12,12,12,12};
         abilityManaCost = new int[]{75,75,75,75};
-        displayAdditionalHeroes = 1;
         iD = 5412;
         key = "lone_druid_spirit_bear";
         backlash_damage = 1;
@@ -37,7 +38,10 @@ public final class LoneDruidSpiritBear extends Ability {
         bear_regen_tooltip = new int[]{2,3,4,5};
         cooldown_scepter = 12;
         localizedName = "Spirit Bear";
-        owningHeroShortKey = "lone_druid";
+        ownerKey = "npc_dota_hero_lone_druid";
+        ownerType = AbilityOwnerType.Hero;
+        passive = false;
+        placeholder = false;
     }
 
     public static LoneDruidSpiritBear instance() {
@@ -47,7 +51,7 @@ public final class LoneDruidSpiritBear extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -55,16 +59,12 @@ public final class LoneDruidSpiritBear extends Ability {
         return abilityCastPoint;
     }
 
-    public int getAbilityCooldown() {
+    public double[] getAbilityCooldown() {
         return abilityCooldown;
     }
 
     public int[] getAbilityManaCost() {
         return abilityManaCost;
-    }
-
-    public int getDisplayAdditionalHeroes() {
-        return displayAdditionalHeroes;
     }
 
     public int getID() {
@@ -103,8 +103,20 @@ public final class LoneDruidSpiritBear extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 

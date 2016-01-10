@@ -6,24 +6,30 @@ public final class NecronomiconWarriorLastWill extends Ability {
 
     private static NecronomiconWarriorLastWill instance;
 
-    private final String abilityBehavior;
+    private final String[] abilityBehavior;
     private final String abilityType;
     private final String abilityUnitDamageType;
     private final int iD;
     private final String key;
     private final int[] explosion;
     private final String localizedName;
-    private final String owningHeroShortKey;
+    private final String ownerKey;
+    private final AbilityOwnerType ownerType;
+    private final boolean passive;
+    private final boolean placeholder;
 
     private NecronomiconWarriorLastWill() {
-        abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
+        abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
         abilityType = "DOTA_ABILITY_TYPE_BASIC";
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5200;
         key = "necronomicon_warrior_last_will";
         explosion = new int[]{550,675,800};
         localizedName = "Last Will";
-        owningHeroShortKey = "necronomicon_warrior";
+        ownerKey = "npc_dota_necronomicon_warrior";
+        ownerType = AbilityOwnerType.Summoned;
+        passive = false;
+        placeholder = false;
     }
 
     public static NecronomiconWarriorLastWill instance() {
@@ -33,7 +39,7 @@ public final class NecronomiconWarriorLastWill extends Ability {
         return instance;
     }
 
-    public String getAbilityBehavior() {
+    public String[] getAbilityBehavior() {
         return abilityBehavior;
     }
 
@@ -61,8 +67,20 @@ public final class NecronomiconWarriorLastWill extends Ability {
         return localizedName;
     }
 
-    public String getOwningHeroShortKey() {
-        return owningHeroShortKey;
+    public String getOwnerKey() {
+        return ownerKey;
+    }
+
+    public AbilityOwnerType getOwnerType() {
+        return ownerType;
+    }
+
+    public boolean isPassive() {
+        return passive;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
 
