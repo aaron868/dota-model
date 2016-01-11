@@ -63,6 +63,7 @@ public class Complex {
         try {
             for (Item item : itemArray) {
                 for (String propertyName : propertyNames) {
+                    //isReadable() has the effect of testing for existence of a property
                     if (PropertyUtils.isReadable(item, propertyName)) {
                         bonus += (int) PropertyUtils.getProperty(item, propertyName);
                     }
@@ -75,12 +76,15 @@ public class Complex {
         return bonus;
     }
 
+    /**
+     * Print hero passive abilities.
+     */
     public void printPassiveAbilties() {
         System.out.println("-----------------");
-        System.out.println("Passive Abilities");
+        System.out.println("Hero Passive Abilities");
         System.out.println("-----------------");
         for(Ability ability : library.getAbilities()) {
-            if( ability.isPassive() && !ability.getLocalizedName().startsWith("Empty")) {
+            if( ability.getOwnerType() == Ability.AbilityOwnerType.Hero && ability.isPassive() ) {
                 System.out.println(ability.getOwnerKey() + ":" + ability.getLocalizedName());
             }
         }
