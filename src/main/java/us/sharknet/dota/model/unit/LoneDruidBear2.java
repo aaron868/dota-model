@@ -29,7 +29,6 @@ public final class LoneDruidBear2 extends NpcUnit {
     private final int healthBarOffset;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -71,7 +70,6 @@ public final class LoneDruidBear2 extends NpcUnit {
         healthBarOffset = 215;
         key = "npc_dota_lone_druid_bear2";
         level = 7;
-        model = "models/heroes/lone_druid/spirit_bear.vmdl";
         modelScale = .72;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 330;
@@ -184,10 +182,6 @@ public final class LoneDruidBear2 extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

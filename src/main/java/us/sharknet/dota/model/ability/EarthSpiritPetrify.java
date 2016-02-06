@@ -30,7 +30,7 @@ public final class EarthSpiritPetrify extends Ability {
     private EarthSpiritPetrify() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         abilityCastPoint = new double[]{.2,.2,.2,.2};
-        abilityCastRange = new int[]{600,600,600,600};
+        abilityCastRange = new int[]{125,125,125,125};
         abilityCooldown = new double[]{45,45,45,45};
         abilityManaCost = new int[]{150,150,150,150};
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";

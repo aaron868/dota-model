@@ -12,14 +12,9 @@ public final class LotusOrb extends Item {
     private final int abilityManaCost;
     private final String abilityUnitTargetTeam;
     private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
-    private final String[] itemAliases;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final String itemDisassembleRule;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
+    private final boolean disassemblable;
     private final String key;
     private final int active_duration;
     private final int bonus_armor;
@@ -27,7 +22,20 @@ public final class LotusOrb extends Item {
     private final int bonus_health_regen;
     private final int bonus_mana_regen;
     private final int cast_range_tooltip;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private LotusOrb() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
@@ -36,14 +44,9 @@ public final class LotusOrb extends Item {
         abilityManaCost = 75;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        fightRecapLevel = 1;
         iD = 226;
-        itemAliases = new String[]{"ls","lotus orb"};
-        itemCost = 4000;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
-        itemQuality = "epic";
-        itemShopTags = new String[]{"regen_health","regen_mana","str","agi","int","hard_to_tag"};
+        cost = 4000;
+        disassemblable = true;
         key = "item_lotus_orb";
         active_duration = 6;
         bonus_armor = 10;
@@ -51,7 +54,20 @@ public final class LotusOrb extends Item {
         bonus_health_regen = 5;
         bonus_mana_regen = 125;
         cast_range_tooltip = 9;
+        chargeable = false;
+        components = new String[]{"item_pers","item_platemail","item_recipe_lotus_orb"};
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Lotus Orb";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static LotusOrb instance() {
@@ -85,36 +101,16 @@ public final class LotusOrb extends Item {
         return abilityUnitTargetType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
-    public String[] getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public String getItemDisassembleRule() {
-        return itemDisassembleRule;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public boolean isDisassemblable() {
+        return disassemblable;
     }
 
     public String getKey() {
@@ -145,8 +141,60 @@ public final class LotusOrb extends Item {
         return cast_range_tooltip;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

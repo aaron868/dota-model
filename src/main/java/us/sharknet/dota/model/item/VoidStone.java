@@ -8,28 +8,44 @@ public final class VoidStone extends Item {
 
     private final String abilityBehavior;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final String itemQuality;
-    private final String itemShareability;
-    private final String itemShopTags;
+    private final int cost;
     private final String key;
-    private final int sideShop;
     private final int bonus_mana_regen;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private VoidStone() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 57;
-        itemAliases = "void stone";
-        itemCost = 850;
-        itemQuality = "component";
-        itemShareability = "ITEM_PARTIALLY_SHAREABLE";
-        itemShopTags = "regen_mana";
+        cost = 850;
         key = "item_void_stone";
-        sideShop = 1;
         bonus_mana_regen = 100;
+        chargeable = false;
+        components = new String[0];
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Void Stone";
+        maxCharges = 0;
+        partOf = new String[]{"item_cyclone","item_pers","item_sheepstick"};
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.PARTIALLY_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.SIDE_SHOP,Vendor. FOUNTAIN_SHOP};
     }
 
     public static VoidStone instance() {
@@ -47,40 +63,72 @@ public final class VoidStone extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String getItemShareability() {
-        return itemShareability;
-    }
-
-    public String getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
         return key;
     }
 
-    public int getSideShop() {
-        return sideShop;
-    }
-
     public int getBonusManaRegen() {
         return bonus_mana_regen;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

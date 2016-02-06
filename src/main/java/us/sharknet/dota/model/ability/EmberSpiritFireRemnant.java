@@ -20,7 +20,6 @@ public final class EmberSpiritFireRemnant extends Ability {
     private final int[] damage;
     private final int duration;
     private final String localizedName;
-    private final int max_charges;
     private final String ownerKey;
     private final AbilityOwnerType ownerType;
     private final boolean passive;
@@ -43,7 +42,6 @@ public final class EmberSpiritFireRemnant extends Ability {
         damage = new int[]{100,150,200};
         duration = 45;
         localizedName = "Fire Remnant";
-        max_charges = 3;
         ownerKey = "npc_dota_hero_ember_spirit";
         ownerType = AbilityOwnerType.Hero;
         passive = false;
@@ -113,10 +111,6 @@ public final class EmberSpiritFireRemnant extends Ability {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int getMaxCharges() {
-        return max_charges;
     }
 
     public String getOwnerKey() {

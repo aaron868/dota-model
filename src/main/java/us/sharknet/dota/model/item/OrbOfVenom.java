@@ -8,32 +8,50 @@ public final class OrbOfVenom extends Item {
 
     private final String abilityBehavior;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final String itemQuality;
-    private final String itemShopTags;
+    private final int cost;
     private final String key;
-    private final int sideShop;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
     private final int poison_damage;
     private final int poison_duration;
     private final int poison_movement_speed_melee;
     private final int poison_movement_speed_range;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private OrbOfVenom() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 181;
-        itemAliases = "orb of venom";
-        itemCost = 275;
-        itemQuality = "component";
-        itemShopTags = "hard_to_tag";
+        cost = 275;
         key = "item_orb_of_venom";
-        sideShop = 1;
+        chargeable = false;
+        components = new String[0];
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Orb Of Venom";
+        maxCharges = 0;
+        partOf = new String[]{"item_skadi"};
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
         poison_damage = 3;
         poison_duration = 4;
         poison_movement_speed_melee = -12;
         poison_movement_speed_range = -4;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.SIDE_SHOP,Vendor. FOUNTAIN_SHOP};
     }
 
     public static OrbOfVenom instance() {
@@ -51,32 +69,52 @@ public final class OrbOfVenom extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
         return key;
     }
 
-    public int getSideShop() {
-        return sideShop;
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
     }
 
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getPoisonDamage() {
@@ -93,6 +131,22 @@ public final class OrbOfVenom extends Item {
 
     public int getPoisonMovementSpeedRange() {
         return poison_movement_speed_range;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

@@ -24,7 +24,6 @@ public final class UnitTombstone4 extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -59,7 +58,6 @@ public final class UnitTombstone4 extends NpcUnit {
         key = "npc_dota_unit_tombstone4";
         level = 4;
         magicalResistance = 33;
-        model = "models/heroes/undying/undying_tower.vmdl";
         modelScale = .8;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
@@ -150,10 +148,6 @@ public final class UnitTombstone4 extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

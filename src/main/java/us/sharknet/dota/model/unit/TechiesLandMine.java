@@ -25,7 +25,6 @@ public final class TechiesLandMine extends NpcUnit {
     private final int healthBarOffset;
     private final String key;
     private final int level;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -61,7 +60,6 @@ public final class TechiesLandMine extends NpcUnit {
         healthBarOffset = 140;
         key = "npc_dota_techies_land_mine";
         level = 1;
-        model = "models/heroes/techies/fx_techiesfx_mine.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 0;
@@ -156,10 +154,6 @@ public final class TechiesLandMine extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

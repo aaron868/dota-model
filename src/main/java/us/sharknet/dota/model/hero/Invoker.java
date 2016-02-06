@@ -80,7 +80,7 @@ public final class Invoker extends Hero {
         attackRange = 600;
         attackRate = 1.7;
         attributeAgilityGain = 1.9;
-        attributeBaseAgility = 20;
+        attributeBaseAgility = 14;
         attributeBaseIntelligence = 22;
         attributeBaseStrength = 17;
         attributeIntelligenceGain = 4;

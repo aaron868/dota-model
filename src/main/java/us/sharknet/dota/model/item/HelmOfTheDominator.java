@@ -15,20 +15,30 @@ public final class HelmOfTheDominator extends Item {
     private final String abilityUnitTargetTeam;
     private final String abilityUnitTargetType;
     private final int iD;
-    private final String[] itemAliases;
-    private final int itemCost;
-    private final String itemDisassembleRule;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
+    private final boolean disassemblable;
     private final String key;
     private final int bonus_armor;
     private final int bonus_damage;
     private final int bonus_regen;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final int dominate_duration;
     private final int health_min;
+    private final int initialCharges;
     private final int lifesteal_percent;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
     private final int speed_base;
+    private final Vendor[] vendorLocations;
 
     private HelmOfTheDominator() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
@@ -40,20 +50,30 @@ public final class HelmOfTheDominator extends Item {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_CREEP";
         iD = 164;
-        itemAliases = new String[]{"hotd","helm of the dominator"};
-        itemCost = 1800;
-        itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
-        itemQuality = "artifact";
-        itemShopTags = new String[]{"damage","armor","unique","hard_to_tag"};
+        cost = 1800;
+        disassemblable = true;
         key = "item_helm_of_the_dominator";
         bonus_armor = 5;
         bonus_damage = 20;
         bonus_regen = 3;
+        chargeable = false;
+        components = new String[]{"item_lifesteal","item_helm_of_iron_will"};
+        consumable = false;
         dominate_duration = 12;
         health_min = 1400;
+        initialCharges = 0;
         lifesteal_percent = 15;
         localizedName = "Helm Of The Dominator";
+        maxCharges = 0;
+        partOf = new String[]{"item_satanic"};
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
         speed_base = 350;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static HelmOfTheDominator instance() {
@@ -99,24 +119,12 @@ public final class HelmOfTheDominator extends Item {
         return iD;
     }
 
-    public String[] getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String getItemDisassembleRule() {
-        return itemDisassembleRule;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public boolean isDisassemblable() {
+        return disassemblable;
     }
 
     public String getKey() {
@@ -135,12 +143,28 @@ public final class HelmOfTheDominator extends Item {
         return bonus_regen;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
     public int getDominateDuration() {
         return dominate_duration;
     }
 
     public int getHealthMin() {
         return health_min;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
     }
 
     public int getLifestealPercent() {
@@ -151,8 +175,44 @@ public final class HelmOfTheDominator extends Item {
         return localizedName;
     }
 
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
     public int getSpeedBase() {
         return speed_base;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

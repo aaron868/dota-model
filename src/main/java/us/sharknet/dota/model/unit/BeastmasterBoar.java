@@ -26,7 +26,6 @@ public final class BeastmasterBoar extends NpcUnit {
     private final int isSummoned;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -63,7 +62,6 @@ public final class BeastmasterBoar extends NpcUnit {
         isSummoned = 1;
         key = "npc_dota_beastmaster_boar";
         level = 5;
-        model = "models/heroes/beastmaster/beastmaster_beast.vmdl";
         modelScale = .65;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 350;
@@ -162,10 +160,6 @@ public final class BeastmasterBoar extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

@@ -17,7 +17,6 @@ public final class EarthSpiritStoneCaller extends Ability {
     private final int charge_restore_time;
     private final int duration;
     private final String localizedName;
-    private final int max_charges;
     private final String ownerKey;
     private final AbilityOwnerType ownerType;
     private final boolean passive;
@@ -35,7 +34,6 @@ public final class EarthSpiritStoneCaller extends Ability {
         charge_restore_time = 3;
         duration = 12;
         localizedName = "Stone Caller";
-        max_charges = 6;
         ownerKey = "npc_dota_hero_earth_spirit";
         ownerType = AbilityOwnerType.Hero;
         passive = false;
@@ -91,10 +89,6 @@ public final class EarthSpiritStoneCaller extends Ability {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int getMaxCharges() {
-        return max_charges;
     }
 
     public String getOwnerKey() {

@@ -13,18 +13,26 @@ public final class ForceStaff extends Item {
     private final int abilityManaCost;
     private final String[] abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
-    private final String[] itemAliases;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
     private final String key;
     private final int bonus_health_regen;
     private final int bonus_intellect;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
     private final int push_length;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private ForceStaff() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
@@ -34,18 +42,26 @@ public final class ForceStaff extends Item {
         abilityManaCost = 25;
         abilityUnitTargetTeam = new String[]{"DOTA_UNIT_TARGET_TEAM_BOTH","DOTA_UNIT_TARGET_TEAM_CUSTOM"};
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC","DOTA_UNIT_TARGET_CUSTOM"};
-        fightRecapLevel = 1;
         iD = 102;
-        itemAliases = new String[]{"fs","force staff"};
-        itemCost = 2250;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemQuality = "rare";
-        itemShopTags = new String[]{"int","damage","attack_speed","hard_to_tag"};
+        cost = 2250;
         key = "item_force_staff";
         bonus_health_regen = 4;
         bonus_intellect = 10;
+        chargeable = false;
+        components = new String[]{"item_staff_of_wizardry","item_ring_of_regen","item_recipe_force_staff"};
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Force Staff";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
         push_length = 600;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static ForceStaff instance() {
@@ -83,32 +99,12 @@ public final class ForceStaff extends Item {
         return abilityUnitTargetType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
-    public String[] getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
@@ -123,12 +119,64 @@ public final class ForceStaff extends Item {
         return bonus_intellect;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
     }
 
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
     public int getPushLength() {
         return push_length;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

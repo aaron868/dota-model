@@ -29,7 +29,6 @@ public final class LycanWolf4 extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -71,7 +70,6 @@ public final class LycanWolf4 extends NpcUnit {
         key = "npc_dota_lycan_wolf4";
         level = 3;
         magicalResistance = 80;
-        model = "models/heroes/lycan/summon_wolves.vmdl";
         modelScale = .99;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 460;
@@ -184,10 +182,6 @@ public final class LycanWolf4 extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

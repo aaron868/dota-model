@@ -8,34 +8,42 @@ public final class FlyingCourier extends Item {
 
     private final String abilityBehavior;
     private final int iD;
-    private final String[] itemAliases;
-    private final int itemCost;
-    private final String itemDeclarations;
-    private final String itemQuality;
-    private final String itemShareability;
-    private final String itemShopTags;
-    private final int itemStockInitial;
-    private final int itemStockMax;
-    private final int itemStockTime;
-    private final int itemSupport;
+    private final int cost;
     private final String key;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private FlyingCourier() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 84;
-        itemAliases = new String[]{"crow","flying courier"};
-        itemCost = 200;
-        itemDeclarations = "DECLARE_PURCHASES_TO_TEAMMATES";
-        itemQuality = "consumable";
-        itemShareability = "ITEM_FULLY_SHAREABLE";
-        itemShopTags = "consumable";
-        itemStockInitial = 0;
-        itemStockMax = 1;
-        itemStockTime = 27;
-        itemSupport = 1;
+        cost = 200;
         key = "item_flying_courier";
+        chargeable = false;
+        components = new String[0];
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Flying Courier";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = true;
+        placeableDuration = 9999;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.FULLY_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static FlyingCourier instance() {
@@ -53,52 +61,68 @@ public final class FlyingCourier extends Item {
         return iD;
     }
 
-    public String[] getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String getItemShareability() {
-        return itemShareability;
-    }
-
-    public String getItemShopTags() {
-        return itemShopTags;
-    }
-
-    public int getItemStockInitial() {
-        return itemStockInitial;
-    }
-
-    public int getItemStockMax() {
-        return itemStockMax;
-    }
-
-    public int getItemStockTime() {
-        return itemStockTime;
-    }
-
-    public int getItemSupport() {
-        return itemSupport;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
         return key;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

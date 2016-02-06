@@ -23,7 +23,6 @@ public final class DeathProphetSpiritSiphon extends Ability {
     private final double[] damage_pct;
     private final int haunt_duration;
     private final String localizedName;
-    private final int[] max_charges;
     private final int[] movement_slow;
     private final String ownerKey;
     private final AbilityOwnerType ownerType;
@@ -49,7 +48,6 @@ public final class DeathProphetSpiritSiphon extends Ability {
         damage_pct = new double[]{1.0,2.0,3.0,4.0};
         haunt_duration = 5;
         localizedName = "Spirit Siphon";
-        max_charges = new int[]{1,2,3,4};
         movement_slow = new int[]{5,10,15,20};
         ownerKey = "npc_dota_hero_death_prophet";
         ownerType = AbilityOwnerType.Hero;
@@ -131,10 +129,6 @@ public final class DeathProphetSpiritSiphon extends Ability {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int[] getMaxCharges() {
-        return max_charges;
     }
 
     public int[] getMovementSlow() {

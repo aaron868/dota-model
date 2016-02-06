@@ -26,7 +26,6 @@ public final class ElderTitanAncestralSpirit extends NpcUnit {
     private final int isAncient;
     private final String key;
     private final int level;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -61,7 +60,6 @@ public final class ElderTitanAncestralSpirit extends NpcUnit {
         isAncient = 1;
         key = "npc_dota_elder_titan_ancestral_spirit";
         level = 1;
-        model = "models/heroes/elder_titan/ancestral_spirit.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 315;
@@ -158,10 +156,6 @@ public final class ElderTitanAncestralSpirit extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

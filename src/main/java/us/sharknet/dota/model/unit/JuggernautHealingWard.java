@@ -34,7 +34,6 @@ public final class JuggernautHealingWard extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final String movementCapabilities;
     private final int movementSpeed;
     private final double movementTurnRate;
@@ -80,7 +79,6 @@ public final class JuggernautHealingWard extends NpcUnit {
         key = "npc_dota_juggernaut_healing_ward";
         level = 0;
         magicalResistance = 0;
-        model = "models/heroes/juggernaut/jugg_healing_ward.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 420;
         movementTurnRate = .5;
@@ -212,10 +210,6 @@ public final class JuggernautHealingWard extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public String getMovementCapabilities() {

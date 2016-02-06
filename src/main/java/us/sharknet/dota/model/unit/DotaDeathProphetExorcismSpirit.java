@@ -25,7 +25,6 @@ public final class DotaDeathProphetExorcismSpirit extends NpcUnit {
     private final int healthBarOffset;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -59,7 +58,6 @@ public final class DotaDeathProphetExorcismSpirit extends NpcUnit {
         healthBarOffset = 120;
         key = "dota_death_prophet_exorcism_spirit";
         level = 0;
-        model = "models/heroes/death_prophet/death_prophet_ghost.vmdl";
         modelScale = 1.4;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
@@ -152,10 +150,6 @@ public final class DotaDeathProphetExorcismSpirit extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

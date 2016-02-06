@@ -27,7 +27,6 @@ public final class SmallThunderLizard extends NpcUnit {
     private final int isNeutralUnitType;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -66,7 +65,6 @@ public final class SmallThunderLizard extends NpcUnit {
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_small_thunder_lizard";
         level = 5;
-        model = "models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_small.vmdl";
         modelScale = .65;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 270;
@@ -170,10 +168,6 @@ public final class SmallThunderLizard extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

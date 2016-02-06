@@ -12,22 +12,25 @@ public final class FaerieFire extends Item {
     private final String abilityUnitTargetTeam;
     private final String abilityUnitTargetType;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final int itemHideCharges;
-    private final int itemInitialCharges;
-    private final int itemPermanent;
-    private final String itemQuality;
-    private final String itemShopTags;
-    private final int itemStackable;
+    private final int cost;
+    private final boolean stackable;
     private final String key;
-    private final int sideShop;
-    private final String uIDropSound;
-    private final String uIPickupSound;
-    private final String worldDropSound;
     private final int bonus_damage;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final int hp_restore;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private FaerieFire() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
@@ -36,22 +39,25 @@ public final class FaerieFire extends Item {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         iD = 237;
-        itemAliases = "faerie fire";
-        itemCost = 75;
-        itemHideCharges = 1;
-        itemInitialCharges = 1;
-        itemPermanent = 0;
-        itemQuality = "component";
-        itemShopTags = "armor";
-        itemStackable = 0;
+        cost = 75;
+        stackable = false;
         key = "item_faerie_fire";
-        sideShop = 0;
-        uIDropSound = "Item.DropRingShop";
-        uIPickupSound = "Item.PickUpRingShop";
-        worldDropSound = "Item.DropRingWorld";
         bonus_damage = 2;
+        chargeable = false;
+        components = new String[0];
+        consumable = true;
         hp_restore = 75;
+        initialCharges = 0;
         localizedName = "Faerie Fire";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static FaerieFire instance() {
@@ -85,68 +91,80 @@ public final class FaerieFire extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public int getItemHideCharges() {
-        return itemHideCharges;
-    }
-
-    public int getItemInitialCharges() {
-        return itemInitialCharges;
-    }
-
-    public int getItemPermanent() {
-        return itemPermanent;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String getItemShopTags() {
-        return itemShopTags;
-    }
-
-    public int getItemStackable() {
-        return itemStackable;
+    public boolean isStackable() {
+        return stackable;
     }
 
     public String getKey() {
         return key;
     }
 
-    public int getSideShop() {
-        return sideShop;
-    }
-
-    public String getUIDropSound() {
-        return uIDropSound;
-    }
-
-    public String getUIPickupSound() {
-        return uIPickupSound;
-    }
-
-    public String getWorldDropSound() {
-        return worldDropSound;
-    }
-
     public int getBonusDamage() {
         return bonus_damage;
+    }
+
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
     }
 
     public int getHpRestore() {
         return hp_restore;
     }
 
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

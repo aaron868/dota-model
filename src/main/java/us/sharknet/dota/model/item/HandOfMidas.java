@@ -15,16 +15,25 @@ public final class HandOfMidas extends Item {
     private final String abilityUnitTargetTeam;
     private final String abilityUnitTargetType;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
     private final String key;
     private final int bonus_attack_speed;
     private final int bonus_gold;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
     private final int transmute_cast_range_tooltip;
+    private final Vendor[] vendorLocations;
     private final double xp_multiplier;
 
     private HandOfMidas() {
@@ -37,16 +46,25 @@ public final class HandOfMidas extends Item {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_CREEP";
         iD = 65;
-        itemAliases = "hand of midas";
-        itemCost = 2050;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemQuality = "common";
-        itemShopTags = new String[]{"attack_speed","hard_to_tag"};
+        cost = 2050;
         key = "item_hand_of_midas";
         bonus_attack_speed = 30;
         bonus_gold = 190;
+        chargeable = false;
+        components = new String[]{"item_gloves","item_recipe_hand_of_midas"};
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Hand Of Midas";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
         transmute_cast_range_tooltip = 600;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
         xp_multiplier = 2.5;
     }
 
@@ -93,24 +111,8 @@ public final class HandOfMidas extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
@@ -125,12 +127,64 @@ public final class HandOfMidas extends Item {
         return bonus_gold;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
     }
 
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
     public int getTransmuteCastRangeTooltip() {
         return transmute_cast_range_tooltip;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
     public double getXpMultiplier() {

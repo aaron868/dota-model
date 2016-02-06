@@ -34,7 +34,6 @@ public final class Roshan extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -81,7 +80,6 @@ public final class Roshan extends NpcUnit {
         key = "npc_dota_roshan";
         level = 30;
         magicalResistance = 75;
-        model = "models/creeps/roshan/roshan.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 270;
@@ -214,10 +212,6 @@ public final class Roshan extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

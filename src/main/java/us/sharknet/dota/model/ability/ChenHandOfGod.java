@@ -15,7 +15,6 @@ public final class ChenHandOfGod extends Ability {
     private final String key;
     private final String spellImmunityType;
     private final int[] ancient_creeps_scepter;
-    private final int cooldown_scepter;
     private final int[] heal_amount;
     private final String localizedName;
     private final String ownerKey;
@@ -33,7 +32,6 @@ public final class ChenHandOfGod extends Ability {
         key = "chen_hand_of_god";
         spellImmunityType = "SPELL_IMMUNITY_ALLIES_YES";
         ancient_creeps_scepter = new int[]{1,2,3};
-        cooldown_scepter = 3;
         heal_amount = new int[]{200,300,400};
         localizedName = "Hand Of God";
         ownerKey = "npc_dota_hero_chen";
@@ -83,10 +81,6 @@ public final class ChenHandOfGod extends Ability {
 
     public int[] getAncientCreepsScepter() {
         return ancient_creeps_scepter;
-    }
-
-    public int getCooldownScepter() {
-        return cooldown_scepter;
     }
 
     public int[] getHealAmount() {

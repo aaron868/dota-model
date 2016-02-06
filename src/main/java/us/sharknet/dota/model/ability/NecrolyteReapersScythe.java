@@ -29,7 +29,7 @@ public final class NecrolyteReapersScythe extends Ability {
     private final AbilityOwnerType ownerType;
     private final boolean passive;
     private final boolean placeholder;
-    private final double respawn;
+    private final int respawn;
     private final int respawn_constant;
     private final double[] stun_duration;
 
@@ -57,7 +57,7 @@ public final class NecrolyteReapersScythe extends Ability {
         ownerType = AbilityOwnerType.Hero;
         passive = false;
         placeholder = false;
-        respawn = 0.0;
+        respawn = 0;
         respawn_constant = 30;
         stun_duration = new double[]{1.5,1.5,1.5};
     }
@@ -161,7 +161,7 @@ public final class NecrolyteReapersScythe extends Ability {
         return placeholder;
     }
 
-    public double getRespawn() {
+    public int getRespawn() {
         return respawn;
     }
 

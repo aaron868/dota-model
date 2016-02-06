@@ -16,7 +16,7 @@ public final class PhantomAssassinBlur extends Ability {
     private final boolean passive;
     private final boolean placeholder;
     private final int[] radius;
-    private final double transparency_fade;
+    private final int transparency_fade;
 
     private PhantomAssassinBlur() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_PASSIVE"};
@@ -29,7 +29,7 @@ public final class PhantomAssassinBlur extends Ability {
         passive = true;
         placeholder = false;
         radius = new int[]{1600,1600,1600,1600};
-        transparency_fade = 0.0;
+        transparency_fade = 0;
     }
 
     public static PhantomAssassinBlur instance() {
@@ -79,7 +79,7 @@ public final class PhantomAssassinBlur extends Ability {
         return radius;
     }
 
-    public double getTransparencyFade() {
+    public int getTransparencyFade() {
         return transparency_fade;
     }
 

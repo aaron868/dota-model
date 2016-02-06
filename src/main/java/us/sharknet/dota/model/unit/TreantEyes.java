@@ -27,7 +27,6 @@ public final class TreantEyes extends NpcUnit {
     private final int magicalResistance;
     private final String minimapIcon;
     private final int minimapIconSize;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -62,7 +61,6 @@ public final class TreantEyes extends NpcUnit {
         magicalResistance = 0;
         minimapIcon = "minimap_treant_ult";
         minimapIconSize = 320;
-        model = "models/development/invisiblebox.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
@@ -162,10 +160,6 @@ public final class TreantEyes extends NpcUnit {
 
     public int getMinimapIconSize() {
         return minimapIconSize;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

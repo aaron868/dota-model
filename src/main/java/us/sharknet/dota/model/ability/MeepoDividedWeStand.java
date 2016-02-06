@@ -17,7 +17,7 @@ public final class MeepoDividedWeStand extends Ability {
     private final AbilityOwnerType ownerType;
     private final boolean passive;
     private final boolean placeholder;
-    private final double respawn;
+    private final int respawn;
     private final int[] tooltip_clones;
     private final int tooltip_respawn;
     private final int tooltip_share_percentage;
@@ -35,7 +35,7 @@ public final class MeepoDividedWeStand extends Ability {
         ownerType = AbilityOwnerType.Hero;
         passive = true;
         placeholder = false;
-        respawn = 0.0;
+        respawn = 0;
         tooltip_clones = new int[]{1,2,3};
         tooltip_respawn = 20;
         tooltip_share_percentage = 20;
@@ -93,7 +93,7 @@ public final class MeepoDividedWeStand extends Ability {
         return placeholder;
     }
 
-    public double getRespawn() {
+    public int getRespawn() {
         return respawn;
     }
 

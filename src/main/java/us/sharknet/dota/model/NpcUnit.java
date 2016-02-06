@@ -23,7 +23,6 @@ public abstract class NpcUnit {
     private final int followRange;
     private final int healthBarOffset;
     private final int level;
-    private final String model;
     private final String movementCapabilities;
     private final int movementSpeed;
     private final double movementTurnRate;
@@ -58,7 +57,6 @@ public abstract class NpcUnit {
         followRange = 100;
         healthBarOffset = -1;
         level = 1;
-        model = "models/development/invisiblebox.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 300;
         movementTurnRate = .5;
@@ -154,10 +152,6 @@ public abstract class NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public String getMovementCapabilities() {

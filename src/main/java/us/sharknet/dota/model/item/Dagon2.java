@@ -14,25 +14,30 @@ public final class Dagon2 extends Item {
     private final String abilitySharedCooldown;
     private final String abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
-    private final String itemAliases;
     private final int itemBaseLevel;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
     private final String key;
-    private final int maxUpgradeLevel;
-    private final String upgradeRecipe;
-    private final String[] upgradesItems;
     private final int bonus_all_stats;
     private final int bonus_damage;
     private final int bonus_intellect;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final int damage;
-    private final double damage_delay;
+    private final int damage_delay;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
     private final int range_tooltip;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private Dagon2() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
@@ -43,25 +48,30 @@ public final class Dagon2 extends Item {
         abilitySharedCooldown = "dagon";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_ENEMY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 201;
-        itemAliases = "dagon 2";
         itemBaseLevel = 2;
-        itemCost = 3970;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemQuality = "rare";
-        itemShopTags = new String[]{"damage","int","str","agi","hard_to_tag"};
+        cost = 3970;
         key = "item_dagon_2";
-        maxUpgradeLevel = 5;
-        upgradeRecipe = "item_recipe_dagon";
-        upgradesItems = new String[]{"item_dagon_2","item_dagon_3","item_dagon_4"};
         bonus_all_stats = 3;
         bonus_damage = 9;
         bonus_intellect = 16;
+        chargeable = false;
+        components = new String[]{"item_dagon","item_recipe_dagon_2"};
+        consumable = false;
         damage = 500;
-        damage_delay = 0.0;
+        damage_delay = 0;
+        initialCharges = 0;
         localizedName = "Dagon 2";
+        maxCharges = 0;
+        partOf = new String[]{"item_dagon_3"};
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
         range_tooltip = 650;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static Dagon2 instance() {
@@ -103,52 +113,20 @@ public final class Dagon2 extends Item {
         return abilityUnitTargetType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
-    }
-
-    public String getItemAliases() {
-        return itemAliases;
     }
 
     public int getItemBaseLevel() {
         return itemBaseLevel;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxUpgradeLevel() {
-        return maxUpgradeLevel;
-    }
-
-    public String getUpgradeRecipe() {
-        return upgradeRecipe;
-    }
-
-    public String[] getUpgradesItems() {
-        return upgradesItems;
     }
 
     public int getBonusAllStats() {
@@ -163,20 +141,72 @@ public final class Dagon2 extends Item {
         return bonus_intellect;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
     public int getDamage() {
         return damage;
     }
 
-    public double getDamageDelay() {
+    public int getDamageDelay() {
         return damage_delay;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
     }
 
     public String getLocalizedName() {
         return localizedName;
     }
 
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
     public int getRangeTooltip() {
         return range_tooltip;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

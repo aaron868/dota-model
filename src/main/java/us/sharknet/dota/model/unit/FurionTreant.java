@@ -28,7 +28,6 @@ public final class FurionTreant extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -68,7 +67,6 @@ public final class FurionTreant extends NpcUnit {
         key = "npc_dota_furion_treant";
         level = 2;
         magicalResistance = 0;
-        model = "models/heroes/furion/treant.vmdl";
         modelScale = .8;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 325;
@@ -176,10 +174,6 @@ public final class FurionTreant extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

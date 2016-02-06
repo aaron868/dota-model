@@ -28,7 +28,6 @@ public final class MudGolemSplitDoom extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -67,7 +66,6 @@ public final class MudGolemSplitDoom extends NpcUnit {
         key = "npc_dota_neutral_mud_golem_split_doom";
         level = 4;
         magicalResistance = 50;
-        model = "models/heroes/doom/doom.vmdl";
         modelScale = .7;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 310;
@@ -174,10 +172,6 @@ public final class MudGolemSplitDoom extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

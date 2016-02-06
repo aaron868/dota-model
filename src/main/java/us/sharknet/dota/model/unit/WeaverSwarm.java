@@ -25,7 +25,6 @@ public final class WeaverSwarm extends NpcUnit {
     private final int healthBarOffset;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -59,7 +58,6 @@ public final class WeaverSwarm extends NpcUnit {
         healthBarOffset = 90;
         key = "npc_dota_weaver_swarm";
         level = 2;
-        model = "models/heroes/weaver/weaver_bug.vmdl";
         modelScale = 1.9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 0;
@@ -152,10 +150,6 @@ public final class WeaverSwarm extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

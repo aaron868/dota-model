@@ -15,32 +15,35 @@ public final class DiffusalBlade2 extends Item {
     private final String abilityUnitTargetFlags;
     private final String abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
-    private final String itemAliases;
     private final int itemBaseLevel;
-    private final int itemCost;
-    private final String itemDisassembleRule;
-    private final int itemDisplayCharges;
-    private final int itemInitialCharges;
-    private final int itemPermanent;
-    private final String itemQuality;
-    private final int itemRequiresCharges;
-    private final String[] itemShopTags;
+    private final int cost;
+    private final boolean disassemblable;
     private final String key;
-    private final int maxUpgradeLevel;
     private final int bonus_agility;
     private final int bonus_intellect;
     private final int cast_range_tooltip;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final int damage_per_burn;
     private final int feedback_mana_burn;
     private final int feedback_mana_burn_ranged;
-    private final int initial_charges;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
     private final int purge_rate;
     private final int purge_root_duration;
     private final int purge_slow_duration;
     private final int purge_summoned_damage;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private DiffusalBlade2() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
@@ -52,32 +55,35 @@ public final class DiffusalBlade2 extends Item {
         abilityUnitTargetFlags = "DOTA_UNIT_TARGET_FLAG_INVULNERABLE";
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
-        fightRecapLevel = 1;
         iD = 196;
-        itemAliases = "diffusal blade 2";
         itemBaseLevel = 2;
-        itemCost = 3850;
-        itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_NEVER";
-        itemDisplayCharges = 1;
-        itemInitialCharges = 8;
-        itemPermanent = 1;
-        itemQuality = "artifact";
-        itemRequiresCharges = 1;
-        itemShopTags = new String[]{"agi","int","unique","hard_to_tag"};
+        cost = 3850;
+        disassemblable = false;
         key = "item_diffusal_blade_2";
-        maxUpgradeLevel = 2;
         bonus_agility = 35;
         bonus_intellect = 15;
         cast_range_tooltip = 600;
+        chargeable = true;
+        components = new String[]{"item_diffusal_blade","item_recipe_diffusal_blade_2"};
+        consumable = false;
         damage_per_burn = 1;
         feedback_mana_burn = 25;
         feedback_mana_burn_ranged = 25;
-        initial_charges = 8;
+        initialCharges = 8;
         localizedName = "Diffusal Blade 2";
+        maxCharges = 8;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
         purge_rate = 5;
         purge_root_duration = 3;
         purge_slow_duration = 4;
         purge_summoned_damage = 99999;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static DiffusalBlade2 instance() {
@@ -123,60 +129,24 @@ public final class DiffusalBlade2 extends Item {
         return abilityUnitTargetType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
-    }
-
-    public String getItemAliases() {
-        return itemAliases;
     }
 
     public int getItemBaseLevel() {
         return itemBaseLevel;
     }
 
-    public int getItemCost() {
-        return itemCost;
+    public int getCost() {
+        return cost;
     }
 
-    public String getItemDisassembleRule() {
-        return itemDisassembleRule;
-    }
-
-    public int getItemDisplayCharges() {
-        return itemDisplayCharges;
-    }
-
-    public int getItemInitialCharges() {
-        return itemInitialCharges;
-    }
-
-    public int getItemPermanent() {
-        return itemPermanent;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public int getItemRequiresCharges() {
-        return itemRequiresCharges;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public boolean isDisassemblable() {
+        return disassemblable;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public int getMaxUpgradeLevel() {
-        return maxUpgradeLevel;
     }
 
     public int getBonusAgility() {
@@ -189,6 +159,18 @@ public final class DiffusalBlade2 extends Item {
 
     public int getCastRangeTooltip() {
         return cast_range_tooltip;
+    }
+
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
     }
 
     public int getDamagePerBurn() {
@@ -204,11 +186,31 @@ public final class DiffusalBlade2 extends Item {
     }
 
     public int getInitialCharges() {
-        return initial_charges;
+        return initialCharges;
     }
 
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
     }
 
     public int getPurgeRate() {
@@ -225,6 +227,22 @@ public final class DiffusalBlade2 extends Item {
 
     public int getPurgeSummonedDamage() {
         return purge_summoned_damage;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

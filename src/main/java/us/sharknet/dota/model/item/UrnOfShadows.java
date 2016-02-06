@@ -12,21 +12,25 @@ public final class UrnOfShadows extends Item {
     private final int abilityCooldown;
     private final String abilityUnitTargetTeam;
     private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final int itemDisplayCharges;
-    private final int itemPermanent;
-    private final String itemQuality;
-    private final int itemRequiresCharges;
-    private final String[] itemShopTags;
-    private final int itemStackable;
+    private final int cost;
+    private final boolean stackable;
     private final String key;
     private final int bonus_strength;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
     private final int mana_regen;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
     private final int soul_additional_charges;
     private final int soul_damage_amount;
     private final int soul_damage_duration;
@@ -36,6 +40,7 @@ public final class UrnOfShadows extends Item {
     private final int soul_initial_charge;
     private final int soul_radius;
     private final int soul_release_range_tooltip;
+    private final Vendor[] vendorLocations;
 
     private UrnOfShadows() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
@@ -44,21 +49,25 @@ public final class UrnOfShadows extends Item {
         abilityCooldown = 7;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_BOTH";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        fightRecapLevel = 1;
         iD = 92;
-        itemAliases = "urn of shadows";
-        itemCost = 875;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemDisplayCharges = 1;
-        itemPermanent = 1;
-        itemQuality = "rare";
-        itemRequiresCharges = 1;
-        itemShopTags = new String[]{"regen_mana","str","boost_health"};
-        itemStackable = 0;
+        cost = 875;
+        stackable = false;
         key = "item_urn_of_shadows";
         bonus_strength = 6;
+        chargeable = true;
+        components = new String[]{"item_sobi_mask","item_gauntlets","item_gauntlets","item_recipe_urn_of_shadows"};
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Urn Of Shadows";
         mana_regen = 50;
+        maxCharges = 9999;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
         soul_additional_charges = 1;
         soul_damage_amount = 150;
         soul_damage_duration = 8;
@@ -68,6 +77,7 @@ public final class UrnOfShadows extends Item {
         soul_initial_charge = 2;
         soul_radius = 1400;
         soul_release_range_tooltip = 950;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static UrnOfShadows instance() {
@@ -101,48 +111,16 @@ public final class UrnOfShadows extends Item {
         return abilityUnitTargetType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public int getItemDisplayCharges() {
-        return itemDisplayCharges;
-    }
-
-    public int getItemPermanent() {
-        return itemPermanent;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public int getItemRequiresCharges() {
-        return itemRequiresCharges;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
-    }
-
-    public int getItemStackable() {
-        return itemStackable;
+    public boolean isStackable() {
+        return stackable;
     }
 
     public String getKey() {
@@ -153,12 +131,60 @@ public final class UrnOfShadows extends Item {
         return bonus_strength;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
     }
 
     public int getManaRegen() {
         return mana_regen;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
     }
 
     public int getSoulAdditionalCharges() {
@@ -195,6 +221,10 @@ public final class UrnOfShadows extends Item {
 
     public int getSoulReleaseRangeTooltip() {
         return soul_release_range_tooltip;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

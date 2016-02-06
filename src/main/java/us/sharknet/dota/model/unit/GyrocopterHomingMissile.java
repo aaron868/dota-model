@@ -23,7 +23,6 @@ public final class GyrocopterHomingMissile extends NpcUnit {
     private final String combatClassDefend;
     private final String key;
     private final int level;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -54,7 +53,6 @@ public final class GyrocopterHomingMissile extends NpcUnit {
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         key = "npc_dota_gyrocopter_homing_missile";
         level = 2;
-        model = "models/heroes/gyro/gyro_missile.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 0;
@@ -138,10 +136,6 @@ public final class GyrocopterHomingMissile extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

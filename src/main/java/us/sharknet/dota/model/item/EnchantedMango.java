@@ -12,20 +12,25 @@ public final class EnchantedMango extends Item {
     private final String abilityUnitTargetTeam;
     private final String abilityUnitTargetType;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final int itemHideCharges;
-    private final int itemInitialCharges;
-    private final int itemPermanent;
-    private final String itemQuality;
-    private final String itemShopTags;
-    private final int itemStackable;
+    private final int cost;
+    private final boolean stackable;
     private final String key;
-    private final String model;
-    private final int sideShop;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final int hp_regen;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
     private final int replenish_amount;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private EnchantedMango() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
@@ -34,20 +39,25 @@ public final class EnchantedMango extends Item {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         iD = 216;
-        itemAliases = "enchanted mango";
-        itemCost = 125;
-        itemHideCharges = 1;
-        itemInitialCharges = 1;
-        itemPermanent = 0;
-        itemQuality = "consumable";
-        itemShopTags = "consumable";
-        itemStackable = 0;
+        cost = 125;
+        stackable = false;
         key = "item_enchanted_mango";
-        model = "models/props_gameplay/mango.vmdl";
-        sideShop = 0;
+        chargeable = false;
+        components = new String[0];
+        consumable = true;
         hp_regen = 1;
+        initialCharges = 0;
         localizedName = "Enchanted Mango";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
         replenish_amount = 150;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static EnchantedMango instance() {
@@ -81,60 +91,80 @@ public final class EnchantedMango extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public int getItemHideCharges() {
-        return itemHideCharges;
-    }
-
-    public int getItemInitialCharges() {
-        return itemInitialCharges;
-    }
-
-    public int getItemPermanent() {
-        return itemPermanent;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String getItemShopTags() {
-        return itemShopTags;
-    }
-
-    public int getItemStackable() {
-        return itemStackable;
+    public boolean isStackable() {
+        return stackable;
     }
 
     public String getKey() {
         return key;
     }
 
-    public String getModel() {
-        return model;
+    public boolean isChargeable() {
+        return chargeable;
     }
 
-    public int getSideShop() {
-        return sideShop;
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
     }
 
     public int getHpRegen() {
         return hp_regen;
     }
 
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
     }
 
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
     public int getReplenishAmount() {
         return replenish_amount;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

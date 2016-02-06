@@ -12,11 +12,7 @@ public final class VeilOfDiscord extends Item {
     private final int abilityCooldown;
     private final int abilityManaCost;
     private final int iD;
-    private final String[] itemAliases;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
     private final String key;
     private final int bonus_agi;
     private final int bonus_armor;
@@ -24,10 +20,23 @@ public final class VeilOfDiscord extends Item {
     private final int bonus_health_regen;
     private final int bonus_int;
     private final int bonus_str;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final int debuff_radius;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
     private final int resist_debuff;
     private final int resist_debuff_duration;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private VeilOfDiscord() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_AOE","DOTA_ABILITY_BEHAVIOR_POINT","DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT"};
@@ -36,11 +45,7 @@ public final class VeilOfDiscord extends Item {
         abilityCooldown = 20;
         abilityManaCost = 50;
         iD = 190;
-        itemAliases = new String[]{"vod","veil of discord"};
-        itemCost = 2270;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemQuality = "rare";
-        itemShopTags = new String[]{"int","armor","regen_health","hard_to_tag"};
+        cost = 2270;
         key = "item_veil_of_discord";
         bonus_agi = 6;
         bonus_armor = 6;
@@ -48,10 +53,23 @@ public final class VeilOfDiscord extends Item {
         bonus_health_regen = 6;
         bonus_int = 18;
         bonus_str = 6;
+        chargeable = false;
+        components = new String[]{"item_helm_of_iron_will","item_null_talisman","item_robe","item_robe"};
+        consumable = false;
         debuff_radius = 600;
+        initialCharges = 0;
         localizedName = "Veil Of Discord";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
         resist_debuff = -25;
         resist_debuff_duration = 16;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static VeilOfDiscord instance() {
@@ -85,24 +103,8 @@ public final class VeilOfDiscord extends Item {
         return iD;
     }
 
-    public String[] getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
@@ -133,12 +135,56 @@ public final class VeilOfDiscord extends Item {
         return bonus_str;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
     public int getDebuffRadius() {
         return debuff_radius;
     }
 
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
     }
 
     public int getResistDebuff() {
@@ -147,6 +193,14 @@ public final class VeilOfDiscord extends Item {
 
     public int getResistDebuffDuration() {
         return resist_debuff_duration;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

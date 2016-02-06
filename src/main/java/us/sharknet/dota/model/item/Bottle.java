@@ -12,25 +12,28 @@ public final class Bottle extends Item {
     private final double abilityCooldown;
     private final String abilityUnitTargetTeam;
     private final String abilityUnitTargetType;
-    private final int fightRecapLevel;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final int itemDisplayCharges;
-    private final int itemInitialCharges;
-    private final int itemPermanent;
-    private final String itemQuality;
-    private final String itemShareability;
-    private final String itemShopTags;
-    private final int itemStackable;
+    private final int cost;
+    private final boolean stackable;
     private final String key;
-    private final String model;
-    private final int sideShop;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final int health_restore;
+    private final int initialCharges;
     private final String localizedName;
     private final int mana_restore;
+    private final int maxCharges;
     private final int movement_speed_percent_bonus;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
     private final double restore_time;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private Bottle() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET"};
@@ -39,25 +42,28 @@ public final class Bottle extends Item {
         abilityCooldown = .5;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
-        fightRecapLevel = 1;
         iD = 41;
-        itemAliases = "bottle";
-        itemCost = 660;
-        itemDisplayCharges = 1;
-        itemInitialCharges = 3;
-        itemPermanent = 1;
-        itemQuality = "consumable";
-        itemShareability = "ITEM_PARTIALLY_SHAREABLE";
-        itemShopTags = "consumable";
-        itemStackable = 0;
+        cost = 660;
+        stackable = false;
         key = "item_bottle";
-        model = "models/props_gameplay/bottle_blue.vmdl";
-        sideShop = 1;
+        chargeable = true;
+        components = new String[0];
+        consumable = false;
         health_restore = 90;
+        initialCharges = 3;
         localizedName = "Bottle";
         mana_restore = 60;
+        maxCharges = 3;
         movement_speed_percent_bonus = -30;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
         restore_time = 2.5;
+        shareability = Shareablilty.PARTIALLY_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.SIDE_SHOP,Vendor. FOUNTAIN_SHOP};
     }
 
     public static Bottle instance() {
@@ -91,64 +97,40 @@ public final class Bottle extends Item {
         return abilityUnitTargetType;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public int getItemDisplayCharges() {
-        return itemDisplayCharges;
-    }
-
-    public int getItemInitialCharges() {
-        return itemInitialCharges;
-    }
-
-    public int getItemPermanent() {
-        return itemPermanent;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String getItemShareability() {
-        return itemShareability;
-    }
-
-    public String getItemShopTags() {
-        return itemShopTags;
-    }
-
-    public int getItemStackable() {
-        return itemStackable;
+    public boolean isStackable() {
+        return stackable;
     }
 
     public String getKey() {
         return key;
     }
 
-    public String getModel() {
-        return model;
+    public boolean isChargeable() {
+        return chargeable;
     }
 
-    public int getSideShop() {
-        return sideShop;
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
     }
 
     public int getHealthRestore() {
         return health_restore;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
     }
 
     public String getLocalizedName() {
@@ -159,12 +141,48 @@ public final class Bottle extends Item {
         return mana_restore;
     }
 
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
     public int getMovementSpeedPercentBonus() {
         return movement_speed_percent_bonus;
     }
 
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
     public double getRestoreTime() {
         return restore_time;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

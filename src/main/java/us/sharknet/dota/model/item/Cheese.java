@@ -8,42 +8,52 @@ public final class Cheese extends Item {
 
     private final String[] abilityBehavior;
     private final int abilityCooldown;
-    private final int fightRecapLevel;
     private final int iD;
-    private final int itemContributesToNetWorthWhenDropped;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final int itemInitialCharges;
-    private final int itemPermanent;
-    private final int itemPurchasable;
-    private final String itemQuality;
-    private final String itemShareability;
-    private final int itemStackable;
+    private final int cost;
+    private final boolean purchasable;
+    private final boolean stackable;
     private final String key;
-    private final String model;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final int health_restore;
+    private final int initialCharges;
     private final String localizedName;
     private final int mana_restore;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private Cheese() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCooldown = 4;
-        fightRecapLevel = 2;
         iD = 33;
-        itemContributesToNetWorthWhenDropped = 0;
-        itemCost = 1000;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemInitialCharges = 1;
-        itemPermanent = 0;
-        itemPurchasable = 0;
-        itemQuality = "epic";
-        itemShareability = "ITEM_FULLY_SHAREABLE";
-        itemStackable = 1;
+        cost = 1000;
+        purchasable = false;
+        stackable = true;
         key = "item_cheese";
-        model = "models/props_gameplay/cheese.vmdl";
+        chargeable = false;
+        components = new String[0];
+        consumable = true;
         health_restore = 2500;
+        initialCharges = 0;
         localizedName = "Cheese";
         mana_restore = 1000;
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.FULLY_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.ROSHAN_DEATH};
     }
 
     public static Cheese instance() {
@@ -61,60 +71,44 @@ public final class Cheese extends Item {
         return abilityCooldown;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
-    public int getItemContributesToNetWorthWhenDropped() {
-        return itemContributesToNetWorthWhenDropped;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
+    public boolean isPurchasable() {
+        return purchasable;
     }
 
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public int getItemInitialCharges() {
-        return itemInitialCharges;
-    }
-
-    public int getItemPermanent() {
-        return itemPermanent;
-    }
-
-    public int getItemPurchasable() {
-        return itemPurchasable;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String getItemShareability() {
-        return itemShareability;
-    }
-
-    public int getItemStackable() {
-        return itemStackable;
+    public boolean isStackable() {
+        return stackable;
     }
 
     public String getKey() {
         return key;
     }
 
-    public String getModel() {
-        return model;
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
     }
 
     public int getHealthRestore() {
         return health_restore;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
     }
 
     public String getLocalizedName() {
@@ -123,6 +117,42 @@ public final class Cheese extends Item {
 
     public int getManaRestore() {
         return mana_restore;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

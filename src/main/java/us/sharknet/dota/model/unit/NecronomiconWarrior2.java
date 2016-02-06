@@ -38,7 +38,6 @@ public final class NecronomiconWarrior2 extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -87,7 +86,6 @@ public final class NecronomiconWarrior2 extends NpcUnit {
         key = "npc_dota_necronomicon_warrior_2";
         level = 5;
         magicalResistance = 40;
-        model = "models/creeps/item_creeps/i_creep_necro_warrior/necro_warrior.vmdl";
         modelScale = .5;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 350;
@@ -234,10 +232,6 @@ public final class NecronomiconWarrior2 extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

@@ -14,22 +14,30 @@ public final class Mjollnir extends Item {
     private final String abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final String itemDisassembleRule;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
+    private final boolean disassemblable;
     private final String key;
     private final int bonus_attack_speed;
     private final int bonus_damage;
     private final int chain_chance;
-    private final double chain_cooldown;
+    private final int chain_cooldown;
     private final int chain_damage;
     private final double chain_delay;
     private final int chain_radius;
     private final int chain_strikes;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
     private final int static_chance;
     private final int static_cooldown;
     private final int static_damage;
@@ -38,6 +46,7 @@ public final class Mjollnir extends Item {
     private final int static_radius;
     private final int static_seconary_radius;
     private final int static_strikes;
+    private final Vendor[] vendorLocations;
 
     private Mjollnir() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
@@ -48,22 +57,30 @@ public final class Mjollnir extends Item {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_HERO","DOTA_UNIT_TARGET_BASIC"};
         iD = 158;
-        itemAliases = "mjollnir";
-        itemCost = 5700;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
-        itemQuality = "artifact";
-        itemShopTags = new String[]{"damage","attack_speed","unique"};
+        cost = 5700;
+        disassemblable = true;
         key = "item_mjollnir";
         bonus_attack_speed = 80;
         bonus_damage = 24;
         chain_chance = 25;
-        chain_cooldown = 0.0;
+        chain_cooldown = 0;
         chain_damage = 150;
         chain_delay = .25;
         chain_radius = 900;
         chain_strikes = 12;
+        chargeable = false;
+        components = new String[]{"item_maelstrom","item_hyperstone","item_recipe_mjollnir"};
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Mjollnir";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
         static_chance = 20;
         static_cooldown = 1;
         static_damage = 200;
@@ -72,6 +89,7 @@ public final class Mjollnir extends Item {
         static_radius = 900;
         static_seconary_radius = 900;
         static_strikes = 4;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static Mjollnir instance() {
@@ -113,28 +131,12 @@ public final class Mjollnir extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public String getItemDisassembleRule() {
-        return itemDisassembleRule;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public boolean isDisassemblable() {
+        return disassemblable;
     }
 
     public String getKey() {
@@ -153,7 +155,7 @@ public final class Mjollnir extends Item {
         return chain_chance;
     }
 
-    public double getChainCooldown() {
+    public int getChainCooldown() {
         return chain_cooldown;
     }
 
@@ -173,8 +175,56 @@ public final class Mjollnir extends Item {
         return chain_strikes;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
     }
 
     public int getStaticChance() {
@@ -207,6 +257,10 @@ public final class Mjollnir extends Item {
 
     public int getStaticStrikes() {
         return static_strikes;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

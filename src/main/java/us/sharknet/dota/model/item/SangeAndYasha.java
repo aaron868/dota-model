@@ -8,44 +8,62 @@ public final class SangeAndYasha extends Item {
 
     private final String abilityBehavior;
     private final int iD;
-    private final String[] itemAliases;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final String itemDisassembleRule;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
+    private final boolean disassemblable;
     private final String key;
     private final int bonus_agility;
     private final int bonus_attack_speed;
     private final int bonus_damage;
     private final int bonus_strength;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
     private final int maim_chance;
     private final int maim_duration;
     private final int maim_slow_attack;
     private final int maim_slow_movement;
+    private final int maxCharges;
     private final int movement_speed_percent_bonus;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private SangeAndYasha() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 154;
-        itemAliases = new String[]{"sny","s&y","sy","sange and yasha"};
-        itemCost = 4100;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
-        itemQuality = "artifact";
-        itemShopTags = new String[]{"damage","str","agi","attack_speed","unique"};
+        cost = 4100;
+        disassemblable = true;
         key = "item_sange_and_yasha";
         bonus_agility = 16;
         bonus_attack_speed = 16;
         bonus_damage = 16;
         bonus_strength = 16;
+        chargeable = false;
+        components = new String[]{"item_yasha","item_sange"};
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Sange And Yasha";
         maim_chance = 16;
         maim_duration = 5;
         maim_slow_attack = -32;
         maim_slow_movement = -32;
+        maxCharges = 0;
         movement_speed_percent_bonus = 16;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static SangeAndYasha instance() {
@@ -63,28 +81,12 @@ public final class SangeAndYasha extends Item {
         return iD;
     }
 
-    public String[] getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public String getItemDisassembleRule() {
-        return itemDisassembleRule;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public boolean isDisassemblable() {
+        return disassemblable;
     }
 
     public String getKey() {
@@ -107,6 +109,22 @@ public final class SangeAndYasha extends Item {
         return bonus_strength;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
     }
@@ -127,8 +145,44 @@ public final class SangeAndYasha extends Item {
         return maim_slow_movement;
     }
 
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
     public int getMovementSpeedPercentBonus() {
         return movement_speed_percent_bonus;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

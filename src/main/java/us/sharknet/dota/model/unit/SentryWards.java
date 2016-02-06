@@ -16,7 +16,6 @@ public final class SentryWards extends NpcUnit {
     private final int level;
     private final String minimapIcon;
     private final int minimapIconSize;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int statusHealth;
@@ -40,7 +39,6 @@ public final class SentryWards extends NpcUnit {
         level = 0;
         minimapIcon = "minimap_ward_invis";
         minimapIconSize = 300;
-        model = "models/props_gameplay/default_ward.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         statusHealth = 200;
@@ -96,10 +94,6 @@ public final class SentryWards extends NpcUnit {
 
     public int getMinimapIconSize() {
         return minimapIconSize;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

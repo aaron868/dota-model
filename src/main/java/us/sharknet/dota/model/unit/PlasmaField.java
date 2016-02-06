@@ -11,7 +11,6 @@ public final class PlasmaField extends NpcUnit {
     private final String baseClass;
     private final String boundsHullName;
     private final String key;
-    private final String model;
     private final String movementCapabilities;
     private final int soundSet;
     private final int visionDaytimeRange;
@@ -23,7 +22,6 @@ public final class PlasmaField extends NpcUnit {
         baseClass = "npc_dota_base";
         boundsHullName = "DOTA_HULL_SIZE_HERO";
         key = "npc_dota_plasma_field";
-        model = "models/development/invisiblebox.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
         soundSet = 0;
         visionDaytimeRange = 800;
@@ -52,10 +50,6 @@ public final class PlasmaField extends NpcUnit {
 
     public String getKey() {
         return key;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public String getMovementCapabilities() {

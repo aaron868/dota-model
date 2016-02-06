@@ -34,7 +34,6 @@ public final class TuskFrozenSigil1 extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final String movementCapabilities;
     private final int movementSpeed;
     private final double movementTurnRate;
@@ -80,7 +79,6 @@ public final class TuskFrozenSigil1 extends NpcUnit {
         key = "npc_dota_tusk_frozen_sigil1";
         level = 0;
         magicalResistance = 0;
-        model = "models/heroes/tuskarr/tuskarr_sigil.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
         movementSpeed = 310;
         movementTurnRate = .5;
@@ -212,10 +210,6 @@ public final class TuskFrozenSigil1 extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public String getMovementCapabilities() {

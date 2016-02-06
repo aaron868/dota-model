@@ -9,11 +9,7 @@ public final class CrimsonGuard extends Item {
     private final String[] abilityBehavior;
     private final int abilityCooldown;
     private final int iD;
-    private final int itemAlertable;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
     private final String key;
     private final int block_chance_active;
     private final int block_damage_melee;
@@ -26,18 +22,27 @@ public final class CrimsonGuard extends Item {
     private final int bonus_armor;
     private final int bonus_health;
     private final int bonus_health_regen;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final int duration;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private CrimsonGuard() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCooldown = 6;
         iD = 242;
-        itemAlertable = 1;
-        itemCost = 3550;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemQuality = "epic";
-        itemShopTags = new String[]{"armor","boost_armor","regen_health","block","health_pool"};
+        cost = 3550;
         key = "item_crimson_guard";
         block_chance_active = 100;
         block_damage_melee = 32;
@@ -50,8 +55,21 @@ public final class CrimsonGuard extends Item {
         bonus_armor = 5;
         bonus_health = 250;
         bonus_health_regen = 6;
+        chargeable = false;
+        components = new String[]{"item_vanguard","item_buckler","item_recipe_crimson_guard"};
+        consumable = false;
         duration = 10;
+        initialCharges = 0;
         localizedName = "Crimson Guard";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static CrimsonGuard instance() {
@@ -73,24 +91,8 @@ public final class CrimsonGuard extends Item {
         return iD;
     }
 
-    public int getItemAlertable() {
-        return itemAlertable;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
@@ -141,12 +143,64 @@ public final class CrimsonGuard extends Item {
         return bonus_health_regen;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
     public int getDuration() {
         return duration;
     }
 
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

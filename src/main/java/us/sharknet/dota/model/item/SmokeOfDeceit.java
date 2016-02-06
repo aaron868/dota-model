@@ -8,57 +8,53 @@ public final class SmokeOfDeceit extends Item {
 
     private final String[] abilityBehavior;
     private final int abilityCooldown;
-    private final String effect;
-    private final int fightRecapLevel;
     private final int iD;
-    private final int itemAlertable;
-    private final String itemAliases;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final int itemDisplayCharges;
-    private final int itemInitialCharges;
-    private final int itemPermanent;
-    private final String itemQuality;
-    private final String itemShareability;
-    private final String itemShopTags;
-    private final int itemStackable;
-    private final int itemStockMax;
-    private final int itemStockTime;
-    private final int itemSupport;
+    private final int cost;
+    private final boolean stackable;
     private final String key;
-    private final String model;
     private final int application_radius;
     private final int bonus_movement_speed;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final int duration;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
     private final int visibility_radius;
 
     private SmokeOfDeceit() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
         abilityCooldown = 9;
-        effect = "particles/generic_gameplay/dropped_smoke.vpcf";
-        fightRecapLevel = 1;
         iD = 188;
-        itemAlertable = 1;
-        itemAliases = "smoke of deceit";
-        itemCost = 50;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemDisplayCharges = 1;
-        itemInitialCharges = 1;
-        itemPermanent = 0;
-        itemQuality = "consumable";
-        itemShareability = "ITEM_FULLY_SHAREABLE";
-        itemShopTags = "consumable";
-        itemStackable = 1;
-        itemStockMax = 3;
-        itemStockTime = 72;
-        itemSupport = 1;
+        cost = 50;
+        stackable = true;
         key = "item_smoke_of_deceit";
-        model = "models/props_gameplay/smoke.vmdl";
         application_radius = 1200;
         bonus_movement_speed = 15;
+        chargeable = false;
+        components = new String[0];
+        consumable = true;
         duration = 35;
+        initialCharges = 0;
         localizedName = "Smoke Of Deceit";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.FULLY_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
         visibility_radius = 1025;
     }
 
@@ -77,80 +73,20 @@ public final class SmokeOfDeceit extends Item {
         return abilityCooldown;
     }
 
-    public String getEffect() {
-        return effect;
-    }
-
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
-    public int getItemAlertable() {
-        return itemAlertable;
+    public int getCost() {
+        return cost;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public int getItemDisplayCharges() {
-        return itemDisplayCharges;
-    }
-
-    public int getItemInitialCharges() {
-        return itemInitialCharges;
-    }
-
-    public int getItemPermanent() {
-        return itemPermanent;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String getItemShareability() {
-        return itemShareability;
-    }
-
-    public String getItemShopTags() {
-        return itemShopTags;
-    }
-
-    public int getItemStackable() {
-        return itemStackable;
-    }
-
-    public int getItemStockMax() {
-        return itemStockMax;
-    }
-
-    public int getItemStockTime() {
-        return itemStockTime;
-    }
-
-    public int getItemSupport() {
-        return itemSupport;
+    public boolean isStackable() {
+        return stackable;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getApplicationRadius() {
@@ -161,12 +97,64 @@ public final class SmokeOfDeceit extends Item {
         return bonus_movement_speed;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
     public int getDuration() {
         return duration;
     }
 
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
     public int getVisibilityRadius() {

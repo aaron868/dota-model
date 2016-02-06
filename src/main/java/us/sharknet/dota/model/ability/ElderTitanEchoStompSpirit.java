@@ -17,7 +17,7 @@ public final class ElderTitanEchoStompSpirit extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
-    private final double animation_rate;
+    private final int animation_rate;
     private final double cast_time;
     private final String localizedName;
     private final String ownerKey;
@@ -40,7 +40,7 @@ public final class ElderTitanEchoStompSpirit extends Ability {
         iD = 5590;
         key = "elder_titan_echo_stomp_spirit";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        animation_rate = 0.0;
+        animation_rate = 0;
         cast_time = 1.6;
         localizedName = "Echo Stomp Sprit";
         ownerKey = "npc_dota_hero_elder_titan";
@@ -103,7 +103,7 @@ public final class ElderTitanEchoStompSpirit extends Ability {
         return spellImmunityType;
     }
 
-    public double getAnimationRate() {
+    public int getAnimationRate() {
         return animation_rate;
     }
 

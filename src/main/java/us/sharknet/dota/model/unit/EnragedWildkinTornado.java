@@ -22,7 +22,6 @@ public final class EnragedWildkinTornado extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -54,7 +53,6 @@ public final class EnragedWildkinTornado extends NpcUnit {
         key = "npc_dota_enraged_wildkin_tornado";
         level = 4;
         magicalResistance = 0;
-        model = "models/heroes/attachto_ghost/attachto_ghost.vmdl";
         modelScale = 16;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
         movementSpeed = 125;
@@ -136,10 +134,6 @@ public final class EnragedWildkinTornado extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

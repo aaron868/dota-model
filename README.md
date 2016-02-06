@@ -1,7 +1,11 @@
 # dota-model
 
-## Version Control
-I had planned to maintain older versions of the library via branches but this has proved too cumbersome. From now on the master branch will have the latest version of the Dota stats.
+## Status
+I'm making major changes to this library. The Valve VPK files are very hard to use so I'm restructuring them to follow good Java object-oriented design. I've started with items. See the Item parent class for examples of what the new API looks like.
+
+As I rework the raw VPK files into a true Java API, I've renamed properties to something more meaningful, dropped unneeded properties, removed internal items such as zero cost recipes, renamed the items classes to match their common name, and added JavaDoc to all the new methods.
+
+It's a slow, manual process. Items are almost done. Next I'm going to significantly rework item abilities. Then I will start with the other objects.
 
 ## Overview
 This library provides a simple Java API for the Dota 2 VPK file data. This includes:
@@ -48,14 +52,3 @@ These are challenging to model in Java because they do not follow a standard cla
 All the Dota objects are modeled as immutable, singletons. There is only one instance of every object. Every object is a JavaBean as well so you can use them with other libraries that recognize the JavaBean standard.
 
 I did not include the special mode objects such as the Diretide creeps or the Greevil stuff. I only included the main game objects.
-
-## Status
-This is beta level code and is guaranteed to have bugs and probably to change somewhat as I refine it. All the Java code is generated from a custom parser so its deeply ugly.  
-
-I've also provided CSV files with the English name to Dota key mappings in case that is useful for you as well. They are under src/main/resources.
-
-## Planned
-I have several things planned for the near term:
-* Decent JavaDoc
-* More unit tests
-* A set of examples.

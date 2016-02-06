@@ -27,7 +27,6 @@ public final class AlphaWolf extends NpcUnit {
     private final int isNeutralUnitType;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -65,7 +64,6 @@ public final class AlphaWolf extends NpcUnit {
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_alpha_wolf";
         level = 4;
-        model = "models/creeps/neutral_creeps/n_creep_worg_large/n_creep_worg_large.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 350;
@@ -168,10 +166,6 @@ public final class AlphaWolf extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

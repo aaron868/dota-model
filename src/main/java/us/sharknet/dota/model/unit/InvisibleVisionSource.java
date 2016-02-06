@@ -9,7 +9,6 @@ public final class InvisibleVisionSource extends NpcUnit {
 
     private final String baseClass;
     private final String key;
-    private final String model;
     private final String movementCapabilities;
     private final int movementSpeed;
     private final int soundSet;
@@ -20,7 +19,6 @@ public final class InvisibleVisionSource extends NpcUnit {
     private InvisibleVisionSource() {
         baseClass = "npc_dota_base_additive";
         key = "npc_dota_invisible_vision_source";
-        model = "models/development/invisiblebox.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
         soundSet = 0;
@@ -42,10 +40,6 @@ public final class InvisibleVisionSource extends NpcUnit {
 
     public String getKey() {
         return key;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public String getMovementCapabilities() {

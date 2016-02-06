@@ -6,8 +6,8 @@ import org.apache.commons.collections.CollectionUtils;
 import us.sharknet.dota.model.Ability;
 import us.sharknet.dota.model.Item;
 import us.sharknet.dota.model.Library;
-import us.sharknet.dota.model.item.Manta;
-import us.sharknet.dota.model.item.UltimateScepter;
+import us.sharknet.dota.model.item.AghanimsScepter;
+import us.sharknet.dota.model.item.MantaStyle;
 
 import java.util.Collection;
 
@@ -44,7 +44,7 @@ public class Complex {
     }
 
     public void getAgilityBonus() {
-        Item[] items = new Item[]{Manta.instance(), UltimateScepter.instance()};
+        Item[] items = new Item[]{MantaStyle.instance(), AghanimsScepter.instance()};
         int bonus = getIntegerItemBonus(items, ITEM_AGILITY_PROPERTIES);
         System.out.println("Agility bonus from a Manta and an Aghs is: " + bonus);
     }

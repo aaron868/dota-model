@@ -30,7 +30,6 @@ public final class WarlockGolemScepter1 extends NpcUnit {
     private final int isSummoned;
     private final String key;
     private final int magicalResistance;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -73,7 +72,6 @@ public final class WarlockGolemScepter1 extends NpcUnit {
         isSummoned = 1;
         key = "npc_dota_warlock_golem_scepter_1";
         magicalResistance = 33;
-        model = "models/heroes/warlock/warlock_demon.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 320;
@@ -190,10 +188,6 @@ public final class WarlockGolemScepter1 extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

@@ -21,7 +21,6 @@ public final class BroodmotherSpinWeb extends Ability {
     private final int[] heath_regen;
     private final int[] invis_movespeed_tooltip;
     private final String localizedName;
-    private final int[] max_charges;
     private final String ownerKey;
     private final AbilityOwnerType ownerType;
     private final boolean passive;
@@ -44,7 +43,6 @@ public final class BroodmotherSpinWeb extends Ability {
         heath_regen = new int[]{2,4,6,8};
         invis_movespeed_tooltip = new int[]{40,50,60,70};
         localizedName = "Spin Web";
-        max_charges = new int[]{1,2,3,4};
         ownerKey = "npc_dota_hero_broodmother";
         ownerType = AbilityOwnerType.Hero;
         passive = false;
@@ -117,10 +115,6 @@ public final class BroodmotherSpinWeb extends Ability {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int[] getMaxCharges() {
-        return max_charges;
     }
 
     public String getOwnerKey() {

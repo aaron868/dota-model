@@ -8,34 +8,54 @@ public final class Sange extends Item {
 
     private final String abilityBehavior;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
     private final String key;
     private final int bonus_damage;
     private final int bonus_strength;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
     private final int maim_attack_speed;
     private final int maim_chance;
     private final int maim_duration;
     private final int maim_movement_speed;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private Sange() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 162;
-        itemAliases = "sange";
-        itemCost = 2050;
-        itemQuality = "artifact";
-        itemShopTags = new String[]{"damage","str","unique"};
+        cost = 2050;
         key = "item_sange";
         bonus_damage = 10;
         bonus_strength = 16;
+        chargeable = false;
+        components = new String[]{"item_ogre_axe","item_belt_of_strength","item_recipe_sange"};
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Sange";
         maim_attack_speed = -20;
         maim_chance = 15;
         maim_duration = 4;
         maim_movement_speed = -20;
+        maxCharges = 0;
+        partOf = new String[]{"item_sange_and_yasha","item_heavens_halberd","item_silver_edge"};
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static Sange instance() {
@@ -53,20 +73,8 @@ public final class Sange extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
@@ -79,6 +87,22 @@ public final class Sange extends Item {
 
     public int getBonusStrength() {
         return bonus_strength;
+    }
+
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
     }
 
     public String getLocalizedName() {
@@ -99,6 +123,42 @@ public final class Sange extends Item {
 
     public int getMaimMovementSpeed() {
         return maim_movement_speed;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

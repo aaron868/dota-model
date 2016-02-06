@@ -8,40 +8,56 @@ public final class BlackKingBar extends Item {
 
     private final String[] abilityBehavior;
     private final int[] abilityCooldown;
-    private final int fightRecapLevel;
     private final int iD;
-    private final String[] itemAliases;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final String itemQuality;
-    private final int itemSellable;
-    private final String[] itemShopTags;
+    private final int cost;
+    private final boolean sellable;
     private final String key;
     private final int bonus_damage;
     private final int bonus_strength;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final double[] duration;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
     private final int max_level;
     private final int model_scale;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private BlackKingBar() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCooldown = new int[]{80,75,70,65,60,55};
-        fightRecapLevel = 2;
         iD = 116;
-        itemAliases = new String[]{"bkb","black king bar"};
-        itemCost = 3975;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_IN_SPEECH","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemQuality = "epic";
-        itemSellable = 1;
-        itemShopTags = new String[]{"str","damage","hard_to_tag"};
+        cost = 3975;
+        sellable = true;
         key = "item_black_king_bar";
         bonus_damage = 24;
         bonus_strength = 10;
+        chargeable = false;
+        components = new String[]{"item_ogre_axe","item_mithril_hammer","item_recipe_black_king_bar"};
+        consumable = false;
         duration = new double[]{10.0,9.0,8.0,7.0,6.0,5.0};
+        initialCharges = 0;
         localizedName = "Black King Bar";
+        maxCharges = 0;
         max_level = 6;
         model_scale = 30;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static BlackKingBar instance() {
@@ -59,36 +75,16 @@ public final class BlackKingBar extends Item {
         return abilityCooldown;
     }
 
-    public int getFightRecapLevel() {
-        return fightRecapLevel;
-    }
-
     public int getID() {
         return iD;
     }
 
-    public String[] getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public int getItemSellable() {
-        return itemSellable;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public boolean isSellable() {
+        return sellable;
     }
 
     public String getKey() {
@@ -103,12 +99,32 @@ public final class BlackKingBar extends Item {
         return bonus_strength;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
     public double[] getDuration() {
         return duration;
     }
 
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
     }
 
     public int getMaxLevel() {
@@ -117,6 +133,38 @@ public final class BlackKingBar extends Item {
 
     public int getModelScale() {
         return model_scale;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

@@ -32,7 +32,7 @@ public final class ObsidianDestroyerMindOverMatter extends Ability {
         abilityCastRange = new int[]{800,800,800,800};
         abilityCooldown = new double[]{16,14,12,10};
         abilityManaCost = new int[]{80,100,120,140};
-        abilityUnitDamageType = "DAMAGE_TYPE_MAGIC";
+        abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5684;
         key = "obsidian_destroyer_mind_over_matter";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";

@@ -24,7 +24,6 @@ public final class TrollWarlordAxe extends NpcUnit {
     private final String combatClassDefend;
     private final String key;
     private final int level;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -56,7 +55,6 @@ public final class TrollWarlordAxe extends NpcUnit {
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         key = "npc_dota_troll_warlord_axe";
         level = 1;
-        model = "models/development/invisiblebox.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
         movementSpeed = 0;
@@ -144,10 +142,6 @@ public final class TrollWarlordAxe extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

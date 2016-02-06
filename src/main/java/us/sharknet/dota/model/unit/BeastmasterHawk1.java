@@ -19,7 +19,6 @@ public final class BeastmasterHawk1 extends NpcUnit {
     private final int isSummoned;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -48,7 +47,6 @@ public final class BeastmasterHawk1 extends NpcUnit {
         isSummoned = 1;
         key = "npc_dota_beastmaster_hawk_1";
         level = 6;
-        model = "models/heroes/beastmaster/beastmaster_bird.vmdl";
         modelScale = 1.2;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
         movementSpeed = 250;
@@ -118,10 +116,6 @@ public final class BeastmasterHawk1 extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

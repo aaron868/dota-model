@@ -47,7 +47,7 @@ public class Simple {
         System.out.println("Free Dota Items");
         System.out.println("**************************");
         for (Item item : library.getItems()) {
-            if (item.getItemCost() == 0) {
+            if (item.getCost() == 0) {
                 System.out.println(item.getLocalizedName());
             }
         }

@@ -34,7 +34,6 @@ public final class CreepBadguysMelee extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -79,7 +78,6 @@ public final class CreepBadguysMelee extends NpcUnit {
         key = "npc_dota_creep_badguys_melee";
         level = 3;
         magicalResistance = 0;
-        model = "models/creeps/lane_creeps/creep_bad_melee/creep_bad_melee.vmdl";
         modelScale = .93;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 325;
@@ -210,10 +208,6 @@ public final class CreepBadguysMelee extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

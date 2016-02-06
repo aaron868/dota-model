@@ -26,7 +26,7 @@ public class LibraryTest {
 
     @Test
     public void testGetNumberOfItems() throws Exception {
-        assertEquals(242, library.getNumberOfItems());
+        assertEquals(207, library.getNumberOfItems());
     }
 
     @Test

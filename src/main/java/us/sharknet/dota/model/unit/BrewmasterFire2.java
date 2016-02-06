@@ -30,7 +30,6 @@ public final class BrewmasterFire2 extends NpcUnit {
     private final int isSummoned;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -68,7 +67,6 @@ public final class BrewmasterFire2 extends NpcUnit {
         isSummoned = 0;
         key = "npc_dota_brewmaster_fire_2";
         level = 8;
-        model = "models/heroes/brewmaster/brewmaster_firespirit.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 522;
@@ -180,10 +178,6 @@ public final class BrewmasterFire2 extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

@@ -618,3 +618,4 @@ ID,key,localizedName,ownerKey,ownerType,placeholder,passive
 5002,attribute_bonus,Stats,stats,Hero,FALSE,FALSE
 5350,backdoor_protection,Backdoor Protection,tower,Tower,FALSE,FALSE
 5351,backdoor_protection_in_base,Backdoor Protection In Base,tower,Tower,FALSE,FALSE
+

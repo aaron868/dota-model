@@ -21,7 +21,6 @@ public final class EarthSpiritStone extends NpcUnit {
     private final String combatClassDefend;
     private final String key;
     private final int level;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -50,7 +49,6 @@ public final class EarthSpiritStone extends NpcUnit {
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         key = "npc_dota_earth_spirit_stone";
         level = 4;
-        model = "models/heroes/attachto_ghost/attachto_ghost.vmdl";
         modelScale = 12;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
         movementSpeed = 0;
@@ -126,10 +124,6 @@ public final class EarthSpiritStone extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

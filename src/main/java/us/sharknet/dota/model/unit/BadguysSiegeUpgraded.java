@@ -37,7 +37,6 @@ public final class BadguysSiegeUpgraded extends NpcUnit {
     private final int magicalResistance;
     private final String minimapIcon;
     private final int minimapIconSize;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -87,7 +86,6 @@ public final class BadguysSiegeUpgraded extends NpcUnit {
         magicalResistance = 80;
         minimapIcon = "minimap_siege";
         minimapIconSize = 250;
-        model = "models/creeps/lane_creeps/creep_bad_siege/creep_bad_siege.vmdl";
         modelScale = .8;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 325;
@@ -232,10 +230,6 @@ public final class BadguysSiegeUpgraded extends NpcUnit {
 
     public int getMinimapIconSize() {
         return minimapIconSize;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

@@ -33,7 +33,6 @@ public final class VisageFamiliar3 extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -81,7 +80,6 @@ public final class VisageFamiliar3 extends NpcUnit {
         key = "npc_dota_visage_familiar3";
         level = 2;
         magicalResistance = 0;
-        model = "models/heroes/visage/visage_familiar.vmdl";
         modelScale = .66;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 400;
@@ -212,10 +210,6 @@ public final class VisageFamiliar3 extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

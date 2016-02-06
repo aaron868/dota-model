@@ -28,7 +28,6 @@ public final class ShadowShamanWard1 extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -70,7 +69,6 @@ public final class ShadowShamanWard1 extends NpcUnit {
         key = "npc_dota_shadow_shaman_ward_1";
         level = 3;
         magicalResistance = 0;
-        model = "models/heroes/shadowshaman/shadowshaman_totem.vmdl";
         modelScale = 1.15;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
@@ -180,10 +178,6 @@ public final class ShadowShamanWard1 extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

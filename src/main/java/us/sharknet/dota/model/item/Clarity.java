@@ -12,19 +12,25 @@ public final class Clarity extends Item {
     private final String abilityUnitTargetTeam;
     private final String abilityUnitTargetType;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final int itemInitialCharges;
-    private final int itemPermanent;
-    private final String itemQuality;
-    private final String itemShopTags;
-    private final int itemStackable;
+    private final int cost;
+    private final boolean stackable;
     private final String key;
-    private final String model;
-    private final int sideShop;
     private final int buff_duration;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
     private final int total_mana;
+    private final Vendor[] vendorLocations;
 
     private Clarity() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET","DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"};
@@ -33,19 +39,25 @@ public final class Clarity extends Item {
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_FRIENDLY";
         abilityUnitTargetType = "DOTA_UNIT_TARGET_HERO";
         iD = 38;
-        itemAliases = "clarity";
-        itemCost = 50;
-        itemInitialCharges = 1;
-        itemPermanent = 0;
-        itemQuality = "consumable";
-        itemShopTags = "consumable";
-        itemStackable = 1;
+        cost = 50;
+        stackable = true;
         key = "item_clarity";
-        model = "models/props_gameplay/clarity.vmdl";
-        sideShop = 0;
         buff_duration = 50;
+        chargeable = false;
+        components = new String[0];
+        consumable = true;
+        initialCharges = 0;
         localizedName = "Clarity";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
         total_mana = 190;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static Clarity instance() {
@@ -79,56 +91,80 @@ public final class Clarity extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public int getItemInitialCharges() {
-        return itemInitialCharges;
-    }
-
-    public int getItemPermanent() {
-        return itemPermanent;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String getItemShopTags() {
-        return itemShopTags;
-    }
-
-    public int getItemStackable() {
-        return itemStackable;
+    public boolean isStackable() {
+        return stackable;
     }
 
     public String getKey() {
         return key;
     }
 
-    public String getModel() {
-        return model;
-    }
-
-    public int getSideShop() {
-        return sideShop;
-    }
-
     public int getBuffDuration() {
         return buff_duration;
+    }
+
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
     }
 
     public String getLocalizedName() {
         return localizedName;
     }
 
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
     public int getTotalMana() {
         return total_mana;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

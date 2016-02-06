@@ -28,7 +28,6 @@ public final class ViperViperStrike extends Ability {
     private final double[] duration;
     private final String localizedName;
     private final int[] mana_cost_scepter;
-    private final int max_charges;
     private final String ownerKey;
     private final AbilityOwnerType ownerType;
     private final boolean passive;
@@ -58,7 +57,6 @@ public final class ViperViperStrike extends Ability {
         duration = new double[]{5.1,5.1,5.1};
         localizedName = "Viper Strike";
         mana_cost_scepter = new int[]{125,125,125};
-        max_charges = 2;
         ownerKey = "npc_dota_hero_viper";
         ownerType = AbilityOwnerType.Hero;
         passive = false;
@@ -159,10 +157,6 @@ public final class ViperViperStrike extends Ability {
 
     public int[] getManaCostScepter() {
         return mana_cost_scepter;
-    }
-
-    public int getMaxCharges() {
-        return max_charges;
     }
 
     public String getOwnerKey() {

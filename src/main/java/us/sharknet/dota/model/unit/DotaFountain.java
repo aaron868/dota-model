@@ -34,7 +34,6 @@ public final class DotaFountain extends NpcUnit {
     private final int magicalResistance;
     private final String minimapIcon;
     private final int minimapIconSize;
-    private final String model;
     private final String movementCapabilities;
     private final int movementSpeed;
     private final double movementTurnRate;
@@ -80,7 +79,6 @@ public final class DotaFountain extends NpcUnit {
         magicalResistance = 0;
         minimapIcon = "minimap_ward_obs";
         minimapIconSize = 1;
-        model = "models/props_c17/fountain_01.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
         movementTurnRate = 0;
@@ -212,10 +210,6 @@ public final class DotaFountain extends NpcUnit {
 
     public int getMinimapIconSize() {
         return minimapIconSize;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public String getMovementCapabilities() {

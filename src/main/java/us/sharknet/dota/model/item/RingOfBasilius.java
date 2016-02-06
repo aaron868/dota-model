@@ -8,40 +8,54 @@ public final class RingOfBasilius extends Item {
 
     private final String[] abilityBehavior;
     private final int iD;
-    private final String[] itemAliases;
-    private final int itemCost;
-    private final String itemDisassembleRule;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
+    private final boolean disassemblable;
     private final String key;
-    private final String uIDropSound;
-    private final String uIPickupSound;
-    private final String worldDropSound;
     private final int aura_bonus_armor;
     private final double aura_mana_regen;
     private final int aura_radius;
     private final int bonus_armor;
     private final int bonus_damage;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private RingOfBasilius() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_TOGGLE"};
         iD = 88;
-        itemAliases = new String[]{"rob","ring of basilius"};
-        itemCost = 500;
-        itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
-        itemQuality = "rare";
-        itemShopTags = new String[]{"damage","regen_mana","armor"};
+        cost = 500;
+        disassemblable = true;
         key = "item_ring_of_basilius";
-        uIDropSound = "Item.DropRingShop";
-        uIPickupSound = "Item.PickUpRingShop";
-        worldDropSound = "Item.DropRingWorld";
         aura_bonus_armor = 2;
         aura_mana_regen = .65;
         aura_radius = 900;
         bonus_armor = 1;
         bonus_damage = 6;
+        chargeable = false;
+        components = new String[]{"item_sobi_mask","item_ring_of_protection"};
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Ring Of Basilius";
+        maxCharges = 0;
+        partOf = new String[]{"item_vladmir","item_ring_of_aquila"};
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static RingOfBasilius instance() {
@@ -59,40 +73,16 @@ public final class RingOfBasilius extends Item {
         return iD;
     }
 
-    public String[] getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String getItemDisassembleRule() {
-        return itemDisassembleRule;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public boolean isDisassemblable() {
+        return disassemblable;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public String getUIDropSound() {
-        return uIDropSound;
-    }
-
-    public String getUIPickupSound() {
-        return uIPickupSound;
-    }
-
-    public String getWorldDropSound() {
-        return worldDropSound;
     }
 
     public int getAuraBonusArmor() {
@@ -115,8 +105,60 @@ public final class RingOfBasilius extends Item {
         return bonus_damage;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

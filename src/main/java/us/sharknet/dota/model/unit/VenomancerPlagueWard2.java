@@ -28,7 +28,6 @@ public final class VenomancerPlagueWard2 extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -69,7 +68,6 @@ public final class VenomancerPlagueWard2 extends NpcUnit {
         key = "npc_dota_venomancer_plague_ward_2";
         level = 1;
         magicalResistance = 0;
-        model = "models/heroes/venomancer/venomancer_ward.vmdl";
         modelScale = .8;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
@@ -178,10 +176,6 @@ public final class VenomancerPlagueWard2 extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

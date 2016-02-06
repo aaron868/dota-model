@@ -25,7 +25,6 @@ public final class TemplarAssassinPsionicTrap extends NpcUnit {
     private final int healthBarOffset;
     private final String key;
     private final int level;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -59,7 +58,6 @@ public final class TemplarAssassinPsionicTrap extends NpcUnit {
         healthBarOffset = 140;
         key = "npc_dota_templar_assassin_psionic_trap";
         level = 1;
-        model = "models/heroes/lanaya/lanaya_trap_crystal_invis.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
@@ -152,10 +150,6 @@ public final class TemplarAssassinPsionicTrap extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

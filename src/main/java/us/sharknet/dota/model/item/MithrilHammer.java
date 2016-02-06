@@ -8,24 +8,44 @@ public final class MithrilHammer extends Item {
 
     private final String abilityBehavior;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final String itemQuality;
-    private final String itemShopTags;
+    private final int cost;
     private final String key;
     private final int bonus_damage;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private MithrilHammer() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 8;
-        itemAliases = "mithril hammer";
-        itemCost = 1600;
-        itemQuality = "component";
-        itemShopTags = "damage";
+        cost = 1600;
         key = "item_mithril_hammer";
         bonus_damage = 24;
+        chargeable = false;
+        components = new String[0];
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Mithril Hammer";
+        maxCharges = 0;
+        partOf = new String[]{"item_maelstrom","item_desolator","item_desolator","item_black_king_bar"};
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static MithrilHammer instance() {
@@ -43,20 +63,8 @@ public final class MithrilHammer extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
@@ -67,8 +75,60 @@ public final class MithrilHammer extends Item {
         return bonus_damage;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

@@ -19,7 +19,7 @@ public final class WinterWyvernWintersCurse extends Ability {
     private final String key;
     private final String spellImmunityType;
     private final int bonus_attack_speed;
-    private final double damage_amplification;
+    private final int damage_amplification;
     private final int damage_reduction;
     private final double[] duration;
     private final String localizedName;
@@ -43,7 +43,7 @@ public final class WinterWyvernWintersCurse extends Ability {
         key = "winter_wyvern_winters_curse";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_YES";
         bonus_attack_speed = 70;
-        damage_amplification = 0.0;
+        damage_amplification = 0;
         damage_reduction = 100;
         duration = new double[]{3.25,4.0,4.75};
         localizedName = "Winters Curse";
@@ -113,7 +113,7 @@ public final class WinterWyvernWintersCurse extends Ability {
         return bonus_attack_speed;
     }
 
-    public double getDamageAmplification() {
+    public int getDamageAmplification() {
         return damage_amplification;
     }
 

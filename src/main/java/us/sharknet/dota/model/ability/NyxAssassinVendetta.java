@@ -17,7 +17,7 @@ public final class NyxAssassinVendetta extends Ability {
     private final int[] bonus_damage;
     private final double[] cooldown_scepter;
     private final double[] duration;
-    private final double fade_time;
+    private final int fade_time;
     private final int health_regen_rate_scepter;
     private final String localizedName;
     private final int mana_regen_rate_scepter;
@@ -39,7 +39,7 @@ public final class NyxAssassinVendetta extends Ability {
         bonus_damage = new int[]{250,400,550};
         cooldown_scepter = new double[]{70.0,60.0,50.0};
         duration = new double[]{40.0,50.0,60.0};
-        fade_time = 0.0;
+        fade_time = 0;
         health_regen_rate_scepter = 3;
         localizedName = "Vendetta";
         mana_regen_rate_scepter = 3;
@@ -101,7 +101,7 @@ public final class NyxAssassinVendetta extends Ability {
         return duration;
     }
 
-    public double getFadeTime() {
+    public int getFadeTime() {
         return fade_time;
     }
 

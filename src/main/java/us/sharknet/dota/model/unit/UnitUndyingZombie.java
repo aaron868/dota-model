@@ -29,7 +29,6 @@ public final class UnitUndyingZombie extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -70,7 +69,6 @@ public final class UnitUndyingZombie extends NpcUnit {
         key = "npc_dota_unit_undying_zombie";
         level = 1;
         magicalResistance = 33;
-        model = "models/heroes/undying/undying_minion.vmdl";
         modelScale = 1.5;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 375;
@@ -182,10 +180,6 @@ public final class UnitUndyingZombie extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

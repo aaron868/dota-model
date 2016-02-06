@@ -26,7 +26,6 @@ public final class KoboldTaskmaster extends NpcUnit {
     private final int isNeutralUnitType;
     private final String key;
     private final int level;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -63,7 +62,6 @@ public final class KoboldTaskmaster extends NpcUnit {
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_kobold_taskmaster";
         level = 2;
-        model = "models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 330;
@@ -162,10 +160,6 @@ public final class KoboldTaskmaster extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

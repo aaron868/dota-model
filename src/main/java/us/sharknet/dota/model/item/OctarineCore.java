@@ -8,12 +8,8 @@ public final class OctarineCore extends Item {
 
     private final String abilityBehavior;
     private final int iD;
-    private final String[] itemAliases;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final String itemDisassembleRule;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
+    private final boolean disassemblable;
     private final String key;
     private final int active_duration;
     private final int bonus_cooldown;
@@ -22,19 +18,28 @@ public final class OctarineCore extends Item {
     private final int bonus_intelligence;
     private final int bonus_mana;
     private final int bonus_mana_regen;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final int creep_lifesteal;
     private final int hero_lifesteal;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private OctarineCore() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 235;
-        itemAliases = new String[]{"mana","mb","octarine core"};
-        itemCost = 5900;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemDisassembleRule = "DOTA_ITEM_DISASSEMBLE_ALWAYS";
-        itemQuality = "rare";
-        itemShopTags = new String[]{"move_speed","boost_mana","mana_pool"};
+        cost = 5900;
+        disassemblable = true;
         key = "item_octarine_core";
         active_duration = 7;
         bonus_cooldown = 25;
@@ -43,9 +48,22 @@ public final class OctarineCore extends Item {
         bonus_intelligence = 25;
         bonus_mana = 400;
         bonus_mana_regen = 100;
+        chargeable = false;
+        components = new String[]{"item_mystic_staff","item_soul_booster"};
+        consumable = false;
         creep_lifesteal = 5;
         hero_lifesteal = 25;
+        initialCharges = 0;
         localizedName = "Octarine Core";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static OctarineCore instance() {
@@ -63,28 +81,12 @@ public final class OctarineCore extends Item {
         return iD;
     }
 
-    public String[] getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public String getItemDisassembleRule() {
-        return itemDisassembleRule;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public boolean isDisassemblable() {
+        return disassemblable;
     }
 
     public String getKey() {
@@ -119,6 +121,18 @@ public final class OctarineCore extends Item {
         return bonus_mana_regen;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
     public int getCreepLifesteal() {
         return creep_lifesteal;
     }
@@ -127,8 +141,48 @@ public final class OctarineCore extends Item {
         return hero_lifesteal;
     }
 
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

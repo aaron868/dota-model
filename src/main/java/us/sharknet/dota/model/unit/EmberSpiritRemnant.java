@@ -21,7 +21,6 @@ public final class EmberSpiritRemnant extends NpcUnit {
     private final String combatClassDefend;
     private final String key;
     private final int level;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -50,7 +49,6 @@ public final class EmberSpiritRemnant extends NpcUnit {
         combatClassDefend = "DOTA_COMBAT_CLASS_DEFEND_SOFT";
         key = "npc_dota_ember_spirit_remnant";
         level = 1;
-        model = "models/development/invisiblebox.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 0;
@@ -126,10 +124,6 @@ public final class EmberSpiritRemnant extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

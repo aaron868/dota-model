@@ -25,7 +25,6 @@ public final class KoboldTunneler extends NpcUnit {
     private final int isNeutralUnitType;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -61,7 +60,6 @@ public final class KoboldTunneler extends NpcUnit {
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_kobold_tunneler";
         level = 1;
-        model = "models/creeps/neutral_creeps/n_creep_kobold/kobold_b/n_creep_kobold_b.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 270;
@@ -156,10 +154,6 @@ public final class KoboldTunneler extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

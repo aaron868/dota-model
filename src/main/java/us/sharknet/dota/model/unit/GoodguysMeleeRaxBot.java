@@ -34,7 +34,6 @@ public final class GoodguysMeleeRaxBot extends NpcUnit {
     private final String key;
     private final int magicalResistance;
     private final String minimapIcon;
-    private final String model;
     private final String movementCapabilities;
     private final int movementSpeed;
     private final double movementTurnRate;
@@ -79,7 +78,6 @@ public final class GoodguysMeleeRaxBot extends NpcUnit {
         key = "npc_dota_goodguys_melee_rax_bot";
         magicalResistance = 0;
         minimapIcon = "minimap_racks90";
-        model = "models/buildings/building_racks_melee_reference.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
         movementTurnRate = 0;
@@ -210,10 +208,6 @@ public final class GoodguysMeleeRaxBot extends NpcUnit {
 
     public String getMinimapIcon() {
         return minimapIcon;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public String getMovementCapabilities() {

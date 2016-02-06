@@ -35,7 +35,6 @@ public final class BadguysTower1Bot extends NpcUnit {
     private final int magicalResistance;
     private final String minimapIcon;
     private final int minimapIconSize;
-    private final String model;
     private final String movementCapabilities;
     private final int movementSpeed;
     private final double movementTurnRate;
@@ -83,7 +82,6 @@ public final class BadguysTower1Bot extends NpcUnit {
         magicalResistance = 0;
         minimapIcon = "minimap_tower90";
         minimapIconSize = 320;
-        model = "models/props_structures/tower001.vmdl";
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
         movementTurnRate = 1;
@@ -220,10 +218,6 @@ public final class BadguysTower1Bot extends NpcUnit {
 
     public int getMinimapIconSize() {
         return minimapIconSize;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public String getMovementCapabilities() {

@@ -8,26 +8,44 @@ public final class Platemail extends Item {
 
     private final String abilityBehavior;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final String itemQuality;
-    private final String itemShopTags;
+    private final int cost;
     private final String key;
-    private final int secretShop;
     private final int bonus_armor;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private Platemail() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         iD = 9;
-        itemAliases = "platemail";
-        itemCost = 1400;
-        itemQuality = "secret_shop";
-        itemShopTags = "armor";
+        cost = 1400;
         key = "item_platemail";
-        secretShop = 1;
         bonus_armor = 10;
+        chargeable = false;
+        components = new String[0];
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Platemail";
+        maxCharges = 0;
+        partOf = new String[]{"item_shivas_guard","item_lotus_orb","item_assault"};
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.SECRET_SHOP};
     }
 
     public static Platemail instance() {
@@ -45,36 +63,72 @@ public final class Platemail extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
         return key;
     }
 
-    public int getSecretShop() {
-        return secretShop;
-    }
-
     public int getBonusArmor() {
         return bonus_armor;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

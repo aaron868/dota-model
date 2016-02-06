@@ -10,36 +10,52 @@ public final class HoodOfDefiance extends Item {
     private final int abilityCooldown;
     private final int abilityManaCost;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final String[] itemDeclarations;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
     private final String key;
     private final int barrier_block;
     private final int barrier_duration;
     private final int bonus_health_regen;
     private final int bonus_spell_resist;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
-    private final int tooltip_resist;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private HoodOfDefiance() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCooldown = 6;
         abilityManaCost = 75;
         iD = 131;
-        itemAliases = "hood of defiance";
-        itemCost = 2100;
-        itemDeclarations = new String[]{"DECLARE_PURCHASES_TO_TEAMMATES","DECLARE_PURCHASES_TO_SPECTATORS"};
-        itemQuality = "epic";
-        itemShopTags = new String[]{"regen_health","magic_resist"};
+        cost = 2100;
         key = "item_hood_of_defiance";
         barrier_block = 325;
         barrier_duration = 12;
         bonus_health_regen = 9;
         bonus_spell_resist = 30;
+        chargeable = false;
+        components = new String[]{"item_ring_of_health","item_cloak","item_ring_of_regen","item_ring_of_regen"};
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Hood Of Defiance";
-        tooltip_resist = 30;
+        maxCharges = 0;
+        partOf = new String[]{"item_pipe"};
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static HoodOfDefiance instance() {
@@ -65,24 +81,8 @@ public final class HoodOfDefiance extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String[] getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
@@ -105,12 +105,60 @@ public final class HoodOfDefiance extends Item {
         return bonus_spell_resist;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
     }
 
-    public int getTooltipResist() {
-        return tooltip_resist;
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

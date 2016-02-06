@@ -27,7 +27,6 @@ public final class SatyrHellcaller extends NpcUnit {
     private final int isNeutralUnitType;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -65,7 +64,6 @@ public final class SatyrHellcaller extends NpcUnit {
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_satyr_hellcaller";
         level = 6;
-        model = "models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.vmdl";
         modelScale = .95;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 290;
@@ -168,10 +166,6 @@ public final class SatyrHellcaller extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

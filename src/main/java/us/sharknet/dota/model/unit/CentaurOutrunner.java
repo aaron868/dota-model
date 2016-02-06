@@ -26,7 +26,6 @@ public final class CentaurOutrunner extends NpcUnit {
     private final int isNeutralUnitType;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -63,7 +62,6 @@ public final class CentaurOutrunner extends NpcUnit {
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_centaur_outrunner";
         level = 2;
-        model = "models/creeps/neutral_creeps/n_creep_centaur_med/n_creep_centaur_med.vmdl";
         modelScale = .8;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 350;
@@ -162,10 +160,6 @@ public final class CentaurOutrunner extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

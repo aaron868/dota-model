@@ -11,23 +11,28 @@ public final class Tango extends Item {
     private final int abilityCastRange;
     private final String abilityUnitTargetTeam;
     private final String[] abilityUnitTargetType;
-    private final String effect;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final int itemInitialCharges;
-    private final int itemPermanent;
-    private final String itemQuality;
-    private final String itemShopTags;
-    private final int itemStackable;
+    private final int cost;
+    private final boolean stackable;
     private final String key;
-    private final String model;
-    private final int sideShop;
     private final int buff_duration;
     private final int cast_range_ward;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
     private final int total_heal;
     private final int total_heal_ward_tooltip;
+    private final Vendor[] vendorLocations;
 
     private Tango() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET";
@@ -35,23 +40,28 @@ public final class Tango extends Item {
         abilityCastRange = 165;
         abilityUnitTargetTeam = "DOTA_UNIT_TARGET_TEAM_CUSTOM";
         abilityUnitTargetType = new String[]{"DOTA_UNIT_TARGET_TREE","DOTA_UNIT_TARGET_CUSTOM"};
-        effect = "particles/generic_gameplay/dropped_tango.vpcf";
         iD = 44;
-        itemAliases = "tango";
-        itemCost = 125;
-        itemInitialCharges = 4;
-        itemPermanent = 0;
-        itemQuality = "consumable";
-        itemShopTags = "consumable";
-        itemStackable = 1;
+        cost = 125;
+        stackable = true;
         key = "item_tango";
-        model = "models/props_gameplay/tango.vmdl";
-        sideShop = 0;
         buff_duration = 16;
         cast_range_ward = 450;
+        chargeable = false;
+        components = new String[0];
+        consumable = true;
+        initialCharges = 0;
         localizedName = "Tango";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 4;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
         total_heal = 115;
         total_heal_ward_tooltip = 230;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static Tango instance() {
@@ -81,52 +91,20 @@ public final class Tango extends Item {
         return abilityUnitTargetType;
     }
 
-    public String getEffect() {
-        return effect;
-    }
-
     public int getID() {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
+    public int getCost() {
+        return cost;
     }
 
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public int getItemInitialCharges() {
-        return itemInitialCharges;
-    }
-
-    public int getItemPermanent() {
-        return itemPermanent;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String getItemShopTags() {
-        return itemShopTags;
-    }
-
-    public int getItemStackable() {
-        return itemStackable;
+    public boolean isStackable() {
+        return stackable;
     }
 
     public String getKey() {
         return key;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public int getSideShop() {
-        return sideShop;
     }
 
     public int getBuffDuration() {
@@ -137,8 +115,56 @@ public final class Tango extends Item {
         return cast_range_ward;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
     }
 
     public int getTotalHeal() {
@@ -147,6 +173,10 @@ public final class Tango extends Item {
 
     public int getTotalHealWardTooltip() {
         return total_heal_ward_tooltip;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

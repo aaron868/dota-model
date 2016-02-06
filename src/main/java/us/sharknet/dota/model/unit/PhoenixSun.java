@@ -25,7 +25,6 @@ public final class PhoenixSun extends NpcUnit {
     private final int healthBarOffset;
     private final String key;
     private final int level;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -59,7 +58,6 @@ public final class PhoenixSun extends NpcUnit {
         healthBarOffset = 450;
         key = "npc_dota_phoenix_sun";
         level = 0;
-        model = "models/heroes/phoenix/phoenix_egg.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
@@ -152,10 +150,6 @@ public final class PhoenixSun extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

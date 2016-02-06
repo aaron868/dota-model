@@ -28,7 +28,6 @@ public final class DireEidolon extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -71,7 +70,6 @@ public final class DireEidolon extends NpcUnit {
         key = "npc_dota_dire_eidolon";
         level = 1;
         magicalResistance = 50;
-        model = "models/heroes/enigma/eidelon.vmdl";
         modelScale = .9;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 320;
@@ -182,10 +180,6 @@ public final class DireEidolon extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

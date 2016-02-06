@@ -29,7 +29,6 @@ public final class FlyingCourier extends NpcUnit {
     private final String key;
     private final int level;
     private final int magicalResistance;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -69,7 +68,6 @@ public final class FlyingCourier extends NpcUnit {
         key = "npc_dota_flying_courier";
         level = 10;
         magicalResistance = 0;
-        model = "models/props_gameplay/donkey_wings.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
         movementSpeed = 350;
@@ -180,10 +178,6 @@ public final class FlyingCourier extends NpcUnit {
 
     public int getMagicalResistance() {
         return magicalResistance;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

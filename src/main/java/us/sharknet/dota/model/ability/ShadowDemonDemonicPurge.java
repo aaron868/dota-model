@@ -25,7 +25,6 @@ public final class ShadowDemonDemonicPurge extends Ability {
     private final int charge_restore_time_tooltip_scepter;
     private final double[] creep_root_duration;
     private final String localizedName;
-    private final int max_charges;
     private final String ownerKey;
     private final AbilityOwnerType ownerType;
     private final boolean passive;
@@ -53,7 +52,6 @@ public final class ShadowDemonDemonicPurge extends Ability {
         charge_restore_time_tooltip_scepter = 40;
         creep_root_duration = new double[]{3.0,3.0,3.0};
         localizedName = "Demonic Purge";
-        max_charges = 3;
         ownerKey = "npc_dota_hero_shadow_demon";
         ownerType = AbilityOwnerType.Hero;
         passive = false;
@@ -143,10 +141,6 @@ public final class ShadowDemonDemonicPurge extends Ability {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int getMaxCharges() {
-        return max_charges;
     }
 
     public String getOwnerKey() {

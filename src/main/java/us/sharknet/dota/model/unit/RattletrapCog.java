@@ -26,7 +26,6 @@ public final class RattletrapCog extends NpcUnit {
     private final int ignoreAddSummonedToSelection;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -61,7 +60,6 @@ public final class RattletrapCog extends NpcUnit {
         ignoreAddSummonedToSelection = 1;
         key = "npc_dota_rattletrap_cog";
         level = 0;
-        model = "models/heroes/rattletrap/rattletrap_cog.vmdl";
         modelScale = 1.7;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_NONE";
         movementSpeed = 0;
@@ -158,10 +156,6 @@ public final class RattletrapCog extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

@@ -1,243 +1,208 @@
-"key","localizedName"
-"item_abyssal_blade","Abyssal Blade"
-"item_aegis","Aegis"
-"item_ancient_janggo","Drum Of Endurance"
-"item_arcane_boots","Arcane Boots"
-"item_armlet","Armlet Of Mordiggian"
-"item_assault","Assault Cuirass"
-"item_basher","Skull Basher"
-"item_belt_of_strength","Belt Of Strength"
-"item_bfury","Battle Fury"
-"item_black_king_bar","Black King Bar"
-"item_blade_mail","Blade Mail"
-"item_blade_of_alacrity","Blade Of Alacrity"
-"item_blades_of_attack","Blades Of Attack"
-"item_blink","Blink Dagger"
-"item_bloodstone","Bloodstone"
-"item_boots","Boots Of Speed"
-"item_boots_of_elves","Band Of Elvenskin"
-"item_bottle","Bottle"
-"item_bracer","Bracer"
-"item_branches","Iron Branch"
-"item_broadsword","Broadsword"
-"item_buckler","Buckler"
-"item_butterfly","Butterfly"
-"item_chainmail","Chainmail"
-"item_cheese","Cheese"
-"item_circlet","Circlet"
-"item_clarity","Clarity"
-"item_claymore","Claymore"
-"item_cloak","Cloak"
-"item_courier","Animal Courier"
-"item_crimson_guard","Crimson Guard"
-"item_cyclone","Eul's Scepter Of Divinity"
-"item_dagon","Dagon 1"
-"item_dagon_2","Dagon 2"
-"item_dagon_3","Dagon 3"
-"item_dagon_4","Dagon 4"
-"item_dagon_5","Dagon 5"
-"item_demon_edge","Demon Edge"
-"item_desolator","Desolator"
-"item_diffusal_blade","Diffusal Blade 1"
-"item_diffusal_blade_2","Diffusal Blade 2"
-"item_dust","Dust Of Appearance"
-"item_eagle","Eaglesong"
-"item_enchanted_mango","Enchanted Mango"
-"item_energy_booster","Energy Booster"
-"item_ethereal_blade","Ethereal Blade"
-"item_flask","Healing Salve"
-"item_flying_courier","Flying Courier"
-"item_force_staff","Force Staff"
-"item_gauntlets","Gauntlets Of Strength"
-"item_gem","Gem Of True Sight"
-"item_ghost","Ghost Scepter"
-"item_glimmer_cape","Glimmer Cape"
-"item_gloves","Gloves Of Haste"
-"item_greater_crit","Daedalus"
-"item_guardian_greaves","Guardian Greaves"
-"item_hand_of_midas","Hand Of Midas"
-"item_headdress","Headdress"
-"item_heart","Heart Of Tarrasque"
-"item_heavens_halberd","Heaven's Halberd"
-"item_helm_of_iron_will","Helm Of Iron Will"
-"item_helm_of_the_dominator","Helm Of The Dominator"
-"item_hood_of_defiance","Hood Of Defiance"
-"item_hyperstone","Hyperstone"
-"item_invis_sword","Shadow Blade"
-"item_javelin","Javelin"
-"item_lesser_crit","Crystalys"
-"item_lifesteal","Morbid Mask"
-"item_lotus_orb","Lotus Orb"
-"item_maelstrom","Maelstrom"
-"item_magic_stick","Magic Stick"
-"item_magic_wand","Magic Wand"
-"item_manta","Manta Style"
-"item_mantle","Mantle Of Intelligence"
-"item_mask_of_madness","Mask Of Madness"
-"item_medallion_of_courage","Medallion Of Courage"
-"item_mekansm","Mekansm"
-"item_mithril_hammer","Mithril Hammer"
-"item_mjollnir","Mjollnir"
-"item_monkey_king_bar","Monkey King Bar"
-"item_moon_shard","Moon Shard"
-"item_mystic_staff","Mystic Staff"
-"item_necronomicon","Necronomicon 1"
-"item_necronomicon_2","Necronomicon 2"
-"item_necronomicon_3","Necronomicon 3"
-"item_null_talisman","Null Talisman"
-"item_oblivion_staff","Oblivion Staff"
-"item_octarine_core","Octarine Core"
-"item_ogre_axe","Ogre Club"
-"item_orb_of_venom","Orb Of Venom"
-"item_orchid","Orchid Malevolence"
-"item_pers","Perseverance"
-"item_phase_boots","Phase Boots"
-"item_pipe","Pipe Of Insight"
-"item_platemail","Platemail"
-"item_point_booster","Point Booster"
-"item_poor_mans_shield","Poor Man's Shield"
-"item_power_treads","Power Treads"
-"item_quarterstaff","Quarterstaff"
-"item_quelling_blade","Quelling Blade"
-"item_radiance","Radiance"
-"item_rapier","Divine Rapier"
-"item_reaver","Reaver"
-"item_recipe_abyssal_blade","Abyssal Blade Recipe"
-"item_recipe_ancient_janggo","Drum Of Endurance Recipe"
-"item_recipe_arcane_boots","Arcane Boots Recipe"
-"item_recipe_armlet","Armlet Of Mordiggian Recipe"
-"item_recipe_assault","Assault Cuirass Recipe"
-"item_recipe_basher","Skull Basher Recipe"
-"item_recipe_bfury","Battle Fury Recipe"
-"item_recipe_black_king_bar","Black King Bar Recipe"
-"item_recipe_blade_mail","Blade Mail Recipe"
-"item_recipe_bloodstone","Bloodstone Recipe"
-"item_recipe_bracer","Bracer Recipe"
-"item_recipe_buckler","Buckler Recipe"
-"item_recipe_butterfly","Butterfly Recipe"
-"item_recipe_crimson_guard","Crimson Guard Recipe"
-"item_recipe_cyclone","Eul's Scepter Of Divinity Recipe"
-"item_recipe_dagon","Dagon 1 Recipe"
-"item_recipe_dagon_2","Dagon 2 Recipe"
-"item_recipe_dagon_3","Dagon 3 Recipe"
-"item_recipe_dagon_4","Dagon 4 Recipe"
-"item_recipe_dagon_5","Dagon 5 Recipe"
-"item_recipe_desolator","Desolator Recipe"
-"item_recipe_diffusal_blade","Diffusal Blade 1 Recipe"
-"item_recipe_diffusal_blade_2","Diffusal Blade 2 Recipe"
-"item_recipe_ethereal_blade","Ethereal Blade Recipe"
-"item_recipe_force_staff","Force Staff Recipe"
-"item_recipe_glimmer_cape","Glimmer Cape Recipe"
-"item_recipe_greater_crit","Daedalus Recipe"
-"item_recipe_guardian_greaves","Guardian Greaves Recipe"
-"item_recipe_hand_of_midas","Hand Of Midas Recipe"
-"item_recipe_headdress","Headdress Recipe"
-"item_recipe_heart","Heart Of Tarrasque Recipe"
-"item_recipe_heavens_halberd","Heaven's Halberd Recipe"
-"item_recipe_helm_of_the_dominator","Helm Of The Dominator Recipe"
-"item_recipe_hood_of_defiance","Hood Of Defiance Recipe"
-"item_recipe_invis_sword","Shadow Blade Recipe"
-"item_recipe_lesser_crit","Crystalys Recipe"
-"item_recipe_lotus_orb","Lotus Orb Recipe"
-"item_recipe_maelstrom","Maelstrom Recipe"
-"item_recipe_magic_wand","Magic Wand Recipe"
-"item_recipe_manta","Manta Style Recipe"
-"item_recipe_mask_of_madness","Mask Of Madness Recipe"
-"item_recipe_medallion_of_courage","Medallion Of Courage Recipe"
-"item_recipe_mekansm","Mekansm Recipe"
-"item_recipe_mjollnir","Mjollnir Recipe"
-"item_recipe_monkey_king_bar","Monkey King Bar Recipe"
-"item_recipe_moon_shard","Moon Shard Recipe"
-"item_recipe_necronomicon","Necronomicon 1 Recipe"
-"item_recipe_necronomicon_2","Necronomicon 2 Recipe"
-"item_recipe_necronomicon_3","Necronomicon 3 Recipe"
-"item_recipe_null_talisman","Null Talisman Recipe"
-"item_recipe_oblivion_staff","Oblivion Staff Recipe"
-"item_recipe_octarine_core","Octarine Core Recipe"
-"item_recipe_orchid","Orchid Malevolence Recipe"
-"item_recipe_pers","Perseverance Recipe"
-"item_recipe_phase_boots","Phase Boots Recipe"
-"item_recipe_pipe","Pipe Of Insight Recipe"
-"item_recipe_poor_mans_shield","Poor Man's Shield Recipe"
-"item_recipe_power_treads","Power Treads Recipe"
-"item_recipe_radiance","Radiance Recipe"
-"item_recipe_rapier","Divine Rapier Recipe"
-"item_recipe_refresher","Refresher Orb Recipe"
-"item_recipe_ring_of_aquila","Ring Of Aquila Recipe"
-"item_recipe_ring_of_basilius","Ring Of Basilius Recipe"
-"item_recipe_rod_of_atos","Rod Of Atos Recipe"
-"item_recipe_sange","Sange Recipe"
-"item_recipe_sange_and_yasha","Sange And Yasha Recipe"
-"item_recipe_satanic","Satanic Recipe"
-"item_recipe_sheepstick","Scythe Of Vyse Recipe"
-"item_recipe_shivas_guard","Shiva's Guard Recipe"
-"item_recipe_silver_edge","Silver Edge Recipe"
-"item_recipe_skadi","Eye Of Skadi Recipe"
-"item_recipe_solar_crest","Solar Crest Recipe"
-"item_recipe_soul_booster","Soul Booster Recipe"
-"item_recipe_soul_ring","Soul Ring Recipe"
-"item_recipe_sphere","Linken's Sphere Recipe"
-"item_recipe_tranquil_boots","Tranquil Boots Recipe"
-"item_recipe_travel_boots","Boots Of Travel Recipe"
-"item_recipe_travel_boots_2","Boots of Travel 2 Recipe"
-"item_recipe_ultimate_scepter","Aghanim's Scepter Recipe"
-"item_recipe_urn_of_shadows","Urn Of Shadows Recipe"
-"item_recipe_vanguard","Vanguard Recipe"
-"item_recipe_veil_of_discord","Veil Of Discord Recipe"
-"item_recipe_vladmir","Vladmir's Offering Recipe"
-"item_recipe_ward_dispenser","Ward Slot Recipe"
-"item_recipe_wraith_band","Wraith Band Recipe"
-"item_recipe_yasha","Yasha Recipe"
-"item_refresher","Refresher Orb"
-"item_relic","Sacred Relic"
-"item_ring_of_aquila","Ring Of Aquila"
-"item_ring_of_basilius","Ring Of Basilius"
-"item_ring_of_health","Ring Of Health"
-"item_ring_of_protection","Ring Of Protection"
-"item_ring_of_regen","Ring Of Regen"
-"item_robe","Robe Of The Magi"
-"item_rod_of_atos","Rod Of Atos"
-"item_sange","Sange"
-"item_sange_and_yasha","Sange And Yasha"
-"item_satanic","Satanic"
-"item_shadow_amulet","Shadow Amulet"
-"item_sheepstick","Scythe Of Vyse"
-"item_shivas_guard","Shiva's Guard"
-"item_silver_edge","Silver Edge"
-"item_skadi","Eye Of Skadi"
-"item_slippers","Slippers Of Agility"
-"item_smoke_of_deceit","Smoke Of Deceit"
-"item_sobi_mask","Sage's Mask"
-"item_solar_crest","Solar Crest"
-"item_soul_booster","Soul Booster"
-"item_soul_ring","Soul Ring"
-"item_sphere","Linken's Sphere"
-"item_staff_of_wizardry","Staff Of Wizardry"
-"item_stout_shield","Stout Shield"
-"item_talisman_of_evasion","Talisman Of Evasion"
-"item_tango","Tango"
-"item_tango_single","Shared Tango"
-"item_tpscroll","Town Portal Scroll"
-"item_tranquil_boots","Tranquil Boots"
-"item_travel_boots","Boots Of Travel"
-"item_travel_boots_2","Boots of Travel 2"
-"item_ultimate_orb","Ultimate Orb"
-"item_ultimate_scepter","Aghanim's Scepter"
-"item_urn_of_shadows","Urn Of Shadows"
-"item_vanguard","Vanguard"
-"item_veil_of_discord","Veil Of Discord"
-"item_vitality_booster","Vitality Booster"
-"item_vladmir","Vladmir's Offering"
-"item_void_stone","Void Stone"
-"item_ward_dispenser","Ward Slot"
-"item_ward_observer","Observer Ward"
-"item_ward_sentry","Sentry Ward"
-"item_wraith_band","Wraith Band"
-"item_yasha","Yasha"
-"item_faerie_fire","Faerie Fire"
-"item_recipe_dragon_lance","Dragon Lance Recipe"
-"item_dragon_lance","Dragon Lance"
-"item_recipe_aether_lens", "Aether Lens Recipe"
-"item_aether_lens", "Aether Lens"
-"item_recipe_iron_talon","Iron Talon Recipe"
-"item_iron_talon","Iron Talon"
+key,localizedName,recipe,consumable,placeholder,placeable,placeableDuration,shareable,vendorLocations,components,partOf,quantity,chargeable,initialCharges,maxCharges
+item_abyssal_blade,Abyssal Blade,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_basher,item_relic",,1,FALSE,0,0
+item_aegis,Aegis,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,ROSHAN_DEATH,,,1,FALSE,0,0
+item_aether_lens,Aether Lens,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_energy_booster,item_ring_of_health,item_recipe_aether_lens",,1,FALSE,0,0
+item_recipe_aether_lens,Aether Lens Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_aether_lens,1,FALSE,0,0
+item_ultimate_scepter,Aghanim's Scepter,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_point_booster,item_staff_of_wizardry,item_ogre_axe,item_blade_of_alacrity",,1,FALSE,0,0
+item_courier,Animal Courier,FALSE,FALSE,FALSE,TRUE,9999,FULLY_SHAREABLE,FOUNTAIN_SHOP,,,1,FALSE,0,0
+item_arcane_boots,Arcane Boots,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_boots,item_energy_booster",item_guardian_greaves,1,FALSE,0,0
+item_armlet,Armlet Of Mordiggian,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_helm_of_iron_will,item_gloves,item_blades_of_attack,item_recipe_armlet",,1,FALSE,0,0
+item_recipe_armlet,Armlet Of Mordiggian Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_armlet,1,FALSE,0,0
+item_assault,Assault Cuirass,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_platemail,item_hyperstone,item_chainmail,item_recipe_assault",,1,FALSE,0,0
+item_recipe_assault,Assault Cuirass Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_assault,1,FALSE,0,0
+item_boots_of_elves,Band Of Elvenskin,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,item_yasha,1,FALSE,0,0
+item_bfury,Battle Fury,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_broadsword,item_claymore,item_pers,item_quelling_blade",,1,FALSE,0,0
+item_belt_of_strength,Belt Of Strength,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_basher,item_power_treads,item_sange,item_necronomicon",1,FALSE,0,0
+item_black_king_bar,Black King Bar,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_ogre_axe,item_mithril_hammer,item_recipe_black_king_bar",,1,FALSE,0,0
+item_recipe_black_king_bar,Black King Bar Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_black_king_bar,1,FALSE,0,0
+item_blade_mail,Blade Mail,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_broadsword,item_chainmail,item_robe",,1,FALSE,0,0
+item_blade_of_alacrity,Blade Of Alacrity,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,"item_ultimate_scepter,item_diffusal_blade,item_diffusal_blade,item_yasha",1,FALSE,0,0
+item_blades_of_attack,Blades Of Attack,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_armlet,item_phase_boots,item_phase_boots,item_lesser_crit",1,FALSE,0,0
+item_blink,Blink Dagger,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,,1,FALSE,0,0
+item_bloodstone,Bloodstone,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_soul_ring,item_soul_booster,item_recipe_bloodstone",,1,TRUE,8,9999
+item_recipe_bloodstone,Bloodstone Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_bloodstone,1,FALSE,0,0
+item_boots,Boots Of Speed,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_power_treads,item_arcane_boots,item_phase_boots,item_tranquil_boots,item_travel_boots",1,FALSE,0,0
+item_travel_boots,Boots Of Travel,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_boots,item_recipe_travel_boots",item_travel_boots_2,1,FALSE,0,0
+item_travel_boots_2,Boots of Travel 2,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_travel_boots,item_recipe_travel_boots_2",,1,FALSE,0,0
+item_recipe_travel_boots_2,Boots of Travel 2 Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_travel_boots_2,1,FALSE,0,0
+item_recipe_travel_boots,Boots Of Travel Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_travel_boots,1,FALSE,0,0
+item_bottle,Bottle,FALSE,FALSE,FALSE,FALSE,0,PARTIALLY_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,,1,TRUE,3,3
+item_bracer,Bracer,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_circlet,item_gauntlets,item_recipe_bracer",item_ancient_janggo,1,FALSE,0,0
+item_recipe_bracer,Bracer Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_bracer,1,FALSE,0,0
+item_broadsword,Broadsword,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_bfury,item_blade_mail,item_lesser_crit",1,FALSE,0,0
+item_buckler,Buckler,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_chainmail,item_branches,item_recipe_buckler","item_mekansm,item_crimson_guard",1,FALSE,0,0
+item_recipe_buckler,Buckler Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_buckler,1,FALSE,0,0
+item_butterfly,Butterfly,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_eagle,item_talisman_of_evasion,item_quarterstaff",,1,FALSE,0,0
+item_chainmail,Chainmail,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_buckler,item_blade_mail,item_assault,item_medallion_of_courage",1,FALSE,0,0
+item_cheese,Cheese,FALSE,TRUE,FALSE,FALSE,0,FULLY_SHAREABLE,ROSHAN_DEATH,,,1,FALSE,0,0
+item_circlet,Circlet,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,"item_wraith_band,item_null_talisman,item_bracer,item_magic_wand",1,FALSE,0,0
+item_clarity,Clarity,FALSE,TRUE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,,1,FALSE,0,0
+item_claymore,Claymore,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,"item_bfury,item_invis_sword",1,FALSE,0,0
+item_cloak,Cloak,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_hood_of_defiance,item_glimmer_cape",1,FALSE,0,0
+item_crimson_guard,Crimson Guard,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_vanguard,item_buckler,item_recipe_crimson_guard",,1,FALSE,0,0
+item_recipe_crimson_guard,Crimson Guard Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_crimson_guard,1,FALSE,0,0
+item_lesser_crit,Crystalys ,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_broadsword,item_blades_of_attack,item_recipe_lesser_crit",item_greater_crit,1,FALSE,0,0
+item_recipe_lesser_crit,Crystalys Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_lesser_crit,1,FALSE,0,0
+item_greater_crit,Daedalus,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_lesser_crit,item_demon_edge,item_recipe_greater_crit",,1,FALSE,0,0
+item_recipe_greater_crit,Daedalus Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_greater_crit,1,FALSE,0,0
+item_dagon,Dagon 1,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_staff_of_wizardry,item_null_talisman,item_recipe_dagon",item_dagon_2,1,FALSE,0,0
+item_recipe_dagon,Dagon 1 Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_dagon,1,FALSE,0,0
+item_dagon_2,Dagon 2,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_dagon,item_recipe_dagon_2",item_dagon_3,1,FALSE,0,0
+item_recipe_dagon_2,Dagon 2 Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_dagon_2,1,FALSE,0,0
+item_dagon_3,Dagon 3,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_dagon_2,item_recipe_dagon_3",item_dagon_4,1,FALSE,0,0
+item_recipe_dagon_3,Dagon 3 Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_dagon_3,1,FALSE,0,0
+item_dagon_4,Dagon 4,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_dagon_3,item_recipe_dagon_4",item_dagon_5,1,FALSE,0,0
+item_recipe_dagon_4,Dagon 4 Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_dagon_4,1,FALSE,0,0
+item_dagon_5,Dagon 5,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_dagon_4,item_recipe_dagon_5",,1,FALSE,0,0
+item_recipe_dagon_5,Dagon 5 Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_dagon_5,1,FALSE,0,0
+item_demon_edge,Demon Edge,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,SECRET_SHOP,,"item_monkey_king_bar,item_rapier,item_greater_crit",1,FALSE,0,0
+item_desolator,Desolator,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_mithril_hammer,item_mithril_hammer,item_recipe_desolator",,1,FALSE,0,0
+item_recipe_desolator,Desolator Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_desolator,1,FALSE,0,0
+item_diffusal_blade,Diffusal Blade 1,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_blade_of_alacrity,item_blade_of_alacrity,item_robe,item_recipe_diffusal_blade",item_diffusal_blade_2,1,TRUE,8,8
+item_recipe_diffusal_blade,Diffusal Blade 1 Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_diffusal_blade,1,FALSE,0,0
+item_diffusal_blade_2,Diffusal Blade 2,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_diffusal_blade,item_recipe_diffusal_blade_2",,1,TRUE,8,8
+item_recipe_diffusal_blade_2,Diffusal Blade 2 Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_diffusal_blade_2,1,FALSE,0,0
+item_rapier,Divine Rapier,FALSE,FALSE,FALSE,FALSE,0,PARTIALLY_SHAREABLE,FOUNTAIN_SHOP,"item_relic,item_demon_edge",,1,FALSE,0,0
+item_dragon_lance,Dragon Lance,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_quarterstaff,item_ogre_axe",,1,FALSE,0,0
+item_ancient_janggo,Drum Of Endurance,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_robe,item_bracer,item_recipe_ancient_janggo",,1,TRUE,6,6
+item_recipe_ancient_janggo,Drum Of Endurance Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_ancient_janggo,1,FALSE,0,0
+item_dust,Dust Of Appearance,FALSE,TRUE,FALSE,FALSE,0,FULLY_SHAREABLE,FOUNTAIN_SHOP,,,1,FALSE,0,0
+item_eagle,Eagesong,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,SECRET_SHOP,,"item_ethereal_blade,item_butterfly",1,FALSE,0,0
+item_enchanted_mango,Enchanted Mango,FALSE,TRUE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,,1,FALSE,0,0
+item_energy_booster,Energy Booster,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,SECRET_SHOP,,"item_soul_booster,item_arcane_boots,item_aether_lens",1,FALSE,0,0
+item_ethereal_blade,Ethereal Blade,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_eagle,item_ghost",,1,FALSE,0,0
+item_cyclone,Eul's Scepter Of Divinity,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_sobi_mask,item_staff_of_wizardry,item_void_stone,item_recipe_cyclone",,1,FALSE,0,0
+item_recipe_cyclone,Eul's Scepter Of Divinity Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_cyclone,1,FALSE,0,0
+item_skadi,Eye Of Skadi,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_ultimate_orb,item_ultimate_orb,item_point_booster,item_orb_of_venom",,1,FALSE,0,0
+item_faerie_fire,Faerie Fire,FALSE,TRUE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,,1,FALSE,0,0
+item_flying_courier,Flying Courier,FALSE,FALSE,FALSE,TRUE,9999,FULLY_SHAREABLE,FOUNTAIN_SHOP,,,1,FALSE,0,0
+item_force_staff,Force Staff,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_staff_of_wizardry,item_ring_of_regen,item_recipe_force_staff",,1,FALSE,0,0
+item_recipe_force_staff,Force Staff Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_force_staff,1,FALSE,0,0
+item_gauntlets,Gauntlets Of Strength,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,"item_urn_of_shadows,item_urn_of_shadows,item_bracer",1,FALSE,0,0
+item_gem,Gem Of True Sight,FALSE,FALSE,FALSE,FALSE,0,PARTIALLY_SHAREABLE,FOUNTAIN_SHOP,,,1,FALSE,0,0
+item_ghost,Ghost Scepter,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_ethereal_blade,1,FALSE,0,0
+item_glimmer_cape,Glimmer Cape,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_shadow_amulet,item_cloak",,1,FALSE,0,0
+item_gloves,Gloves Of Haste,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_hand_of_midas,item_power_treads,item_armlet,item_maelstrom",1,FALSE,0,0
+item_guardian_greaves,Guardian Greaves,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_mekansm,item_arcane_boots,item_recipe_guardian_greaves",,1,FALSE,0,0
+item_recipe_guardian_greaves,Guardian Greaves Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_guardian_greaves,1,FALSE,0,0
+item_hand_of_midas,Hand Of Midas,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_gloves,item_recipe_hand_of_midas",,1,FALSE,0,0
+item_recipe_hand_of_midas,Hand Of Midas Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_hand_of_midas,1,FALSE,0,0
+item_headdress,Headdress,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_ring_of_regen,item_branches,item_recipe_headdress","item_mekansm,item_pipe,item_vladmir",1,FALSE,0,0
+item_recipe_headdress,Headdress Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_headdress,1,FALSE,0,0
+item_flask,Healing Salve,FALSE,TRUE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,,1,FALSE,0,0
+item_heart,Heart Of Tarrasque,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_reaver,item_vitality_booster,item_recipe_heart",,1,FALSE,0,0
+item_recipe_heart,Heart Of Tarrasque Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_heart,1,FALSE,0,0
+item_heavens_halberd,Heaven's Halberd,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_sange,item_talisman_of_evasion",,1,FALSE,0,0
+item_helm_of_iron_will,Helm Of Iron Will,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_armlet,item_helm_of_the_dominator,item_veil_of_discord",1,FALSE,0,0
+item_helm_of_the_dominator,Helm Of The Dominator,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_lifesteal,item_helm_of_iron_will",item_satanic,1,FALSE,0,0
+item_hood_of_defiance,Hood Of Defiance,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_ring_of_health,item_cloak,item_ring_of_regen,item_ring_of_regen",item_pipe,1,FALSE,0,0
+item_hyperstone,Hyperstone,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,SECRET_SHOP,,"item_moon_shard,item_moon_shard,item_assault,item_mjollnir",1,FALSE,0,0
+item_branches,Iron Branch,FALSE,FALSE,FALSE,TRUE,20,NOT_SHAREABLE,FOUNTAIN_SHOP,,"item_headdress,item_buckler,item_magic_wand,item_magic_wand",1,FALSE,0,0
+item_iron_talon,Iron Talon,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_quelling_blade,item_ring_of_protection,item_recipe_iron_talon",,1,FALSE,0,0
+item_recipe_iron_talon,Iron Talon Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_iron_talon,1,FALSE,0,0
+item_javelin,Javelin,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,"item_basher,item_monkey_king_bar,item_monkey_king_bar",1,FALSE,0,0
+item_sphere,Linken's Sphere,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_ultimate_orb,item_pers,item_recipe_sphere",,1,FALSE,0,0
+item_recipe_sphere,Linken's Sphere Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_sphere,1,FALSE,0,0
+item_lotus_orb,Lotus Orb,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_pers,item_platemail,item_recipe_lotus_orb",,1,FALSE,0,0
+item_recipe_lotus_orb,Lotus Orb Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_lotus_orb,1,FALSE,0,0
+item_maelstrom,Maelstrom,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_mithril_hammer,item_gloves,item_recipe_maelstrom",item_mjollnir,1,FALSE,0,0
+item_recipe_maelstrom,Maelstrom Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_maelstrom,1,FALSE,0,0
+item_magic_stick,Magic Stick,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,item_magic_wand,1,TRUE,0,10
+item_magic_wand,Magic Wand,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_circlet,item_branches,item_branches,item_magic_stick",,1,TRUE,0,17
+item_manta,Manta Style,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_yasha,item_ultimate_orb,item_recipe_manta",,1,FALSE,0,0
+item_recipe_manta,Manta Style Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_manta,1,FALSE,0,0
+item_mantle,Mantle Of Intelligence,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_null_talisman,1,FALSE,0,0
+item_mask_of_madness,Mask Of Madness,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_lifesteal,item_recipe_mask_of_madness",,1,FALSE,0,0
+item_recipe_mask_of_madness,Mask Of Madness Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_mask_of_madness,1,FALSE,0,0
+item_medallion_of_courage,Medallion Of Courage,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_chainmail,item_sobi_mask,item_recipe_medallion_of_courage",item_solar_crest,1,FALSE,0,0
+item_recipe_medallion_of_courage,Medallion Of Courage Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_medallion_of_courage,1,FALSE,0,0
+item_mekansm,Mekansm,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_headdress,item_buckler,item_recipe_mekansm",item_guardian_greaves,1,FALSE,0,0
+item_recipe_mekansm,Mekansm Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_mekansm,1,FALSE,0,0
+item_mithril_hammer,Mithril Hammer,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,"item_maelstrom,item_desolator,item_desolator,item_black_king_bar",1,FALSE,0,0
+item_mjollnir,Mjollnir,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_maelstrom,item_hyperstone,item_recipe_mjollnir",,1,FALSE,0,0
+item_recipe_mjollnir,Mjollnir Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_mjollnir,1,FALSE,0,0
+item_monkey_king_bar,Monkey King Bar,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_demon_edge,item_javelin,item_javelin",,1,FALSE,0,0
+item_moon_shard,Moon Shard,FALSE,TRUE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_hyperstone,item_hyperstone",,1,FALSE,0,0
+item_lifesteal,Morbid Mask,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_vladmir,item_helm_of_the_dominator,item_mask_of_madness",1,FALSE,0,0
+item_mystic_staff,Mystic Staff,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,SECRET_SHOP,,"item_shivas_guard,item_sheepstick,item_octarine_core",1,FALSE,0,0
+item_necronomicon,Necronomicon 1,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_staff_of_wizardry,item_belt_of_strength,item_recipe_necronomicon",item_necronomicon_2,1,FALSE,0,0
+item_recipe_necronomicon,Necronomicon 1 Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_necronomicon,1,FALSE,0,0
+item_necronomicon_2,Necronomicon 2,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_necronomicon,item_recipe_necronomicon_2",item_necronomicon_3,1,FALSE,0,0
+item_recipe_necronomicon_2,Necronomicon 2 Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_necronomicon_2,1,FALSE,0,0
+item_necronomicon_3,Necronomicon 3,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_necronomicon_2,item_recipe_necronomicon_3",,1,FALSE,0,0
+item_recipe_necronomicon_3,Necronomicon 3 Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_necronomicon_3,1,FALSE,0,0
+item_null_talisman,Null Talisman,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_circlet,item_mantle,item_recipe_null_talisman","item_dagon,item_veil_of_discord",1,FALSE,0,0
+item_recipe_null_talisman,Null Talisman Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_null_talisman,1,FALSE,0,0
+item_oblivion_staff,Oblivion Staff,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_quarterstaff,item_sobi_mask,item_robe","item_orchid,item_orchid",1,FALSE,0,0
+item_ward_observer,Observer Ward,FALSE,FALSE,FALSE,TRUE,420,FULLY_SHAREABLE,FOUNTAIN_SHOP,,,1,FALSE,0,0
+item_octarine_core,Octarine Core,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_mystic_staff,item_soul_booster",,1,FALSE,0,0
+item_ogre_axe,Ogre Club,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,"item_sange,item_ultimate_scepter,item_dragon_lance,item_black_king_bar",1,FALSE,0,0
+item_orb_of_venom,Orb Of Venom,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,item_skadi,1,FALSE,0,0
+item_orchid,Orchid Malevolence,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_oblivion_staff,item_oblivion_staff,item_recipe_orchid",,1,FALSE,0,0
+item_recipe_orchid,Orchid Malevolence Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_orchid,1,FALSE,0,0
+item_pers,Perseverance,FALSE,FALSE,FALSE,FALSE,0,PARTIALLY_SHAREABLE,FOUNTAIN_SHOP,"item_ring_of_health,item_void_stone","item_bfury,item_sphere,item_lotus_orb,item_refresher,item_refresher",1,FALSE,0,0
+item_phase_boots,Phase Boots,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_boots,item_blades_of_attack,item_blades_of_attack",,1,FALSE,0,0
+item_pipe,Pipe Of Insight,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_hood_of_defiance,item_headdress,item_recipe_pipe",,1,FALSE,0,0
+item_recipe_pipe,Pipe Of Insight Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_pipe,1,FALSE,0,0
+item_platemail,Platemail,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,SECRET_SHOP,,"item_shivas_guard,item_lotus_orb,item_assault",1,FALSE,0,0
+item_point_booster,Point Booster,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,SECRET_SHOP,,"item_skadi,item_soul_booster,item_ultimate_scepter",1,FALSE,0,0
+item_poor_mans_shield,Poor Man's Shield,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_slippers,item_slippers,item_stout_shield",,1,FALSE,0,0
+item_power_treads,Power Treads,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_boots,item_gloves,item_belt_of_strength",,1,FALSE,0,0
+item_quarterstaff,Quarterstaff,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_oblivion_staff,item_butterfly,item_dragon_lance",1,FALSE,0,0
+item_quelling_blade,Quelling Blade,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_bfury,item_iron_talon",1,FALSE,0,0
+item_radiance,Radiance,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_relic,item_recipe_radiance",,1,FALSE,0,0
+item_recipe_radiance,Radiance Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_radiance,1,FALSE,0,0
+item_reaver,Reaver,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,SECRET_SHOP,,"item_satanic,item_heart",1,FALSE,0,0
+item_refresher,Refresher Orb,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_pers,item_pers,item_recipe_refresher",,1,FALSE,0,0
+item_recipe_refresher,Refresher Orb Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_refresher,1,FALSE,0,0
+item_ring_of_aquila,Ring Of Aquila,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_wraith_band,item_ring_of_basilius",,1,FALSE,0,0
+item_ring_of_basilius,Ring Of Basilius,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_sobi_mask,item_ring_of_protection","item_vladmir,item_ring_of_aquila",1,FALSE,0,0
+item_ring_of_health,Ring Of Health,FALSE,FALSE,FALSE,FALSE,0,PARTIALLY_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_hood_of_defiance,item_vanguard,item_pers,item_aether_lens",1,FALSE,0,0
+item_ring_of_protection,Ring Of Protection,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,"item_tranquil_boots,item_ring_of_basilius,item_iron_talon",1,FALSE,0,0
+item_ring_of_regen,Ring Of Regen,FALSE,FALSE,FALSE,FALSE,0,PARTIALLY_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_headdress,item_hood_of_defiance,item_hood_of_defiance,item_force_staff,item_tranquil_boots,item_soul_ring",1,FALSE,0,0
+item_robe,Robe Of The Magi,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_ancient_janggo,item_oblivion_staff,item_diffusal_blade,item_blade_mail,item_veil_of_discord,item_veil_of_discord",1,FALSE,0,0
+item_rod_of_atos,Rod Of Atos,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_vitality_booster,item_staff_of_wizardry,item_staff_of_wizardry",,1,FALSE,0,0
+item_relic,Sacred Relic,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,SECRET_SHOP,,"item_abyssal_blade,item_radiance,item_rapier",1,FALSE,0,0
+item_sobi_mask,Sage's Mask,FALSE,FALSE,FALSE,FALSE,0,PARTIALLY_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_cyclone,item_urn_of_shadows,item_oblivion_staff,item_ring_of_basilius,item_soul_ring,item_medallion_of_courage",1,FALSE,0,0
+item_sange,Sange,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_ogre_axe,item_belt_of_strength,item_recipe_sange","item_sange_and_yasha,item_heavens_halberd,item_silver_edge",1,FALSE,0,0
+item_sange_and_yasha,Sange And Yasha,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_yasha,item_sange",,1,FALSE,0,0
+item_recipe_sange,Sange Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_sange,1,FALSE,0,0
+item_satanic,Satanic,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_reaver,item_helm_of_the_dominator,item_recipe_satanic",,1,FALSE,0,0
+item_recipe_satanic,Satanic Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_satanic,1,FALSE,0,0
+item_sheepstick,Scythe Of Vyse,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_mystic_staff,item_ultimate_orb,item_void_stone",,1,FALSE,0,0
+item_ward_sentry,Sentry Ward,FALSE,FALSE,FALSE,TRUE,240,FULLY_SHAREABLE,FOUNTAIN_SHOP,,,2,FALSE,0,0
+item_shadow_amulet,Shadow Amulet,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,"item_glimmer_cape,item_invis_sword",1,FALSE,0,0
+item_invis_sword,Shadow Blade,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_shadow_amulet,item_claymore",item_silver_edge,1,FALSE,0,0
+item_tango_single,Shared Tango,FALSE,TRUE,FALSE,FALSE,0,FULLY_SHAREABLE,FOUNTAIN_SHOP,,,1,FALSE,0,0
+item_shivas_guard,Shiva's Guard,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_platemail,item_mystic_staff,item_recipe_shivas_guard",,1,FALSE,0,0
+item_recipe_shivas_guard,Shiva's Guard Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_shivas_guard,1,FALSE,0,0
+item_silver_edge,Silver Edge,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_invis_sword,item_sange,item_recipe_silver_edge",,1,FALSE,0,0
+item_recipe_silver_edge,Silver Edge Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_silver_edge,1,FALSE,0,0
+item_basher,Skull Basher,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_belt_of_strength,item_javelin,item_recipe_basher",item_abyssal_blade,1,FALSE,0,0
+item_recipe_basher,Skull Basher Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_basher,1,FALSE,0,0
+item_slippers,Slippers Of Agility,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_wraith_band,item_poor_mans_shield,item_poor_mans_shield",1,FALSE,0,0
+item_smoke_of_deceit,Smoke Of Deceit,FALSE,TRUE,FALSE,FALSE,0,FULLY_SHAREABLE,FOUNTAIN_SHOP,,,1,FALSE,0,0
+item_solar_crest,Solar Crest,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_medallion_of_courage,item_talisman_of_evasion",,1,FALSE,0,0
+item_soul_booster,Soul Booster,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_vitality_booster,item_energy_booster,item_point_booster","item_bloodstone,item_octarine_core",1,FALSE,0,0
+item_soul_ring,Soul Ring,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_ring_of_regen,item_sobi_mask,item_recipe_soul_ring",item_bloodstone,1,FALSE,0,0
+item_recipe_soul_ring,Soul Ring Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_soul_ring,1,FALSE,0,0
+item_staff_of_wizardry,Staff Of Wizardry,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,"item_cyclone,item_dagon,item_rod_of_atos,item_rod_of_atos,item_force_staff,item_ultimate_scepter,item_necronomicon",1,FALSE,0,0
+item_stout_shield,Stout Shield,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_vanguard,item_poor_mans_shield",1,FALSE,0,0
+item_talisman_of_evasion,Talisman Of Evasion,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,SECRET_SHOP,,"item_solar_crest,item_heavens_halberd,item_butterfly",1,FALSE,0,0
+item_tango,Tango,FALSE,TRUE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,,4,FALSE,0,0
+item_tpscroll,Town Portal Scroll,FALSE,TRUE,FALSE,FALSE,0,FULLY_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,,1,FALSE,0,0
+item_tranquil_boots,Tranquil Boots,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_boots,item_ring_of_protection,item_ring_of_regen",,1,FALSE,0,0
+item_ultimate_orb,Ultimate Orb,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,SECRET_SHOP,,"item_manta,item_skadi,item_skadi,item_sphere,item_sheepstick",1,FALSE,0,0
+item_urn_of_shadows,Urn Of Shadows,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_sobi_mask,item_gauntlets,item_gauntlets,item_recipe_urn_of_shadows",,1,TRUE,0,9999
+item_recipe_urn_of_shadows,Urn Of Shadows Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_urn_of_shadows,1,FALSE,0,0
+item_vanguard,Vanguard,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_ring_of_health,item_vitality_booster,item_stout_shield",item_crimson_guard,1,FALSE,0,0
+item_veil_of_discord,Veil Of Discord,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_helm_of_iron_will,item_null_talisman,item_robe,item_robe",,1,FALSE,0,0
+item_vitality_booster,Vitality Booster,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,SECRET_SHOP,,"item_rod_of_atos,item_vanguard,item_soul_booster,item_heart",1,FALSE,0,0
+item_vladmir,Vladmir's Offering,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_headdress,item_ring_of_basilius,item_lifesteal,item_recipe_vladmir",,1,FALSE,0,0
+item_recipe_vladmir,Vladmir's Offering Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_vladmir,1,FALSE,0,0
+item_void_stone,Void Stone,FALSE,FALSE,FALSE,FALSE,0,PARTIALLY_SHAREABLE,"SIDE_SHOP, FOUNTAIN_SHOP",,"item_cyclone,item_pers,item_sheepstick",1,FALSE,0,0
+item_ward_dispenser,Ward Slot,FALSE,FALSE,TRUE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,,1,FALSE,0,0
+item_wraith_band,Wraith Band,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_circlet,item_slippers,item_recipe_wraith_band",item_ring_of_aquila,1,FALSE,0,0
+item_recipe_wraith_band,Wraith Band Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_wraith_band,1,FALSE,0,0
+item_yasha,Yasha,FALSE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,"item_blade_of_alacrity,item_boots_of_elves,item_recipe_yasha","item_manta,item_sange_and_yasha",1,FALSE,0,0
+item_recipe_yasha,Yasha Recipe,TRUE,FALSE,FALSE,FALSE,0,NOT_SHAREABLE,FOUNTAIN_SHOP,,item_yasha,1,FALSE,0,0

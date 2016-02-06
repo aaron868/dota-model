@@ -11,7 +11,6 @@ public final class Companion extends NpcUnit {
     private final String baseClass;
     private final String boundsHullName;
     private final String key;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -26,7 +25,6 @@ public final class Companion extends NpcUnit {
         baseClass = "npc_dota_companion";
         boundsHullName = "DOTA_HULL_SIZE_SMALL";
         key = "npc_dota_companion";
-        model = "models/development/invisiblebox.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 325;
@@ -58,10 +56,6 @@ public final class Companion extends NpcUnit {
 
     public String getKey() {
         return key;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

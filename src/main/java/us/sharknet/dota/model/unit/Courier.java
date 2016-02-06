@@ -28,7 +28,6 @@ public final class Courier extends NpcUnit {
     private final int isAncient;
     private final String key;
     private final int level;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -67,7 +66,6 @@ public final class Courier extends NpcUnit {
         isAncient = 1;
         key = "npc_dota_courier";
         level = 0;
-        model = "models/props_gameplay/donkey.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 350;
@@ -174,10 +172,6 @@ public final class Courier extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

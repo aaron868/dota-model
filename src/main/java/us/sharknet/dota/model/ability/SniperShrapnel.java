@@ -22,7 +22,6 @@ public final class SniperShrapnel extends Ability {
     private final double damage_delay;
     private final int duration;
     private final String localizedName;
-    private final int max_charges;
     private final String ownerKey;
     private final AbilityOwnerType ownerType;
     private final boolean passive;
@@ -48,7 +47,6 @@ public final class SniperShrapnel extends Ability {
         damage_delay = 1.2;
         duration = 1;
         localizedName = "Shrapnel";
-        max_charges = 3;
         ownerKey = "npc_dota_hero_sniper";
         ownerType = AbilityOwnerType.Hero;
         passive = false;
@@ -127,10 +125,6 @@ public final class SniperShrapnel extends Ability {
 
     public String getLocalizedName() {
         return localizedName;
-    }
-
-    public int getMaxCharges() {
-        return max_charges;
     }
 
     public String getOwnerKey() {

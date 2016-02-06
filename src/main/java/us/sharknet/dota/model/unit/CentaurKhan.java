@@ -26,7 +26,6 @@ public final class CentaurKhan extends NpcUnit {
     private final int isNeutralUnitType;
     private final String key;
     private final int level;
-    private final String model;
     private final int modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -63,7 +62,6 @@ public final class CentaurKhan extends NpcUnit {
         isNeutralUnitType = 1;
         key = "npc_dota_neutral_centaur_khan";
         level = 5;
-        model = "models/creeps/neutral_creeps/n_creep_centaur_lrg/n_creep_centaur_lrg.vmdl";
         modelScale = 1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_GROUND";
         movementSpeed = 320;
@@ -162,10 +160,6 @@ public final class CentaurKhan extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getModelScale() {

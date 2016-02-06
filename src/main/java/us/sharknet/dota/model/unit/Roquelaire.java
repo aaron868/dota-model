@@ -19,7 +19,6 @@ public final class Roquelaire extends NpcUnit {
     private final int isSummoned;
     private final String key;
     private final int level;
-    private final String model;
     private final double modelScale;
     private final String movementCapabilities;
     private final int movementSpeed;
@@ -47,7 +46,6 @@ public final class Roquelaire extends NpcUnit {
         isSummoned = 0;
         key = "npc_dota_roquelaire";
         level = 1;
-        model = "models/props_gameplay/roquelaire/roquelaire.vmdl";
         modelScale = 1.1;
         movementCapabilities = "DOTA_UNIT_CAP_MOVE_FLY";
         movementSpeed = 500;
@@ -116,10 +114,6 @@ public final class Roquelaire extends NpcUnit {
 
     public int getLevel() {
         return level;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public double getModelScale() {

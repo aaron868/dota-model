@@ -16,7 +16,7 @@ public final class ElderTitanEchoStomp extends Ability {
     private final int iD;
     private final String key;
     private final String spellImmunityType;
-    private final double animation_rate;
+    private final int animation_rate;
     private final double cast_time;
     private final double initial_stun_duration;
     private final String localizedName;
@@ -39,7 +39,7 @@ public final class ElderTitanEchoStomp extends Ability {
         iD = 5589;
         key = "elder_titan_echo_stomp";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
-        animation_rate = 0.0;
+        animation_rate = 0;
         cast_time = 1.6;
         initial_stun_duration = .65;
         localizedName = "Echo Stomp";
@@ -99,7 +99,7 @@ public final class ElderTitanEchoStomp extends Ability {
         return spellImmunityType;
     }
 
-    public double getAnimationRate() {
+    public int getAnimationRate() {
         return animation_rate;
     }
 

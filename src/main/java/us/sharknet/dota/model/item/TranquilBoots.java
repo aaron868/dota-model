@@ -10,12 +10,7 @@ public final class TranquilBoots extends Item {
     private final int abilityCooldown;
     private final int abilityManaCost;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final String itemDeclarations;
-    private final int itemHideCharges;
-    private final String itemQuality;
-    private final String[] itemShopTags;
+    private final int cost;
     private final String key;
     private final int bonus_armor;
     private final int bonus_health_regen;
@@ -24,22 +19,30 @@ public final class TranquilBoots extends Item {
     private final int break_threshold;
     private final int break_time;
     private final int broken_movement_speed;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
     private final int heal_amount;
     private final int heal_duration;
     private final double heal_interval;
+    private final int initialCharges;
     private final String localizedName;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private TranquilBoots() {
         abilityBehavior = "DOTA_ABILITY_BEHAVIOR_PASSIVE";
         abilityCooldown = 13;
         abilityManaCost = 0;
         iD = 214;
-        itemAliases = "tranquil boots";
-        itemCost = 1000;
-        itemDeclarations = "DECLARE_PURCHASES_TO_SPECTATORS";
-        itemHideCharges = 1;
-        itemQuality = "rare";
-        itemShopTags = new String[]{"move_speed","regen_health","armor"};
+        cost = 925;
         key = "item_tranquil_boots";
         bonus_armor = 3;
         bonus_health_regen = 12;
@@ -48,10 +51,23 @@ public final class TranquilBoots extends Item {
         break_threshold = 20;
         break_time = 13;
         broken_movement_speed = 55;
+        chargeable = false;
+        components = new String[]{"item_boots","item_ring_of_protection","item_ring_of_regen"};
+        consumable = false;
         heal_amount = 250;
         heal_duration = 2;
         heal_interval = .334;
+        initialCharges = 0;
         localizedName = "Tranquil Boots";
+        maxCharges = 0;
+        partOf = new String[0];
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.FOUNTAIN_SHOP};
     }
 
     public static TranquilBoots instance() {
@@ -77,28 +93,8 @@ public final class TranquilBoots extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public String getItemDeclarations() {
-        return itemDeclarations;
-    }
-
-    public int getItemHideCharges() {
-        return itemHideCharges;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
@@ -133,6 +129,18 @@ public final class TranquilBoots extends Item {
         return broken_movement_speed;
     }
 
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
     public int getHealAmount() {
         return heal_amount;
     }
@@ -145,8 +153,48 @@ public final class TranquilBoots extends Item {
         return heal_interval;
     }
 
+    public int getInitialCharges() {
+        return initialCharges;
+    }
+
     public String getLocalizedName() {
         return localizedName;
+    }
+
+    public int getMaxCharges() {
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

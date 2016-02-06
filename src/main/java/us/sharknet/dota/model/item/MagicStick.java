@@ -10,38 +10,48 @@ public final class MagicStick extends Item {
     private final int abilityCooldown;
     private final String abilitySharedCooldown;
     private final int iD;
-    private final String itemAliases;
-    private final int itemCost;
-    private final int itemDisplayCharges;
-    private final String itemQuality;
-    private final int itemRequiresCharges;
-    private final String[] itemShopTags;
+    private final int cost;
     private final String key;
-    private final String model;
-    private final int sideShop;
     private final int charge_radius;
+    private final boolean chargeable;
+    private final String[] components;
+    private final boolean consumable;
+    private final int initialCharges;
     private final String localizedName;
-    private final int max_charges;
+    private final int maxCharges;
+    private final String[] partOf;
+    private final boolean placeable;
+    private final int placeableDuration;
+    private final boolean placeholder;
+    private final int quantity;
+    private final boolean recipe;
     private final int restore_per_charge;
+    private final Shareablilty shareability;
+    private final Vendor[] vendorLocations;
 
     private MagicStick() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_IMMEDIATE","DOTA_ABILITY_BEHAVIOR_NO_TARGET"};
         abilityCooldown = 13;
         abilitySharedCooldown = "magicwand";
         iD = 34;
-        itemAliases = "magic stick";
-        itemCost = 200;
-        itemDisplayCharges = 1;
-        itemQuality = "component";
-        itemRequiresCharges = 1;
-        itemShopTags = new String[]{"regen_health","regen_mana","boost_health","boost_mana"};
+        cost = 200;
         key = "item_magic_stick";
-        model = "models/props_gameplay/magic_wand.vmdl";
-        sideShop = 1;
         charge_radius = 1200;
+        chargeable = true;
+        components = new String[0];
+        consumable = false;
+        initialCharges = 0;
         localizedName = "Magic Stick";
-        max_charges = 10;
+        maxCharges = 10;
+        partOf = new String[]{"item_magic_wand"};
+        placeable = false;
+        placeableDuration = 0;
+        placeholder = false;
+        quantity = 1;
+        recipe = false;
         restore_per_charge = 15;
+        shareability = Shareablilty.NOT_SHAREABLE;
+        vendorLocations = new Vendor[]{Vendor.SIDE_SHOP,Vendor. FOUNTAIN_SHOP};
     }
 
     public static MagicStick instance() {
@@ -67,44 +77,32 @@ public final class MagicStick extends Item {
         return iD;
     }
 
-    public String getItemAliases() {
-        return itemAliases;
-    }
-
-    public int getItemCost() {
-        return itemCost;
-    }
-
-    public int getItemDisplayCharges() {
-        return itemDisplayCharges;
-    }
-
-    public String getItemQuality() {
-        return itemQuality;
-    }
-
-    public int getItemRequiresCharges() {
-        return itemRequiresCharges;
-    }
-
-    public String[] getItemShopTags() {
-        return itemShopTags;
+    public int getCost() {
+        return cost;
     }
 
     public String getKey() {
         return key;
     }
 
-    public String getModel() {
-        return model;
-    }
-
-    public int getSideShop() {
-        return sideShop;
-    }
-
     public int getChargeRadius() {
         return charge_radius;
+    }
+
+    public boolean isChargeable() {
+        return chargeable;
+    }
+
+    public String[] getComponents() {
+        return components;
+    }
+
+    public boolean isConsumable() {
+        return consumable;
+    }
+
+    public int getInitialCharges() {
+        return initialCharges;
     }
 
     public String getLocalizedName() {
@@ -112,11 +110,43 @@ public final class MagicStick extends Item {
     }
 
     public int getMaxCharges() {
-        return max_charges;
+        return maxCharges;
+    }
+
+    public String[] getPartOf() {
+        return partOf;
+    }
+
+    public boolean isPlaceable() {
+        return placeable;
+    }
+
+    public int getPlaceableDuration() {
+        return placeableDuration;
+    }
+
+    public boolean isPlaceholder() {
+        return placeholder;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public boolean isRecipe() {
+        return recipe;
     }
 
     public int getRestorePerCharge() {
         return restore_per_charge;
+    }
+
+    public Shareablilty getShareability() {
+        return shareability;
+    }
+
+    public Vendor[] getVendorLocations() {
+        return vendorLocations;
     }
 
 

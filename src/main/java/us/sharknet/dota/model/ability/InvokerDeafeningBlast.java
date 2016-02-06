@@ -35,7 +35,7 @@ public final class InvokerDeafeningBlast extends Ability {
         abilityCastPoint = new double[]{0,0,0,0};
         abilityCastRange = new int[]{1000,1000,1000,1000};
         abilityCooldown = new double[]{40,40,40,40};
-        abilityManaCost = new int[]{200,200,200,200};
+        abilityManaCost = new int[]{300,300,300,300};
         abilityModifierSupportValue = .5;
         abilityUnitDamageType = "DAMAGE_TYPE_MAGICAL";
         iD = 5390;
