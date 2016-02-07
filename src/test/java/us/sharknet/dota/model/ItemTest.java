@@ -2,10 +2,7 @@ package us.sharknet.dota.model;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import us.sharknet.dota.model.item.AetherLensRecipe;
-import us.sharknet.dota.model.item.BlinkDagger;
-import us.sharknet.dota.model.item.GlimmerCape;
-import us.sharknet.dota.model.item.WardSlot;
+import us.sharknet.dota.model.item.*;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -31,6 +28,34 @@ public class ItemTest {
         assertEquals(275, WardSlot.instance().getCost());
         assertEquals(550, AetherLensRecipe.instance().getCost());
         assertEquals(1950, GlimmerCape.instance().getCost());
+
+        assertEquals(1250, Dagon1Recipe.instance().getCost());
+        assertEquals(1250, Dagon2Recipe.instance().getCost());
+        assertEquals(1250, Dagon3Recipe.instance().getCost());
+        assertEquals(1250, Dagon4Recipe.instance().getCost());
+        assertEquals(1250, Dagon5Recipe.instance().getCost());
+        assertEquals(2720, Dagon1.instance().getCost());
+        assertEquals(3970, Dagon2.instance().getCost());
+        assertEquals(5220, Dagon3.instance().getCost());
+        assertEquals(6470, Dagon4.instance().getCost());
+        assertEquals(7720, Dagon5.instance().getCost());
+
+        assertEquals(700, DiffusalBlade1Recipe.instance().getCost());
+        assertEquals(700, DiffusalBlade2Recipe.instance().getCost());
+        assertEquals(3150, DiffusalBlade1.instance().getCost());
+        assertEquals(3850, DiffusalBlade2.instance().getCost());
+
+        assertEquals(2650, Necronomicon1.instance().getCost());
+        assertEquals(1200, Necronomicon1Recipe.instance().getCost());
+        assertEquals(3850, Necronomicon2.instance().getCost());
+        assertEquals(1200, Necronomicon2Recipe.instance().getCost());
+        assertEquals(5050, Necronomicon3.instance().getCost());
+        assertEquals(1200, Necronomicon3Recipe.instance().getCost());
+
+        assertEquals(2400, BootsOfTravel.instance().getCost());
+        assertEquals(2000, BootsOfTravelRecipe.instance().getCost());
+        assertEquals(4400, BootsofTravel2.instance().getCost());
+        assertEquals(2000, BootsofTravel2Recipe.instance().getCost());
     }
 
     @Test
@@ -501,12 +526,7 @@ public class ItemTest {
     }
 
     private boolean containsOnly(Item.Vendor vendor, Item.Vendor[] vendors) {
-        if (vendors.length != 1) {
-            return false;
-        }
-        else {
-            return vendors[0] == vendor;
-        }
+        return vendors.length == 1 && vendors[0] == vendor;
     }
 
     @Test

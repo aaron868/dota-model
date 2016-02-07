@@ -28,7 +28,7 @@ public final class Necronomicon3Recipe extends Item {
     private Necronomicon3Recipe() {
         iD = 192;
         itemBaseLevel = 3;
-        cost = 0;
+        cost = 1200;
         key = "item_recipe_necronomicon_3";
         chargeable = false;
         components = new String[0];

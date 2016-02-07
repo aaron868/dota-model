@@ -26,7 +26,7 @@ public final class DiffusalBlade2Recipe extends Item {
 
     private DiffusalBlade2Recipe() {
         iD = 195;
-        cost = 0;
+        cost = 700;
         key = "item_recipe_diffusal_blade_2";
         chargeable = false;
         components = new String[0];

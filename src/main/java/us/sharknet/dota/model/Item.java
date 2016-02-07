@@ -26,7 +26,7 @@ public abstract class Item {
     public abstract String getKey();
 
     /**
-     * @return The gold cost to purchase the item.
+     * @return The gold cost to purchase the item.For items made up of components, this is the sum cost of all its constituent items.
      */
     public abstract int getCost();
 

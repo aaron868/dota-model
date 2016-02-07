@@ -26,7 +26,7 @@ public final class BootsofTravel2Recipe extends Item {
 
     private BootsofTravel2Recipe() {
         iD = 219;
-        cost = 0;
+        cost = 2000;
         key = "item_recipe_travel_boots_2";
         chargeable = false;
         components = new String[0];

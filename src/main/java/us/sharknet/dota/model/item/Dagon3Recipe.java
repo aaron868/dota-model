@@ -26,7 +26,7 @@ public final class Dagon3Recipe extends Item {
 
     private Dagon3Recipe() {
         iD = 198;
-        cost = 0;
+        cost = 1250;
         key = "item_recipe_dagon_3";
         chargeable = false;
         components = new String[0];
