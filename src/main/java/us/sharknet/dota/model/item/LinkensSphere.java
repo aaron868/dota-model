@@ -43,7 +43,7 @@ public final class LinkensSphere extends Item {
         iD = 123;
         cost = 5125;
         key = "item_sphere";
-        block_cooldown = 16;
+        block_cooldown = 13;
         bonus_all_stats = 15;
         bonus_damage = 15;
         bonus_health_regen = 6;

@@ -25,7 +25,7 @@ public final class LoneDruidSavageRoarBear extends Ability {
     private LoneDruidSavageRoarBear() {
         abilityBehavior = new String[]{"DOTA_ABILITY_BEHAVIOR_NO_TARGET","DOTA_ABILITY_BEHAVIOR_HIDDEN"};
         abilityCastPoint = new double[]{.1,.1,.1,.1};
-        abilityCooldown = new double[]{28,24,20,16};
+        abilityCooldown = new double[]{38,32,26,20};
         abilityManaCost = new int[]{50,50,50,50};
         iD = 5687;
         key = "lone_druid_savage_roar_bear";

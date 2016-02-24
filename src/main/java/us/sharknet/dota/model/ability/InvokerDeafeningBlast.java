@@ -42,7 +42,7 @@ public final class InvokerDeafeningBlast extends Ability {
         key = "invoker_deafening_blast";
         spellImmunityType = "SPELL_IMMUNITY_ENEMIES_NO";
         damage = new double[]{40.0,80.0,120.0,160.0,200.0,240.0,280.0,320.0};
-        disarm_duration = new double[]{1.0,1.5,2.0,2.5,3.0,3.5,4.0,4.5};
+        disarm_duration = new double[]{1.25,2.0,2.75,3.5,4.25,5.0,5.75,6.5};
         end_vision_duration = 1.75;
         knockback_duration = new double[]{0.25,0.5,0.75,1.0,1.25,1.5,1.75,2.0};
         localizedName = "Deafening Blast";
